@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GroupWarmPool {
-    /**
-     * Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
-     * 
-     */
+        /**
+         * @return Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+         * 
+         */
     private final @Nullable Integer maxGroupPreparedCapacity;
-    /**
-     * Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
-     * 
-     */
+        /**
+         * @return Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+         * 
+         */
     private final @Nullable Integer minSize;
-    /**
-     * Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
-     * 
-     */
+        /**
+         * @return Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+         * 
+         */
     private final @Nullable String poolState;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GroupWarmPool {
     }
 
     /**
-     * Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
+     * @return Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
      * 
-    */
+     */
     public Optional<Integer> maxGroupPreparedCapacity() {
         return Optional.ofNullable(this.maxGroupPreparedCapacity);
     }
     /**
-     * Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+     * @return Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
      * 
-    */
+     */
     public Optional<Integer> minSize() {
         return Optional.ofNullable(this.minSize);
     }
     /**
-     * Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+     * @return Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
      * 
-    */
+     */
     public Optional<String> poolState() {
         return Optional.ofNullable(this.poolState);
     }

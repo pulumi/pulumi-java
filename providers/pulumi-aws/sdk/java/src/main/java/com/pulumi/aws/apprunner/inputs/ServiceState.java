@@ -27,6 +27,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the App Runner service.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingConfigurationArn")
     private @Nullable Output<String> autoScalingConfigurationArn;
 
+    /**
+     * @return ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
+     * 
+     */
     public Optional<Output<String>> autoScalingConfigurationArn() {
         return Optional.ofNullable(this.autoScalingConfigurationArn);
     }
@@ -49,6 +57,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
     private @Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration;
 
+    /**
+     * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
+     * 
+     */
     public Optional<Output<ServiceEncryptionConfigurationGetArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -60,6 +72,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckConfiguration")
     private @Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration;
 
+    /**
+     * @return Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+     * 
+     */
     public Optional<Output<ServiceHealthCheckConfigurationGetArgs>> healthCheckConfiguration() {
         return Optional.ofNullable(this.healthCheckConfiguration);
     }
@@ -71,6 +87,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceConfiguration")
     private @Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration;
 
+    /**
+     * @return The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
+     * 
+     */
     public Optional<Output<ServiceInstanceConfigurationGetArgs>> instanceConfiguration() {
         return Optional.ofNullable(this.instanceConfiguration);
     }
@@ -82,6 +102,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceId")
     private @Nullable Output<String> serviceId;
 
+    /**
+     * @return An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
+     * 
+     */
     public Optional<Output<String>> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
@@ -93,6 +117,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Name of the service.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -104,6 +132,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceUrl")
     private @Nullable Output<String> serviceUrl;
 
+    /**
+     * @return A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
+     * 
+     */
     public Optional<Output<String>> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
@@ -115,6 +147,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConfiguration")
     private @Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration;
 
+    /**
+     * @return The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
+     * 
+     */
     public Optional<Output<ServiceSourceConfigurationGetArgs>> sourceConfiguration() {
         return Optional.ofNullable(this.sourceConfiguration);
     }
@@ -126,6 +162,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The current state of the App Runner service.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -137,6 +177,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,6 +192,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -187,110 +235,254 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoScalingConfigurationArn ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingConfigurationArn(@Nullable Output<String> autoScalingConfigurationArn) {
             $.autoScalingConfigurationArn = autoScalingConfigurationArn;
             return this;
         }
 
+        /**
+         * @param autoScalingConfigurationArn ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingConfigurationArn(String autoScalingConfigurationArn) {
             return autoScalingConfigurationArn(Output.of(autoScalingConfigurationArn));
         }
 
+        /**
+         * @param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(ServiceEncryptionConfigurationGetArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param healthCheckConfiguration Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration) {
             $.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
 
+        /**
+         * @param healthCheckConfiguration Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfiguration(ServiceHealthCheckConfigurationGetArgs healthCheckConfiguration) {
             return healthCheckConfiguration(Output.of(healthCheckConfiguration));
         }
 
+        /**
+         * @param instanceConfiguration The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration) {
             $.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
+        /**
+         * @param instanceConfiguration The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceConfiguration(ServiceInstanceConfigurationGetArgs instanceConfiguration) {
             return instanceConfiguration(Output.of(instanceConfiguration));
         }
 
+        /**
+         * @param serviceId An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(@Nullable Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }
 
+        /**
+         * @param serviceName Name of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceUrl A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUrl(@Nullable Output<String> serviceUrl) {
             $.serviceUrl = serviceUrl;
             return this;
         }
 
+        /**
+         * @param serviceUrl A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUrl(String serviceUrl) {
             return serviceUrl(Output.of(serviceUrl));
         }
 
+        /**
+         * @param sourceConfiguration The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfiguration(@Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration) {
             $.sourceConfiguration = sourceConfiguration;
             return this;
         }
 
+        /**
+         * @param sourceConfiguration The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConfiguration(ServiceSourceConfigurationGetArgs sourceConfiguration) {
             return sourceConfiguration(Output.of(sourceConfiguration));
         }
 
+        /**
+         * @param status The current state of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current state of the App Runner service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -20,6 +20,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
     @Import(name="match", required=true)
     private Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match;
 
+    /**
+     * @return The criteria for determining a SAN&#39;s match.
+     * 
+     */
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match() {
         return this.match;
     }
@@ -48,11 +52,23 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
             $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param match The criteria for determining a SAN&#39;s match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining a SAN&#39;s match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchGetArgs match) {
             return match(Output.of(match));
         }

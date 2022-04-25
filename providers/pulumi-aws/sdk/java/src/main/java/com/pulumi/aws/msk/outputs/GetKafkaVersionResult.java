@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetKafkaVersionResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable List<String> preferredVersions;
-    /**
-     * Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
-     * 
-     */
+        /**
+         * @return Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
+         * 
+         */
     private final String status;
     private final String version;
 
@@ -37,9 +37,9 @@ public final class GetKafkaVersionResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -47,9 +47,9 @@ public final class GetKafkaVersionResult {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
-     * Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
+     * @return Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

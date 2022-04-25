@@ -22,6 +22,10 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
     @Import(name="executionNamePrefix")
     private @Nullable Output<String> executionNamePrefix;
 
+    /**
+     * @return The prefix used to generate, along with a UUID, the unique state machine execution name.
+     * 
+     */
     public Optional<Output<String>> executionNamePrefix() {
         return Optional.ofNullable(this.executionNamePrefix);
     }
@@ -33,6 +37,10 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the IAM role that grants access to start execution of the state machine.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -44,6 +52,10 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
     @Import(name="stateMachineName", required=true)
     private Output<String> stateMachineName;
 
+    /**
+     * @return The name of the Step Functions state machine whose execution will be started.
+     * 
+     */
     public Output<String> stateMachineName() {
         return this.stateMachineName;
     }
@@ -74,29 +86,65 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
             $ = new TopicRuleErrorActionStepFunctionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param executionNamePrefix The prefix used to generate, along with a UUID, the unique state machine execution name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionNamePrefix(@Nullable Output<String> executionNamePrefix) {
             $.executionNamePrefix = executionNamePrefix;
             return this;
         }
 
+        /**
+         * @param executionNamePrefix The prefix used to generate, along with a UUID, the unique state machine execution name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionNamePrefix(String executionNamePrefix) {
             return executionNamePrefix(Output.of(executionNamePrefix));
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role that grants access to start execution of the state machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the IAM role that grants access to start execution of the state machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param stateMachineName The name of the Step Functions state machine whose execution will be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMachineName(Output<String> stateMachineName) {
             $.stateMachineName = stateMachineName;
             return this;
         }
 
+        /**
+         * @param stateMachineName The name of the Step Functions state machine whose execution will be started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateMachineName(String stateMachineName) {
             return stateMachineName(Output.of(stateMachineName));
         }

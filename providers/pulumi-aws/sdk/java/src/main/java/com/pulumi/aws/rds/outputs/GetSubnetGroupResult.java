@@ -10,36 +10,36 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSubnetGroupResult {
-    /**
-     * The Amazon Resource Name (ARN) for the DB subnet group.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the DB subnet group.
+         * 
+         */
     private final String arn;
-    /**
-     * Provides the description of the DB subnet group.
-     * 
-     */
+        /**
+         * @return Provides the description of the DB subnet group.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
-    /**
-     * Provides the status of the DB subnet group.
-     * 
-     */
+        /**
+         * @return Provides the status of the DB subnet group.
+         * 
+         */
     private final String status;
-    /**
-     * Contains a list of subnet identifiers.
-     * 
-     */
+        /**
+         * @return Contains a list of subnet identifiers.
+         * 
+         */
     private final List<String> subnetIds;
-    /**
-     * Provides the VPC ID of the subnet group.
-     * 
-     */
+        /**
+         * @return Provides the VPC ID of the subnet group.
+         * 
+         */
     private final String vpcId;
 
     @CustomType.Constructor
@@ -61,23 +61,23 @@ public final class GetSubnetGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the DB subnet group.
+     * @return The Amazon Resource Name (ARN) for the DB subnet group.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Provides the description of the DB subnet group.
+     * @return Provides the description of the DB subnet group.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -85,23 +85,23 @@ public final class GetSubnetGroupResult {
         return this.name;
     }
     /**
-     * Provides the status of the DB subnet group.
+     * @return Provides the status of the DB subnet group.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Contains a list of subnet identifiers.
+     * @return Contains a list of subnet identifiers.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * Provides the VPC ID of the subnet group.
+     * @return Provides the VPC ID of the subnet group.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

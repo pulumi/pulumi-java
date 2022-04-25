@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CrawlerRecrawlPolicy {
-    /**
-     * Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
-     * 
-     */
+        /**
+         * @return Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
+         * 
+         */
     private final @Nullable String recrawlBehavior;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CrawlerRecrawlPolicy {
     }
 
     /**
-     * Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
+     * @return Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
      * 
-    */
+     */
     public Optional<String> recrawlBehavior() {
         return Optional.ofNullable(this.recrawlBehavior);
     }

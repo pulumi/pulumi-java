@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NfsLocationOnPremConfig {
-    /**
-     * List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
-     * 
-     */
+        /**
+         * @return List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
+         * 
+         */
     private final List<String> agentArns;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class NfsLocationOnPremConfig {
     }
 
     /**
-     * List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
+     * @return List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
      * 
-    */
+     */
     public List<String> agentArns() {
         return this.agentArns;
     }

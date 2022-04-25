@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TopicRuleErrorActionSqs {
-    /**
-     * The URL of the Amazon SQS queue.
-     * 
-     */
+        /**
+         * @return The URL of the Amazon SQS queue.
+         * 
+         */
     private final String queueUrl;
-    /**
-     * The ARN of the IAM role that grants access.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role that grants access.
+         * 
+         */
     private final String roleArn;
-    /**
-     * Specifies whether to use Base64 encoding.
-     * 
-     */
+        /**
+         * @return Specifies whether to use Base64 encoding.
+         * 
+         */
     private final Boolean useBase64;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class TopicRuleErrorActionSqs {
     }
 
     /**
-     * The URL of the Amazon SQS queue.
+     * @return The URL of the Amazon SQS queue.
      * 
-    */
+     */
     public String queueUrl() {
         return this.queueUrl;
     }
     /**
-     * The ARN of the IAM role that grants access.
+     * @return The ARN of the IAM role that grants access.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * Specifies whether to use Base64 encoding.
+     * @return Specifies whether to use Base64 encoding.
      * 
-    */
+     */
     public Boolean useBase64() {
         return this.useBase64;
     }

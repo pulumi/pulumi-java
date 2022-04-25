@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketReplicationConfigRuleDestinationReplicationTime {
-    /**
-     * The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
-     * 
-     */
+        /**
+         * @return The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+         * 
+         */
     private final String status;
-    /**
-     * A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
-     * 
-     */
+        /**
+         * @return A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
+         * 
+         */
     private final BucketReplicationConfigRuleDestinationReplicationTimeTime time;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
     }
 
     /**
-     * The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+     * @return The status of the Replication Time Control. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
+     * @return A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
      * 
-    */
+     */
     public BucketReplicationConfigRuleDestinationReplicationTimeTime time() {
         return this.time;
     }

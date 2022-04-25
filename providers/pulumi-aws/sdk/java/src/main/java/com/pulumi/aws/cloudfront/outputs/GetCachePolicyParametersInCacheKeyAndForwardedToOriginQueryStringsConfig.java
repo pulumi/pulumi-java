@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig {
-    /**
-     * Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
-     * 
-     */
+        /**
+         * @return Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         */
     private final String queryStringBehavior;
-    /**
-     * Object that contains a list of query string names. See Items for more information.
-     * 
-     */
+        /**
+         * @return Object that contains a list of query string names. See Items for more information.
+         * 
+         */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     }
 
     /**
-     * Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+     * @return Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
      * 
-    */
+     */
     public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
     /**
-     * Object that contains a list of query string names. See Items for more information.
+     * @return Object that contains a list of query string names. See Items for more information.
      * 
-    */
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }

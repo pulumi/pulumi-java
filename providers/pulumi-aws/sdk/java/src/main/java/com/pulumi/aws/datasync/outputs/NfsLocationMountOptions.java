@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NfsLocationMountOptions {
-    /**
-     * The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
-     * 
-     */
+        /**
+         * @return The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class NfsLocationMountOptions {
     }
 
     /**
-     * The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
+     * @return The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

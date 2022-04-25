@@ -11,10 +11,10 @@ import java.util.Objects;
 @CustomType
 public final class MaintenanceWindowTaskTarget {
     private final String key;
-    /**
-     * The array of strings.
-     * 
-     */
+        /**
+         * @return The array of strings.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -29,9 +29,9 @@ public final class MaintenanceWindowTaskTarget {
         return this.key;
     }
     /**
-     * The array of strings.
+     * @return The array of strings.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

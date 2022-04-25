@@ -11,31 +11,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainNameDomainNameConfiguration {
-    /**
-     * The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
-     * 
-     */
+        /**
+         * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+         * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+         * 
+         */
     private final String certificateArn;
-    /**
-     * The endpoint type. Valid values: `REGIONAL`.
-     * 
-     */
+        /**
+         * @return The endpoint type. Valid values: `REGIONAL`.
+         * 
+         */
     private final String endpointType;
-    /**
-     * The Amazon Route 53 Hosted Zone ID of the endpoint.
-     * 
-     */
+        /**
+         * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
+         * 
+         */
     private final @Nullable String hostedZoneId;
-    /**
-     * The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
-     * 
-     */
+        /**
+         * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+         * 
+         */
     private final String securityPolicy;
-    /**
-     * The target domain name.
-     * 
-     */
+        /**
+         * @return The target domain name.
+         * 
+         */
     private final @Nullable String targetDomainName;
 
     @CustomType.Constructor
@@ -53,38 +53,38 @@ public final class DomainNameDomainNameConfiguration {
     }
 
     /**
-     * The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+     * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
      * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
      * 
-    */
+     */
     public String certificateArn() {
         return this.certificateArn;
     }
     /**
-     * The endpoint type. Valid values: `REGIONAL`.
+     * @return The endpoint type. Valid values: `REGIONAL`.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
-    */
+     */
     public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
     /**
-     * The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
-    */
+     */
     public String securityPolicy() {
         return this.securityPolicy;
     }
     /**
-     * The target domain name.
+     * @return The target domain name.
      * 
-    */
+     */
     public Optional<String> targetDomainName() {
         return Optional.ofNullable(this.targetDomainName);
     }

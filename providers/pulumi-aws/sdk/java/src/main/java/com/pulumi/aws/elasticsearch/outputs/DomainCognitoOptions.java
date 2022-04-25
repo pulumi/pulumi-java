@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainCognitoOptions {
-    /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * ID of the Cognito Identity Pool to use.
-     * 
-     */
+        /**
+         * @return ID of the Cognito Identity Pool to use.
+         * 
+         */
     private final String identityPoolId;
-    /**
-     * ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
-     * 
-     */
+        /**
+         * @return ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
+         * 
+         */
     private final String roleArn;
-    /**
-     * ID of the Cognito User Pool to use.
-     * 
-     */
+        /**
+         * @return ID of the Cognito User Pool to use.
+         * 
+         */
     private final String userPoolId;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class DomainCognitoOptions {
     }
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * ID of the Cognito Identity Pool to use.
+     * @return ID of the Cognito Identity Pool to use.
      * 
-    */
+     */
     public String identityPoolId() {
         return this.identityPoolId;
     }
     /**
-     * ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
+     * @return ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * ID of the Cognito User Pool to use.
+     * @return ID of the Cognito User Pool to use.
      * 
-    */
+     */
     public String userPoolId() {
         return this.userPoolId;
     }

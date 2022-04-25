@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat {
-    /**
-     * Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
-     * 
-     */
+        /**
+         * @return Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+         * 
+         */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters mappingParameters;
-    /**
-     * The type of record format. Valid values: `CSV`, `JSON`.
-     * 
-     */
+        /**
+         * @return The type of record format. Valid values: `CSV`, `JSON`.
+         * 
+         */
     private final String recordFormatType;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
+     * @return Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
      * 
-    */
+     */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters mappingParameters() {
         return this.mappingParameters;
     }
     /**
-     * The type of record format. Valid values: `CSV`, `JSON`.
+     * @return The type of record format. Valid values: `CSV`, `JSON`.
      * 
-    */
+     */
     public String recordFormatType() {
         return this.recordFormatType;
     }

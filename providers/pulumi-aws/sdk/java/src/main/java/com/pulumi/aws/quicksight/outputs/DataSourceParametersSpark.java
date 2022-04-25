@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceParametersSpark {
-    /**
-     * The host to which to connect.
-     * 
-     */
+        /**
+         * @return The host to which to connect.
+         * 
+         */
     private final String host;
-    /**
-     * The warehouse to which to connect.
-     * 
-     */
+        /**
+         * @return The warehouse to which to connect.
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DataSourceParametersSpark {
     }
 
     /**
-     * The host to which to connect.
+     * @return The host to which to connect.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The warehouse to which to connect.
+     * @return The warehouse to which to connect.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

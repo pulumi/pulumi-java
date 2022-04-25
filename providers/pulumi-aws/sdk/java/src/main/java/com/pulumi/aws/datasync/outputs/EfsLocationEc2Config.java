@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EfsLocationEc2Config {
-    /**
-     * List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
-     * 
-     */
+        /**
+         * @return List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
+         * 
+         */
     private final List<String> securityGroupArns;
-    /**
-     * Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
+         * 
+         */
     private final String subnetArn;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class EfsLocationEc2Config {
     }
 
     /**
-     * List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
+     * @return List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
      * 
-    */
+     */
     public List<String> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
-     * Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
+     * @return Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
      * 
-    */
+     */
     public String subnetArn() {
         return this.subnetArn;
     }

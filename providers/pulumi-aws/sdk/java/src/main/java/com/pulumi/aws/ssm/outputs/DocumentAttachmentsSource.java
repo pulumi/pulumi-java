@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DocumentAttachmentsSource {
-    /**
-     * The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
-     * 
-     */
+        /**
+         * @return The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+         * 
+         */
     private final String key;
-    /**
-     * The name of the document attachment file
-     * 
-     */
+        /**
+         * @return The name of the document attachment file
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The value describing the location of an attachment to a document
-     * 
-     */
+        /**
+         * @return The value describing the location of an attachment to a document
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DocumentAttachmentsSource {
     }
 
     /**
-     * The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
+     * @return The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The name of the document attachment file
+     * @return The name of the document attachment file
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The value describing the location of an attachment to a document
+     * @return The value describing the location of an attachment to a document
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

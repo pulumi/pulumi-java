@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetImageRecipeBlockDeviceMappingEb {
-    /**
-     * Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
-     * 
-     */
+        /**
+         * @return Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
+         * 
+         */
     private final Boolean deleteOnTermination;
-    /**
-     * Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
-     * 
-     */
+        /**
+         * @return Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
+         * 
+         */
     private final Boolean encrypted;
-    /**
-     * Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
-     * 
-     */
+        /**
+         * @return Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
+         * 
+         */
     private final Integer iops;
-    /**
-     * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
+         * 
+         */
     private final String kmsKeyId;
-    /**
-     * Identifier of the EC2 Volume Snapshot.
-     * 
-     */
+        /**
+         * @return Identifier of the EC2 Volume Snapshot.
+         * 
+         */
     private final String snapshotId;
-    /**
-     * Size of the volume, in GiB.
-     * 
-     */
+        /**
+         * @return Size of the volume, in GiB.
+         * 
+         */
     private final Integer volumeSize;
-    /**
-     * Type of the volume. For example, `gp2` or `io2`.
-     * 
-     */
+        /**
+         * @return Type of the volume. For example, `gp2` or `io2`.
+         * 
+         */
     private final String volumeType;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetImageRecipeBlockDeviceMappingEb {
     }
 
     /**
-     * Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
+     * @return Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
      * 
-    */
+     */
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
     /**
-     * Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
+     * @return Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
     /**
-     * Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
+     * @return Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
      * 
-    */
+     */
     public Integer iops() {
         return this.iops;
     }
     /**
-     * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
+     * @return Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
-     * Identifier of the EC2 Volume Snapshot.
+     * @return Identifier of the EC2 Volume Snapshot.
      * 
-    */
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
     /**
-     * Size of the volume, in GiB.
+     * @return Size of the volume, in GiB.
      * 
-    */
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }
     /**
-     * Type of the volume. For example, `gp2` or `io2`.
+     * @return Type of the volume. For example, `gp2` or `io2`.
      * 
-    */
+     */
     public String volumeType() {
         return this.volumeType;
     }

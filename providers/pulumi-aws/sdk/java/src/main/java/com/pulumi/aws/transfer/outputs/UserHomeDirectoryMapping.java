@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UserHomeDirectoryMapping {
-    /**
-     * Represents an entry and a target.
-     * 
-     */
+        /**
+         * @return Represents an entry and a target.
+         * 
+         */
     private final String entry;
-    /**
-     * Represents the map target.
-     * 
-     */
+        /**
+         * @return Represents the map target.
+         * 
+         */
     private final String target;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class UserHomeDirectoryMapping {
     }
 
     /**
-     * Represents an entry and a target.
+     * @return Represents an entry and a target.
      * 
-    */
+     */
     public String entry() {
         return this.entry;
     }
     /**
-     * Represents the map target.
+     * @return Represents the map target.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeout {
-    /**
-     * Retry unit. Valid values: `ms`, `s`.
-     * 
-     */
+        /**
+         * @return Retry unit. Valid values: `ms`, `s`.
+         * 
+         */
     private final String unit;
-    /**
-     * Retry value.
-     * 
-     */
+        /**
+         * @return Retry value.
+         * 
+         */
     private final Integer value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeout {
     }
 
     /**
-     * Retry unit. Valid values: `ms`, `s`.
+     * @return Retry unit. Valid values: `ms`, `s`.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }
     /**
-     * Retry value.
+     * @return Retry value.
      * 
-    */
+     */
     public Integer value() {
         return this.value;
     }

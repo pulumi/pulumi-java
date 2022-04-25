@@ -20,6 +20,10 @@ public final class SigningJobDestinationArgs extends com.pulumi.resources.Resour
     @Import(name="s3", required=true)
     private Output<SigningJobDestinationS3Args> s3;
 
+    /**
+     * @return A configuration block describing the S3 Destination object: See S3 Destination below for details.
+     * 
+     */
     public Output<SigningJobDestinationS3Args> s3() {
         return this.s3;
     }
@@ -48,11 +52,23 @@ public final class SigningJobDestinationArgs extends com.pulumi.resources.Resour
             $ = new SigningJobDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3 A configuration block describing the S3 Destination object: See S3 Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(Output<SigningJobDestinationS3Args> s3) {
             $.s3 = s3;
             return this;
         }
 
+        /**
+         * @param s3 A configuration block describing the S3 Destination object: See S3 Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3(SigningJobDestinationS3Args s3) {
             return s3(Output.of(s3));
         }

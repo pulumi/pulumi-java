@@ -23,6 +23,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the discoverer. Maximum of 256 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -34,6 +38,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the custom event schema registry. Maximum of 64 characters consisting of lower case letters, upper case letters, 0-9, ., -, _.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -75,29 +87,65 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the discoverer. Maximum of 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the discoverer. Maximum of 256 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the custom event schema registry. Maximum of 64 characters consisting of lower case letters, upper case letters, 0-9, ., -, _.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the custom event schema registry. Maximum of 64 characters consisting of lower case letters, upper case letters, 0-9, ., -, _.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

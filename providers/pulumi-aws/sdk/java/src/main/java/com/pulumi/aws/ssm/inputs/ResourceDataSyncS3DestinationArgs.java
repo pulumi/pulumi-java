@@ -22,6 +22,10 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return Name of S3 bucket where the aggregated data is stored.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -33,6 +37,10 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return ARN of an encryption key for a destination in Amazon S3.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -44,6 +52,10 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
+    /**
+     * @return Prefix for the bucket.
+     * 
+     */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -55,6 +67,10 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return Region with the bucket targeted by the Resource Data Sync.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -66,6 +82,10 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
     @Import(name="syncFormat")
     private @Nullable Output<String> syncFormat;
 
+    /**
+     * @return A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+     * 
+     */
     public Optional<Output<String>> syncFormat() {
         return Optional.ofNullable(this.syncFormat);
     }
@@ -98,47 +118,107 @@ public final class ResourceDataSyncS3DestinationArgs extends com.pulumi.resource
             $ = new ResourceDataSyncS3DestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Name of S3 bucket where the aggregated data is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName Name of S3 bucket where the aggregated data is stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param kmsKeyArn ARN of an encryption key for a destination in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn ARN of an encryption key for a destination in Amazon S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param prefix Prefix for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
+        /**
+         * @param prefix Prefix for the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }
 
+        /**
+         * @param region Region with the bucket targeted by the Resource Data Sync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region with the bucket targeted by the Resource Data Sync.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param syncFormat A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncFormat(@Nullable Output<String> syncFormat) {
             $.syncFormat = syncFormat;
             return this;
         }
 
+        /**
+         * @param syncFormat A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncFormat(String syncFormat) {
             return syncFormat(Output.of(syncFormat));
         }

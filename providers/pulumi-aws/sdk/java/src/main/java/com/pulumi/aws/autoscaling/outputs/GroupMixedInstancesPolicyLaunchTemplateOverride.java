@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
-    /**
-     * Override the instance type in the Launch Template.
-     * 
-     */
+        /**
+         * @return Override the instance type in the Launch Template.
+         * 
+         */
     private final @Nullable String instanceType;
-    /**
-     * Override the instance launch template specification in the Launch Template.
-     * 
-     */
+        /**
+         * @return Override the instance launch template specification in the Launch Template.
+         * 
+         */
     private final @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification;
-    /**
-     * The number of capacity units, which gives the instance type a proportional weight to other instance types.
-     * 
-     */
+        /**
+         * @return The number of capacity units, which gives the instance type a proportional weight to other instance types.
+         * 
+         */
     private final @Nullable String weightedCapacity;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
     }
 
     /**
-     * Override the instance type in the Launch Template.
+     * @return Override the instance type in the Launch Template.
      * 
-    */
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
-     * Override the instance launch template specification in the Launch Template.
+     * @return Override the instance launch template specification in the Launch Template.
      * 
-    */
+     */
     public Optional<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification> launchTemplateSpecification() {
         return Optional.ofNullable(this.launchTemplateSpecification);
     }
     /**
-     * The number of capacity units, which gives the instance type a proportional weight to other instance types.
+     * @return The number of capacity units, which gives the instance type a proportional weight to other instance types.
      * 
-    */
+     */
     public Optional<String> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }

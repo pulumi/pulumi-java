@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResourceShareFilter {
-    /**
-     * The name of the tag key to filter on.
-     * 
-     */
+        /**
+         * @return The name of the tag key to filter on.
+         * 
+         */
     private final String name;
-    /**
-     * The value of the tag key.
-     * 
-     */
+        /**
+         * @return The value of the tag key.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetResourceShareFilter {
     }
 
     /**
-     * The name of the tag key to filter on.
+     * @return The name of the tag key to filter on.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the tag key.
+     * @return The value of the tag key.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

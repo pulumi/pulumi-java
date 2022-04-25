@@ -17,40 +17,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch {
-    /**
-     * Inspect all query arguments.
-     * 
-     */
+        /**
+         * @return Inspect all query arguments.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchAllQueryArguments allQueryArguments;
-    /**
-     * Inspect the request body, which immediately follows the request headers.
-     * 
-     */
+        /**
+         * @return Inspect the request body, which immediately follows the request headers.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchBody body;
-    /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-     * 
-     */
+        /**
+         * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchMethod method;
-    /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
-     * 
-     */
+        /**
+         * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchQueryString queryString;
-    /**
-     * Inspect a single header. See Single Header below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single header. See Single Header below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader singleHeader;
-    /**
-     * Inspect a single query argument. See Single Query Argument below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument;
-    /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-     * 
-     */
+        /**
+         * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchUriPath uriPath;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
     }
 
     /**
-     * Inspect all query arguments.
+     * @return Inspect all query arguments.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
-     * Inspect the request body, which immediately follows the request headers.
+     * @return Inspect the request body, which immediately follows the request headers.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
-     * Inspect a single header. See Single Header below for details.
+     * @return Inspect a single header. See Single Header below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
-     * Inspect a single query argument. See Single Query Argument below for details.
+     * @return Inspect a single query argument. See Single Query Argument below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }

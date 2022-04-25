@@ -22,6 +22,10 @@ public final class FileSystemLifecyclePolicyGetArgs extends com.pulumi.resources
     @Import(name="transitionToIa")
     private @Nullable Output<String> transitionToIa;
 
+    /**
+     * @return Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
+     * 
+     */
     public Optional<Output<String>> transitionToIa() {
         return Optional.ofNullable(this.transitionToIa);
     }
@@ -33,6 +37,10 @@ public final class FileSystemLifecyclePolicyGetArgs extends com.pulumi.resources
     @Import(name="transitionToPrimaryStorageClass")
     private @Nullable Output<String> transitionToPrimaryStorageClass;
 
+    /**
+     * @return Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
+     * 
+     */
     public Optional<Output<String>> transitionToPrimaryStorageClass() {
         return Optional.ofNullable(this.transitionToPrimaryStorageClass);
     }
@@ -62,20 +70,44 @@ public final class FileSystemLifecyclePolicyGetArgs extends com.pulumi.resources
             $ = new FileSystemLifecyclePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transitionToIa Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionToIa(@Nullable Output<String> transitionToIa) {
             $.transitionToIa = transitionToIa;
             return this;
         }
 
+        /**
+         * @param transitionToIa Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionToIa(String transitionToIa) {
             return transitionToIa(Output.of(transitionToIa));
         }
 
+        /**
+         * @param transitionToPrimaryStorageClass Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionToPrimaryStorageClass(@Nullable Output<String> transitionToPrimaryStorageClass) {
             $.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }
 
+        /**
+         * @param transitionToPrimaryStorageClass Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionToPrimaryStorageClass(String transitionToPrimaryStorageClass) {
             return transitionToPrimaryStorageClass(Output.of(transitionToPrimaryStorageClass));
         }

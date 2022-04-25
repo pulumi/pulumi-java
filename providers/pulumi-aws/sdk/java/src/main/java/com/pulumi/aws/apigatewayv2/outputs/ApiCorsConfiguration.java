@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiCorsConfiguration {
-    /**
-     * Whether credentials are included in the CORS request.
-     * 
-     */
+        /**
+         * @return Whether credentials are included in the CORS request.
+         * 
+         */
     private final @Nullable Boolean allowCredentials;
-    /**
-     * The set of allowed HTTP headers.
-     * 
-     */
+        /**
+         * @return The set of allowed HTTP headers.
+         * 
+         */
     private final @Nullable List<String> allowHeaders;
-    /**
-     * The set of allowed HTTP methods.
-     * 
-     */
+        /**
+         * @return The set of allowed HTTP methods.
+         * 
+         */
     private final @Nullable List<String> allowMethods;
-    /**
-     * The set of allowed origins.
-     * 
-     */
+        /**
+         * @return The set of allowed origins.
+         * 
+         */
     private final @Nullable List<String> allowOrigins;
-    /**
-     * The set of exposed HTTP headers.
-     * 
-     */
+        /**
+         * @return The set of exposed HTTP headers.
+         * 
+         */
     private final @Nullable List<String> exposeHeaders;
-    /**
-     * The number of seconds that the browser should cache preflight request results.
-     * 
-     */
+        /**
+         * @return The number of seconds that the browser should cache preflight request results.
+         * 
+         */
     private final @Nullable Integer maxAge;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class ApiCorsConfiguration {
     }
 
     /**
-     * Whether credentials are included in the CORS request.
+     * @return Whether credentials are included in the CORS request.
      * 
-    */
+     */
     public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
-     * The set of allowed HTTP headers.
+     * @return The set of allowed HTTP headers.
      * 
-    */
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
-     * The set of allowed HTTP methods.
+     * @return The set of allowed HTTP methods.
      * 
-    */
+     */
     public List<String> allowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
     /**
-     * The set of allowed origins.
+     * @return The set of allowed origins.
      * 
-    */
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
-     * The set of exposed HTTP headers.
+     * @return The set of exposed HTTP headers.
      * 
-    */
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
-     * The number of seconds that the browser should cache preflight request results.
+     * @return The number of seconds that the browser should cache preflight request results.
      * 
-    */
+     */
     public Optional<Integer> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }

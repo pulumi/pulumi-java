@@ -20,6 +20,10 @@ public final class GatewayRouteSpecHttpRouteActionArgs extends com.pulumi.resour
     @Import(name="target", required=true)
     private Output<GatewayRouteSpecHttpRouteActionTargetArgs> target;
 
+    /**
+     * @return The target that traffic is routed to when a request matches the gateway route.
+     * 
+     */
     public Output<GatewayRouteSpecHttpRouteActionTargetArgs> target() {
         return this.target;
     }
@@ -48,11 +52,23 @@ public final class GatewayRouteSpecHttpRouteActionArgs extends com.pulumi.resour
             $ = new GatewayRouteSpecHttpRouteActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target The target that traffic is routed to when a request matches the gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<GatewayRouteSpecHttpRouteActionTargetArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The target that traffic is routed to when a request matches the gateway route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(GatewayRouteSpecHttpRouteActionTargetArgs target) {
             return target(Output.of(target));
         }

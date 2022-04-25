@@ -13,36 +13,36 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPortfolioResult {
     private final @Nullable String acceptLanguage;
-    /**
-     * Portfolio ARN.
-     * 
-     */
+        /**
+         * @return Portfolio ARN.
+         * 
+         */
     private final String arn;
-    /**
-     * Time the portfolio was created.
-     * 
-     */
+        /**
+         * @return Time the portfolio was created.
+         * 
+         */
     private final String createdTime;
-    /**
-     * Description of the portfolio
-     * 
-     */
+        /**
+         * @return Description of the portfolio
+         * 
+         */
     private final String description;
     private final String id;
-    /**
-     * Portfolio name.
-     * 
-     */
+        /**
+         * @return Portfolio name.
+         * 
+         */
     private final String name;
-    /**
-     * Name of the person or organization who owns the portfolio.
-     * 
-     */
+        /**
+         * @return Name of the person or organization who owns the portfolio.
+         * 
+         */
     private final String providerName;
-    /**
-     * Tags applied to the portfolio.
-     * 
-     */
+        /**
+         * @return Tags applied to the portfolio.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -69,23 +69,23 @@ public final class GetPortfolioResult {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * Portfolio ARN.
+     * @return Portfolio ARN.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Time the portfolio was created.
+     * @return Time the portfolio was created.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Description of the portfolio
+     * @return Description of the portfolio
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -93,23 +93,23 @@ public final class GetPortfolioResult {
         return this.id;
     }
     /**
-     * Portfolio name.
+     * @return Portfolio name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Name of the person or organization who owns the portfolio.
+     * @return Name of the person or organization who owns the portfolio.
      * 
-    */
+     */
     public String providerName() {
         return this.providerName;
     }
     /**
-     * Tags applied to the portfolio.
+     * @return Tags applied to the portfolio.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

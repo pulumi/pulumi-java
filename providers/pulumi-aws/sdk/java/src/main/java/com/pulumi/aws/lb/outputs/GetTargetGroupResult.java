@@ -19,10 +19,10 @@ public final class GetTargetGroupResult {
     private final Boolean connectionTermination;
     private final Integer deregistrationDelay;
     private final GetTargetGroupHealthCheck healthCheck;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final Boolean lambdaMultiValueHeadersEnabled;
     private final String loadBalancingAlgorithmType;
@@ -96,9 +96,9 @@ public final class GetTargetGroupResult {
         return this.healthCheck;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

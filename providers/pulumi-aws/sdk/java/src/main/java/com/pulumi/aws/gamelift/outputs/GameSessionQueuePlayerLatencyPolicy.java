@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GameSessionQueuePlayerLatencyPolicy {
-    /**
-     * Maximum latency value that is allowed for any player.
-     * 
-     */
+        /**
+         * @return Maximum latency value that is allowed for any player.
+         * 
+         */
     private final Integer maximumIndividualPlayerLatencyMilliseconds;
-    /**
-     * Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
-     * 
-     */
+        /**
+         * @return Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
+         * 
+         */
     private final @Nullable Integer policyDurationSeconds;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GameSessionQueuePlayerLatencyPolicy {
     }
 
     /**
-     * Maximum latency value that is allowed for any player.
+     * @return Maximum latency value that is allowed for any player.
      * 
-    */
+     */
     public Integer maximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
     /**
-     * Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
+     * @return Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
      * 
-    */
+     */
     public Optional<Integer> policyDurationSeconds() {
         return Optional.ofNullable(this.policyDurationSeconds);
     }

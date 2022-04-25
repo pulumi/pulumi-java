@@ -26,6 +26,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ARN of the Kinesis Analytics Application.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,11 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="kinesisFirehose")
     private @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
 
+    /**
+     * @return The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+     * See Kinesis Firehose below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs>> kinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
@@ -50,6 +59,11 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="kinesisStream")
     private @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
 
+    /**
+     * @return The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+     * See Kinesis Stream below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationOutputKinesisStreamGetArgs>> kinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
@@ -61,6 +75,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="lambda")
     private @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
 
+    /**
+     * @return The Lambda function destination. See Lambda below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationOutputLambdaGetArgs>> lambda() {
         return Optional.ofNullable(this.lambda);
     }
@@ -72,6 +90,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The Name of the in-application stream.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -83,6 +105,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
     @Import(name="schema", required=true)
     private Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
 
+    /**
+     * @return The Schema format of the data written to the destination. See Destination Schema below for more details.
+     * 
+     */
     public Output<AnalyticsApplicationOutputSchemaGetArgs> schema() {
         return this.schema;
     }
@@ -116,56 +142,132 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
             $ = new AnalyticsApplicationOutputGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ARN of the Kinesis Analytics Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param kinesisFirehose The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+         * See Kinesis Firehose below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose) {
             $.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
+        /**
+         * @param kinesisFirehose The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+         * See Kinesis Firehose below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisFirehose(AnalyticsApplicationOutputKinesisFirehoseGetArgs kinesisFirehose) {
             return kinesisFirehose(Output.of(kinesisFirehose));
         }
 
+        /**
+         * @param kinesisStream The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+         * See Kinesis Stream below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream) {
             $.kinesisStream = kinesisStream;
             return this;
         }
 
+        /**
+         * @param kinesisStream The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+         * See Kinesis Stream below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStream(AnalyticsApplicationOutputKinesisStreamGetArgs kinesisStream) {
             return kinesisStream(Output.of(kinesisStream));
         }
 
+        /**
+         * @param lambda The Lambda function destination. See Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambda(@Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda) {
             $.lambda = lambda;
             return this;
         }
 
+        /**
+         * @param lambda The Lambda function destination. See Lambda below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambda(AnalyticsApplicationOutputLambdaGetArgs lambda) {
             return lambda(Output.of(lambda));
         }
 
+        /**
+         * @param name The Name of the in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Name of the in-application stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schema The Schema format of the data written to the destination. See Destination Schema below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Output<AnalyticsApplicationOutputSchemaGetArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema The Schema format of the data written to the destination. See Destination Schema below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(AnalyticsApplicationOutputSchemaGetArgs schema) {
             return schema(Output.of(schema));
         }

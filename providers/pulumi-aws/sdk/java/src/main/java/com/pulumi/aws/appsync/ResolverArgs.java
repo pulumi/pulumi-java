@@ -26,6 +26,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The API ID for the GraphQL API.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -37,6 +41,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cachingConfig")
     private @Nullable Output<ResolverCachingConfigArgs> cachingConfig;
 
+    /**
+     * @return The CachingConfig.
+     * 
+     */
     public Optional<Output<ResolverCachingConfigArgs>> cachingConfig() {
         return Optional.ofNullable(this.cachingConfig);
     }
@@ -48,6 +56,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
     private @Nullable Output<String> dataSource;
 
+    /**
+     * @return The DataSource name.
+     * 
+     */
     public Optional<Output<String>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -59,6 +71,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="field", required=true)
     private Output<String> field;
 
+    /**
+     * @return The field name from the schema defined in the GraphQL API.
+     * 
+     */
     public Output<String> field() {
         return this.field;
     }
@@ -70,6 +86,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The resolver type. Valid values are `UNIT` and `PIPELINE`.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -81,6 +101,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
     private @Nullable Output<Integer> maxBatchSize;
 
+    /**
+     * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+     * 
+     */
     public Optional<Output<Integer>> maxBatchSize() {
         return Optional.ofNullable(this.maxBatchSize);
     }
@@ -92,6 +116,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineConfig")
     private @Nullable Output<ResolverPipelineConfigArgs> pipelineConfig;
 
+    /**
+     * @return The PipelineConfig.
+     * 
+     */
     public Optional<Output<ResolverPipelineConfigArgs>> pipelineConfig() {
         return Optional.ofNullable(this.pipelineConfig);
     }
@@ -103,6 +131,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestTemplate")
     private @Nullable Output<String> requestTemplate;
 
+    /**
+     * @return The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+     * 
+     */
     public Optional<Output<String>> requestTemplate() {
         return Optional.ofNullable(this.requestTemplate);
     }
@@ -114,6 +146,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseTemplate")
     private @Nullable Output<String> responseTemplate;
 
+    /**
+     * @return The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+     * 
+     */
     public Optional<Output<String>> responseTemplate() {
         return Optional.ofNullable(this.responseTemplate);
     }
@@ -125,6 +161,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
     private @Nullable Output<ResolverSyncConfigArgs> syncConfig;
 
+    /**
+     * @return Describes a Sync configuration for a resolver. See Sync Config.
+     * 
+     */
     public Optional<Output<ResolverSyncConfigArgs>> syncConfig() {
         return Optional.ofNullable(this.syncConfig);
     }
@@ -136,6 +176,10 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type name from the schema defined in the GraphQL API.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -174,101 +218,233 @@ public final class ResolverArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResolverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API ID for the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API ID for the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param cachingConfig The CachingConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingConfig(@Nullable Output<ResolverCachingConfigArgs> cachingConfig) {
             $.cachingConfig = cachingConfig;
             return this;
         }
 
+        /**
+         * @param cachingConfig The CachingConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cachingConfig(ResolverCachingConfigArgs cachingConfig) {
             return cachingConfig(Output.of(cachingConfig));
         }
 
+        /**
+         * @param dataSource The DataSource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(@Nullable Output<String> dataSource) {
             $.dataSource = dataSource;
             return this;
         }
 
+        /**
+         * @param dataSource The DataSource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSource(String dataSource) {
             return dataSource(Output.of(dataSource));
         }
 
+        /**
+         * @param field The field name from the schema defined in the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field The field name from the schema defined in the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param kind The resolver type. Valid values are `UNIT` and `PIPELINE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The resolver type. Valid values are `UNIT` and `PIPELINE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param maxBatchSize The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
             $.maxBatchSize = maxBatchSize;
             return this;
         }
 
+        /**
+         * @param maxBatchSize The maximum batching size for a resolver. Valid values are between `0` and `2000`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBatchSize(Integer maxBatchSize) {
             return maxBatchSize(Output.of(maxBatchSize));
         }
 
+        /**
+         * @param pipelineConfig The PipelineConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigArgs> pipelineConfig) {
             $.pipelineConfig = pipelineConfig;
             return this;
         }
 
+        /**
+         * @param pipelineConfig The PipelineConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineConfig(ResolverPipelineConfigArgs pipelineConfig) {
             return pipelineConfig(Output.of(pipelineConfig));
         }
 
+        /**
+         * @param requestTemplate The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTemplate(@Nullable Output<String> requestTemplate) {
             $.requestTemplate = requestTemplate;
             return this;
         }
 
+        /**
+         * @param requestTemplate The request mapping template for UNIT resolver or &#39;before mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTemplate(String requestTemplate) {
             return requestTemplate(Output.of(requestTemplate));
         }
 
+        /**
+         * @param responseTemplate The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplate(@Nullable Output<String> responseTemplate) {
             $.responseTemplate = responseTemplate;
             return this;
         }
 
+        /**
+         * @param responseTemplate The response mapping template for UNIT resolver or &#39;after mapping template&#39; for PIPELINE resolver. Required for non-Lambda resolvers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseTemplate(String responseTemplate) {
             return responseTemplate(Output.of(responseTemplate));
         }
 
+        /**
+         * @param syncConfig Describes a Sync configuration for a resolver. See Sync Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncConfig(@Nullable Output<ResolverSyncConfigArgs> syncConfig) {
             $.syncConfig = syncConfig;
             return this;
         }
 
+        /**
+         * @param syncConfig Describes a Sync configuration for a resolver. See Sync Config.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncConfig(ResolverSyncConfigArgs syncConfig) {
             return syncConfig(Output.of(syncConfig));
         }
 
+        /**
+         * @param type The type name from the schema defined in the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type name from the schema defined in the GraphQL API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

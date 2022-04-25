@@ -23,6 +23,10 @@ public final class AuthorizerJwtConfigurationGetArgs extends com.pulumi.resource
     @Import(name="audiences")
     private @Nullable Output<List<String>> audiences;
 
+    /**
+     * @return A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+     * 
+     */
     public Optional<Output<List<String>>> audiences() {
         return Optional.ofNullable(this.audiences);
     }
@@ -34,6 +38,10 @@ public final class AuthorizerJwtConfigurationGetArgs extends com.pulumi.resource
     @Import(name="issuer")
     private @Nullable Output<String> issuer;
 
+    /**
+     * @return The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
+     * 
+     */
     public Optional<Output<String>> issuer() {
         return Optional.ofNullable(this.issuer);
     }
@@ -63,24 +71,54 @@ public final class AuthorizerJwtConfigurationGetArgs extends com.pulumi.resource
             $ = new AuthorizerJwtConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audiences A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(@Nullable Output<List<String>> audiences) {
             $.audiences = audiences;
             return this;
         }
 
+        /**
+         * @param audiences A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(List<String> audiences) {
             return audiences(Output.of(audiences));
         }
 
+        /**
+         * @param audiences A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
 
+        /**
+         * @param issuer The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(@Nullable Output<String> issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param issuer The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             return issuer(Output.of(issuer));
         }

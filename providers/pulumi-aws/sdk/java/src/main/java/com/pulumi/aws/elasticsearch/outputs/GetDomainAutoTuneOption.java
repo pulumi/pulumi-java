@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainAutoTuneOption {
-    /**
-     * The Auto-Tune desired state for the domain.
-     * 
-     */
+        /**
+         * @return The Auto-Tune desired state for the domain.
+         * 
+         */
     private final String desiredState;
-    /**
-     * A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
-     * 
-     */
+        /**
+         * @return A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
+         * 
+         */
     private final List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules;
-    /**
-     * Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
-     * 
-     */
+        /**
+         * @return Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
+         * 
+         */
     private final String rollbackOnDisable;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetDomainAutoTuneOption {
     }
 
     /**
-     * The Auto-Tune desired state for the domain.
+     * @return The Auto-Tune desired state for the domain.
      * 
-    */
+     */
     public String desiredState() {
         return this.desiredState;
     }
     /**
-     * A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
+     * @return A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
      * 
-    */
+     */
     public List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules;
     }
     /**
-     * Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
+     * @return Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
      * 
-    */
+     */
     public String rollbackOnDisable() {
         return this.rollbackOnDisable;
     }

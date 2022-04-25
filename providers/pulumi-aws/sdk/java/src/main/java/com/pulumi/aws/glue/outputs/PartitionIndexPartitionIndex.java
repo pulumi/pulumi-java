@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PartitionIndexPartitionIndex {
-    /**
-     * Name of the partition index.
-     * 
-     */
+        /**
+         * @return Name of the partition index.
+         * 
+         */
     private final @Nullable String indexName;
     private final @Nullable String indexStatus;
-    /**
-     * Keys for the partition index.
-     * 
-     */
+        /**
+         * @return Keys for the partition index.
+         * 
+         */
     private final @Nullable List<String> keys;
 
     @CustomType.Constructor
@@ -35,9 +35,9 @@ public final class PartitionIndexPartitionIndex {
     }
 
     /**
-     * Name of the partition index.
+     * @return Name of the partition index.
      * 
-    */
+     */
     public Optional<String> indexName() {
         return Optional.ofNullable(this.indexName);
     }
@@ -45,9 +45,9 @@ public final class PartitionIndexPartitionIndex {
         return Optional.ofNullable(this.indexStatus);
     }
     /**
-     * Keys for the partition index.
+     * @return Keys for the partition index.
      * 
-    */
+     */
     public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }

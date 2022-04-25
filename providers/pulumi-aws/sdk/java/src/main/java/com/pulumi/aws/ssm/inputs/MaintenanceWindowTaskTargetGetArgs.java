@@ -28,6 +28,10 @@ public final class MaintenanceWindowTaskTargetGetArgs extends com.pulumi.resourc
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return The array of strings.
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -66,15 +70,33 @@ public final class MaintenanceWindowTaskTargetGetArgs extends com.pulumi.resourc
             return key(Output.of(key));
         }
 
+        /**
+         * @param values The array of strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The array of strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The array of strings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

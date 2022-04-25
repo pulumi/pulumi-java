@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class BuildStorageLocation {
-    /**
-     * Name of your S3 bucket.
-     * 
-     */
+        /**
+         * @return Name of your S3 bucket.
+         * 
+         */
     private final String bucket;
-    /**
-     * Name of the zip file containing your build files.
-     * 
-     */
+        /**
+         * @return Name of the zip file containing your build files.
+         * 
+         */
     private final String key;
-    /**
-     * ARN of the access role that allows Amazon GameLift to access your S3 bucket.
-     * 
-     */
+        /**
+         * @return ARN of the access role that allows Amazon GameLift to access your S3 bucket.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class BuildStorageLocation {
     }
 
     /**
-     * Name of your S3 bucket.
+     * @return Name of your S3 bucket.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Name of the zip file containing your build files.
+     * @return Name of the zip file containing your build files.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * ARN of the access role that allows Amazon GameLift to access your S3 bucket.
+     * @return ARN of the access role that allows Amazon GameLift to access your S3 bucket.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

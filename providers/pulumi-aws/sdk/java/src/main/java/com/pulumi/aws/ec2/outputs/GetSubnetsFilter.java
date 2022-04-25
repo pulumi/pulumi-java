@@ -10,18 +10,18 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSubnetsFilter {
-    /**
-     * The name of the field to filter by, as defined by
-     * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
-     * For example, if matching against tag `Name`, use:
-     * 
-     */
+        /**
+         * @return The name of the field to filter by, as defined by
+         * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
+         * For example, if matching against tag `Name`, use:
+         * 
+         */
     private final String name;
-    /**
-     * Set of values that are accepted for the given field.
-     * Subnet IDs will be selected if any one of the given values match.
-     * 
-     */
+        /**
+         * @return Set of values that are accepted for the given field.
+         * Subnet IDs will be selected if any one of the given values match.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -33,19 +33,19 @@ public final class GetSubnetsFilter {
     }
 
     /**
-     * The name of the field to filter by, as defined by
+     * @return The name of the field to filter by, as defined by
      * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
      * For example, if matching against tag `Name`, use:
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Set of values that are accepted for the given field.
+     * @return Set of values that are accepted for the given field.
      * Subnet IDs will be selected if any one of the given values match.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

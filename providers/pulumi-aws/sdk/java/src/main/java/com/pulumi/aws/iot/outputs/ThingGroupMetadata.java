@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThingGroupMetadata {
     private final @Nullable String creationDate;
-    /**
-     * The name of the parent Thing Group.
-     * 
-     */
+        /**
+         * @return The name of the parent Thing Group.
+         * 
+         */
     private final @Nullable String parentGroupName;
     private final @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups;
 
@@ -35,9 +35,9 @@ public final class ThingGroupMetadata {
         return Optional.ofNullable(this.creationDate);
     }
     /**
-     * The name of the parent Thing Group.
+     * @return The name of the parent Thing Group.
      * 
-    */
+     */
     public Optional<String> parentGroupName() {
         return Optional.ofNullable(this.parentGroupName);
     }

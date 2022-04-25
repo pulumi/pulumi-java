@@ -23,6 +23,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
+    /**
+     * @return The availability zone in which to place the request.
+     * 
+     */
     public Optional<Output<String>> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -34,6 +38,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The type of instance to request.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -45,6 +53,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="priority")
     private @Nullable Output<Double> priority;
 
+    /**
+     * @return The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+     * 
+     */
     public Optional<Output<Double>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -56,6 +68,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="spotPrice")
     private @Nullable Output<String> spotPrice;
 
+    /**
+     * @return The maximum spot bid for this override request.
+     * 
+     */
     public Optional<Output<String>> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
@@ -67,6 +83,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The subnet in which to launch the requested instance.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -78,6 +98,10 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
     @Import(name="weightedCapacity")
     private @Nullable Output<Double> weightedCapacity;
 
+    /**
+     * @return The capacity added to the fleet by a fulfilled request.
+     * 
+     */
     public Optional<Output<Double>> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
@@ -111,56 +135,128 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideGetArgs extends c
             $ = new SpotFleetRequestLaunchTemplateConfigOverrideGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The availability zone in which to place the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param availabilityZone The availability zone in which to place the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(String availabilityZone) {
             return availabilityZone(Output.of(availabilityZone));
         }
 
+        /**
+         * @param instanceType The type of instance to request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The type of instance to request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param priority The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Double> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Double priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param spotPrice The maximum spot bid for this override request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
             $.spotPrice = spotPrice;
             return this;
         }
 
+        /**
+         * @param spotPrice The maximum spot bid for this override request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotPrice(String spotPrice) {
             return spotPrice(Output.of(spotPrice));
         }
 
+        /**
+         * @param subnetId The subnet in which to launch the requested instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The subnet in which to launch the requested instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param weightedCapacity The capacity added to the fleet by a fulfilled request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             $.weightedCapacity = weightedCapacity;
             return this;
         }
 
+        /**
+         * @param weightedCapacity The capacity added to the fleet by a fulfilled request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedCapacity(Double weightedCapacity) {
             return weightedCapacity(Output.of(weightedCapacity));
         }

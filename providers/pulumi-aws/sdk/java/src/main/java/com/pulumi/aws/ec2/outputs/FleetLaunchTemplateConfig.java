@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FleetLaunchTemplateConfig {
-    /**
-     * Nested argument containing EC2 Launch Template to use. Defined below.
-     * 
-     */
+        /**
+         * @return Nested argument containing EC2 Launch Template to use. Defined below.
+         * 
+         */
     private final FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification;
-    /**
-     * Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
-     * 
-     */
+        /**
+         * @return Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+         * 
+         */
     private final @Nullable List<FleetLaunchTemplateConfigOverride> overrides;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FleetLaunchTemplateConfig {
     }
 
     /**
-     * Nested argument containing EC2 Launch Template to use. Defined below.
+     * @return Nested argument containing EC2 Launch Template to use. Defined below.
      * 
-    */
+     */
     public FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
     /**
-     * Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
+     * @return Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
      * 
-    */
+     */
     public List<FleetLaunchTemplateConfigOverride> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }

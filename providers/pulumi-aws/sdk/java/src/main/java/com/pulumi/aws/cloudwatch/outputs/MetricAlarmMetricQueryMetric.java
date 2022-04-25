@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetricAlarmMetricQueryMetric {
-    /**
-     * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
-     * 
-     */
+        /**
+         * @return The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
+         * 
+         */
     private final @Nullable Map<String,String> dimensions;
-    /**
-     * The name for this metric.
-     * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
-     * 
-     */
+        /**
+         * @return The name for this metric.
+         * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
+         * 
+         */
     private final String metricName;
-    /**
-     * The namespace for this metric. See docs for the [list of namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html).
-     * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
-     * 
-     */
+        /**
+         * @return The namespace for this metric. See docs for the [list of namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html).
+         * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * The period in seconds over which the specified `stat` is applied.
-     * 
-     */
+        /**
+         * @return The period in seconds over which the specified `stat` is applied.
+         * 
+         */
     private final Integer period;
-    /**
-     * The statistic to apply to this metric.
-     * See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
-     * 
-     */
+        /**
+         * @return The statistic to apply to this metric.
+         * See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
+         * 
+         */
     private final String stat;
-    /**
-     * The unit for this metric.
-     * 
-     */
+        /**
+         * @return The unit for this metric.
+         * 
+         */
     private final @Nullable String unit;
 
     @CustomType.Constructor
@@ -64,47 +64,47 @@ public final class MetricAlarmMetricQueryMetric {
     }
 
     /**
-     * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
+     * @return The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-    */
+     */
     public Map<String,String> dimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
-     * The name for this metric.
+     * @return The name for this metric.
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * The namespace for this metric. See docs for the [list of namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html).
+     * @return The namespace for this metric. See docs for the [list of namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html).
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * The period in seconds over which the specified `stat` is applied.
+     * @return The period in seconds over which the specified `stat` is applied.
      * 
-    */
+     */
     public Integer period() {
         return this.period;
     }
     /**
-     * The statistic to apply to this metric.
+     * @return The statistic to apply to this metric.
      * See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
      * 
-    */
+     */
     public String stat() {
         return this.stat;
     }
     /**
-     * The unit for this metric.
+     * @return The unit for this metric.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

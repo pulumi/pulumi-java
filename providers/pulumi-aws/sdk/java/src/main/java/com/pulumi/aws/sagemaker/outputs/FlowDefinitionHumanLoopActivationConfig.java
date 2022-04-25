@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowDefinitionHumanLoopActivationConfig {
-    /**
-     * defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
-     * 
-     */
+        /**
+         * @return defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+         * 
+         */
     private final @Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FlowDefinitionHumanLoopActivationConfig {
     }
 
     /**
-     * defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+     * @return defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
      * 
-    */
+     */
     public Optional<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig> humanLoopActivationConditionsConfig() {
         return Optional.ofNullable(this.humanLoopActivationConditionsConfig);
     }

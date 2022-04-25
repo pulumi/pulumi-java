@@ -14,16 +14,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLaunchPathsResult {
     private final @Nullable String acceptLanguage;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String productId;
-    /**
-     * Block with information about the launch path. See details below.
-     * 
-     */
+        /**
+         * @return Block with information about the launch path. See details below.
+         * 
+         */
     private final List<GetLaunchPathsSummary> summaries;
 
     @CustomType.Constructor
@@ -42,9 +42,9 @@ public final class GetLaunchPathsResult {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -52,9 +52,9 @@ public final class GetLaunchPathsResult {
         return this.productId;
     }
     /**
-     * Block with information about the launch path. See details below.
+     * @return Block with information about the launch path. See details below.
      * 
-    */
+     */
     public List<GetLaunchPathsSummary> summaries() {
         return this.summaries;
     }

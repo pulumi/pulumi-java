@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PolicyPredictiveScalingConfiguration {
-    /**
-     * Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
-     * 
-     */
+        /**
+         * @return Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+         * 
+         */
     private final @Nullable String maxCapacityBreachBehavior;
-    /**
-     * The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
-     * 
-     */
+        /**
+         * @return The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+         * 
+         */
     private final @Nullable String maxCapacityBuffer;
-    /**
-     * This structure includes the metrics and target utilization to use for predictive scaling.
-     * 
-     */
+        /**
+         * @return This structure includes the metrics and target utilization to use for predictive scaling.
+         * 
+         */
     private final PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification;
-    /**
-     * The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
-     * 
-     */
+        /**
+         * @return The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
-     * 
-     */
+        /**
+         * @return The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+         * 
+         */
     private final @Nullable String schedulingBufferTime;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class PolicyPredictiveScalingConfiguration {
     }
 
     /**
-     * Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
+     * @return Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
      * 
-    */
+     */
     public Optional<String> maxCapacityBreachBehavior() {
         return Optional.ofNullable(this.maxCapacityBreachBehavior);
     }
     /**
-     * The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
+     * @return The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
      * 
-    */
+     */
     public Optional<String> maxCapacityBuffer() {
         return Optional.ofNullable(this.maxCapacityBuffer);
     }
     /**
-     * This structure includes the metrics and target utilization to use for predictive scaling.
+     * @return This structure includes the metrics and target utilization to use for predictive scaling.
      * 
-    */
+     */
     public PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification() {
         return this.metricSpecification;
     }
     /**
-     * The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
+     * @return The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
+     * @return The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
      * 
-    */
+     */
     public Optional<String> schedulingBufferTime() {
         return Optional.ofNullable(this.schedulingBufferTime);
     }

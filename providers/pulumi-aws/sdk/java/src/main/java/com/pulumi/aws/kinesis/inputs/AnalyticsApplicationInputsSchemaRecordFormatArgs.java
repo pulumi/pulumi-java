@@ -24,6 +24,11 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends com.
     @Import(name="mappingParameters")
     private @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
+    /**
+     * @return The Mapping Information for the record format.
+     * See Mapping Parameters below for more details.
+     * 
+     */
     public Optional<Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs>> mappingParameters() {
         return Optional.ofNullable(this.mappingParameters);
     }
@@ -35,6 +40,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends com.
     @Import(name="recordFormatType")
     private @Nullable Output<String> recordFormatType;
 
+    /**
+     * @return The type of Record Format. Can be `CSV` or `JSON`.
+     * 
+     */
     public Optional<Output<String>> recordFormatType() {
         return Optional.ofNullable(this.recordFormatType);
     }
@@ -64,20 +73,46 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends com.
             $ = new AnalyticsApplicationInputsSchemaRecordFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mappingParameters The Mapping Information for the record format.
+         * See Mapping Parameters below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingParameters(@Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters) {
             $.mappingParameters = mappingParameters;
             return this;
         }
 
+        /**
+         * @param mappingParameters The Mapping Information for the record format.
+         * See Mapping Parameters below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappingParameters(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs mappingParameters) {
             return mappingParameters(Output.of(mappingParameters));
         }
 
+        /**
+         * @param recordFormatType The type of Record Format. Can be `CSV` or `JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordFormatType(@Nullable Output<String> recordFormatType) {
             $.recordFormatType = recordFormatType;
             return this;
         }
 
+        /**
+         * @param recordFormatType The type of Record Format. Can be `CSV` or `JSON`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordFormatType(String recordFormatType) {
             return recordFormatType(Output.of(recordFormatType));
         }

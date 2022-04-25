@@ -22,6 +22,10 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends com.pulum
     @Import(name="humanLoopActivationConditionsConfig")
     private @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
+    /**
+     * @return defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+     * 
+     */
     public Optional<Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs>> humanLoopActivationConditionsConfig() {
         return Optional.ofNullable(this.humanLoopActivationConditionsConfig);
     }
@@ -50,11 +54,23 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends com.pulum
             $ = new FlowDefinitionHumanLoopActivationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param humanLoopActivationConditionsConfig defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConditionsConfig(@Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
             $.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
 
+        /**
+         * @param humanLoopActivationConditionsConfig defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder humanLoopActivationConditionsConfig(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
             return humanLoopActivationConditionsConfig(Output.of(humanLoopActivationConditionsConfig));
         }

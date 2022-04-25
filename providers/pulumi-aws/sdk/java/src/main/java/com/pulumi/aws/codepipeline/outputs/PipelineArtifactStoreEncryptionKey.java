@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PipelineArtifactStoreEncryptionKey {
-    /**
-     * The KMS key ARN or ID
-     * 
-     */
+        /**
+         * @return The KMS key ARN or ID
+         * 
+         */
     private final String id;
-    /**
-     * The type of key; currently only `KMS` is supported
-     * 
-     */
+        /**
+         * @return The type of key; currently only `KMS` is supported
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PipelineArtifactStoreEncryptionKey {
     }
 
     /**
-     * The KMS key ARN or ID
+     * @return The KMS key ARN or ID
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The type of key; currently only `KMS` is supported
+     * @return The type of key; currently only `KMS` is supported
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

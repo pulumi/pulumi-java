@@ -23,6 +23,10 @@ public final class InstanceEphemeralBlockDeviceArgs extends com.pulumi.resources
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The name of the block device to mount on the instance.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -34,6 +38,10 @@ public final class InstanceEphemeralBlockDeviceArgs extends com.pulumi.resources
     @Import(name="noDevice")
     private @Nullable Output<Boolean> noDevice;
 
+    /**
+     * @return Suppresses the specified device included in the AMI&#39;s block device mapping.
+     * 
+     */
     public Optional<Output<Boolean>> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -45,6 +53,10 @@ public final class InstanceEphemeralBlockDeviceArgs extends com.pulumi.resources
     @Import(name="virtualName")
     private @Nullable Output<String> virtualName;
 
+    /**
+     * @return [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
+     * 
+     */
     public Optional<Output<String>> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
@@ -75,29 +87,65 @@ public final class InstanceEphemeralBlockDeviceArgs extends com.pulumi.resources
             $ = new InstanceEphemeralBlockDeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The name of the block device to mount on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The name of the block device to mount on the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param noDevice Suppresses the specified device included in the AMI&#39;s block device mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
             $.noDevice = noDevice;
             return this;
         }
 
+        /**
+         * @param noDevice Suppresses the specified device included in the AMI&#39;s block device mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noDevice(Boolean noDevice) {
             return noDevice(Output.of(noDevice));
         }
 
+        /**
+         * @param virtualName [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
 
+        /**
+         * @param virtualName [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualName(String virtualName) {
             return virtualName(Output.of(virtualName));
         }

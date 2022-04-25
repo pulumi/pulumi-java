@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CustomPluginLocation {
-    /**
-     * Information of the plugin file stored in Amazon S3. See below.
-     * 
-     */
+        /**
+         * @return Information of the plugin file stored in Amazon S3. See below.
+         * 
+         */
     private final CustomPluginLocationS3 s3;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class CustomPluginLocation {
     }
 
     /**
-     * Information of the plugin file stored in Amazon S3. See below.
+     * @return Information of the plugin file stored in Amazon S3. See below.
      * 
-    */
+     */
     public CustomPluginLocationS3 s3() {
         return this.s3;
     }

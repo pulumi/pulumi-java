@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCallerIdentityResult {
-    /**
-     * AWS Account ID number of the account that owns or contains the calling entity.
-     * 
-     */
+        /**
+         * @return AWS Account ID number of the account that owns or contains the calling entity.
+         * 
+         */
     private final String accountId;
-    /**
-     * ARN associated with the calling entity.
-     * 
-     */
+        /**
+         * @return ARN associated with the calling entity.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Unique identifier of the calling entity.
-     * 
-     */
+        /**
+         * @return Unique identifier of the calling entity.
+         * 
+         */
     private final String userId;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GetCallerIdentityResult {
     }
 
     /**
-     * AWS Account ID number of the account that owns or contains the calling entity.
+     * @return AWS Account ID number of the account that owns or contains the calling entity.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * ARN associated with the calling entity.
+     * @return ARN associated with the calling entity.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Unique identifier of the calling entity.
+     * @return Unique identifier of the calling entity.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ThingGroupProperties {
-    /**
-     * The Thing Group attributes. Defined below.
-     * 
-     */
+        /**
+         * @return The Thing Group attributes. Defined below.
+         * 
+         */
     private final @Nullable ThingGroupPropertiesAttributePayload attributePayload;
-    /**
-     * A description of the Thing Group.
-     * 
-     */
+        /**
+         * @return A description of the Thing Group.
+         * 
+         */
     private final @Nullable String description;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ThingGroupProperties {
     }
 
     /**
-     * The Thing Group attributes. Defined below.
+     * @return The Thing Group attributes. Defined below.
      * 
-    */
+     */
     public Optional<ThingGroupPropertiesAttributePayload> attributePayload() {
         return Optional.ofNullable(this.attributePayload);
     }
     /**
-     * A description of the Thing Group.
+     * @return A description of the Thing Group.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

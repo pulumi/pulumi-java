@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceServiceRegistries {
-    /**
-     * Container name value, already specified in the task definition, to be used for your service discovery service.
-     * 
-     */
+        /**
+         * @return Container name value, already specified in the task definition, to be used for your service discovery service.
+         * 
+         */
     private final @Nullable String containerName;
-    /**
-     * Port value, already specified in the task definition, to be used for your service discovery service.
-     * 
-     */
+        /**
+         * @return Port value, already specified in the task definition, to be used for your service discovery service.
+         * 
+         */
     private final @Nullable Integer containerPort;
-    /**
-     * Port value used if your Service Discovery service specified an SRV record.
-     * 
-     */
+        /**
+         * @return Port value used if your Service Discovery service specified an SRV record.
+         * 
+         */
     private final @Nullable Integer port;
-    /**
-     * ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-     * 
-     */
+        /**
+         * @return ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+         * 
+         */
     private final String registryArn;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ServiceServiceRegistries {
     }
 
     /**
-     * Container name value, already specified in the task definition, to be used for your service discovery service.
+     * @return Container name value, already specified in the task definition, to be used for your service discovery service.
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * Port value, already specified in the task definition, to be used for your service discovery service.
+     * @return Port value, already specified in the task definition, to be used for your service discovery service.
      * 
-    */
+     */
     public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
-     * Port value used if your Service Discovery service specified an SRV record.
+     * @return Port value used if your Service Discovery service specified an SRV record.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
+     * @return ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
      * 
-    */
+     */
     public String registryArn() {
         return this.registryArn;
     }

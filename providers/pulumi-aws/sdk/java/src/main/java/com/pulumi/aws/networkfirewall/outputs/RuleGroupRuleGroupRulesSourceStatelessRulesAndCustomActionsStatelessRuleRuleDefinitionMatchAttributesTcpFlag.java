@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag {
-    /**
-     * Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
-     * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
-     * 
-     */
+        /**
+         * @return Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
+         * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
+         * 
+         */
     private final List<String> flags;
-    /**
-     * Set of flags to consider in the inspection. To inspect all flags, leave this empty.
-     * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
-     * 
-     */
+        /**
+         * @return Set of flags to consider in the inspection. To inspect all flags, leave this empty.
+         * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
+         * 
+         */
     private final @Nullable List<String> masks;
 
     @CustomType.Constructor
@@ -33,18 +33,18 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     /**
-     * Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
+     * @return Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
      * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
      * 
-    */
+     */
     public List<String> flags() {
         return this.flags;
     }
     /**
-     * Set of flags to consider in the inspection. To inspect all flags, leave this empty.
+     * @return Set of flags to consider in the inspection. To inspect all flags, leave this empty.
      * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
      * 
-    */
+     */
     public List<String> masks() {
         return this.masks == null ? List.of() : this.masks;
     }

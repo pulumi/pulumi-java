@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDistributionConfigurationDistribution {
-    /**
-     * Nested list of AMI distribution configuration.
-     * 
-     */
+        /**
+         * @return Nested list of AMI distribution configuration.
+         * 
+         */
     private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
-    /**
-     * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
-     * 
-     */
+        /**
+         * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         */
     private final List<String> licenseConfigurationArns;
-    /**
-     * AWS Region of distribution.
-     * 
-     */
+        /**
+         * @return AWS Region of distribution.
+         * 
+         */
     private final String region;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetDistributionConfigurationDistribution {
     }
 
     /**
-     * Nested list of AMI distribution configuration.
+     * @return Nested list of AMI distribution configuration.
      * 
-    */
+     */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
     }
     /**
-     * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+     * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
-    */
+     */
     public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns;
     }
     /**
-     * AWS Region of distribution.
+     * @return AWS Region of distribution.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

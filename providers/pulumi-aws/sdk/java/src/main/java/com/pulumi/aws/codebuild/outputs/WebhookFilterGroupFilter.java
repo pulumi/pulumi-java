@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebhookFilterGroupFilter {
-    /**
-     * If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean excludeMatchedPattern;
-    /**
-     * For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub &amp; GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
-     * 
-     */
+        /**
+         * @return For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub &amp; GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
+         * 
+         */
     private final String pattern;
-    /**
-     * The webhook filter group&#39;s type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
-     * 
-     */
+        /**
+         * @return The webhook filter group&#39;s type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class WebhookFilterGroupFilter {
     }
 
     /**
-     * If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
+     * @return If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> excludeMatchedPattern() {
         return Optional.ofNullable(this.excludeMatchedPattern);
     }
     /**
-     * For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub &amp; GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
+     * @return For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub &amp; GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
      * 
-    */
+     */
     public String pattern() {
         return this.pattern;
     }
     /**
-     * The webhook filter group&#39;s type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
+     * @return The webhook filter group&#39;s type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

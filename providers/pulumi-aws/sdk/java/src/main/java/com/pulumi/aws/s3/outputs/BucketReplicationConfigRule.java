@@ -17,50 +17,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketReplicationConfigRule {
-    /**
-     * Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when `filter` is used)documented below.
-     * 
-     */
+        /**
+         * @return Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when `filter` is used)documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleDeleteMarkerReplication deleteMarkerReplication;
-    /**
-     * Specifies the destination for the rule documented below.
-     * 
-     */
+        /**
+         * @return Specifies the destination for the rule documented below.
+         * 
+         */
     private final BucketReplicationConfigRuleDestination destination;
-    /**
-     * Replicate existing objects in the source bucket according to the rule configurations documented below.
-     * 
-     */
+        /**
+         * @return Replicate existing objects in the source bucket according to the rule configurations documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleExistingObjectReplication existingObjectReplication;
-    /**
-     * Filter that identifies subset of objects to which the replication rule applies documented below.
-     * 
-     */
+        /**
+         * @return Filter that identifies subset of objects to which the replication rule applies documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleFilter filter;
-    /**
-     * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
-     * 
-     */
+        /**
+         * @return Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
-     * 
-     */
+        /**
+         * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
-     * 
-     */
+        /**
+         * @return The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * Specifies special object selection criteria documented below.
-     * 
-     */
+        /**
+         * @return Specifies special object selection criteria documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleSourceSelectionCriteria sourceSelectionCriteria;
-    /**
-     * The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
-     * 
-     */
+        /**
+         * @return The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -86,65 +86,65 @@ public final class BucketReplicationConfigRule {
     }
 
     /**
-     * Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when `filter` is used)documented below.
+     * @return Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when `filter` is used)documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleDeleteMarkerReplication> deleteMarkerReplication() {
         return Optional.ofNullable(this.deleteMarkerReplication);
     }
     /**
-     * Specifies the destination for the rule documented below.
+     * @return Specifies the destination for the rule documented below.
      * 
-    */
+     */
     public BucketReplicationConfigRuleDestination destination() {
         return this.destination;
     }
     /**
-     * Replicate existing objects in the source bucket according to the rule configurations documented below.
+     * @return Replicate existing objects in the source bucket according to the rule configurations documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleExistingObjectReplication> existingObjectReplication() {
         return Optional.ofNullable(this.existingObjectReplication);
     }
     /**
-     * Filter that identifies subset of objects to which the replication rule applies documented below.
+     * @return Filter that identifies subset of objects to which the replication rule applies documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleFilter> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
+     * @return Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
+     * @return The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Specifies special object selection criteria documented below.
+     * @return Specifies special object selection criteria documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleSourceSelectionCriteria> sourceSelectionCriteria() {
         return Optional.ofNullable(this.sourceSelectionCriteria);
     }
     /**
-     * The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
+     * @return The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

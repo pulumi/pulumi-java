@@ -28,6 +28,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="allQueryArguments")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
+    /**
+     * @return Inspect all query arguments.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs>> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
@@ -39,6 +43,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="body")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
+    /**
+     * @return Inspect the request body, which immediately follows the request headers.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -50,6 +58,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="method")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
+    /**
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -61,6 +73,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="queryString")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
+    /**
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -72,6 +88,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="singleHeader")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
+    /**
+     * @return Inspect a single header. See Single Header below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs>> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
@@ -83,6 +103,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="singleQueryArgument")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
+    /**
+     * @return Inspect a single query argument. See Single Query Argument below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs>> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
@@ -94,6 +118,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
     @Import(name="uriPath")
     private @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
+    /**
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * 
+     */
     public Optional<Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -128,65 +156,149 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
             $ = new RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
             $.allQueryArguments = allQueryArguments;
             return this;
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             return allQueryArguments(Output.of(allQueryArguments));
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             $.singleHeader = singleHeader;
             return this;
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             $.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             return singleQueryArgument(Output.of(singleQueryArgument));
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(RuleGroupRuleStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs uriPath) {
             return uriPath(Output.of(uriPath));
         }

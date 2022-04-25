@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PartitionStorageDescriptorColumn {
-    /**
-     * Free-form text comment.
-     * 
-     */
+        /**
+         * @return Free-form text comment.
+         * 
+         */
     private final @Nullable String comment;
-    /**
-     * Name of the SerDe.
-     * 
-     */
+        /**
+         * @return Name of the SerDe.
+         * 
+         */
     private final String name;
-    /**
-     * The datatype of data in the Column.
-     * 
-     */
+        /**
+         * @return The datatype of data in the Column.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class PartitionStorageDescriptorColumn {
     }
 
     /**
-     * Free-form text comment.
+     * @return Free-form text comment.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * Name of the SerDe.
+     * @return Name of the SerDe.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The datatype of data in the Column.
+     * @return The datatype of data in the Column.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

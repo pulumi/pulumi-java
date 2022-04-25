@@ -28,6 +28,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="allQueryArguments")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
+    /**
+     * @return Inspect all query arguments.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs>> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
@@ -39,6 +43,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="body")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs> body;
 
+    /**
+     * @return Inspect the request body, which immediately follows the request headers.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -50,6 +58,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="method")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs> method;
 
+    /**
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -61,6 +73,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="queryString")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString;
 
+    /**
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -72,6 +88,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="singleHeader")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
+    /**
+     * @return Inspect a single header. See Single Header below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs>> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
@@ -83,6 +103,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="singleQueryArgument")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
+    /**
+     * @return Inspect a single query argument. See Single Query Argument below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs>> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
@@ -94,6 +118,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="uriPath")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath;
 
+    /**
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -128,65 +156,149 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             $ = new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
             $.allQueryArguments = allQueryArguments;
             return this;
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             return allQueryArguments(Output.of(allQueryArguments));
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchBodyArgs body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchMethodArgs method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchQueryStringArgs queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             $.singleHeader = singleHeader;
             return this;
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             $.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             return singleQueryArgument(Output.of(singleQueryArgument));
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchUriPathArgs uriPath) {
             return uriPath(Output.of(uriPath));
         }

@@ -25,10 +25,10 @@ public final class GetTableResult {
     private final String billingMode;
     private final List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes;
     private final String hashKey;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final List<GetTableLocalSecondaryIndex> localSecondaryIndexes;
     private final String name;
@@ -108,9 +108,9 @@ public final class GetTableResult {
         return this.hashKey;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

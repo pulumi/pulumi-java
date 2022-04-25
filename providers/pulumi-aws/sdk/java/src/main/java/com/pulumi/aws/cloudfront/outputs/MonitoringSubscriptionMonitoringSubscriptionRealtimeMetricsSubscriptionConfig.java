@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig {
-    /**
-     * A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
-     * 
-     */
+        /**
+         * @return A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
+         * 
+         */
     private final String realtimeMetricsSubscriptionStatus;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     }
 
     /**
-     * A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
+     * @return A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
      * 
-    */
+     */
     public String realtimeMetricsSubscriptionStatus() {
         return this.realtimeMetricsSubscriptionStatus;
     }

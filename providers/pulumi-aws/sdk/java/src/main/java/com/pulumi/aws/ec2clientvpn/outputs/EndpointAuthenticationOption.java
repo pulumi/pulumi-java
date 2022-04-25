@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointAuthenticationOption {
-    /**
-     * The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
-     * 
-     */
+        /**
+         * @return The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
+         * 
+         */
     private final @Nullable String activeDirectoryId;
-    /**
-     * The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
-     * 
-     */
+        /**
+         * @return The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
+         * 
+         */
     private final @Nullable String rootCertificateChainArn;
-    /**
-     * The ARN of the IAM SAML identity provider if type is `federated-authentication`.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+         * 
+         */
     private final @Nullable String samlProviderArn;
-    /**
-     * The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
+         * 
+         */
     private final @Nullable String selfServiceSamlProviderArn;
-    /**
-     * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
-     * 
-     */
+        /**
+         * @return The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class EndpointAuthenticationOption {
     }
 
     /**
-     * The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
+     * @return The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
      * 
-    */
+     */
     public Optional<String> activeDirectoryId() {
         return Optional.ofNullable(this.activeDirectoryId);
     }
     /**
-     * The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
+     * @return The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
      * 
-    */
+     */
     public Optional<String> rootCertificateChainArn() {
         return Optional.ofNullable(this.rootCertificateChainArn);
     }
     /**
-     * The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+     * @return The ARN of the IAM SAML identity provider if type is `federated-authentication`.
      * 
-    */
+     */
     public Optional<String> samlProviderArn() {
         return Optional.ofNullable(this.samlProviderArn);
     }
     /**
-     * The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
+     * @return The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
      * 
-    */
+     */
     public Optional<String> selfServiceSamlProviderArn() {
         return Optional.ofNullable(this.selfServiceSamlProviderArn);
     }
     /**
-     * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
+     * @return The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

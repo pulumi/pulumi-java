@@ -12,10 +12,10 @@ import java.util.Objects;
 @CustomType
 public final class GetPipelineDefinitionParameterObject {
     private final List<GetPipelineDefinitionParameterObjectAttribute> attributes;
-    /**
-     * ID of the object.
-     * 
-     */
+        /**
+         * @return ID of the object.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -30,9 +30,9 @@ public final class GetPipelineDefinitionParameterObject {
         return this.attributes;
     }
     /**
-     * ID of the object.
+     * @return ID of the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

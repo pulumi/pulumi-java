@@ -24,6 +24,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Specifies the description of the Security Profile.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Specifies the identifier of the hosting Amazon Connect Instance.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -46,6 +54,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the Security Profile.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="permissions")
     private @Nullable Output<List<String>> permissions;
 
+    /**
+     * @return Specifies a list of permissions assigned to the security profile.
+     * 
+     */
     public Optional<Output<List<String>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -69,6 +85,11 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags to apply to the Security Profile. If configured with a provider
+     * [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +101,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -113,60 +138,140 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
             $ = new SecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Specifies the description of the Security Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Specifies the description of the Security Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Specifies the identifier of the hosting Amazon Connect Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param name Specifies the name of the Security Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the Security Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param permissions Specifies a list of permissions assigned to the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions Specifies a list of permissions assigned to the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions Specifies a list of permissions assigned to the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param tags Tags to apply to the Security Profile. If configured with a provider
+         * [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags to apply to the Security Profile. If configured with a provider
+         * [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

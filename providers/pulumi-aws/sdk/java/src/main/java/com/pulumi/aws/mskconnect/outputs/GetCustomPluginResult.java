@@ -10,31 +10,31 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCustomPluginResult {
-    /**
-     * the Amazon Resource Name (ARN) of the custom plugin.
-     * 
-     */
+        /**
+         * @return the Amazon Resource Name (ARN) of the custom plugin.
+         * 
+         */
     private final String arn;
-    /**
-     * a summary description of the custom plugin.
-     * 
-     */
+        /**
+         * @return a summary description of the custom plugin.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * an ID of the latest successfully created revision of the custom plugin.
-     * 
-     */
+        /**
+         * @return an ID of the latest successfully created revision of the custom plugin.
+         * 
+         */
     private final Integer latestRevision;
     private final String name;
-    /**
-     * the state of the custom plugin.
-     * 
-     */
+        /**
+         * @return the state of the custom plugin.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -54,30 +54,30 @@ public final class GetCustomPluginResult {
     }
 
     /**
-     * the Amazon Resource Name (ARN) of the custom plugin.
+     * @return the Amazon Resource Name (ARN) of the custom plugin.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * a summary description of the custom plugin.
+     * @return a summary description of the custom plugin.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * an ID of the latest successfully created revision of the custom plugin.
+     * @return an ID of the latest successfully created revision of the custom plugin.
      * 
-    */
+     */
     public Integer latestRevision() {
         return this.latestRevision;
     }
@@ -85,9 +85,9 @@ public final class GetCustomPluginResult {
         return this.name;
     }
     /**
-     * the state of the custom plugin.
+     * @return the state of the custom plugin.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -24,6 +24,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="cidrBlock")
     private @Nullable Output<String> cidrBlock;
 
+    /**
+     * @return The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
+     * 
+     */
     public Optional<Output<String>> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -35,6 +39,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="egress")
     private @Nullable Output<Boolean> egress;
 
+    /**
+     * @return Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
+     * 
+     */
     public Optional<Output<Boolean>> egress() {
         return Optional.ofNullable(this.egress);
     }
@@ -46,6 +54,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="fromPort")
     private @Nullable Output<Integer> fromPort;
 
+    /**
+     * @return The from port to match.
+     * 
+     */
     public Optional<Output<Integer>> fromPort() {
         return Optional.ofNullable(this.fromPort);
     }
@@ -57,6 +69,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="icmpCode")
     private @Nullable Output<String> icmpCode;
 
+    /**
+     * @return ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
+     * 
+     */
     public Optional<Output<String>> icmpCode() {
         return Optional.ofNullable(this.icmpCode);
     }
@@ -68,6 +84,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="icmpType")
     private @Nullable Output<String> icmpType;
 
+    /**
+     * @return ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
+     * 
+     */
     public Optional<Output<String>> icmpType() {
         return Optional.ofNullable(this.icmpType);
     }
@@ -79,6 +99,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="ipv6CidrBlock")
     private @Nullable Output<String> ipv6CidrBlock;
 
+    /**
+     * @return The IPv6 CIDR block to allow or deny.
+     * 
+     */
     public Optional<Output<String>> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
@@ -90,6 +114,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="networkAclId")
     private @Nullable Output<String> networkAclId;
 
+    /**
+     * @return The ID of the network ACL.
+     * 
+     */
     public Optional<Output<String>> networkAclId() {
         return Optional.ofNullable(this.networkAclId);
     }
@@ -101,6 +129,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return The protocol. A value of -1 means all protocols.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -112,6 +144,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="ruleAction")
     private @Nullable Output<String> ruleAction;
 
+    /**
+     * @return Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
+     * 
+     */
     public Optional<Output<String>> ruleAction() {
         return Optional.ofNullable(this.ruleAction);
     }
@@ -123,6 +159,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="ruleNumber")
     private @Nullable Output<Integer> ruleNumber;
 
+    /**
+     * @return The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
+     * 
+     */
     public Optional<Output<Integer>> ruleNumber() {
         return Optional.ofNullable(this.ruleNumber);
     }
@@ -134,6 +174,10 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
     @Import(name="toPort")
     private @Nullable Output<Integer> toPort;
 
+    /**
+     * @return The to port to match.
+     * 
+     */
     public Optional<Output<Integer>> toPort() {
         return Optional.ofNullable(this.toPort);
     }
@@ -172,101 +216,233 @@ public final class NetworkAclRuleState extends com.pulumi.resources.ResourceArgs
             $ = new NetworkAclRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param cidrBlock The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
         }
 
+        /**
+         * @param egress Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(@Nullable Output<Boolean> egress) {
             $.egress = egress;
             return this;
         }
 
+        /**
+         * @param egress Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egress(Boolean egress) {
             return egress(Output.of(egress));
         }
 
+        /**
+         * @param fromPort The from port to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort The from port to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
 
+        /**
+         * @param icmpCode ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpCode(@Nullable Output<String> icmpCode) {
             $.icmpCode = icmpCode;
             return this;
         }
 
+        /**
+         * @param icmpCode ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpCode(String icmpCode) {
             return icmpCode(Output.of(icmpCode));
         }
 
+        /**
+         * @param icmpType ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpType(@Nullable Output<String> icmpType) {
             $.icmpType = icmpType;
             return this;
         }
 
+        /**
+         * @param icmpType ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
+         * 
+         * @return builder
+         * 
+         */
         public Builder icmpType(String icmpType) {
             return icmpType(Output.of(icmpType));
         }
 
+        /**
+         * @param ipv6CidrBlock The IPv6 CIDR block to allow or deny.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
             $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
+        /**
+         * @param ipv6CidrBlock The IPv6 CIDR block to allow or deny.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             return ipv6CidrBlock(Output.of(ipv6CidrBlock));
         }
 
+        /**
+         * @param networkAclId The ID of the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclId(@Nullable Output<String> networkAclId) {
             $.networkAclId = networkAclId;
             return this;
         }
 
+        /**
+         * @param networkAclId The ID of the network ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAclId(String networkAclId) {
             return networkAclId(Output.of(networkAclId));
         }
 
+        /**
+         * @param protocol The protocol. A value of -1 means all protocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol. A value of -1 means all protocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param ruleAction Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleAction(@Nullable Output<String> ruleAction) {
             $.ruleAction = ruleAction;
             return this;
         }
 
+        /**
+         * @param ruleAction Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleAction(String ruleAction) {
             return ruleAction(Output.of(ruleAction));
         }
 
+        /**
+         * @param ruleNumber The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(@Nullable Output<Integer> ruleNumber) {
             $.ruleNumber = ruleNumber;
             return this;
         }
 
+        /**
+         * @param ruleNumber The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleNumber(Integer ruleNumber) {
             return ruleNumber(Output.of(ruleNumber));
         }
 
+        /**
+         * @param toPort The to port to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(@Nullable Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort The to port to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleSourceSourceDetail {
-    /**
-     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
-     * 
-     */
+        /**
+         * @return The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+         * 
+         */
     private final @Nullable String eventSource;
-    /**
-     * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
-     * 
-     */
+        /**
+         * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * 
+         */
     private final @Nullable String maximumExecutionFrequency;
-    /**
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
-     * 
-     */
+        /**
+         * @return The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+         * 
+         */
     private final @Nullable String messageType;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class RuleSourceSourceDetail {
     }
 
     /**
-     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+     * @return The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
      * 
-    */
+     */
     public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
-     * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
-    */
+     */
     public Optional<String> maximumExecutionFrequency() {
         return Optional.ofNullable(this.maximumExecutionFrequency);
     }
     /**
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+     * @return The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
      * 
-    */
+     */
     public Optional<String> messageType() {
         return Optional.ofNullable(this.messageType);
     }

@@ -17,40 +17,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatch {
-    /**
-     * Inspect all query arguments.
-     * 
-     */
+        /**
+         * @return Inspect all query arguments.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArguments allQueryArguments;
-    /**
-     * Inspect the request body, which immediately follows the request headers.
-     * 
-     */
+        /**
+         * @return Inspect the request body, which immediately follows the request headers.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchBody body;
-    /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-     * 
-     */
+        /**
+         * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchMethod method;
-    /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
-     * 
-     */
+        /**
+         * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryString queryString;
-    /**
-     * Inspect a single header. See Single Header below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single header. See Single Header below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader singleHeader;
-    /**
-     * Inspect a single query argument. See Single Query Argument below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument;
-    /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-     * 
-     */
+        /**
+         * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPath uriPath;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     }
 
     /**
-     * Inspect all query arguments.
+     * @return Inspect all query arguments.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
-     * Inspect the request body, which immediately follows the request headers.
+     * @return Inspect the request body, which immediately follows the request headers.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
-     * Inspect a single header. See Single Header below for details.
+     * @return Inspect a single header. See Single Header below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
-     * Inspect a single query argument. See Single Query Argument below for details.
+     * @return Inspect a single query argument. See Single Query Argument below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }

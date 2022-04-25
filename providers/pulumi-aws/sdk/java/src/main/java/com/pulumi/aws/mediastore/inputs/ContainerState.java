@@ -23,6 +23,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the container.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return The DNS endpoint of the container.
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -45,6 +53,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the container. Must contain alphanumeric characters or underscores.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -67,6 +83,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -99,47 +119,107 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param endpoint The DNS endpoint of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint The DNS endpoint of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param name The name of the container. Must contain alphanumeric characters or underscores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the container. Must contain alphanumeric characters or underscores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

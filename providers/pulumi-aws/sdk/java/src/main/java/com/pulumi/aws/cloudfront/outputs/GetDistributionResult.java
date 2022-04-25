@@ -14,58 +14,58 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDistributionResult {
-    /**
-     * A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
-     * 
-     */
+        /**
+         * @return A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
+         * 
+         */
     private final List<String> aliases;
-    /**
-     * The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
-     * 
-     */
+        /**
+         * @return The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+         * 
+         */
     private final String arn;
-    /**
-     * The domain name corresponding to the distribution. For
-     * example: `d604721fxaaqy9.cloudfront.net`.
-     * 
-     */
+        /**
+         * @return The domain name corresponding to the distribution. For
+         * example: `d604721fxaaqy9.cloudfront.net`.
+         * 
+         */
     private final String domainName;
     private final Boolean enabled;
-    /**
-     * The current version of the distribution&#39;s information. For example:
-     * `E2QWRUHAPOMQZL`.
-     * 
-     */
+        /**
+         * @return The current version of the distribution&#39;s information. For example:
+         * `E2QWRUHAPOMQZL`.
+         * 
+         */
     private final String etag;
-    /**
-     * The CloudFront Route 53 zone ID that can be used to
-     * route an [Alias Resource Record Set][7] to. This attribute is simply an
-     * alias for the zone ID `Z2FDTNDATAQYW2`.
-     * 
-     */
+        /**
+         * @return The CloudFront Route 53 zone ID that can be used to
+         * route an [Alias Resource Record Set][7] to. This attribute is simply an
+         * alias for the zone ID `Z2FDTNDATAQYW2`.
+         * 
+         */
     private final String hostedZoneId;
-    /**
-     * The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
-     * 
-     */
+        /**
+         * @return The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
+         * 
+         */
     private final String id;
-    /**
-     * The number of invalidation batches
-     * currently in progress.
-     * 
-     */
+        /**
+         * @return The number of invalidation batches
+         * currently in progress.
+         * 
+         */
     private final Integer inProgressValidationBatches;
-    /**
-     * The date and time the distribution was last modified.
-     * 
-     */
+        /**
+         * @return The date and time the distribution was last modified.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * The current status of the distribution. `Deployed` if the
-     * distribution&#39;s information is fully propagated throughout the Amazon
-     * CloudFront system.
-     * 
-     */
+        /**
+         * @return The current status of the distribution. `Deployed` if the
+         * distribution&#39;s information is fully propagated throughout the Amazon
+         * CloudFront system.
+         * 
+         */
     private final String status;
     private final @Nullable Map<String,String> tags;
 
@@ -96,24 +96,24 @@ public final class GetDistributionResult {
     }
 
     /**
-     * A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
+     * @return A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
      * 
-    */
+     */
     public List<String> aliases() {
         return this.aliases;
     }
     /**
-     * The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
+     * @return The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The domain name corresponding to the distribution. For
+     * @return The domain name corresponding to the distribution. For
      * example: `d604721fxaaqy9.cloudfront.net`.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -121,50 +121,50 @@ public final class GetDistributionResult {
         return this.enabled;
     }
     /**
-     * The current version of the distribution&#39;s information. For example:
+     * @return The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The CloudFront Route 53 zone ID that can be used to
+     * @return The CloudFront Route 53 zone ID that can be used to
      * route an [Alias Resource Record Set][7] to. This attribute is simply an
      * alias for the zone ID `Z2FDTNDATAQYW2`.
      * 
-    */
+     */
     public String hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
-     * The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
+     * @return The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The number of invalidation batches
+     * @return The number of invalidation batches
      * currently in progress.
      * 
-    */
+     */
     public Integer inProgressValidationBatches() {
         return this.inProgressValidationBatches;
     }
     /**
-     * The date and time the distribution was last modified.
+     * @return The date and time the distribution was last modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The current status of the distribution. `Deployed` if the
+     * @return The current status of the distribution. `Deployed` if the
      * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

@@ -11,61 +11,61 @@ import java.util.Objects;
 
 @CustomType
 public final class GetReportDefinitionResult {
-    /**
-     * A list of additional artifacts.
-     * 
-     */
+        /**
+         * @return A list of additional artifacts.
+         * 
+         */
     private final List<String> additionalArtifacts;
-    /**
-     * A list of schema elements.
-     * 
-     */
+        /**
+         * @return A list of schema elements.
+         * 
+         */
     private final List<String> additionalSchemaElements;
-    /**
-     * Preferred format for report.
-     * 
-     */
+        /**
+         * @return Preferred format for report.
+         * 
+         */
     private final String compression;
-    /**
-     * Preferred compression format for report.
-     * 
-     */
+        /**
+         * @return Preferred compression format for report.
+         * 
+         */
     private final String format;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * If true reports are updated after they have been finalized.
-     * 
-     */
+        /**
+         * @return If true reports are updated after they have been finalized.
+         * 
+         */
     private final Boolean refreshClosedReports;
     private final String reportName;
-    /**
-     * Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
-     * 
-     */
+        /**
+         * @return Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+         * 
+         */
     private final String reportVersioning;
-    /**
-     * Name of customer S3 bucket.
-     * 
-     */
+        /**
+         * @return Name of customer S3 bucket.
+         * 
+         */
     private final String s3Bucket;
-    /**
-     * Preferred report path prefix.
-     * 
-     */
+        /**
+         * @return Preferred report path prefix.
+         * 
+         */
     private final String s3Prefix;
-    /**
-     * Region of customer S3 bucket.
-     * 
-     */
+        /**
+         * @return Region of customer S3 bucket.
+         * 
+         */
     private final String s3Region;
-    /**
-     * The frequency on which report data are measured and displayed.
-     * 
-     */
+        /**
+         * @return The frequency on which report data are measured and displayed.
+         * 
+         */
     private final String timeUnit;
 
     @CustomType.Constructor
@@ -97,44 +97,44 @@ public final class GetReportDefinitionResult {
     }
 
     /**
-     * A list of additional artifacts.
+     * @return A list of additional artifacts.
      * 
-    */
+     */
     public List<String> additionalArtifacts() {
         return this.additionalArtifacts;
     }
     /**
-     * A list of schema elements.
+     * @return A list of schema elements.
      * 
-    */
+     */
     public List<String> additionalSchemaElements() {
         return this.additionalSchemaElements;
     }
     /**
-     * Preferred format for report.
+     * @return Preferred format for report.
      * 
-    */
+     */
     public String compression() {
         return this.compression;
     }
     /**
-     * Preferred compression format for report.
+     * @return Preferred compression format for report.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If true reports are updated after they have been finalized.
+     * @return If true reports are updated after they have been finalized.
      * 
-    */
+     */
     public Boolean refreshClosedReports() {
         return this.refreshClosedReports;
     }
@@ -142,37 +142,37 @@ public final class GetReportDefinitionResult {
         return this.reportName;
     }
     /**
-     * Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+     * @return Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
      * 
-    */
+     */
     public String reportVersioning() {
         return this.reportVersioning;
     }
     /**
-     * Name of customer S3 bucket.
+     * @return Name of customer S3 bucket.
      * 
-    */
+     */
     public String s3Bucket() {
         return this.s3Bucket;
     }
     /**
-     * Preferred report path prefix.
+     * @return Preferred report path prefix.
      * 
-    */
+     */
     public String s3Prefix() {
         return this.s3Prefix;
     }
     /**
-     * Region of customer S3 bucket.
+     * @return Region of customer S3 bucket.
      * 
-    */
+     */
     public String s3Region() {
         return this.s3Region;
     }
     /**
-     * The frequency on which report data are measured and displayed.
+     * @return The frequency on which report data are measured and displayed.
      * 
-    */
+     */
     public String timeUnit() {
         return this.timeUnit;
     }

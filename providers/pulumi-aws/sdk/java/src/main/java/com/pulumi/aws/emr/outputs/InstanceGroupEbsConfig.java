@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceGroupEbsConfig {
-    /**
-     * The number of I/O operations per second (IOPS) that the volume supports.
-     * 
-     */
+        /**
+         * @return The number of I/O operations per second (IOPS) that the volume supports.
+         * 
+         */
     private final @Nullable Integer iops;
-    /**
-     * The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
-     * 
-     */
+        /**
+         * @return The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
+         * 
+         */
     private final Integer size;
-    /**
-     * The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
-     * 
-     */
+        /**
+         * @return The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The number of EBS Volumes to attach per instance.
-     * 
-     */
+        /**
+         * @return The number of EBS Volumes to attach per instance.
+         * 
+         */
     private final @Nullable Integer volumesPerInstance;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class InstanceGroupEbsConfig {
     }
 
     /**
-     * The number of I/O operations per second (IOPS) that the volume supports.
+     * @return The number of I/O operations per second (IOPS) that the volume supports.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
+     * @return The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
+     * @return The volume type. Valid options are &#39;gp2&#39;, &#39;io1&#39; and &#39;standard&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The number of EBS Volumes to attach per instance.
+     * @return The number of EBS Volumes to attach per instance.
      * 
-    */
+     */
     public Optional<Integer> volumesPerInstance() {
         return Optional.ofNullable(this.volumesPerInstance);
     }

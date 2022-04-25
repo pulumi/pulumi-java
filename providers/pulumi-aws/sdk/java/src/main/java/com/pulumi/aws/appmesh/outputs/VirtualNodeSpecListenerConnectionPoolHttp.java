@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecListenerConnectionPoolHttp {
-    /**
-     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-     * 
-     */
+        /**
+         * @return Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+         * 
+         */
     private final Integer maxConnections;
-    /**
-     * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
-     * 
-     */
+        /**
+         * @return Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+         * 
+         */
     private final @Nullable Integer maxPendingRequests;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
     }
 
     /**
-     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+     * @return Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
-    */
+     */
     public Integer maxConnections() {
         return this.maxConnections;
     }
     /**
-     * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+     * @return Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
      * 
-    */
+     */
     public Optional<Integer> maxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }

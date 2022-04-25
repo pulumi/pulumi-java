@@ -25,6 +25,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -36,6 +40,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     @Import(name="fieldToMatch")
     private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch;
 
+    /**
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs>> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
@@ -47,6 +55,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     @Import(name="textTransformations", required=true)
     private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations;
 
+    /**
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
@@ -77,33 +89,75 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
             $ = new WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch) {
             $.fieldToMatch = fieldToMatch;
             return this;
         }
 
+        /**
+         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldToMatch(WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs fieldToMatch) {
             return fieldToMatch(Output.of(fieldToMatch));
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations) {
             $.textTransformations = textTransformations;
             return this;
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs> textTransformations) {
             return textTransformations(Output.of(textTransformations));
         }
 
+        /**
+         * @param textTransformations Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder textTransformations(WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
         }

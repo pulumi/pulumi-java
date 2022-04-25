@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceParametersAwsIotAnalytics {
-    /**
-     * The name of the data set to which to connect.
-     * 
-     */
+        /**
+         * @return The name of the data set to which to connect.
+         * 
+         */
     private final String dataSetName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataSourceParametersAwsIotAnalytics {
     }
 
     /**
-     * The name of the data set to which to connect.
+     * @return The name of the data set to which to connect.
      * 
-    */
+     */
     public String dataSetName() {
         return this.dataSetName;
     }

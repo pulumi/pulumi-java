@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainEncryptAtRest {
-    /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
-     * 
-     */
+        /**
+         * @return KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+         * 
+         */
     private final @Nullable String kmsKeyId;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class DomainEncryptAtRest {
     }
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
+     * @return KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventTargetBatchTarget {
-    /**
-     * The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
-     * 
-     */
+        /**
+         * @return The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
+         * 
+         */
     private final @Nullable Integer arraySize;
-    /**
-     * The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
-     * 
-     */
+        /**
+         * @return The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
+         * 
+         */
     private final @Nullable Integer jobAttempts;
-    /**
-     * The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
-     * 
-     */
+        /**
+         * @return The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
+         * 
+         */
     private final String jobDefinition;
-    /**
-     * The name to use for this execution of the job, if the target is an AWS Batch job.
-     * 
-     */
+        /**
+         * @return The name to use for this execution of the job, if the target is an AWS Batch job.
+         * 
+         */
     private final String jobName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class EventTargetBatchTarget {
     }
 
     /**
-     * The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
+     * @return The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
      * 
-    */
+     */
     public Optional<Integer> arraySize() {
         return Optional.ofNullable(this.arraySize);
     }
     /**
-     * The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
+     * @return The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
      * 
-    */
+     */
     public Optional<Integer> jobAttempts() {
         return Optional.ofNullable(this.jobAttempts);
     }
     /**
-     * The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
+     * @return The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
      * 
-    */
+     */
     public String jobDefinition() {
         return this.jobDefinition;
     }
     /**
-     * The name to use for this execution of the job, if the target is an AWS Batch job.
+     * @return The name to use for this execution of the job, if the target is an AWS Batch job.
      * 
-    */
+     */
     public String jobName() {
         return this.jobName;
     }

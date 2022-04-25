@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MLTransformInputRecordTable {
-    /**
-     * A unique identifier for the AWS Glue Data Catalog.
-     * 
-     */
+        /**
+         * @return A unique identifier for the AWS Glue Data Catalog.
+         * 
+         */
     private final @Nullable String catalogId;
-    /**
-     * The name of the connection to the AWS Glue Data Catalog.
-     * 
-     */
+        /**
+         * @return The name of the connection to the AWS Glue Data Catalog.
+         * 
+         */
     private final @Nullable String connectionName;
-    /**
-     * A database name in the AWS Glue Data Catalog.
-     * 
-     */
+        /**
+         * @return A database name in the AWS Glue Data Catalog.
+         * 
+         */
     private final String databaseName;
-    /**
-     * A table name in the AWS Glue Data Catalog.
-     * 
-     */
+        /**
+         * @return A table name in the AWS Glue Data Catalog.
+         * 
+         */
     private final String tableName;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class MLTransformInputRecordTable {
     }
 
     /**
-     * A unique identifier for the AWS Glue Data Catalog.
+     * @return A unique identifier for the AWS Glue Data Catalog.
      * 
-    */
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
-     * The name of the connection to the AWS Glue Data Catalog.
+     * @return The name of the connection to the AWS Glue Data Catalog.
      * 
-    */
+     */
     public Optional<String> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
     /**
-     * A database name in the AWS Glue Data Catalog.
+     * @return A database name in the AWS Glue Data Catalog.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * A table name in the AWS Glue Data Catalog.
+     * @return A table name in the AWS Glue Data Catalog.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }

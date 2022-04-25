@@ -20,6 +20,10 @@ public final class DomainNameApiAssociationArgs extends com.pulumi.resources.Res
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The API ID.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -31,6 +35,10 @@ public final class DomainNameApiAssociationArgs extends com.pulumi.resources.Res
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The Appsync domain name.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -60,20 +68,44 @@ public final class DomainNameApiAssociationArgs extends com.pulumi.resources.Res
             $ = new DomainNameApiAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param domainName The Appsync domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The Appsync domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }

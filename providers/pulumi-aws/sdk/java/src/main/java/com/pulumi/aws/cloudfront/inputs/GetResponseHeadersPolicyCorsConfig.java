@@ -25,6 +25,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlAllowCredentials", required=true)
     private Boolean accessControlAllowCredentials;
 
+    /**
+     * @return A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.
+     * 
+     */
     public Boolean accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
@@ -36,6 +40,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlAllowHeaders", required=true)
     private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders;
 
+    /**
+     * @return Object that contains an attribute `items` that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.
+     * 
+     */
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
@@ -47,6 +55,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlAllowMethods", required=true)
     private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods;
 
+    /**
+     * @return Object that contains an attribute `items` that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: `GET` | `POST` | `OPTIONS` | `PUT` | `DELETE` | `HEAD` | `ALL`
+     * 
+     */
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
@@ -58,6 +70,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlAllowOrigins", required=true)
     private List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins;
 
+    /**
+     * @return Object that contains an attribute `items` that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.
+     * 
+     */
     public List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
@@ -69,6 +85,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlExposeHeaders", required=true)
     private List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders;
 
+    /**
+     * @return Object that contains an attribute `items` that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.
+     * 
+     */
     public List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders;
     }
@@ -80,6 +100,10 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
     @Import(name="accessControlMaxAgeSec", required=true)
     private Integer accessControlMaxAgeSec;
 
+    /**
+     * @return A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
+     * 
+     */
     public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
@@ -121,47 +145,107 @@ public final class GetResponseHeadersPolicyCorsConfig extends com.pulumi.resourc
             $ = new GetResponseHeadersPolicyCorsConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControlAllowCredentials A Boolean value that CloudFront uses as the value for the Access-Control-Allow-Credentials HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
             $.accessControlAllowCredentials = accessControlAllowCredentials;
             return this;
         }
 
+        /**
+         * @param accessControlAllowHeaders Object that contains an attribute `items` that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders) {
             $.accessControlAllowHeaders = accessControlAllowHeaders;
             return this;
         }
 
+        /**
+         * @param accessControlAllowHeaders Object that contains an attribute `items` that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowHeaders(GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader... accessControlAllowHeaders) {
             return accessControlAllowHeaders(List.of(accessControlAllowHeaders));
         }
 
+        /**
+         * @param accessControlAllowMethods Object that contains an attribute `items` that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: `GET` | `POST` | `OPTIONS` | `PUT` | `DELETE` | `HEAD` | `ALL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowMethods(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods) {
             $.accessControlAllowMethods = accessControlAllowMethods;
             return this;
         }
 
+        /**
+         * @param accessControlAllowMethods Object that contains an attribute `items` that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: `GET` | `POST` | `OPTIONS` | `PUT` | `DELETE` | `HEAD` | `ALL`
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowMethods(GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod... accessControlAllowMethods) {
             return accessControlAllowMethods(List.of(accessControlAllowMethods));
         }
 
+        /**
+         * @param accessControlAllowOrigins Object that contains an attribute `items` that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowOrigins(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins) {
             $.accessControlAllowOrigins = accessControlAllowOrigins;
             return this;
         }
 
+        /**
+         * @param accessControlAllowOrigins Object that contains an attribute `items` that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlAllowOrigins(GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin... accessControlAllowOrigins) {
             return accessControlAllowOrigins(List.of(accessControlAllowOrigins));
         }
 
+        /**
+         * @param accessControlExposeHeaders Object that contains an attribute `items` that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlExposeHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders) {
             $.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
 
+        /**
+         * @param accessControlExposeHeaders Object that contains an attribute `items` that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlExposeHeaders(GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader... accessControlExposeHeaders) {
             return accessControlExposeHeaders(List.of(accessControlExposeHeaders));
         }
 
+        /**
+         * @param accessControlMaxAgeSec A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             $.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;

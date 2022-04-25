@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AssociationTarget {
-    /**
-     * Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
-     * 
-     */
+        /**
+         * @return Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
+         * 
+         */
     private final String key;
-    /**
-     * A list of instance IDs or tag values. AWS currently limits this list size to one value.
-     * 
-     */
+        /**
+         * @return A list of instance IDs or tag values. AWS currently limits this list size to one value.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AssociationTarget {
     }
 
     /**
-     * Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
+     * @return Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A list of instance IDs or tag values. AWS currently limits this list size to one value.
+     * @return A list of instance IDs or tag values. AWS currently limits this list size to one value.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

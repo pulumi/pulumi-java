@@ -24,6 +24,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="authenticationRequestExtraParams")
     private @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
+    /**
+     * @return The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+     * 
+     */
     public Optional<Output<Map<String,String>>> authenticationRequestExtraParams() {
         return Optional.ofNullable(this.authenticationRequestExtraParams);
     }
@@ -35,6 +39,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="authorizationEndpoint", required=true)
     private Output<String> authorizationEndpoint;
 
+    /**
+     * @return The authorization endpoint of the IdP.
+     * 
+     */
     public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
@@ -46,6 +54,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return The OAuth 2.0 client identifier.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -57,6 +69,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="clientSecret", required=true)
     private Output<String> clientSecret;
 
+    /**
+     * @return The OAuth 2.0 client secret.
+     * 
+     */
     public Output<String> clientSecret() {
         return this.clientSecret;
     }
@@ -68,6 +84,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="issuer", required=true)
     private Output<String> issuer;
 
+    /**
+     * @return The OIDC issuer identifier of the IdP.
+     * 
+     */
     public Output<String> issuer() {
         return this.issuer;
     }
@@ -79,6 +99,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="onUnauthenticatedRequest")
     private @Nullable Output<String> onUnauthenticatedRequest;
 
+    /**
+     * @return The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+     * 
+     */
     public Optional<Output<String>> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
@@ -90,6 +114,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
+    /**
+     * @return The set of user claims to be requested from the IdP.
+     * 
+     */
     public Optional<Output<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -101,6 +129,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="sessionCookieName")
     private @Nullable Output<String> sessionCookieName;
 
+    /**
+     * @return The name of the cookie used to maintain session information.
+     * 
+     */
     public Optional<Output<String>> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
@@ -112,6 +144,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="sessionTimeout")
     private @Nullable Output<Integer> sessionTimeout;
 
+    /**
+     * @return The maximum duration of the authentication session, in seconds.
+     * 
+     */
     public Optional<Output<Integer>> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
@@ -123,6 +159,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="tokenEndpoint", required=true)
     private Output<String> tokenEndpoint;
 
+    /**
+     * @return The token endpoint of the IdP.
+     * 
+     */
     public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
@@ -134,6 +174,10 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
     @Import(name="userInfoEndpoint", required=true)
     private Output<String> userInfoEndpoint;
 
+    /**
+     * @return The user info endpoint of the IdP.
+     * 
+     */
     public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
@@ -172,101 +216,233 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends com.pulumi.res
             $ = new ListenerRuleActionAuthenticateOidcArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationRequestExtraParams The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationRequestExtraParams(@Nullable Output<Map<String,String>> authenticationRequestExtraParams) {
             $.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
 
+        /**
+         * @param authenticationRequestExtraParams The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
             return authenticationRequestExtraParams(Output.of(authenticationRequestExtraParams));
         }
 
+        /**
+         * @param authorizationEndpoint The authorization endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
             $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
+        /**
+         * @param authorizationEndpoint The authorization endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationEndpoint(String authorizationEndpoint) {
             return authorizationEndpoint(Output.of(authorizationEndpoint));
         }
 
+        /**
+         * @param clientId The OAuth 2.0 client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The OAuth 2.0 client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The OAuth 2.0 client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The OAuth 2.0 client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param issuer The OIDC issuer identifier of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(Output<String> issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param issuer The OIDC issuer identifier of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             return issuer(Output.of(issuer));
         }
 
+        /**
+         * @param onUnauthenticatedRequest The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+         * 
+         * @return builder
+         * 
+         */
         public Builder onUnauthenticatedRequest(@Nullable Output<String> onUnauthenticatedRequest) {
             $.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
 
+        /**
+         * @param onUnauthenticatedRequest The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
+         * 
+         * @return builder
+         * 
+         */
         public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
             return onUnauthenticatedRequest(Output.of(onUnauthenticatedRequest));
         }
 
+        /**
+         * @param scope The set of user claims to be requested from the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The set of user claims to be requested from the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param sessionCookieName The name of the cookie used to maintain session information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionCookieName(@Nullable Output<String> sessionCookieName) {
             $.sessionCookieName = sessionCookieName;
             return this;
         }
 
+        /**
+         * @param sessionCookieName The name of the cookie used to maintain session information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionCookieName(String sessionCookieName) {
             return sessionCookieName(Output.of(sessionCookieName));
         }
 
+        /**
+         * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionTimeout(@Nullable Output<Integer> sessionTimeout) {
             $.sessionTimeout = sessionTimeout;
             return this;
         }
 
+        /**
+         * @param sessionTimeout The maximum duration of the authentication session, in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionTimeout(Integer sessionTimeout) {
             return sessionTimeout(Output.of(sessionTimeout));
         }
 
+        /**
+         * @param tokenEndpoint The token endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(Output<String> tokenEndpoint) {
             $.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
+        /**
+         * @param tokenEndpoint The token endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenEndpoint(String tokenEndpoint) {
             return tokenEndpoint(Output.of(tokenEndpoint));
         }
 
+        /**
+         * @param userInfoEndpoint The user info endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {
             $.userInfoEndpoint = userInfoEndpoint;
             return this;
         }
 
+        /**
+         * @param userInfoEndpoint The user info endpoint of the IdP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfoEndpoint(String userInfoEndpoint) {
             return userInfoEndpoint(Output.of(userInfoEndpoint));
         }

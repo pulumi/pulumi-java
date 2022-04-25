@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntentFulfillmentActivity {
-    /**
-     * A description of the Lambda function that is run to fulfill the intent.
-     * Required if type is CodeHook. Attributes are documented under code_hook.
-     * 
-     */
+        /**
+         * @return A description of the Lambda function that is run to fulfill the intent.
+         * Required if type is CodeHook. Attributes are documented under code_hook.
+         * 
+         */
     private final @Nullable IntentFulfillmentActivityCodeHook codeHook;
-    /**
-     * How the intent should be fulfilled, either by running a Lambda function or by
-     * returning the slot data to the client application.
-     * 
-     */
+        /**
+         * @return How the intent should be fulfilled, either by running a Lambda function or by
+         * returning the slot data to the client application.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -34,18 +34,18 @@ public final class IntentFulfillmentActivity {
     }
 
     /**
-     * A description of the Lambda function that is run to fulfill the intent.
+     * @return A description of the Lambda function that is run to fulfill the intent.
      * Required if type is CodeHook. Attributes are documented under code_hook.
      * 
-    */
+     */
     public Optional<IntentFulfillmentActivityCodeHook> codeHook() {
         return Optional.ofNullable(this.codeHook);
     }
     /**
-     * How the intent should be fulfilled, either by running a Lambda function or by
+     * @return How the intent should be fulfilled, either by running a Lambda function or by
      * returning the slot data to the client application.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

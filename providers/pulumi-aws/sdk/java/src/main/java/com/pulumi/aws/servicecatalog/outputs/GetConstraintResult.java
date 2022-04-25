@@ -12,41 +12,41 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetConstraintResult {
     private final @Nullable String acceptLanguage;
-    /**
-     * Description of the constraint.
-     * 
-     */
+        /**
+         * @return Description of the constraint.
+         * 
+         */
     private final String description;
     private final String id;
-    /**
-     * Owner of the constraint.
-     * 
-     */
+        /**
+         * @return Owner of the constraint.
+         * 
+         */
     private final String owner;
-    /**
-     * Constraint parameters in JSON format.
-     * 
-     */
+        /**
+         * @return Constraint parameters in JSON format.
+         * 
+         */
     private final String parameters;
-    /**
-     * Portfolio identifier.
-     * 
-     */
+        /**
+         * @return Portfolio identifier.
+         * 
+         */
     private final String portfolioId;
-    /**
-     * Product identifier.
-     * 
-     */
+        /**
+         * @return Product identifier.
+         * 
+         */
     private final String productId;
-    /**
-     * Constraint status.
-     * 
-     */
+        /**
+         * @return Constraint status.
+         * 
+         */
     private final String status;
-    /**
-     * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
-     * 
-     */
+        /**
+         * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,9 +75,9 @@ public final class GetConstraintResult {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * Description of the constraint.
+     * @return Description of the constraint.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -85,44 +85,44 @@ public final class GetConstraintResult {
         return this.id;
     }
     /**
-     * Owner of the constraint.
+     * @return Owner of the constraint.
      * 
-    */
+     */
     public String owner() {
         return this.owner;
     }
     /**
-     * Constraint parameters in JSON format.
+     * @return Constraint parameters in JSON format.
      * 
-    */
+     */
     public String parameters() {
         return this.parameters;
     }
     /**
-     * Portfolio identifier.
+     * @return Portfolio identifier.
      * 
-    */
+     */
     public String portfolioId() {
         return this.portfolioId;
     }
     /**
-     * Product identifier.
+     * @return Product identifier.
      * 
-    */
+     */
     public String productId() {
         return this.productId;
     }
     /**
-     * Constraint status.
+     * @return Constraint status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
+     * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

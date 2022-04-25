@@ -15,82 +15,82 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNodeGroupResult {
-    /**
-     * Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
+         * 
+         */
     private final String amiType;
-    /**
-     * Amazon Resource Name (ARN) of the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the EKS Node Group.
+         * 
+         */
     private final String arn;
     private final String clusterName;
-    /**
-     * Disk size in GiB for worker nodes.
-     * 
-     */
+        /**
+         * @return Disk size in GiB for worker nodes.
+         * 
+         */
     private final Integer diskSize;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of instance types associated with the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Set of instance types associated with the EKS Node Group.
+         * 
+         */
     private final List<String> instanceTypes;
-    /**
-     * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-     * 
-     */
+        /**
+         * @return Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
+         * 
+         */
     private final Map<String,String> labels;
     private final String nodeGroupName;
-    /**
-     * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
+         * 
+         */
     private final String nodeRoleArn;
-    /**
-     * AMI version of the EKS Node Group.
-     * 
-     */
+        /**
+         * @return AMI version of the EKS Node Group.
+         * 
+         */
     private final String releaseVersion;
-    /**
-     * Configuration block with remote access settings.
-     * 
-     */
+        /**
+         * @return Configuration block with remote access settings.
+         * 
+         */
     private final List<GetNodeGroupRemoteAccess> remoteAccesses;
-    /**
-     * List of objects containing information about underlying resources.
-     * 
-     */
+        /**
+         * @return List of objects containing information about underlying resources.
+         * 
+         */
     private final List<GetNodeGroupResource> resources;
-    /**
-     * Configuration block with scaling settings.
-     * 
-     */
+        /**
+         * @return Configuration block with scaling settings.
+         * 
+         */
     private final List<GetNodeGroupScalingConfig> scalingConfigs;
-    /**
-     * Status of the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Status of the EKS Node Group.
+         * 
+         */
     private final String status;
-    /**
-     * Identifiers of EC2 Subnets to associate with the EKS Node Group.
-     * 
-     */
+        /**
+         * @return Identifiers of EC2 Subnets to associate with the EKS Node Group.
+         * 
+         */
     private final List<String> subnetIds;
-    /**
-     * Key-value map of resource tags.
-     * 
-     */
+        /**
+         * @return Key-value map of resource tags.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Kubernetes version.
-     * 
-     */
+        /**
+         * @return Kubernetes version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -132,16 +132,16 @@ public final class GetNodeGroupResult {
     }
 
     /**
-     * Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
+     * @return Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
      * 
-    */
+     */
     public String amiType() {
         return this.amiType;
     }
     /**
-     * Amazon Resource Name (ARN) of the EKS Node Group.
+     * @return Amazon Resource Name (ARN) of the EKS Node Group.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -149,30 +149,30 @@ public final class GetNodeGroupResult {
         return this.clusterName;
     }
     /**
-     * Disk size in GiB for worker nodes.
+     * @return Disk size in GiB for worker nodes.
      * 
-    */
+     */
     public Integer diskSize() {
         return this.diskSize;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of instance types associated with the EKS Node Group.
+     * @return Set of instance types associated with the EKS Node Group.
      * 
-    */
+     */
     public List<String> instanceTypes() {
         return this.instanceTypes;
     }
     /**
-     * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
+     * @return Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
@@ -180,65 +180,65 @@ public final class GetNodeGroupResult {
         return this.nodeGroupName;
     }
     /**
-     * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
+     * @return Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
      * 
-    */
+     */
     public String nodeRoleArn() {
         return this.nodeRoleArn;
     }
     /**
-     * AMI version of the EKS Node Group.
+     * @return AMI version of the EKS Node Group.
      * 
-    */
+     */
     public String releaseVersion() {
         return this.releaseVersion;
     }
     /**
-     * Configuration block with remote access settings.
+     * @return Configuration block with remote access settings.
      * 
-    */
+     */
     public List<GetNodeGroupRemoteAccess> remoteAccesses() {
         return this.remoteAccesses;
     }
     /**
-     * List of objects containing information about underlying resources.
+     * @return List of objects containing information about underlying resources.
      * 
-    */
+     */
     public List<GetNodeGroupResource> resources() {
         return this.resources;
     }
     /**
-     * Configuration block with scaling settings.
+     * @return Configuration block with scaling settings.
      * 
-    */
+     */
     public List<GetNodeGroupScalingConfig> scalingConfigs() {
         return this.scalingConfigs;
     }
     /**
-     * Status of the EKS Node Group.
+     * @return Status of the EKS Node Group.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Identifiers of EC2 Subnets to associate with the EKS Node Group.
+     * @return Identifiers of EC2 Subnets to associate with the EKS Node Group.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * Key-value map of resource tags.
+     * @return Key-value map of resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Kubernetes version.
+     * @return Kubernetes version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

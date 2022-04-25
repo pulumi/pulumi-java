@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
-    /**
-     * Specifies whether you want CloudFront to forward
-     * cookies to the origin that is associated with this cache behavior. You can
-     * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
-     * subsequent `whitelisted_names`
-     * 
-     */
+        /**
+         * @return Specifies whether you want CloudFront to forward
+         * cookies to the origin that is associated with this cache behavior. You can
+         * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
+         * subsequent `whitelisted_names`
+         * 
+         */
     private final String forward;
-    /**
-     * If you have specified `whitelist` to
-     * `forward`, the whitelisted cookies that you want CloudFront to forward to
-     * your origin.
-     * 
-     */
+        /**
+         * @return If you have specified `whitelist` to
+         * `forward`, the whitelisted cookies that you want CloudFront to forward to
+         * your origin.
+         * 
+         */
     private final @Nullable List<String> whitelistedNames;
 
     @CustomType.Constructor
@@ -36,21 +36,21 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
     }
 
     /**
-     * Specifies whether you want CloudFront to forward
+     * @return Specifies whether you want CloudFront to forward
      * cookies to the origin that is associated with this cache behavior. You can
      * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
      * subsequent `whitelisted_names`
      * 
-    */
+     */
     public String forward() {
         return this.forward;
     }
     /**
-     * If you have specified `whitelist` to
+     * @return If you have specified `whitelist` to
      * `forward`, the whitelisted cookies that you want CloudFront to forward to
      * your origin.
      * 
-    */
+     */
     public List<String> whitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
     }

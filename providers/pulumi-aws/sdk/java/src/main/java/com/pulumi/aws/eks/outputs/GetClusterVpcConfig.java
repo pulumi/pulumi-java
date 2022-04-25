@@ -11,40 +11,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterVpcConfig {
-    /**
-     * The cluster security group that was created by Amazon EKS for the cluster.
-     * 
-     */
+        /**
+         * @return The cluster security group that was created by Amazon EKS for the cluster.
+         * 
+         */
     private final String clusterSecurityGroupId;
-    /**
-     * Indicates whether or not the Amazon EKS private API server endpoint is enabled.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the Amazon EKS private API server endpoint is enabled.
+         * 
+         */
     private final Boolean endpointPrivateAccess;
-    /**
-     * Indicates whether or not the Amazon EKS public API server endpoint is enabled.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the Amazon EKS public API server endpoint is enabled.
+         * 
+         */
     private final Boolean endpointPublicAccess;
-    /**
-     * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
-     * 
-     */
+        /**
+         * @return List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+         * 
+         */
     private final List<String> publicAccessCidrs;
-    /**
-     * List of security group IDs
-     * 
-     */
+        /**
+         * @return List of security group IDs
+         * 
+         */
     private final List<String> securityGroupIds;
-    /**
-     * List of subnet IDs
-     * 
-     */
+        /**
+         * @return List of subnet IDs
+         * 
+         */
     private final List<String> subnetIds;
-    /**
-     * The VPC associated with your cluster.
-     * 
-     */
+        /**
+         * @return The VPC associated with your cluster.
+         * 
+         */
     private final String vpcId;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetClusterVpcConfig {
     }
 
     /**
-     * The cluster security group that was created by Amazon EKS for the cluster.
+     * @return The cluster security group that was created by Amazon EKS for the cluster.
      * 
-    */
+     */
     public String clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
     /**
-     * Indicates whether or not the Amazon EKS private API server endpoint is enabled.
+     * @return Indicates whether or not the Amazon EKS private API server endpoint is enabled.
      * 
-    */
+     */
     public Boolean endpointPrivateAccess() {
         return this.endpointPrivateAccess;
     }
     /**
-     * Indicates whether or not the Amazon EKS public API server endpoint is enabled.
+     * @return Indicates whether or not the Amazon EKS public API server endpoint is enabled.
      * 
-    */
+     */
     public Boolean endpointPublicAccess() {
         return this.endpointPublicAccess;
     }
     /**
-     * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
+     * @return List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
      * 
-    */
+     */
     public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs;
     }
     /**
-     * List of security group IDs
+     * @return List of security group IDs
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
-     * List of subnet IDs
+     * @return List of subnet IDs
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * The VPC associated with your cluster.
+     * @return The VPC associated with your cluster.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

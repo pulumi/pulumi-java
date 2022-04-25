@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AccessPointRootDirectoryCreationInfo {
-    /**
-     * POSIX group ID to apply to the `root_directory`.
-     * 
-     */
+        /**
+         * @return POSIX group ID to apply to the `root_directory`.
+         * 
+         */
     private final Integer ownerGid;
-    /**
-     * POSIX user ID to apply to the `root_directory`.
-     * 
-     */
+        /**
+         * @return POSIX user ID to apply to the `root_directory`.
+         * 
+         */
     private final Integer ownerUid;
-    /**
-     * POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
-     * 
-     */
+        /**
+         * @return POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+         * 
+         */
     private final String permissions;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class AccessPointRootDirectoryCreationInfo {
     }
 
     /**
-     * POSIX group ID to apply to the `root_directory`.
+     * @return POSIX group ID to apply to the `root_directory`.
      * 
-    */
+     */
     public Integer ownerGid() {
         return this.ownerGid;
     }
     /**
-     * POSIX user ID to apply to the `root_directory`.
+     * @return POSIX user ID to apply to the `root_directory`.
      * 
-    */
+     */
     public Integer ownerUid() {
         return this.ownerUid;
     }
     /**
-     * POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
+     * @return POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file&#39;s mode bits.
      * 
-    */
+     */
     public String permissions() {
         return this.permissions;
     }

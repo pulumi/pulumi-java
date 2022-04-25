@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InventoryDestinationBucket {
-    /**
-     * The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
-     * 
-     */
+        /**
+         * @return The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
+         * 
+         */
     private final @Nullable String accountId;
-    /**
-     * The Amazon S3 bucket ARN of the destination.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket ARN of the destination.
+         * 
+         */
     private final String bucketArn;
-    /**
-     * Contains the type of server-side encryption to use to encrypt the inventory (documented below).
-     * 
-     */
+        /**
+         * @return Contains the type of server-side encryption to use to encrypt the inventory (documented below).
+         * 
+         */
     private final @Nullable InventoryDestinationBucketEncryption encryption;
-    /**
-     * Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
-     * 
-     */
+        /**
+         * @return Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
+         * 
+         */
     private final String format;
-    /**
-     * The prefix that is prepended to all inventory results.
-     * 
-     */
+        /**
+         * @return The prefix that is prepended to all inventory results.
+         * 
+         */
     private final @Nullable String prefix;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class InventoryDestinationBucket {
     }
 
     /**
-     * The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
+     * @return The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
      * 
-    */
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
-     * The Amazon S3 bucket ARN of the destination.
+     * @return The Amazon S3 bucket ARN of the destination.
      * 
-    */
+     */
     public String bucketArn() {
         return this.bucketArn;
     }
     /**
-     * Contains the type of server-side encryption to use to encrypt the inventory (documented below).
+     * @return Contains the type of server-side encryption to use to encrypt the inventory (documented below).
      * 
-    */
+     */
     public Optional<InventoryDestinationBucketEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
+     * @return Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * The prefix that is prepended to all inventory results.
+     * @return The prefix that is prepended to all inventory results.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIpamPreviewNextCidrResult {
-    /**
-     * The previewed CIDR from the pool.
-     * 
-     */
+        /**
+         * @return The previewed CIDR from the pool.
+         * 
+         */
     private final String cidr;
     private final @Nullable List<String> disallowedCidrs;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String ipamPoolId;
     private final @Nullable Integer netmaskLength;
@@ -42,9 +42,9 @@ public final class GetIpamPreviewNextCidrResult {
     }
 
     /**
-     * The previewed CIDR from the pool.
+     * @return The previewed CIDR from the pool.
      * 
-    */
+     */
     public String cidr() {
         return this.cidr;
     }
@@ -52,9 +52,9 @@ public final class GetIpamPreviewNextCidrResult {
         return this.disallowedCidrs == null ? List.of() : this.disallowedCidrs;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

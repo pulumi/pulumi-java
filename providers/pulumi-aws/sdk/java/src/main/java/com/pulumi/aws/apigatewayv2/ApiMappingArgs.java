@@ -22,6 +22,10 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return The API identifier.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingKey")
     private @Nullable Output<String> apiMappingKey;
 
+    /**
+     * @return The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
+     * 
+     */
     public Optional<Output<String>> apiMappingKey() {
         return Optional.ofNullable(this.apiMappingKey);
     }
@@ -44,6 +52,10 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -55,6 +67,10 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stage", required=true)
     private Output<String> stage;
 
+    /**
+     * @return The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
+     * 
+     */
     public Output<String> stage() {
         return this.stage;
     }
@@ -86,38 +102,86 @@ public final class ApiMappingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The API identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param apiMappingKey The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMappingKey(@Nullable Output<String> apiMappingKey) {
             $.apiMappingKey = apiMappingKey;
             return this;
         }
 
+        /**
+         * @param apiMappingKey The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMappingKey(String apiMappingKey) {
             return apiMappingKey(Output.of(apiMappingKey));
         }
 
+        /**
+         * @param domainName The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param stage The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }

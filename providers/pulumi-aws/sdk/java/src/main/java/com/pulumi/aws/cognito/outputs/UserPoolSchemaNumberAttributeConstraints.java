@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserPoolSchemaNumberAttributeConstraints {
-    /**
-     * Maximum value of an attribute that is of the number data type.
-     * 
-     */
+        /**
+         * @return Maximum value of an attribute that is of the number data type.
+         * 
+         */
     private final @Nullable String maxValue;
-    /**
-     * Minimum value of an attribute that is of the number data type.
-     * 
-     */
+        /**
+         * @return Minimum value of an attribute that is of the number data type.
+         * 
+         */
     private final @Nullable String minValue;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class UserPoolSchemaNumberAttributeConstraints {
     }
 
     /**
-     * Maximum value of an attribute that is of the number data type.
+     * @return Maximum value of an attribute that is of the number data type.
      * 
-    */
+     */
     public Optional<String> maxValue() {
         return Optional.ofNullable(this.maxValue);
     }
     /**
-     * Minimum value of an attribute that is of the number data type.
+     * @return Minimum value of an attribute that is of the number data type.
      * 
-    */
+     */
     public Optional<String> minValue() {
         return Optional.ofNullable(this.minValue);
     }

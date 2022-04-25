@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLocalGatewayVirtualInterfaceGroupsFilter {
-    /**
-     * Name of the filter.
-     * 
-     */
+        /**
+         * @return Name of the filter.
+         * 
+         */
     private final String name;
-    /**
-     * List of one or more values for the filter.
-     * 
-     */
+        /**
+         * @return List of one or more values for the filter.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetLocalGatewayVirtualInterfaceGroupsFilter {
     }
 
     /**
-     * Name of the filter.
+     * @return Name of the filter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of one or more values for the filter.
+     * @return List of one or more values for the filter.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

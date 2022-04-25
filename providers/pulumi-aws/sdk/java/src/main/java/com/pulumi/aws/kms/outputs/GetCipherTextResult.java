@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCipherTextResult {
-    /**
-     * Base64 encoded ciphertext
-     * 
-     */
+        /**
+         * @return Base64 encoded ciphertext
+         * 
+         */
     private final String ciphertextBlob;
     private final @Nullable Map<String,String> context;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String keyId;
     private final String plaintext;
@@ -40,9 +40,9 @@ public final class GetCipherTextResult {
     }
 
     /**
-     * Base64 encoded ciphertext
+     * @return Base64 encoded ciphertext
      * 
-    */
+     */
     public String ciphertextBlob() {
         return this.ciphertextBlob;
     }
@@ -50,9 +50,9 @@ public final class GetCipherTextResult {
         return this.context == null ? Map.of() : this.context;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

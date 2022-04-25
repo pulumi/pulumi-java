@@ -20,6 +20,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="serializer", required=true)
     private Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs> serializer;
 
+    /**
+     * @return Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
+     * 
+     */
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs> serializer() {
         return this.serializer;
     }
@@ -48,11 +52,23 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serializer Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs> serializer) {
             $.serializer = serializer;
             return this;
         }
 
+        /**
+         * @param serializer Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs serializer) {
             return serializer(Output.of(serializer));
         }

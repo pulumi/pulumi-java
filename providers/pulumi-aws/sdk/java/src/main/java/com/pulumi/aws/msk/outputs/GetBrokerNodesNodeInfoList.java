@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBrokerNodesNodeInfoList {
-    /**
-     * The attached elastic network interface of the broker
-     * 
-     */
+        /**
+         * @return The attached elastic network interface of the broker
+         * 
+         */
     private final String attachedEniId;
-    /**
-     * The ID of the broker
-     * 
-     */
+        /**
+         * @return The ID of the broker
+         * 
+         */
     private final Double brokerId;
-    /**
-     * The client subnet to which this broker node belongs
-     * 
-     */
+        /**
+         * @return The client subnet to which this broker node belongs
+         * 
+         */
     private final String clientSubnet;
-    /**
-     * The client virtual private cloud (VPC) IP address
-     * 
-     */
+        /**
+         * @return The client virtual private cloud (VPC) IP address
+         * 
+         */
     private final String clientVpcIpAddress;
-    /**
-     * Set of endpoints for accessing the broker. This does not include ports
-     * 
-     */
+        /**
+         * @return Set of endpoints for accessing the broker. This does not include ports
+         * 
+         */
     private final List<String> endpoints;
-    /**
-     * The Amazon Resource Name (ARN) of the node
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the node
+         * 
+         */
     private final String nodeArn;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetBrokerNodesNodeInfoList {
     }
 
     /**
-     * The attached elastic network interface of the broker
+     * @return The attached elastic network interface of the broker
      * 
-    */
+     */
     public String attachedEniId() {
         return this.attachedEniId;
     }
     /**
-     * The ID of the broker
+     * @return The ID of the broker
      * 
-    */
+     */
     public Double brokerId() {
         return this.brokerId;
     }
     /**
-     * The client subnet to which this broker node belongs
+     * @return The client subnet to which this broker node belongs
      * 
-    */
+     */
     public String clientSubnet() {
         return this.clientSubnet;
     }
     /**
-     * The client virtual private cloud (VPC) IP address
+     * @return The client virtual private cloud (VPC) IP address
      * 
-    */
+     */
     public String clientVpcIpAddress() {
         return this.clientVpcIpAddress;
     }
     /**
-     * Set of endpoints for accessing the broker. This does not include ports
+     * @return Set of endpoints for accessing the broker. This does not include ports
      * 
-    */
+     */
     public List<String> endpoints() {
         return this.endpoints;
     }
     /**
-     * The Amazon Resource Name (ARN) of the node
+     * @return The Amazon Resource Name (ARN) of the node
      * 
-    */
+     */
     public String nodeArn() {
         return this.nodeArn;
     }

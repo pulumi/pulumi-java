@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class UserProfileUserSettingsTensorBoardAppSettings {
-    /**
-     * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-     * 
-     */
+        /**
+         * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+         * 
+         */
     private final UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class UserProfileUserSettingsTensorBoardAppSettings {
     }
 
     /**
-     * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+     * @return The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
-    */
+     */
     public UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec() {
         return this.defaultResourceSpec;
     }

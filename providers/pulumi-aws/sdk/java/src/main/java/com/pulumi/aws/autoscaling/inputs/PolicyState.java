@@ -27,6 +27,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="adjustmentType")
     private @Nullable Output<String> adjustmentType;
 
+    /**
+     * @return Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+     * 
+     */
     public Optional<Output<String>> adjustmentType() {
         return Optional.ofNullable(this.adjustmentType);
     }
@@ -38,6 +42,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN assigned by AWS to the scaling policy.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,6 +57,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
     private @Nullable Output<String> autoscalingGroupName;
 
+    /**
+     * @return The name of the autoscaling group.
+     * 
+     */
     public Optional<Output<String>> autoscalingGroupName() {
         return Optional.ofNullable(this.autoscalingGroupName);
     }
@@ -60,6 +72,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cooldown")
     private @Nullable Output<Integer> cooldown;
 
+    /**
+     * @return The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+     * 
+     */
     public Optional<Output<Integer>> cooldown() {
         return Optional.ofNullable(this.cooldown);
     }
@@ -71,6 +87,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="estimatedInstanceWarmup")
     private @Nullable Output<Integer> estimatedInstanceWarmup;
 
+    /**
+     * @return The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
+     * 
+     */
     public Optional<Output<Integer>> estimatedInstanceWarmup() {
         return Optional.ofNullable(this.estimatedInstanceWarmup);
     }
@@ -82,6 +102,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricAggregationType")
     private @Nullable Output<String> metricAggregationType;
 
+    /**
+     * @return The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+     * 
+     */
     public Optional<Output<String>> metricAggregationType() {
         return Optional.ofNullable(this.metricAggregationType);
     }
@@ -93,6 +117,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minAdjustmentMagnitude")
     private @Nullable Output<Integer> minAdjustmentMagnitude;
 
+    /**
+     * @return Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
+     * 
+     */
     public Optional<Output<Integer>> minAdjustmentMagnitude() {
         return Optional.ofNullable(this.minAdjustmentMagnitude);
     }
@@ -104,6 +132,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the dimension.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +147,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyType")
     private @Nullable Output<String> policyType;
 
+    /**
+     * @return The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
+     * 
+     */
     public Optional<Output<String>> policyType() {
         return Optional.ofNullable(this.policyType);
     }
@@ -126,6 +162,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="predictiveScalingConfiguration")
     private @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
 
+    /**
+     * @return The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
+     * 
+     */
     public Optional<Output<PolicyPredictiveScalingConfigurationGetArgs>> predictiveScalingConfiguration() {
         return Optional.ofNullable(this.predictiveScalingConfiguration);
     }
@@ -139,6 +179,12 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingAdjustment")
     private @Nullable Output<Integer> scalingAdjustment;
 
+    /**
+     * @return The number of members by which to
+     * scale, when the adjustment bounds are breached. A positive value scales
+     * up. A negative value scales down.
+     * 
+     */
     public Optional<Output<Integer>> scalingAdjustment() {
         return Optional.ofNullable(this.scalingAdjustment);
     }
@@ -151,6 +197,11 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepAdjustments")
     private @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
 
+    /**
+     * @return A set of adjustments that manage
+     * group scaling. These have the following structure:
+     * 
+     */
     public Optional<Output<List<PolicyStepAdjustmentGetArgs>>> stepAdjustments() {
         return Optional.ofNullable(this.stepAdjustments);
     }
@@ -162,6 +213,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetTrackingConfiguration")
     private @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
 
+    /**
+     * @return A target tracking policy. These have the following structure:
+     * 
+     */
     public Optional<Output<PolicyTargetTrackingConfigurationGetArgs>> targetTrackingConfiguration() {
         return Optional.ofNullable(this.targetTrackingConfiguration);
     }
@@ -202,123 +257,292 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
             $ = new PolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adjustmentType Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adjustmentType(@Nullable Output<String> adjustmentType) {
             $.adjustmentType = adjustmentType;
             return this;
         }
 
+        /**
+         * @param adjustmentType Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adjustmentType(String adjustmentType) {
             return adjustmentType(Output.of(adjustmentType));
         }
 
+        /**
+         * @param arn The ARN assigned by AWS to the scaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN assigned by AWS to the scaling policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoscalingGroupName The name of the autoscaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
             $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
 
+        /**
+         * @param autoscalingGroupName The name of the autoscaling group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingGroupName(String autoscalingGroupName) {
             return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
 
+        /**
+         * @param cooldown The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(@Nullable Output<Integer> cooldown) {
             $.cooldown = cooldown;
             return this;
         }
 
+        /**
+         * @param cooldown The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cooldown(Integer cooldown) {
             return cooldown(Output.of(cooldown));
         }
 
+        /**
+         * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedInstanceWarmup(@Nullable Output<Integer> estimatedInstanceWarmup) {
             $.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
+        /**
+         * @param estimatedInstanceWarmup The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group&#39;s specified cooldown period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
             return estimatedInstanceWarmup(Output.of(estimatedInstanceWarmup));
         }
 
+        /**
+         * @param metricAggregationType The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
             $.metricAggregationType = metricAggregationType;
             return this;
         }
 
+        /**
+         * @param metricAggregationType The aggregation type for the policy&#39;s metrics. Valid values are &#34;Minimum&#34;, &#34;Maximum&#34;, and &#34;Average&#34;. Without a value, AWS will treat the aggregation type as &#34;Average&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricAggregationType(String metricAggregationType) {
             return metricAggregationType(Output.of(metricAggregationType));
         }
 
+        /**
+         * @param minAdjustmentMagnitude Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
             $.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
 
+        /**
+         * @param minAdjustmentMagnitude Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             return minAdjustmentMagnitude(Output.of(minAdjustmentMagnitude));
         }
 
+        /**
+         * @param name The name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the dimension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policyType The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(@Nullable Output<String> policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param policyType The policy type, either &#34;SimpleScaling&#34;, &#34;StepScaling&#34;, &#34;TargetTrackingScaling&#34;, or &#34;PredictiveScaling&#34;. If this value isn&#39;t provided, AWS will default to &#34;SimpleScaling.&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             return policyType(Output.of(policyType));
         }
 
+        /**
+         * @param predictiveScalingConfiguration The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
             $.predictiveScalingConfiguration = predictiveScalingConfiguration;
             return this;
         }
 
+        /**
+         * @param predictiveScalingConfiguration The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predictiveScalingConfiguration(PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
             return predictiveScalingConfiguration(Output.of(predictiveScalingConfiguration));
         }
 
+        /**
+         * @param scalingAdjustment The number of members by which to
+         * scale, when the adjustment bounds are breached. A positive value scales
+         * up. A negative value scales down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingAdjustment(@Nullable Output<Integer> scalingAdjustment) {
             $.scalingAdjustment = scalingAdjustment;
             return this;
         }
 
+        /**
+         * @param scalingAdjustment The number of members by which to
+         * scale, when the adjustment bounds are breached. A positive value scales
+         * up. A negative value scales down.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingAdjustment(Integer scalingAdjustment) {
             return scalingAdjustment(Output.of(scalingAdjustment));
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage
+         * group scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
             $.stepAdjustments = stepAdjustments;
             return this;
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage
+         * group scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
             return stepAdjustments(Output.of(stepAdjustments));
         }
 
+        /**
+         * @param stepAdjustments A set of adjustments that manage
+         * group scaling. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepAdjustments(PolicyStepAdjustmentGetArgs... stepAdjustments) {
             return stepAdjustments(List.of(stepAdjustments));
         }
 
+        /**
+         * @param targetTrackingConfiguration A target tracking policy. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTrackingConfiguration(@Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
             $.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
         }
 
+        /**
+         * @param targetTrackingConfiguration A target tracking policy. These have the following structure:
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetTrackingConfiguration(PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
             return targetTrackingConfiguration(Output.of(targetTrackingConfiguration));
         }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration {
-    /**
-     * Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
-     * 
-     */
+        /**
+         * @return Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
+         * 
+         */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
+     * @return Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
      * 
-    */
+     */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor() {
         return this.inputLambdaProcessor;
     }

@@ -19,6 +19,10 @@ public final class GetLaunchPathsSummaryConstraintSummary extends com.pulumi.res
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the constraint.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -30,6 +34,10 @@ public final class GetLaunchPathsSummaryConstraintSummary extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -59,11 +67,23 @@ public final class GetLaunchPathsSummaryConstraintSummary extends com.pulumi.res
             $ = new GetLaunchPathsSummaryConstraintSummary(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the constraint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param type Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

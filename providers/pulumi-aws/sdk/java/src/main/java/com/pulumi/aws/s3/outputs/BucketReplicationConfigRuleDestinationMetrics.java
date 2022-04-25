@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketReplicationConfigRuleDestinationMetrics {
-    /**
-     * A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
-     * 
-     */
+        /**
+         * @return A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold;
-    /**
-     * The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
-     * 
-     */
+        /**
+         * @return The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
     }
 
     /**
-     * A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
+     * @return A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleDestinationMetricsEventThreshold> eventThreshold() {
         return Optional.ofNullable(this.eventThreshold);
     }
     /**
-     * The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+     * @return The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TopicRuleS3 {
-    /**
-     * The Amazon S3 bucket name.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket name.
+         * 
+         */
     private final String bucketName;
-    /**
-     * The object key.
-     * 
-     */
+        /**
+         * @return The object key.
+         * 
+         */
     private final String key;
-    /**
-     * The IAM role ARN that allows access to the CloudWatch alarm.
-     * 
-     */
+        /**
+         * @return The IAM role ARN that allows access to the CloudWatch alarm.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class TopicRuleS3 {
     }
 
     /**
-     * The Amazon S3 bucket name.
+     * @return The Amazon S3 bucket name.
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * The object key.
+     * @return The object key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The IAM role ARN that allows access to the CloudWatch alarm.
+     * @return The IAM role ARN that allows access to the CloudWatch alarm.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

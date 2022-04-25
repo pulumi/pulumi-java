@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineArtifactStore {
-    /**
-     * The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don&#39;t specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
-     * 
-     */
+        /**
+         * @return The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don&#39;t specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
+         * 
+         */
     private final @Nullable PipelineArtifactStoreEncryptionKey encryptionKey;
-    /**
-     * The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
-     * 
-     */
+        /**
+         * @return The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+         * 
+         */
     private final String location;
-    /**
-     * The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
-     * 
-     */
+        /**
+         * @return The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
+         * 
+         */
     private final @Nullable String region;
-    /**
-     * The type of the artifact store, such as Amazon S3
-     * 
-     */
+        /**
+         * @return The type of the artifact store, such as Amazon S3
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class PipelineArtifactStore {
     }
 
     /**
-     * The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don&#39;t specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
+     * @return The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don&#39;t specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
      * 
-    */
+     */
     public Optional<PipelineArtifactStoreEncryptionKey> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
-     * The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+     * @return The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
+     * @return The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The type of the artifact store, such as Amazon S3
+     * @return The type of the artifact store, such as Amazon S3
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

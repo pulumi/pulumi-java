@@ -15,82 +15,82 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSubnetResult {
-    /**
-     * ARN of the subnet.
-     * 
-     */
+        /**
+         * @return ARN of the subnet.
+         * 
+         */
     private final String arn;
-    /**
-     * Whether an IPv6 address is assigned on creation.
-     * 
-     */
+        /**
+         * @return Whether an IPv6 address is assigned on creation.
+         * 
+         */
     private final Boolean assignIpv6AddressOnCreation;
     private final String availabilityZone;
     private final String availabilityZoneId;
-    /**
-     * Available IP addresses of the subnet.
-     * 
-     */
+        /**
+         * @return Available IP addresses of the subnet.
+         * 
+         */
     private final Integer availableIpAddressCount;
     private final String cidrBlock;
-    /**
-     * Identifier of customer owned IPv4 address pool.
-     * 
-     */
+        /**
+         * @return Identifier of customer owned IPv4 address pool.
+         * 
+         */
     private final String customerOwnedIpv4Pool;
     private final Boolean defaultForAz;
-    /**
-     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
-     * 
-     */
+        /**
+         * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
+         * 
+         */
     private final Boolean enableDns64;
-    /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
-     * 
-     */
+        /**
+         * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+         * 
+         */
     private final Boolean enableResourceNameDnsARecordOnLaunch;
-    /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
-     * 
-     */
+        /**
+         * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+         * 
+         */
     private final Boolean enableResourceNameDnsAaaaRecordOnLaunch;
     private final @Nullable List<GetSubnetFilter> filters;
     private final String id;
     private final String ipv6CidrBlock;
-    /**
-     * Association ID of the IPv6 CIDR block.
-     * 
-     */
+        /**
+         * @return Association ID of the IPv6 CIDR block.
+         * 
+         */
     private final String ipv6CidrBlockAssociationId;
-    /**
-     * Indicates whether this is an IPv6-only subnet.
-     * 
-     */
+        /**
+         * @return Indicates whether this is an IPv6-only subnet.
+         * 
+         */
     private final Boolean ipv6Native;
-    /**
-     * Whether customer owned IP addresses are assigned on network interface creation.
-     * 
-     */
+        /**
+         * @return Whether customer owned IP addresses are assigned on network interface creation.
+         * 
+         */
     private final Boolean mapCustomerOwnedIpOnLaunch;
-    /**
-     * Whether public IP addresses are assigned on instance launch.
-     * 
-     */
+        /**
+         * @return Whether public IP addresses are assigned on instance launch.
+         * 
+         */
     private final Boolean mapPublicIpOnLaunch;
-    /**
-     * ARN of the Outpost.
-     * 
-     */
+        /**
+         * @return ARN of the Outpost.
+         * 
+         */
     private final String outpostArn;
-    /**
-     * ID of the AWS account that owns the subnet.
-     * 
-     */
+        /**
+         * @return ID of the AWS account that owns the subnet.
+         * 
+         */
     private final String ownerId;
-    /**
-     * The type of hostnames assigned to instances in the subnet at launch.
-     * 
-     */
+        /**
+         * @return The type of hostnames assigned to instances in the subnet at launch.
+         * 
+         */
     private final String privateDnsHostnameTypeOnLaunch;
     private final String state;
     private final Map<String,String> tags;
@@ -149,16 +149,16 @@ public final class GetSubnetResult {
     }
 
     /**
-     * ARN of the subnet.
+     * @return ARN of the subnet.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Whether an IPv6 address is assigned on creation.
+     * @return Whether an IPv6 address is assigned on creation.
      * 
-    */
+     */
     public Boolean assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
@@ -169,9 +169,9 @@ public final class GetSubnetResult {
         return this.availabilityZoneId;
     }
     /**
-     * Available IP addresses of the subnet.
+     * @return Available IP addresses of the subnet.
      * 
-    */
+     */
     public Integer availableIpAddressCount() {
         return this.availableIpAddressCount;
     }
@@ -179,9 +179,9 @@ public final class GetSubnetResult {
         return this.cidrBlock;
     }
     /**
-     * Identifier of customer owned IPv4 address pool.
+     * @return Identifier of customer owned IPv4 address pool.
      * 
-    */
+     */
     public String customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
@@ -189,23 +189,23 @@ public final class GetSubnetResult {
         return this.defaultForAz;
     }
     /**
-     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
+     * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
      * 
-    */
+     */
     public Boolean enableDns64() {
         return this.enableDns64;
     }
     /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
      * 
-    */
+     */
     public Boolean enableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
     /**
-     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
      * 
-    */
+     */
     public Boolean enableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
@@ -219,51 +219,51 @@ public final class GetSubnetResult {
         return this.ipv6CidrBlock;
     }
     /**
-     * Association ID of the IPv6 CIDR block.
+     * @return Association ID of the IPv6 CIDR block.
      * 
-    */
+     */
     public String ipv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
     /**
-     * Indicates whether this is an IPv6-only subnet.
+     * @return Indicates whether this is an IPv6-only subnet.
      * 
-    */
+     */
     public Boolean ipv6Native() {
         return this.ipv6Native;
     }
     /**
-     * Whether customer owned IP addresses are assigned on network interface creation.
+     * @return Whether customer owned IP addresses are assigned on network interface creation.
      * 
-    */
+     */
     public Boolean mapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch;
     }
     /**
-     * Whether public IP addresses are assigned on instance launch.
+     * @return Whether public IP addresses are assigned on instance launch.
      * 
-    */
+     */
     public Boolean mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     /**
-     * ARN of the Outpost.
+     * @return ARN of the Outpost.
      * 
-    */
+     */
     public String outpostArn() {
         return this.outpostArn;
     }
     /**
-     * ID of the AWS account that owns the subnet.
+     * @return ID of the AWS account that owns the subnet.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * The type of hostnames assigned to instances in the subnet at launch.
+     * @return The type of hostnames assigned to instances in the subnet at launch.
      * 
-    */
+     */
     public String privateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }

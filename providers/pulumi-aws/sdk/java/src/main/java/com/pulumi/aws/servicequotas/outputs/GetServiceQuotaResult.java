@@ -11,43 +11,43 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceQuotaResult {
-    /**
-     * Whether the service quota is adjustable.
-     * 
-     */
+        /**
+         * @return Whether the service quota is adjustable.
+         * 
+         */
     private final Boolean adjustable;
-    /**
-     * Amazon Resource Name (ARN) of the service quota.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the service quota.
+         * 
+         */
     private final String arn;
-    /**
-     * Default value of the service quota.
-     * 
-     */
+        /**
+         * @return Default value of the service quota.
+         * 
+         */
     private final Double defaultValue;
-    /**
-     * Whether the service quota is global for the AWS account.
-     * 
-     */
+        /**
+         * @return Whether the service quota is global for the AWS account.
+         * 
+         */
     private final Boolean globalQuota;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String quotaCode;
     private final String quotaName;
     private final String serviceCode;
-    /**
-     * Name of the service.
-     * 
-     */
+        /**
+         * @return Name of the service.
+         * 
+         */
     private final String serviceName;
-    /**
-     * Current value of the service quota.
-     * 
-     */
+        /**
+         * @return Current value of the service quota.
+         * 
+         */
     private final Double value;
 
     @CustomType.Constructor
@@ -75,37 +75,37 @@ public final class GetServiceQuotaResult {
     }
 
     /**
-     * Whether the service quota is adjustable.
+     * @return Whether the service quota is adjustable.
      * 
-    */
+     */
     public Boolean adjustable() {
         return this.adjustable;
     }
     /**
-     * Amazon Resource Name (ARN) of the service quota.
+     * @return Amazon Resource Name (ARN) of the service quota.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Default value of the service quota.
+     * @return Default value of the service quota.
      * 
-    */
+     */
     public Double defaultValue() {
         return this.defaultValue;
     }
     /**
-     * Whether the service quota is global for the AWS account.
+     * @return Whether the service quota is global for the AWS account.
      * 
-    */
+     */
     public Boolean globalQuota() {
         return this.globalQuota;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -119,16 +119,16 @@ public final class GetServiceQuotaResult {
         return this.serviceCode;
     }
     /**
-     * Name of the service.
+     * @return Name of the service.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }
     /**
-     * Current value of the service quota.
+     * @return Current value of the service quota.
      * 
-    */
+     */
     public Double value() {
         return this.value;
     }

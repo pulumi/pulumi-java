@@ -21,6 +21,10 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends com.pulu
     @Import(name="cronExpressionForRecurrence", required=true)
     private Output<String> cronExpressionForRecurrence;
 
+    /**
+     * @return A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+     * 
+     */
     public Output<String> cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
@@ -32,6 +36,10 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends com.pulu
     @Import(name="duration", required=true)
     private Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> duration;
 
+    /**
+     * @return Configuration block for the duration of the Auto-Tune maintenance window. Detailed below.
+     * 
+     */
     public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> duration() {
         return this.duration;
     }
@@ -43,6 +51,10 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends com.pulu
     @Import(name="startAt", required=true)
     private Output<String> startAt;
 
+    /**
+     * @return Date and time at which to start the Auto-Tune maintenance schedule in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * 
+     */
     public Output<String> startAt() {
         return this.startAt;
     }
@@ -73,29 +85,65 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleArgs extends com.pulu
             $ = new DomainAutoTuneOptionsMaintenanceScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cronExpressionForRecurrence A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronExpressionForRecurrence(Output<String> cronExpressionForRecurrence) {
             $.cronExpressionForRecurrence = cronExpressionForRecurrence;
             return this;
         }
 
+        /**
+         * @param cronExpressionForRecurrence A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
             return cronExpressionForRecurrence(Output.of(cronExpressionForRecurrence));
         }
 
+        /**
+         * @param duration Configuration block for the duration of the Auto-Tune maintenance window. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<DomainAutoTuneOptionsMaintenanceScheduleDurationArgs> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration Configuration block for the duration of the Auto-Tune maintenance window. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDurationArgs duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param startAt Date and time at which to start the Auto-Tune maintenance schedule in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAt(Output<String> startAt) {
             $.startAt = startAt;
             return this;
         }
 
+        /**
+         * @param startAt Date and time at which to start the Auto-Tune maintenance schedule in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         * @return builder
+         * 
+         */
         public Builder startAt(String startAt) {
             return startAt(Output.of(startAt));
         }

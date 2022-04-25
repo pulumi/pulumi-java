@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecListenerConnectionPoolTcp {
-    /**
-     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-     * 
-     */
+        /**
+         * @return Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+         * 
+         */
     private final Integer maxConnections;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualNodeSpecListenerConnectionPoolTcp {
     }
 
     /**
-     * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+     * @return Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
-    */
+     */
     public Integer maxConnections() {
         return this.maxConnections;
     }

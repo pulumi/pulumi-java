@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RuleGroupRuleStatementNotStatementStatementNotStatement {
-    /**
-     * The statement to negate. You can use any statement that can be nested. See Statement above for details.
-     * 
-     */
+        /**
+         * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         */
     private final List<RuleGroupRuleStatementNotStatementStatementNotStatementStatement> statements;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatement {
     }
 
     /**
-     * The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
-    */
+     */
     public List<RuleGroupRuleStatementNotStatementStatementNotStatementStatement> statements() {
         return this.statements;
     }

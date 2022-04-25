@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings {
-    /**
-     * A list of item names (cookies, headers, or query strings).
-     * 
-     */
+        /**
+         * @return A list of item names (cookies, headers, or query strings).
+         * 
+         */
     private final @Nullable List<String> items;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     }
 
     /**
-     * A list of item names (cookies, headers, or query strings).
+     * @return A list of item names (cookies, headers, or query strings).
      * 
-    */
+     */
     public List<String> items() {
         return this.items == null ? List.of() : this.items;
     }

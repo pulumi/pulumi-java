@@ -22,6 +22,10 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPointId", required=true)
     private String accessPointId;
 
+    /**
+     * @return The ID that identifies the file system.
+     * 
+     */
     public String accessPointId() {
         return this.accessPointId;
     }
@@ -33,6 +37,10 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Key-value mapping of resource tags.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -62,11 +70,23 @@ public final class GetAccessPointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPointId The ID that identifies the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPointId(String accessPointId) {
             $.accessPointId = accessPointId;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

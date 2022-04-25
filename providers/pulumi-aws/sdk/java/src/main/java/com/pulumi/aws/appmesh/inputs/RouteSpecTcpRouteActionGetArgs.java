@@ -22,6 +22,11 @@ public final class RouteSpecTcpRouteActionGetArgs extends com.pulumi.resources.R
     @Import(name="weightedTargets", required=true)
     private Output<List<RouteSpecTcpRouteActionWeightedTargetGetArgs>> weightedTargets;
 
+    /**
+     * @return The targets that traffic is routed to when a request matches the route.
+     * You can specify one or more targets and their relative weights with which to distribute traffic.
+     * 
+     */
     public Output<List<RouteSpecTcpRouteActionWeightedTargetGetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
@@ -50,15 +55,36 @@ public final class RouteSpecTcpRouteActionGetArgs extends com.pulumi.resources.R
             $ = new RouteSpecTcpRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(Output<List<RouteSpecTcpRouteActionWeightedTargetGetArgs>> weightedTargets) {
             $.weightedTargets = weightedTargets;
             return this;
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(List<RouteSpecTcpRouteActionWeightedTargetGetArgs> weightedTargets) {
             return weightedTargets(Output.of(weightedTargets));
         }
 
+        /**
+         * @param weightedTargets The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightedTargets(RouteSpecTcpRouteActionWeightedTargetGetArgs... weightedTargets) {
             return weightedTargets(List.of(weightedTargets));
         }

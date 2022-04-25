@@ -14,71 +14,71 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTransitGatewayResult {
-    /**
-     * Private Autonomous System Number (ASN) for the Amazon side of a BGP session
-     * 
-     */
+        /**
+         * @return Private Autonomous System Number (ASN) for the Amazon side of a BGP session
+         * 
+         */
     private final Integer amazonSideAsn;
-    /**
-     * EC2 Transit Gateway Amazon Resource Name (ARN)
-     * 
-     */
+        /**
+         * @return EC2 Transit Gateway Amazon Resource Name (ARN)
+         * 
+         */
     private final String arn;
-    /**
-     * Identifier of the default association route table
-     * 
-     */
+        /**
+         * @return Identifier of the default association route table
+         * 
+         */
     private final String associationDefaultRouteTableId;
-    /**
-     * Whether resource attachment requests are automatically accepted.
-     * 
-     */
+        /**
+         * @return Whether resource attachment requests are automatically accepted.
+         * 
+         */
     private final String autoAcceptSharedAttachments;
-    /**
-     * Whether resource attachments are automatically associated with the default association route table.
-     * 
-     */
+        /**
+         * @return Whether resource attachments are automatically associated with the default association route table.
+         * 
+         */
     private final String defaultRouteTableAssociation;
-    /**
-     * Whether resource attachments automatically propagate routes to the default propagation route table.
-     * 
-     */
+        /**
+         * @return Whether resource attachments automatically propagate routes to the default propagation route table.
+         * 
+         */
     private final String defaultRouteTablePropagation;
-    /**
-     * Description of the EC2 Transit Gateway
-     * 
-     */
+        /**
+         * @return Description of the EC2 Transit Gateway
+         * 
+         */
     private final String description;
-    /**
-     * Whether DNS support is enabled.
-     * 
-     */
+        /**
+         * @return Whether DNS support is enabled.
+         * 
+         */
     private final String dnsSupport;
     private final @Nullable List<GetTransitGatewayFilter> filters;
-    /**
-     * EC2 Transit Gateway identifier
-     * 
-     */
+        /**
+         * @return EC2 Transit Gateway identifier
+         * 
+         */
     private final String id;
-    /**
-     * Identifier of the AWS account that owns the EC2 Transit Gateway
-     * 
-     */
+        /**
+         * @return Identifier of the AWS account that owns the EC2 Transit Gateway
+         * 
+         */
     private final String ownerId;
-    /**
-     * Identifier of the default propagation route table.
-     * 
-     */
+        /**
+         * @return Identifier of the default propagation route table.
+         * 
+         */
     private final String propagationDefaultRouteTableId;
-    /**
-     * Key-value tags for the EC2 Transit Gateway
-     * 
-     */
+        /**
+         * @return Key-value tags for the EC2 Transit Gateway
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Whether VPN Equal Cost Multipath Protocol support is enabled.
-     * 
-     */
+        /**
+         * @return Whether VPN Equal Cost Multipath Protocol support is enabled.
+         * 
+         */
     private final String vpnEcmpSupport;
 
     @CustomType.Constructor
@@ -114,58 +114,58 @@ public final class GetTransitGatewayResult {
     }
 
     /**
-     * Private Autonomous System Number (ASN) for the Amazon side of a BGP session
+     * @return Private Autonomous System Number (ASN) for the Amazon side of a BGP session
      * 
-    */
+     */
     public Integer amazonSideAsn() {
         return this.amazonSideAsn;
     }
     /**
-     * EC2 Transit Gateway Amazon Resource Name (ARN)
+     * @return EC2 Transit Gateway Amazon Resource Name (ARN)
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Identifier of the default association route table
+     * @return Identifier of the default association route table
      * 
-    */
+     */
     public String associationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId;
     }
     /**
-     * Whether resource attachment requests are automatically accepted.
+     * @return Whether resource attachment requests are automatically accepted.
      * 
-    */
+     */
     public String autoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments;
     }
     /**
-     * Whether resource attachments are automatically associated with the default association route table.
+     * @return Whether resource attachments are automatically associated with the default association route table.
      * 
-    */
+     */
     public String defaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation;
     }
     /**
-     * Whether resource attachments automatically propagate routes to the default propagation route table.
+     * @return Whether resource attachments automatically propagate routes to the default propagation route table.
      * 
-    */
+     */
     public String defaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation;
     }
     /**
-     * Description of the EC2 Transit Gateway
+     * @return Description of the EC2 Transit Gateway
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Whether DNS support is enabled.
+     * @return Whether DNS support is enabled.
      * 
-    */
+     */
     public String dnsSupport() {
         return this.dnsSupport;
     }
@@ -173,37 +173,37 @@ public final class GetTransitGatewayResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * EC2 Transit Gateway identifier
+     * @return EC2 Transit Gateway identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identifier of the AWS account that owns the EC2 Transit Gateway
+     * @return Identifier of the AWS account that owns the EC2 Transit Gateway
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * Identifier of the default propagation route table.
+     * @return Identifier of the default propagation route table.
      * 
-    */
+     */
     public String propagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId;
     }
     /**
-     * Key-value tags for the EC2 Transit Gateway
+     * @return Key-value tags for the EC2 Transit Gateway
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Whether VPN Equal Cost Multipath Protocol support is enabled.
+     * @return Whether VPN Equal Cost Multipath Protocol support is enabled.
      * 
-    */
+     */
     public String vpnEcmpSupport() {
         return this.vpnEcmpSupport;
     }

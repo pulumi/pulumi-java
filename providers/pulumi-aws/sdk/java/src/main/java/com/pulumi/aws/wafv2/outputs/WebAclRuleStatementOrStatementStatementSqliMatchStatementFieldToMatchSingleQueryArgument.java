@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument {
-    /**
-     * The name of the query header to inspect. This setting must be provided as lower case characters.
-     * 
-     */
+        /**
+         * @return The name of the query header to inspect. This setting must be provided as lower case characters.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class WebAclRuleStatementOrStatementStatementSqliMatchStatementFiel
     }
 
     /**
-     * The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

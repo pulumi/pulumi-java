@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters {
-    /**
-     * The path to the top-level parent that contains the records.
-     * 
-     */
+        /**
+         * @return The path to the top-level parent that contains the records.
+         * 
+         */
     private final String recordRowPath;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The path to the top-level parent that contains the records.
+     * @return The path to the top-level parent that contains the records.
      * 
-    */
+     */
     public String recordRowPath() {
         return this.recordRowPath;
     }

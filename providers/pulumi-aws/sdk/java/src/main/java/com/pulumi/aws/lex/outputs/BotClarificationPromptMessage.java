@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BotClarificationPromptMessage {
-    /**
-     * The text of the message.
-     * 
-     */
+        /**
+         * @return The text of the message.
+         * 
+         */
     private final String content;
-    /**
-     * The content type of the message string.
-     * 
-     */
+        /**
+         * @return The content type of the message string.
+         * 
+         */
     private final String contentType;
-    /**
-     * Identifies the message group that the message belongs to. When a group
-     * is assigned to a message, Amazon Lex returns one message from each group in the response.
-     * 
-     */
+        /**
+         * @return Identifies the message group that the message belongs to. When a group
+         * is assigned to a message, Amazon Lex returns one message from each group in the response.
+         * 
+         */
     private final @Nullable Integer groupNumber;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class BotClarificationPromptMessage {
     }
 
     /**
-     * The text of the message.
+     * @return The text of the message.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The content type of the message string.
+     * @return The content type of the message string.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * Identifies the message group that the message belongs to. When a group
+     * @return Identifies the message group that the message belongs to. When a group
      * is assigned to a message, Amazon Lex returns one message from each group in the response.
      * 
-    */
+     */
     public Optional<Integer> groupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }

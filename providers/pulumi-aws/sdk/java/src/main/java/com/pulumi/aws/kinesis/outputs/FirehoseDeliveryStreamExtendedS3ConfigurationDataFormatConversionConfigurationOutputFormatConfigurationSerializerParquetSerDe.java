@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe {
-    /**
-     * The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
-     * 
-     */
+        /**
+         * @return The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
+         * 
+         */
     private final @Nullable Integer blockSizeBytes;
-    /**
-     * The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
-     * 
-     */
+        /**
+         * @return The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
+         * 
+         */
     private final @Nullable String compression;
-    /**
-     * Indicates whether to enable dictionary compression.
-     * 
-     */
+        /**
+         * @return Indicates whether to enable dictionary compression.
+         * 
+         */
     private final @Nullable Boolean enableDictionaryCompression;
-    /**
-     * The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
-     * 
-     */
+        /**
+         * @return The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
+         * 
+         */
     private final @Nullable Integer maxPaddingBytes;
-    /**
-     * The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
-     * 
-     */
+        /**
+         * @return The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
+         * 
+         */
     private final @Nullable Integer pageSizeBytes;
-    /**
-     * Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
-     * 
-     */
+        /**
+         * @return Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
+         * 
+         */
     private final @Nullable String writerVersion;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
+     * @return The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
      * 
-    */
+     */
     public Optional<Integer> blockSizeBytes() {
         return Optional.ofNullable(this.blockSizeBytes);
     }
     /**
-     * The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
+     * @return The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
      * 
-    */
+     */
     public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
-     * Indicates whether to enable dictionary compression.
+     * @return Indicates whether to enable dictionary compression.
      * 
-    */
+     */
     public Optional<Boolean> enableDictionaryCompression() {
         return Optional.ofNullable(this.enableDictionaryCompression);
     }
     /**
-     * The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
+     * @return The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
      * 
-    */
+     */
     public Optional<Integer> maxPaddingBytes() {
         return Optional.ofNullable(this.maxPaddingBytes);
     }
     /**
-     * The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
+     * @return The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
      * 
-    */
+     */
     public Optional<Integer> pageSizeBytes() {
         return Optional.ofNullable(this.pageSizeBytes);
     }
     /**
-     * Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
+     * @return Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
      * 
-    */
+     */
     public Optional<String> writerVersion() {
         return Optional.ofNullable(this.writerVersion);
     }

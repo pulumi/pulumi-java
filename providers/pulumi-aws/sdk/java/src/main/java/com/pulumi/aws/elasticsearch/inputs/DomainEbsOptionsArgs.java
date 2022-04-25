@@ -24,6 +24,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ebsEnabled", required=true)
     private Output<Boolean> ebsEnabled;
 
+    /**
+     * @return Whether EBS volumes are attached to data nodes in the domain.
+     * 
+     */
     public Output<Boolean> ebsEnabled() {
         return this.ebsEnabled;
     }
@@ -35,6 +39,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="iops")
     private @Nullable Output<Integer> iops;
 
+    /**
+     * @return Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+     * 
+     */
     public Optional<Output<Integer>> iops() {
         return Optional.ofNullable(this.iops);
     }
@@ -46,6 +54,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="volumeSize")
     private @Nullable Output<Integer> volumeSize;
 
+    /**
+     * @return Size of EBS volumes attached to data nodes (in GiB).
+     * 
+     */
     public Optional<Output<Integer>> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
@@ -57,6 +69,10 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="volumeType")
     private @Nullable Output<String> volumeType;
 
+    /**
+     * @return Type of EBS volumes attached to data nodes.
+     * 
+     */
     public Optional<Output<String>> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
@@ -88,38 +104,86 @@ public final class DomainEbsOptionsArgs extends com.pulumi.resources.ResourceArg
             $ = new DomainEbsOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ebsEnabled Whether EBS volumes are attached to data nodes in the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsEnabled(Output<Boolean> ebsEnabled) {
             $.ebsEnabled = ebsEnabled;
             return this;
         }
 
+        /**
+         * @param ebsEnabled Whether EBS volumes are attached to data nodes in the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ebsEnabled(Boolean ebsEnabled) {
             return ebsEnabled(Output.of(ebsEnabled));
         }
 
+        /**
+         * @param iops Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
         }
 
+        /**
+         * @param iops Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
         }
 
+        /**
+         * @param volumeSize Size of EBS volumes attached to data nodes (in GiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
             $.volumeSize = volumeSize;
             return this;
         }
 
+        /**
+         * @param volumeSize Size of EBS volumes attached to data nodes (in GiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeSize(Integer volumeSize) {
             return volumeSize(Output.of(volumeSize));
         }
 
+        /**
+         * @param volumeType Type of EBS volumes attached to data nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(@Nullable Output<String> volumeType) {
             $.volumeType = volumeType;
             return this;
         }
 
+        /**
+         * @param volumeType Type of EBS volumes attached to data nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeType(String volumeType) {
             return volumeType(Output.of(volumeType));
         }

@@ -20,6 +20,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
     private Output<String> outpostId;
 
+    /**
+     * @return Identifier of the Outpost to contain this endpoint.
+     * 
+     */
     public Output<String> outpostId() {
         return this.outpostId;
     }
@@ -31,6 +35,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId", required=true)
     private Output<String> securityGroupId;
 
+    /**
+     * @return Identifier of the EC2 Security Group.
+     * 
+     */
     public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
@@ -42,6 +50,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return Identifier of the EC2 Subnet.
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -72,29 +84,65 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param outpostId Identifier of the Outpost to contain this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(Output<String> outpostId) {
             $.outpostId = outpostId;
             return this;
         }
 
+        /**
+         * @param outpostId Identifier of the Outpost to contain this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outpostId(String outpostId) {
             return outpostId(Output.of(outpostId));
         }
 
+        /**
+         * @param securityGroupId Identifier of the EC2 Security Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
         }
 
+        /**
+         * @param securityGroupId Identifier of the EC2 Security Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(String securityGroupId) {
             return securityGroupId(Output.of(securityGroupId));
         }
 
+        /**
+         * @param subnetId Identifier of the EC2 Subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Identifier of the EC2 Subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

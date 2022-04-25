@@ -23,6 +23,10 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends com.pulumi.resources
     @Import(name="idle")
     private @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
 
+    /**
+     * @return The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+     * 
+     */
     public Optional<Output<RouteSpecHttpRouteTimeoutIdleGetArgs>> idle() {
         return Optional.ofNullable(this.idle);
     }
@@ -34,6 +38,10 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends com.pulumi.resources
     @Import(name="perRequest")
     private @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
 
+    /**
+     * @return The per request timeout.
+     * 
+     */
     public Optional<Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs>> perRequest() {
         return Optional.ofNullable(this.perRequest);
     }
@@ -63,20 +71,44 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends com.pulumi.resources
             $ = new RouteSpecHttpRouteTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(@Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle) {
             $.idle = idle;
             return this;
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(RouteSpecHttpRouteTimeoutIdleGetArgs idle) {
             return idle(Output.of(idle));
         }
 
+        /**
+         * @param perRequest The per request timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perRequest(@Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
             $.perRequest = perRequest;
             return this;
         }
 
+        /**
+         * @param perRequest The per request timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perRequest(RouteSpecHttpRouteTimeoutPerRequestGetArgs perRequest) {
             return perRequest(Output.of(perRequest));
         }

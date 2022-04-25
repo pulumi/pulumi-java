@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRouteTableFilter {
-    /**
-     * Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
-     * 
-     */
+        /**
+         * @return Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+         * 
+         */
     private final String name;
-    /**
-     * Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
-     * 
-     */
+        /**
+         * @return Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetRouteTableFilter {
     }
 
     /**
-     * Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
+     * @return Name of the field to filter by, as defined by [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
+     * @return Set of values that are accepted for the given field. A Route Table will be selected if any one of the given values matches.
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

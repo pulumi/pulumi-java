@@ -11,31 +11,31 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGroupResult {
-    /**
-     * The Amazon Resource Name (ARN) specifying the iam user.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) specifying the iam user.
+         * 
+         */
     private final String arn;
-    /**
-     * The stable and unique string identifying the group.
-     * 
-     */
+        /**
+         * @return The stable and unique string identifying the group.
+         * 
+         */
     private final String groupId;
     private final String groupName;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The path to the iam user.
-     * 
-     */
+        /**
+         * @return The path to the iam user.
+         * 
+         */
     private final String path;
-    /**
-     * List of objects containing group member information. See supported fields below.
-     * 
-     */
+        /**
+         * @return List of objects containing group member information. See supported fields below.
+         * 
+         */
     private final List<GetGroupUser> users;
 
     @CustomType.Constructor
@@ -55,16 +55,16 @@ public final class GetGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) specifying the iam user.
+     * @return The Amazon Resource Name (ARN) specifying the iam user.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The stable and unique string identifying the group.
+     * @return The stable and unique string identifying the group.
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -72,23 +72,23 @@ public final class GetGroupResult {
         return this.groupName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The path to the iam user.
+     * @return The path to the iam user.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * List of objects containing group member information. See supported fields below.
+     * @return List of objects containing group member information. See supported fields below.
      * 
-    */
+     */
     public List<GetGroupUser> users() {
         return this.users;
     }

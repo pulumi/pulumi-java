@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
-    /**
-     * Set of IP addresses and address ranges, in CIDR notation.
-     * 
-     */
+        /**
+         * @return Set of IP addresses and address ranges, in CIDR notation.
+         * 
+         */
     private final List<String> definitions;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
     }
 
     /**
-     * Set of IP addresses and address ranges, in CIDR notation.
+     * @return Set of IP addresses and address ranges, in CIDR notation.
      * 
-    */
+     */
     public List<String> definitions() {
         return this.definitions;
     }

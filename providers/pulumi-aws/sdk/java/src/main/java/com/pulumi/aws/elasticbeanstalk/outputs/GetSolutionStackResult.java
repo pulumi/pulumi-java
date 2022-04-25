@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSolutionStackResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Boolean mostRecent;
-    /**
-     * The name of the solution stack.
-     * 
-     */
+        /**
+         * @return The name of the solution stack.
+         * 
+         */
     private final String name;
     private final String nameRegex;
 
@@ -38,9 +38,9 @@ public final class GetSolutionStackResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -48,9 +48,9 @@ public final class GetSolutionStackResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * The name of the solution stack.
+     * @return The name of the solution stack.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstancePublicPortsPortInfo {
-    /**
-     * Set of CIDR blocks.
-     * 
-     */
+        /**
+         * @return Set of CIDR blocks.
+         * 
+         */
     private final @Nullable List<String> cidrs;
-    /**
-     * First port in a range of open ports on an instance.
-     * 
-     */
+        /**
+         * @return First port in a range of open ports on an instance.
+         * 
+         */
     private final Integer fromPort;
-    /**
-     * IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
-     * 
-     */
+        /**
+         * @return IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
+         * 
+         */
     private final String protocol;
-    /**
-     * Last port in a range of open ports on an instance.
-     * 
-     */
+        /**
+         * @return Last port in a range of open ports on an instance.
+         * 
+         */
     private final Integer toPort;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class InstancePublicPortsPortInfo {
     }
 
     /**
-     * Set of CIDR blocks.
+     * @return Set of CIDR blocks.
      * 
-    */
+     */
     public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
     /**
-     * First port in a range of open ports on an instance.
+     * @return First port in a range of open ports on an instance.
      * 
-    */
+     */
     public Integer fromPort() {
         return this.fromPort;
     }
     /**
-     * IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
+     * @return IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * Last port in a range of open ports on an instance.
+     * @return Last port in a range of open ports on an instance.
      * 
-    */
+     */
     public Integer toPort() {
         return this.toPort;
     }

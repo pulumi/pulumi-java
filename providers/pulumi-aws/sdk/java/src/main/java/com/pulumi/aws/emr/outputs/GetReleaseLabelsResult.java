@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetReleaseLabelsResult {
     private final @Nullable GetReleaseLabelsFilters filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The returned release labels.
-     * 
-     */
+        /**
+         * @return The returned release labels.
+         * 
+         */
     private final List<String> releaseLabels;
 
     @CustomType.Constructor
@@ -39,16 +39,16 @@ public final class GetReleaseLabelsResult {
         return Optional.ofNullable(this.filters);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The returned release labels.
+     * @return The returned release labels.
      * 
-    */
+     */
     public List<String> releaseLabels() {
         return this.releaseLabels;
     }

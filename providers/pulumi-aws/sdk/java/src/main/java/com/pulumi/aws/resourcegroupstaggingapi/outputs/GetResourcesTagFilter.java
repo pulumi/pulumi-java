@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourcesTagFilter {
-    /**
-     * One part of a key-value pair that makes up a tag.
-     * 
-     */
+        /**
+         * @return One part of a key-value pair that makes up a tag.
+         * 
+         */
     private final String key;
-    /**
-     * The optional part of a key-value pair that make up a tag.
-     * 
-     */
+        /**
+         * @return The optional part of a key-value pair that make up a tag.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetResourcesTagFilter {
     }
 
     /**
-     * One part of a key-value pair that makes up a tag.
+     * @return One part of a key-value pair that makes up a tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The optional part of a key-value pair that make up a tag.
+     * @return The optional part of a key-value pair that make up a tag.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

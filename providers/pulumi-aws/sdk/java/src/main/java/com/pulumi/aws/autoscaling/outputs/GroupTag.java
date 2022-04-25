@@ -10,21 +10,21 @@ import java.util.Objects;
 
 @CustomType
 public final class GroupTag {
-    /**
-     * Key
-     * 
-     */
+        /**
+         * @return Key
+         * 
+         */
     private final String key;
-    /**
-     * Enables propagation of the tag to
-     * Amazon EC2 instances launched via this ASG
-     * 
-     */
+        /**
+         * @return Enables propagation of the tag to
+         * Amazon EC2 instances launched via this ASG
+         * 
+         */
     private final Boolean propagateAtLaunch;
-    /**
-     * Value
-     * 
-     */
+        /**
+         * @return Value
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -38,24 +38,24 @@ public final class GroupTag {
     }
 
     /**
-     * Key
+     * @return Key
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Enables propagation of the tag to
+     * @return Enables propagation of the tag to
      * Amazon EC2 instances launched via this ASG
      * 
-    */
+     */
     public Boolean propagateAtLaunch() {
         return this.propagateAtLaunch;
     }
     /**
-     * Value
+     * @return Value
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketWebsite {
-    /**
-     * An absolute path to the document to return in case of a 4XX error.
-     * 
-     */
+        /**
+         * @return An absolute path to the document to return in case of a 4XX error.
+         * 
+         */
     private final @Nullable String errorDocument;
-    /**
-     * Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
-     * 
-     */
+        /**
+         * @return Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
+         * 
+         */
     private final @Nullable String indexDocument;
-    /**
-     * A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
-     * 
-     */
+        /**
+         * @return A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+         * 
+         */
     private final @Nullable String redirectAllRequestsTo;
-    /**
-     * A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
-     * describing redirect behavior and when redirects are applied.
-     * 
-     */
+        /**
+         * @return A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
+         * describing redirect behavior and when redirects are applied.
+         * 
+         */
     private final @Nullable Either<String,List<String>> routingRules;
 
     @CustomType.Constructor
@@ -48,31 +48,31 @@ public final class BucketWebsite {
     }
 
     /**
-     * An absolute path to the document to return in case of a 4XX error.
+     * @return An absolute path to the document to return in case of a 4XX error.
      * 
-    */
+     */
     public Optional<String> errorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
     /**
-     * Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
+     * @return Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
      * 
-    */
+     */
     public Optional<String> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }
     /**
-     * A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
+     * @return A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
-    */
+     */
     public Optional<String> redirectAllRequestsTo() {
         return Optional.ofNullable(this.redirectAllRequestsTo);
     }
     /**
-     * A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
+     * @return A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
      * describing redirect behavior and when redirects are applied.
      * 
-    */
+     */
     public Optional<Either<String,List<String>>> routingRules() {
         return Optional.ofNullable(this.routingRules);
     }

@@ -20,6 +20,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="userGroups", required=true)
     private List<String> userGroups;
 
+    /**
+     * @return Set of EC2 launch permission user groups.
+     * 
+     */
     public List<String> userGroups() {
         return this.userGroups;
     }
@@ -31,6 +35,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     @Import(name="userIds", required=true)
     private List<String> userIds;
 
+    /**
+     * @return Set of AWS Account identifiers.
+     * 
+     */
     public List<String> userIds() {
         return this.userIds;
     }
@@ -60,20 +68,44 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
             $ = new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userGroups Set of EC2 launch permission user groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroups(List<String> userGroups) {
             $.userGroups = userGroups;
             return this;
         }
 
+        /**
+         * @param userGroups Set of EC2 launch permission user groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userGroups(String... userGroups) {
             return userGroups(List.of(userGroups));
         }
 
+        /**
+         * @param userIds Set of AWS Account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(List<String> userIds) {
             $.userIds = userIds;
             return this;
         }
 
+        /**
+         * @param userIds Set of AWS Account identifiers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }

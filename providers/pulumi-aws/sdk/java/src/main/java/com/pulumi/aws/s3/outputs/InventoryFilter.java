@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InventoryFilter {
-    /**
-     * The prefix that an object must have to be included in the inventory results.
-     * 
-     */
+        /**
+         * @return The prefix that an object must have to be included in the inventory results.
+         * 
+         */
     private final @Nullable String prefix;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class InventoryFilter {
     }
 
     /**
-     * The prefix that an object must have to be included in the inventory results.
+     * @return The prefix that an object must have to be included in the inventory results.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

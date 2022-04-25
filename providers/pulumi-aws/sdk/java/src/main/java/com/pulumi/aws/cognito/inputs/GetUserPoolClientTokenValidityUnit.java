@@ -19,6 +19,10 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
     @Import(name="accessToken", required=true)
     private String accessToken;
 
+    /**
+     * @return (Optional) Time unit in for the value in `access_token_validity`, defaults to `hours`.
+     * 
+     */
     public String accessToken() {
         return this.accessToken;
     }
@@ -30,6 +34,10 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
     @Import(name="idToken", required=true)
     private String idToken;
 
+    /**
+     * @return (Optional) Time unit in for the value in `id_token_validity`, defaults to `hours`.
+     * 
+     */
     public String idToken() {
         return this.idToken;
     }
@@ -41,6 +49,10 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
     @Import(name="refreshToken", required=true)
     private String refreshToken;
 
+    /**
+     * @return (Optional) Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+     * 
+     */
     public String refreshToken() {
         return this.refreshToken;
     }
@@ -71,16 +83,34 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
             $ = new GetUserPoolClientTokenValidityUnit(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken (Optional) Time unit in for the value in `access_token_validity`, defaults to `hours`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(String accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param idToken (Optional) Time unit in for the value in `id_token_validity`, defaults to `hours`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idToken(String idToken) {
             $.idToken = idToken;
             return this;
         }
 
+        /**
+         * @param refreshToken (Optional) Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             $.refreshToken = refreshToken;
             return this;

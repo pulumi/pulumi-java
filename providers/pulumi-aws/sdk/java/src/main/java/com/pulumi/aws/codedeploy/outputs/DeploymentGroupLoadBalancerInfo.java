@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentGroupLoadBalancerInfo {
-    /**
-     * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
-     * 
-     */
+        /**
+         * @return The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
+         * 
+         */
     private final @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos;
-    /**
-     * The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
-     * 
-     */
+        /**
+         * @return The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
+         * 
+         */
     private final @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos;
-    /**
-     * The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
-     * 
-     */
+        /**
+         * @return The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
+         * 
+         */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class DeploymentGroupLoadBalancerInfo {
     }
 
     /**
-     * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
+     * @return The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
      * 
-    */
+     */
     public List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos() {
         return this.elbInfos == null ? List.of() : this.elbInfos;
     }
     /**
-     * The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
+     * @return The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
      * 
-    */
+     */
     public List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos() {
         return this.targetGroupInfos == null ? List.of() : this.targetGroupInfos;
     }
     /**
-     * The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
+     * @return The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
      * 
-    */
+     */
     public Optional<DeploymentGroupLoadBalancerInfoTargetGroupPairInfo> targetGroupPairInfo() {
         return Optional.ofNullable(this.targetGroupPairInfo);
     }

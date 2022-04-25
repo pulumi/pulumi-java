@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust {
-    /**
-     * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
-     * 
-     */
+        /**
+         * @return The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+         * 
+         */
     private final @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm acm;
-    /**
-     * The TLS validation context trust for a local file certificate.
-     * 
-     */
+        /**
+         * @return The TLS validation context trust for a local file certificate.
+         * 
+         */
     private final @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile file;
-    /**
-     * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
-     * 
-     */
+        /**
+         * @return The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+         * 
+         */
     private final @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds sds;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     }
 
     /**
-     * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+     * @return The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm> acm() {
         return Optional.ofNullable(this.acm);
     }
     /**
-     * The TLS validation context trust for a local file certificate.
+     * @return The TLS validation context trust for a local file certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
-     * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
+     * @return The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds> sds() {
         return Optional.ofNullable(this.sds);
     }

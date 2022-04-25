@@ -13,81 +13,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetElasticIpResult {
-    /**
-     * The ID representing the association of the address with an instance in a VPC.
-     * 
-     */
+        /**
+         * @return The ID representing the association of the address with an instance in a VPC.
+         * 
+         */
     private final String associationId;
-    /**
-     * The carrier IP address.
-     * 
-     */
+        /**
+         * @return The carrier IP address.
+         * 
+         */
     private final String carrierIp;
-    /**
-     * Customer Owned IP.
-     * 
-     */
+        /**
+         * @return Customer Owned IP.
+         * 
+         */
     private final String customerOwnedIp;
-    /**
-     * The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-     * 
-     */
+        /**
+         * @return The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+         * 
+         */
     private final String customerOwnedIpv4Pool;
-    /**
-     * Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
-     * 
-     */
+        /**
+         * @return Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
+         * 
+         */
     private final String domain;
     private final @Nullable List<GetElasticIpFilter> filters;
-    /**
-     * If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
-     * 
-     */
+        /**
+         * @return If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
+         * 
+         */
     private final String id;
-    /**
-     * The ID of the instance that the address is associated with (if any).
-     * 
-     */
+        /**
+         * @return The ID of the instance that the address is associated with (if any).
+         * 
+         */
     private final String instanceId;
-    /**
-     * The ID of the network interface.
-     * 
-     */
+        /**
+         * @return The ID of the network interface.
+         * 
+         */
     private final String networkInterfaceId;
-    /**
-     * The ID of the AWS account that owns the network interface.
-     * 
-     */
+        /**
+         * @return The ID of the AWS account that owns the network interface.
+         * 
+         */
     private final String networkInterfaceOwnerId;
-    /**
-     * The Private DNS associated with the Elastic IP address.
-     * 
-     */
+        /**
+         * @return The Private DNS associated with the Elastic IP address.
+         * 
+         */
     private final String privateDns;
-    /**
-     * The private IP address associated with the Elastic IP address.
-     * 
-     */
+        /**
+         * @return The private IP address associated with the Elastic IP address.
+         * 
+         */
     private final String privateIp;
-    /**
-     * Public DNS associated with the Elastic IP address.
-     * 
-     */
+        /**
+         * @return Public DNS associated with the Elastic IP address.
+         * 
+         */
     private final String publicDns;
-    /**
-     * Public IP address of Elastic IP.
-     * 
-     */
+        /**
+         * @return Public IP address of Elastic IP.
+         * 
+         */
     private final String publicIp;
-    /**
-     * The ID of an address pool.
-     * 
-     */
+        /**
+         * @return The ID of an address pool.
+         * 
+         */
     private final String publicIpv4Pool;
-    /**
-     * Key-value map of tags associated with Elastic IP.
-     * 
-     */
+        /**
+         * @return Key-value map of tags associated with Elastic IP.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -127,37 +127,37 @@ public final class GetElasticIpResult {
     }
 
     /**
-     * The ID representing the association of the address with an instance in a VPC.
+     * @return The ID representing the association of the address with an instance in a VPC.
      * 
-    */
+     */
     public String associationId() {
         return this.associationId;
     }
     /**
-     * The carrier IP address.
+     * @return The carrier IP address.
      * 
-    */
+     */
     public String carrierIp() {
         return this.carrierIp;
     }
     /**
-     * Customer Owned IP.
+     * @return Customer Owned IP.
      * 
-    */
+     */
     public String customerOwnedIp() {
         return this.customerOwnedIp;
     }
     /**
-     * The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
+     * @return The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
      * 
-    */
+     */
     public String customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
-     * Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
+     * @return Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
@@ -165,72 +165,72 @@ public final class GetElasticIpResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
+     * @return If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ID of the instance that the address is associated with (if any).
+     * @return The ID of the instance that the address is associated with (if any).
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * The ID of the network interface.
+     * @return The ID of the network interface.
      * 
-    */
+     */
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
-     * The ID of the AWS account that owns the network interface.
+     * @return The ID of the AWS account that owns the network interface.
      * 
-    */
+     */
     public String networkInterfaceOwnerId() {
         return this.networkInterfaceOwnerId;
     }
     /**
-     * The Private DNS associated with the Elastic IP address.
+     * @return The Private DNS associated with the Elastic IP address.
      * 
-    */
+     */
     public String privateDns() {
         return this.privateDns;
     }
     /**
-     * The private IP address associated with the Elastic IP address.
+     * @return The private IP address associated with the Elastic IP address.
      * 
-    */
+     */
     public String privateIp() {
         return this.privateIp;
     }
     /**
-     * Public DNS associated with the Elastic IP address.
+     * @return Public DNS associated with the Elastic IP address.
      * 
-    */
+     */
     public String publicDns() {
         return this.publicDns;
     }
     /**
-     * Public IP address of Elastic IP.
+     * @return Public IP address of Elastic IP.
      * 
-    */
+     */
     public String publicIp() {
         return this.publicIp;
     }
     /**
-     * The ID of an address pool.
+     * @return The ID of an address pool.
      * 
-    */
+     */
     public String publicIpv4Pool() {
         return this.publicIpv4Pool;
     }
     /**
-     * Key-value map of tags associated with Elastic IP.
+     * @return Key-value map of tags associated with Elastic IP.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

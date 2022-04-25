@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget {
-    /**
-     * The ID of the Capacity Reservation to target.
-     * 
-     */
+        /**
+         * @return The ID of the Capacity Reservation to target.
+         * 
+         */
     private final @Nullable String capacityReservationId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
     }
 
     /**
-     * The ID of the Capacity Reservation to target.
+     * @return The ID of the Capacity Reservation to target.
      * 
-    */
+     */
     public Optional<String> capacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }

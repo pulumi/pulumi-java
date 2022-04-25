@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm {
-    /**
-     * One or more ACM Amazon Resource Name (ARN)s.
-     * 
-     */
+        /**
+         * @return One or more ACM Amazon Resource Name (ARN)s.
+         * 
+         */
     private final List<String> certificateAuthorityArns;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     }
 
     /**
-     * One or more ACM Amazon Resource Name (ARN)s.
+     * @return One or more ACM Amazon Resource Name (ARN)s.
      * 
-    */
+     */
     public List<String> certificateAuthorityArns() {
         return this.certificateAuthorityArns;
     }

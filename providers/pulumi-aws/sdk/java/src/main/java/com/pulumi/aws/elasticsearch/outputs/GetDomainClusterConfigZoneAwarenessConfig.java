@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainClusterConfigZoneAwarenessConfig {
-    /**
-     * Number of availability zones used.
-     * 
-     */
+        /**
+         * @return Number of availability zones used.
+         * 
+         */
     private final Integer availabilityZoneCount;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
     }
 
     /**
-     * Number of availability zones used.
+     * @return Number of availability zones used.
      * 
-    */
+     */
     public Integer availabilityZoneCount() {
         return this.availabilityZoneCount;
     }

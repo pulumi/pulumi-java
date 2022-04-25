@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerAccessLogs {
-    /**
-     * The S3 bucket name to store the logs in.
-     * 
-     */
+        /**
+         * @return The S3 bucket name to store the logs in.
+         * 
+         */
     private final String bucket;
-    /**
-     * The S3 bucket prefix. Logs are stored in the root if not configured.
-     * 
-     */
+        /**
+         * @return The S3 bucket prefix. Logs are stored in the root if not configured.
+         * 
+         */
     private final @Nullable String bucketPrefix;
-    /**
-     * Boolean to enable / disable `access_logs`. Default is `true`
-     * 
-     */
+        /**
+         * @return Boolean to enable / disable `access_logs`. Default is `true`
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The publishing interval in minutes. Default: 60 minutes.
-     * 
-     */
+        /**
+         * @return The publishing interval in minutes. Default: 60 minutes.
+         * 
+         */
     private final @Nullable Integer interval;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class LoadBalancerAccessLogs {
     }
 
     /**
-     * The S3 bucket name to store the logs in.
+     * @return The S3 bucket name to store the logs in.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * The S3 bucket prefix. Logs are stored in the root if not configured.
+     * @return The S3 bucket prefix. Logs are stored in the root if not configured.
      * 
-    */
+     */
     public Optional<String> bucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
-     * Boolean to enable / disable `access_logs`. Default is `true`
+     * @return Boolean to enable / disable `access_logs`. Default is `true`
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The publishing interval in minutes. Default: 60 minutes.
+     * @return The publishing interval in minutes. Default: 60 minutes.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }

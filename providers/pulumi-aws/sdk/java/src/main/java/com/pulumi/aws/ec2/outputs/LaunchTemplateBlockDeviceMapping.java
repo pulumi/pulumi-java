@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchTemplateBlockDeviceMapping {
-    /**
-     * The name of the device to mount.
-     * 
-     */
+        /**
+         * @return The name of the device to mount.
+         * 
+         */
     private final @Nullable String deviceName;
-    /**
-     * Configure EBS volume properties.
-     * 
-     */
+        /**
+         * @return Configure EBS volume properties.
+         * 
+         */
     private final @Nullable LaunchTemplateBlockDeviceMappingEbs ebs;
-    /**
-     * Suppresses the specified device included in the AMI&#39;s block device mapping.
-     * 
-     */
+        /**
+         * @return Suppresses the specified device included in the AMI&#39;s block device mapping.
+         * 
+         */
     private final @Nullable String noDevice;
-    /**
-     * The [Instance Store Device
-     * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-     * (e.g., `&#34;ephemeral0&#34;`).
-     * 
-     */
+        /**
+         * @return The [Instance Store Device
+         * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
+         * (e.g., `&#34;ephemeral0&#34;`).
+         * 
+         */
     private final @Nullable String virtualName;
 
     @CustomType.Constructor
@@ -48,32 +48,32 @@ public final class LaunchTemplateBlockDeviceMapping {
     }
 
     /**
-     * The name of the device to mount.
+     * @return The name of the device to mount.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * Configure EBS volume properties.
+     * @return Configure EBS volume properties.
      * 
-    */
+     */
     public Optional<LaunchTemplateBlockDeviceMappingEbs> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
-     * Suppresses the specified device included in the AMI&#39;s block device mapping.
+     * @return Suppresses the specified device included in the AMI&#39;s block device mapping.
      * 
-    */
+     */
     public Optional<String> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
-     * The [Instance Store Device
+     * @return The [Instance Store Device
      * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
      * (e.g., `&#34;ephemeral0&#34;`).
      * 
-    */
+     */
     public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }

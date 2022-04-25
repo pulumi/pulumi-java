@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository {
-    /**
-     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
-     * 
-     */
+        /**
+         * @return The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+         * 
+         */
     private final String repositoryName;
-    /**
-     * The service in which this image is registered. Valid values: `ECR`.
-     * 
-     */
+        /**
+         * @return The service in which this image is registered. Valid values: `ECR`.
+         * 
+         */
     private final String service;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     /**
-     * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
+     * @return The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
-    */
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
     /**
-     * The service in which this image is registered. Valid values: `ECR`.
+     * @return The service in which this image is registered. Valid values: `ECR`.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

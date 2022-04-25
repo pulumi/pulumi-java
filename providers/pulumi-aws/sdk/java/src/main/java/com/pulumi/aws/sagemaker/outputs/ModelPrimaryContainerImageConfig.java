@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ModelPrimaryContainerImageConfig {
-    /**
-     * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
-     * 
-     */
+        /**
+         * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+         * 
+         */
     private final String repositoryAccessMode;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ModelPrimaryContainerImageConfig {
     }
 
     /**
-     * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+     * @return Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
      * 
-    */
+     */
     public String repositoryAccessMode() {
         return this.repositoryAccessMode;
     }

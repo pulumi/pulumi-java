@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVirtualServiceSpecProvider {
-    /**
-     * The virtual node associated with the virtual service.
-     * 
-     */
+        /**
+         * @return The virtual node associated with the virtual service.
+         * 
+         */
     private final List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
-    /**
-     * The virtual router associated with the virtual service.
-     * 
-     */
+        /**
+         * @return The virtual router associated with the virtual service.
+         * 
+         */
     private final List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetVirtualServiceSpecProvider {
     }
 
     /**
-     * The virtual node associated with the virtual service.
+     * @return The virtual node associated with the virtual service.
      * 
-    */
+     */
     public List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes() {
         return this.virtualNodes;
     }
     /**
-     * The virtual router associated with the virtual service.
+     * @return The virtual router associated with the virtual service.
      * 
-    */
+     */
     public List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters() {
         return this.virtualRouters;
     }

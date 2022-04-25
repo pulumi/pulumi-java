@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSecretsSecret {
-    /**
-     * An optional mapping that makes up the Encryption Context for the secret.
-     * 
-     */
+        /**
+         * @return An optional mapping that makes up the Encryption Context for the secret.
+         * 
+         */
     private final @Nullable Map<String,String> context;
-    /**
-     * An optional list of Grant Tokens for the secret.
-     * 
-     */
+        /**
+         * @return An optional list of Grant Tokens for the secret.
+         * 
+         */
     private final @Nullable List<String> grantTokens;
-    /**
-     * The name to export this secret under in the attributes.
-     * 
-     */
+        /**
+         * @return The name to export this secret under in the attributes.
+         * 
+         */
     private final String name;
-    /**
-     * Base64 encoded payload, as returned from a KMS encrypt operation.
-     * 
-     */
+        /**
+         * @return Base64 encoded payload, as returned from a KMS encrypt operation.
+         * 
+         */
     private final String payload;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetSecretsSecret {
     }
 
     /**
-     * An optional mapping that makes up the Encryption Context for the secret.
+     * @return An optional mapping that makes up the Encryption Context for the secret.
      * 
-    */
+     */
     public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
     /**
-     * An optional list of Grant Tokens for the secret.
+     * @return An optional list of Grant Tokens for the secret.
      * 
-    */
+     */
     public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
     /**
-     * The name to export this secret under in the attributes.
+     * @return The name to export this secret under in the attributes.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Base64 encoded payload, as returned from a KMS encrypt operation.
+     * @return Base64 encoded payload, as returned from a KMS encrypt operation.
      * 
-    */
+     */
     public String payload() {
         return this.payload;
     }

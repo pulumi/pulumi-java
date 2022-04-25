@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AppCampaignHook {
-    /**
-     * Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
-     * 
-     */
+        /**
+         * @return Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
+         * 
+         */
     private final @Nullable String lambdaFunctionName;
-    /**
-     * What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
-     * 
-     */
+        /**
+         * @return What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
-     * 
-     */
+        /**
+         * @return Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
+         * 
+         */
     private final @Nullable String webUrl;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AppCampaignHook {
     }
 
     /**
-     * Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
+     * @return Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
      * 
-    */
+     */
     public Optional<String> lambdaFunctionName() {
         return Optional.ofNullable(this.lambdaFunctionName);
     }
     /**
-     * What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
+     * @return What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
+     * @return Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
      * 
-    */
+     */
     public Optional<String> webUrl() {
         return Optional.ofNullable(this.webUrl);
     }

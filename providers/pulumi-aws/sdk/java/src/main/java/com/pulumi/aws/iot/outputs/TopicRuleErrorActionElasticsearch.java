@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TopicRuleErrorActionElasticsearch {
-    /**
-     * The endpoint of your Elasticsearch domain.
-     * 
-     */
+        /**
+         * @return The endpoint of your Elasticsearch domain.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The unique identifier for the document you are storing.
-     * 
-     */
+        /**
+         * @return The unique identifier for the document you are storing.
+         * 
+         */
     private final String id;
-    /**
-     * The Elasticsearch index where you want to store your data.
-     * 
-     */
+        /**
+         * @return The Elasticsearch index where you want to store your data.
+         * 
+         */
     private final String index;
-    /**
-     * The IAM role ARN that has access to Elasticsearch.
-     * 
-     */
+        /**
+         * @return The IAM role ARN that has access to Elasticsearch.
+         * 
+         */
     private final String roleArn;
-    /**
-     * The type of document you are storing.
-     * 
-     */
+        /**
+         * @return The type of document you are storing.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class TopicRuleErrorActionElasticsearch {
     }
 
     /**
-     * The endpoint of your Elasticsearch domain.
+     * @return The endpoint of your Elasticsearch domain.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The unique identifier for the document you are storing.
+     * @return The unique identifier for the document you are storing.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Elasticsearch index where you want to store your data.
+     * @return The Elasticsearch index where you want to store your data.
      * 
-    */
+     */
     public String index() {
         return this.index;
     }
     /**
-     * The IAM role ARN that has access to Elasticsearch.
+     * @return The IAM role ARN that has access to Elasticsearch.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The type of document you are storing.
+     * @return The type of document you are storing.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters {
-    /**
-     * Configuration options for sending command output to CloudWatch Logs. Documented below.
-     * 
-     */
+        /**
+         * @return Configuration options for sending command output to CloudWatch Logs. Documented below.
+         * 
+         */
     private final @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig;
-    /**
-     * Information about the command(s) to execute.
-     * 
-     */
+        /**
+         * @return Information about the command(s) to execute.
+         * 
+         */
     private final @Nullable String comment;
-    /**
-     * The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
-     * 
-     */
+        /**
+         * @return The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
+         * 
+         */
     private final @Nullable String documentHash;
-    /**
-     * SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
-     * 
-     */
+        /**
+         * @return SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
+         * 
+         */
     private final @Nullable String documentHashType;
-    /**
-     * The version of an Automation document to use during task execution.
-     * 
-     */
+        /**
+         * @return The version of an Automation document to use during task execution.
+         * 
+         */
     private final @Nullable String documentVersion;
-    /**
-     * Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
-     * 
-     */
+        /**
+         * @return Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
+         * 
+         */
     private final @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig;
-    /**
-     * The name of the Amazon S3 bucket.
-     * 
-     */
+        /**
+         * @return The name of the Amazon S3 bucket.
+         * 
+         */
     private final @Nullable String outputS3Bucket;
-    /**
-     * The Amazon S3 bucket subfolder.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket subfolder.
+         * 
+         */
     private final @Nullable String outputS3KeyPrefix;
-    /**
-     * The parameters for the RUN_COMMAND task execution. Documented below.
-     * 
-     */
+        /**
+         * @return The parameters for the RUN_COMMAND task execution. Documented below.
+         * 
+         */
     private final @Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters;
-    /**
-     * The IAM service role to assume during task execution.
-     * 
-     */
+        /**
+         * @return The IAM service role to assume during task execution.
+         * 
+         */
     private final @Nullable String serviceRoleArn;
-    /**
-     * If this time is reached and the command has not already started executing, it doesn&#39;t run.
-     * 
-     */
+        /**
+         * @return If this time is reached and the command has not already started executing, it doesn&#39;t run.
+         * 
+         */
     private final @Nullable Integer timeoutSeconds;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     /**
-     * Configuration options for sending command output to CloudWatch Logs. Documented below.
+     * @return Configuration options for sending command output to CloudWatch Logs. Documented below.
      * 
-    */
+     */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig> cloudwatchConfig() {
         return Optional.ofNullable(this.cloudwatchConfig);
     }
     /**
-     * Information about the command(s) to execute.
+     * @return Information about the command(s) to execute.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
+     * @return The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
      * 
-    */
+     */
     public Optional<String> documentHash() {
         return Optional.ofNullable(this.documentHash);
     }
     /**
-     * SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
+     * @return SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
      * 
-    */
+     */
     public Optional<String> documentHashType() {
         return Optional.ofNullable(this.documentHashType);
     }
     /**
-     * The version of an Automation document to use during task execution.
+     * @return The version of an Automation document to use during task execution.
      * 
-    */
+     */
     public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
-     * Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
+     * @return Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
      * 
-    */
+     */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
     /**
-     * The name of the Amazon S3 bucket.
+     * @return The name of the Amazon S3 bucket.
      * 
-    */
+     */
     public Optional<String> outputS3Bucket() {
         return Optional.ofNullable(this.outputS3Bucket);
     }
     /**
-     * The Amazon S3 bucket subfolder.
+     * @return The Amazon S3 bucket subfolder.
      * 
-    */
+     */
     public Optional<String> outputS3KeyPrefix() {
         return Optional.ofNullable(this.outputS3KeyPrefix);
     }
     /**
-     * The parameters for the RUN_COMMAND task execution. Documented below.
+     * @return The parameters for the RUN_COMMAND task execution. Documented below.
      * 
-    */
+     */
     public List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The IAM service role to assume during task execution.
+     * @return The IAM service role to assume during task execution.
      * 
-    */
+     */
     public Optional<String> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
     /**
-     * If this time is reached and the command has not already started executing, it doesn&#39;t run.
+     * @return If this time is reached and the command has not already started executing, it doesn&#39;t run.
      * 
-    */
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

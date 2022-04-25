@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd {
-    /**
-     * The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
-     * 
-     */
+        /**
+         * @return The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
+         * 
+         */
     private final @Nullable Integer cents;
-    /**
-     * The whole number of dollars in the amount. Valid value range between `0` and `2`.
-     * 
-     */
+        /**
+         * @return The whole number of dollars in the amount. Valid value range between `0` and `2`.
+         * 
+         */
     private final @Nullable Integer dollars;
-    /**
-     * Fractions of a cent, in tenths. Valid value range between `0` and `9`.
-     * 
-     */
+        /**
+         * @return Fractions of a cent, in tenths. Valid value range between `0` and `9`.
+         * 
+         */
     private final @Nullable Integer tenthFractionsOfACent;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     }
 
     /**
-     * The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
+     * @return The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
      * 
-    */
+     */
     public Optional<Integer> cents() {
         return Optional.ofNullable(this.cents);
     }
     /**
-     * The whole number of dollars in the amount. Valid value range between `0` and `2`.
+     * @return The whole number of dollars in the amount. Valid value range between `0` and `2`.
      * 
-    */
+     */
     public Optional<Integer> dollars() {
         return Optional.ofNullable(this.dollars);
     }
     /**
-     * Fractions of a cent, in tenths. Valid value range between `0` and `9`.
+     * @return Fractions of a cent, in tenths. Valid value range between `0` and `9`.
      * 
-    */
+     */
     public Optional<Integer> tenthFractionsOfACent() {
         return Optional.ofNullable(this.tenthFractionsOfACent);
     }

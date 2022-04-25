@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketCorsRule {
-    /**
-     * Specifies which headers are allowed.
-     * 
-     */
+        /**
+         * @return Specifies which headers are allowed.
+         * 
+         */
     private final @Nullable List<String> allowedHeaders;
-    /**
-     * Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
-     * 
-     */
+        /**
+         * @return Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
+         * 
+         */
     private final List<String> allowedMethods;
-    /**
-     * Specifies which origins are allowed.
-     * 
-     */
+        /**
+         * @return Specifies which origins are allowed.
+         * 
+         */
     private final List<String> allowedOrigins;
-    /**
-     * Specifies expose header in the response.
-     * 
-     */
+        /**
+         * @return Specifies expose header in the response.
+         * 
+         */
     private final @Nullable List<String> exposeHeaders;
-    /**
-     * Specifies time in seconds that browser can cache the response for a preflight request.
-     * 
-     */
+        /**
+         * @return Specifies time in seconds that browser can cache the response for a preflight request.
+         * 
+         */
     private final @Nullable Integer maxAgeSeconds;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class BucketCorsRule {
     }
 
     /**
-     * Specifies which headers are allowed.
+     * @return Specifies which headers are allowed.
      * 
-    */
+     */
     public List<String> allowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
     /**
-     * Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
+     * @return Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
      * 
-    */
+     */
     public List<String> allowedMethods() {
         return this.allowedMethods;
     }
     /**
-     * Specifies which origins are allowed.
+     * @return Specifies which origins are allowed.
      * 
-    */
+     */
     public List<String> allowedOrigins() {
         return this.allowedOrigins;
     }
     /**
-     * Specifies expose header in the response.
+     * @return Specifies expose header in the response.
      * 
-    */
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
-     * Specifies time in seconds that browser can cache the response for a preflight request.
+     * @return Specifies time in seconds that browser can cache the response for a preflight request.
      * 
-    */
+     */
     public Optional<Integer> maxAgeSeconds() {
         return Optional.ofNullable(this.maxAgeSeconds);
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterClientAuthenticationSasl {
-    /**
-     * Enables IAM client authentication. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Enables IAM client authentication. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean iam;
-    /**
-     * Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean scram;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ClusterClientAuthenticationSasl {
     }
 
     /**
-     * Enables IAM client authentication. Defaults to `false`.
+     * @return Enables IAM client authentication. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> iam() {
         return Optional.ofNullable(this.iam);
     }
     /**
-     * Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
+     * @return Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> scram() {
         return Optional.ofNullable(this.scram);
     }

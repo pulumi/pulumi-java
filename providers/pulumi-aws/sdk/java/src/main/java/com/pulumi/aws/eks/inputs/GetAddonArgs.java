@@ -23,6 +23,11 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="addonName", required=true)
     private String addonName;
 
+    /**
+     * @return Name of the EKS add-on. The name must match one of
+     * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+     * 
+     */
     public String addonName() {
         return this.addonName;
     }
@@ -34,6 +39,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -71,11 +80,24 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName Name of the EKS add-on. The name must match one of
+         * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;

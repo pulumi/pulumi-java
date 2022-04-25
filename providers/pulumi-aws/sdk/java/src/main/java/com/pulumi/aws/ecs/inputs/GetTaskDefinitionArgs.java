@@ -19,6 +19,10 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="taskDefinition", required=true)
     private String taskDefinition;
 
+    /**
+     * @return The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
+     * 
+     */
     public String taskDefinition() {
         return this.taskDefinition;
     }
@@ -47,6 +51,12 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetTaskDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param taskDefinition The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskDefinition(String taskDefinition) {
             $.taskDefinition = taskDefinition;
             return this;

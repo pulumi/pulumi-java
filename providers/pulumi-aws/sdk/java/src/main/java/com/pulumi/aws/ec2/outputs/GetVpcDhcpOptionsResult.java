@@ -13,56 +13,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVpcDhcpOptionsResult {
-    /**
-     * The ARN of the DHCP Options Set.
-     * 
-     */
+        /**
+         * @return The ARN of the DHCP Options Set.
+         * 
+         */
     private final String arn;
-    /**
-     * EC2 DHCP Options ID
-     * 
-     */
+        /**
+         * @return EC2 DHCP Options ID
+         * 
+         */
     private final String dhcpOptionsId;
-    /**
-     * The suffix domain name to used when resolving non Fully Qualified Domain NamesE.g., the `search` value in the `/etc/resolv.conf` file.
-     * 
-     */
+        /**
+         * @return The suffix domain name to used when resolving non Fully Qualified Domain NamesE.g., the `search` value in the `/etc/resolv.conf` file.
+         * 
+         */
     private final String domainName;
-    /**
-     * List of name servers.
-     * 
-     */
+        /**
+         * @return List of name servers.
+         * 
+         */
     private final List<String> domainNameServers;
     private final @Nullable List<GetVpcDhcpOptionsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * List of NETBIOS name servers.
-     * 
-     */
+        /**
+         * @return List of NETBIOS name servers.
+         * 
+         */
     private final List<String> netbiosNameServers;
-    /**
-     * The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
-     * 
-     */
+        /**
+         * @return The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
+         * 
+         */
     private final String netbiosNodeType;
-    /**
-     * List of NTP servers.
-     * 
-     */
+        /**
+         * @return List of NTP servers.
+         * 
+         */
     private final List<String> ntpServers;
-    /**
-     * The ID of the AWS account that owns the DHCP options set.
-     * 
-     */
+        /**
+         * @return The ID of the AWS account that owns the DHCP options set.
+         * 
+         */
     private final String ownerId;
-    /**
-     * A map of tags assigned to the resource.
-     * 
-     */
+        /**
+         * @return A map of tags assigned to the resource.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -92,30 +92,30 @@ public final class GetVpcDhcpOptionsResult {
     }
 
     /**
-     * The ARN of the DHCP Options Set.
+     * @return The ARN of the DHCP Options Set.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * EC2 DHCP Options ID
+     * @return EC2 DHCP Options ID
      * 
-    */
+     */
     public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
-     * The suffix domain name to used when resolving non Fully Qualified Domain NamesE.g., the `search` value in the `/etc/resolv.conf` file.
+     * @return The suffix domain name to used when resolving non Fully Qualified Domain NamesE.g., the `search` value in the `/etc/resolv.conf` file.
      * 
-    */
+     */
     public String domainName() {
         return this.domainName;
     }
     /**
-     * List of name servers.
+     * @return List of name servers.
      * 
-    */
+     */
     public List<String> domainNameServers() {
         return this.domainNameServers;
     }
@@ -123,44 +123,44 @@ public final class GetVpcDhcpOptionsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of NETBIOS name servers.
+     * @return List of NETBIOS name servers.
      * 
-    */
+     */
     public List<String> netbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
-     * The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
+     * @return The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
-    */
+     */
     public String netbiosNodeType() {
         return this.netbiosNodeType;
     }
     /**
-     * List of NTP servers.
+     * @return List of NTP servers.
      * 
-    */
+     */
     public List<String> ntpServers() {
         return this.ntpServers;
     }
     /**
-     * The ID of the AWS account that owns the DHCP options set.
+     * @return The ID of the AWS account that owns the DHCP options set.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * A map of tags assigned to the resource.
+     * @return A map of tags assigned to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

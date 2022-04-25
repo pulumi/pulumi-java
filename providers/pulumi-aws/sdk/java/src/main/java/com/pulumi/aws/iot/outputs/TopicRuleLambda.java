@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TopicRuleLambda {
-    /**
-     * The ARN of the Lambda function.
-     * 
-     */
+        /**
+         * @return The ARN of the Lambda function.
+         * 
+         */
     private final String functionArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class TopicRuleLambda {
     }
 
     /**
-     * The ARN of the Lambda function.
+     * @return The ARN of the Lambda function.
      * 
-    */
+     */
     public String functionArn() {
         return this.functionArn;
     }

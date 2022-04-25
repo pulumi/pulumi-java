@@ -15,20 +15,20 @@ import javax.annotation.Nullable;
 public final class GetLocalGatewayResult {
     private final @Nullable List<GetLocalGatewayFilter> filters;
     private final String id;
-    /**
-     * Amazon Resource Name (ARN) of Outpost
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of Outpost
+         * 
+         */
     private final String outpostArn;
-    /**
-     * AWS account identifier that owns the Local Gateway.
-     * 
-     */
+        /**
+         * @return AWS account identifier that owns the Local Gateway.
+         * 
+         */
     private final String ownerId;
-    /**
-     * State of the local gateway.
-     * 
-     */
+        /**
+         * @return State of the local gateway.
+         * 
+         */
     private final String state;
     private final Map<String,String> tags;
 
@@ -55,23 +55,23 @@ public final class GetLocalGatewayResult {
         return this.id;
     }
     /**
-     * Amazon Resource Name (ARN) of Outpost
+     * @return Amazon Resource Name (ARN) of Outpost
      * 
-    */
+     */
     public String outpostArn() {
         return this.outpostArn;
     }
     /**
-     * AWS account identifier that owns the Local Gateway.
+     * @return AWS account identifier that owns the Local Gateway.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * State of the local gateway.
+     * @return State of the local gateway.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

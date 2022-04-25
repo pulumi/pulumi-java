@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecListenerTimeout {
-    /**
-     * Timeouts for gRPC listeners.
-     * 
-     */
+        /**
+         * @return Timeouts for gRPC listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerTimeoutGrpc grpc;
-    /**
-     * Timeouts for HTTP listeners.
-     * 
-     */
+        /**
+         * @return Timeouts for HTTP listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerTimeoutHttp http;
-    /**
-     * Timeouts for HTTP2 listeners.
-     * 
-     */
+        /**
+         * @return Timeouts for HTTP2 listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerTimeoutHttp2 http2;
-    /**
-     * Timeouts for TCP listeners.
-     * 
-     */
+        /**
+         * @return Timeouts for TCP listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerTimeoutTcp tcp;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class VirtualNodeSpecListenerTimeout {
     }
 
     /**
-     * Timeouts for gRPC listeners.
+     * @return Timeouts for gRPC listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTimeoutGrpc> grpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
-     * Timeouts for HTTP listeners.
+     * @return Timeouts for HTTP listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTimeoutHttp> http() {
         return Optional.ofNullable(this.http);
     }
     /**
-     * Timeouts for HTTP2 listeners.
+     * @return Timeouts for HTTP2 listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTimeoutHttp2> http2() {
         return Optional.ofNullable(this.http2);
     }
     /**
-     * Timeouts for TCP listeners.
+     * @return Timeouts for TCP listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTimeoutTcp> tcp() {
         return Optional.ofNullable(this.tcp);
     }

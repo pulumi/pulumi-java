@@ -20,6 +20,10 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="applicationArn", required=true)
     private String applicationArn;
 
+    /**
+     * @return (Optional) Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+     * 
+     */
     public String applicationArn() {
         return this.applicationArn;
     }
@@ -31,6 +35,10 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="applicationId", required=true)
     private String applicationId;
 
+    /**
+     * @return (Optional) Application ID for an Amazon Pinpoint application.
+     * 
+     */
     public String applicationId() {
         return this.applicationId;
     }
@@ -42,6 +50,10 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="externalId", required=true)
     private String externalId;
 
+    /**
+     * @return (Optional) ID for the Analytics Configuration. Conflicts with `application_arn`.
+     * 
+     */
     public String externalId() {
         return this.externalId;
     }
@@ -54,6 +66,11 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return (Optional) ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+     * * `user_data_shared` (Optional) If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -93,21 +110,46 @@ public final class GetUserPoolClientAnalyticsConfiguration extends com.pulumi.re
             $ = new GetUserPoolClientAnalyticsConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationArn (Optional) Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationArn(String applicationArn) {
             $.applicationArn = applicationArn;
             return this;
         }
 
+        /**
+         * @param applicationId (Optional) Application ID for an Amazon Pinpoint application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param externalId (Optional) ID for the Analytics Configuration. Conflicts with `application_arn`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param roleArn (Optional) ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
+         * * `user_data_shared` (Optional) If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;

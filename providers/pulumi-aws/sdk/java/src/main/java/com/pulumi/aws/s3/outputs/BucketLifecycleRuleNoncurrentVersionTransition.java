@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketLifecycleRuleNoncurrentVersionTransition {
-    /**
-     * Specifies the number of days noncurrent object versions transition.
-     * 
-     */
+        /**
+         * @return Specifies the number of days noncurrent object versions transition.
+         * 
+         */
     private final @Nullable Integer days;
-    /**
-     * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
-     * 
-     */
+        /**
+         * @return Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+         * 
+         */
     private final String storageClass;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
     }
 
     /**
-     * Specifies the number of days noncurrent object versions transition.
+     * @return Specifies the number of days noncurrent object versions transition.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
+     * @return Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
-    */
+     */
     public String storageClass() {
         return this.storageClass;
     }

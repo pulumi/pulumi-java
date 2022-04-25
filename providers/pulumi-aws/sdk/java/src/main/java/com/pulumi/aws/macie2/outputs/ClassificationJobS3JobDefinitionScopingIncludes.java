@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludes {
-    /**
-     * An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
-     * 
-     */
+        /**
+         * @return An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+         * 
+         */
     private final @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAnd> ands;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ClassificationJobS3JobDefinitionScopingIncludes {
     }
 
     /**
-     * An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
+     * @return An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
      * 
-    */
+     */
     public List<ClassificationJobS3JobDefinitionScopingIncludesAnd> ands() {
         return this.ands == null ? List.of() : this.ands;
     }

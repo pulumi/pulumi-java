@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClustersResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of EKS clusters names
-     * 
-     */
+        /**
+         * @return Set of EKS clusters names
+         * 
+         */
     private final List<String> names;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetClustersResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of EKS clusters names
+     * @return Set of EKS clusters names
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

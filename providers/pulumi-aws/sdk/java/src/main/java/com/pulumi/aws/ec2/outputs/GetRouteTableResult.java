@@ -15,46 +15,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRouteTableResult {
-    /**
-     * ARN of the route table.
-     * 
-     */
+        /**
+         * @return ARN of the route table.
+         * 
+         */
     private final String arn;
-    /**
-     * List of associations with attributes detailed below.
-     * 
-     */
+        /**
+         * @return List of associations with attributes detailed below.
+         * 
+         */
     private final List<GetRouteTableAssociation> associations;
     private final @Nullable List<GetRouteTableFilter> filters;
-    /**
-     * Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
-     * 
-     */
+        /**
+         * @return Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+         * 
+         */
     private final String gatewayId;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * ID of the AWS account that owns the route table.
-     * 
-     */
+        /**
+         * @return ID of the AWS account that owns the route table.
+         * 
+         */
     private final String ownerId;
-    /**
-     * Route Table ID.
-     * 
-     */
+        /**
+         * @return Route Table ID.
+         * 
+         */
     private final String routeTableId;
-    /**
-     * List of routes with attributes detailed below.
-     * 
-     */
+        /**
+         * @return List of routes with attributes detailed below.
+         * 
+         */
     private final List<GetRouteTableRoute> routes;
-    /**
-     * Subnet ID. Only set when associated with a subnet.
-     * 
-     */
+        /**
+         * @return Subnet ID. Only set when associated with a subnet.
+         * 
+         */
     private final String subnetId;
     private final Map<String,String> tags;
     private final String vpcId;
@@ -86,16 +86,16 @@ public final class GetRouteTableResult {
     }
 
     /**
-     * ARN of the route table.
+     * @return ARN of the route table.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * List of associations with attributes detailed below.
+     * @return List of associations with attributes detailed below.
      * 
-    */
+     */
     public List<GetRouteTableAssociation> associations() {
         return this.associations;
     }
@@ -103,44 +103,44 @@ public final class GetRouteTableResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
+     * @return Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
      * 
-    */
+     */
     public String gatewayId() {
         return this.gatewayId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * ID of the AWS account that owns the route table.
+     * @return ID of the AWS account that owns the route table.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
     /**
-     * Route Table ID.
+     * @return Route Table ID.
      * 
-    */
+     */
     public String routeTableId() {
         return this.routeTableId;
     }
     /**
-     * List of routes with attributes detailed below.
+     * @return List of routes with attributes detailed below.
      * 
-    */
+     */
     public List<GetRouteTableRoute> routes() {
         return this.routes;
     }
     /**
-     * Subnet ID. Only set when associated with a subnet.
+     * @return Subnet ID. Only set when associated with a subnet.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }

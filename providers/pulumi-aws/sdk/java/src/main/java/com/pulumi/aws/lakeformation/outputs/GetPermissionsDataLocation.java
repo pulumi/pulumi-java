@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPermissionsDataLocation {
-    /**
-     * Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+         * 
+         */
     private final String arn;
-    /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
-     * 
-     */
+        /**
+         * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         */
     private final String catalogId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetPermissionsDataLocation {
     }
 
     /**
-     * Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+     * @return Amazon Resource Name (ARN) that uniquely identifies the data location resource.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }

@@ -13,93 +13,93 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGroupResult {
-    /**
-     * The Amazon Resource Name (ARN) of the Auto Scaling group.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Auto Scaling group.
+         * 
+         */
     private final String arn;
-    /**
-     * One or more Availability Zones for the group.
-     * 
-     */
+        /**
+         * @return One or more Availability Zones for the group.
+         * 
+         */
     private final List<String> availabilityZones;
     private final Integer defaultCooldown;
-    /**
-     * The desired size of the group.
-     * 
-     */
+        /**
+         * @return The desired size of the group.
+         * 
+         */
     private final Integer desiredCapacity;
-    /**
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
-     * 
-     */
+        /**
+         * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
+         * 
+         */
     private final Integer healthCheckGracePeriod;
-    /**
-     * The service to use for the health checks. The valid values are EC2 and ELB.
-     * 
-     */
+        /**
+         * @return The service to use for the health checks. The valid values are EC2 and ELB.
+         * 
+         */
     private final String healthCheckType;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the associated launch configuration.
-     * 
-     */
+        /**
+         * @return The name of the associated launch configuration.
+         * 
+         */
     private final String launchConfiguration;
     private final List<GetGroupLaunchTemplate> launchTemplates;
-    /**
-     * One or more load balancers associated with the group.
-     * 
-     */
+        /**
+         * @return One or more load balancers associated with the group.
+         * 
+         */
     private final List<String> loadBalancers;
-    /**
-     * The maximum size of the group.
-     * 
-     */
+        /**
+         * @return The maximum size of the group.
+         * 
+         */
     private final Integer maxSize;
-    /**
-     * The minimum size of the group.
-     * 
-     */
+        /**
+         * @return The minimum size of the group.
+         * 
+         */
     private final Integer minSize;
-    /**
-     * Name of the Auto Scaling Group.
-     * 
-     */
+        /**
+         * @return Name of the Auto Scaling Group.
+         * 
+         */
     private final String name;
     private final Boolean newInstancesProtectedFromScaleIn;
-    /**
-     * The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
-     * 
-     */
+        /**
+         * @return The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
+         * 
+         */
     private final String placementGroup;
-    /**
-     * The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
+         * 
+         */
     private final String serviceLinkedRoleArn;
-    /**
-     * The current state of the group when DeleteAutoScalingGroup is in progress.
-     * 
-     */
+        /**
+         * @return The current state of the group when DeleteAutoScalingGroup is in progress.
+         * 
+         */
     private final String status;
-    /**
-     * The Amazon Resource Names (ARN) of the target groups for your load balancer.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Names (ARN) of the target groups for your load balancer.
+         * 
+         */
     private final List<String> targetGroupArns;
-    /**
-     * The termination policies for the group.
-     * 
-     */
+        /**
+         * @return The termination policies for the group.
+         * 
+         */
     private final List<String> terminationPolicies;
-    /**
-     * VPC ID for the group.
-     * 
-     */
+        /**
+         * @return VPC ID for the group.
+         * 
+         */
     private final String vpcZoneIdentifier;
 
     @CustomType.Constructor
@@ -147,16 +147,16 @@ public final class GetGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Auto Scaling group.
+     * @return The Amazon Resource Name (ARN) of the Auto Scaling group.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * One or more Availability Zones for the group.
+     * @return One or more Availability Zones for the group.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
@@ -164,37 +164,37 @@ public final class GetGroupResult {
         return this.defaultCooldown;
     }
     /**
-     * The desired size of the group.
+     * @return The desired size of the group.
      * 
-    */
+     */
     public Integer desiredCapacity() {
         return this.desiredCapacity;
     }
     /**
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
+     * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
      * 
-    */
+     */
     public Integer healthCheckGracePeriod() {
         return this.healthCheckGracePeriod;
     }
     /**
-     * The service to use for the health checks. The valid values are EC2 and ELB.
+     * @return The service to use for the health checks. The valid values are EC2 and ELB.
      * 
-    */
+     */
     public String healthCheckType() {
         return this.healthCheckType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the associated launch configuration.
+     * @return The name of the associated launch configuration.
      * 
-    */
+     */
     public String launchConfiguration() {
         return this.launchConfiguration;
     }
@@ -202,30 +202,30 @@ public final class GetGroupResult {
         return this.launchTemplates;
     }
     /**
-     * One or more load balancers associated with the group.
+     * @return One or more load balancers associated with the group.
      * 
-    */
+     */
     public List<String> loadBalancers() {
         return this.loadBalancers;
     }
     /**
-     * The maximum size of the group.
+     * @return The maximum size of the group.
      * 
-    */
+     */
     public Integer maxSize() {
         return this.maxSize;
     }
     /**
-     * The minimum size of the group.
+     * @return The minimum size of the group.
      * 
-    */
+     */
     public Integer minSize() {
         return this.minSize;
     }
     /**
-     * Name of the Auto Scaling Group.
+     * @return Name of the Auto Scaling Group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -233,44 +233,44 @@ public final class GetGroupResult {
         return this.newInstancesProtectedFromScaleIn;
     }
     /**
-     * The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
+     * @return The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
      * 
-    */
+     */
     public String placementGroup() {
         return this.placementGroup;
     }
     /**
-     * The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
+     * @return The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
      * 
-    */
+     */
     public String serviceLinkedRoleArn() {
         return this.serviceLinkedRoleArn;
     }
     /**
-     * The current state of the group when DeleteAutoScalingGroup is in progress.
+     * @return The current state of the group when DeleteAutoScalingGroup is in progress.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The Amazon Resource Names (ARN) of the target groups for your load balancer.
+     * @return The Amazon Resource Names (ARN) of the target groups for your load balancer.
      * 
-    */
+     */
     public List<String> targetGroupArns() {
         return this.targetGroupArns;
     }
     /**
-     * The termination policies for the group.
+     * @return The termination policies for the group.
      * 
-    */
+     */
     public List<String> terminationPolicies() {
         return this.terminationPolicies;
     }
     /**
-     * VPC ID for the group.
+     * @return VPC ID for the group.
      * 
-    */
+     */
     public String vpcZoneIdentifier() {
         return this.vpcZoneIdentifier;
     }

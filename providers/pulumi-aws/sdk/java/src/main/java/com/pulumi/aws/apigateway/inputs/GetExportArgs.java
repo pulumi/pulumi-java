@@ -22,6 +22,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accepts")
     private @Nullable String accepts;
 
+    /**
+     * @return The content-type of the export. Valid values are `application/json` and `application/yaml` are supported for `export_type` `ofoas30` and `swagger`.
+     * 
+     */
     public Optional<String> accepts() {
         return Optional.ofNullable(this.accepts);
     }
@@ -33,6 +37,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="exportType", required=true)
     private String exportType;
 
+    /**
+     * @return The type of export. Acceptable values are `oas30` for OpenAPI 3.0.x and `swagger` for Swagger/OpenAPI 2.0.
+     * 
+     */
     public String exportType() {
         return this.exportType;
     }
@@ -44,6 +52,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable Map<String,String> parameters;
 
+    /**
+     * @return A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions=&#39;integrations&#39;` or `extensions=&#39;apigateway&#39;` will export the API with x-amazon-apigateway-integration extensions. `extensions=&#39;authorizers&#39;` will export the API with x-amazon-apigateway-authorizer extensions.
+     * 
+     */
     public Optional<Map<String,String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -55,6 +67,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
     private String restApiId;
 
+    /**
+     * @return The identifier of the associated REST API.
+     * 
+     */
     public String restApiId() {
         return this.restApiId;
     }
@@ -66,6 +82,10 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
     private String stageName;
 
+    /**
+     * @return The name of the Stage that will be exported.
+     * 
+     */
     public String stageName() {
         return this.stageName;
     }
@@ -98,26 +118,56 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accepts The content-type of the export. Valid values are `application/json` and `application/yaml` are supported for `export_type` `ofoas30` and `swagger`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accepts(@Nullable String accepts) {
             $.accepts = accepts;
             return this;
         }
 
+        /**
+         * @param exportType The type of export. Acceptable values are `oas30` for OpenAPI 3.0.x and `swagger` for Swagger/OpenAPI 2.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportType(String exportType) {
             $.exportType = exportType;
             return this;
         }
 
+        /**
+         * @param parameters A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions=&#39;integrations&#39;` or `extensions=&#39;apigateway&#39;` will export the API with x-amazon-apigateway-integration extensions. `extensions=&#39;authorizers&#39;` will export the API with x-amazon-apigateway-authorizer extensions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the associated REST API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param stageName The name of the Stage that will be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             $.stageName = stageName;
             return this;

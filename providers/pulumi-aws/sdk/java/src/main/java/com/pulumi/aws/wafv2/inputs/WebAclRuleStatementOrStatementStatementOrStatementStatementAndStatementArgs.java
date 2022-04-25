@@ -21,6 +21,10 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementAn
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementArgs>> statements;
 
+    /**
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementAn
             $ = new WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementArgs... statements) {
             return statements(List.of(statements));
         }

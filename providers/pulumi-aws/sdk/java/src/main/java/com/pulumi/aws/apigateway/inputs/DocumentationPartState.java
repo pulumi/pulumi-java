@@ -23,6 +23,10 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<DocumentationPartLocationGetArgs> location;
 
+    /**
+     * @return The location of the targeted API entity of the to-be-created documentation part. See below.
+     * 
+     */
     public Optional<Output<DocumentationPartLocationGetArgs>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
     @Import(name="properties")
     private @Nullable Output<String> properties;
 
+    /**
+     * @return A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., &#34;{ \&#34;description\&#34;: \&#34;The API does ...\&#34; }&#34;. Only Swagger-compliant key-value pairs can be exported and, hence, published.
+     * 
+     */
     public Optional<Output<String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
     @Import(name="restApiId")
     private @Nullable Output<String> restApiId;
 
+    /**
+     * @return The ID of the associated Rest API
+     * 
+     */
     public Optional<Output<String>> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
@@ -75,29 +87,65 @@ public final class DocumentationPartState extends com.pulumi.resources.ResourceA
             $ = new DocumentationPartState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the targeted API entity of the to-be-created documentation part. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<DocumentationPartLocationGetArgs> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the targeted API entity of the to-be-created documentation part. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(DocumentationPartLocationGetArgs location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., &#34;{ \&#34;description\&#34;: \&#34;The API does ...\&#34; }&#34;. Only Swagger-compliant key-value pairs can be exported and, hence, published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., &#34;{ \&#34;description\&#34;: \&#34;The API does ...\&#34; }&#34;. Only Swagger-compliant key-value pairs can be exported and, hence, published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(String properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param restApiId The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(@Nullable Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the associated Rest API
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }

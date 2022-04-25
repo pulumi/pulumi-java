@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SafetyRuleRuleConfig {
-    /**
-     * Logical negation of the rule.
-     * 
-     */
+        /**
+         * @return Logical negation of the rule.
+         * 
+         */
     private final Boolean inverted;
-    /**
-     * Number of controls that must be set when you specify an `ATLEAST` type rule.
-     * 
-     */
+        /**
+         * @return Number of controls that must be set when you specify an `ATLEAST` type rule.
+         * 
+         */
     private final Integer threshold;
-    /**
-     * Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
-     * 
-     */
+        /**
+         * @return Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SafetyRuleRuleConfig {
     }
 
     /**
-     * Logical negation of the rule.
+     * @return Logical negation of the rule.
      * 
-    */
+     */
     public Boolean inverted() {
         return this.inverted;
     }
     /**
-     * Number of controls that must be set when you specify an `ATLEAST` type rule.
+     * @return Number of controls that must be set when you specify an `ATLEAST` type rule.
      * 
-    */
+     */
     public Integer threshold() {
         return this.threshold;
     }
     /**
-     * Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
+     * @return Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

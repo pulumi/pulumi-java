@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class QueueReservationPlanSettings {
-    /**
-     * The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
-     * 
-     */
+        /**
+         * @return The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
+         * 
+         */
     private final String commitment;
-    /**
-     * Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
-     * 
-     */
+        /**
+         * @return Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
+         * 
+         */
     private final String renewalType;
-    /**
-     * Specifies the number of reserved transcode slots (RTS) for queue.
-     * 
-     */
+        /**
+         * @return Specifies the number of reserved transcode slots (RTS) for queue.
+         * 
+         */
     private final Integer reservedSlots;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class QueueReservationPlanSettings {
     }
 
     /**
-     * The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
+     * @return The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
      * 
-    */
+     */
     public String commitment() {
         return this.commitment;
     }
     /**
-     * Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
+     * @return Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
      * 
-    */
+     */
     public String renewalType() {
         return this.renewalType;
     }
     /**
-     * Specifies the number of reserved transcode slots (RTS) for queue.
+     * @return Specifies the number of reserved transcode slots (RTS) for queue.
      * 
-    */
+     */
     public Integer reservedSlots() {
         return this.reservedSlots;
     }

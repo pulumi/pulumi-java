@@ -21,6 +21,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="exacts", required=true)
     private Output<List<String>> exacts;
 
+    /**
+     * @return The values sent must match the specified values exactly.
+     * 
+     */
     public Output<List<String>> exacts() {
         return this.exacts;
     }
@@ -49,15 +53,33 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
             $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exacts The values sent must match the specified values exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exacts(Output<List<String>> exacts) {
             $.exacts = exacts;
             return this;
         }
 
+        /**
+         * @param exacts The values sent must match the specified values exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exacts(List<String> exacts) {
             return exacts(Output.of(exacts));
         }
 
+        /**
+         * @param exacts The values sent must match the specified values exactly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exacts(String... exacts) {
             return exacts(List.of(exacts));
         }

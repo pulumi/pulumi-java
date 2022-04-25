@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDelegatedAdministratorsResult {
-    /**
-     * The list of delegated administrators in your organization, which have the following attributes:
-     * 
-     */
+        /**
+         * @return The list of delegated administrators in your organization, which have the following attributes:
+         * 
+         */
     private final List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String servicePrincipal;
 
@@ -36,16 +36,16 @@ public final class GetDelegatedAdministratorsResult {
     }
 
     /**
-     * The list of delegated administrators in your organization, which have the following attributes:
+     * @return The list of delegated administrators in your organization, which have the following attributes:
      * 
-    */
+     */
     public List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators() {
         return this.delegatedAdministrators;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

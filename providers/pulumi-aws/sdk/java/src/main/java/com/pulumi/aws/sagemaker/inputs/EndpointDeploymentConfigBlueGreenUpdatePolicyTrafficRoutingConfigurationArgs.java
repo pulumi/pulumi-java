@@ -25,6 +25,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="canarySize")
     private @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
 
+    /**
+     * @return Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant&#39;s total instance count. See Canary Size.
+     * 
+     */
     public Optional<Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs>> canarySize() {
         return Optional.ofNullable(this.canarySize);
     }
@@ -36,6 +40,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="linearStepSize")
     private @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
 
+    /**
+     * @return Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant&#39;s total instance count. See Linear Step Size.
+     * 
+     */
     public Optional<Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs>> linearStepSize() {
         return Optional.ofNullable(this.linearStepSize);
     }
@@ -47,6 +55,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -58,6 +70,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="waitIntervalInSeconds", required=true)
     private Output<Integer> waitIntervalInSeconds;
 
+    /**
+     * @return The waiting time (in seconds) between incremental steps to turn on traffic on the new endpoint fleet. Valid values are between `0` and `3600`.
+     * 
+     */
     public Output<Integer> waitIntervalInSeconds() {
         return this.waitIntervalInSeconds;
     }
@@ -89,38 +105,86 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             $ = new EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param canarySize Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant&#39;s total instance count. See Canary Size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize) {
             $.canarySize = canarySize;
             return this;
         }
 
+        /**
+         * @param canarySize Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant&#39;s total instance count. See Canary Size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canarySize(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
             return canarySize(Output.of(canarySize));
         }
 
+        /**
+         * @param linearStepSize Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant&#39;s total instance count. See Linear Step Size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linearStepSize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
             $.linearStepSize = linearStepSize;
             return this;
         }
 
+        /**
+         * @param linearStepSize Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant&#39;s total instance count. See Linear Step Size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linearStepSize(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
             return linearStepSize(Output.of(linearStepSize));
         }
 
+        /**
+         * @param type Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param waitIntervalInSeconds The waiting time (in seconds) between incremental steps to turn on traffic on the new endpoint fleet. Valid values are between `0` and `3600`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitIntervalInSeconds(Output<Integer> waitIntervalInSeconds) {
             $.waitIntervalInSeconds = waitIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param waitIntervalInSeconds The waiting time (in seconds) between incremental steps to turn on traffic on the new endpoint fleet. Valid values are between `0` and `3600`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
             return waitIntervalInSeconds(Output.of(waitIntervalInSeconds));
         }

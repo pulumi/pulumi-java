@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
-    /**
-     * Time in minutes. Valid values: `15`.
-     * 
-     */
+        /**
+         * @return Time in minutes. Valid values: `15`.
+         * 
+         */
     private final Integer minutes;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
     }
 
     /**
-     * Time in minutes. Valid values: `15`.
+     * @return Time in minutes. Valid values: `15`.
      * 
-    */
+     */
     public Integer minutes() {
         return this.minutes;
     }

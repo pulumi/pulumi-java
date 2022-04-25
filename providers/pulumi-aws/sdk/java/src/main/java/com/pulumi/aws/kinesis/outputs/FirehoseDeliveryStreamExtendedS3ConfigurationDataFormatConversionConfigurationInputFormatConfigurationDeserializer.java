@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer {
-    /**
-     * Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
-     * 
-     */
+        /**
+         * @return Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
+         * 
+         */
     private final @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe hiveJsonSerDe;
-    /**
-     * Nested argument that specifies the OpenX SerDe. More details below.
-     * 
-     */
+        /**
+         * @return Nested argument that specifies the OpenX SerDe. More details below.
+         * 
+         */
     private final @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe openXJsonSerDe;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     /**
-     * Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
+     * @return Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
      * 
-    */
+     */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe> hiveJsonSerDe() {
         return Optional.ofNullable(this.hiveJsonSerDe);
     }
     /**
-     * Nested argument that specifies the OpenX SerDe. More details below.
+     * @return Nested argument that specifies the OpenX SerDe. More details below.
      * 
-    */
+     */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe> openXJsonSerDe() {
         return Optional.ofNullable(this.openXJsonSerDe);
     }

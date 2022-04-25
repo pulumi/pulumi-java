@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSubnetsResult {
     private final @Nullable List<GetSubnetsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A list of all the subnet ids found.
-     * 
-     */
+        /**
+         * @return A list of all the subnet ids found.
+         * 
+         */
     private final List<String> ids;
     private final Map<String,String> tags;
 
@@ -42,16 +42,16 @@ public final class GetSubnetsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of all the subnet ids found.
+     * @return A list of all the subnet ids found.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

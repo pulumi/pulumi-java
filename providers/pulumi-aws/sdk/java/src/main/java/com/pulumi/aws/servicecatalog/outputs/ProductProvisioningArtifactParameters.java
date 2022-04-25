@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProductProvisioningArtifactParameters {
-    /**
-     * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
-     * 
-     */
+        /**
+         * @return Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
-     * 
-     */
+        /**
+         * @return Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
+         * 
+         */
     private final @Nullable Boolean disableTemplateValidation;
-    /**
-     * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
-     * 
-     */
+        /**
+         * @return Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
-     * 
-     */
+        /**
+         * @return Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
+         * 
+         */
     private final @Nullable String templatePhysicalId;
-    /**
-     * Template source as URL of the CloudFormation template in Amazon S3.
-     * 
-     */
+        /**
+         * @return Template source as URL of the CloudFormation template in Amazon S3.
+         * 
+         */
     private final @Nullable String templateUrl;
-    /**
-     * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
-     * 
-     */
+        /**
+         * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ProductProvisioningArtifactParameters {
     }
 
     /**
-     * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
+     * @return Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
+     * @return Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
      * 
-    */
+     */
     public Optional<Boolean> disableTemplateValidation() {
         return Optional.ofNullable(this.disableTemplateValidation);
     }
     /**
-     * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
+     * @return Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
+     * @return Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
      * 
-    */
+     */
     public Optional<String> templatePhysicalId() {
         return Optional.ofNullable(this.templatePhysicalId);
     }
     /**
-     * Template source as URL of the CloudFormation template in Amazon S3.
+     * @return Template source as URL of the CloudFormation template in Amazon S3.
      * 
-    */
+     */
     public Optional<String> templateUrl() {
         return Optional.ofNullable(this.templateUrl);
     }
     /**
-     * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
+     * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecification {
-    /**
-     * The dimensions of the metric.
-     * 
-     */
+        /**
+         * @return The dimensions of the metric.
+         * 
+         */
     private final @Nullable Map<String,String> dimensions;
-    /**
-     * The name of the metric.
-     * 
-     */
+        /**
+         * @return The name of the metric.
+         * 
+         */
     private final String metricName;
-    /**
-     * The namespace of the metric.
-     * 
-     */
+        /**
+         * @return The namespace of the metric.
+         * 
+         */
     private final String namespace;
-    /**
-     * The statistic of the metric. Currently, the value must always be `Sum`.
-     * 
-     */
+        /**
+         * @return The statistic of the metric. Currently, the value must always be `Sum`.
+         * 
+         */
     private final String statistic;
-    /**
-     * The unit of the metric.
-     * 
-     */
+        /**
+         * @return The unit of the metric.
+         * 
+         */
     private final @Nullable String unit;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
     }
 
     /**
-     * The dimensions of the metric.
+     * @return The dimensions of the metric.
      * 
-    */
+     */
     public Map<String,String> dimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
-     * The name of the metric.
+     * @return The name of the metric.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * The namespace of the metric.
+     * @return The namespace of the metric.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
     /**
-     * The statistic of the metric. Currently, the value must always be `Sum`.
+     * @return The statistic of the metric. Currently, the value must always be `Sum`.
      * 
-    */
+     */
     public String statistic() {
         return this.statistic;
     }
     /**
-     * The unit of the metric.
+     * @return The unit of the metric.
      * 
-    */
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }

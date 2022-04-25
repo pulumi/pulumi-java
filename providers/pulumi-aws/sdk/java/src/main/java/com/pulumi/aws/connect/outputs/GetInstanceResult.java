@@ -10,63 +10,63 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceResult {
-    /**
-     * The Amazon Resource Name (ARN) of the instance.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the instance.
+         * 
+         */
     private final String arn;
     private final Boolean autoResolveBestVoicesEnabled;
-    /**
-     * Specifies Whether contact flow logs are enabled.
-     * 
-     */
+        /**
+         * @return Specifies Whether contact flow logs are enabled.
+         * 
+         */
     private final Boolean contactFlowLogsEnabled;
-    /**
-     * Specifies Whether contact lens is enabled.
-     * 
-     */
+        /**
+         * @return Specifies Whether contact lens is enabled.
+         * 
+         */
     private final Boolean contactLensEnabled;
-    /**
-     * Specifies When the instance was created.
-     * 
-     */
+        /**
+         * @return Specifies When the instance was created.
+         * 
+         */
     private final String createdTime;
-    /**
-     * Specifies Whether early media for outbound calls is enabled .
-     * 
-     */
+        /**
+         * @return Specifies Whether early media for outbound calls is enabled .
+         * 
+         */
     private final Boolean earlyMediaEnabled;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Specifies The identity management type attached to the instance.
-     * 
-     */
+        /**
+         * @return Specifies The identity management type attached to the instance.
+         * 
+         */
     private final String identityManagementType;
-    /**
-     * Specifies Whether inbound calls are enabled.
-     * 
-     */
+        /**
+         * @return Specifies Whether inbound calls are enabled.
+         * 
+         */
     private final Boolean inboundCallsEnabled;
     private final String instanceAlias;
     private final String instanceId;
-    /**
-     * Specifies Whether outbound calls are enabled.
-     * 
-     */
+        /**
+         * @return Specifies Whether outbound calls are enabled.
+         * 
+         */
     private final Boolean outboundCallsEnabled;
-    /**
-     * The service role of the instance.
-     * 
-     */
+        /**
+         * @return The service role of the instance.
+         * 
+         */
     private final String serviceRole;
-    /**
-     * Specifies The state of the instance.
-     * 
-     */
+        /**
+         * @return Specifies The state of the instance.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -102,9 +102,9 @@ public final class GetInstanceResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the instance.
+     * @return The Amazon Resource Name (ARN) of the instance.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -112,51 +112,51 @@ public final class GetInstanceResult {
         return this.autoResolveBestVoicesEnabled;
     }
     /**
-     * Specifies Whether contact flow logs are enabled.
+     * @return Specifies Whether contact flow logs are enabled.
      * 
-    */
+     */
     public Boolean contactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled;
     }
     /**
-     * Specifies Whether contact lens is enabled.
+     * @return Specifies Whether contact lens is enabled.
      * 
-    */
+     */
     public Boolean contactLensEnabled() {
         return this.contactLensEnabled;
     }
     /**
-     * Specifies When the instance was created.
+     * @return Specifies When the instance was created.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Specifies Whether early media for outbound calls is enabled .
+     * @return Specifies Whether early media for outbound calls is enabled .
      * 
-    */
+     */
     public Boolean earlyMediaEnabled() {
         return this.earlyMediaEnabled;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies The identity management type attached to the instance.
+     * @return Specifies The identity management type attached to the instance.
      * 
-    */
+     */
     public String identityManagementType() {
         return this.identityManagementType;
     }
     /**
-     * Specifies Whether inbound calls are enabled.
+     * @return Specifies Whether inbound calls are enabled.
      * 
-    */
+     */
     public Boolean inboundCallsEnabled() {
         return this.inboundCallsEnabled;
     }
@@ -167,23 +167,23 @@ public final class GetInstanceResult {
         return this.instanceId;
     }
     /**
-     * Specifies Whether outbound calls are enabled.
+     * @return Specifies Whether outbound calls are enabled.
      * 
-    */
+     */
     public Boolean outboundCallsEnabled() {
         return this.outboundCallsEnabled;
     }
     /**
-     * The service role of the instance.
+     * @return The service role of the instance.
      * 
-    */
+     */
     public String serviceRole() {
         return this.serviceRole;
     }
     /**
-     * Specifies The state of the instance.
+     * @return Specifies The state of the instance.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

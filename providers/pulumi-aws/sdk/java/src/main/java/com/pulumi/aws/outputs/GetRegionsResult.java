@@ -16,15 +16,15 @@ import javax.annotation.Nullable;
 public final class GetRegionsResult {
     private final @Nullable Boolean allRegions;
     private final @Nullable List<GetRegionsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Names of regions that meets the criteria.
-     * 
-     */
+        /**
+         * @return Names of regions that meets the criteria.
+         * 
+         */
     private final List<String> names;
 
     @CustomType.Constructor
@@ -46,16 +46,16 @@ public final class GetRegionsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Names of regions that meets the criteria.
+     * @return Names of regions that meets the criteria.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

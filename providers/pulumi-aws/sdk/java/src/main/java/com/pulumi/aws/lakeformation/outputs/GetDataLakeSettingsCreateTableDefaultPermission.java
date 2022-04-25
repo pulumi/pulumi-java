@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDataLakeSettingsCreateTableDefaultPermission {
-    /**
-     * List of permissions granted to the principal.
-     * 
-     */
+        /**
+         * @return List of permissions granted to the principal.
+         * 
+         */
     private final List<String> permissions;
-    /**
-     * Principal who is granted permissions.
-     * 
-     */
+        /**
+         * @return Principal who is granted permissions.
+         * 
+         */
     private final String principal;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission {
     }
 
     /**
-     * List of permissions granted to the principal.
+     * @return List of permissions granted to the principal.
      * 
-    */
+     */
     public List<String> permissions() {
         return this.permissions;
     }
     /**
-     * Principal who is granted permissions.
+     * @return Principal who is granted permissions.
      * 
-    */
+     */
     public String principal() {
         return this.principal;
     }

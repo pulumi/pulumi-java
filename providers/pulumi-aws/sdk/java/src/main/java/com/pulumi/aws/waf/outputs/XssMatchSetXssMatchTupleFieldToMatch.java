@@ -11,19 +11,19 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class XssMatchSetXssMatchTupleFieldToMatch {
-    /**
-     * When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
-     * If `type` is any other value, omit this field.
-     * 
-     */
+        /**
+         * @return When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
+         * If `type` is any other value, omit this field.
+         * 
+         */
     private final @Nullable String data;
-    /**
-     * The part of the web request that you want AWS WAF to search for a specified string.
-     * e.g., `HEADER`, `METHOD` or `BODY`.
-     * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
-     * for all supported values.
-     * 
-     */
+        /**
+         * @return The part of the web request that you want AWS WAF to search for a specified string.
+         * e.g., `HEADER`, `METHOD` or `BODY`.
+         * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
+         * for all supported values.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -35,20 +35,20 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
     }
 
     /**
-     * When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
+     * @return When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
      * If `type` is any other value, omit this field.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * The part of the web request that you want AWS WAF to search for a specified string.
+     * @return The part of the web request that you want AWS WAF to search for a specified string.
      * e.g., `HEADER`, `METHOD` or `BODY`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
      * for all supported values.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

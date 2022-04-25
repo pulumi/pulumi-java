@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkspaceWorkspaceProperties {
-    /**
-     * The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
-     * 
-     */
+        /**
+         * @return The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
+         * 
+         */
     private final @Nullable String computeTypeName;
-    /**
-     * The size of the root volume.
-     * 
-     */
+        /**
+         * @return The size of the root volume.
+         * 
+         */
     private final @Nullable Integer rootVolumeSizeGib;
-    /**
-     * The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
-     * 
-     */
+        /**
+         * @return The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
+         * 
+         */
     private final @Nullable String runningMode;
-    /**
-     * The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
-     * 
-     */
+        /**
+         * @return The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
+         * 
+         */
     private final @Nullable Integer runningModeAutoStopTimeoutInMinutes;
-    /**
-     * The size of the user storage.
-     * 
-     */
+        /**
+         * @return The size of the user storage.
+         * 
+         */
     private final @Nullable Integer userVolumeSizeGib;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class WorkspaceWorkspaceProperties {
     }
 
     /**
-     * The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
+     * @return The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
      * 
-    */
+     */
     public Optional<String> computeTypeName() {
         return Optional.ofNullable(this.computeTypeName);
     }
     /**
-     * The size of the root volume.
+     * @return The size of the root volume.
      * 
-    */
+     */
     public Optional<Integer> rootVolumeSizeGib() {
         return Optional.ofNullable(this.rootVolumeSizeGib);
     }
     /**
-     * The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
+     * @return The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
      * 
-    */
+     */
     public Optional<String> runningMode() {
         return Optional.ofNullable(this.runningMode);
     }
     /**
-     * The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
+     * @return The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
      * 
-    */
+     */
     public Optional<Integer> runningModeAutoStopTimeoutInMinutes() {
         return Optional.ofNullable(this.runningModeAutoStopTimeoutInMinutes);
     }
     /**
-     * The size of the user storage.
+     * @return The size of the user storage.
      * 
-    */
+     */
     public Optional<Integer> userVolumeSizeGib() {
         return Optional.ofNullable(this.userVolumeSizeGib);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSiteResult {
-    /**
-     * AWS Account identifier.
-     * 
-     */
+        /**
+         * @return AWS Account identifier.
+         * 
+         */
     private final String accountId;
-    /**
-     * Description.
-     * 
-     */
+        /**
+         * @return Description.
+         * 
+         */
     private final String description;
     private final String id;
     private final String name;
@@ -35,16 +35,16 @@ public final class GetSiteResult {
     }
 
     /**
-     * AWS Account identifier.
+     * @return AWS Account identifier.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * Description.
+     * @return Description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }

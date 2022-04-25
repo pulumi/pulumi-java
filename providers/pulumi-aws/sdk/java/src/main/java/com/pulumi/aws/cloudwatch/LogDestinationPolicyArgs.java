@@ -23,6 +23,10 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="accessPolicy", required=true)
     private Output<String> accessPolicy;
 
+    /**
+     * @return The policy document. This is a JSON formatted string.
+     * 
+     */
     public Output<String> accessPolicy() {
         return this.accessPolicy;
     }
@@ -34,6 +38,10 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="destinationName", required=true)
     private Output<String> destinationName;
 
+    /**
+     * @return A name for the subscription filter
+     * 
+     */
     public Output<String> destinationName() {
         return this.destinationName;
     }
@@ -45,6 +53,10 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="forceUpdate")
     private @Nullable Output<Boolean> forceUpdate;
 
+    /**
+     * @return Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
+     * 
+     */
     public Optional<Output<Boolean>> forceUpdate() {
         return Optional.ofNullable(this.forceUpdate);
     }
@@ -75,29 +87,65 @@ public final class LogDestinationPolicyArgs extends com.pulumi.resources.Resourc
             $ = new LogDestinationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicy The policy document. This is a JSON formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicy(Output<String> accessPolicy) {
             $.accessPolicy = accessPolicy;
             return this;
         }
 
+        /**
+         * @param accessPolicy The policy document. This is a JSON formatted string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicy(String accessPolicy) {
             return accessPolicy(Output.of(accessPolicy));
         }
 
+        /**
+         * @param destinationName A name for the subscription filter
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(Output<String> destinationName) {
             $.destinationName = destinationName;
             return this;
         }
 
+        /**
+         * @param destinationName A name for the subscription filter
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationName(String destinationName) {
             return destinationName(Output.of(destinationName));
         }
 
+        /**
+         * @param forceUpdate Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             $.forceUpdate = forceUpdate;
             return this;
         }
 
+        /**
+         * @param forceUpdate Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdate(Boolean forceUpdate) {
             return forceUpdate(Output.of(forceUpdate));
         }

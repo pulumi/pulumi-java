@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PipelineStage {
-    /**
-     * The action(s) to include in the stage. Defined as an `action` block below
-     * 
-     */
+        /**
+         * @return The action(s) to include in the stage. Defined as an `action` block below
+         * 
+         */
     private final List<PipelineStageAction> actions;
-    /**
-     * The name of the stage.
-     * 
-     */
+        /**
+         * @return The name of the stage.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PipelineStage {
     }
 
     /**
-     * The action(s) to include in the stage. Defined as an `action` block below
+     * @return The action(s) to include in the stage. Defined as an `action` block below
      * 
-    */
+     */
     public List<PipelineStageAction> actions() {
         return this.actions;
     }
     /**
-     * The name of the stage.
+     * @return The name of the stage.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

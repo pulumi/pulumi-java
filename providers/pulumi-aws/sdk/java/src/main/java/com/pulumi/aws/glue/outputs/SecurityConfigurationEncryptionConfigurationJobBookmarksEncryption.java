@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption {
-    /**
-     * Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
-     * 
-     */
+        /**
+         * @return Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
+         * 
+         */
     private final @Nullable String jobBookmarksEncryptionMode;
-    /**
-     * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+         * 
+         */
     private final @Nullable String kmsKeyArn;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     }
 
     /**
-     * Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
+     * @return Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
      * 
-    */
+     */
     public Optional<String> jobBookmarksEncryptionMode() {
         return Optional.ofNullable(this.jobBookmarksEncryptionMode);
     }
     /**
-     * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
+     * @return Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

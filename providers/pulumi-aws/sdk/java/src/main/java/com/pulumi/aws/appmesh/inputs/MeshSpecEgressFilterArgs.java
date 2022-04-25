@@ -23,6 +23,11 @@ public final class MeshSpecEgressFilterArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The egress filter type. By default, the type is `DROP_ALL`.
+     * Valid values are `ALLOW_ALL` and `DROP_ALL`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -51,11 +56,25 @@ public final class MeshSpecEgressFilterArgs extends com.pulumi.resources.Resourc
             $ = new MeshSpecEgressFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The egress filter type. By default, the type is `DROP_ALL`.
+         * Valid values are `ALLOW_ALL` and `DROP_ALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The egress filter type. By default, the type is `DROP_ALL`.
+         * Valid values are `ALLOW_ALL` and `DROP_ALL`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

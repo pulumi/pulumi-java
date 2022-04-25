@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AppImageConfigKernelGatewayImageConfig {
-    /**
-     * The URL where the Git repository is located. See File System Config details below.
-     * 
-     */
+        /**
+         * @return The URL where the Git repository is located. See File System Config details below.
+         * 
+         */
     private final @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig;
-    /**
-     * The default branch for the Git repository. See Kernel Spec details below.
-     * 
-     */
+        /**
+         * @return The default branch for the Git repository. See Kernel Spec details below.
+         * 
+         */
     private final AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AppImageConfigKernelGatewayImageConfig {
     }
 
     /**
-     * The URL where the Git repository is located. See File System Config details below.
+     * @return The URL where the Git repository is located. See File System Config details below.
      * 
-    */
+     */
     public Optional<AppImageConfigKernelGatewayImageConfigFileSystemConfig> fileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
     /**
-     * The default branch for the Git repository. See Kernel Spec details below.
+     * @return The default branch for the Git repository. See Kernel Spec details below.
      * 
-    */
+     */
     public AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec() {
         return this.kernelSpec;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications {
-    /**
-     * Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
-     * 
-     */
+        /**
+         * @return Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
     }
 
     /**
-     * Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
+     * @return Whether the existing objects should be replicated. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

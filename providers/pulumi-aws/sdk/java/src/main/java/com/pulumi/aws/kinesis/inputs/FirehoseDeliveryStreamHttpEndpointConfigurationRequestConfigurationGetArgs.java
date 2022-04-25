@@ -24,6 +24,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="commonAttributes")
     private @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes;
 
+    /**
+     * @return Describes the metadata sent to the HTTP endpoint destination. More details are given below
+     * 
+     */
     public Optional<Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>>> commonAttributes() {
         return Optional.ofNullable(this.commonAttributes);
     }
@@ -35,6 +39,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="contentEncoding")
     private @Nullable Output<String> contentEncoding;
 
+    /**
+     * @return Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+     * 
+     */
     public Optional<Output<String>> contentEncoding() {
         return Optional.ofNullable(this.contentEncoding);
     }
@@ -64,24 +72,54 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
             $ = new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonAttributes(@Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes) {
             $.commonAttributes = commonAttributes;
             return this;
         }
 
+        /**
+         * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonAttributes(List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs> commonAttributes) {
             return commonAttributes(Output.of(commonAttributes));
         }
 
+        /**
+         * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination. More details are given below
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonAttributes(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs... commonAttributes) {
             return commonAttributes(List.of(commonAttributes));
         }
 
+        /**
+         * @param contentEncoding Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             $.contentEncoding = contentEncoding;
             return this;
         }
 
+        /**
+         * @param contentEncoding Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(String contentEncoding) {
             return contentEncoding(Output.of(contentEncoding));
         }

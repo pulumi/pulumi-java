@@ -21,6 +21,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="dnsSuffix")
     private @Nullable String dnsSuffix;
 
+    /**
+     * @return The DNS suffix to use in the registry path. If not specified, the AWS provider sets it to the DNS suffix for the current region.
+     * 
+     */
     public Optional<String> dnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
@@ -32,6 +36,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="imageTag")
     private @Nullable String imageTag;
 
+    /**
+     * @return The image tag for the Docker image. If not specified, the AWS provider sets the value to `1`, which for many repositories indicates the latest version. Some repositories, such as XGBoost, do not support `1` or `latest` and specific version must be used.
+     * 
+     */
     public Optional<String> imageTag() {
         return Optional.ofNullable(this.imageTag);
     }
@@ -43,6 +51,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The region to use in the registry path. If not specified, the AWS provider sets it to the current region.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -54,6 +66,10 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="repositoryName", required=true)
     private String repositoryName;
 
+    /**
+     * @return The name of the repository, which is generally the algorithm or library. Values include `blazingtext`, `factorization-machines`, `forecasting-deepar`, `image-classification`, `ipinsights`, `kmeans`, `knn`, `lda`, `linear-learner`, `mxnet-inference-eia`, `mxnet-inference`, `mxnet-training`, `ntm`, `object-detection`, `object2vec`, `pca`, `pytorch-inference-eia`, `pytorch-inference`, `pytorch-training`, `randomcutforest`, `sagemaker-scikit-learn`, `sagemaker-sparkml-serving`, `sagemaker-xgboost`, `semantic-segmentation`, `seq2seq`, `tensorflow-inference-eia`, `tensorflow-inference`, `tensorflow-training`, `huggingface-tensorflow-training`, `huggingface-tensorflow-inference`, `huggingface-pytorch-training`, and `huggingface-pytorch-inference`.
+     * 
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
@@ -85,21 +101,45 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPrebuiltEcrImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSuffix The DNS suffix to use in the registry path. If not specified, the AWS provider sets it to the DNS suffix for the current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
             $.dnsSuffix = dnsSuffix;
             return this;
         }
 
+        /**
+         * @param imageTag The image tag for the Docker image. If not specified, the AWS provider sets the value to `1`, which for many repositories indicates the latest version. Some repositories, such as XGBoost, do not support `1` or `latest` and specific version must be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTag(@Nullable String imageTag) {
             $.imageTag = imageTag;
             return this;
         }
 
+        /**
+         * @param region The region to use in the registry path. If not specified, the AWS provider sets it to the current region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param repositoryName The name of the repository, which is generally the algorithm or library. Values include `blazingtext`, `factorization-machines`, `forecasting-deepar`, `image-classification`, `ipinsights`, `kmeans`, `knn`, `lda`, `linear-learner`, `mxnet-inference-eia`, `mxnet-inference`, `mxnet-training`, `ntm`, `object-detection`, `object2vec`, `pca`, `pytorch-inference-eia`, `pytorch-inference`, `pytorch-training`, `randomcutforest`, `sagemaker-scikit-learn`, `sagemaker-sparkml-serving`, `sagemaker-xgboost`, `semantic-segmentation`, `seq2seq`, `tensorflow-inference-eia`, `tensorflow-inference`, `tensorflow-training`, `huggingface-tensorflow-training`, `huggingface-tensorflow-inference`, `huggingface-pytorch-training`, and `huggingface-pytorch-inference`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             $.repositoryName = repositoryName;
             return this;

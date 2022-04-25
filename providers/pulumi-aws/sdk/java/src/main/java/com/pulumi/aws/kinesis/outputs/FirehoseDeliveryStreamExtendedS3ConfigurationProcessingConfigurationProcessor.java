@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor {
-    /**
-     * Array of processor parameters. More details are given below
-     * 
-     */
+        /**
+         * @return Array of processor parameters. More details are given below
+         * 
+         */
     private final @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters;
-    /**
-     * The type of processor. Valid Values: `Lambda`
-     * 
-     */
+        /**
+         * @return The type of processor. Valid Values: `Lambda`
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     }
 
     /**
-     * Array of processor parameters. More details are given below
+     * @return Array of processor parameters. More details are given below
      * 
-    */
+     */
     public List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The type of processor. Valid Values: `Lambda`
+     * @return The type of processor. Valid Values: `Lambda`
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

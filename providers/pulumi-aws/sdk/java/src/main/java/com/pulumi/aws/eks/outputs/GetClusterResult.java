@@ -15,76 +15,76 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The Amazon Resource Name (ARN) of the cluster.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the cluster.
+         * 
+         */
     private final String arn;
-    /**
-     * Nested attribute containing `certificate-authority-data` for your cluster.
-     * 
-     */
+        /**
+         * @return Nested attribute containing `certificate-authority-data` for your cluster.
+         * 
+         */
     private final GetClusterCertificateAuthority certificateAuthority;
-    /**
-     * The Unix epoch time stamp in seconds for when the cluster was created.
-     * 
-     */
+        /**
+         * @return The Unix epoch time stamp in seconds for when the cluster was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * The enabled control plane logs.
-     * 
-     */
+        /**
+         * @return The enabled control plane logs.
+         * 
+         */
     private final List<String> enabledClusterLogTypes;
-    /**
-     * The endpoint for your Kubernetes API server.
-     * 
-     */
+        /**
+         * @return The endpoint for your Kubernetes API server.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
-     * 
-     */
+        /**
+         * @return Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
+         * 
+         */
     private final List<GetClusterIdentity> identities;
-    /**
-     * Nested list containing Kubernetes Network Configuration.
-     * 
-     */
+        /**
+         * @return Nested list containing Kubernetes Network Configuration.
+         * 
+         */
     private final List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs;
     private final String name;
-    /**
-     * The platform version for the cluster.
-     * 
-     */
+        /**
+         * @return The platform version for the cluster.
+         * 
+         */
     private final String platformVersion;
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+         * 
+         */
     private final String roleArn;
-    /**
-     * The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
-     * 
-     */
+        /**
+         * @return The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+         * 
+         */
     private final String status;
-    /**
-     * Key-value map of resource tags.
-     * 
-     */
+        /**
+         * @return Key-value map of resource tags.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The Kubernetes server version for the cluster.
-     * 
-     */
+        /**
+         * @return The Kubernetes server version for the cluster.
+         * 
+         */
     private final String version;
-    /**
-     * Nested list containing VPC configuration for the cluster.
-     * 
-     */
+        /**
+         * @return Nested list containing VPC configuration for the cluster.
+         * 
+         */
     private final GetClusterVpcConfig vpcConfig;
 
     @CustomType.Constructor
@@ -122,58 +122,58 @@ public final class GetClusterResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the cluster.
+     * @return The Amazon Resource Name (ARN) of the cluster.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Nested attribute containing `certificate-authority-data` for your cluster.
+     * @return Nested attribute containing `certificate-authority-data` for your cluster.
      * 
-    */
+     */
     public GetClusterCertificateAuthority certificateAuthority() {
         return this.certificateAuthority;
     }
     /**
-     * The Unix epoch time stamp in seconds for when the cluster was created.
+     * @return The Unix epoch time stamp in seconds for when the cluster was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The enabled control plane logs.
+     * @return The enabled control plane logs.
      * 
-    */
+     */
     public List<String> enabledClusterLogTypes() {
         return this.enabledClusterLogTypes;
     }
     /**
-     * The endpoint for your Kubernetes API server.
+     * @return The endpoint for your Kubernetes API server.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
+     * @return Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
      * 
-    */
+     */
     public List<GetClusterIdentity> identities() {
         return this.identities;
     }
     /**
-     * Nested list containing Kubernetes Network Configuration.
+     * @return Nested list containing Kubernetes Network Configuration.
      * 
-    */
+     */
     public List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs() {
         return this.kubernetesNetworkConfigs;
     }
@@ -181,44 +181,44 @@ public final class GetClusterResult {
         return this.name;
     }
     /**
-     * The platform version for the cluster.
+     * @return The platform version for the cluster.
      * 
-    */
+     */
     public String platformVersion() {
         return this.platformVersion;
     }
     /**
-     * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+     * @return The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+     * @return The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Key-value map of resource tags.
+     * @return Key-value map of resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The Kubernetes server version for the cluster.
+     * @return The Kubernetes server version for the cluster.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * Nested list containing VPC configuration for the cluster.
+     * @return Nested list containing VPC configuration for the cluster.
      * 
-    */
+     */
     public GetClusterVpcConfig vpcConfig() {
         return this.vpcConfig;
     }

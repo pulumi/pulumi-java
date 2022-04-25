@@ -15,105 +15,105 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLaunchConfigurationResult {
-    /**
-     * The Amazon Resource Name of the launch configuration.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name of the launch configuration.
+         * 
+         */
     private final String arn;
-    /**
-     * Whether a Public IP address is associated with the instance.
-     * 
-     */
+        /**
+         * @return Whether a Public IP address is associated with the instance.
+         * 
+         */
     private final Boolean associatePublicIpAddress;
-    /**
-     * The EBS Block Devices attached to the instance.
-     * 
-     */
+        /**
+         * @return The EBS Block Devices attached to the instance.
+         * 
+         */
     private final List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices;
-    /**
-     * Whether the launched EC2 instance will be EBS-optimized.
-     * 
-     */
+        /**
+         * @return Whether the launched EC2 instance will be EBS-optimized.
+         * 
+         */
     private final Boolean ebsOptimized;
-    /**
-     * Whether Detailed Monitoring is Enabled.
-     * 
-     */
+        /**
+         * @return Whether Detailed Monitoring is Enabled.
+         * 
+         */
     private final Boolean enableMonitoring;
-    /**
-     * The Ephemeral volumes on the instance.
-     * 
-     */
+        /**
+         * @return The Ephemeral volumes on the instance.
+         * 
+         */
     private final List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices;
-    /**
-     * The IAM Instance Profile to associate with launched instances.
-     * 
-     */
+        /**
+         * @return The IAM Instance Profile to associate with launched instances.
+         * 
+         */
     private final String iamInstanceProfile;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The EC2 Image ID of the instance.
-     * 
-     */
+        /**
+         * @return The EC2 Image ID of the instance.
+         * 
+         */
     private final String imageId;
-    /**
-     * The Instance Type of the instance to launch.
-     * 
-     */
+        /**
+         * @return The Instance Type of the instance to launch.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The Key Name that should be used for the instance.
-     * 
-     */
+        /**
+         * @return The Key Name that should be used for the instance.
+         * 
+         */
     private final String keyName;
-    /**
-     * The metadata options for the instance.
-     * 
-     */
+        /**
+         * @return The metadata options for the instance.
+         * 
+         */
     private final List<GetLaunchConfigurationMetadataOption> metadataOptions;
-    /**
-     * The Name of the launch configuration.
-     * 
-     */
+        /**
+         * @return The Name of the launch configuration.
+         * 
+         */
     private final String name;
-    /**
-     * The Tenancy of the instance.
-     * 
-     */
+        /**
+         * @return The Tenancy of the instance.
+         * 
+         */
     private final String placementTenancy;
-    /**
-     * The Root Block Device of the instance.
-     * 
-     */
+        /**
+         * @return The Root Block Device of the instance.
+         * 
+         */
     private final List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices;
-    /**
-     * A list of associated Security Group IDS.
-     * 
-     */
+        /**
+         * @return A list of associated Security Group IDS.
+         * 
+         */
     private final List<String> securityGroups;
-    /**
-     * The Price to use for reserving Spot instances.
-     * 
-     */
+        /**
+         * @return The Price to use for reserving Spot instances.
+         * 
+         */
     private final String spotPrice;
-    /**
-     * The User Data of the instance.
-     * 
-     */
+        /**
+         * @return The User Data of the instance.
+         * 
+         */
     private final String userData;
-    /**
-     * The ID of a ClassicLink-enabled VPC.
-     * 
-     */
+        /**
+         * @return The ID of a ClassicLink-enabled VPC.
+         * 
+         */
     private final String vpcClassicLinkId;
-    /**
-     * The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
-     * 
-     */
+        /**
+         * @return The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
+         * 
+         */
     private final List<String> vpcClassicLinkSecurityGroups;
 
     @CustomType.Constructor
@@ -161,142 +161,142 @@ public final class GetLaunchConfigurationResult {
     }
 
     /**
-     * The Amazon Resource Name of the launch configuration.
+     * @return The Amazon Resource Name of the launch configuration.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Whether a Public IP address is associated with the instance.
+     * @return Whether a Public IP address is associated with the instance.
      * 
-    */
+     */
     public Boolean associatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     /**
-     * The EBS Block Devices attached to the instance.
+     * @return The EBS Block Devices attached to the instance.
      * 
-    */
+     */
     public List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
-     * Whether the launched EC2 instance will be EBS-optimized.
+     * @return Whether the launched EC2 instance will be EBS-optimized.
      * 
-    */
+     */
     public Boolean ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
-     * Whether Detailed Monitoring is Enabled.
+     * @return Whether Detailed Monitoring is Enabled.
      * 
-    */
+     */
     public Boolean enableMonitoring() {
         return this.enableMonitoring;
     }
     /**
-     * The Ephemeral volumes on the instance.
+     * @return The Ephemeral volumes on the instance.
      * 
-    */
+     */
     public List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
-     * The IAM Instance Profile to associate with launched instances.
+     * @return The IAM Instance Profile to associate with launched instances.
      * 
-    */
+     */
     public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The EC2 Image ID of the instance.
+     * @return The EC2 Image ID of the instance.
      * 
-    */
+     */
     public String imageId() {
         return this.imageId;
     }
     /**
-     * The Instance Type of the instance to launch.
+     * @return The Instance Type of the instance to launch.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The Key Name that should be used for the instance.
+     * @return The Key Name that should be used for the instance.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The metadata options for the instance.
+     * @return The metadata options for the instance.
      * 
-    */
+     */
     public List<GetLaunchConfigurationMetadataOption> metadataOptions() {
         return this.metadataOptions;
     }
     /**
-     * The Name of the launch configuration.
+     * @return The Name of the launch configuration.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Tenancy of the instance.
+     * @return The Tenancy of the instance.
      * 
-    */
+     */
     public String placementTenancy() {
         return this.placementTenancy;
     }
     /**
-     * The Root Block Device of the instance.
+     * @return The Root Block Device of the instance.
      * 
-    */
+     */
     public List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices() {
         return this.rootBlockDevices;
     }
     /**
-     * A list of associated Security Group IDS.
+     * @return A list of associated Security Group IDS.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups;
     }
     /**
-     * The Price to use for reserving Spot instances.
+     * @return The Price to use for reserving Spot instances.
      * 
-    */
+     */
     public String spotPrice() {
         return this.spotPrice;
     }
     /**
-     * The User Data of the instance.
+     * @return The User Data of the instance.
      * 
-    */
+     */
     public String userData() {
         return this.userData;
     }
     /**
-     * The ID of a ClassicLink-enabled VPC.
+     * @return The ID of a ClassicLink-enabled VPC.
      * 
-    */
+     */
     public String vpcClassicLinkId() {
         return this.vpcClassicLinkId;
     }
     /**
-     * The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
+     * @return The IDs of one or more Security Groups for the specified ClassicLink-enabled VPC.
      * 
-    */
+     */
     public List<String> vpcClassicLinkSecurityGroups() {
         return this.vpcClassicLinkSecurityGroups;
     }

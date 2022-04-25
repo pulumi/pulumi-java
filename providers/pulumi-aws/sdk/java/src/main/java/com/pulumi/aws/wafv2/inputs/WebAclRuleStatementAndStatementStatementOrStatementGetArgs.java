@@ -21,6 +21,10 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementGetArgs ex
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> statements;
 
+    /**
+     * @return The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementGetArgs ex
             $ = new WebAclRuleStatementAndStatementStatementOrStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementAndStatementStatementOrStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
         }

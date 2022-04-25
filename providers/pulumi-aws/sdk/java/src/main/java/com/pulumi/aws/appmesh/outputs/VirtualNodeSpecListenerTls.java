@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecListenerTls {
-    /**
-     * The listener&#39;s TLS certificate.
-     * 
-     */
+        /**
+         * @return The listener&#39;s TLS certificate.
+         * 
+         */
     private final VirtualNodeSpecListenerTlsCertificate certificate;
-    /**
-     * The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
-     * 
-     */
+        /**
+         * @return The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+         * 
+         */
     private final String mode;
-    /**
-     * The listener&#39;s Transport Layer Security (TLS) validation context.
-     * 
-     */
+        /**
+         * @return The listener&#39;s Transport Layer Security (TLS) validation context.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerTlsValidation validation;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class VirtualNodeSpecListenerTls {
     }
 
     /**
-     * The listener&#39;s TLS certificate.
+     * @return The listener&#39;s TLS certificate.
      * 
-    */
+     */
     public VirtualNodeSpecListenerTlsCertificate certificate() {
         return this.certificate;
     }
     /**
-     * The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+     * @return The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * The listener&#39;s Transport Layer Security (TLS) validation context.
+     * @return The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerTlsValidation> validation() {
         return Optional.ofNullable(this.validation);
     }

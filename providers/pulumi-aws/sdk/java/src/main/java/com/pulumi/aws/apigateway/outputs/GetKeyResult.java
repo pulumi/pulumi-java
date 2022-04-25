@@ -11,45 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetKeyResult {
-    /**
-     * The date and time when the API Key was created.
-     * 
-     */
+        /**
+         * @return The date and time when the API Key was created.
+         * 
+         */
     private final String createdDate;
-    /**
-     * The description of the API Key.
-     * 
-     */
+        /**
+         * @return The description of the API Key.
+         * 
+         */
     private final String description;
-    /**
-     * Specifies whether the API Key is enabled.
-     * 
-     */
+        /**
+         * @return Specifies whether the API Key is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Set to the ID of the API Key.
-     * 
-     */
+        /**
+         * @return Set to the ID of the API Key.
+         * 
+         */
     private final String id;
-    /**
-     * The date and time when the API Key was last updated.
-     * 
-     */
+        /**
+         * @return The date and time when the API Key was last updated.
+         * 
+         */
     private final String lastUpdatedDate;
-    /**
-     * Set to the name of the API Key.
-     * 
-     */
+        /**
+         * @return Set to the name of the API Key.
+         * 
+         */
     private final String name;
-    /**
-     * A map of tags for the resource.
-     * 
-     */
+        /**
+         * @return A map of tags for the resource.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Set to the value of the API Key.
-     * 
-     */
+        /**
+         * @return Set to the value of the API Key.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetKeyResult {
     }
 
     /**
-     * The date and time when the API Key was created.
+     * @return The date and time when the API Key was created.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The description of the API Key.
+     * @return The description of the API Key.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Specifies whether the API Key is enabled.
+     * @return Specifies whether the API Key is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Set to the ID of the API Key.
+     * @return Set to the ID of the API Key.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date and time when the API Key was last updated.
+     * @return The date and time when the API Key was last updated.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
-     * Set to the name of the API Key.
+     * @return Set to the name of the API Key.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Set to the value of the API Key.
+     * @return Set to the value of the API Key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

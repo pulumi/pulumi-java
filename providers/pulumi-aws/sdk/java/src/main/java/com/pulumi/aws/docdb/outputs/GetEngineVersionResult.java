@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetEngineVersionResult {
     private final @Nullable String engine;
-    /**
-     * The description of the database engine.
-     * 
-     */
+        /**
+         * @return The description of the database engine.
+         * 
+         */
     private final String engineDescription;
-    /**
-     * Set of log types that the database engine has available for export to CloudWatch Logs.
-     * 
-     */
+        /**
+         * @return Set of log types that the database engine has available for export to CloudWatch Logs.
+         * 
+         */
     private final List<String> exportableLogTypes;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String parameterGroupFamily;
     private final @Nullable List<String> preferredVersions;
-    /**
-     * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
-     * 
-     */
+        /**
+         * @return Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
+         * 
+         */
     private final Boolean supportsLogExportsToCloudwatch;
-    /**
-     * A set of engine versions that this database engine version can be upgraded to.
-     * 
-     */
+        /**
+         * @return A set of engine versions that this database engine version can be upgraded to.
+         * 
+         */
     private final List<String> validUpgradeTargets;
     private final String version;
-    /**
-     * The description of the database engine version.
-     * 
-     */
+        /**
+         * @return The description of the database engine version.
+         * 
+         */
     private final String versionDescription;
 
     @CustomType.Constructor
@@ -76,23 +76,23 @@ public final class GetEngineVersionResult {
         return Optional.ofNullable(this.engine);
     }
     /**
-     * The description of the database engine.
+     * @return The description of the database engine.
      * 
-    */
+     */
     public String engineDescription() {
         return this.engineDescription;
     }
     /**
-     * Set of log types that the database engine has available for export to CloudWatch Logs.
+     * @return Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
-    */
+     */
     public List<String> exportableLogTypes() {
         return this.exportableLogTypes;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -103,16 +103,16 @@ public final class GetEngineVersionResult {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
-     * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
+     * @return Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
-    */
+     */
     public Boolean supportsLogExportsToCloudwatch() {
         return this.supportsLogExportsToCloudwatch;
     }
     /**
-     * A set of engine versions that this database engine version can be upgraded to.
+     * @return A set of engine versions that this database engine version can be upgraded to.
      * 
-    */
+     */
     public List<String> validUpgradeTargets() {
         return this.validUpgradeTargets;
     }
@@ -120,9 +120,9 @@ public final class GetEngineVersionResult {
         return this.version;
     }
     /**
-     * The description of the database engine version.
+     * @return The description of the database engine version.
      * 
-    */
+     */
     public String versionDescription() {
         return this.versionDescription;
     }

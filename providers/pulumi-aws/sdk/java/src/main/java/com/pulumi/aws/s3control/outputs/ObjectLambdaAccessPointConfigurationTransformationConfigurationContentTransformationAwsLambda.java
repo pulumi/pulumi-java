@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda {
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the AWS Lambda function.
+         * 
+         */
     private final String functionArn;
-    /**
-     * Additional JSON that provides supplemental data to the Lambda function used to transform objects.
-     * 
-     */
+        /**
+         * @return Additional JSON that provides supplemental data to the Lambda function used to transform objects.
+         * 
+         */
     private final @Nullable String functionPayload;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Lambda function.
+     * @return The Amazon Resource Name (ARN) of the AWS Lambda function.
      * 
-    */
+     */
     public String functionArn() {
         return this.functionArn;
     }
     /**
-     * Additional JSON that provides supplemental data to the Lambda function used to transform objects.
+     * @return Additional JSON that provides supplemental data to the Lambda function used to transform objects.
      * 
-    */
+     */
     public Optional<String> functionPayload() {
         return Optional.ofNullable(this.functionPayload);
     }

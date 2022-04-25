@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainSamlOptionsSamlOptions {
-    /**
-     * Whether SAML authentication is enabled.
-     * 
-     */
+        /**
+         * @return Whether SAML authentication is enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Information from your identity provider.
-     * 
-     */
+        /**
+         * @return Information from your identity provider.
+         * 
+         */
     private final @Nullable DomainSamlOptionsSamlOptionsIdp idp;
-    /**
-     * This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
-     * 
-     */
+        /**
+         * @return This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
+         * 
+         */
     private final @Nullable String masterBackendRole;
-    /**
-     * This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
-     * 
-     */
+        /**
+         * @return This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
+         * 
+         */
     private final @Nullable String masterUserName;
-    /**
-     * Element of the SAML assertion to use for backend roles. Default is roles.
-     * 
-     */
+        /**
+         * @return Element of the SAML assertion to use for backend roles. Default is roles.
+         * 
+         */
     private final @Nullable String rolesKey;
-    /**
-     * Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
-     * 
-     */
+        /**
+         * @return Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
+         * 
+         */
     private final @Nullable Integer sessionTimeoutMinutes;
-    /**
-     * Element of the SAML assertion to use for username. Default is NameID.
-     * 
-     */
+        /**
+         * @return Element of the SAML assertion to use for username. Default is NameID.
+         * 
+         */
     private final @Nullable String subjectKey;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class DomainSamlOptionsSamlOptions {
     }
 
     /**
-     * Whether SAML authentication is enabled.
+     * @return Whether SAML authentication is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Information from your identity provider.
+     * @return Information from your identity provider.
      * 
-    */
+     */
     public Optional<DomainSamlOptionsSamlOptionsIdp> idp() {
         return Optional.ofNullable(this.idp);
     }
     /**
-     * This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
+     * @return This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
-    */
+     */
     public Optional<String> masterBackendRole() {
         return Optional.ofNullable(this.masterBackendRole);
     }
     /**
-     * This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
+     * @return This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
-    */
+     */
     public Optional<String> masterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
     /**
-     * Element of the SAML assertion to use for backend roles. Default is roles.
+     * @return Element of the SAML assertion to use for backend roles. Default is roles.
      * 
-    */
+     */
     public Optional<String> rolesKey() {
         return Optional.ofNullable(this.rolesKey);
     }
     /**
-     * Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
+     * @return Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
      * 
-    */
+     */
     public Optional<Integer> sessionTimeoutMinutes() {
         return Optional.ofNullable(this.sessionTimeoutMinutes);
     }
     /**
-     * Element of the SAML assertion to use for username. Default is NameID.
+     * @return Element of the SAML assertion to use for username. Default is NameID.
      * 
-    */
+     */
     public Optional<String> subjectKey() {
         return Optional.ofNullable(this.subjectKey);
     }

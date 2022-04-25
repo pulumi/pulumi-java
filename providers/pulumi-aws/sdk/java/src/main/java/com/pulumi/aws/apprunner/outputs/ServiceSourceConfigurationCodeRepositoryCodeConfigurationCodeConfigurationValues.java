@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues {
-    /**
-     * The command App Runner runs to build your application.
-     * 
-     */
+        /**
+         * @return The command App Runner runs to build your application.
+         * 
+         */
     private final @Nullable String buildCommand;
-    /**
-     * The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
-     * 
-     */
+        /**
+         * @return The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
+         * 
+         */
     private final @Nullable String port;
-    /**
-     * A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
-     * 
-     */
+        /**
+         * @return A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
+         * 
+         */
     private final String runtime;
-    /**
-     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
-     * 
-     */
+        /**
+         * @return Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
+         * 
+         */
     private final @Nullable Map<String,String> runtimeEnvironmentVariables;
-    /**
-     * The command App Runner runs to start your application.
-     * 
-     */
+        /**
+         * @return The command App Runner runs to start your application.
+         * 
+         */
     private final @Nullable String startCommand;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     }
 
     /**
-     * The command App Runner runs to build your application.
+     * @return The command App Runner runs to build your application.
      * 
-    */
+     */
     public Optional<String> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
     /**
-     * The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
+     * @return The port that your application listens to in the container. Defaults to `&#34;8080&#34;`.
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
+     * @return A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
      * 
-    */
+     */
     public String runtime() {
         return this.runtime;
     }
     /**
-     * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
+     * @return Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren&#39;t valid.
      * 
-    */
+     */
     public Map<String,String> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Map.of() : this.runtimeEnvironmentVariables;
     }
     /**
-     * The command App Runner runs to start your application.
+     * @return The command App Runner runs to start your application.
      * 
-    */
+     */
     public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }

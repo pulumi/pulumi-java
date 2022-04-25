@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CatalogTableStorageDescriptorSerDeInfo {
-    /**
-     * Name of the target table.
-     * 
-     */
+        /**
+         * @return Name of the target table.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Map of initialization parameters for the SerDe, in key-value form.
-     * 
-     */
+        /**
+         * @return Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
-    /**
-     * Usually the class that implements the SerDe. An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`.
-     * 
-     */
+        /**
+         * @return Usually the class that implements the SerDe. An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`.
+         * 
+         */
     private final @Nullable String serializationLibrary;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class CatalogTableStorageDescriptorSerDeInfo {
     }
 
     /**
-     * Name of the target table.
+     * @return Name of the target table.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Map of initialization parameters for the SerDe, in key-value form.
+     * @return Map of initialization parameters for the SerDe, in key-value form.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Usually the class that implements the SerDe. An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`.
+     * @return Usually the class that implements the SerDe. An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`.
      * 
-    */
+     */
     public Optional<String> serializationLibrary() {
         return Optional.ofNullable(this.serializationLibrary);
     }

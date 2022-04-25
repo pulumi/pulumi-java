@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig {
-    /**
-     * The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
-     * 
-     */
+        /**
+         * @return The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
+         * 
+         */
     private final @Nullable String cloudwatchLogGroupName;
-    /**
-     * Enables Systems Manager to send command output to CloudWatch Logs.
-     * 
-     */
+        /**
+         * @return Enables Systems Manager to send command output to CloudWatch Logs.
+         * 
+         */
     private final @Nullable Boolean cloudwatchOutputEnabled;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     /**
-     * The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
+     * @return The name of the CloudWatch log group where you want to send command output. If you don&#39;t specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
      * 
-    */
+     */
     public Optional<String> cloudwatchLogGroupName() {
         return Optional.ofNullable(this.cloudwatchLogGroupName);
     }
     /**
-     * Enables Systems Manager to send command output to CloudWatch Logs.
+     * @return Enables Systems Manager to send command output to CloudWatch Logs.
      * 
-    */
+     */
     public Optional<Boolean> cloudwatchOutputEnabled() {
         return Optional.ofNullable(this.cloudwatchOutputEnabled);
     }

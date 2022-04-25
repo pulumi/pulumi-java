@@ -20,6 +20,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
     @Import(name="kinesisStreamArn", required=true)
     private Output<String> kinesisStreamArn;
 
+    /**
+     * @return The kinesis stream used as the source of the firehose delivery stream.
+     * 
+     */
     public Output<String> kinesisStreamArn() {
         return this.kinesisStreamArn;
     }
@@ -31,6 +35,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return The ARN of the role that provides access to the source Kinesis stream.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -60,20 +68,44 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs exten
             $ = new FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kinesisStreamArn The kinesis stream used as the source of the firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamArn(Output<String> kinesisStreamArn) {
             $.kinesisStreamArn = kinesisStreamArn;
             return this;
         }
 
+        /**
+         * @param kinesisStreamArn The kinesis stream used as the source of the firehose delivery stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisStreamArn(String kinesisStreamArn) {
             return kinesisStreamArn(Output.of(kinesisStreamArn));
         }
 
+        /**
+         * @param roleArn The ARN of the role that provides access to the source Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that provides access to the source Kinesis stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }

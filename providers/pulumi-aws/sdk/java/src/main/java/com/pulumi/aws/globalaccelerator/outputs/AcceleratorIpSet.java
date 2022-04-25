@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AcceleratorIpSet {
-    /**
-     * A list of IP addresses in the IP address set.
-     * 
-     */
+        /**
+         * @return A list of IP addresses in the IP address set.
+         * 
+         */
     private final @Nullable List<String> ipAddresses;
-    /**
-     * The type of IP addresses included in this IP set.
-     * 
-     */
+        /**
+         * @return The type of IP addresses included in this IP set.
+         * 
+         */
     private final @Nullable String ipFamily;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AcceleratorIpSet {
     }
 
     /**
-     * A list of IP addresses in the IP address set.
+     * @return A list of IP addresses in the IP address set.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
-     * The type of IP addresses included in this IP set.
+     * @return The type of IP addresses included in this IP set.
      * 
-    */
+     */
     public Optional<String> ipFamily() {
         return Optional.ofNullable(this.ipFamily);
     }

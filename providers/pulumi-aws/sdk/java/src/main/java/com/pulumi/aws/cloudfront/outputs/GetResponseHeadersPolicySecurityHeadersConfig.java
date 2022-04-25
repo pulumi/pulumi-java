@@ -15,35 +15,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResponseHeadersPolicySecurityHeadersConfig {
-    /**
-     * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
-     * 
-     */
+        /**
+         * @return The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
-    /**
-     * A setting that determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.
-     * 
-     */
+        /**
+         * @return A setting that determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
-    /**
-     * A setting that determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.
-     * 
-     */
+        /**
+         * @return A setting that determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
-    /**
-     * The value of the Referrer-Policy HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
-     * 
-     */
+        /**
+         * @return The value of the Referrer-Policy HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
-    /**
-     * Settings that determine whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.
-     * 
-     */
+        /**
+         * @return Settings that determine whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
-    /**
-     * Settings that determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.
-     * 
-     */
+        /**
+         * @return Settings that determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
     @CustomType.Constructor
@@ -63,44 +63,44 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig {
     }
 
     /**
-     * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
+     * @return The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies() {
         return this.contentSecurityPolicies;
     }
     /**
-     * A setting that determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.
+     * @return A setting that determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions() {
         return this.contentTypeOptions;
     }
     /**
-     * A setting that determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.
+     * @return A setting that determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions() {
         return this.frameOptions;
     }
     /**
-     * The value of the Referrer-Policy HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
+     * @return The value of the Referrer-Policy HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies() {
         return this.referrerPolicies;
     }
     /**
-     * Settings that determine whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.
+     * @return Settings that determine whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities() {
         return this.strictTransportSecurities;
     }
     /**
-     * Settings that determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.
+     * @return Settings that determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections() {
         return this.xssProtections;
     }

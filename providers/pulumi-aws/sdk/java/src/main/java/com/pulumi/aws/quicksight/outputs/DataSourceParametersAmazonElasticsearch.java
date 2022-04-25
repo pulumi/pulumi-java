@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceParametersAmazonElasticsearch {
-    /**
-     * The OpenSearch domain.
-     * 
-     */
+        /**
+         * @return The OpenSearch domain.
+         * 
+         */
     private final String domain;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataSourceParametersAmazonElasticsearch {
     }
 
     /**
-     * The OpenSearch domain.
+     * @return The OpenSearch domain.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }

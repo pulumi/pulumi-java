@@ -27,6 +27,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceArn", required=true)
     private Output<String> resourceArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the rule group or firewall policy.
+     * 
+     */
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
@@ -65,11 +69,23 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the rule group or firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(Output<String> resourceArn) {
             $.resourceArn = resourceArn;
             return this;
         }
 
+        /**
+         * @param resourceArn The Amazon Resource Name (ARN) of the rule group or firewall policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceArn(String resourceArn) {
             return resourceArn(Output.of(resourceArn));
         }

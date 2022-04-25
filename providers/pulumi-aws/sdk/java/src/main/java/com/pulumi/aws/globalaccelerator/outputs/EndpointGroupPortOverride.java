@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EndpointGroupPortOverride {
-    /**
-     * The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
-     * 
-     */
+        /**
+         * @return The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+         * 
+         */
     private final Integer endpointPort;
-    /**
-     * The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
-     * 
-     */
+        /**
+         * @return The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
+         * 
+         */
     private final Integer listenerPort;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class EndpointGroupPortOverride {
     }
 
     /**
-     * The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
+     * @return The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
      * 
-    */
+     */
     public Integer endpointPort() {
         return this.endpointPort;
     }
     /**
-     * The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
+     * @return The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
      * 
-    */
+     */
     public Integer listenerPort() {
         return this.listenerPort;
     }

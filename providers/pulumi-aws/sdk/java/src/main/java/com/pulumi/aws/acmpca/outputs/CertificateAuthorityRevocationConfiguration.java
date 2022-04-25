@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateAuthorityRevocationConfiguration {
-    /**
-     * Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
-     * 
-     */
+        /**
+         * @return Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
+         * 
+         */
     private final @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CertificateAuthorityRevocationConfiguration {
     }
 
     /**
-     * Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
+     * @return Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
      * 
-    */
+     */
     public Optional<CertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfiguration() {
         return Optional.ofNullable(this.crlConfiguration);
     }

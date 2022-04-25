@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetZoneResult {
-    /**
-     * The Amazon Resource Name (ARN) of the Hosted Zone.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Hosted Zone.
+         * 
+         */
     private final String arn;
-    /**
-     * Caller Reference of the Hosted Zone.
-     * 
-     */
+        /**
+         * @return Caller Reference of the Hosted Zone.
+         * 
+         */
     private final String callerReference;
-    /**
-     * The comment field of the Hosted Zone.
-     * 
-     */
+        /**
+         * @return The comment field of the Hosted Zone.
+         * 
+         */
     private final String comment;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
-     * 
-     */
+        /**
+         * @return The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+         * 
+         */
     private final String linkedServiceDescription;
-    /**
-     * The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
-     * 
-     */
+        /**
+         * @return The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
+         * 
+         */
     private final String linkedServicePrincipal;
     private final String name;
-    /**
-     * The list of DNS name servers for the Hosted Zone.
-     * 
-     */
+        /**
+         * @return The list of DNS name servers for the Hosted Zone.
+         * 
+         */
     private final List<String> nameServers;
     private final @Nullable Boolean privateZone;
-    /**
-     * The number of Record Set in the Hosted Zone.
-     * 
-     */
+        /**
+         * @return The number of Record Set in the Hosted Zone.
+         * 
+         */
     private final Integer resourceRecordSetCount;
     private final Map<String,String> tags;
     private final String vpcId;
@@ -92,44 +92,44 @@ public final class GetZoneResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Hosted Zone.
+     * @return The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Caller Reference of the Hosted Zone.
+     * @return Caller Reference of the Hosted Zone.
      * 
-    */
+     */
     public String callerReference() {
         return this.callerReference;
     }
     /**
-     * The comment field of the Hosted Zone.
+     * @return The comment field of the Hosted Zone.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
+     * @return The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
      * 
-    */
+     */
     public String linkedServiceDescription() {
         return this.linkedServiceDescription;
     }
     /**
-     * The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
+     * @return The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
      * 
-    */
+     */
     public String linkedServicePrincipal() {
         return this.linkedServicePrincipal;
     }
@@ -137,9 +137,9 @@ public final class GetZoneResult {
         return this.name;
     }
     /**
-     * The list of DNS name servers for the Hosted Zone.
+     * @return The list of DNS name servers for the Hosted Zone.
      * 
-    */
+     */
     public List<String> nameServers() {
         return this.nameServers;
     }
@@ -147,9 +147,9 @@ public final class GetZoneResult {
         return Optional.ofNullable(this.privateZone);
     }
     /**
-     * The number of Record Set in the Hosted Zone.
+     * @return The number of Record Set in the Hosted Zone.
      * 
-    */
+     */
     public Integer resourceRecordSetCount() {
         return this.resourceRecordSetCount;
     }

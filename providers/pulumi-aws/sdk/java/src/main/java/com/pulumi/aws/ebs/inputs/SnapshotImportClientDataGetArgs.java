@@ -23,6 +23,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
+    /**
+     * @return A user-defined comment about the disk upload.
+     * 
+     */
     public Optional<Output<String>> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -34,6 +38,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
     @Import(name="uploadEnd")
     private @Nullable Output<String> uploadEnd;
 
+    /**
+     * @return The time that the disk upload ends.
+     * 
+     */
     public Optional<Output<String>> uploadEnd() {
         return Optional.ofNullable(this.uploadEnd);
     }
@@ -45,6 +53,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
     @Import(name="uploadSize")
     private @Nullable Output<Double> uploadSize;
 
+    /**
+     * @return The size of the uploaded disk image, in GiB.
+     * 
+     */
     public Optional<Output<Double>> uploadSize() {
         return Optional.ofNullable(this.uploadSize);
     }
@@ -56,6 +68,10 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
     @Import(name="uploadStart")
     private @Nullable Output<String> uploadStart;
 
+    /**
+     * @return The time that the disk upload starts.
+     * 
+     */
     public Optional<Output<String>> uploadStart() {
         return Optional.ofNullable(this.uploadStart);
     }
@@ -87,38 +103,86 @@ public final class SnapshotImportClientDataGetArgs extends com.pulumi.resources.
             $ = new SnapshotImportClientDataGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment A user-defined comment about the disk upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable Output<String> comment) {
             $.comment = comment;
             return this;
         }
 
+        /**
+         * @param comment A user-defined comment about the disk upload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(String comment) {
             return comment(Output.of(comment));
         }
 
+        /**
+         * @param uploadEnd The time that the disk upload ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadEnd(@Nullable Output<String> uploadEnd) {
             $.uploadEnd = uploadEnd;
             return this;
         }
 
+        /**
+         * @param uploadEnd The time that the disk upload ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadEnd(String uploadEnd) {
             return uploadEnd(Output.of(uploadEnd));
         }
 
+        /**
+         * @param uploadSize The size of the uploaded disk image, in GiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSize(@Nullable Output<Double> uploadSize) {
             $.uploadSize = uploadSize;
             return this;
         }
 
+        /**
+         * @param uploadSize The size of the uploaded disk image, in GiB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSize(Double uploadSize) {
             return uploadSize(Output.of(uploadSize));
         }
 
+        /**
+         * @param uploadStart The time that the disk upload starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadStart(@Nullable Output<String> uploadStart) {
             $.uploadStart = uploadStart;
             return this;
         }
 
+        /**
+         * @param uploadStart The time that the disk upload starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadStart(String uploadStart) {
             return uploadStart(Output.of(uploadStart));
         }

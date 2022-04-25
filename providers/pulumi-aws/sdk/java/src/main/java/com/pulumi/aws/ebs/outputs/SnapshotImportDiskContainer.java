@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SnapshotImportDiskContainer {
-    /**
-     * The description of the disk image being imported.
-     * 
-     */
+        /**
+         * @return The description of the disk image being imported.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The format of the disk image being imported. One of `VHD` or `VMDK`.
-     * 
-     */
+        /**
+         * @return The format of the disk image being imported. One of `VHD` or `VMDK`.
+         * 
+         */
     private final String format;
-    /**
-     * The URL to the Amazon S3-based disk image being imported. It can either be a https URL (https://..) or an Amazon S3 URL (s3://..). One of `url` or `user_bucket` must be set.
-     * 
-     */
+        /**
+         * @return The URL to the Amazon S3-based disk image being imported. It can either be a https URL (https://..) or an Amazon S3 URL (s3://..). One of `url` or `user_bucket` must be set.
+         * 
+         */
     private final @Nullable String url;
-    /**
-     * The Amazon S3 bucket for the disk image. One of `url` or `user_bucket` must be set. Detailed below.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket for the disk image. One of `url` or `user_bucket` must be set. Detailed below.
+         * 
+         */
     private final @Nullable SnapshotImportDiskContainerUserBucket userBucket;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SnapshotImportDiskContainer {
     }
 
     /**
-     * The description of the disk image being imported.
+     * @return The description of the disk image being imported.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The format of the disk image being imported. One of `VHD` or `VMDK`.
+     * @return The format of the disk image being imported. One of `VHD` or `VMDK`.
      * 
-    */
+     */
     public String format() {
         return this.format;
     }
     /**
-     * The URL to the Amazon S3-based disk image being imported. It can either be a https URL (https://..) or an Amazon S3 URL (s3://..). One of `url` or `user_bucket` must be set.
+     * @return The URL to the Amazon S3-based disk image being imported. It can either be a https URL (https://..) or an Amazon S3 URL (s3://..). One of `url` or `user_bucket` must be set.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
-     * The Amazon S3 bucket for the disk image. One of `url` or `user_bucket` must be set. Detailed below.
+     * @return The Amazon S3 bucket for the disk image. One of `url` or `user_bucket` must be set. Detailed below.
      * 
-    */
+     */
     public Optional<SnapshotImportDiskContainerUserBucket> userBucket() {
         return Optional.ofNullable(this.userBucket);
     }

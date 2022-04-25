@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DirectoryConnectSettings {
     private final @Nullable List<String> availabilityZones;
-    /**
-     * The IP addresses of the AD Connector servers.
-     * 
-     */
+        /**
+         * @return The IP addresses of the AD Connector servers.
+         * 
+         */
     private final @Nullable List<String> connectIps;
-    /**
-     * The DNS IP addresses of the domain to connect to.
-     * 
-     */
+        /**
+         * @return The DNS IP addresses of the domain to connect to.
+         * 
+         */
     private final List<String> customerDnsIps;
-    /**
-     * The username corresponding to the password provided.
-     * 
-     */
+        /**
+         * @return The username corresponding to the password provided.
+         * 
+         */
     private final String customerUsername;
-    /**
-     * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
-     * 
-     */
+        /**
+         * @return The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
+         * 
+         */
     private final List<String> subnetIds;
-    /**
-     * The identifier of the VPC that the directory is in.
-     * 
-     */
+        /**
+         * @return The identifier of the VPC that the directory is in.
+         * 
+         */
     private final String vpcId;
 
     @CustomType.Constructor
@@ -58,37 +58,37 @@ public final class DirectoryConnectSettings {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
-     * The IP addresses of the AD Connector servers.
+     * @return The IP addresses of the AD Connector servers.
      * 
-    */
+     */
     public List<String> connectIps() {
         return this.connectIps == null ? List.of() : this.connectIps;
     }
     /**
-     * The DNS IP addresses of the domain to connect to.
+     * @return The DNS IP addresses of the domain to connect to.
      * 
-    */
+     */
     public List<String> customerDnsIps() {
         return this.customerDnsIps;
     }
     /**
-     * The username corresponding to the password provided.
+     * @return The username corresponding to the password provided.
      * 
-    */
+     */
     public String customerUsername() {
         return this.customerUsername;
     }
     /**
-     * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
+     * @return The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * The identifier of the VPC that the directory is in.
+     * @return The identifier of the VPC that the directory is in.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

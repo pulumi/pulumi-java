@@ -25,6 +25,12 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     @Import(name="actionOnTimeout")
     private @Nullable Output<String> actionOnTimeout;
 
+    /**
+     * @return When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
+     * * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
+     * * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
+     * 
+     */
     public Optional<Output<String>> actionOnTimeout() {
         return Optional.ofNullable(this.actionOnTimeout);
     }
@@ -36,6 +42,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     @Import(name="waitTimeInMinutes")
     private @Nullable Output<Integer> waitTimeInMinutes;
 
+    /**
+     * @return The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
+     * 
+     */
     public Optional<Output<Integer>> waitTimeInMinutes() {
         return Optional.ofNullable(this.waitTimeInMinutes);
     }
@@ -65,20 +75,48 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
             $ = new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionOnTimeout When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
+         * * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
+         * * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionOnTimeout(@Nullable Output<String> actionOnTimeout) {
             $.actionOnTimeout = actionOnTimeout;
             return this;
         }
 
+        /**
+         * @param actionOnTimeout When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
+         * * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
+         * * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionOnTimeout(String actionOnTimeout) {
             return actionOnTimeout(Output.of(actionOnTimeout));
         }
 
+        /**
+         * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitTimeInMinutes(@Nullable Output<Integer> waitTimeInMinutes) {
             $.waitTimeInMinutes = waitTimeInMinutes;
             return this;
         }
 
+        /**
+         * @param waitTimeInMinutes The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitTimeInMinutes(Integer waitTimeInMinutes) {
             return waitTimeInMinutes(Output.of(waitTimeInMinutes));
         }

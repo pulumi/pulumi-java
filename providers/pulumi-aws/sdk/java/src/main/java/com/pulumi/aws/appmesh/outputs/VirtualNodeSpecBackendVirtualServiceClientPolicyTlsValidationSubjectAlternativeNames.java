@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames {
-    /**
-     * The criteria for determining a SAN&#39;s match.
-     * 
-     */
+        /**
+         * @return The criteria for determining a SAN&#39;s match.
+         * 
+         */
     private final VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch match;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     }
 
     /**
-     * The criteria for determining a SAN&#39;s match.
+     * @return The criteria for determining a SAN&#39;s match.
      * 
-    */
+     */
     public VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch match() {
         return this.match;
     }

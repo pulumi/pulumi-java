@@ -26,6 +26,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the DataSync Task.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
     private @Nullable Output<String> cloudwatchLogGroupArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
+     * 
+     */
     public Optional<Output<String>> cloudwatchLogGroupArn() {
         return Optional.ofNullable(this.cloudwatchLogGroupArn);
     }
@@ -48,6 +56,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn")
     private @Nullable Output<String> destinationLocationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of destination DataSync Location.
+     * 
+     */
     public Optional<Output<String>> destinationLocationArn() {
         return Optional.ofNullable(this.destinationLocationArn);
     }
@@ -59,6 +71,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludes")
     private @Nullable Output<TaskExcludesGetArgs> excludes;
 
+    /**
+     * @return Filter rules that determines which files to exclude from a task.
+     * 
+     */
     public Optional<Output<TaskExcludesGetArgs>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
@@ -70,6 +86,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the DataSync Task.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
     private @Nullable Output<TaskOptionsGetArgs> options;
 
+    /**
+     * @return Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+     * 
+     */
     public Optional<Output<TaskOptionsGetArgs>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -92,6 +116,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<TaskScheduleGetArgs> schedule;
 
+    /**
+     * @return Specifies a schedule used to periodically transfer files from a source to a destination location.
+     * 
+     */
     public Optional<Output<TaskScheduleGetArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -103,6 +131,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn")
     private @Nullable Output<String> sourceLocationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of source DataSync Location.
+     * 
+     */
     public Optional<Output<String>> sourceLocationArn() {
         return Optional.ofNullable(this.sourceLocationArn);
     }
@@ -114,6 +146,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,6 +161,10 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -162,92 +202,212 @@ public final class TaskState extends com.pulumi.resources.ResourceArgs {
             $ = new TaskState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DataSync Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the DataSync Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param cloudwatchLogGroupArn Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
             $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogGroupArn Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
 
+        /**
+         * @param destinationLocationArn Amazon Resource Name (ARN) of destination DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLocationArn(@Nullable Output<String> destinationLocationArn) {
             $.destinationLocationArn = destinationLocationArn;
             return this;
         }
 
+        /**
+         * @param destinationLocationArn Amazon Resource Name (ARN) of destination DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationLocationArn(String destinationLocationArn) {
             return destinationLocationArn(Output.of(destinationLocationArn));
         }
 
+        /**
+         * @param excludes Filter rules that determines which files to exclude from a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(@Nullable Output<TaskExcludesGetArgs> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes Filter rules that determines which files to exclude from a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(TaskExcludesGetArgs excludes) {
             return excludes(Output.of(excludes));
         }
 
+        /**
+         * @param name Name of the DataSync Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the DataSync Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param options Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<TaskOptionsGetArgs> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(TaskOptionsGetArgs options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param schedule Specifies a schedule used to periodically transfer files from a source to a destination location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<TaskScheduleGetArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Specifies a schedule used to periodically transfer files from a source to a destination location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(TaskScheduleGetArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param sourceLocationArn Amazon Resource Name (ARN) of source DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocationArn(@Nullable Output<String> sourceLocationArn) {
             $.sourceLocationArn = sourceLocationArn;
             return this;
         }
 
+        /**
+         * @param sourceLocationArn Amazon Resource Name (ARN) of source DataSync Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceLocationArn(String sourceLocationArn) {
             return sourceLocationArn(Output.of(sourceLocationArn));
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

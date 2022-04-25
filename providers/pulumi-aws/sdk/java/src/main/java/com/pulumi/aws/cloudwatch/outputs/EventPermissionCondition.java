@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EventPermissionCondition {
-    /**
-     * Key for the condition. Valid values: `aws:PrincipalOrgID`.
-     * 
-     */
+        /**
+         * @return Key for the condition. Valid values: `aws:PrincipalOrgID`.
+         * 
+         */
     private final String key;
-    /**
-     * Type of condition. Value values: `StringEquals`.
-     * 
-     */
+        /**
+         * @return Type of condition. Value values: `StringEquals`.
+         * 
+         */
     private final String type;
-    /**
-     * Value for the key.
-     * 
-     */
+        /**
+         * @return Value for the key.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class EventPermissionCondition {
     }
 
     /**
-     * Key for the condition. Valid values: `aws:PrincipalOrgID`.
+     * @return Key for the condition. Valid values: `aws:PrincipalOrgID`.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Type of condition. Value values: `StringEquals`.
+     * @return Type of condition. Value values: `StringEquals`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value for the key.
+     * @return Value for the key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

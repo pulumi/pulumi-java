@@ -19,10 +19,10 @@ public final class GetAcceleratorResult {
     private final String dnsName;
     private final Boolean enabled;
     private final String hostedZoneId;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String ipAddressType;
     private final List<GetAcceleratorIpSet> ipSets;
@@ -69,9 +69,9 @@ public final class GetAcceleratorResult {
         return this.hostedZoneId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

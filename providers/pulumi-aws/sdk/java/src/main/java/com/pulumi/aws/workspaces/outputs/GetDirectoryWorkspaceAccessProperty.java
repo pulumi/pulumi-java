@@ -9,45 +9,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDirectoryWorkspaceAccessProperty {
-    /**
-     * (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeAndroid;
-    /**
-     * (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeChromeos;
-    /**
-     * (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeIos;
-    /**
-     * (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeLinux;
-    /**
-     * (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeOsx;
-    /**
-     * (Optional) Indicates whether users can access their WorkSpaces through a web browser.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can access their WorkSpaces through a web browser.
+         * 
+         */
     private final String deviceTypeWeb;
-    /**
-     * (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeWindows;
-    /**
-     * (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
-     * 
-     */
+        /**
+         * @return (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+         * 
+         */
     private final String deviceTypeZeroclient;
 
     @CustomType.Constructor
@@ -71,58 +71,58 @@ public final class GetDirectoryWorkspaceAccessProperty {
     }
 
     /**
-     * (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeAndroid() {
         return this.deviceTypeAndroid;
     }
     /**
-     * (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeChromeos() {
         return this.deviceTypeChromeos;
     }
     /**
-     * (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeIos() {
         return this.deviceTypeIos;
     }
     /**
-     * (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeLinux() {
         return this.deviceTypeLinux;
     }
     /**
-     * (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeOsx() {
         return this.deviceTypeOsx;
     }
     /**
-     * (Optional) Indicates whether users can access their WorkSpaces through a web browser.
+     * @return (Optional) Indicates whether users can access their WorkSpaces through a web browser.
      * 
-    */
+     */
     public String deviceTypeWeb() {
         return this.deviceTypeWeb;
     }
     /**
-     * (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeWindows() {
         return this.deviceTypeWindows;
     }
     /**
-     * (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+     * @return (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
      * 
-    */
+     */
     public String deviceTypeZeroclient() {
         return this.deviceTypeZeroclient;
     }

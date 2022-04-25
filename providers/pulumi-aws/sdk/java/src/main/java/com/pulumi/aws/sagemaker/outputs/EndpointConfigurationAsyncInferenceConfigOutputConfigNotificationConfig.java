@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig {
-    /**
-     * Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
-     * 
-     */
+        /**
+         * @return Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+         * 
+         */
     private final @Nullable String errorTopic;
-    /**
-     * Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
-     * 
-     */
+        /**
+         * @return Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+         * 
+         */
     private final @Nullable String successTopic;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     }
 
     /**
-     * Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
+     * @return Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
      * 
-    */
+     */
     public Optional<String> errorTopic() {
         return Optional.ofNullable(this.errorTopic);
     }
     /**
-     * Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
+     * @return Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
      * 
-    */
+     */
     public Optional<String> successTopic() {
         return Optional.ofNullable(this.successTopic);
     }

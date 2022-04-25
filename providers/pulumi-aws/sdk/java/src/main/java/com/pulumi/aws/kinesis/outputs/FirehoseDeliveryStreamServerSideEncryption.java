@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirehoseDeliveryStreamServerSideEncryption {
-    /**
-     * Whether to enable encryption at rest. Default is `false`.
-     * 
-     */
+        /**
+         * @return Whether to enable encryption at rest. Default is `false`.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
+         * 
+         */
     private final @Nullable String keyArn;
-    /**
-     * Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
-     * 
-     */
+        /**
+         * @return Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+         * 
+         */
     private final @Nullable String keyType;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
     }
 
     /**
-     * Whether to enable encryption at rest. Default is `false`.
+     * @return Whether to enable encryption at rest. Default is `false`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
+     * @return Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
      * 
-    */
+     */
     public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
     /**
-     * Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+     * @return Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
      * 
-    */
+     */
     public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
     }

@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionLoggingConfig {
-    /**
-     * The Amazon S3 bucket to store the access logs in, for
-     * example, `myawslogbucket.s3.amazonaws.com`.
-     * 
-     */
+        /**
+         * @return The Amazon S3 bucket to store the access logs in, for
+         * example, `myawslogbucket.s3.amazonaws.com`.
+         * 
+         */
     private final String bucket;
-    /**
-     * Specifies whether you want CloudFront to
-     * include cookies in access logs (default: `false`).
-     * 
-     */
+        /**
+         * @return Specifies whether you want CloudFront to
+         * include cookies in access logs (default: `false`).
+         * 
+         */
     private final @Nullable Boolean includeCookies;
-    /**
-     * An optional string that you want CloudFront to prefix
-     * to the access log filenames for this distribution, for example, `myprefix/`.
-     * 
-     */
+        /**
+         * @return An optional string that you want CloudFront to prefix
+         * to the access log filenames for this distribution, for example, `myprefix/`.
+         * 
+         */
     private final @Nullable String prefix;
 
     @CustomType.Constructor
@@ -42,26 +42,26 @@ public final class DistributionLoggingConfig {
     }
 
     /**
-     * The Amazon S3 bucket to store the access logs in, for
+     * @return The Amazon S3 bucket to store the access logs in, for
      * example, `myawslogbucket.s3.amazonaws.com`.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Specifies whether you want CloudFront to
+     * @return Specifies whether you want CloudFront to
      * include cookies in access logs (default: `false`).
      * 
-    */
+     */
     public Optional<Boolean> includeCookies() {
         return Optional.ofNullable(this.includeCookies);
     }
     /**
-     * An optional string that you want CloudFront to prefix
+     * @return An optional string that you want CloudFront to prefix
      * to the access log filenames for this distribution, for example, `myprefix/`.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }

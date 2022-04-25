@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource {
-    /**
-     * NLB resource ARN.
-     * 
-     */
+        /**
+         * @return NLB resource ARN.
+         * 
+         */
     private final @Nullable String arn;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     }
 
     /**
-     * NLB resource ARN.
+     * @return NLB resource ARN.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }

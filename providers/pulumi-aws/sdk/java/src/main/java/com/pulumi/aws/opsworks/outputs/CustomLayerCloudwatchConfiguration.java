@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
-    /**
-     * A block the specifies how an opsworks logs look like. See Log Streams.
-     * 
-     */
+        /**
+         * @return A block the specifies how an opsworks logs look like. See Log Streams.
+         * 
+         */
     private final @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams;
 
     @CustomType.Constructor
@@ -32,9 +32,9 @@ public final class CustomLayerCloudwatchConfiguration {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * A block the specifies how an opsworks logs look like. See Log Streams.
+     * @return A block the specifies how an opsworks logs look like. See Log Streams.
      * 
-    */
+     */
     public List<CustomLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }

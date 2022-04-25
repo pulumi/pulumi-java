@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInstanceTypesResult {
     private final @Nullable List<GetInstanceTypesFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * List of EC2 Instance Types.
-     * 
-     */
+        /**
+         * @return List of EC2 Instance Types.
+         * 
+         */
     private final List<String> instanceTypes;
 
     @CustomType.Constructor
@@ -38,16 +38,16 @@ public final class GetInstanceTypesResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of EC2 Instance Types.
+     * @return List of EC2 Instance Types.
      * 
-    */
+     */
     public List<String> instanceTypes() {
         return this.instanceTypes;
     }

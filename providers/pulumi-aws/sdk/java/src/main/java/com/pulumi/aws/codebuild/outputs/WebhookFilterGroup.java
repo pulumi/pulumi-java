@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebhookFilterGroup {
-    /**
-     * A webhook filter for the group. Filter blocks are documented below.
-     * 
-     */
+        /**
+         * @return A webhook filter for the group. Filter blocks are documented below.
+         * 
+         */
     private final @Nullable List<WebhookFilterGroupFilter> filters;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class WebhookFilterGroup {
     }
 
     /**
-     * A webhook filter for the group. Filter blocks are documented below.
+     * @return A webhook filter for the group. Filter blocks are documented below.
      * 
-    */
+     */
     public List<WebhookFilterGroupFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }

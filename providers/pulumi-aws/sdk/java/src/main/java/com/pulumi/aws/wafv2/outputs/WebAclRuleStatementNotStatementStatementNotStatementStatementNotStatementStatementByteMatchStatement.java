@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementNotStatementStatementNotStatementStatementNotStatementStatementByteMatchStatement {
-    /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
-     * 
-     */
+        /**
+         * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch fieldToMatch;
-    /**
-     * The area within the portion of a web request that you want AWS WAF to search for `search_string`. Valid values include the following: `EXACTLY`, `STARTS_WITH`, `ENDS_WITH`, `CONTAINS`, `CONTAINS_WORD`. See the AWS [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchStatement.html) for more information.
-     * 
-     */
+        /**
+         * @return The area within the portion of a web request that you want AWS WAF to search for `search_string`. Valid values include the following: `EXACTLY`, `STARTS_WITH`, `ENDS_WITH`, `CONTAINS`, `CONTAINS_WORD`. See the AWS [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchStatement.html) for more information.
+         * 
+         */
     private final String positionalConstraint;
-    /**
-     * A string value that you want AWS WAF to search for. AWS WAF searches only in the part of web requests that you designate for inspection in `field_to_match`. The maximum length of the value is 50 bytes.
-     * 
-     */
+        /**
+         * @return A string value that you want AWS WAF to search for. AWS WAF searches only in the part of web requests that you designate for inspection in `field_to_match`. The maximum length of the value is 50 bytes.
+         * 
+         */
     private final String searchString;
-    /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
-     * 
-     */
+        /**
+         * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         */
     private final List<WebAclRuleStatementNotStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
     }
 
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementNotStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
-     * The area within the portion of a web request that you want AWS WAF to search for `search_string`. Valid values include the following: `EXACTLY`, `STARTS_WITH`, `ENDS_WITH`, `CONTAINS`, `CONTAINS_WORD`. See the AWS [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchStatement.html) for more information.
+     * @return The area within the portion of a web request that you want AWS WAF to search for `search_string`. Valid values include the following: `EXACTLY`, `STARTS_WITH`, `ENDS_WITH`, `CONTAINS`, `CONTAINS_WORD`. See the AWS [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchStatement.html) for more information.
      * 
-    */
+     */
     public String positionalConstraint() {
         return this.positionalConstraint;
     }
     /**
-     * A string value that you want AWS WAF to search for. AWS WAF searches only in the part of web requests that you designate for inspection in `field_to_match`. The maximum length of the value is 50 bytes.
+     * @return A string value that you want AWS WAF to search for. AWS WAF searches only in the part of web requests that you designate for inspection in `field_to_match`. The maximum length of the value is 50 bytes.
      * 
-    */
+     */
     public String searchString() {
         return this.searchString;
     }
     /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementNotStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }

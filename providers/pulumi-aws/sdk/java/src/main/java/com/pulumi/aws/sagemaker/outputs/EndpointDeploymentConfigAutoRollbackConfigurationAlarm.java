@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
-    /**
-     * The name of a CloudWatch alarm in your account.
-     * 
-     */
+        /**
+         * @return The name of a CloudWatch alarm in your account.
+         * 
+         */
     private final String alarmName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
     }
 
     /**
-     * The name of a CloudWatch alarm in your account.
+     * @return The name of a CloudWatch alarm in your account.
      * 
-    */
+     */
     public String alarmName() {
         return this.alarmName;
     }

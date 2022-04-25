@@ -28,6 +28,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="allQueryArguments")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
+    /**
+     * @return Inspect all query arguments.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs>> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
@@ -39,6 +43,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="body")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs> body;
 
+    /**
+     * @return Inspect the request body, which immediately follows the request headers.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -50,6 +58,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="method")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs> method;
 
+    /**
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -61,6 +73,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="queryString")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs> queryString;
 
+    /**
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -72,6 +88,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="singleHeader")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
+    /**
+     * @return Inspect a single header. See Single Header below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs>> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
@@ -83,6 +103,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="singleQueryArgument")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
+    /**
+     * @return Inspect a single query argument. See Single Query Argument below for details.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs>> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
@@ -94,6 +118,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="uriPath")
     private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs> uriPath;
 
+    /**
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * 
+     */
     public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -128,65 +156,149 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
             $ = new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments) {
             $.allQueryArguments = allQueryArguments;
             return this;
         }
 
+        /**
+         * @param allQueryArguments Inspect all query arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allQueryArguments(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
             return allQueryArguments(Output.of(allQueryArguments));
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Inspect the request body, which immediately follows the request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
             $.singleHeader = singleHeader;
             return this;
         }
 
+        /**
+         * @param singleHeader Inspect a single header. See Single Header below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
             $.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
+        /**
+         * @param singleQueryArgument Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleQueryArgument(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
             return singleQueryArgument(Output.of(singleQueryArgument));
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs uriPath) {
             return uriPath(Output.of(uriPath));
         }

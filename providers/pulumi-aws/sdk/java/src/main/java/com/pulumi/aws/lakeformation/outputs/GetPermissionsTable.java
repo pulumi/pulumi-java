@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPermissionsTable {
-    /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
-     * 
-     */
+        /**
+         * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         */
     private final String catalogId;
-    /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
-     * 
-     */
+        /**
+         * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         */
     private final String databaseName;
-    /**
-     * Name of the table resource.
-     * 
-     */
+        /**
+         * @return Name of the table resource.
+         * 
+         */
     private final String name;
-    /**
-     * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean wildcard;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetPermissionsTable {
     }
 
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public String catalogId() {
         return this.catalogId;
     }
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
+     * @return Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> wildcard() {
         return Optional.ofNullable(this.wildcard);
     }

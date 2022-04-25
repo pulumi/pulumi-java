@@ -13,97 +13,97 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSnapshotResult {
-    /**
-     * Specifies the allocated storage size in gigabytes (GB).
-     * 
-     */
+        /**
+         * @return Specifies the allocated storage size in gigabytes (GB).
+         * 
+         */
     private final Integer allocatedStorage;
-    /**
-     * Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
-     * 
-     */
+        /**
+         * @return Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
+         * 
+         */
     private final String availabilityZone;
     private final @Nullable String dbInstanceIdentifier;
-    /**
-     * The Amazon Resource Name (ARN) for the DB snapshot.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) for the DB snapshot.
+         * 
+         */
     private final String dbSnapshotArn;
     private final @Nullable String dbSnapshotIdentifier;
-    /**
-     * Specifies whether the DB snapshot is encrypted.
-     * 
-     */
+        /**
+         * @return Specifies whether the DB snapshot is encrypted.
+         * 
+         */
     private final Boolean encrypted;
-    /**
-     * Specifies the name of the database engine.
-     * 
-     */
+        /**
+         * @return Specifies the name of the database engine.
+         * 
+         */
     private final String engine;
-    /**
-     * Specifies the version of the database engine.
-     * 
-     */
+        /**
+         * @return Specifies the version of the database engine.
+         * 
+         */
     private final String engineVersion;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Boolean includePublic;
     private final @Nullable Boolean includeShared;
-    /**
-     * Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
-     * 
-     */
+        /**
+         * @return Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
+         * 
+         */
     private final Integer iops;
-    /**
-     * The ARN for the KMS encryption key.
-     * 
-     */
+        /**
+         * @return The ARN for the KMS encryption key.
+         * 
+         */
     private final String kmsKeyId;
-    /**
-     * License model information for the restored DB instance.
-     * 
-     */
+        /**
+         * @return License model information for the restored DB instance.
+         * 
+         */
     private final String licenseModel;
     private final @Nullable Boolean mostRecent;
-    /**
-     * Provides the option group name for the DB snapshot.
-     * 
-     */
+        /**
+         * @return Provides the option group name for the DB snapshot.
+         * 
+         */
     private final String optionGroupName;
     private final Integer port;
-    /**
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
-     * 
-     */
+        /**
+         * @return Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+         * 
+         */
     private final String snapshotCreateTime;
     private final @Nullable String snapshotType;
-    /**
-     * The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
-     * 
-     */
+        /**
+         * @return The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
+         * 
+         */
     private final String sourceDbSnapshotIdentifier;
-    /**
-     * The region that the DB snapshot was created in or copied from.
-     * 
-     */
+        /**
+         * @return The region that the DB snapshot was created in or copied from.
+         * 
+         */
     private final String sourceRegion;
-    /**
-     * Specifies the status of this DB snapshot.
-     * 
-     */
+        /**
+         * @return Specifies the status of this DB snapshot.
+         * 
+         */
     private final String status;
-    /**
-     * Specifies the storage type associated with DB snapshot.
-     * 
-     */
+        /**
+         * @return Specifies the storage type associated with DB snapshot.
+         * 
+         */
     private final String storageType;
-    /**
-     * Specifies the ID of the VPC associated with the DB snapshot.
-     * 
-     */
+        /**
+         * @return Specifies the ID of the VPC associated with the DB snapshot.
+         * 
+         */
     private final String vpcId;
 
     @CustomType.Constructor
@@ -159,16 +159,16 @@ public final class GetSnapshotResult {
     }
 
     /**
-     * Specifies the allocated storage size in gigabytes (GB).
+     * @return Specifies the allocated storage size in gigabytes (GB).
      * 
-    */
+     */
     public Integer allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
-     * Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
+     * @return Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
@@ -176,9 +176,9 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.dbInstanceIdentifier);
     }
     /**
-     * The Amazon Resource Name (ARN) for the DB snapshot.
+     * @return The Amazon Resource Name (ARN) for the DB snapshot.
      * 
-    */
+     */
     public String dbSnapshotArn() {
         return this.dbSnapshotArn;
     }
@@ -186,30 +186,30 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.dbSnapshotIdentifier);
     }
     /**
-     * Specifies whether the DB snapshot is encrypted.
+     * @return Specifies whether the DB snapshot is encrypted.
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
     /**
-     * Specifies the name of the database engine.
+     * @return Specifies the name of the database engine.
      * 
-    */
+     */
     public String engine() {
         return this.engine;
     }
     /**
-     * Specifies the version of the database engine.
+     * @return Specifies the version of the database engine.
      * 
-    */
+     */
     public String engineVersion() {
         return this.engineVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -220,23 +220,23 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.includeShared);
     }
     /**
-     * Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
+     * @return Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
      * 
-    */
+     */
     public Integer iops() {
         return this.iops;
     }
     /**
-     * The ARN for the KMS encryption key.
+     * @return The ARN for the KMS encryption key.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
-     * License model information for the restored DB instance.
+     * @return License model information for the restored DB instance.
      * 
-    */
+     */
     public String licenseModel() {
         return this.licenseModel;
     }
@@ -244,9 +244,9 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * Provides the option group name for the DB snapshot.
+     * @return Provides the option group name for the DB snapshot.
      * 
-    */
+     */
     public String optionGroupName() {
         return this.optionGroupName;
     }
@@ -254,9 +254,9 @@ public final class GetSnapshotResult {
         return this.port;
     }
     /**
-     * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
+     * @return Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * 
-    */
+     */
     public String snapshotCreateTime() {
         return this.snapshotCreateTime;
     }
@@ -264,37 +264,37 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.snapshotType);
     }
     /**
-     * The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
+     * @return The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
      * 
-    */
+     */
     public String sourceDbSnapshotIdentifier() {
         return this.sourceDbSnapshotIdentifier;
     }
     /**
-     * The region that the DB snapshot was created in or copied from.
+     * @return The region that the DB snapshot was created in or copied from.
      * 
-    */
+     */
     public String sourceRegion() {
         return this.sourceRegion;
     }
     /**
-     * Specifies the status of this DB snapshot.
+     * @return Specifies the status of this DB snapshot.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Specifies the storage type associated with DB snapshot.
+     * @return Specifies the storage type associated with DB snapshot.
      * 
-    */
+     */
     public String storageType() {
         return this.storageType;
     }
     /**
-     * Specifies the ID of the VPC associated with the DB snapshot.
+     * @return Specifies the ID of the VPC associated with the DB snapshot.
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }

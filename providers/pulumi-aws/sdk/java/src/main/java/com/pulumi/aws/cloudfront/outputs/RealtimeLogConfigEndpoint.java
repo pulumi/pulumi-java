@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RealtimeLogConfigEndpoint {
-    /**
-     * The Amazon Kinesis data stream configuration.
-     * 
-     */
+        /**
+         * @return The Amazon Kinesis data stream configuration.
+         * 
+         */
     private final RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig;
-    /**
-     * The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
-     * 
-     */
+        /**
+         * @return The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
+         * 
+         */
     private final String streamType;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class RealtimeLogConfigEndpoint {
     }
 
     /**
-     * The Amazon Kinesis data stream configuration.
+     * @return The Amazon Kinesis data stream configuration.
      * 
-    */
+     */
     public RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
     /**
-     * The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
+     * @return The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
      * 
-    */
+     */
     public String streamType() {
         return this.streamType;
     }

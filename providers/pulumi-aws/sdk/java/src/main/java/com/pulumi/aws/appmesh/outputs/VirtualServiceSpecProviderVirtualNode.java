@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualServiceSpecProviderVirtualNode {
-    /**
-     * The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String virtualNodeName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualServiceSpecProviderVirtualNode {
     }
 
     /**
-     * The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
+     * @return The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String virtualNodeName() {
         return this.virtualNodeName;
     }

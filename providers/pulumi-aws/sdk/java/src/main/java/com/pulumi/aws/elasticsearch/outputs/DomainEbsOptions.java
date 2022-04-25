@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainEbsOptions {
-    /**
-     * Whether EBS volumes are attached to data nodes in the domain.
-     * 
-     */
+        /**
+         * @return Whether EBS volumes are attached to data nodes in the domain.
+         * 
+         */
     private final Boolean ebsEnabled;
-    /**
-     * Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
-     * 
-     */
+        /**
+         * @return Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+         * 
+         */
     private final @Nullable Integer iops;
-    /**
-     * Size of EBS volumes attached to data nodes (in GiB).
-     * 
-     */
+        /**
+         * @return Size of EBS volumes attached to data nodes (in GiB).
+         * 
+         */
     private final @Nullable Integer volumeSize;
-    /**
-     * Type of EBS volumes attached to data nodes.
-     * 
-     */
+        /**
+         * @return Type of EBS volumes attached to data nodes.
+         * 
+         */
     private final @Nullable String volumeType;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class DomainEbsOptions {
     }
 
     /**
-     * Whether EBS volumes are attached to data nodes in the domain.
+     * @return Whether EBS volumes are attached to data nodes in the domain.
      * 
-    */
+     */
     public Boolean ebsEnabled() {
         return this.ebsEnabled;
     }
     /**
-     * Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+     * @return Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * Size of EBS volumes attached to data nodes (in GiB).
+     * @return Size of EBS volumes attached to data nodes (in GiB).
      * 
-    */
+     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * Type of EBS volumes attached to data nodes.
+     * @return Type of EBS volumes attached to data nodes.
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

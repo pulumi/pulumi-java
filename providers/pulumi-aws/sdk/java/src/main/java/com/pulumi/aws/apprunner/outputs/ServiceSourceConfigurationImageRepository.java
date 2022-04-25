@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceSourceConfigurationImageRepository {
-    /**
-     * Configuration for running the identified image. See Image Configuration below for more details.
-     * 
-     */
+        /**
+         * @return Configuration for running the identified image. See Image Configuration below for more details.
+         * 
+         */
     private final @Nullable ServiceSourceConfigurationImageRepositoryImageConfiguration imageConfiguration;
-    /**
-     * The identifier of an image. For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
-     * image name format, see Pulling an image in the Amazon ECR User Guide.
-     * 
-     */
+        /**
+         * @return The identifier of an image. For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
+         * image name format, see Pulling an image in the Amazon ECR User Guide.
+         * 
+         */
     private final String imageIdentifier;
-    /**
-     * The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
-     * 
-     */
+        /**
+         * @return The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
+         * 
+         */
     private final String imageRepositoryType;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class ServiceSourceConfigurationImageRepository {
     }
 
     /**
-     * Configuration for running the identified image. See Image Configuration below for more details.
+     * @return Configuration for running the identified image. See Image Configuration below for more details.
      * 
-    */
+     */
     public Optional<ServiceSourceConfigurationImageRepositoryImageConfiguration> imageConfiguration() {
         return Optional.ofNullable(this.imageConfiguration);
     }
     /**
-     * The identifier of an image. For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
+     * @return The identifier of an image. For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
      * image name format, see Pulling an image in the Amazon ECR User Guide.
      * 
-    */
+     */
     public String imageIdentifier() {
         return this.imageIdentifier;
     }
     /**
-     * The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
+     * @return The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
      * 
-    */
+     */
     public String imageRepositoryType() {
         return this.imageRepositoryType;
     }

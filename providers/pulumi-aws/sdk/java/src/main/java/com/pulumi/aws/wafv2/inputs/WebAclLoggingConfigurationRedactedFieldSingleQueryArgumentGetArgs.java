@@ -24,6 +24,13 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the query header to redact. This setting must be provided as lower case characters.
+     * 
+     * @deprecated
+     * Not supported by WAFv2 API
+     * 
+     */
     @Deprecated /* Not supported by WAFv2 API */
     public Output<String> name() {
         return this.name;
@@ -53,11 +60,31 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
             $ = new WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the query header to redact. This setting must be provided as lower case characters.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query header to redact. This setting must be provided as lower case characters.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Not supported by WAFv2 API
+         * 
+         */
+        @Deprecated /* Not supported by WAFv2 API */
         public Builder name(String name) {
             return name(Output.of(name));
         }

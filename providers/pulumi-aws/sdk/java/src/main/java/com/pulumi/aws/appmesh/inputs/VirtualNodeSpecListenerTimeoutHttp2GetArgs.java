@@ -23,6 +23,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends com.pulumi
     @Import(name="idle")
     private @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
 
+    /**
+     * @return The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs>> idle() {
         return Optional.ofNullable(this.idle);
     }
@@ -34,6 +38,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends com.pulumi
     @Import(name="perRequest")
     private @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
 
+    /**
+     * @return The per request timeout.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs>> perRequest() {
         return Optional.ofNullable(this.perRequest);
     }
@@ -63,20 +71,44 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends com.pulumi
             $ = new VirtualNodeSpecListenerTimeoutHttp2GetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle) {
             $.idle = idle;
             return this;
         }
 
+        /**
+         * @param idle The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idle(VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs idle) {
             return idle(Output.of(idle));
         }
 
+        /**
+         * @param perRequest The per request timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest) {
             $.perRequest = perRequest;
             return this;
         }
 
+        /**
+         * @param perRequest The per request timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder perRequest(VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs perRequest) {
             return perRequest(Output.of(perRequest));
         }

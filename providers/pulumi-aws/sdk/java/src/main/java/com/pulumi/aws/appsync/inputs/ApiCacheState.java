@@ -24,6 +24,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiCachingBehavior")
     private @Nullable Output<String> apiCachingBehavior;
 
+    /**
+     * @return Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
+     * 
+     */
     public Optional<Output<String>> apiCachingBehavior() {
         return Optional.ofNullable(this.apiCachingBehavior);
     }
@@ -35,6 +39,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
     private @Nullable Output<String> apiId;
 
+    /**
+     * @return The GraphQL API ID.
+     * 
+     */
     public Optional<Output<String>> apiId() {
         return Optional.ofNullable(this.apiId);
     }
@@ -46,6 +54,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="atRestEncryptionEnabled")
     private @Nullable Output<Boolean> atRestEncryptionEnabled;
 
+    /**
+     * @return At-rest encryption flag for cache. You cannot update this setting after creation.
+     * 
+     */
     public Optional<Output<Boolean>> atRestEncryptionEnabled() {
         return Optional.ofNullable(this.atRestEncryptionEnabled);
     }
@@ -57,6 +69,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitEncryptionEnabled")
     private @Nullable Output<Boolean> transitEncryptionEnabled;
 
+    /**
+     * @return Transit encryption flag when connecting to cache. You cannot update this setting after creation.
+     * 
+     */
     public Optional<Output<Boolean>> transitEncryptionEnabled() {
         return Optional.ofNullable(this.transitEncryptionEnabled);
     }
@@ -68,6 +84,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<Integer> ttl;
 
+    /**
+     * @return TTL in seconds for cache entries.
+     * 
+     */
     public Optional<Output<Integer>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -79,6 +99,10 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -112,56 +136,128 @@ public final class ApiCacheState extends com.pulumi.resources.ResourceArgs {
             $ = new ApiCacheState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiCachingBehavior Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiCachingBehavior(@Nullable Output<String> apiCachingBehavior) {
             $.apiCachingBehavior = apiCachingBehavior;
             return this;
         }
 
+        /**
+         * @param apiCachingBehavior Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiCachingBehavior(String apiCachingBehavior) {
             return apiCachingBehavior(Output.of(apiCachingBehavior));
         }
 
+        /**
+         * @param apiId The GraphQL API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(@Nullable Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId The GraphQL API ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param atRestEncryptionEnabled At-rest encryption flag for cache. You cannot update this setting after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
             $.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param atRestEncryptionEnabled At-rest encryption flag for cache. You cannot update this setting after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
             return atRestEncryptionEnabled(Output.of(atRestEncryptionEnabled));
         }
 
+        /**
+         * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. You cannot update this setting after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
             $.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
+        /**
+         * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. You cannot update this setting after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitEncryptionEnabled(Boolean transitEncryptionEnabled) {
             return transitEncryptionEnabled(Output.of(transitEncryptionEnabled));
         }
 
+        /**
+         * @param ttl TTL in seconds for cache entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Integer> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl TTL in seconds for cache entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Integer ttl) {
             return ttl(Output.of(ttl));
         }
 
+        /**
+         * @param type The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

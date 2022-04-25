@@ -10,66 +10,66 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServerResult {
-    /**
-     * Amazon Resource Name (ARN) of Transfer Server.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of Transfer Server.
+         * 
+         */
     private final String arn;
-    /**
-     * The ARN of any certificate.
-     * 
-     */
+        /**
+         * @return The ARN of any certificate.
+         * 
+         */
     private final String certificate;
-    /**
-     * The domain of the storage system that is used for file transfers.
-     * 
-     */
+        /**
+         * @return The domain of the storage system that is used for file transfers.
+         * 
+         */
     private final String domain;
-    /**
-     * The endpoint of the Transfer Server (e.g., `s-12345678.server.transfer.REGION.amazonaws.com`).
-     * 
-     */
+        /**
+         * @return The endpoint of the Transfer Server (e.g., `s-12345678.server.transfer.REGION.amazonaws.com`).
+         * 
+         */
     private final String endpoint;
-    /**
-     * The type of endpoint that the server is connected to.
-     * 
-     */
+        /**
+         * @return The type of endpoint that the server is connected to.
+         * 
+         */
     private final String endpointType;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-     * 
-     */
+        /**
+         * @return The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
+         * 
+         */
     private final String identityProviderType;
-    /**
-     * Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
+         * 
+         */
     private final String invocationRole;
-    /**
-     * Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+         * 
+         */
     private final String loggingRole;
-    /**
-     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
-     * 
-     */
+        /**
+         * @return The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
+         * 
+         */
     private final List<String> protocols;
-    /**
-     * The name of the security policy that is attached to the server.
-     * 
-     */
+        /**
+         * @return The name of the security policy that is attached to the server.
+         * 
+         */
     private final String securityPolicyName;
     private final String serverId;
-    /**
-     * URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
-     * 
-     */
+        /**
+         * @return URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -103,79 +103,79 @@ public final class GetServerResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of Transfer Server.
+     * @return Amazon Resource Name (ARN) of Transfer Server.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The ARN of any certificate.
+     * @return The ARN of any certificate.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * The domain of the storage system that is used for file transfers.
+     * @return The domain of the storage system that is used for file transfers.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }
     /**
-     * The endpoint of the Transfer Server (e.g., `s-12345678.server.transfer.REGION.amazonaws.com`).
+     * @return The endpoint of the Transfer Server (e.g., `s-12345678.server.transfer.REGION.amazonaws.com`).
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The type of endpoint that the server is connected to.
+     * @return The type of endpoint that the server is connected to.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
+     * @return The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
      * 
-    */
+     */
     public String identityProviderType() {
         return this.identityProviderType;
     }
     /**
-     * Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
+     * @return Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
      * 
-    */
+     */
     public String invocationRole() {
         return this.invocationRole;
     }
     /**
-     * Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+     * @return Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
      * 
-    */
+     */
     public String loggingRole() {
         return this.loggingRole;
     }
     /**
-     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
+     * @return The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
      * 
-    */
+     */
     public List<String> protocols() {
         return this.protocols;
     }
     /**
-     * The name of the security policy that is attached to the server.
+     * @return The name of the security policy that is attached to the server.
      * 
-    */
+     */
     public String securityPolicyName() {
         return this.securityPolicyName;
     }
@@ -183,9 +183,9 @@ public final class GetServerResult {
         return this.serverId;
     }
     /**
-     * URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
+     * @return URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

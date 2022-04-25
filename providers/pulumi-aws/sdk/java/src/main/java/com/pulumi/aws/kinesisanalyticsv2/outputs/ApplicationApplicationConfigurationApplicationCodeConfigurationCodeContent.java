@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent {
-    /**
-     * Information about the Amazon S3 bucket containing the application code.
-     * 
-     */
+        /**
+         * @return Information about the Amazon S3 bucket containing the application code.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation;
-    /**
-     * The text-format code for the application.
-     * 
-     */
+        /**
+         * @return The text-format code for the application.
+         * 
+         */
     private final @Nullable String textContent;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     /**
-     * Information about the Amazon S3 bucket containing the application code.
+     * @return Information about the Amazon S3 bucket containing the application code.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation> s3ContentLocation() {
         return Optional.ofNullable(this.s3ContentLocation);
     }
     /**
-     * The text-format code for the application.
+     * @return The text-format code for the application.
      * 
-    */
+     */
     public Optional<String> textContent() {
         return Optional.ofNullable(this.textContent);
     }

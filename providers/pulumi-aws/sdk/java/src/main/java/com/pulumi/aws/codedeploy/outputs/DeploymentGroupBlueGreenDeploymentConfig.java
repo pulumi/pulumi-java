@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentGroupBlueGreenDeploymentConfig {
-    /**
-     * Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
-     * 
-     */
+        /**
+         * @return Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
+         * 
+         */
     private final @Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption;
-    /**
-     * Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
-     * 
-     */
+        /**
+         * @return Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
+         * 
+         */
     private final @Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption;
-    /**
-     * Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
-     * 
-     */
+        /**
+         * @return Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
+         * 
+         */
     private final @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class DeploymentGroupBlueGreenDeploymentConfig {
     }
 
     /**
-     * Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
+     * @return Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
      * 
-    */
+     */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption> deploymentReadyOption() {
         return Optional.ofNullable(this.deploymentReadyOption);
     }
     /**
-     * Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
+     * @return Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
      * 
-    */
+     */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption> greenFleetProvisioningOption() {
         return Optional.ofNullable(this.greenFleetProvisioningOption);
     }
     /**
-     * Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
+     * @return Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
      * 
-    */
+     */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess> terminateBlueInstancesOnDeploymentSuccess() {
         return Optional.ofNullable(this.terminateBlueInstancesOnDeploymentSuccess);
     }

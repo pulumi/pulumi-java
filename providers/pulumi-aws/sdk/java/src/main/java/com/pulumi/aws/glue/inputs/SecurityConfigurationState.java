@@ -23,6 +23,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
     @Import(name="encryptionConfiguration")
     private @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
+    /**
+     * @return Configuration block containing encryption configuration. Detailed below.
+     * 
+     */
     public Optional<Output<SecurityConfigurationEncryptionConfigurationGetArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -34,6 +38,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the security configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,20 +71,44 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
             $ = new SecurityConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionConfiguration Configuration block containing encryption configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration Configuration block containing encryption configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param name Name of the security configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the security configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

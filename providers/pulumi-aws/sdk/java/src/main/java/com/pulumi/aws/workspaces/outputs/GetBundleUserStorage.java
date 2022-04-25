@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBundleUserStorage {
-    /**
-     * The size of the user storage.
-     * 
-     */
+        /**
+         * @return The size of the user storage.
+         * 
+         */
     private final String capacity;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetBundleUserStorage {
     }
 
     /**
-     * The size of the user storage.
+     * @return The size of the user storage.
      * 
-    */
+     */
     public String capacity() {
         return this.capacity;
     }

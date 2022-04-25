@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProjectServiceCatalogProvisioningDetails {
-    /**
-     * The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
-     * 
-     */
+        /**
+         * @return The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
+         * 
+         */
     private final @Nullable String pathId;
-    /**
-     * The ID of the product to provision.
-     * 
-     */
+        /**
+         * @return The ID of the product to provision.
+         * 
+         */
     private final String productId;
-    /**
-     * The ID of the provisioning artifact.
-     * 
-     */
+        /**
+         * @return The ID of the provisioning artifact.
+         * 
+         */
     private final @Nullable String provisioningArtifactId;
-    /**
-     * A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
-     * 
-     */
+        /**
+         * @return A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
+         * 
+         */
     private final @Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ProjectServiceCatalogProvisioningDetails {
     }
 
     /**
-     * The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
+     * @return The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
      * 
-    */
+     */
     public Optional<String> pathId() {
         return Optional.ofNullable(this.pathId);
     }
     /**
-     * The ID of the product to provision.
+     * @return The ID of the product to provision.
      * 
-    */
+     */
     public String productId() {
         return this.productId;
     }
     /**
-     * The ID of the provisioning artifact.
+     * @return The ID of the provisioning artifact.
      * 
-    */
+     */
     public Optional<String> provisioningArtifactId() {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
     /**
-     * A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
+     * @return A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
      * 
-    */
+     */
     public List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }

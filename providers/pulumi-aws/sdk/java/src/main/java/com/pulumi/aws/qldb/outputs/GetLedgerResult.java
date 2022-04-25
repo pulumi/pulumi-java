@@ -12,10 +12,10 @@ import java.util.Objects;
 public final class GetLedgerResult {
     private final String arn;
     private final Boolean deletionProtection;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String permissionsMode;
@@ -41,9 +41,9 @@ public final class GetLedgerResult {
         return this.deletionProtection;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

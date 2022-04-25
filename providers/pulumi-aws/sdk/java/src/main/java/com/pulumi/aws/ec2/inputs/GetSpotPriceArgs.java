@@ -23,6 +23,10 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
     private @Nullable String availabilityZone;
 
+    /**
+     * @return The availability zone in which to query Spot price information.
+     * 
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -34,6 +38,10 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetSpotPriceFilter> filters;
 
+    /**
+     * @return One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
+     * 
+     */
     public Optional<List<GetSpotPriceFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -45,6 +53,10 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceType")
     private @Nullable String instanceType;
 
+    /**
+     * @return The type of instance for which to query Spot Price information.
+     * 
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -75,20 +87,44 @@ public final class GetSpotPriceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSpotPriceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZone The availability zone in which to query Spot price information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZone(@Nullable String availabilityZone) {
             $.availabilityZone = availabilityZone;
             return this;
         }
 
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetSpotPriceFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param instanceType The type of instance for which to query Spot Price information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable String instanceType) {
             $.instanceType = instanceType;
             return this;

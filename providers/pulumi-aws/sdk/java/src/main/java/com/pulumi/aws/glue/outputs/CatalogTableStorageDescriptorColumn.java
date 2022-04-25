@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CatalogTableStorageDescriptorColumn {
-    /**
-     * Free-form text comment.
-     * 
-     */
+        /**
+         * @return Free-form text comment.
+         * 
+         */
     private final @Nullable String comment;
-    /**
-     * Name of the target table.
-     * 
-     */
+        /**
+         * @return Name of the target table.
+         * 
+         */
     private final String name;
-    /**
-     * Map of initialization parameters for the SerDe, in key-value form.
-     * 
-     */
+        /**
+         * @return Map of initialization parameters for the SerDe, in key-value form.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
-    /**
-     * Datatype of data in the Column.
-     * 
-     */
+        /**
+         * @return Datatype of data in the Column.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class CatalogTableStorageDescriptorColumn {
     }
 
     /**
-     * Free-form text comment.
+     * @return Free-form text comment.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * Name of the target table.
+     * @return Name of the target table.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Map of initialization parameters for the SerDe, in key-value form.
+     * @return Map of initialization parameters for the SerDe, in key-value form.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Datatype of data in the Column.
+     * @return Datatype of data in the Column.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

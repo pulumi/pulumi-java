@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OntapVolumeTieringPolicy {
     private final @Nullable Integer coolingPeriod;
-    /**
-     * Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
-     * 
-     */
+        /**
+         * @return Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,9 +31,9 @@ public final class OntapVolumeTieringPolicy {
         return Optional.ofNullable(this.coolingPeriod);
     }
     /**
-     * Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
+     * @return Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

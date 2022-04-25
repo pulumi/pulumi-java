@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainNameEndpointConfiguration {
-    /**
-     * List of endpoint types.
-     * 
-     */
+        /**
+         * @return List of endpoint types.
+         * 
+         */
     private final List<String> types;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GetDomainNameEndpointConfiguration {
     }
 
     /**
-     * List of endpoint types.
+     * @return List of endpoint types.
      * 
-    */
+     */
     public List<String> types() {
         return this.types;
     }

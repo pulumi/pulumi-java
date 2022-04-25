@@ -21,6 +21,10 @@ public final class GatewayRouteSpecHttpRouteGetArgs extends com.pulumi.resources
     @Import(name="action", required=true)
     private Output<GatewayRouteSpecHttpRouteActionGetArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<GatewayRouteSpecHttpRouteActionGetArgs> action() {
         return this.action;
     }
@@ -32,6 +36,10 @@ public final class GatewayRouteSpecHttpRouteGetArgs extends com.pulumi.resources
     @Import(name="match", required=true)
     private Output<GatewayRouteSpecHttpRouteMatchGetArgs> match;
 
+    /**
+     * @return The criteria for determining a request match.
+     * 
+     */
     public Output<GatewayRouteSpecHttpRouteMatchGetArgs> match() {
         return this.match;
     }
@@ -61,20 +69,44 @@ public final class GatewayRouteSpecHttpRouteGetArgs extends com.pulumi.resources
             $ = new GatewayRouteSpecHttpRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<GatewayRouteSpecHttpRouteActionGetArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(GatewayRouteSpecHttpRouteActionGetArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param match The criteria for determining a request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(Output<GatewayRouteSpecHttpRouteMatchGetArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match The criteria for determining a request match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(GatewayRouteSpecHttpRouteMatchGetArgs match) {
             return match(Output.of(match));
         }

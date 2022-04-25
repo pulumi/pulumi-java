@@ -31,6 +31,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="addHeaderActions")
     private @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
+    /**
+     * @return A list of Add Header Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleAddHeaderActionGetArgs>>> addHeaderActions() {
         return Optional.ofNullable(this.addHeaderActions);
     }
@@ -42,6 +46,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="after")
     private @Nullable Output<String> after;
 
+    /**
+     * @return The name of the rule to place this rule after
+     * 
+     */
     public Optional<Output<String>> after() {
         return Optional.ofNullable(this.after);
     }
@@ -53,6 +61,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The SES receipt rule ARN.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -64,6 +76,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bounceActions")
     private @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
+    /**
+     * @return A list of Bounce Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleBounceActionGetArgs>>> bounceActions() {
         return Optional.ofNullable(this.bounceActions);
     }
@@ -75,6 +91,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return If true, the rule will be enabled
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -86,6 +106,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaActions")
     private @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
+    /**
+     * @return A list of Lambda Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleLambdaActionGetArgs>>> lambdaActions() {
         return Optional.ofNullable(this.lambdaActions);
     }
@@ -97,6 +121,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the rule
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -108,6 +136,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipients")
     private @Nullable Output<List<String>> recipients;
 
+    /**
+     * @return A list of email addresses
+     * 
+     */
     public Optional<Output<List<String>>> recipients() {
         return Optional.ofNullable(this.recipients);
     }
@@ -119,6 +151,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
     private @Nullable Output<String> ruleSetName;
 
+    /**
+     * @return The name of the rule set
+     * 
+     */
     public Optional<Output<String>> ruleSetName() {
         return Optional.ofNullable(this.ruleSetName);
     }
@@ -130,6 +166,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Actions")
     private @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
+    /**
+     * @return A list of S3 Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleS3ActionGetArgs>>> s3Actions() {
         return Optional.ofNullable(this.s3Actions);
     }
@@ -141,6 +181,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scanEnabled")
     private @Nullable Output<Boolean> scanEnabled;
 
+    /**
+     * @return If true, incoming emails will be scanned for spam and viruses
+     * 
+     */
     public Optional<Output<Boolean>> scanEnabled() {
         return Optional.ofNullable(this.scanEnabled);
     }
@@ -152,6 +196,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snsActions")
     private @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
+    /**
+     * @return A list of SNS Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleSnsActionGetArgs>>> snsActions() {
         return Optional.ofNullable(this.snsActions);
     }
@@ -163,6 +211,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stopActions")
     private @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
+    /**
+     * @return A list of Stop Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleStopActionGetArgs>>> stopActions() {
         return Optional.ofNullable(this.stopActions);
     }
@@ -174,6 +226,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tlsPolicy")
     private @Nullable Output<String> tlsPolicy;
 
+    /**
+     * @return `Require` or `Optional`
+     * 
+     */
     public Optional<Output<String>> tlsPolicy() {
         return Optional.ofNullable(this.tlsPolicy);
     }
@@ -185,6 +241,10 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workmailActions")
     private @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
+    /**
+     * @return A list of WorkMail Action blocks. Documented below.
+     * 
+     */
     public Optional<Output<List<ReceiptRuleWorkmailActionGetArgs>>> workmailActions() {
         return Optional.ofNullable(this.workmailActions);
     }
@@ -227,169 +287,397 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
             $ = new ReceiptRuleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addHeaderActions A list of Add Header Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addHeaderActions(@Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions) {
             $.addHeaderActions = addHeaderActions;
             return this;
         }
 
+        /**
+         * @param addHeaderActions A list of Add Header Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addHeaderActions(List<ReceiptRuleAddHeaderActionGetArgs> addHeaderActions) {
             return addHeaderActions(Output.of(addHeaderActions));
         }
 
+        /**
+         * @param addHeaderActions A list of Add Header Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addHeaderActions(ReceiptRuleAddHeaderActionGetArgs... addHeaderActions) {
             return addHeaderActions(List.of(addHeaderActions));
         }
 
+        /**
+         * @param after The name of the rule to place this rule after
+         * 
+         * @return builder
+         * 
+         */
         public Builder after(@Nullable Output<String> after) {
             $.after = after;
             return this;
         }
 
+        /**
+         * @param after The name of the rule to place this rule after
+         * 
+         * @return builder
+         * 
+         */
         public Builder after(String after) {
             return after(Output.of(after));
         }
 
+        /**
+         * @param arn The SES receipt rule ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The SES receipt rule ARN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param bounceActions A list of Bounce Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounceActions(@Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions) {
             $.bounceActions = bounceActions;
             return this;
         }
 
+        /**
+         * @param bounceActions A list of Bounce Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounceActions(List<ReceiptRuleBounceActionGetArgs> bounceActions) {
             return bounceActions(Output.of(bounceActions));
         }
 
+        /**
+         * @param bounceActions A list of Bounce Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bounceActions(ReceiptRuleBounceActionGetArgs... bounceActions) {
             return bounceActions(List.of(bounceActions));
         }
 
+        /**
+         * @param enabled If true, the rule will be enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled If true, the rule will be enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param lambdaActions A list of Lambda Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaActions(@Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions) {
             $.lambdaActions = lambdaActions;
             return this;
         }
 
+        /**
+         * @param lambdaActions A list of Lambda Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaActions(List<ReceiptRuleLambdaActionGetArgs> lambdaActions) {
             return lambdaActions(Output.of(lambdaActions));
         }
 
+        /**
+         * @param lambdaActions A list of Lambda Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lambdaActions(ReceiptRuleLambdaActionGetArgs... lambdaActions) {
             return lambdaActions(List.of(lambdaActions));
         }
 
+        /**
+         * @param name The name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recipients A list of email addresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipients(@Nullable Output<List<String>> recipients) {
             $.recipients = recipients;
             return this;
         }
 
+        /**
+         * @param recipients A list of email addresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipients(List<String> recipients) {
             return recipients(Output.of(recipients));
         }
 
+        /**
+         * @param recipients A list of email addresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipients(String... recipients) {
             return recipients(List.of(recipients));
         }
 
+        /**
+         * @param ruleSetName The name of the rule set
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             $.ruleSetName = ruleSetName;
             return this;
         }
 
+        /**
+         * @param ruleSetName The name of the rule set
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(String ruleSetName) {
             return ruleSetName(Output.of(ruleSetName));
         }
 
+        /**
+         * @param s3Actions A list of S3 Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Actions(@Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions) {
             $.s3Actions = s3Actions;
             return this;
         }
 
+        /**
+         * @param s3Actions A list of S3 Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Actions(List<ReceiptRuleS3ActionGetArgs> s3Actions) {
             return s3Actions(Output.of(s3Actions));
         }
 
+        /**
+         * @param s3Actions A list of S3 Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Actions(ReceiptRuleS3ActionGetArgs... s3Actions) {
             return s3Actions(List.of(s3Actions));
         }
 
+        /**
+         * @param scanEnabled If true, incoming emails will be scanned for spam and viruses
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanEnabled(@Nullable Output<Boolean> scanEnabled) {
             $.scanEnabled = scanEnabled;
             return this;
         }
 
+        /**
+         * @param scanEnabled If true, incoming emails will be scanned for spam and viruses
+         * 
+         * @return builder
+         * 
+         */
         public Builder scanEnabled(Boolean scanEnabled) {
             return scanEnabled(Output.of(scanEnabled));
         }
 
+        /**
+         * @param snsActions A list of SNS Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsActions(@Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions) {
             $.snsActions = snsActions;
             return this;
         }
 
+        /**
+         * @param snsActions A list of SNS Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsActions(List<ReceiptRuleSnsActionGetArgs> snsActions) {
             return snsActions(Output.of(snsActions));
         }
 
+        /**
+         * @param snsActions A list of SNS Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsActions(ReceiptRuleSnsActionGetArgs... snsActions) {
             return snsActions(List.of(snsActions));
         }
 
+        /**
+         * @param stopActions A list of Stop Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopActions(@Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions) {
             $.stopActions = stopActions;
             return this;
         }
 
+        /**
+         * @param stopActions A list of Stop Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopActions(List<ReceiptRuleStopActionGetArgs> stopActions) {
             return stopActions(Output.of(stopActions));
         }
 
+        /**
+         * @param stopActions A list of Stop Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stopActions(ReceiptRuleStopActionGetArgs... stopActions) {
             return stopActions(List.of(stopActions));
         }
 
+        /**
+         * @param tlsPolicy `Require` or `Optional`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsPolicy(@Nullable Output<String> tlsPolicy) {
             $.tlsPolicy = tlsPolicy;
             return this;
         }
 
+        /**
+         * @param tlsPolicy `Require` or `Optional`
+         * 
+         * @return builder
+         * 
+         */
         public Builder tlsPolicy(String tlsPolicy) {
             return tlsPolicy(Output.of(tlsPolicy));
         }
 
+        /**
+         * @param workmailActions A list of WorkMail Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workmailActions(@Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
             $.workmailActions = workmailActions;
             return this;
         }
 
+        /**
+         * @param workmailActions A list of WorkMail Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workmailActions(List<ReceiptRuleWorkmailActionGetArgs> workmailActions) {
             return workmailActions(Output.of(workmailActions));
         }
 
+        /**
+         * @param workmailActions A list of WorkMail Action blocks. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workmailActions(ReceiptRuleWorkmailActionGetArgs... workmailActions) {
             return workmailActions(List.of(workmailActions));
         }

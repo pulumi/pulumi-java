@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RouteSpecGrpcRoute {
-    /**
-     * The action to take if a match is determined.
-     * 
-     */
+        /**
+         * @return The action to take if a match is determined.
+         * 
+         */
     private final RouteSpecGrpcRouteAction action;
-    /**
-     * The criteria for determining an gRPC request match.
-     * 
-     */
+        /**
+         * @return The criteria for determining an gRPC request match.
+         * 
+         */
     private final @Nullable RouteSpecGrpcRouteMatch match;
-    /**
-     * The retry policy.
-     * 
-     */
+        /**
+         * @return The retry policy.
+         * 
+         */
     private final @Nullable RouteSpecGrpcRouteRetryPolicy retryPolicy;
-    /**
-     * The types of timeouts.
-     * 
-     */
+        /**
+         * @return The types of timeouts.
+         * 
+         */
     private final @Nullable RouteSpecGrpcRouteTimeout timeout;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class RouteSpecGrpcRoute {
     }
 
     /**
-     * The action to take if a match is determined.
+     * @return The action to take if a match is determined.
      * 
-    */
+     */
     public RouteSpecGrpcRouteAction action() {
         return this.action;
     }
     /**
-     * The criteria for determining an gRPC request match.
+     * @return The criteria for determining an gRPC request match.
      * 
-    */
+     */
     public Optional<RouteSpecGrpcRouteMatch> match() {
         return Optional.ofNullable(this.match);
     }
     /**
-     * The retry policy.
+     * @return The retry policy.
      * 
-    */
+     */
     public Optional<RouteSpecGrpcRouteRetryPolicy> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
-     * The types of timeouts.
+     * @return The types of timeouts.
      * 
-    */
+     */
     public Optional<RouteSpecGrpcRouteTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }

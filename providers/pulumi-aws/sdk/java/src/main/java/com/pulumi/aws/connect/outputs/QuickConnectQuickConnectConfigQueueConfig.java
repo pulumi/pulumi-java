@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class QuickConnectQuickConnectConfigQueueConfig {
-    /**
-     * Specifies the identifier of the contact flow.
-     * 
-     */
+        /**
+         * @return Specifies the identifier of the contact flow.
+         * 
+         */
     private final String contactFlowId;
-    /**
-     * Specifies the identifier for the queue.
-     * 
-     */
+        /**
+         * @return Specifies the identifier for the queue.
+         * 
+         */
     private final String queueId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
     }
 
     /**
-     * Specifies the identifier of the contact flow.
+     * @return Specifies the identifier of the contact flow.
      * 
-    */
+     */
     public String contactFlowId() {
         return this.contactFlowId;
     }
     /**
-     * Specifies the identifier for the queue.
+     * @return Specifies the identifier for the queue.
      * 
-    */
+     */
     public String queueId() {
         return this.queueId;
     }

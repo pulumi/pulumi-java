@@ -9,36 +9,36 @@ import java.util.Objects;
 
 @CustomType
 public final class GetStateMachineResult {
-    /**
-     * Set to the arn of the state function.
-     * 
-     */
+        /**
+         * @return Set to the arn of the state function.
+         * 
+         */
     private final String arn;
-    /**
-     * The date the state machine was created.
-     * 
-     */
+        /**
+         * @return The date the state machine was created.
+         * 
+         */
     private final String creationDate;
-    /**
-     * Set to the state machine definition.
-     * 
-     */
+        /**
+         * @return Set to the state machine definition.
+         * 
+         */
     private final String definition;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
-    /**
-     * Set to the role_arn used by the state function.
-     * 
-     */
+        /**
+         * @return Set to the role_arn used by the state function.
+         * 
+         */
     private final String roleArn;
-    /**
-     * Set to the current status of the state machine.
-     * 
-     */
+        /**
+         * @return Set to the current status of the state machine.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -60,30 +60,30 @@ public final class GetStateMachineResult {
     }
 
     /**
-     * Set to the arn of the state function.
+     * @return Set to the arn of the state function.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The date the state machine was created.
+     * @return The date the state machine was created.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Set to the state machine definition.
+     * @return Set to the state machine definition.
      * 
-    */
+     */
     public String definition() {
         return this.definition;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -91,16 +91,16 @@ public final class GetStateMachineResult {
         return this.name;
     }
     /**
-     * Set to the role_arn used by the state function.
+     * @return Set to the role_arn used by the state function.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * Set to the current status of the state machine.
+     * @return Set to the current status of the state machine.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

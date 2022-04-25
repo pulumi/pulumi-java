@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ReceiptRuleAddHeaderAction {
-    /**
-     * The name of the header to add
-     * 
-     */
+        /**
+         * @return The name of the header to add
+         * 
+         */
     private final String headerName;
-    /**
-     * The value of the header to add
-     * 
-     */
+        /**
+         * @return The value of the header to add
+         * 
+         */
     private final String headerValue;
-    /**
-     * The position of the action in the receipt rule
-     * 
-     */
+        /**
+         * @return The position of the action in the receipt rule
+         * 
+         */
     private final Integer position;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ReceiptRuleAddHeaderAction {
     }
 
     /**
-     * The name of the header to add
+     * @return The name of the header to add
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * The value of the header to add
+     * @return The value of the header to add
      * 
-    */
+     */
     public String headerValue() {
         return this.headerValue;
     }
     /**
-     * The position of the action in the receipt rule
+     * @return The position of the action in the receipt rule
      * 
-    */
+     */
     public Integer position() {
         return this.position;
     }

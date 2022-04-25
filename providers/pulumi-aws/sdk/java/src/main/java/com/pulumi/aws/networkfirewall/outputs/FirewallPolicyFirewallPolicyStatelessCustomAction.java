@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomAction {
-    /**
-     * A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
-     * 
-     */
+        /**
+         * @return A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
+         * 
+         */
     private final FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition actionDefinition;
-    /**
-     * A friendly name of the custom action.
-     * 
-     */
+        /**
+         * @return A friendly name of the custom action.
+         * 
+         */
     private final String actionName;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomAction {
     }
 
     /**
-     * A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
+     * @return A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
      * 
-    */
+     */
     public FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition actionDefinition() {
         return this.actionDefinition;
     }
     /**
-     * A friendly name of the custom action.
+     * @return A friendly name of the custom action.
      * 
-    */
+     */
     public String actionName() {
         return this.actionName;
     }

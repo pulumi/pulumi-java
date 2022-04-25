@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GatewayRouteSpecHttpRouteMatch {
-    /**
-     * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
-     * 
-     */
+        /**
+         * @return Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
+         * 
+         */
     private final String prefix;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GatewayRouteSpecHttpRouteMatch {
     }
 
     /**
-     * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
+     * @return Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
      * 
-    */
+     */
     public String prefix() {
         return this.prefix;
     }

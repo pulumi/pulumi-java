@@ -24,6 +24,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the build
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -35,6 +39,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem", required=true)
     private Output<String> operatingSystem;
 
+    /**
+     * @return Operating system that the game server binaries are built to run onE.g., `WINDOWS_2012`, `AMAZON_LINUX` or `AMAZON_LINUX_2`.
+     * 
+     */
     public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
@@ -46,6 +54,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
     private Output<BuildStorageLocationArgs> storageLocation;
 
+    /**
+     * @return Information indicating where your game build files are stored. See below.
+     * 
+     */
     public Output<BuildStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
@@ -57,6 +69,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -68,6 +84,10 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version that is associated with this build.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -100,47 +120,107 @@ public final class BuildArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BuildArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the build
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the build
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param operatingSystem Operating system that the game server binaries are built to run onE.g., `WINDOWS_2012`, `AMAZON_LINUX` or `AMAZON_LINUX_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(Output<String> operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
 
+        /**
+         * @param operatingSystem Operating system that the game server binaries are built to run onE.g., `WINDOWS_2012`, `AMAZON_LINUX` or `AMAZON_LINUX_2`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(String operatingSystem) {
             return operatingSystem(Output.of(operatingSystem));
         }
 
+        /**
+         * @param storageLocation Information indicating where your game build files are stored. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocation(Output<BuildStorageLocationArgs> storageLocation) {
             $.storageLocation = storageLocation;
             return this;
         }
 
+        /**
+         * @param storageLocation Information indicating where your game build files are stored. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocation(BuildStorageLocationArgs storageLocation) {
             return storageLocation(Output.of(storageLocation));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param version Version that is associated with this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version that is associated with this build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

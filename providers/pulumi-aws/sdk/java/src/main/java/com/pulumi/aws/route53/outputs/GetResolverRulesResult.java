@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResolverRulesResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String ownerId;
     private final @Nullable String resolverEndpointId;
-    /**
-     * The IDs of the matched resolver rules.
-     * 
-     */
+        /**
+         * @return The IDs of the matched resolver rules.
+         * 
+         */
     private final List<String> resolverRuleIds;
     private final @Nullable String ruleType;
     private final @Nullable String shareStatus;
@@ -44,9 +44,9 @@ public final class GetResolverRulesResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -57,9 +57,9 @@ public final class GetResolverRulesResult {
         return Optional.ofNullable(this.resolverEndpointId);
     }
     /**
-     * The IDs of the matched resolver rules.
+     * @return The IDs of the matched resolver rules.
      * 
-    */
+     */
     public List<String> resolverRuleIds() {
         return this.resolverRuleIds;
     }

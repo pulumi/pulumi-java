@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainScalingParameters {
-    /**
-     * The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
-     * 
-     */
+        /**
+         * @return The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
+         * 
+         */
     private final @Nullable String desiredInstanceType;
-    /**
-     * The number of partitions you want to preconfigure for your domain. Only valid when you select `search.2xlarge` as the instance type.
-     * 
-     */
+        /**
+         * @return The number of partitions you want to preconfigure for your domain. Only valid when you select `search.2xlarge` as the instance type.
+         * 
+         */
     private final @Nullable Integer desiredPartitionCount;
-    /**
-     * The number of replicas you want to preconfigure for each index partition.
-     * 
-     */
+        /**
+         * @return The number of replicas you want to preconfigure for each index partition.
+         * 
+         */
     private final @Nullable Integer desiredReplicationCount;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DomainScalingParameters {
     }
 
     /**
-     * The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
+     * @return The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
      * 
-    */
+     */
     public Optional<String> desiredInstanceType() {
         return Optional.ofNullable(this.desiredInstanceType);
     }
     /**
-     * The number of partitions you want to preconfigure for your domain. Only valid when you select `search.2xlarge` as the instance type.
+     * @return The number of partitions you want to preconfigure for your domain. Only valid when you select `search.2xlarge` as the instance type.
      * 
-    */
+     */
     public Optional<Integer> desiredPartitionCount() {
         return Optional.ofNullable(this.desiredPartitionCount);
     }
     /**
-     * The number of replicas you want to preconfigure for each index partition.
+     * @return The number of replicas you want to preconfigure for each index partition.
      * 
-    */
+     */
     public Optional<Integer> desiredReplicationCount() {
         return Optional.ofNullable(this.desiredReplicationCount);
     }

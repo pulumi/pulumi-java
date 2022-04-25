@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDnsNamespaceResult {
-    /**
-     * The Amazon Resource Name (ARN) of the namespace.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the namespace.
+         * 
+         */
     private final String arn;
-    /**
-     * A description of the namespace.
-     * 
-     */
+        /**
+         * @return A description of the namespace.
+         * 
+         */
     private final String description;
-    /**
-     * The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
-     * 
-     */
+        /**
+         * @return The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
+         * 
+         */
     private final String hostedZone;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String type;
@@ -49,30 +49,30 @@ public final class GetDnsNamespaceResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the namespace.
+     * @return The Amazon Resource Name (ARN) of the namespace.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * A description of the namespace.
+     * @return A description of the namespace.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
+     * @return The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
      * 
-    */
+     */
     public String hostedZone() {
         return this.hostedZone;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -11,22 +11,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterParameterGroupParameter {
-    /**
-     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
-     * engines can&#39;t apply some parameters without a reboot, and you will need to
-     * specify &#34;pending-reboot&#34; here.
-     * 
-     */
+        /**
+         * @return &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+         * engines can&#39;t apply some parameters without a reboot, and you will need to
+         * specify &#34;pending-reboot&#34; here.
+         * 
+         */
     private final @Nullable String applyMethod;
-    /**
-     * The name of the DB parameter.
-     * 
-     */
+        /**
+         * @return The name of the DB parameter.
+         * 
+         */
     private final String name;
-    /**
-     * The value of the DB parameter.
-     * 
-     */
+        /**
+         * @return The value of the DB parameter.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -40,25 +40,25 @@ public final class ClusterParameterGroupParameter {
     }
 
     /**
-     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+     * @return &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
      * engines can&#39;t apply some parameters without a reboot, and you will need to
      * specify &#34;pending-reboot&#34; here.
      * 
-    */
+     */
     public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
-     * The name of the DB parameter.
+     * @return The name of the DB parameter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the DB parameter.
+     * @return The value of the DB parameter.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

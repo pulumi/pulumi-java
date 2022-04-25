@@ -34,6 +34,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN for this Auto Scaling Group
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -45,6 +49,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
+    /**
+     * @return A list of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
+     * 
+     */
     public Optional<Output<List<String>>> availabilityZones() {
         return Optional.ofNullable(this.availabilityZones);
     }
@@ -56,6 +64,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityRebalance")
     private @Nullable Output<Boolean> capacityRebalance;
 
+    /**
+     * @return Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
+     * 
+     */
     public Optional<Output<Boolean>> capacityRebalance() {
         return Optional.ofNullable(this.capacityRebalance);
     }
@@ -67,6 +79,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultCooldown")
     private @Nullable Output<Integer> defaultCooldown;
 
+    /**
+     * @return The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
+     * 
+     */
     public Optional<Output<Integer>> defaultCooldown() {
         return Optional.ofNullable(this.defaultCooldown);
     }
@@ -80,6 +96,12 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
     private @Nullable Output<Integer> desiredCapacity;
 
+    /**
+     * @return The number of Amazon EC2 instances that
+     * should be running in the group. (See also Waiting for
+     * Capacity below.)
+     * 
+     */
     public Optional<Output<Integer>> desiredCapacity() {
         return Optional.ofNullable(this.desiredCapacity);
     }
@@ -91,6 +113,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledMetrics")
     private @Nullable Output<List<String>> enabledMetrics;
 
+    /**
+     * @return A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
+     * 
+     */
     public Optional<Output<List<String>>> enabledMetrics() {
         return Optional.ofNullable(this.enabledMetrics);
     }
@@ -106,6 +132,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
     private @Nullable Output<Boolean> forceDelete;
 
+    /**
+     * @return Allows deleting the Auto Scaling Group without waiting
+     * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
+     * even if it&#39;s in the process of scaling a resource. Normally, this provider
+     * drains all the instances before deleting the group.  This bypasses that
+     * behavior and potentially leaves resources dangling.
+     * 
+     */
     public Optional<Output<Boolean>> forceDelete() {
         return Optional.ofNullable(this.forceDelete);
     }
@@ -124,6 +158,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckGracePeriod")
     private @Nullable Output<Integer> healthCheckGracePeriod;
 
+    /**
+     * @return Time (in seconds) after instance comes into service before checking health.
+     * 
+     */
     public Optional<Output<Integer>> healthCheckGracePeriod() {
         return Optional.ofNullable(this.healthCheckGracePeriod);
     }
@@ -135,6 +173,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckType")
     private @Nullable Output<String> healthCheckType;
 
+    /**
+     * @return &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
+     * 
+     */
     public Optional<Output<String>> healthCheckType() {
         return Optional.ofNullable(this.healthCheckType);
     }
@@ -152,6 +194,16 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialLifecycleHooks")
     private @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
 
+    /**
+     * @return One or more
+     * [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
+     * to attach to the Auto Scaling Group **before** instances are launched. The
+     * syntax is exactly the same as the separate
+     * `aws.autoscaling.LifecycleHook`
+     * resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
+     * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+     * 
+     */
     public Optional<Output<List<GroupInitialLifecycleHookGetArgs>>> initialLifecycleHooks() {
         return Optional.ofNullable(this.initialLifecycleHooks);
     }
@@ -165,6 +217,12 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceRefresh")
     private @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
 
+    /**
+     * @return If this block is configured, start an
+     * [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+     * when this Auto Scaling Group is updated. Defined below.
+     * 
+     */
     public Optional<Output<GroupInstanceRefreshGetArgs>> instanceRefresh() {
         return Optional.ofNullable(this.instanceRefresh);
     }
@@ -176,6 +234,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchConfiguration")
     private @Nullable Output<String> launchConfiguration;
 
+    /**
+     * @return The name of the launch configuration to use.
+     * 
+     */
     public Optional<Output<String>> launchConfiguration() {
         return Optional.ofNullable(this.launchConfiguration);
     }
@@ -187,6 +249,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchTemplate")
     private @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
 
+    /**
+     * @return Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+     * 
+     */
     public Optional<Output<GroupLaunchTemplateGetArgs>> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
@@ -199,6 +265,11 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
     private @Nullable Output<List<String>> loadBalancers;
 
+    /**
+     * @return A list of elastic load balancer names to add to the autoscaling
+     * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
+     * 
+     */
     public Optional<Output<List<String>>> loadBalancers() {
         return Optional.ofNullable(this.loadBalancers);
     }
@@ -210,6 +281,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxInstanceLifetime")
     private @Nullable Output<Integer> maxInstanceLifetime;
 
+    /**
+     * @return The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
+     * 
+     */
     public Optional<Output<Integer>> maxInstanceLifetime() {
         return Optional.ofNullable(this.maxInstanceLifetime);
     }
@@ -221,6 +296,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
     private @Nullable Output<Integer> maxSize;
 
+    /**
+     * @return The maximum size of the Auto Scaling Group.
+     * 
+     */
     public Optional<Output<Integer>> maxSize() {
         return Optional.ofNullable(this.maxSize);
     }
@@ -232,6 +311,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metricsGranularity")
     private @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
+    /**
+     * @return The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
+     * 
+     */
     public Optional<Output<Either<String,MetricsGranularity>>> metricsGranularity() {
         return Optional.ofNullable(this.metricsGranularity);
     }
@@ -246,6 +329,13 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minElbCapacity")
     private @Nullable Output<Integer> minElbCapacity;
 
+    /**
+     * @return Setting this causes the provider to wait for
+     * this number of instances from this Auto Scaling Group to show up healthy in the
+     * ELB only on creation. Updates will not wait on ELB instance number changes.
+     * (See also Waiting for Capacity below.)
+     * 
+     */
     public Optional<Output<Integer>> minElbCapacity() {
         return Optional.ofNullable(this.minElbCapacity);
     }
@@ -257,6 +347,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
     private @Nullable Output<Integer> minSize;
 
+    /**
+     * @return Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+     * 
+     */
     public Optional<Output<Integer>> minSize() {
         return Optional.ofNullable(this.minSize);
     }
@@ -268,6 +362,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mixedInstancesPolicy")
     private @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
 
+    /**
+     * @return Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
+     * 
+     */
     public Optional<Output<GroupMixedInstancesPolicyGetArgs>> mixedInstancesPolicy() {
         return Optional.ofNullable(this.mixedInstancesPolicy);
     }
@@ -279,6 +377,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Auto Scaling Group. By default generated by this provider. Conflicts with `name_prefix`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -291,6 +393,11 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified
+     * prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -302,6 +409,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="placementGroup")
     private @Nullable Output<String> placementGroup;
 
+    /**
+     * @return The name of the placement group into which you&#39;ll launch your instances, if any.
+     * 
+     */
     public Optional<Output<String>> placementGroup() {
         return Optional.ofNullable(this.placementGroup);
     }
@@ -315,6 +426,12 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="protectFromScaleIn")
     private @Nullable Output<Boolean> protectFromScaleIn;
 
+    /**
+     * @return Allows setting instance protection. The
+     * Auto Scaling Group will not select instances with this setting for termination
+     * during scale in events.
+     * 
+     */
     public Optional<Output<Boolean>> protectFromScaleIn() {
         return Optional.ofNullable(this.protectFromScaleIn);
     }
@@ -326,6 +443,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceLinkedRoleArn")
     private @Nullable Output<String> serviceLinkedRoleArn;
 
+    /**
+     * @return The ARN of the service-linked role that the ASG will use to call other AWS services
+     * 
+     */
     public Optional<Output<String>> serviceLinkedRoleArn() {
         return Optional.ofNullable(this.serviceLinkedRoleArn);
     }
@@ -338,6 +459,11 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="suspendedProcesses")
     private @Nullable Output<List<String>> suspendedProcesses;
 
+    /**
+     * @return A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+     * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
+     * 
+     */
     public Optional<Output<List<String>>> suspendedProcesses() {
         return Optional.ofNullable(this.suspendedProcesses);
     }
@@ -349,6 +475,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<GroupTagGetArgs>> tags;
 
+    /**
+     * @return Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+     * 
+     */
     public Optional<Output<List<GroupTagGetArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -360,6 +490,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsCollection")
     private @Nullable Output<List<Map<String,String>>> tagsCollection;
 
+    /**
+     * @return Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+     * 
+     */
     public Optional<Output<List<Map<String,String>>>> tagsCollection() {
         return Optional.ofNullable(this.tagsCollection);
     }
@@ -371,6 +505,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetGroupArns")
     private @Nullable Output<List<String>> targetGroupArns;
 
+    /**
+     * @return A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+     * 
+     */
     public Optional<Output<List<String>>> targetGroupArns() {
         return Optional.ofNullable(this.targetGroupArns);
     }
@@ -382,6 +520,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="terminationPolicies")
     private @Nullable Output<List<String>> terminationPolicies;
 
+    /**
+     * @return A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+     * 
+     */
     public Optional<Output<List<String>>> terminationPolicies() {
         return Optional.ofNullable(this.terminationPolicies);
     }
@@ -393,6 +535,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcZoneIdentifiers")
     private @Nullable Output<List<String>> vpcZoneIdentifiers;
 
+    /**
+     * @return A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
+     * 
+     */
     public Optional<Output<List<String>>> vpcZoneIdentifiers() {
         return Optional.ofNullable(this.vpcZoneIdentifiers);
     }
@@ -408,6 +554,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForCapacityTimeout")
     private @Nullable Output<String> waitForCapacityTimeout;
 
+    /**
+     * @return A maximum
+     * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+     * wait for ASG instances to be healthy before timing out.  (See also Waiting
+     * for Capacity below.) Setting this to &#34;0&#34; causes
+     * this provider to skip all Capacity Waiting behavior.
+     * 
+     */
     public Optional<Output<String>> waitForCapacityTimeout() {
         return Optional.ofNullable(this.waitForCapacityTimeout);
     }
@@ -423,6 +577,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForElbCapacity")
     private @Nullable Output<Integer> waitForElbCapacity;
 
+    /**
+     * @return Setting this will cause the provider to wait
+     * for exactly this number of healthy instances from this Auto Scaling Group in
+     * all attached load balancers on both create and update operations. (Takes
+     * precedence over `min_elb_capacity` behavior.)
+     * (See also Waiting for Capacity below.)
+     * 
+     */
     public Optional<Output<Integer>> waitForElbCapacity() {
         return Optional.ofNullable(this.waitForElbCapacity);
     }
@@ -435,6 +597,11 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     @Import(name="warmPool")
     private @Nullable Output<GroupWarmPoolGetArgs> warmPool;
 
+    /**
+     * @return If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+     * to the specified Auto Scaling group. Defined below
+     * 
+     */
     public Optional<Output<GroupWarmPoolGetArgs>> warmPool() {
         return Optional.ofNullable(this.warmPool);
     }
@@ -497,73 +664,181 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
             $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN for this Auto Scaling Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN for this Auto Scaling Group
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param availabilityZones A list of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones A list of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(List<String> availabilityZones) {
             return availabilityZones(Output.of(availabilityZones));
         }
 
+        /**
+         * @param availabilityZones A list of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param capacityRebalance Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityRebalance(@Nullable Output<Boolean> capacityRebalance) {
             $.capacityRebalance = capacityRebalance;
             return this;
         }
 
+        /**
+         * @param capacityRebalance Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityRebalance(Boolean capacityRebalance) {
             return capacityRebalance(Output.of(capacityRebalance));
         }
 
+        /**
+         * @param defaultCooldown The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCooldown(@Nullable Output<Integer> defaultCooldown) {
             $.defaultCooldown = defaultCooldown;
             return this;
         }
 
+        /**
+         * @param defaultCooldown The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultCooldown(Integer defaultCooldown) {
             return defaultCooldown(Output.of(defaultCooldown));
         }
 
+        /**
+         * @param desiredCapacity The number of Amazon EC2 instances that
+         * should be running in the group. (See also Waiting for
+         * Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
             $.desiredCapacity = desiredCapacity;
             return this;
         }
 
+        /**
+         * @param desiredCapacity The number of Amazon EC2 instances that
+         * should be running in the group. (See also Waiting for
+         * Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredCapacity(Integer desiredCapacity) {
             return desiredCapacity(Output.of(desiredCapacity));
         }
 
+        /**
+         * @param enabledMetrics A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledMetrics(@Nullable Output<List<String>> enabledMetrics) {
             $.enabledMetrics = enabledMetrics;
             return this;
         }
 
+        /**
+         * @param enabledMetrics A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledMetrics(List<String> enabledMetrics) {
             return enabledMetrics(Output.of(enabledMetrics));
         }
 
+        /**
+         * @param enabledMetrics A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledMetrics(String... enabledMetrics) {
             return enabledMetrics(List.of(enabledMetrics));
         }
 
+        /**
+         * @param forceDelete Allows deleting the Auto Scaling Group without waiting
+         * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
+         * even if it&#39;s in the process of scaling a resource. Normally, this provider
+         * drains all the instances before deleting the group.  This bypasses that
+         * behavior and potentially leaves resources dangling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
             $.forceDelete = forceDelete;
             return this;
         }
 
+        /**
+         * @param forceDelete Allows deleting the Auto Scaling Group without waiting
+         * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
+         * even if it&#39;s in the process of scaling a resource. Normally, this provider
+         * drains all the instances before deleting the group.  This bypasses that
+         * behavior and potentially leaves resources dangling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceDelete(Boolean forceDelete) {
             return forceDelete(Output.of(forceDelete));
         }
@@ -577,285 +852,727 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
             return forceDeleteWarmPool(Output.of(forceDeleteWarmPool));
         }
 
+        /**
+         * @param healthCheckGracePeriod Time (in seconds) after instance comes into service before checking health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckGracePeriod(@Nullable Output<Integer> healthCheckGracePeriod) {
             $.healthCheckGracePeriod = healthCheckGracePeriod;
             return this;
         }
 
+        /**
+         * @param healthCheckGracePeriod Time (in seconds) after instance comes into service before checking health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckGracePeriod(Integer healthCheckGracePeriod) {
             return healthCheckGracePeriod(Output.of(healthCheckGracePeriod));
         }
 
+        /**
+         * @param healthCheckType &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckType(@Nullable Output<String> healthCheckType) {
             $.healthCheckType = healthCheckType;
             return this;
         }
 
+        /**
+         * @param healthCheckType &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckType(String healthCheckType) {
             return healthCheckType(Output.of(healthCheckType));
         }
 
+        /**
+         * @param initialLifecycleHooks One or more
+         * [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
+         * to attach to the Auto Scaling Group **before** instances are launched. The
+         * syntax is exactly the same as the separate
+         * `aws.autoscaling.LifecycleHook`
+         * resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
+         * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
             $.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
 
+        /**
+         * @param initialLifecycleHooks One or more
+         * [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
+         * to attach to the Auto Scaling Group **before** instances are launched. The
+         * syntax is exactly the same as the separate
+         * `aws.autoscaling.LifecycleHook`
+         * resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
+         * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialLifecycleHooks(List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
             return initialLifecycleHooks(Output.of(initialLifecycleHooks));
         }
 
+        /**
+         * @param initialLifecycleHooks One or more
+         * [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
+         * to attach to the Auto Scaling Group **before** instances are launched. The
+         * syntax is exactly the same as the separate
+         * `aws.autoscaling.LifecycleHook`
+         * resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
+         * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialLifecycleHooks(GroupInitialLifecycleHookGetArgs... initialLifecycleHooks) {
             return initialLifecycleHooks(List.of(initialLifecycleHooks));
         }
 
+        /**
+         * @param instanceRefresh If this block is configured, start an
+         * [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+         * when this Auto Scaling Group is updated. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRefresh(@Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh) {
             $.instanceRefresh = instanceRefresh;
             return this;
         }
 
+        /**
+         * @param instanceRefresh If this block is configured, start an
+         * [Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+         * when this Auto Scaling Group is updated. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceRefresh(GroupInstanceRefreshGetArgs instanceRefresh) {
             return instanceRefresh(Output.of(instanceRefresh));
         }
 
+        /**
+         * @param launchConfiguration The name of the launch configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchConfiguration(@Nullable Output<String> launchConfiguration) {
             $.launchConfiguration = launchConfiguration;
             return this;
         }
 
+        /**
+         * @param launchConfiguration The name of the launch configuration to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchConfiguration(String launchConfiguration) {
             return launchConfiguration(Output.of(launchConfiguration));
         }
 
+        /**
+         * @param launchTemplate Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(@Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate) {
             $.launchTemplate = launchTemplate;
             return this;
         }
 
+        /**
+         * @param launchTemplate Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchTemplate(GroupLaunchTemplateGetArgs launchTemplate) {
             return launchTemplate(Output.of(launchTemplate));
         }
 
+        /**
+         * @param loadBalancers A list of elastic load balancer names to add to the autoscaling
+         * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
             $.loadBalancers = loadBalancers;
             return this;
         }
 
+        /**
+         * @param loadBalancers A list of elastic load balancer names to add to the autoscaling
+         * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(List<String> loadBalancers) {
             return loadBalancers(Output.of(loadBalancers));
         }
 
+        /**
+         * @param loadBalancers A list of elastic load balancer names to add to the autoscaling
+         * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancers(String... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
 
+        /**
+         * @param maxInstanceLifetime The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceLifetime(@Nullable Output<Integer> maxInstanceLifetime) {
             $.maxInstanceLifetime = maxInstanceLifetime;
             return this;
         }
 
+        /**
+         * @param maxInstanceLifetime The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxInstanceLifetime(Integer maxInstanceLifetime) {
             return maxInstanceLifetime(Output.of(maxInstanceLifetime));
         }
 
+        /**
+         * @param maxSize The maximum size of the Auto Scaling Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param maxSize The maximum size of the Auto Scaling Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Integer maxSize) {
             return maxSize(Output.of(maxSize));
         }
 
+        /**
+         * @param metricsGranularity The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsGranularity(@Nullable Output<Either<String,MetricsGranularity>> metricsGranularity) {
             $.metricsGranularity = metricsGranularity;
             return this;
         }
 
+        /**
+         * @param metricsGranularity The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsGranularity(Either<String,MetricsGranularity> metricsGranularity) {
             return metricsGranularity(Output.of(metricsGranularity));
         }
 
+        /**
+         * @param metricsGranularity The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsGranularity(String metricsGranularity) {
             return metricsGranularity(Either.ofLeft(metricsGranularity));
         }
 
+        /**
+         * @param metricsGranularity The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricsGranularity(MetricsGranularity metricsGranularity) {
             return metricsGranularity(Either.ofRight(metricsGranularity));
         }
 
+        /**
+         * @param minElbCapacity Setting this causes the provider to wait for
+         * this number of instances from this Auto Scaling Group to show up healthy in the
+         * ELB only on creation. Updates will not wait on ELB instance number changes.
+         * (See also Waiting for Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
             $.minElbCapacity = minElbCapacity;
             return this;
         }
 
+        /**
+         * @param minElbCapacity Setting this causes the provider to wait for
+         * this number of instances from this Auto Scaling Group to show up healthy in the
+         * ELB only on creation. Updates will not wait on ELB instance number changes.
+         * (See also Waiting for Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder minElbCapacity(Integer minElbCapacity) {
             return minElbCapacity(Output.of(minElbCapacity));
         }
 
+        /**
+         * @param minSize Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(@Nullable Output<Integer> minSize) {
             $.minSize = minSize;
             return this;
         }
 
+        /**
+         * @param minSize Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Integer minSize) {
             return minSize(Output.of(minSize));
         }
 
+        /**
+         * @param mixedInstancesPolicy Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mixedInstancesPolicy(@Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
             $.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
 
+        /**
+         * @param mixedInstancesPolicy Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mixedInstancesPolicy(GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
             return mixedInstancesPolicy(Output.of(mixedInstancesPolicy));
         }
 
+        /**
+         * @param name The name of the Auto Scaling Group. By default generated by this provider. Conflicts with `name_prefix`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Auto Scaling Group. By default generated by this provider. Conflicts with `name_prefix`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified
+         * prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param placementGroup The name of the placement group into which you&#39;ll launch your instances, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
             $.placementGroup = placementGroup;
             return this;
         }
 
+        /**
+         * @param placementGroup The name of the placement group into which you&#39;ll launch your instances, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementGroup(String placementGroup) {
             return placementGroup(Output.of(placementGroup));
         }
 
+        /**
+         * @param protectFromScaleIn Allows setting instance protection. The
+         * Auto Scaling Group will not select instances with this setting for termination
+         * during scale in events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleIn(@Nullable Output<Boolean> protectFromScaleIn) {
             $.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
+        /**
+         * @param protectFromScaleIn Allows setting instance protection. The
+         * Auto Scaling Group will not select instances with this setting for termination
+         * during scale in events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleIn(Boolean protectFromScaleIn) {
             return protectFromScaleIn(Output.of(protectFromScaleIn));
         }
 
+        /**
+         * @param serviceLinkedRoleArn The ARN of the service-linked role that the ASG will use to call other AWS services
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLinkedRoleArn(@Nullable Output<String> serviceLinkedRoleArn) {
             $.serviceLinkedRoleArn = serviceLinkedRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceLinkedRoleArn The ARN of the service-linked role that the ASG will use to call other AWS services
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLinkedRoleArn(String serviceLinkedRoleArn) {
             return serviceLinkedRoleArn(Output.of(serviceLinkedRoleArn));
         }
 
+        /**
+         * @param suspendedProcesses A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+         * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendedProcesses(@Nullable Output<List<String>> suspendedProcesses) {
             $.suspendedProcesses = suspendedProcesses;
             return this;
         }
 
+        /**
+         * @param suspendedProcesses A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+         * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendedProcesses(List<String> suspendedProcesses) {
             return suspendedProcesses(Output.of(suspendedProcesses));
         }
 
+        /**
+         * @param suspendedProcesses A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+         * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendedProcesses(String... suspendedProcesses) {
             return suspendedProcesses(List.of(suspendedProcesses));
         }
 
+        /**
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<GroupTagGetArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<GroupTagGetArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(GroupTagGetArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsCollection(@Nullable Output<List<Map<String,String>>> tagsCollection) {
             $.tagsCollection = tagsCollection;
             return this;
         }
 
+        /**
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsCollection(List<Map<String,String>> tagsCollection) {
             return tagsCollection(Output.of(tagsCollection));
         }
 
+        /**
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsCollection(Map<String,String>... tagsCollection) {
             return tagsCollection(List.of(tagsCollection));
         }
 
+        /**
+         * @param targetGroupArns A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
             $.targetGroupArns = targetGroupArns;
             return this;
         }
 
+        /**
+         * @param targetGroupArns A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupArns(List<String> targetGroupArns) {
             return targetGroupArns(Output.of(targetGroupArns));
         }
 
+        /**
+         * @param targetGroupArns A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroupArns(String... targetGroupArns) {
             return targetGroupArns(List.of(targetGroupArns));
         }
 
+        /**
+         * @param terminationPolicies A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationPolicies(@Nullable Output<List<String>> terminationPolicies) {
             $.terminationPolicies = terminationPolicies;
             return this;
         }
 
+        /**
+         * @param terminationPolicies A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationPolicies(List<String> terminationPolicies) {
             return terminationPolicies(Output.of(terminationPolicies));
         }
 
+        /**
+         * @param terminationPolicies A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminationPolicies(String... terminationPolicies) {
             return terminationPolicies(List.of(terminationPolicies));
         }
 
+        /**
+         * @param vpcZoneIdentifiers A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcZoneIdentifiers(@Nullable Output<List<String>> vpcZoneIdentifiers) {
             $.vpcZoneIdentifiers = vpcZoneIdentifiers;
             return this;
         }
 
+        /**
+         * @param vpcZoneIdentifiers A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcZoneIdentifiers(List<String> vpcZoneIdentifiers) {
             return vpcZoneIdentifiers(Output.of(vpcZoneIdentifiers));
         }
 
+        /**
+         * @param vpcZoneIdentifiers A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcZoneIdentifiers(String... vpcZoneIdentifiers) {
             return vpcZoneIdentifiers(List.of(vpcZoneIdentifiers));
         }
 
+        /**
+         * @param waitForCapacityTimeout A maximum
+         * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+         * wait for ASG instances to be healthy before timing out.  (See also Waiting
+         * for Capacity below.) Setting this to &#34;0&#34; causes
+         * this provider to skip all Capacity Waiting behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForCapacityTimeout(@Nullable Output<String> waitForCapacityTimeout) {
             $.waitForCapacityTimeout = waitForCapacityTimeout;
             return this;
         }
 
+        /**
+         * @param waitForCapacityTimeout A maximum
+         * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
+         * wait for ASG instances to be healthy before timing out.  (See also Waiting
+         * for Capacity below.) Setting this to &#34;0&#34; causes
+         * this provider to skip all Capacity Waiting behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForCapacityTimeout(String waitForCapacityTimeout) {
             return waitForCapacityTimeout(Output.of(waitForCapacityTimeout));
         }
 
+        /**
+         * @param waitForElbCapacity Setting this will cause the provider to wait
+         * for exactly this number of healthy instances from this Auto Scaling Group in
+         * all attached load balancers on both create and update operations. (Takes
+         * precedence over `min_elb_capacity` behavior.)
+         * (See also Waiting for Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForElbCapacity(@Nullable Output<Integer> waitForElbCapacity) {
             $.waitForElbCapacity = waitForElbCapacity;
             return this;
         }
 
+        /**
+         * @param waitForElbCapacity Setting this will cause the provider to wait
+         * for exactly this number of healthy instances from this Auto Scaling Group in
+         * all attached load balancers on both create and update operations. (Takes
+         * precedence over `min_elb_capacity` behavior.)
+         * (See also Waiting for Capacity below.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForElbCapacity(Integer waitForElbCapacity) {
             return waitForElbCapacity(Output.of(waitForElbCapacity));
         }
 
+        /**
+         * @param warmPool If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+         * to the specified Auto Scaling group. Defined below
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmPool(@Nullable Output<GroupWarmPoolGetArgs> warmPool) {
             $.warmPool = warmPool;
             return this;
         }
 
+        /**
+         * @param warmPool If this block is configured, add a [Warm Pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html)
+         * to the specified Auto Scaling group. Defined below
+         * 
+         * @return builder
+         * 
+         */
         public Builder warmPool(GroupWarmPoolGetArgs warmPool) {
             return warmPool(Output.of(warmPool));
         }

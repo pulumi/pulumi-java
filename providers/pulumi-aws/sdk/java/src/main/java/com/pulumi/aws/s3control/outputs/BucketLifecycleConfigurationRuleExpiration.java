@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketLifecycleConfigurationRuleExpiration {
-    /**
-     * Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
-     * 
-     */
+        /**
+         * @return Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
+         * 
+         */
     private final @Nullable String date;
-    /**
-     * Number of days before the object is to be deleted.
-     * 
-     */
+        /**
+         * @return Number of days before the object is to be deleted.
+         * 
+         */
     private final @Nullable Integer days;
-    /**
-     * Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
-     * 
-     */
+        /**
+         * @return Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
+         * 
+         */
     private final @Nullable Boolean expiredObjectDeleteMarker;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class BucketLifecycleConfigurationRuleExpiration {
     }
 
     /**
-     * Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
+     * @return Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
      * 
-    */
+     */
     public Optional<String> date() {
         return Optional.ofNullable(this.date);
     }
     /**
-     * Number of days before the object is to be deleted.
+     * @return Number of days before the object is to be deleted.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
+     * @return Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
      * 
-    */
+     */
     public Optional<Boolean> expiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }

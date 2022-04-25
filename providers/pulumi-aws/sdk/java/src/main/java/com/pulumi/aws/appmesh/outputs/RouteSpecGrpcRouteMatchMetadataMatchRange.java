@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RouteSpecGrpcRouteMatchMetadataMatchRange {
-    /**
-     * The end of the range.
-     * 
-     */
+        /**
+         * @return The end of the range.
+         * 
+         */
     private final Integer end;
-    /**
-     * The start of the range.
-     * 
-     */
+        /**
+         * @return The start of the range.
+         * 
+         */
     private final Integer start;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRange {
     }
 
     /**
-     * The end of the range.
+     * @return The end of the range.
      * 
-    */
+     */
     public Integer end() {
         return this.end;
     }
     /**
-     * The start of the range.
+     * @return The start of the range.
      * 
-    */
+     */
     public Integer start() {
         return this.start;
     }

@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContactFlowResult {
-    /**
-     * The Amazon Resource Name (ARN) of the Contact Flow.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Contact Flow.
+         * 
+         */
     private final String arn;
     private final String contactFlowId;
-    /**
-     * Specifies the logic of the Contact Flow.
-     * 
-     */
+        /**
+         * @return Specifies the logic of the Contact Flow.
+         * 
+         */
     private final String content;
-    /**
-     * Specifies the description of the Contact Flow.
-     * 
-     */
+        /**
+         * @return Specifies the description of the Contact Flow.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instanceId;
     private final String name;
-    /**
-     * A the map of tags to assign to the Contact Flow.
-     * 
-     */
+        /**
+         * @return A the map of tags to assign to the Contact Flow.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Specifies the type of Contact Flow.
-     * 
-     */
+        /**
+         * @return Specifies the type of Contact Flow.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -69,9 +69,9 @@ public final class GetContactFlowResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Contact Flow.
+     * @return The Amazon Resource Name (ARN) of the Contact Flow.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -79,23 +79,23 @@ public final class GetContactFlowResult {
         return this.contactFlowId;
     }
     /**
-     * Specifies the logic of the Contact Flow.
+     * @return Specifies the logic of the Contact Flow.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * Specifies the description of the Contact Flow.
+     * @return Specifies the description of the Contact Flow.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -106,16 +106,16 @@ public final class GetContactFlowResult {
         return this.name;
     }
     /**
-     * A the map of tags to assign to the Contact Flow.
+     * @return A the map of tags to assign to the Contact Flow.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Specifies the type of Contact Flow.
+     * @return Specifies the type of Contact Flow.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

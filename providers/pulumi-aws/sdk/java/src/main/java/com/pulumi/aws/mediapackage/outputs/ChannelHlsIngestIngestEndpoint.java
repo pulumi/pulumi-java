@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ChannelHlsIngestIngestEndpoint {
-    /**
-     * The password
-     * 
-     */
+        /**
+         * @return The password
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The URL
-     * 
-     */
+        /**
+         * @return The URL
+         * 
+         */
     private final @Nullable String url;
-    /**
-     * The username
-     * 
-     */
+        /**
+         * @return The username
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ChannelHlsIngestIngestEndpoint {
     }
 
     /**
-     * The password
+     * @return The password
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The URL
+     * @return The URL
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
     /**
-     * The username
+     * @return The username
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

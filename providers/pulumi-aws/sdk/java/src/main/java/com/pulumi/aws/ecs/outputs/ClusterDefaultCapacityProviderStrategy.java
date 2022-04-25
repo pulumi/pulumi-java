@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterDefaultCapacityProviderStrategy {
-    /**
-     * The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
-     * 
-     */
+        /**
+         * @return The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+         * 
+         */
     private final @Nullable Integer base;
-    /**
-     * The short name of the capacity provider.
-     * 
-     */
+        /**
+         * @return The short name of the capacity provider.
+         * 
+         */
     private final String capacityProvider;
-    /**
-     * The relative percentage of the total number of launched tasks that should use the specified capacity provider.
-     * 
-     */
+        /**
+         * @return The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+         * 
+         */
     private final @Nullable Integer weight;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ClusterDefaultCapacityProviderStrategy {
     }
 
     /**
-     * The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
+     * @return The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
      * 
-    */
+     */
     public Optional<Integer> base() {
         return Optional.ofNullable(this.base);
     }
     /**
-     * The short name of the capacity provider.
+     * @return The short name of the capacity provider.
      * 
-    */
+     */
     public String capacityProvider() {
         return this.capacityProvider;
     }
     /**
-     * The relative percentage of the total number of launched tasks that should use the specified capacity provider.
+     * @return The relative percentage of the total number of launched tasks that should use the specified capacity provider.
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

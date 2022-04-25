@@ -13,43 +13,43 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualServiceResult {
-    /**
-     * The ARN of the virtual service.
-     * 
-     */
+        /**
+         * @return The ARN of the virtual service.
+         * 
+         */
     private final String arn;
-    /**
-     * The creation date of the virtual service.
-     * 
-     */
+        /**
+         * @return The creation date of the virtual service.
+         * 
+         */
     private final String createdDate;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The last update date of the virtual service.
-     * 
-     */
+        /**
+         * @return The last update date of the virtual service.
+         * 
+         */
     private final String lastUpdatedDate;
     private final String meshName;
     private final String meshOwner;
     private final String name;
-    /**
-     * The resource owner&#39;s AWS account ID.
-     * 
-     */
+        /**
+         * @return The resource owner&#39;s AWS account ID.
+         * 
+         */
     private final String resourceOwner;
-    /**
-     * The virtual service specification
-     * 
-     */
+        /**
+         * @return The virtual service specification
+         * 
+         */
     private final List<GetVirtualServiceSpec> specs;
-    /**
-     * A map of tags.
-     * 
-     */
+        /**
+         * @return A map of tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
 
     @CustomType.Constructor
@@ -77,30 +77,30 @@ public final class GetVirtualServiceResult {
     }
 
     /**
-     * The ARN of the virtual service.
+     * @return The ARN of the virtual service.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The creation date of the virtual service.
+     * @return The creation date of the virtual service.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last update date of the virtual service.
+     * @return The last update date of the virtual service.
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
@@ -114,23 +114,23 @@ public final class GetVirtualServiceResult {
         return this.name;
     }
     /**
-     * The resource owner&#39;s AWS account ID.
+     * @return The resource owner&#39;s AWS account ID.
      * 
-    */
+     */
     public String resourceOwner() {
         return this.resourceOwner;
     }
     /**
-     * The virtual service specification
+     * @return The virtual service specification
      * 
-    */
+     */
     public List<GetVirtualServiceSpec> specs() {
         return this.specs;
     }
     /**
-     * A map of tags.
+     * @return A map of tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

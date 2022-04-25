@@ -22,6 +22,10 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
     private @Nullable Output<String> keyId;
 
+    /**
+     * @return The identifier of the API key resource.
+     * 
+     */
     public Optional<Output<String>> keyId() {
         return Optional.ofNullable(this.keyId);
     }
@@ -33,6 +37,10 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyType")
     private @Nullable Output<String> keyType;
 
+    /**
+     * @return The type of the API key resource. Currently, the valid key type is API_KEY.
+     * 
+     */
     public Optional<Output<String>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -44,6 +52,10 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of a usage plan key.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="usagePlanId")
     private @Nullable Output<String> usagePlanId;
 
+    /**
+     * @return The Id of the usage plan resource representing to associate the key to.
+     * 
+     */
     public Optional<Output<String>> usagePlanId() {
         return Optional.ofNullable(this.usagePlanId);
     }
@@ -66,6 +82,10 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of a usage plan key.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -98,47 +118,107 @@ public final class UsagePlanKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new UsagePlanKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId The identifier of the API key resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param keyId The identifier of the API key resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             return keyId(Output.of(keyId));
         }
 
+        /**
+         * @param keyType The type of the API key resource. Currently, the valid key type is API_KEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Output<String> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The type of the API key resource. Currently, the valid key type is API_KEY.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Output.of(keyType));
         }
 
+        /**
+         * @param name The name of a usage plan key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of a usage plan key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param usagePlanId The Id of the usage plan resource representing to associate the key to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanId(@Nullable Output<String> usagePlanId) {
             $.usagePlanId = usagePlanId;
             return this;
         }
 
+        /**
+         * @param usagePlanId The Id of the usage plan resource representing to associate the key to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usagePlanId(String usagePlanId) {
             return usagePlanId(Output.of(usagePlanId));
         }
 
+        /**
+         * @param value The value of a usage plan key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of a usage plan key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

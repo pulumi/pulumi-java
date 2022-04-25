@@ -12,10 +12,10 @@ import java.util.Objects;
 public final class GetInstanceTypeGpus {
     private final Integer count;
     private final String manufacturer;
-    /**
-     * Size of the instance memory, in MiB.
-     * 
-     */
+        /**
+         * @return Size of the instance memory, in MiB.
+         * 
+         */
     private final Integer memorySize;
     private final String name;
 
@@ -38,9 +38,9 @@ public final class GetInstanceTypeGpus {
         return this.manufacturer;
     }
     /**
-     * Size of the instance memory, in MiB.
+     * @return Size of the instance memory, in MiB.
      * 
-    */
+     */
     public Integer memorySize() {
         return this.memorySize;
     }

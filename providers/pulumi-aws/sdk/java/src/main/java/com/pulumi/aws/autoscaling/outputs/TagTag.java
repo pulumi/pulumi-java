@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TagTag {
-    /**
-     * Tag name.
-     * 
-     */
+        /**
+         * @return Tag name.
+         * 
+         */
     private final String key;
-    /**
-     * Whether to propagate the tags to instances launched by the ASG.
-     * 
-     */
+        /**
+         * @return Whether to propagate the tags to instances launched by the ASG.
+         * 
+         */
     private final Boolean propagateAtLaunch;
-    /**
-     * Tag value.
-     * 
-     */
+        /**
+         * @return Tag value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class TagTag {
     }
 
     /**
-     * Tag name.
+     * @return Tag name.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Whether to propagate the tags to instances launched by the ASG.
+     * @return Whether to propagate the tags to instances launched by the ASG.
      * 
-    */
+     */
     public Boolean propagateAtLaunch() {
         return this.propagateAtLaunch;
     }
     /**
-     * Tag value.
+     * @return Tag value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

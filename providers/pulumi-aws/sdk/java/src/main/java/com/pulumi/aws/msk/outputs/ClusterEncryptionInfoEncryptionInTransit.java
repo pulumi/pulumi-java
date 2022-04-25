@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterEncryptionInfoEncryptionInTransit {
-    /**
-     * Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
-     * 
-     */
+        /**
+         * @return Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
+         * 
+         */
     private final @Nullable String clientBroker;
-    /**
-     * Whether data communication among broker nodes is encrypted. Default value: `true`.
-     * 
-     */
+        /**
+         * @return Whether data communication among broker nodes is encrypted. Default value: `true`.
+         * 
+         */
     private final @Nullable Boolean inCluster;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterEncryptionInfoEncryptionInTransit {
     }
 
     /**
-     * Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
+     * @return Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
      * 
-    */
+     */
     public Optional<String> clientBroker() {
         return Optional.ofNullable(this.clientBroker);
     }
     /**
-     * Whether data communication among broker nodes is encrypted. Default value: `true`.
+     * @return Whether data communication among broker nodes is encrypted. Default value: `true`.
      * 
-    */
+     */
     public Optional<Boolean> inCluster() {
         return Optional.ofNullable(this.inCluster);
     }

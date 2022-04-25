@@ -25,6 +25,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="bytesScannedCutoffPerQuery")
     private @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
+    /**
+     * @return Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
+     * 
+     */
     public Optional<Output<Integer>> bytesScannedCutoffPerQuery() {
         return Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
@@ -36,6 +40,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="enforceWorkgroupConfiguration")
     private @Nullable Output<Boolean> enforceWorkgroupConfiguration;
 
+    /**
+     * @return Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enforceWorkgroupConfiguration() {
         return Optional.ofNullable(this.enforceWorkgroupConfiguration);
     }
@@ -47,6 +55,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="engineVersion")
     private @Nullable Output<WorkgroupConfigurationEngineVersionArgs> engineVersion;
 
+    /**
+     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * 
+     */
     public Optional<Output<WorkgroupConfigurationEngineVersionArgs>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -58,6 +70,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="publishCloudwatchMetricsEnabled")
     private @Nullable Output<Boolean> publishCloudwatchMetricsEnabled;
 
+    /**
+     * @return Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> publishCloudwatchMetricsEnabled() {
         return Optional.ofNullable(this.publishCloudwatchMetricsEnabled);
     }
@@ -69,6 +85,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="requesterPaysEnabled")
     private @Nullable Output<Boolean> requesterPaysEnabled;
 
+    /**
+     * @return If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+     * 
+     */
     public Optional<Output<Boolean>> requesterPaysEnabled() {
         return Optional.ofNullable(this.requesterPaysEnabled);
     }
@@ -80,6 +100,10 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="resultConfiguration")
     private @Nullable Output<WorkgroupConfigurationResultConfigurationArgs> resultConfiguration;
 
+    /**
+     * @return Configuration block with result settings. Documented below.
+     * 
+     */
     public Optional<Output<WorkgroupConfigurationResultConfigurationArgs>> resultConfiguration() {
         return Optional.ofNullable(this.resultConfiguration);
     }
@@ -113,56 +137,128 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
             $ = new WorkgroupConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bytesScannedCutoffPerQuery Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesScannedCutoffPerQuery(@Nullable Output<Integer> bytesScannedCutoffPerQuery) {
             $.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
+        /**
+         * @param bytesScannedCutoffPerQuery Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytesScannedCutoffPerQuery(Integer bytesScannedCutoffPerQuery) {
             return bytesScannedCutoffPerQuery(Output.of(bytesScannedCutoffPerQuery));
         }
 
+        /**
+         * @param enforceWorkgroupConfiguration Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceWorkgroupConfiguration(@Nullable Output<Boolean> enforceWorkgroupConfiguration) {
             $.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
 
+        /**
+         * @param enforceWorkgroupConfiguration Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceWorkgroupConfiguration(Boolean enforceWorkgroupConfiguration) {
             return enforceWorkgroupConfiguration(Output.of(enforceWorkgroupConfiguration));
         }
 
+        /**
+         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(@Nullable Output<WorkgroupConfigurationEngineVersionArgs> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
+        /**
+         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineVersion(WorkgroupConfigurationEngineVersionArgs engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
 
+        /**
+         * @param publishCloudwatchMetricsEnabled Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCloudwatchMetricsEnabled(@Nullable Output<Boolean> publishCloudwatchMetricsEnabled) {
             $.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
 
+        /**
+         * @param publishCloudwatchMetricsEnabled Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishCloudwatchMetricsEnabled(Boolean publishCloudwatchMetricsEnabled) {
             return publishCloudwatchMetricsEnabled(Output.of(publishCloudwatchMetricsEnabled));
         }
 
+        /**
+         * @param requesterPaysEnabled If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPaysEnabled(@Nullable Output<Boolean> requesterPaysEnabled) {
             $.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
+        /**
+         * @param requesterPaysEnabled If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requesterPaysEnabled(Boolean requesterPaysEnabled) {
             return requesterPaysEnabled(Output.of(requesterPaysEnabled));
         }
 
+        /**
+         * @param resultConfiguration Configuration block with result settings. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultConfiguration(@Nullable Output<WorkgroupConfigurationResultConfigurationArgs> resultConfiguration) {
             $.resultConfiguration = resultConfiguration;
             return this;
         }
 
+        /**
+         * @param resultConfiguration Configuration block with result settings. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultConfiguration(WorkgroupConfigurationResultConfigurationArgs resultConfiguration) {
             return resultConfiguration(Output.of(resultConfiguration));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTopicResult {
-    /**
-     * Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
 
@@ -32,16 +32,16 @@ public final class GetTopicResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
+     * @return Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

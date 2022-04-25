@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class IntegrationResponseParameter {
-    /**
-     * A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
-     * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
-     * 
-     */
+        /**
+         * @return A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
+         * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
+         * 
+         */
     private final Map<String,String> mappings;
-    /**
-     * The HTTP status code in the range 200-599.
-     * 
-     */
+        /**
+         * @return The HTTP status code in the range 200-599.
+         * 
+         */
     private final String statusCode;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class IntegrationResponseParameter {
     }
 
     /**
-     * A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
+     * @return A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
      * 
-    */
+     */
     public Map<String,String> mappings() {
         return this.mappings;
     }
     /**
-     * The HTTP status code in the range 200-599.
+     * @return The HTTP status code in the range 200-599.
      * 
-    */
+     */
     public String statusCode() {
         return this.statusCode;
     }

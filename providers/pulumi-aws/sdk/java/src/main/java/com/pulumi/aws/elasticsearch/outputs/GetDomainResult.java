@@ -22,113 +22,113 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainResult {
-    /**
-     * The policy document attached to the domain.
-     * 
-     */
+        /**
+         * @return The policy document attached to the domain.
+         * 
+         */
     private final String accessPolicies;
-    /**
-     * Key-value string pairs to specify advanced configuration options.
-     * 
-     */
+        /**
+         * @return Key-value string pairs to specify advanced configuration options.
+         * 
+         */
     private final Map<String,String> advancedOptions;
-    /**
-     * Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
-     * 
-     */
+        /**
+         * @return Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
+         * 
+         */
     private final List<GetDomainAdvancedSecurityOption> advancedSecurityOptions;
-    /**
-     * The Amazon Resource Name (ARN) of the domain.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the domain.
+         * 
+         */
     private final String arn;
-    /**
-     * Configuration of the Auto-Tune options of the domain.
-     * 
-     */
+        /**
+         * @return Configuration of the Auto-Tune options of the domain.
+         * 
+         */
     private final List<GetDomainAutoTuneOption> autoTuneOptions;
-    /**
-     * Cluster configuration of the domain.
-     * 
-     */
+        /**
+         * @return Cluster configuration of the domain.
+         * 
+         */
     private final List<GetDomainClusterConfig> clusterConfigs;
-    /**
-     * Domain Amazon Cognito Authentication options for Kibana.
-     * 
-     */
+        /**
+         * @return Domain Amazon Cognito Authentication options for Kibana.
+         * 
+         */
     private final List<GetDomainCognitoOption> cognitoOptions;
-    /**
-     * Status of the creation of the domain.
-     * 
-     */
+        /**
+         * @return Status of the creation of the domain.
+         * 
+         */
     private final Boolean created;
-    /**
-     * Status of the deletion of the domain.
-     * 
-     */
+        /**
+         * @return Status of the deletion of the domain.
+         * 
+         */
     private final Boolean deleted;
-    /**
-     * Unique identifier for the domain.
-     * 
-     */
+        /**
+         * @return Unique identifier for the domain.
+         * 
+         */
     private final String domainId;
     private final String domainName;
-    /**
-     * EBS Options for the instances in the domain.
-     * 
-     */
+        /**
+         * @return EBS Options for the instances in the domain.
+         * 
+         */
     private final List<GetDomainEbsOption> ebsOptions;
-    /**
-     * Elasticsearch version for the domain.
-     * 
-     */
+        /**
+         * @return Elasticsearch version for the domain.
+         * 
+         */
     private final String elasticsearchVersion;
-    /**
-     * Domain encryption at rest related options.
-     * 
-     */
+        /**
+         * @return Domain encryption at rest related options.
+         * 
+         */
     private final List<GetDomainEncryptionAtRest> encryptionAtRests;
-    /**
-     * Domain-specific endpoint used to submit index, search, and data upload requests.
-     * 
-     */
+        /**
+         * @return Domain-specific endpoint used to submit index, search, and data upload requests.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Domain-specific endpoint used to access the Kibana application.
-     * 
-     */
+        /**
+         * @return Domain-specific endpoint used to access the Kibana application.
+         * 
+         */
     private final String kibanaEndpoint;
-    /**
-     * Domain log publishing related options.
-     * 
-     */
+        /**
+         * @return Domain log publishing related options.
+         * 
+         */
     private final List<GetDomainLogPublishingOption> logPublishingOptions;
-    /**
-     * Domain in transit encryption related options.
-     * 
-     */
+        /**
+         * @return Domain in transit encryption related options.
+         * 
+         */
     private final List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions;
-    /**
-     * Status of a configuration change in the domain.
-     * * `snapshot_options` – Domain snapshot related options.
-     * 
-     */
+        /**
+         * @return Status of a configuration change in the domain.
+         * * `snapshot_options` – Domain snapshot related options.
+         * 
+         */
     private final Boolean processing;
     private final List<GetDomainSnapshotOption> snapshotOptions;
-    /**
-     * The tags assigned to the domain.
-     * 
-     */
+        /**
+         * @return The tags assigned to the domain.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * VPC Options for private Elasticsearch domains.
-     * 
-     */
+        /**
+         * @return VPC Options for private Elasticsearch domains.
+         * 
+         */
     private final List<GetDomainVpcOption> vpcOptions;
 
     @CustomType.Constructor
@@ -182,72 +182,72 @@ public final class GetDomainResult {
     }
 
     /**
-     * The policy document attached to the domain.
+     * @return The policy document attached to the domain.
      * 
-    */
+     */
     public String accessPolicies() {
         return this.accessPolicies;
     }
     /**
-     * Key-value string pairs to specify advanced configuration options.
+     * @return Key-value string pairs to specify advanced configuration options.
      * 
-    */
+     */
     public Map<String,String> advancedOptions() {
         return this.advancedOptions;
     }
     /**
-     * Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
+     * @return Status of the Elasticsearch domain&#39;s advanced security options. The block consists of the following attributes:
      * 
-    */
+     */
     public List<GetDomainAdvancedSecurityOption> advancedSecurityOptions() {
         return this.advancedSecurityOptions;
     }
     /**
-     * The Amazon Resource Name (ARN) of the domain.
+     * @return The Amazon Resource Name (ARN) of the domain.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Configuration of the Auto-Tune options of the domain.
+     * @return Configuration of the Auto-Tune options of the domain.
      * 
-    */
+     */
     public List<GetDomainAutoTuneOption> autoTuneOptions() {
         return this.autoTuneOptions;
     }
     /**
-     * Cluster configuration of the domain.
+     * @return Cluster configuration of the domain.
      * 
-    */
+     */
     public List<GetDomainClusterConfig> clusterConfigs() {
         return this.clusterConfigs;
     }
     /**
-     * Domain Amazon Cognito Authentication options for Kibana.
+     * @return Domain Amazon Cognito Authentication options for Kibana.
      * 
-    */
+     */
     public List<GetDomainCognitoOption> cognitoOptions() {
         return this.cognitoOptions;
     }
     /**
-     * Status of the creation of the domain.
+     * @return Status of the creation of the domain.
      * 
-    */
+     */
     public Boolean created() {
         return this.created;
     }
     /**
-     * Status of the deletion of the domain.
+     * @return Status of the deletion of the domain.
      * 
-    */
+     */
     public Boolean deleted() {
         return this.deleted;
     }
     /**
-     * Unique identifier for the domain.
+     * @return Unique identifier for the domain.
      * 
-    */
+     */
     public String domainId() {
         return this.domainId;
     }
@@ -255,66 +255,66 @@ public final class GetDomainResult {
         return this.domainName;
     }
     /**
-     * EBS Options for the instances in the domain.
+     * @return EBS Options for the instances in the domain.
      * 
-    */
+     */
     public List<GetDomainEbsOption> ebsOptions() {
         return this.ebsOptions;
     }
     /**
-     * Elasticsearch version for the domain.
+     * @return Elasticsearch version for the domain.
      * 
-    */
+     */
     public String elasticsearchVersion() {
         return this.elasticsearchVersion;
     }
     /**
-     * Domain encryption at rest related options.
+     * @return Domain encryption at rest related options.
      * 
-    */
+     */
     public List<GetDomainEncryptionAtRest> encryptionAtRests() {
         return this.encryptionAtRests;
     }
     /**
-     * Domain-specific endpoint used to submit index, search, and data upload requests.
+     * @return Domain-specific endpoint used to submit index, search, and data upload requests.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Domain-specific endpoint used to access the Kibana application.
+     * @return Domain-specific endpoint used to access the Kibana application.
      * 
-    */
+     */
     public String kibanaEndpoint() {
         return this.kibanaEndpoint;
     }
     /**
-     * Domain log publishing related options.
+     * @return Domain log publishing related options.
      * 
-    */
+     */
     public List<GetDomainLogPublishingOption> logPublishingOptions() {
         return this.logPublishingOptions;
     }
     /**
-     * Domain in transit encryption related options.
+     * @return Domain in transit encryption related options.
      * 
-    */
+     */
     public List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions() {
         return this.nodeToNodeEncryptions;
     }
     /**
-     * Status of a configuration change in the domain.
+     * @return Status of a configuration change in the domain.
      * * `snapshot_options` – Domain snapshot related options.
      * 
-    */
+     */
     public Boolean processing() {
         return this.processing;
     }
@@ -322,16 +322,16 @@ public final class GetDomainResult {
         return this.snapshotOptions;
     }
     /**
-     * The tags assigned to the domain.
+     * @return The tags assigned to the domain.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * VPC Options for private Elasticsearch domains.
+     * @return VPC Options for private Elasticsearch domains.
      * 
-    */
+     */
     public List<GetDomainVpcOption> vpcOptions() {
         return this.vpcOptions;
     }

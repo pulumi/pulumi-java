@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatementLabelMatchStatement {
-    /**
-     * The string to match against.
-     * 
-     */
+        /**
+         * @return The string to match against.
+         * 
+         */
     private final String key;
-    /**
-     * Specify whether you want to match using the label name or just the namespace. Valid values are `LABEL` or `NAMESPACE`.
-     * 
-     */
+        /**
+         * @return Specify whether you want to match using the label name or just the namespace. Valid values are `LABEL` or `NAMESPACE`.
+         * 
+         */
     private final String scope;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     }
 
     /**
-     * The string to match against.
+     * @return The string to match against.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Specify whether you want to match using the label name or just the namespace. Valid values are `LABEL` or `NAMESPACE`.
+     * @return Specify whether you want to match using the label name or just the namespace. Valid values are `LABEL` or `NAMESPACE`.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }

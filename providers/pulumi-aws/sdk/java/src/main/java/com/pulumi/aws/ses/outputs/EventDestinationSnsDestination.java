@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EventDestinationSnsDestination {
-    /**
-     * The ARN of the SNS topic
-     * 
-     */
+        /**
+         * @return The ARN of the SNS topic
+         * 
+         */
     private final String topicArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EventDestinationSnsDestination {
     }
 
     /**
-     * The ARN of the SNS topic
+     * @return The ARN of the SNS topic
      * 
-    */
+     */
     public String topicArn() {
         return this.topicArn;
     }

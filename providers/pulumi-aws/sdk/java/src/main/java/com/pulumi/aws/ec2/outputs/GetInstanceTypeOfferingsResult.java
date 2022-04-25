@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInstanceTypeOfferingsResult {
     private final @Nullable List<GetInstanceTypeOfferingsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * List of EC2 Instance Types.
-     * 
-     */
+        /**
+         * @return List of EC2 Instance Types.
+         * 
+         */
     private final List<String> instanceTypes;
     private final @Nullable String locationType;
-    /**
-     * List of location types.
-     * 
-     */
+        /**
+         * @return List of location types.
+         * 
+         */
     private final List<String> locationTypes;
-    /**
-     * List of locations.
-     * 
-     */
+        /**
+         * @return List of locations.
+         * 
+         */
     private final List<String> locations;
 
     @CustomType.Constructor
@@ -56,16 +56,16 @@ public final class GetInstanceTypeOfferingsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of EC2 Instance Types.
+     * @return List of EC2 Instance Types.
      * 
-    */
+     */
     public List<String> instanceTypes() {
         return this.instanceTypes;
     }
@@ -73,16 +73,16 @@ public final class GetInstanceTypeOfferingsResult {
         return Optional.ofNullable(this.locationType);
     }
     /**
-     * List of location types.
+     * @return List of location types.
      * 
-    */
+     */
     public List<String> locationTypes() {
         return this.locationTypes;
     }
     /**
-     * List of locations.
+     * @return List of locations.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations;
     }

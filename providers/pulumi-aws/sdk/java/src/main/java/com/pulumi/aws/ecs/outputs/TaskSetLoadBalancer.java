@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskSetLoadBalancer {
-    /**
-     * The name of the container to associate with the load balancer (as it appears in a container definition).
-     * 
-     */
+        /**
+         * @return The name of the container to associate with the load balancer (as it appears in a container definition).
+         * 
+         */
     private final String containerName;
-    /**
-     * The port on the container to associate with the load balancer. Defaults to `0` if not specified.
-     * 
-     */
+        /**
+         * @return The port on the container to associate with the load balancer. Defaults to `0` if not specified.
+         * 
+         */
     private final @Nullable Integer containerPort;
-    /**
-     * The name of the ELB (Classic) to associate with the service.
-     * 
-     */
+        /**
+         * @return The name of the ELB (Classic) to associate with the service.
+         * 
+         */
     private final @Nullable String loadBalancerName;
-    /**
-     * The ARN of the Load Balancer target group to associate with the service.
-     * 
-     */
+        /**
+         * @return The ARN of the Load Balancer target group to associate with the service.
+         * 
+         */
     private final @Nullable String targetGroupArn;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class TaskSetLoadBalancer {
     }
 
     /**
-     * The name of the container to associate with the load balancer (as it appears in a container definition).
+     * @return The name of the container to associate with the load balancer (as it appears in a container definition).
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * The port on the container to associate with the load balancer. Defaults to `0` if not specified.
+     * @return The port on the container to associate with the load balancer. Defaults to `0` if not specified.
      * 
-    */
+     */
     public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
-     * The name of the ELB (Classic) to associate with the service.
+     * @return The name of the ELB (Classic) to associate with the service.
      * 
-    */
+     */
     public Optional<String> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
     /**
-     * The ARN of the Load Balancer target group to associate with the service.
+     * @return The ARN of the Load Balancer target group to associate with the service.
      * 
-    */
+     */
     public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }

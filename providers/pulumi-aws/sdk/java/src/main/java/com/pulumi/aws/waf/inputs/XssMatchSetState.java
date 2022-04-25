@@ -24,6 +24,10 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN)
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name or description of the SizeConstraintSet.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="xssMatchTuples")
     private @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
+    /**
+     * @return The parts of web requests that you want to inspect for cross-site scripting attacks.
+     * 
+     */
     public Optional<Output<List<XssMatchSetXssMatchTupleGetArgs>>> xssMatchTuples() {
         return Optional.ofNullable(this.xssMatchTuples);
     }
@@ -76,33 +88,75 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
             $ = new XssMatchSetState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN)
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param name The name or description of the SizeConstraintSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name or description of the SizeConstraintSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(@Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples) {
             $.xssMatchTuples = xssMatchTuples;
             return this;
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(List<XssMatchSetXssMatchTupleGetArgs> xssMatchTuples) {
             return xssMatchTuples(Output.of(xssMatchTuples));
         }
 
+        /**
+         * @param xssMatchTuples The parts of web requests that you want to inspect for cross-site scripting attacks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xssMatchTuples(XssMatchSetXssMatchTupleGetArgs... xssMatchTuples) {
             return xssMatchTuples(List.of(xssMatchTuples));
         }

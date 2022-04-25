@@ -23,6 +23,10 @@ public final class DeploymentGroupEc2TagSetArgs extends com.pulumi.resources.Res
     @Import(name="ec2TagFilters")
     private @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
+    /**
+     * @return Tag filters associated with the deployment group. See the AWS docs for details.
+     * 
+     */
     public Optional<Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>>> ec2TagFilters() {
         return Optional.ofNullable(this.ec2TagFilters);
     }
@@ -51,15 +55,33 @@ public final class DeploymentGroupEc2TagSetArgs extends com.pulumi.resources.Res
             $ = new DeploymentGroupEc2TagSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ec2TagFilters Tag filters associated with the deployment group. See the AWS docs for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2TagFilters(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
             $.ec2TagFilters = ec2TagFilters;
             return this;
         }
 
+        /**
+         * @param ec2TagFilters Tag filters associated with the deployment group. See the AWS docs for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2TagFilters(List<DeploymentGroupEc2TagSetEc2TagFilterArgs> ec2TagFilters) {
             return ec2TagFilters(Output.of(ec2TagFilters));
         }
 
+        /**
+         * @param ec2TagFilters Tag filters associated with the deployment group. See the AWS docs for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2TagFilters(DeploymentGroupEc2TagSetEc2TagFilterArgs... ec2TagFilters) {
             return ec2TagFilters(List.of(ec2TagFilters));
         }

@@ -15,21 +15,21 @@ import javax.annotation.Nullable;
 public final class GetSpotPriceResult {
     private final @Nullable String availabilityZone;
     private final @Nullable List<GetSpotPriceFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String instanceType;
-    /**
-     * The most recent Spot Price value for the given instance type and AZ.
-     * 
-     */
+        /**
+         * @return The most recent Spot Price value for the given instance type and AZ.
+         * 
+         */
     private final String spotPrice;
-    /**
-     * The timestamp at which the Spot Price value was published.
-     * 
-     */
+        /**
+         * @return The timestamp at which the Spot Price value was published.
+         * 
+         */
     private final String spotPriceTimestamp;
 
     @CustomType.Constructor
@@ -55,9 +55,9 @@ public final class GetSpotPriceResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -65,16 +65,16 @@ public final class GetSpotPriceResult {
         return Optional.ofNullable(this.instanceType);
     }
     /**
-     * The most recent Spot Price value for the given instance type and AZ.
+     * @return The most recent Spot Price value for the given instance type and AZ.
      * 
-    */
+     */
     public String spotPrice() {
         return this.spotPrice;
     }
     /**
-     * The timestamp at which the Spot Price value was published.
+     * @return The timestamp at which the Spot Price value was published.
      * 
-    */
+     */
     public String spotPriceTimestamp() {
         return this.spotPriceTimestamp;
     }

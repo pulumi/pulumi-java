@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TableAttribute {
-    /**
-     * The name of the index
-     * 
-     */
+        /**
+         * @return The name of the index
+         * 
+         */
     private final String name;
-    /**
-     * Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
-     * 
-     */
+        /**
+         * @return Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TableAttribute {
     }
 
     /**
-     * The name of the index
+     * @return The name of the index
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
+     * @return Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -20,6 +20,10 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="definition", required=true)
     private Output<String> definition;
 
+    /**
+     * @return the alert manager definition that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html).
+     * 
+     */
     public Output<String> definition() {
         return this.definition;
     }
@@ -31,6 +35,10 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="workspaceId", required=true)
     private Output<String> workspaceId;
 
+    /**
+     * @return The id of the prometheus workspace the alert manager definition should be linked to
+     * 
+     */
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
@@ -60,20 +68,44 @@ public final class AlertManagerDefinitionArgs extends com.pulumi.resources.Resou
             $ = new AlertManagerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition the alert manager definition that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<String> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition the alert manager definition that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(String definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param workspaceId The id of the prometheus workspace the alert manager definition should be linked to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The id of the prometheus workspace the alert manager definition should be linked to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

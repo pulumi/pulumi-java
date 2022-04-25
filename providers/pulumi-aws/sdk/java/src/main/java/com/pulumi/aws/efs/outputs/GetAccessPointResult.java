@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccessPointResult {
     private final String accessPointId;
-    /**
-     * Amazon Resource Name of the file system.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name of the file system.
+         * 
+         */
     private final String arn;
-    /**
-     * Amazon Resource Name of the file system.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name of the file system.
+         * 
+         */
     private final String fileSystemArn;
-    /**
-     * The ID of the file system for which the access point is intended.
-     * 
-     */
+        /**
+         * @return The ID of the file system for which the access point is intended.
+         * 
+         */
     private final String fileSystemId;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String ownerId;
-    /**
-     * Single element list containing operating system user and group applied to all file system requests made using the access point.
-     * 
-     */
+        /**
+         * @return Single element list containing operating system user and group applied to all file system requests made using the access point.
+         * 
+         */
     private final List<GetAccessPointPosixUser> posixUsers;
     private final List<GetAccessPointRootDirectory> rootDirectories;
-    /**
-     * Key-value mapping of resource tags.
-     * 
-     */
+        /**
+         * @return Key-value mapping of resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
 
     @CustomType.Constructor
@@ -74,30 +74,30 @@ public final class GetAccessPointResult {
         return this.accessPointId;
     }
     /**
-     * Amazon Resource Name of the file system.
+     * @return Amazon Resource Name of the file system.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Amazon Resource Name of the file system.
+     * @return Amazon Resource Name of the file system.
      * 
-    */
+     */
     public String fileSystemArn() {
         return this.fileSystemArn;
     }
     /**
-     * The ID of the file system for which the access point is intended.
+     * @return The ID of the file system for which the access point is intended.
      * 
-    */
+     */
     public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -105,9 +105,9 @@ public final class GetAccessPointResult {
         return this.ownerId;
     }
     /**
-     * Single element list containing operating system user and group applied to all file system requests made using the access point.
+     * @return Single element list containing operating system user and group applied to all file system requests made using the access point.
      * 
-    */
+     */
     public List<GetAccessPointPosixUser> posixUsers() {
         return this.posixUsers;
     }
@@ -115,9 +115,9 @@ public final class GetAccessPointResult {
         return this.rootDirectories;
     }
     /**
-     * Key-value mapping of resource tags.
+     * @return Key-value mapping of resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

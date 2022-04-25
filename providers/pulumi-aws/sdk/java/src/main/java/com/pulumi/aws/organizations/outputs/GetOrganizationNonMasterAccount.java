@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOrganizationNonMasterAccount {
-    /**
-     * ARN of the root
-     * 
-     */
+        /**
+         * @return ARN of the root
+         * 
+         */
     private final String arn;
-    /**
-     * Email of the account
-     * 
-     */
+        /**
+         * @return Email of the account
+         * 
+         */
     private final String email;
-    /**
-     * Identifier of the root
-     * 
-     */
+        /**
+         * @return Identifier of the root
+         * 
+         */
     private final String id;
-    /**
-     * The name of the policy type
-     * 
-     */
+        /**
+         * @return The name of the policy type
+         * 
+         */
     private final String name;
-    /**
-     * The status of the policy type as it relates to the associated root
-     * 
-     */
+        /**
+         * @return The status of the policy type as it relates to the associated root
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetOrganizationNonMasterAccount {
     }
 
     /**
-     * ARN of the root
+     * @return ARN of the root
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Email of the account
+     * @return Email of the account
      * 
-    */
+     */
     public String email() {
         return this.email;
     }
     /**
-     * Identifier of the root
+     * @return Identifier of the root
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the policy type
+     * @return The name of the policy type
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the policy type as it relates to the associated root
+     * @return The status of the policy type as it relates to the associated root
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

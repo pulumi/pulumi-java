@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FindingsFilterFindingCriteria {
-    /**
-     * A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
-     * 
-     */
+        /**
+         * @return A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+         * 
+         */
     private final @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FindingsFilterFindingCriteria {
     }
 
     /**
-     * A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
+     * @return A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
      * 
-    */
+     */
     public List<FindingsFilterFindingCriteriaCriterion> criterions() {
         return this.criterions == null ? List.of() : this.criterions;
     }

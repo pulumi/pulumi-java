@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestination {
-    /**
-     * Analytics data export currently only supports an S3 bucket destination (documented below).
-     * 
-     */
+        /**
+         * @return Analytics data export currently only supports an S3 bucket destination (documented below).
+         * 
+         */
     private final AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     }
 
     /**
-     * Analytics data export currently only supports an S3 bucket destination (documented below).
+     * @return Analytics data export currently only supports an S3 bucket destination (documented below).
      * 
-    */
+     */
     public AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination() {
         return this.s3BucketDestination;
     }

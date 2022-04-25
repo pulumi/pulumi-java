@@ -13,66 +13,66 @@ import java.util.Objects;
 @CustomType
 public final class GetCertificateAuthorityResult {
     private final String arn;
-    /**
-     * Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
-     * 
-     */
+        /**
+         * @return Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         */
     private final String certificate;
-    /**
-     * Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
-     * 
-     */
+        /**
+         * @return Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
+         * 
+         */
     private final String certificateChain;
-    /**
-     * The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
-     * 
-     */
+        /**
+         * @return The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
+         * 
+         */
     private final String certificateSigningRequest;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
-     * 
-     */
+        /**
+         * @return Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         */
     private final String notAfter;
-    /**
-     * Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
-     * 
-     */
+        /**
+         * @return Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+         * 
+         */
     private final String notBefore;
-    /**
-     * Nested attribute containing revocation configuration.
-     * * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
-     * * `revocation_configuration.0.crl_configuration.0.custom_cname` - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
-     * * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
-     * * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
-     * * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
-     * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
-     * 
-     */
+        /**
+         * @return Nested attribute containing revocation configuration.
+         * * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
+         * * `revocation_configuration.0.crl_configuration.0.custom_cname` - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
+         * * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
+         * * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
+         * * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+         * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
+         * 
+         */
     private final List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
-    /**
-     * Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
-     * 
-     */
+        /**
+         * @return Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
+         * 
+         */
     private final String serial;
-    /**
-     * Status of the certificate authority.
-     * 
-     */
+        /**
+         * @return Status of the certificate authority.
+         * 
+         */
     private final String status;
-    /**
-     * Specifies a key-value map of user-defined tags that are attached to the certificate authority.
-     * 
-     */
+        /**
+         * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The type of the certificate authority.
-     * 
-     */
+        /**
+         * @return The type of the certificate authority.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -107,49 +107,49 @@ public final class GetCertificateAuthorityResult {
         return this.arn;
     }
     /**
-     * Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
+     * @return Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
+     * @return Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
      * 
-    */
+     */
     public String certificateChain() {
         return this.certificateChain;
     }
     /**
-     * The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
+     * @return The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
      * 
-    */
+     */
     public String certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+     * @return Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
-    */
+     */
     public String notAfter() {
         return this.notAfter;
     }
     /**
-     * Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
+     * @return Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
-    */
+     */
     public String notBefore() {
         return this.notBefore;
     }
     /**
-     * Nested attribute containing revocation configuration.
+     * @return Nested attribute containing revocation configuration.
      * * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
      * * `revocation_configuration.0.crl_configuration.0.custom_cname` - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
      * * `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
@@ -157,35 +157,35 @@ public final class GetCertificateAuthorityResult {
      * * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
      * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
      * 
-    */
+     */
     public List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations() {
         return this.revocationConfigurations;
     }
     /**
-     * Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
+     * @return Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
      * 
-    */
+     */
     public String serial() {
         return this.serial;
     }
     /**
-     * Status of the certificate authority.
+     * @return Status of the certificate authority.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Specifies a key-value map of user-defined tags that are attached to the certificate authority.
+     * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The type of the certificate authority.
+     * @return The type of the certificate authority.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

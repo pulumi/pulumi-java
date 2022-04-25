@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCachePolicyResult {
-    /**
-     * A comment to describe the cache policy.
-     * 
-     */
+        /**
+         * @return A comment to describe the cache policy.
+         * 
+         */
     private final String comment;
-    /**
-     * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-     * 
-     */
+        /**
+         * @return The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         */
     private final Integer defaultTtl;
-    /**
-     * The current version of the cache policy.
-     * 
-     */
+        /**
+         * @return The current version of the cache policy.
+         * 
+         */
     private final String etag;
     private final @Nullable String id;
-    /**
-     * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-     * 
-     */
+        /**
+         * @return The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         */
     private final Integer maxTtl;
-    /**
-     * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
-     * 
-     */
+        /**
+         * @return The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+         * 
+         */
     private final Integer minTtl;
     private final @Nullable String name;
-    /**
-     * The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
-     * 
-     */
+        /**
+         * @return The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
+         * 
+         */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins;
 
     @CustomType.Constructor
@@ -68,23 +68,23 @@ public final class GetCachePolicyResult {
     }
 
     /**
-     * A comment to describe the cache policy.
+     * @return A comment to describe the cache policy.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * @return The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-    */
+     */
     public Integer defaultTtl() {
         return this.defaultTtl;
     }
     /**
-     * The current version of the cache policy.
+     * @return The current version of the cache policy.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
@@ -92,16 +92,16 @@ public final class GetCachePolicyResult {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * @return The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-    */
+     */
     public Integer maxTtl() {
         return this.maxTtl;
     }
     /**
-     * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
+     * @return The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-    */
+     */
     public Integer minTtl() {
         return this.minTtl;
     }
@@ -109,9 +109,9 @@ public final class GetCachePolicyResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
+     * @return The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
-    */
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins() {
         return this.parametersInCacheKeyAndForwardedToOrigins;
     }

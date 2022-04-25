@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AuthorizerJwtConfiguration {
-    /**
-     * A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
-     * 
-     */
+        /**
+         * @return A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+         * 
+         */
     private final @Nullable List<String> audiences;
-    /**
-     * The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
-     * 
-     */
+        /**
+         * @return The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
+         * 
+         */
     private final @Nullable String issuer;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AuthorizerJwtConfiguration {
     }
 
     /**
-     * A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
+     * @return A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
      * 
-    */
+     */
     public List<String> audiences() {
         return this.audiences == null ? List.of() : this.audiences;
     }
     /**
-     * The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
+     * @return The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
      * 
-    */
+     */
     public Optional<String> issuer() {
         return Optional.ofNullable(this.issuer);
     }

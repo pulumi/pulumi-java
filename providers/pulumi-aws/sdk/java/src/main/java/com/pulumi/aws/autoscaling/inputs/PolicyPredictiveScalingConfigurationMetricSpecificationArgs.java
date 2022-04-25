@@ -25,6 +25,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     @Import(name="predefinedLoadMetricSpecification")
     private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs> predefinedLoadMetricSpecification;
 
+    /**
+     * @return The load metric specification.
+     * 
+     */
     public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs>> predefinedLoadMetricSpecification() {
         return Optional.ofNullable(this.predefinedLoadMetricSpecification);
     }
@@ -36,6 +40,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     @Import(name="predefinedMetricPairSpecification")
     private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs> predefinedMetricPairSpecification;
 
+    /**
+     * @return The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+     * 
+     */
     public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs>> predefinedMetricPairSpecification() {
         return Optional.ofNullable(this.predefinedMetricPairSpecification);
     }
@@ -47,6 +55,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     @Import(name="predefinedScalingMetricSpecification")
     private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification;
 
+    /**
+     * @return The scaling metric specification.
+     * 
+     */
     public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs>> predefinedScalingMetricSpecification() {
         return Optional.ofNullable(this.predefinedScalingMetricSpecification);
     }
@@ -58,6 +70,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     @Import(name="targetValue", required=true)
     private Output<Integer> targetValue;
 
+    /**
+     * @return The target value for the metric.
+     * 
+     */
     public Output<Integer> targetValue() {
         return this.targetValue;
     }
@@ -89,38 +105,86 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
             $ = new PolicyPredictiveScalingConfigurationMetricSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param predefinedLoadMetricSpecification The load metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs> predefinedLoadMetricSpecification) {
             $.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
+        /**
+         * @param predefinedLoadMetricSpecification The load metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedLoadMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs predefinedLoadMetricSpecification) {
             return predefinedLoadMetricSpecification(Output.of(predefinedLoadMetricSpecification));
         }
 
+        /**
+         * @param predefinedMetricPairSpecification The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricPairSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs> predefinedMetricPairSpecification) {
             $.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
             return this;
         }
 
+        /**
+         * @param predefinedMetricPairSpecification The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedMetricPairSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs predefinedMetricPairSpecification) {
             return predefinedMetricPairSpecification(Output.of(predefinedMetricPairSpecification));
         }
 
+        /**
+         * @param predefinedScalingMetricSpecification The scaling metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedScalingMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification) {
             $.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
 
+        /**
+         * @param predefinedScalingMetricSpecification The scaling metric specification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedScalingMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs predefinedScalingMetricSpecification) {
             return predefinedScalingMetricSpecification(Output.of(predefinedScalingMetricSpecification));
         }
 
+        /**
+         * @param targetValue The target value for the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(Output<Integer> targetValue) {
             $.targetValue = targetValue;
             return this;
         }
 
+        /**
+         * @param targetValue The target value for the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetValue(Integer targetValue) {
             return targetValue(Output.of(targetValue));
         }

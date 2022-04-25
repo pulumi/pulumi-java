@@ -9,21 +9,21 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResourceResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set to the ID of the parent Resource.
-     * 
-     */
+        /**
+         * @return Set to the ID of the parent Resource.
+         * 
+         */
     private final String parentId;
     private final String path;
-    /**
-     * Set to the path relative to the parent Resource.
-     * 
-     */
+        /**
+         * @return Set to the path relative to the parent Resource.
+         * 
+         */
     private final String pathPart;
     private final String restApiId;
 
@@ -42,16 +42,16 @@ public final class GetResourceResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set to the ID of the parent Resource.
+     * @return Set to the ID of the parent Resource.
      * 
-    */
+     */
     public String parentId() {
         return this.parentId;
     }
@@ -59,9 +59,9 @@ public final class GetResourceResult {
         return this.path;
     }
     /**
-     * Set to the path relative to the parent Resource.
+     * @return Set to the path relative to the parent Resource.
      * 
-    */
+     */
     public String pathPart() {
         return this.pathPart;
     }

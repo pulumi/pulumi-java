@@ -23,6 +23,10 @@ public final class RouteSpecTcpRouteGetArgs extends com.pulumi.resources.Resourc
     @Import(name="action", required=true)
     private Output<RouteSpecTcpRouteActionGetArgs> action;
 
+    /**
+     * @return The action to take if a match is determined.
+     * 
+     */
     public Output<RouteSpecTcpRouteActionGetArgs> action() {
         return this.action;
     }
@@ -34,6 +38,10 @@ public final class RouteSpecTcpRouteGetArgs extends com.pulumi.resources.Resourc
     @Import(name="timeout")
     private @Nullable Output<RouteSpecTcpRouteTimeoutGetArgs> timeout;
 
+    /**
+     * @return The types of timeouts.
+     * 
+     */
     public Optional<Output<RouteSpecTcpRouteTimeoutGetArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -63,20 +71,44 @@ public final class RouteSpecTcpRouteGetArgs extends com.pulumi.resources.Resourc
             $ = new RouteSpecTcpRouteGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<RouteSpecTcpRouteActionGetArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to take if a match is determined.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(RouteSpecTcpRouteActionGetArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<RouteSpecTcpRouteTimeoutGetArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The types of timeouts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(RouteSpecTcpRouteTimeoutGetArgs timeout) {
             return timeout(Output.of(timeout));
         }

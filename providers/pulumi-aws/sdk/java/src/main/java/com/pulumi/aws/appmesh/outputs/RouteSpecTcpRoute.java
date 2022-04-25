@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RouteSpecTcpRoute {
-    /**
-     * The action to take if a match is determined.
-     * 
-     */
+        /**
+         * @return The action to take if a match is determined.
+         * 
+         */
     private final RouteSpecTcpRouteAction action;
-    /**
-     * The types of timeouts.
-     * 
-     */
+        /**
+         * @return The types of timeouts.
+         * 
+         */
     private final @Nullable RouteSpecTcpRouteTimeout timeout;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class RouteSpecTcpRoute {
     }
 
     /**
-     * The action to take if a match is determined.
+     * @return The action to take if a match is determined.
      * 
-    */
+     */
     public RouteSpecTcpRouteAction action() {
         return this.action;
     }
     /**
-     * The types of timeouts.
+     * @return The types of timeouts.
      * 
-    */
+     */
     public Optional<RouteSpecTcpRouteTimeout> timeout() {
         return Optional.ofNullable(this.timeout);
     }

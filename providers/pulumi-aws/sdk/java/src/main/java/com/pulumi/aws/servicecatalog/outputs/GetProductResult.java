@@ -14,71 +14,71 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProductResult {
     private final @Nullable String acceptLanguage;
-    /**
-     * ARN of the product.
-     * 
-     */
+        /**
+         * @return ARN of the product.
+         * 
+         */
     private final String arn;
-    /**
-     * Time when the product was created.
-     * 
-     */
+        /**
+         * @return Time when the product was created.
+         * 
+         */
     private final String createdTime;
-    /**
-     * Description of the product.
-     * 
-     */
+        /**
+         * @return Description of the product.
+         * 
+         */
     private final String description;
-    /**
-     * Distributor (i.e., vendor) of the product.
-     * 
-     */
+        /**
+         * @return Distributor (i.e., vendor) of the product.
+         * 
+         */
     private final String distributor;
-    /**
-     * Whether the product has a default path.
-     * 
-     */
+        /**
+         * @return Whether the product has a default path.
+         * 
+         */
     private final Boolean hasDefaultPath;
     private final String id;
-    /**
-     * Name of the product.
-     * 
-     */
+        /**
+         * @return Name of the product.
+         * 
+         */
     private final String name;
-    /**
-     * Owner of the product.
-     * 
-     */
+        /**
+         * @return Owner of the product.
+         * 
+         */
     private final String owner;
-    /**
-     * Status of the product.
-     * 
-     */
+        /**
+         * @return Status of the product.
+         * 
+         */
     private final String status;
-    /**
-     * Support information about the product.
-     * 
-     */
+        /**
+         * @return Support information about the product.
+         * 
+         */
     private final String supportDescription;
-    /**
-     * Contact email for product support.
-     * 
-     */
+        /**
+         * @return Contact email for product support.
+         * 
+         */
     private final String supportEmail;
-    /**
-     * Contact URL for product support.
-     * 
-     */
+        /**
+         * @return Contact URL for product support.
+         * 
+         */
     private final String supportUrl;
-    /**
-     * Tags to apply to the product.
-     * 
-     */
+        /**
+         * @return Tags to apply to the product.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Type of product.
-     * 
-     */
+        /**
+         * @return Type of product.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -119,37 +119,37 @@ public final class GetProductResult {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * ARN of the product.
+     * @return ARN of the product.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Time when the product was created.
+     * @return Time when the product was created.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Description of the product.
+     * @return Description of the product.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Distributor (i.e., vendor) of the product.
+     * @return Distributor (i.e., vendor) of the product.
      * 
-    */
+     */
     public String distributor() {
         return this.distributor;
     }
     /**
-     * Whether the product has a default path.
+     * @return Whether the product has a default path.
      * 
-    */
+     */
     public Boolean hasDefaultPath() {
         return this.hasDefaultPath;
     }
@@ -157,58 +157,58 @@ public final class GetProductResult {
         return this.id;
     }
     /**
-     * Name of the product.
+     * @return Name of the product.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Owner of the product.
+     * @return Owner of the product.
      * 
-    */
+     */
     public String owner() {
         return this.owner;
     }
     /**
-     * Status of the product.
+     * @return Status of the product.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Support information about the product.
+     * @return Support information about the product.
      * 
-    */
+     */
     public String supportDescription() {
         return this.supportDescription;
     }
     /**
-     * Contact email for product support.
+     * @return Contact email for product support.
      * 
-    */
+     */
     public String supportEmail() {
         return this.supportEmail;
     }
     /**
-     * Contact URL for product support.
+     * @return Contact URL for product support.
      * 
-    */
+     */
     public String supportUrl() {
         return this.supportUrl;
     }
     /**
-     * Tags to apply to the product.
+     * @return Tags to apply to the product.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Type of product.
+     * @return Type of product.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

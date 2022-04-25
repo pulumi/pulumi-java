@@ -23,6 +23,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the instance.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -34,6 +38,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoResolveBestVoicesEnabled")
     private @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
+    /**
+     * @return Specifies whether auto resolve best voices is enabled. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> autoResolveBestVoicesEnabled() {
         return Optional.ofNullable(this.autoResolveBestVoicesEnabled);
     }
@@ -45,6 +53,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactFlowLogsEnabled")
     private @Nullable Output<Boolean> contactFlowLogsEnabled;
 
+    /**
+     * @return Specifies whether contact flow logs are enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> contactFlowLogsEnabled() {
         return Optional.ofNullable(this.contactFlowLogsEnabled);
     }
@@ -56,6 +68,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactLensEnabled")
     private @Nullable Output<Boolean> contactLensEnabled;
 
+    /**
+     * @return Specifies whether contact lens is enabled. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> contactLensEnabled() {
         return Optional.ofNullable(this.contactLensEnabled);
     }
@@ -67,6 +83,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return Specifies when the instance was created.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -78,6 +98,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
     private @Nullable Output<String> directoryId;
 
+    /**
+     * @return The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
+     * 
+     */
     public Optional<Output<String>> directoryId() {
         return Optional.ofNullable(this.directoryId);
     }
@@ -89,6 +113,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="earlyMediaEnabled")
     private @Nullable Output<Boolean> earlyMediaEnabled;
 
+    /**
+     * @return Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> earlyMediaEnabled() {
         return Optional.ofNullable(this.earlyMediaEnabled);
     }
@@ -100,6 +128,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityManagementType")
     private @Nullable Output<String> identityManagementType;
 
+    /**
+     * @return Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
+     * 
+     */
     public Optional<Output<String>> identityManagementType() {
         return Optional.ofNullable(this.identityManagementType);
     }
@@ -111,6 +143,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundCallsEnabled")
     private @Nullable Output<Boolean> inboundCallsEnabled;
 
+    /**
+     * @return Specifies whether inbound calls are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> inboundCallsEnabled() {
         return Optional.ofNullable(this.inboundCallsEnabled);
     }
@@ -122,6 +158,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceAlias")
     private @Nullable Output<String> instanceAlias;
 
+    /**
+     * @return Specifies the name of the instance. Required if `directory_id` not specified.
+     * 
+     */
     public Optional<Output<String>> instanceAlias() {
         return Optional.ofNullable(this.instanceAlias);
     }
@@ -134,6 +174,11 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="outboundCallsEnabled")
     private @Nullable Output<Boolean> outboundCallsEnabled;
 
+    /**
+     * @return Specifies whether outbound calls are enabled.
+     * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
+     * 
+     */
     public Optional<Output<Boolean>> outboundCallsEnabled() {
         return Optional.ofNullable(this.outboundCallsEnabled);
     }
@@ -145,6 +190,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole")
     private @Nullable Output<String> serviceRole;
 
+    /**
+     * @return The service role of the instance.
+     * 
+     */
     public Optional<Output<String>> serviceRole() {
         return Optional.ofNullable(this.serviceRole);
     }
@@ -156,6 +205,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The state of the instance.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -196,119 +249,277 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param autoResolveBestVoicesEnabled Specifies whether auto resolve best voices is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoResolveBestVoicesEnabled(@Nullable Output<Boolean> autoResolveBestVoicesEnabled) {
             $.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
 
+        /**
+         * @param autoResolveBestVoicesEnabled Specifies whether auto resolve best voices is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoResolveBestVoicesEnabled(Boolean autoResolveBestVoicesEnabled) {
             return autoResolveBestVoicesEnabled(Output.of(autoResolveBestVoicesEnabled));
         }
 
+        /**
+         * @param contactFlowLogsEnabled Specifies whether contact flow logs are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowLogsEnabled(@Nullable Output<Boolean> contactFlowLogsEnabled) {
             $.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
 
+        /**
+         * @param contactFlowLogsEnabled Specifies whether contact flow logs are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactFlowLogsEnabled(Boolean contactFlowLogsEnabled) {
             return contactFlowLogsEnabled(Output.of(contactFlowLogsEnabled));
         }
 
+        /**
+         * @param contactLensEnabled Specifies whether contact lens is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactLensEnabled(@Nullable Output<Boolean> contactLensEnabled) {
             $.contactLensEnabled = contactLensEnabled;
             return this;
         }
 
+        /**
+         * @param contactLensEnabled Specifies whether contact lens is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactLensEnabled(Boolean contactLensEnabled) {
             return contactLensEnabled(Output.of(contactLensEnabled));
         }
 
+        /**
+         * @param createdTime Specifies when the instance was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime Specifies when the instance was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
 
+        /**
+         * @param directoryId The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(@Nullable Output<String> directoryId) {
             $.directoryId = directoryId;
             return this;
         }
 
+        /**
+         * @param directoryId The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryId(String directoryId) {
             return directoryId(Output.of(directoryId));
         }
 
+        /**
+         * @param earlyMediaEnabled Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder earlyMediaEnabled(@Nullable Output<Boolean> earlyMediaEnabled) {
             $.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
 
+        /**
+         * @param earlyMediaEnabled Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder earlyMediaEnabled(Boolean earlyMediaEnabled) {
             return earlyMediaEnabled(Output.of(earlyMediaEnabled));
         }
 
+        /**
+         * @param identityManagementType Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityManagementType(@Nullable Output<String> identityManagementType) {
             $.identityManagementType = identityManagementType;
             return this;
         }
 
+        /**
+         * @param identityManagementType Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityManagementType(String identityManagementType) {
             return identityManagementType(Output.of(identityManagementType));
         }
 
+        /**
+         * @param inboundCallsEnabled Specifies whether inbound calls are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundCallsEnabled(@Nullable Output<Boolean> inboundCallsEnabled) {
             $.inboundCallsEnabled = inboundCallsEnabled;
             return this;
         }
 
+        /**
+         * @param inboundCallsEnabled Specifies whether inbound calls are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
             return inboundCallsEnabled(Output.of(inboundCallsEnabled));
         }
 
+        /**
+         * @param instanceAlias Specifies the name of the instance. Required if `directory_id` not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceAlias(@Nullable Output<String> instanceAlias) {
             $.instanceAlias = instanceAlias;
             return this;
         }
 
+        /**
+         * @param instanceAlias Specifies the name of the instance. Required if `directory_id` not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceAlias(String instanceAlias) {
             return instanceAlias(Output.of(instanceAlias));
         }
 
+        /**
+         * @param outboundCallsEnabled Specifies whether outbound calls are enabled.
+         * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundCallsEnabled(@Nullable Output<Boolean> outboundCallsEnabled) {
             $.outboundCallsEnabled = outboundCallsEnabled;
             return this;
         }
 
+        /**
+         * @param outboundCallsEnabled Specifies whether outbound calls are enabled.
+         * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
             return outboundCallsEnabled(Output.of(outboundCallsEnabled));
         }
 
+        /**
+         * @param serviceRole The service role of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
             $.serviceRole = serviceRole;
             return this;
         }
 
+        /**
+         * @param serviceRole The service role of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRole(String serviceRole) {
             return serviceRole(Output.of(serviceRole));
         }
 
+        /**
+         * @param status The state of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The state of the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

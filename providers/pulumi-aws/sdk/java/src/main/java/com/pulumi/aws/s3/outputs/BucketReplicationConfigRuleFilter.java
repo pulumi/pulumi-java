@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketReplicationConfigRuleFilter {
-    /**
-     * A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
-     * 
-     */
+        /**
+         * @return A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleFilterAnd and;
-    /**
-     * An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
-     * 
-     */
+        /**
+         * @return An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * A configuration block for specifying a tag key and value documented below.
-     * 
-     */
+        /**
+         * @return A configuration block for specifying a tag key and value documented below.
+         * 
+         */
     private final @Nullable BucketReplicationConfigRuleFilterTag tag;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class BucketReplicationConfigRuleFilter {
     }
 
     /**
-     * A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
+     * @return A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleFilterAnd> and() {
         return Optional.ofNullable(this.and);
     }
     /**
-     * An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * A configuration block for specifying a tag key and value documented below.
+     * @return A configuration block for specifying a tag key and value documented below.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigRuleFilterTag> tag() {
         return Optional.ofNullable(this.tag);
     }

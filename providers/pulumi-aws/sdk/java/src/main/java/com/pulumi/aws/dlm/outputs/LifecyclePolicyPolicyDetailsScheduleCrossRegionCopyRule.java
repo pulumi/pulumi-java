@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
-    /**
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
+         * 
+         */
     private final @Nullable String cmkArn;
-    /**
-     * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
-     * 
-     */
+        /**
+         * @return Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+         * 
+         */
     private final @Nullable Boolean copyTags;
-    /**
-     * The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
-     * 
-     */
+        /**
+         * @return The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+         * 
+         */
     private final @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule;
-    /**
-     * To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.
-     * 
-     */
+        /**
+         * @return To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.
+         * 
+         */
     private final Boolean encrypted;
-    /**
-     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
-     * 
-     */
+        /**
+         * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+         * 
+         */
     private final @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule;
-    /**
-     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
-     * 
-     */
+        /**
+         * @return The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
+         * 
+         */
     private final String target;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
+     * @return The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
      * 
-    */
+     */
     public Optional<String> cmkArn() {
         return Optional.ofNullable(this.cmkArn);
     }
     /**
-     * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
+     * @return Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
-    */
+     */
     public Optional<Boolean> copyTags() {
         return Optional.ofNullable(this.copyTags);
     }
     /**
-     * The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
+     * @return The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
      * 
-    */
+     */
     public Optional<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule> deprecateRule() {
         return Optional.ofNullable(this.deprecateRule);
     }
     /**
-     * To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.
+     * @return To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
     /**
-     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
+     * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
-    */
+     */
     public Optional<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule> retainRule() {
         return Optional.ofNullable(this.retainRule);
     }
     /**
-     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
+     * @return The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

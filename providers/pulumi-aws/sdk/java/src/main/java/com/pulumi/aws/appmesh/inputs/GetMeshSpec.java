@@ -20,6 +20,10 @@ public final class GetMeshSpec extends com.pulumi.resources.InvokeArgs {
     @Import(name="egressFilters", required=true)
     private List<GetMeshSpecEgressFilter> egressFilters;
 
+    /**
+     * @return The egress filter rules for the service mesh.
+     * 
+     */
     public List<GetMeshSpecEgressFilter> egressFilters() {
         return this.egressFilters;
     }
@@ -48,11 +52,23 @@ public final class GetMeshSpec extends com.pulumi.resources.InvokeArgs {
             $ = new GetMeshSpec(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param egressFilters The egress filter rules for the service mesh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFilters(List<GetMeshSpecEgressFilter> egressFilters) {
             $.egressFilters = egressFilters;
             return this;
         }
 
+        /**
+         * @param egressFilters The egress filter rules for the service mesh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder egressFilters(GetMeshSpecEgressFilter... egressFilters) {
             return egressFilters(List.of(egressFilters));
         }

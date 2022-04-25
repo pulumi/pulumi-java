@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionOriginOriginShield {
-    /**
-     * A flag that specifies whether Origin Shield is enabled.
-     * 
-     */
+        /**
+         * @return A flag that specifies whether Origin Shield is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
-     * 
-     */
+        /**
+         * @return The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+         * 
+         */
     private final String originShieldRegion;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DistributionOriginOriginShield {
     }
 
     /**
-     * A flag that specifies whether Origin Shield is enabled.
+     * @return A flag that specifies whether Origin Shield is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
+     * @return The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
      * 
-    */
+     */
     public String originShieldRegion() {
         return this.originShieldRegion;
     }

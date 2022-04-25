@@ -17,40 +17,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch {
-    /**
-     * Inspect all query arguments.
-     * 
-     */
+        /**
+         * @return Inspect all query arguments.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArguments allQueryArguments;
-    /**
-     * Inspect the request body, which immediately follows the request headers.
-     * 
-     */
+        /**
+         * @return Inspect the request body, which immediately follows the request headers.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBody body;
-    /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-     * 
-     */
+        /**
+         * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethod method;
-    /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
-     * 
-     */
+        /**
+         * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryString queryString;
-    /**
-     * Inspect a single header. See Single Header below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single header. See Single Header below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader singleHeader;
-    /**
-     * Inspect a single query argument. See Single Query Argument below for details.
-     * 
-     */
+        /**
+         * @return Inspect a single query argument. See Single Query Argument below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument singleQueryArgument;
-    /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-     * 
-     */
+        /**
+         * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPath uriPath;
 
     @CustomType.Constructor
@@ -72,51 +72,51 @@ public final class WebAclRuleStatementOrStatementStatementRegexPatternSetReferen
     }
 
     /**
-     * Inspect all query arguments.
+     * @return Inspect all query arguments.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
-     * Inspect the request body, which immediately follows the request headers.
+     * @return Inspect the request body, which immediately follows the request headers.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
+     * @return Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
-     * Inspect a single header. See Single Header below for details.
+     * @return Inspect a single header. See Single Header below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
-     * Inspect a single query argument. See Single Query Argument below for details.
+     * @return Inspect a single query argument. See Single Query Argument below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }

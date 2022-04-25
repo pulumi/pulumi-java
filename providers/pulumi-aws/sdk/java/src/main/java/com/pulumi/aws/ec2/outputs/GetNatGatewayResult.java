@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNatGatewayResult {
-    /**
-     * The Id of the EIP allocated to the selected Nat Gateway.
-     * 
-     */
+        /**
+         * @return The Id of the EIP allocated to the selected Nat Gateway.
+         * 
+         */
     private final String allocationId;
-    /**
-     * The connectivity type of the NAT Gateway.
-     * 
-     */
+        /**
+         * @return The connectivity type of the NAT Gateway.
+         * 
+         */
     private final String connectivityType;
     private final @Nullable List<GetNatGatewayFilter> filters;
     private final String id;
-    /**
-     * The Id of the ENI allocated to the selected Nat Gateway.
-     * 
-     */
+        /**
+         * @return The Id of the ENI allocated to the selected Nat Gateway.
+         * 
+         */
     private final String networkInterfaceId;
-    /**
-     * The private Ip address of the selected Nat Gateway.
-     * 
-     */
+        /**
+         * @return The private Ip address of the selected Nat Gateway.
+         * 
+         */
     private final String privateIp;
-    /**
-     * The public Ip (EIP) address of the selected Nat Gateway.
-     * 
-     */
+        /**
+         * @return The public Ip (EIP) address of the selected Nat Gateway.
+         * 
+         */
     private final String publicIp;
     private final String state;
     private final String subnetId;
@@ -72,16 +72,16 @@ public final class GetNatGatewayResult {
     }
 
     /**
-     * The Id of the EIP allocated to the selected Nat Gateway.
+     * @return The Id of the EIP allocated to the selected Nat Gateway.
      * 
-    */
+     */
     public String allocationId() {
         return this.allocationId;
     }
     /**
-     * The connectivity type of the NAT Gateway.
+     * @return The connectivity type of the NAT Gateway.
      * 
-    */
+     */
     public String connectivityType() {
         return this.connectivityType;
     }
@@ -92,23 +92,23 @@ public final class GetNatGatewayResult {
         return this.id;
     }
     /**
-     * The Id of the ENI allocated to the selected Nat Gateway.
+     * @return The Id of the ENI allocated to the selected Nat Gateway.
      * 
-    */
+     */
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
-     * The private Ip address of the selected Nat Gateway.
+     * @return The private Ip address of the selected Nat Gateway.
      * 
-    */
+     */
     public String privateIp() {
         return this.privateIp;
     }
     /**
-     * The public Ip (EIP) address of the selected Nat Gateway.
+     * @return The public Ip (EIP) address of the selected Nat Gateway.
      * 
-    */
+     */
     public String publicIp() {
         return this.publicIp;
     }

@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskDefinitionVolumeDockerVolumeConfiguration {
-    /**
-     * If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
-     * 
-     */
+        /**
+         * @return If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
+         * 
+         */
     private final @Nullable Boolean autoprovision;
-    /**
-     * Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
-     * 
-     */
+        /**
+         * @return Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
+         * 
+         */
     private final @Nullable String driver;
-    /**
-     * Map of Docker driver specific options.
-     * 
-     */
+        /**
+         * @return Map of Docker driver specific options.
+         * 
+         */
     private final @Nullable Map<String,String> driverOpts;
-    /**
-     * Map of custom metadata to add to your Docker volume.
-     * 
-     */
+        /**
+         * @return Map of custom metadata to add to your Docker volume.
+         * 
+         */
     private final @Nullable Map<String,String> labels;
-    /**
-     * Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
-     * 
-     */
+        /**
+         * @return Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
+         * 
+         */
     private final @Nullable String scope;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class TaskDefinitionVolumeDockerVolumeConfiguration {
     }
 
     /**
-     * If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
+     * @return If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
      * 
-    */
+     */
     public Optional<Boolean> autoprovision() {
         return Optional.ofNullable(this.autoprovision);
     }
     /**
-     * Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
+     * @return Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
      * 
-    */
+     */
     public Optional<String> driver() {
         return Optional.ofNullable(this.driver);
     }
     /**
-     * Map of Docker driver specific options.
+     * @return Map of Docker driver specific options.
      * 
-    */
+     */
     public Map<String,String> driverOpts() {
         return this.driverOpts == null ? Map.of() : this.driverOpts;
     }
     /**
-     * Map of custom metadata to add to your Docker volume.
+     * @return Map of custom metadata to add to your Docker volume.
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
+     * @return Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }

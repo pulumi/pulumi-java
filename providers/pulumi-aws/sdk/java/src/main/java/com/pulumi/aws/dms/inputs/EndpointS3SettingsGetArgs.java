@@ -23,6 +23,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="bucketFolder")
     private @Nullable Output<String> bucketFolder;
 
+    /**
+     * @return S3 Bucket Object prefix.
+     * 
+     */
     public Optional<Output<String>> bucketFolder() {
         return Optional.ofNullable(this.bucketFolder);
     }
@@ -34,6 +38,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
+    /**
+     * @return S3 Bucket name.
+     * 
+     */
     public Optional<Output<String>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -45,6 +53,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="compressionType")
     private @Nullable Output<String> compressionType;
 
+    /**
+     * @return Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+     * 
+     */
     public Optional<Output<String>> compressionType() {
         return Optional.ofNullable(this.compressionType);
     }
@@ -56,6 +68,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="csvDelimiter")
     private @Nullable Output<String> csvDelimiter;
 
+    /**
+     * @return Delimiter used to separate columns in the source files. Defaults to `,`.
+     * 
+     */
     public Optional<Output<String>> csvDelimiter() {
         return Optional.ofNullable(this.csvDelimiter);
     }
@@ -67,6 +83,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="csvRowDelimiter")
     private @Nullable Output<String> csvRowDelimiter;
 
+    /**
+     * @return Delimiter used to separate rows in the source files. Defaults to `\n`.
+     * 
+     */
     public Optional<Output<String>> csvRowDelimiter() {
         return Optional.ofNullable(this.csvRowDelimiter);
     }
@@ -78,6 +98,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="dataFormat")
     private @Nullable Output<String> dataFormat;
 
+    /**
+     * @return The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+     * 
+     */
     public Optional<Output<String>> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
@@ -89,6 +113,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="datePartitionEnabled")
     private @Nullable Output<Boolean> datePartitionEnabled;
 
+    /**
+     * @return Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> datePartitionEnabled() {
         return Optional.ofNullable(this.datePartitionEnabled);
     }
@@ -100,6 +128,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="encryptionMode")
     private @Nullable Output<String> encryptionMode;
 
+    /**
+     * @return The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+     * 
+     */
     public Optional<Output<String>> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
@@ -111,6 +143,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="externalTableDefinition")
     private @Nullable Output<String> externalTableDefinition;
 
+    /**
+     * @return JSON document that describes how AWS DMS should interpret the data.
+     * 
+     */
     public Optional<Output<String>> externalTableDefinition() {
         return Optional.ofNullable(this.externalTableDefinition);
     }
@@ -122,6 +158,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="parquetTimestampInMillisecond")
     private @Nullable Output<Boolean> parquetTimestampInMillisecond;
 
+    /**
+     * @return - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> parquetTimestampInMillisecond() {
         return Optional.ofNullable(this.parquetTimestampInMillisecond);
     }
@@ -133,6 +173,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="parquetVersion")
     private @Nullable Output<String> parquetVersion;
 
+    /**
+     * @return The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+     * 
+     */
     public Optional<Output<String>> parquetVersion() {
         return Optional.ofNullable(this.parquetVersion);
     }
@@ -144,6 +188,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="serverSideEncryptionKmsKeyId")
     private @Nullable Output<String> serverSideEncryptionKmsKeyId;
 
+    /**
+     * @return If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+     * 
+     */
     public Optional<Output<String>> serverSideEncryptionKmsKeyId() {
         return Optional.ofNullable(this.serverSideEncryptionKmsKeyId);
     }
@@ -155,6 +203,10 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
     @Import(name="serviceAccessRoleArn")
     private @Nullable Output<String> serviceAccessRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+     * 
+     */
     public Optional<Output<String>> serviceAccessRoleArn() {
         return Optional.ofNullable(this.serviceAccessRoleArn);
     }
@@ -195,119 +247,275 @@ public final class EndpointS3SettingsGetArgs extends com.pulumi.resources.Resour
             $ = new EndpointS3SettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketFolder S3 Bucket Object prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketFolder(@Nullable Output<String> bucketFolder) {
             $.bucketFolder = bucketFolder;
             return this;
         }
 
+        /**
+         * @param bucketFolder S3 Bucket Object prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketFolder(String bucketFolder) {
             return bucketFolder(Output.of(bucketFolder));
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param compressionType Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionType(@Nullable Output<String> compressionType) {
             $.compressionType = compressionType;
             return this;
         }
 
+        /**
+         * @param compressionType Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionType(String compressionType) {
             return compressionType(Output.of(compressionType));
         }
 
+        /**
+         * @param csvDelimiter Delimiter used to separate columns in the source files. Defaults to `,`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(@Nullable Output<String> csvDelimiter) {
             $.csvDelimiter = csvDelimiter;
             return this;
         }
 
+        /**
+         * @param csvDelimiter Delimiter used to separate columns in the source files. Defaults to `,`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvDelimiter(String csvDelimiter) {
             return csvDelimiter(Output.of(csvDelimiter));
         }
 
+        /**
+         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Defaults to `\n`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvRowDelimiter(@Nullable Output<String> csvRowDelimiter) {
             $.csvRowDelimiter = csvRowDelimiter;
             return this;
         }
 
+        /**
+         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Defaults to `\n`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csvRowDelimiter(String csvRowDelimiter) {
             return csvRowDelimiter(Output.of(csvRowDelimiter));
         }
 
+        /**
+         * @param dataFormat The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(@Nullable Output<String> dataFormat) {
             $.dataFormat = dataFormat;
             return this;
         }
 
+        /**
+         * @param dataFormat The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFormat(String dataFormat) {
             return dataFormat(Output.of(dataFormat));
         }
 
+        /**
+         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datePartitionEnabled(@Nullable Output<Boolean> datePartitionEnabled) {
             $.datePartitionEnabled = datePartitionEnabled;
             return this;
         }
 
+        /**
+         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datePartitionEnabled(Boolean datePartitionEnabled) {
             return datePartitionEnabled(Output.of(datePartitionEnabled));
         }
 
+        /**
+         * @param encryptionMode The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMode(@Nullable Output<String> encryptionMode) {
             $.encryptionMode = encryptionMode;
             return this;
         }
 
+        /**
+         * @param encryptionMode The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionMode(String encryptionMode) {
             return encryptionMode(Output.of(encryptionMode));
         }
 
+        /**
+         * @param externalTableDefinition JSON document that describes how AWS DMS should interpret the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTableDefinition(@Nullable Output<String> externalTableDefinition) {
             $.externalTableDefinition = externalTableDefinition;
             return this;
         }
 
+        /**
+         * @param externalTableDefinition JSON document that describes how AWS DMS should interpret the data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalTableDefinition(String externalTableDefinition) {
             return externalTableDefinition(Output.of(externalTableDefinition));
         }
 
+        /**
+         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parquetTimestampInMillisecond(@Nullable Output<Boolean> parquetTimestampInMillisecond) {
             $.parquetTimestampInMillisecond = parquetTimestampInMillisecond;
             return this;
         }
 
+        /**
+         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parquetTimestampInMillisecond(Boolean parquetTimestampInMillisecond) {
             return parquetTimestampInMillisecond(Output.of(parquetTimestampInMillisecond));
         }
 
+        /**
+         * @param parquetVersion The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parquetVersion(@Nullable Output<String> parquetVersion) {
             $.parquetVersion = parquetVersion;
             return this;
         }
 
+        /**
+         * @param parquetVersion The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parquetVersion(String parquetVersion) {
             return parquetVersion(Output.of(parquetVersion));
         }
 
+        /**
+         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionKmsKeyId(@Nullable Output<String> serverSideEncryptionKmsKeyId) {
             $.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
             return this;
         }
 
+        /**
+         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverSideEncryptionKmsKeyId(String serverSideEncryptionKmsKeyId) {
             return serverSideEncryptionKmsKeyId(Output.of(serverSideEncryptionKmsKeyId));
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
             $.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             return serviceAccessRoleArn(Output.of(serviceAccessRoleArn));
         }

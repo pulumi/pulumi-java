@@ -12,81 +12,81 @@ import java.util.Objects;
 
 @CustomType
 public final class GetReplicationGroupResult {
-    /**
-     * The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+         * 
+         */
     private final String arn;
-    /**
-     * Specifies whether an AuthToken (password) is enabled.
-     * 
-     */
+        /**
+         * @return Specifies whether an AuthToken (password) is enabled.
+         * 
+         */
     private final Boolean authTokenEnabled;
-    /**
-     * A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
-     * 
-     */
+        /**
+         * @return A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
+         * 
+         */
     private final Boolean automaticFailoverEnabled;
-    /**
-     * The configuration endpoint address to allow host discovery.
-     * 
-     */
+        /**
+         * @return The configuration endpoint address to allow host discovery.
+         * 
+         */
     private final String configurationEndpointAddress;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The identifiers of all the nodes that are part of this replication group.
-     * 
-     */
+        /**
+         * @return The identifiers of all the nodes that are part of this replication group.
+         * 
+         */
     private final List<String> memberClusters;
-    /**
-     * Specifies whether Multi-AZ Support is enabled for the replication group.
-     * 
-     */
+        /**
+         * @return Specifies whether Multi-AZ Support is enabled for the replication group.
+         * 
+         */
     private final Boolean multiAzEnabled;
-    /**
-     * The cluster node type.
-     * 
-     */
+        /**
+         * @return The cluster node type.
+         * 
+         */
     private final String nodeType;
-    /**
-     * The number of cache clusters that the replication group has.
-     * 
-     */
+        /**
+         * @return The number of cache clusters that the replication group has.
+         * 
+         */
     private final Integer numberCacheClusters;
-    /**
-     * The port number on which the configuration endpoint will accept connections.
-     * 
-     */
+        /**
+         * @return The port number on which the configuration endpoint will accept connections.
+         * 
+         */
     private final Integer port;
-    /**
-     * The endpoint of the primary node in this node group (shard).
-     * 
-     */
+        /**
+         * @return The endpoint of the primary node in this node group (shard).
+         * 
+         */
     private final String primaryEndpointAddress;
-    /**
-     * The endpoint of the reader node in this node group (shard).
-     * 
-     */
+        /**
+         * @return The endpoint of the reader node in this node group (shard).
+         * 
+         */
     private final String readerEndpointAddress;
-    /**
-     * The description of the replication group.
-     * 
-     */
+        /**
+         * @return The description of the replication group.
+         * 
+         */
     private final String replicationGroupDescription;
     private final String replicationGroupId;
-    /**
-     * The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
-     * 
-     */
+        /**
+         * @return The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
+         * 
+         */
     private final Integer snapshotRetentionLimit;
-    /**
-     * The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
-     * 
-     */
+        /**
+         * @return The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
+         * 
+         */
     private final String snapshotWindow;
 
     @CustomType.Constructor
@@ -126,93 +126,93 @@ public final class GetReplicationGroupResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+     * @return The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Specifies whether an AuthToken (password) is enabled.
+     * @return Specifies whether an AuthToken (password) is enabled.
      * 
-    */
+     */
     public Boolean authTokenEnabled() {
         return this.authTokenEnabled;
     }
     /**
-     * A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
+     * @return A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
      * 
-    */
+     */
     public Boolean automaticFailoverEnabled() {
         return this.automaticFailoverEnabled;
     }
     /**
-     * The configuration endpoint address to allow host discovery.
+     * @return The configuration endpoint address to allow host discovery.
      * 
-    */
+     */
     public String configurationEndpointAddress() {
         return this.configurationEndpointAddress;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identifiers of all the nodes that are part of this replication group.
+     * @return The identifiers of all the nodes that are part of this replication group.
      * 
-    */
+     */
     public List<String> memberClusters() {
         return this.memberClusters;
     }
     /**
-     * Specifies whether Multi-AZ Support is enabled for the replication group.
+     * @return Specifies whether Multi-AZ Support is enabled for the replication group.
      * 
-    */
+     */
     public Boolean multiAzEnabled() {
         return this.multiAzEnabled;
     }
     /**
-     * The cluster node type.
+     * @return The cluster node type.
      * 
-    */
+     */
     public String nodeType() {
         return this.nodeType;
     }
     /**
-     * The number of cache clusters that the replication group has.
+     * @return The number of cache clusters that the replication group has.
      * 
-    */
+     */
     public Integer numberCacheClusters() {
         return this.numberCacheClusters;
     }
     /**
-     * The port number on which the configuration endpoint will accept connections.
+     * @return The port number on which the configuration endpoint will accept connections.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The endpoint of the primary node in this node group (shard).
+     * @return The endpoint of the primary node in this node group (shard).
      * 
-    */
+     */
     public String primaryEndpointAddress() {
         return this.primaryEndpointAddress;
     }
     /**
-     * The endpoint of the reader node in this node group (shard).
+     * @return The endpoint of the reader node in this node group (shard).
      * 
-    */
+     */
     public String readerEndpointAddress() {
         return this.readerEndpointAddress;
     }
     /**
-     * The description of the replication group.
+     * @return The description of the replication group.
      * 
-    */
+     */
     public String replicationGroupDescription() {
         return this.replicationGroupDescription;
     }
@@ -220,16 +220,16 @@ public final class GetReplicationGroupResult {
         return this.replicationGroupId;
     }
     /**
-     * The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
+     * @return The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
      * 
-    */
+     */
     public Integer snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
-     * The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
+     * @return The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
      * 
-    */
+     */
     public String snapshotWindow() {
         return this.snapshotWindow;
     }

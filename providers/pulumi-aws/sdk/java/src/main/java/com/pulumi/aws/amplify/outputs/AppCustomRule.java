@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AppCustomRule {
-    /**
-     * The condition for a URL rewrite or redirect rule, such as a country code.
-     * 
-     */
+        /**
+         * @return The condition for a URL rewrite or redirect rule, such as a country code.
+         * 
+         */
     private final @Nullable String condition;
-    /**
-     * The source pattern for a URL rewrite or redirect rule.
-     * 
-     */
+        /**
+         * @return The source pattern for a URL rewrite or redirect rule.
+         * 
+         */
     private final String source;
-    /**
-     * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
-     * 
-     */
+        /**
+         * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * The target pattern for a URL rewrite or redirect rule.
-     * 
-     */
+        /**
+         * @return The target pattern for a URL rewrite or redirect rule.
+         * 
+         */
     private final String target;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class AppCustomRule {
     }
 
     /**
-     * The condition for a URL rewrite or redirect rule, such as a country code.
+     * @return The condition for a URL rewrite or redirect rule, such as a country code.
      * 
-    */
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * The source pattern for a URL rewrite or redirect rule.
+     * @return The source pattern for a URL rewrite or redirect rule.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
+     * @return The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The target pattern for a URL rewrite or redirect rule.
+     * @return The target pattern for a URL rewrite or redirect rule.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }

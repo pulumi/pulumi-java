@@ -22,6 +22,10 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs exten
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the kernel.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -33,6 +37,10 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs exten
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the kernel.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -62,20 +70,44 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs exten
             $ = new AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the kernel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

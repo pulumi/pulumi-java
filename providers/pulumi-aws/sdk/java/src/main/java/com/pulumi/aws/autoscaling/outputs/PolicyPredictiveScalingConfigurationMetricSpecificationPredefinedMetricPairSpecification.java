@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification {
-    /**
-     * Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
-     * 
-     */
+        /**
+         * @return Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+         * 
+         */
     private final String predefinedMetricType;
-    /**
-     * A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
-     * 
-     */
+        /**
+         * @return A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+         * 
+         */
     private final String resourceLabel;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     }
 
     /**
-     * Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
+     * @return Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
      * 
-    */
+     */
     public String predefinedMetricType() {
         return this.predefinedMetricType;
     }
     /**
-     * A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
+     * @return A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
      * 
-    */
+     */
     public String resourceLabel() {
         return this.resourceLabel;
     }

@@ -10,11 +10,11 @@ import java.util.Objects;
 
 @CustomType
 public final class RouteSpecGrpcRouteAction {
-    /**
-     * The targets that traffic is routed to when a request matches the route.
-     * You can specify one or more targets and their relative weights with which to distribute traffic.
-     * 
-     */
+        /**
+         * @return The targets that traffic is routed to when a request matches the route.
+         * You can specify one or more targets and their relative weights with which to distribute traffic.
+         * 
+         */
     private final List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets;
 
     @CustomType.Constructor
@@ -23,10 +23,10 @@ public final class RouteSpecGrpcRouteAction {
     }
 
     /**
-     * The targets that traffic is routed to when a request matches the route.
+     * @return The targets that traffic is routed to when a request matches the route.
      * You can specify one or more targets and their relative weights with which to distribute traffic.
      * 
-    */
+     */
     public List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets() {
         return this.weightedTargets;
     }

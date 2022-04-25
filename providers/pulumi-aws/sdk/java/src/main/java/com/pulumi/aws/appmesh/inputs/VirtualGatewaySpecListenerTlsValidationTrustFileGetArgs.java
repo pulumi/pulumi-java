@@ -20,6 +20,10 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs exten
     @Import(name="certificateChain", required=true)
     private Output<String> certificateChain;
 
+    /**
+     * @return The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> certificateChain() {
         return this.certificateChain;
     }
@@ -48,11 +52,23 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs exten
             $ = new VirtualGatewaySpecListenerTlsValidationTrustFileGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateChain The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(Output<String> certificateChain) {
             $.certificateChain = certificateChain;
             return this;
         }
 
+        /**
+         * @param certificateChain The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateChain(String certificateChain) {
             return certificateChain(Output.of(certificateChain));
         }

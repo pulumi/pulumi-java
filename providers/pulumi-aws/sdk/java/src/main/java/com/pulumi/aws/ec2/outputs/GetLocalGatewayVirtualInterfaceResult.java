@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 public final class GetLocalGatewayVirtualInterfaceResult {
     private final @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters;
     private final String id;
-    /**
-     * Local address.
-     * 
-     */
+        /**
+         * @return Local address.
+         * 
+         */
     private final String localAddress;
-    /**
-     * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
-     * 
-     */
+        /**
+         * @return Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
+         * 
+         */
     private final Integer localBgpAsn;
-    /**
-     * Identifier of the EC2 Local Gateway.
-     * 
-     */
+        /**
+         * @return Identifier of the EC2 Local Gateway.
+         * 
+         */
     private final String localGatewayId;
     private final List<String> localGatewayVirtualInterfaceIds;
-    /**
-     * Peer address.
-     * 
-     */
+        /**
+         * @return Peer address.
+         * 
+         */
     private final String peerAddress;
-    /**
-     * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
-     * 
-     */
+        /**
+         * @return Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
+         * 
+         */
     private final Integer peerBgpAsn;
     private final Map<String,String> tags;
-    /**
-     * Virtual Local Area Network.
-     * 
-     */
+        /**
+         * @return Virtual Local Area Network.
+         * 
+         */
     private final Integer vlan;
 
     @CustomType.Constructor
@@ -80,23 +80,23 @@ public final class GetLocalGatewayVirtualInterfaceResult {
         return this.id;
     }
     /**
-     * Local address.
+     * @return Local address.
      * 
-    */
+     */
     public String localAddress() {
         return this.localAddress;
     }
     /**
-     * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
+     * @return Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
      * 
-    */
+     */
     public Integer localBgpAsn() {
         return this.localBgpAsn;
     }
     /**
-     * Identifier of the EC2 Local Gateway.
+     * @return Identifier of the EC2 Local Gateway.
      * 
-    */
+     */
     public String localGatewayId() {
         return this.localGatewayId;
     }
@@ -104,16 +104,16 @@ public final class GetLocalGatewayVirtualInterfaceResult {
         return this.localGatewayVirtualInterfaceIds;
     }
     /**
-     * Peer address.
+     * @return Peer address.
      * 
-    */
+     */
     public String peerAddress() {
         return this.peerAddress;
     }
     /**
-     * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
+     * @return Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
      * 
-    */
+     */
     public Integer peerBgpAsn() {
         return this.peerBgpAsn;
     }
@@ -121,9 +121,9 @@ public final class GetLocalGatewayVirtualInterfaceResult {
         return this.tags;
     }
     /**
-     * Virtual Local Area Network.
+     * @return Virtual Local Area Network.
      * 
-    */
+     */
     public Integer vlan() {
         return this.vlan;
     }

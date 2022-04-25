@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegionResult {
-    /**
-     * The region&#39;s description in this format: &#34;Location (Region name)&#34;.
-     * 
-     */
+        /**
+         * @return The region&#39;s description in this format: &#34;Location (Region name)&#34;.
+         * 
+         */
     private final String description;
-    /**
-     * The EC2 endpoint for the selected region.
-     * 
-     */
+        /**
+         * @return The EC2 endpoint for the selected region.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the selected region.
-     * 
-     */
+        /**
+         * @return The name of the selected region.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GetRegionResult {
     }
 
     /**
-     * The region&#39;s description in this format: &#34;Location (Region name)&#34;.
+     * @return The region&#39;s description in this format: &#34;Location (Region name)&#34;.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The EC2 endpoint for the selected region.
+     * @return The EC2 endpoint for the selected region.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the selected region.
+     * @return The name of the selected region.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

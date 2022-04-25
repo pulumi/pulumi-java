@@ -14,156 +14,156 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * Whether major version upgrades can be applied during maintenance period
-     * 
-     */
+        /**
+         * @return Whether major version upgrades can be applied during maintenance period
+         * 
+         */
     private final Boolean allowVersionUpgrade;
-    /**
-     * The backup retention period
-     * 
-     */
+        /**
+         * @return The backup retention period
+         * 
+         */
     private final Integer automatedSnapshotRetentionPeriod;
-    /**
-     * The availability zone of the cluster
-     * 
-     */
+        /**
+         * @return The availability zone of the cluster
+         * 
+         */
     private final String availabilityZone;
-    /**
-     * The name of the S3 bucket where the log files are to be stored
-     * 
-     */
+        /**
+         * @return The name of the S3 bucket where the log files are to be stored
+         * 
+         */
     private final String bucketName;
-    /**
-     * The cluster identifier
-     * 
-     */
+        /**
+         * @return The cluster identifier
+         * 
+         */
     private final String clusterIdentifier;
-    /**
-     * The name of the parameter group to be associated with this cluster
-     * 
-     */
+        /**
+         * @return The name of the parameter group to be associated with this cluster
+         * 
+         */
     private final String clusterParameterGroupName;
-    /**
-     * The public key for the cluster
-     * 
-     */
+        /**
+         * @return The public key for the cluster
+         * 
+         */
     private final String clusterPublicKey;
-    /**
-     * The cluster revision number
-     * 
-     */
+        /**
+         * @return The cluster revision number
+         * 
+         */
     private final String clusterRevisionNumber;
-    /**
-     * The security groups associated with the cluster
-     * 
-     */
+        /**
+         * @return The security groups associated with the cluster
+         * 
+         */
     private final List<String> clusterSecurityGroups;
-    /**
-     * The name of a cluster subnet group to be associated with this cluster
-     * 
-     */
+        /**
+         * @return The name of a cluster subnet group to be associated with this cluster
+         * 
+         */
     private final String clusterSubnetGroupName;
-    /**
-     * The cluster type
-     * 
-     */
+        /**
+         * @return The cluster type
+         * 
+         */
     private final String clusterType;
     private final String clusterVersion;
-    /**
-     * The name of the default database in the cluster
-     * 
-     */
+        /**
+         * @return The name of the default database in the cluster
+         * 
+         */
     private final String databaseName;
-    /**
-     * The Elastic IP of the cluster
-     * 
-     */
+        /**
+         * @return The Elastic IP of the cluster
+         * 
+         */
     private final String elasticIp;
-    /**
-     * Whether cluster logging is enabled
-     * 
-     */
+        /**
+         * @return Whether cluster logging is enabled
+         * 
+         */
     private final Boolean enableLogging;
-    /**
-     * Whether the cluster data is encrypted
-     * 
-     */
+        /**
+         * @return Whether the cluster data is encrypted
+         * 
+         */
     private final Boolean encrypted;
-    /**
-     * The cluster endpoint
-     * 
-     */
+        /**
+         * @return The cluster endpoint
+         * 
+         */
     private final String endpoint;
-    /**
-     * Whether enhanced VPC routing is enabled
-     * 
-     */
+        /**
+         * @return Whether enhanced VPC routing is enabled
+         * 
+         */
     private final Boolean enhancedVpcRouting;
-    /**
-     * The IAM roles associated to the cluster
-     * 
-     */
+        /**
+         * @return The IAM roles associated to the cluster
+         * 
+         */
     private final List<String> iamRoles;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The KMS encryption key associated to the cluster
-     * 
-     */
+        /**
+         * @return The KMS encryption key associated to the cluster
+         * 
+         */
     private final String kmsKeyId;
-    /**
-     * Username for the master DB user
-     * 
-     */
+        /**
+         * @return Username for the master DB user
+         * 
+         */
     private final String masterUsername;
-    /**
-     * The cluster node type
-     * 
-     */
+        /**
+         * @return The cluster node type
+         * 
+         */
     private final String nodeType;
-    /**
-     * The number of nodes in the cluster
-     * 
-     */
+        /**
+         * @return The number of nodes in the cluster
+         * 
+         */
     private final Integer numberOfNodes;
-    /**
-     * The port the cluster responds on
-     * 
-     */
+        /**
+         * @return The port the cluster responds on
+         * 
+         */
     private final Integer port;
-    /**
-     * The maintenance window
-     * 
-     */
+        /**
+         * @return The maintenance window
+         * 
+         */
     private final String preferredMaintenanceWindow;
-    /**
-     * Whether the cluster is publicly accessible
-     * 
-     */
+        /**
+         * @return Whether the cluster is publicly accessible
+         * 
+         */
     private final Boolean publiclyAccessible;
-    /**
-     * The folder inside the S3 bucket where the log files are stored
-     * 
-     */
+        /**
+         * @return The folder inside the S3 bucket where the log files are stored
+         * 
+         */
     private final String s3KeyPrefix;
-    /**
-     * The tags associated to the cluster
-     * 
-     */
+        /**
+         * @return The tags associated to the cluster
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The VPC Id associated with the cluster
-     * 
-     */
+        /**
+         * @return The VPC Id associated with the cluster
+         * 
+         */
     private final String vpcId;
-    /**
-     * The VPC security group Ids associated with the cluster
-     * 
-     */
+        /**
+         * @return The VPC security group Ids associated with the cluster
+         * 
+         */
     private final List<String> vpcSecurityGroupIds;
 
     @CustomType.Constructor
@@ -233,79 +233,79 @@ public final class GetClusterResult {
     }
 
     /**
-     * Whether major version upgrades can be applied during maintenance period
+     * @return Whether major version upgrades can be applied during maintenance period
      * 
-    */
+     */
     public Boolean allowVersionUpgrade() {
         return this.allowVersionUpgrade;
     }
     /**
-     * The backup retention period
+     * @return The backup retention period
      * 
-    */
+     */
     public Integer automatedSnapshotRetentionPeriod() {
         return this.automatedSnapshotRetentionPeriod;
     }
     /**
-     * The availability zone of the cluster
+     * @return The availability zone of the cluster
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
-     * The name of the S3 bucket where the log files are to be stored
+     * @return The name of the S3 bucket where the log files are to be stored
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * The cluster identifier
+     * @return The cluster identifier
      * 
-    */
+     */
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
-     * The name of the parameter group to be associated with this cluster
+     * @return The name of the parameter group to be associated with this cluster
      * 
-    */
+     */
     public String clusterParameterGroupName() {
         return this.clusterParameterGroupName;
     }
     /**
-     * The public key for the cluster
+     * @return The public key for the cluster
      * 
-    */
+     */
     public String clusterPublicKey() {
         return this.clusterPublicKey;
     }
     /**
-     * The cluster revision number
+     * @return The cluster revision number
      * 
-    */
+     */
     public String clusterRevisionNumber() {
         return this.clusterRevisionNumber;
     }
     /**
-     * The security groups associated with the cluster
+     * @return The security groups associated with the cluster
      * 
-    */
+     */
     public List<String> clusterSecurityGroups() {
         return this.clusterSecurityGroups;
     }
     /**
-     * The name of a cluster subnet group to be associated with this cluster
+     * @return The name of a cluster subnet group to be associated with this cluster
      * 
-    */
+     */
     public String clusterSubnetGroupName() {
         return this.clusterSubnetGroupName;
     }
     /**
-     * The cluster type
+     * @return The cluster type
      * 
-    */
+     */
     public String clusterType() {
         return this.clusterType;
     }
@@ -313,135 +313,135 @@ public final class GetClusterResult {
         return this.clusterVersion;
     }
     /**
-     * The name of the default database in the cluster
+     * @return The name of the default database in the cluster
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The Elastic IP of the cluster
+     * @return The Elastic IP of the cluster
      * 
-    */
+     */
     public String elasticIp() {
         return this.elasticIp;
     }
     /**
-     * Whether cluster logging is enabled
+     * @return Whether cluster logging is enabled
      * 
-    */
+     */
     public Boolean enableLogging() {
         return this.enableLogging;
     }
     /**
-     * Whether the cluster data is encrypted
+     * @return Whether the cluster data is encrypted
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
     /**
-     * The cluster endpoint
+     * @return The cluster endpoint
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * Whether enhanced VPC routing is enabled
+     * @return Whether enhanced VPC routing is enabled
      * 
-    */
+     */
     public Boolean enhancedVpcRouting() {
         return this.enhancedVpcRouting;
     }
     /**
-     * The IAM roles associated to the cluster
+     * @return The IAM roles associated to the cluster
      * 
-    */
+     */
     public List<String> iamRoles() {
         return this.iamRoles;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The KMS encryption key associated to the cluster
+     * @return The KMS encryption key associated to the cluster
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
-     * Username for the master DB user
+     * @return Username for the master DB user
      * 
-    */
+     */
     public String masterUsername() {
         return this.masterUsername;
     }
     /**
-     * The cluster node type
+     * @return The cluster node type
      * 
-    */
+     */
     public String nodeType() {
         return this.nodeType;
     }
     /**
-     * The number of nodes in the cluster
+     * @return The number of nodes in the cluster
      * 
-    */
+     */
     public Integer numberOfNodes() {
         return this.numberOfNodes;
     }
     /**
-     * The port the cluster responds on
+     * @return The port the cluster responds on
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The maintenance window
+     * @return The maintenance window
      * 
-    */
+     */
     public String preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
-     * Whether the cluster is publicly accessible
+     * @return Whether the cluster is publicly accessible
      * 
-    */
+     */
     public Boolean publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
-     * The folder inside the S3 bucket where the log files are stored
+     * @return The folder inside the S3 bucket where the log files are stored
      * 
-    */
+     */
     public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
     /**
-     * The tags associated to the cluster
+     * @return The tags associated to the cluster
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The VPC Id associated with the cluster
+     * @return The VPC Id associated with the cluster
      * 
-    */
+     */
     public String vpcId() {
         return this.vpcId;
     }
     /**
-     * The VPC security group Ids associated with the cluster
+     * @return The VPC security group Ids associated with the cluster
      * 
-    */
+     */
     public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }

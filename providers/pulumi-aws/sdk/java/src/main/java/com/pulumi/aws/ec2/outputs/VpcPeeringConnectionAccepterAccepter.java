@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpcPeeringConnectionAccepterAccepter {
-    /**
-     * Indicates whether a local ClassicLink connection can communicate
-     * with the peer VPC over the VPC Peering Connection.
-     * 
-     */
+        /**
+         * @return Indicates whether a local ClassicLink connection can communicate
+         * with the peer VPC over the VPC Peering Connection.
+         * 
+         */
     private final @Nullable Boolean allowClassicLinkToRemoteVpc;
-    /**
-     * Indicates whether a local VPC can resolve public DNS hostnames to
-     * private IP addresses when queried from instances in a peer VPC.
-     * 
-     */
+        /**
+         * @return Indicates whether a local VPC can resolve public DNS hostnames to
+         * private IP addresses when queried from instances in a peer VPC.
+         * 
+         */
     private final @Nullable Boolean allowRemoteVpcDnsResolution;
-    /**
-     * Indicates whether a local VPC can communicate with a ClassicLink
-     * connection in the peer VPC over the VPC Peering Connection.
-     * 
-     */
+        /**
+         * @return Indicates whether a local VPC can communicate with a ClassicLink
+         * connection in the peer VPC over the VPC Peering Connection.
+         * 
+         */
     private final @Nullable Boolean allowVpcToRemoteClassicLink;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class VpcPeeringConnectionAccepterAccepter {
     }
 
     /**
-     * Indicates whether a local ClassicLink connection can communicate
+     * @return Indicates whether a local ClassicLink connection can communicate
      * with the peer VPC over the VPC Peering Connection.
      * 
-    */
+     */
     public Optional<Boolean> allowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
     /**
-     * Indicates whether a local VPC can resolve public DNS hostnames to
+     * @return Indicates whether a local VPC can resolve public DNS hostnames to
      * private IP addresses when queried from instances in a peer VPC.
      * 
-    */
+     */
     public Optional<Boolean> allowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
     /**
-     * Indicates whether a local VPC can communicate with a ClassicLink
+     * @return Indicates whether a local VPC can communicate with a ClassicLink
      * connection in the peer VPC over the VPC Peering Connection.
      * 
-    */
+     */
     public Optional<Boolean> allowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }

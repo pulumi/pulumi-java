@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetParameterResult {
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
     private final String type;
@@ -47,9 +47,9 @@ public final class GetParameterResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

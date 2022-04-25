@@ -23,6 +23,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -34,6 +38,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     @Import(name="retryDuration")
     private @Nullable Output<Integer> retryDuration;
 
+    /**
+     * @return The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+     * 
+     */
     public Optional<Output<Integer>> retryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
@@ -63,20 +71,44 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
             $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param retryDuration The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDuration(@Nullable Output<Integer> retryDuration) {
             $.retryDuration = retryDuration;
             return this;
         }
 
+        /**
+         * @param retryDuration The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryDuration(Integer retryDuration) {
             return retryDuration(Output.of(retryDuration));
         }

@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PolicyTargetTrackingConfiguration {
-    /**
-     * A customized metric. Conflicts with `predefined_metric_specification`.
-     * 
-     */
+        /**
+         * @return A customized metric. Conflicts with `predefined_metric_specification`.
+         * 
+         */
     private final @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification;
-    /**
-     * Indicates whether scale in by the target tracking policy is disabled.
-     * 
-     */
+        /**
+         * @return Indicates whether scale in by the target tracking policy is disabled.
+         * 
+         */
     private final @Nullable Boolean disableScaleIn;
-    /**
-     * A predefined metric. Conflicts with `customized_metric_specification`.
-     * 
-     */
+        /**
+         * @return A predefined metric. Conflicts with `customized_metric_specification`.
+         * 
+         */
     private final @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification;
-    /**
-     * The target value for the metric.
-     * 
-     */
+        /**
+         * @return The target value for the metric.
+         * 
+         */
     private final Double targetValue;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class PolicyTargetTrackingConfiguration {
     }
 
     /**
-     * A customized metric. Conflicts with `predefined_metric_specification`.
+     * @return A customized metric. Conflicts with `predefined_metric_specification`.
      * 
-    */
+     */
     public Optional<PolicyTargetTrackingConfigurationCustomizedMetricSpecification> customizedMetricSpecification() {
         return Optional.ofNullable(this.customizedMetricSpecification);
     }
     /**
-     * Indicates whether scale in by the target tracking policy is disabled.
+     * @return Indicates whether scale in by the target tracking policy is disabled.
      * 
-    */
+     */
     public Optional<Boolean> disableScaleIn() {
         return Optional.ofNullable(this.disableScaleIn);
     }
     /**
-     * A predefined metric. Conflicts with `customized_metric_specification`.
+     * @return A predefined metric. Conflicts with `customized_metric_specification`.
      * 
-    */
+     */
     public Optional<PolicyTargetTrackingConfigurationPredefinedMetricSpecification> predefinedMetricSpecification() {
         return Optional.ofNullable(this.predefinedMetricSpecification);
     }
     /**
-     * The target value for the metric.
+     * @return The target value for the metric.
      * 
-    */
+     */
     public Double targetValue() {
         return this.targetValue;
     }

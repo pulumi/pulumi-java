@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NodeGroupTaint {
-    /**
-     * The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
-     * 
-     */
+        /**
+         * @return The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+         * 
+         */
     private final String effect;
-    /**
-     * The key of the taint. Maximum length of 63.
-     * 
-     */
+        /**
+         * @return The key of the taint. Maximum length of 63.
+         * 
+         */
     private final String key;
-    /**
-     * The value of the taint. Maximum length of 63.
-     * 
-     */
+        /**
+         * @return The value of the taint. Maximum length of 63.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class NodeGroupTaint {
     }
 
     /**
-     * The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
+     * @return The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * The key of the taint. Maximum length of 63.
+     * @return The key of the taint. Maximum length of 63.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of the taint. Maximum length of 63.
+     * @return The value of the taint. Maximum length of 63.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SnapshotImportClientData {
-    /**
-     * A user-defined comment about the disk upload.
-     * 
-     */
+        /**
+         * @return A user-defined comment about the disk upload.
+         * 
+         */
     private final @Nullable String comment;
-    /**
-     * The time that the disk upload ends.
-     * 
-     */
+        /**
+         * @return The time that the disk upload ends.
+         * 
+         */
     private final @Nullable String uploadEnd;
-    /**
-     * The size of the uploaded disk image, in GiB.
-     * 
-     */
+        /**
+         * @return The size of the uploaded disk image, in GiB.
+         * 
+         */
     private final @Nullable Double uploadSize;
-    /**
-     * The time that the disk upload starts.
-     * 
-     */
+        /**
+         * @return The time that the disk upload starts.
+         * 
+         */
     private final @Nullable String uploadStart;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SnapshotImportClientData {
     }
 
     /**
-     * A user-defined comment about the disk upload.
+     * @return A user-defined comment about the disk upload.
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * The time that the disk upload ends.
+     * @return The time that the disk upload ends.
      * 
-    */
+     */
     public Optional<String> uploadEnd() {
         return Optional.ofNullable(this.uploadEnd);
     }
     /**
-     * The size of the uploaded disk image, in GiB.
+     * @return The size of the uploaded disk image, in GiB.
      * 
-    */
+     */
     public Optional<Double> uploadSize() {
         return Optional.ofNullable(this.uploadSize);
     }
     /**
-     * The time that the disk upload starts.
+     * @return The time that the disk upload starts.
      * 
-    */
+     */
     public Optional<String> uploadStart() {
         return Optional.ofNullable(this.uploadStart);
     }

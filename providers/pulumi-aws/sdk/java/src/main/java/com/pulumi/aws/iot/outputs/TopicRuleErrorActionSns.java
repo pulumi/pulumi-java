@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopicRuleErrorActionSns {
-    /**
-     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
-     * 
-     */
+        /**
+         * @return The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
+         * 
+         */
     private final @Nullable String messageFormat;
-    /**
-     * The ARN of the IAM role that grants access.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role that grants access.
+         * 
+         */
     private final String roleArn;
-    /**
-     * The ARN of the SNS topic.
-     * 
-     */
+        /**
+         * @return The ARN of the SNS topic.
+         * 
+         */
     private final String targetArn;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TopicRuleErrorActionSns {
     }
 
     /**
-     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
+     * @return The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
      * 
-    */
+     */
     public Optional<String> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
     /**
-     * The ARN of the IAM role that grants access.
+     * @return The ARN of the IAM role that grants access.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The ARN of the SNS topic.
+     * @return The ARN of the SNS topic.
      * 
-    */
+     */
     public String targetArn() {
         return this.targetArn;
     }

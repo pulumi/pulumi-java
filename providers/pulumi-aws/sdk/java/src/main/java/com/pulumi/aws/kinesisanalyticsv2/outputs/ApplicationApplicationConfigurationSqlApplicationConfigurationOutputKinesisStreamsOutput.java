@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput {
-    /**
-     * The ARN of the destination Kinesis data stream to write to.
-     * 
-     */
+        /**
+         * @return The ARN of the destination Kinesis data stream to write to.
+         * 
+         */
     private final String resourceArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The ARN of the destination Kinesis data stream to write to.
+     * @return The ARN of the destination Kinesis data stream to write to.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventConnectionAuthParametersOauth {
-    /**
-     * The URL to the authorization endpoint.
-     * 
-     */
+        /**
+         * @return The URL to the authorization endpoint.
+         * 
+         */
     private final String authorizationEndpoint;
-    /**
-     * Contains the client parameters for OAuth authorization. Contains the following two parameters.
-     * 
-     */
+        /**
+         * @return Contains the client parameters for OAuth authorization. Contains the following two parameters.
+         * 
+         */
     private final @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters;
-    /**
-     * A password for the authorization. Created and stored in AWS Secrets Manager.
-     * 
-     */
+        /**
+         * @return A password for the authorization. Created and stored in AWS Secrets Manager.
+         * 
+         */
     private final String httpMethod;
-    /**
-     * OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
-     * 
-     */
+        /**
+         * @return OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+         * 
+         */
     private final EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class EventConnectionAuthParametersOauth {
     }
 
     /**
-     * The URL to the authorization endpoint.
+     * @return The URL to the authorization endpoint.
      * 
-    */
+     */
     public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
-     * Contains the client parameters for OAuth authorization. Contains the following two parameters.
+     * @return Contains the client parameters for OAuth authorization. Contains the following two parameters.
      * 
-    */
+     */
     public Optional<EventConnectionAuthParametersOauthClientParameters> clientParameters() {
         return Optional.ofNullable(this.clientParameters);
     }
     /**
-     * A password for the authorization. Created and stored in AWS Secrets Manager.
+     * @return A password for the authorization. Created and stored in AWS Secrets Manager.
      * 
-    */
+     */
     public String httpMethod() {
         return this.httpMethod;
     }
     /**
-     * OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
+     * @return OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
      * 
-    */
+     */
     public EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters() {
         return this.oauthHttpParameters;
     }

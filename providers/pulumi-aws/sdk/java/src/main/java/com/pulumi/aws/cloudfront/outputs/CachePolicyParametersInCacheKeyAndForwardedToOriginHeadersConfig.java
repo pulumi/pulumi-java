@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig {
-    /**
-     * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
-     * 
-     */
+        /**
+         * @return Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+         * 
+         */
     private final @Nullable String headerBehavior;
-    /**
-     * Object that contains a list of header names. See Items for more information.
-     * 
-     */
+        /**
+         * @return Object that contains a list of header names. See Items for more information.
+         * 
+         */
     private final @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders headers;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
     }
 
     /**
-     * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
+     * @return Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
      * 
-    */
+     */
     public Optional<String> headerBehavior() {
         return Optional.ofNullable(this.headerBehavior);
     }
     /**
-     * Object that contains a list of header names. See Items for more information.
+     * @return Object that contains a list of header names. See Items for more information.
      * 
-    */
+     */
     public Optional<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders> headers() {
         return Optional.ofNullable(this.headers);
     }

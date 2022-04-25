@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketOwnershipControlsRule {
-    /**
-     * Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
-     * 
-     */
+        /**
+         * @return Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
+         * 
+         */
     private final String objectOwnership;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BucketOwnershipControlsRule {
     }
 
     /**
-     * Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
+     * @return Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
      * 
-    */
+     */
     public String objectOwnership() {
         return this.objectOwnership;
     }

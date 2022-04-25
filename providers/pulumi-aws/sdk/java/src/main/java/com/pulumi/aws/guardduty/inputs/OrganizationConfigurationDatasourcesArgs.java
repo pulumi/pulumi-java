@@ -22,6 +22,10 @@ public final class OrganizationConfigurationDatasourcesArgs extends com.pulumi.r
     @Import(name="s3Logs")
     private @Nullable Output<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs;
 
+    /**
+     * @return Configuration for the builds to store logs to S3.
+     * 
+     */
     public Optional<Output<OrganizationConfigurationDatasourcesS3LogsArgs>> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
@@ -50,11 +54,23 @@ public final class OrganizationConfigurationDatasourcesArgs extends com.pulumi.r
             $ = new OrganizationConfigurationDatasourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Logs Configuration for the builds to store logs to S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(@Nullable Output<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs) {
             $.s3Logs = s3Logs;
             return this;
         }
 
+        /**
+         * @param s3Logs Configuration for the builds to store logs to S3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Logs(OrganizationConfigurationDatasourcesS3LogsArgs s3Logs) {
             return s3Logs(Output.of(s3Logs));
         }

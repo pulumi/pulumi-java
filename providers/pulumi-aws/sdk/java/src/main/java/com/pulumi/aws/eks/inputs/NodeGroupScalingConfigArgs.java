@@ -20,6 +20,10 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="desiredSize", required=true)
     private Output<Integer> desiredSize;
 
+    /**
+     * @return Desired number of worker nodes.
+     * 
+     */
     public Output<Integer> desiredSize() {
         return this.desiredSize;
     }
@@ -31,6 +35,10 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="maxSize", required=true)
     private Output<Integer> maxSize;
 
+    /**
+     * @return Maximum number of worker nodes.
+     * 
+     */
     public Output<Integer> maxSize() {
         return this.maxSize;
     }
@@ -42,6 +50,10 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="minSize", required=true)
     private Output<Integer> minSize;
 
+    /**
+     * @return Minimum number of worker nodes.
+     * 
+     */
     public Output<Integer> minSize() {
         return this.minSize;
     }
@@ -72,29 +84,65 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
             $ = new NodeGroupScalingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredSize Desired number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredSize(Output<Integer> desiredSize) {
             $.desiredSize = desiredSize;
             return this;
         }
 
+        /**
+         * @param desiredSize Desired number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredSize(Integer desiredSize) {
             return desiredSize(Output.of(desiredSize));
         }
 
+        /**
+         * @param maxSize Maximum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Output<Integer> maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param maxSize Maximum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Integer maxSize) {
             return maxSize(Output.of(maxSize));
         }
 
+        /**
+         * @param minSize Minimum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Output<Integer> minSize) {
             $.minSize = minSize;
             return this;
         }
 
+        /**
+         * @param minSize Minimum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Integer minSize) {
             return minSize(Output.of(minSize));
         }

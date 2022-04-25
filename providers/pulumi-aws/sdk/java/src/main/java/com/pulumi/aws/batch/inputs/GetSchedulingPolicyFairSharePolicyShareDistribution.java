@@ -20,6 +20,10 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
     @Import(name="shareIdentifier", required=true)
     private String shareIdentifier;
 
+    /**
+     * @return A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * 
+     */
     public String shareIdentifier() {
         return this.shareIdentifier;
     }
@@ -31,6 +35,10 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
     @Import(name="weightFactor", required=true)
     private Double weightFactor;
 
+    /**
+     * @return The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+     * 
+     */
     public Double weightFactor() {
         return this.weightFactor;
     }
@@ -60,11 +68,23 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends c
             $ = new GetSchedulingPolicyFairSharePolicyShareDistribution(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shareIdentifier A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareIdentifier(String shareIdentifier) {
             $.shareIdentifier = shareIdentifier;
             return this;
         }
 
+        /**
+         * @param weightFactor The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder weightFactor(Double weightFactor) {
             $.weightFactor = weightFactor;
             return this;

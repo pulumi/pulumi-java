@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketVersioning {
-    /**
-     * Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
-     * 
-     */
+        /**
+         * @return Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
-     * 
-     */
+        /**
+         * @return Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
+         * 
+         */
     private final @Nullable Boolean mfaDelete;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class BucketVersioning {
     }
 
     /**
-     * Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
+     * @return Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
+     * @return Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
      * 
-    */
+     */
     public Optional<Boolean> mfaDelete() {
         return Optional.ofNullable(this.mfaDelete);
     }

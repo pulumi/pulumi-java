@@ -23,6 +23,11 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends com.pulu
     @Import(name="allowClassicLinkToRemoteVpc")
     private @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
+    /**
+     * @return Indicates whether a local ClassicLink connection can communicate
+     * with the peer VPC over the VPC Peering Connection.
+     * 
+     */
     public Optional<Output<Boolean>> allowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
@@ -35,6 +40,11 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends com.pulu
     @Import(name="allowRemoteVpcDnsResolution")
     private @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
+    /**
+     * @return Indicates whether a local VPC can resolve public DNS hostnames to
+     * private IP addresses when queried from instances in a peer VPC.
+     * 
+     */
     public Optional<Output<Boolean>> allowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
@@ -47,6 +57,11 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends com.pulu
     @Import(name="allowVpcToRemoteClassicLink")
     private @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
+    /**
+     * @return Indicates whether a local VPC can communicate with a ClassicLink
+     * connection in the peer VPC over the VPC Peering Connection.
+     * 
+     */
     public Optional<Output<Boolean>> allowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }
@@ -77,29 +92,71 @@ public final class VpcPeeringConnectionAccepterRequesterGetArgs extends com.pulu
             $ = new VpcPeeringConnectionAccepterRequesterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowClassicLinkToRemoteVpc Indicates whether a local ClassicLink connection can communicate
+         * with the peer VPC over the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowClassicLinkToRemoteVpc(@Nullable Output<Boolean> allowClassicLinkToRemoteVpc) {
             $.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
 
+        /**
+         * @param allowClassicLinkToRemoteVpc Indicates whether a local ClassicLink connection can communicate
+         * with the peer VPC over the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowClassicLinkToRemoteVpc(Boolean allowClassicLinkToRemoteVpc) {
             return allowClassicLinkToRemoteVpc(Output.of(allowClassicLinkToRemoteVpc));
         }
 
+        /**
+         * @param allowRemoteVpcDnsResolution Indicates whether a local VPC can resolve public DNS hostnames to
+         * private IP addresses when queried from instances in a peer VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRemoteVpcDnsResolution(@Nullable Output<Boolean> allowRemoteVpcDnsResolution) {
             $.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
 
+        /**
+         * @param allowRemoteVpcDnsResolution Indicates whether a local VPC can resolve public DNS hostnames to
+         * private IP addresses when queried from instances in a peer VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowRemoteVpcDnsResolution(Boolean allowRemoteVpcDnsResolution) {
             return allowRemoteVpcDnsResolution(Output.of(allowRemoteVpcDnsResolution));
         }
 
+        /**
+         * @param allowVpcToRemoteClassicLink Indicates whether a local VPC can communicate with a ClassicLink
+         * connection in the peer VPC over the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVpcToRemoteClassicLink(@Nullable Output<Boolean> allowVpcToRemoteClassicLink) {
             $.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }
 
+        /**
+         * @param allowVpcToRemoteClassicLink Indicates whether a local VPC can communicate with a ClassicLink
+         * connection in the peer VPC over the VPC Peering Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVpcToRemoteClassicLink(Boolean allowVpcToRemoteClassicLink) {
             return allowVpcToRemoteClassicLink(Output.of(allowVpcToRemoteClassicLink));
         }

@@ -13,61 +13,61 @@ import java.util.Objects;
 
 @CustomType
 public final class GetStackResult {
-    /**
-     * A list of capabilities
-     * 
-     */
+        /**
+         * @return A list of capabilities
+         * 
+         */
     private final List<String> capabilities;
-    /**
-     * Description of the stack
-     * 
-     */
+        /**
+         * @return Description of the stack
+         * 
+         */
     private final String description;
-    /**
-     * Whether the rollback of the stack is disabled when stack creation fails
-     * 
-     */
+        /**
+         * @return Whether the rollback of the stack is disabled when stack creation fails
+         * 
+         */
     private final Boolean disableRollback;
-    /**
-     * The ARN of the IAM role used to create the stack.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role used to create the stack.
+         * 
+         */
     private final String iamRoleArn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
-    /**
-     * A list of SNS topic ARNs to publish stack related events
-     * 
-     */
+        /**
+         * @return A list of SNS topic ARNs to publish stack related events
+         * 
+         */
     private final List<String> notificationArns;
-    /**
-     * A map of outputs from the stack.
-     * 
-     */
+        /**
+         * @return A map of outputs from the stack.
+         * 
+         */
     private final Map<String,String> outputs;
-    /**
-     * A map of parameters that specify input parameters for the stack.
-     * 
-     */
+        /**
+         * @return A map of parameters that specify input parameters for the stack.
+         * 
+         */
     private final Map<String,String> parameters;
-    /**
-     * A map of tags associated with this stack.
-     * 
-     */
+        /**
+         * @return A map of tags associated with this stack.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Structure containing the template body.
-     * 
-     */
+        /**
+         * @return Structure containing the template body.
+         * 
+         */
     private final String templateBody;
-    /**
-     * The amount of time that can pass before the stack status becomes `CREATE_FAILED`
-     * 
-     */
+        /**
+         * @return The amount of time that can pass before the stack status becomes `CREATE_FAILED`
+         * 
+         */
     private final Integer timeoutInMinutes;
 
     @CustomType.Constructor
@@ -99,37 +99,37 @@ public final class GetStackResult {
     }
 
     /**
-     * A list of capabilities
+     * @return A list of capabilities
      * 
-    */
+     */
     public List<String> capabilities() {
         return this.capabilities;
     }
     /**
-     * Description of the stack
+     * @return Description of the stack
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Whether the rollback of the stack is disabled when stack creation fails
+     * @return Whether the rollback of the stack is disabled when stack creation fails
      * 
-    */
+     */
     public Boolean disableRollback() {
         return this.disableRollback;
     }
     /**
-     * The ARN of the IAM role used to create the stack.
+     * @return The ARN of the IAM role used to create the stack.
      * 
-    */
+     */
     public String iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -137,44 +137,44 @@ public final class GetStackResult {
         return this.name;
     }
     /**
-     * A list of SNS topic ARNs to publish stack related events
+     * @return A list of SNS topic ARNs to publish stack related events
      * 
-    */
+     */
     public List<String> notificationArns() {
         return this.notificationArns;
     }
     /**
-     * A map of outputs from the stack.
+     * @return A map of outputs from the stack.
      * 
-    */
+     */
     public Map<String,String> outputs() {
         return this.outputs;
     }
     /**
-     * A map of parameters that specify input parameters for the stack.
+     * @return A map of parameters that specify input parameters for the stack.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
-     * A map of tags associated with this stack.
+     * @return A map of tags associated with this stack.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Structure containing the template body.
+     * @return Structure containing the template body.
      * 
-    */
+     */
     public String templateBody() {
         return this.templateBody;
     }
     /**
-     * The amount of time that can pass before the stack status becomes `CREATE_FAILED`
+     * @return The amount of time that can pass before the stack status becomes `CREATE_FAILED`
      * 
-    */
+     */
     public Integer timeoutInMinutes() {
         return this.timeoutInMinutes;
     }

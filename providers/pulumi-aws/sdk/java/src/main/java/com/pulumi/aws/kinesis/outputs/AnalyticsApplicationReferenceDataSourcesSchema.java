@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchema {
-    /**
-     * The Record Column mapping for the streaming source data element.
-     * See Record Columns below for more details.
-     * 
-     */
+        /**
+         * @return The Record Column mapping for the streaming source data element.
+         * See Record Columns below for more details.
+         * 
+         */
     private final List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn> recordColumns;
-    /**
-     * The Encoding of the record in the streaming source.
-     * 
-     */
+        /**
+         * @return The Encoding of the record in the streaming source.
+         * 
+         */
     private final @Nullable String recordEncoding;
-    /**
-     * The Record Format and mapping information to schematize a record.
-     * See Record Format below for more details.
-     * 
-     */
+        /**
+         * @return The Record Format and mapping information to schematize a record.
+         * See Record Format below for more details.
+         * 
+         */
     private final AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat;
 
     @CustomType.Constructor
@@ -43,25 +43,25 @@ public final class AnalyticsApplicationReferenceDataSourcesSchema {
     }
 
     /**
-     * The Record Column mapping for the streaming source data element.
+     * @return The Record Column mapping for the streaming source data element.
      * See Record Columns below for more details.
      * 
-    */
+     */
     public List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn> recordColumns() {
         return this.recordColumns;
     }
     /**
-     * The Encoding of the record in the streaming source.
+     * @return The Encoding of the record in the streaming source.
      * 
-    */
+     */
     public Optional<String> recordEncoding() {
         return Optional.ofNullable(this.recordEncoding);
     }
     /**
-     * The Record Format and mapping information to schematize a record.
+     * @return The Record Format and mapping information to schematize a record.
      * See Record Format below for more details.
      * 
-    */
+     */
     public AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat() {
         return this.recordFormat;
     }

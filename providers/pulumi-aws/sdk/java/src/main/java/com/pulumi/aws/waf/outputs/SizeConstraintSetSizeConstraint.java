@@ -11,33 +11,33 @@ import java.util.Objects;
 
 @CustomType
 public final class SizeConstraintSetSizeConstraint {
-    /**
-     * The type of comparison you want to perform.
-     * e.g., `EQ`, `NE`, `LT`, `GT`.
-     * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
-     * 
-     */
+        /**
+         * @return The type of comparison you want to perform.
+         * e.g., `EQ`, `NE`, `LT`, `GT`.
+         * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
+         * 
+         */
     private final String comparisonOperator;
-    /**
-     * Specifies where in a web request to look for the size constraint.
-     * 
-     */
+        /**
+         * @return Specifies where in a web request to look for the size constraint.
+         * 
+         */
     private final SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch;
-    /**
-     * The size in bytes that you want to compare against the size of the specified `field_to_match`.
-     * Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
-     * 
-     */
+        /**
+         * @return The size in bytes that you want to compare against the size of the specified `field_to_match`.
+         * Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
+         * 
+         */
     private final Integer size;
-    /**
-     * Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
-     * If you specify a transformation, AWS WAF performs the transformation on `field_to_match` before inspecting a request for a match.
-     * e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
-     * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
-     * for all supported values.
-     * **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
-     * 
-     */
+        /**
+         * @return Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+         * If you specify a transformation, AWS WAF performs the transformation on `field_to_match` before inspecting a request for a match.
+         * e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
+         * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
+         * for all supported values.
+         * **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
+         * 
+         */
     private final String textTransformation;
 
     @CustomType.Constructor
@@ -53,38 +53,38 @@ public final class SizeConstraintSetSizeConstraint {
     }
 
     /**
-     * The type of comparison you want to perform.
+     * @return The type of comparison you want to perform.
      * e.g., `EQ`, `NE`, `LT`, `GT`.
      * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
      * 
-    */
+     */
     public String comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
-     * Specifies where in a web request to look for the size constraint.
+     * @return Specifies where in a web request to look for the size constraint.
      * 
-    */
+     */
     public SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
-     * The size in bytes that you want to compare against the size of the specified `field_to_match`.
+     * @return The size in bytes that you want to compare against the size of the specified `field_to_match`.
      * Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+     * @return Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
      * If you specify a transformation, AWS WAF performs the transformation on `field_to_match` before inspecting a request for a match.
      * e.g., `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation)
      * for all supported values.
      * **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
      * 
-    */
+     */
     public String textTransformation() {
         return this.textTransformation;
     }

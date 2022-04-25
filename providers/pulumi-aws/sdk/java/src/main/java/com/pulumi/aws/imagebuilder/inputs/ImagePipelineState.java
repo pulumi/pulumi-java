@@ -26,6 +26,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the image pipeline.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dateCreated")
     private @Nullable Output<String> dateCreated;
 
+    /**
+     * @return Date the image pipeline was created.
+     * 
+     */
     public Optional<Output<String>> dateCreated() {
         return Optional.ofNullable(this.dateCreated);
     }
@@ -48,6 +56,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dateLastRun")
     private @Nullable Output<String> dateLastRun;
 
+    /**
+     * @return Date the image pipeline was last run.
+     * 
+     */
     public Optional<Output<String>> dateLastRun() {
         return Optional.ofNullable(this.dateLastRun);
     }
@@ -59,6 +71,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dateNextRun")
     private @Nullable Output<String> dateNextRun;
 
+    /**
+     * @return Date the image pipeline will run next.
+     * 
+     */
     public Optional<Output<String>> dateNextRun() {
         return Optional.ofNullable(this.dateNextRun);
     }
@@ -70,6 +86,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dateUpdated")
     private @Nullable Output<String> dateUpdated;
 
+    /**
+     * @return Date the image pipeline was updated.
+     * 
+     */
     public Optional<Output<String>> dateUpdated() {
         return Optional.ofNullable(this.dateUpdated);
     }
@@ -81,6 +101,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the image pipeline.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -92,6 +116,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="distributionConfigurationArn")
     private @Nullable Output<String> distributionConfigurationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+     * 
+     */
     public Optional<Output<String>> distributionConfigurationArn() {
         return Optional.ofNullable(this.distributionConfigurationArn);
     }
@@ -103,6 +131,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="enhancedImageMetadataEnabled")
     private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
+    /**
+     * @return Whether additional information about the image being created is collected. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
         return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
@@ -114,6 +146,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageRecipeArn")
     private @Nullable Output<String> imageRecipeArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * 
+     */
     public Optional<Output<String>> imageRecipeArn() {
         return Optional.ofNullable(this.imageRecipeArn);
     }
@@ -125,6 +161,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageTestsConfiguration")
     private @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
+    /**
+     * @return Configuration block with image tests configuration. Detailed below.
+     * 
+     */
     public Optional<Output<ImagePipelineImageTestsConfigurationGetArgs>> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
@@ -136,6 +176,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="infrastructureConfigurationArn")
     private @Nullable Output<String> infrastructureConfigurationArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+     * 
+     */
     public Optional<Output<String>> infrastructureConfigurationArn() {
         return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
@@ -147,6 +191,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the image pipeline.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -158,6 +206,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="platform")
     private @Nullable Output<String> platform;
 
+    /**
+     * @return Platform of the image pipeline.
+     * 
+     */
     public Optional<Output<String>> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -169,6 +221,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="schedule")
     private @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
 
+    /**
+     * @return Configuration block with schedule settings. Detailed below.
+     * 
+     */
     public Optional<Output<ImagePipelineScheduleGetArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -180,6 +236,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -191,6 +251,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -202,6 +266,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -246,155 +314,359 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
             $ = new ImagePipelineState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param dateCreated Date the image pipeline was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
             $.dateCreated = dateCreated;
             return this;
         }
 
+        /**
+         * @param dateCreated Date the image pipeline was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateCreated(String dateCreated) {
             return dateCreated(Output.of(dateCreated));
         }
 
+        /**
+         * @param dateLastRun Date the image pipeline was last run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateLastRun(@Nullable Output<String> dateLastRun) {
             $.dateLastRun = dateLastRun;
             return this;
         }
 
+        /**
+         * @param dateLastRun Date the image pipeline was last run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateLastRun(String dateLastRun) {
             return dateLastRun(Output.of(dateLastRun));
         }
 
+        /**
+         * @param dateNextRun Date the image pipeline will run next.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateNextRun(@Nullable Output<String> dateNextRun) {
             $.dateNextRun = dateNextRun;
             return this;
         }
 
+        /**
+         * @param dateNextRun Date the image pipeline will run next.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateNextRun(String dateNextRun) {
             return dateNextRun(Output.of(dateNextRun));
         }
 
+        /**
+         * @param dateUpdated Date the image pipeline was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
             $.dateUpdated = dateUpdated;
             return this;
         }
 
+        /**
+         * @param dateUpdated Date the image pipeline was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateUpdated(String dateUpdated) {
             return dateUpdated(Output.of(dateUpdated));
         }
 
+        /**
+         * @param description Description of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param distributionConfigurationArn Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
+        /**
+         * @param distributionConfigurationArn Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Whether additional information about the image being created is collected. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Whether additional information about the image being created is collected. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
 
+        /**
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             $.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
+        /**
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(String imageRecipeArn) {
             return imageRecipeArn(Output.of(imageRecipeArn));
         }
 
+        /**
+         * @param imageTestsConfiguration Configuration block with image tests configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration) {
             $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
+        /**
+         * @param imageTestsConfiguration Configuration block with image tests configuration. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(ImagePipelineImageTestsConfigurationGetArgs imageTestsConfiguration) {
             return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
 
+        /**
+         * @param infrastructureConfigurationArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
             $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
+        /**
+         * @param infrastructureConfigurationArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
 
+        /**
+         * @param name Name of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param platform Platform of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(@Nullable Output<String> platform) {
             $.platform = platform;
             return this;
         }
 
+        /**
+         * @param platform Platform of the image pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
         }
 
+        /**
+         * @param schedule Configuration block with schedule settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<ImagePipelineScheduleGetArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Configuration block with schedule settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(ImagePipelineScheduleGetArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param status Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags for the image pipeline. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

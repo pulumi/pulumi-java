@@ -22,6 +22,10 @@ public final class RepositoryEncryptionConfigurationGetArgs extends com.pulumi.r
     @Import(name="encryptionType")
     private @Nullable Output<String> encryptionType;
 
+    /**
+     * @return The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+     * 
+     */
     public Optional<Output<String>> encryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
@@ -33,6 +37,10 @@ public final class RepositoryEncryptionConfigurationGetArgs extends com.pulumi.r
     @Import(name="kmsKey")
     private @Nullable Output<String> kmsKey;
 
+    /**
+     * @return The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+     * 
+     */
     public Optional<Output<String>> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
@@ -62,20 +70,44 @@ public final class RepositoryEncryptionConfigurationGetArgs extends com.pulumi.r
             $ = new RepositoryEncryptionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionType The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(@Nullable Output<String> encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param encryptionType The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(String encryptionType) {
             return encryptionType(Output.of(encryptionType));
         }
 
+        /**
+         * @param kmsKey The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }

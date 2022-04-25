@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class UserPoolAccountRecoverySetting {
-    /**
-     * List of Account Recovery Options of the following structure:
-     * 
-     */
+        /**
+         * @return List of Account Recovery Options of the following structure:
+         * 
+         */
     private final List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class UserPoolAccountRecoverySetting {
     }
 
     /**
-     * List of Account Recovery Options of the following structure:
+     * @return List of Account Recovery Options of the following structure:
      * 
-    */
+     */
     public List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms() {
         return this.recoveryMechanisms;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReceiptRuleLambdaAction {
-    /**
-     * The ARN of the Lambda function to invoke
-     * 
-     */
+        /**
+         * @return The ARN of the Lambda function to invoke
+         * 
+         */
     private final String functionArn;
-    /**
-     * `Event` or `RequestResponse`
-     * 
-     */
+        /**
+         * @return `Event` or `RequestResponse`
+         * 
+         */
     private final @Nullable String invocationType;
-    /**
-     * The position of the action in the receipt rule
-     * 
-     */
+        /**
+         * @return The position of the action in the receipt rule
+         * 
+         */
     private final Integer position;
-    /**
-     * The ARN of an SNS topic to notify
-     * 
-     */
+        /**
+         * @return The ARN of an SNS topic to notify
+         * 
+         */
     private final @Nullable String topicArn;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ReceiptRuleLambdaAction {
     }
 
     /**
-     * The ARN of the Lambda function to invoke
+     * @return The ARN of the Lambda function to invoke
      * 
-    */
+     */
     public String functionArn() {
         return this.functionArn;
     }
     /**
-     * `Event` or `RequestResponse`
+     * @return `Event` or `RequestResponse`
      * 
-    */
+     */
     public Optional<String> invocationType() {
         return Optional.ofNullable(this.invocationType);
     }
     /**
-     * The position of the action in the receipt rule
+     * @return The position of the action in the receipt rule
      * 
-    */
+     */
     public Integer position() {
         return this.position;
     }
     /**
-     * The ARN of an SNS topic to notify
+     * @return The ARN of an SNS topic to notify
      * 
-    */
+     */
     public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }

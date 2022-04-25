@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterMasterInstanceFleetLaunchSpecifications {
-    /**
-     * Configuration block for on demand instances launch specifications.
-     * 
-     */
+        /**
+         * @return Configuration block for on demand instances launch specifications.
+         * 
+         */
     private final @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications;
-    /**
-     * Configuration block for spot instances launch specifications.
-     * 
-     */
+        /**
+         * @return Configuration block for spot instances launch specifications.
+         * 
+         */
     private final @Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterMasterInstanceFleetLaunchSpecifications {
     }
 
     /**
-     * Configuration block for on demand instances launch specifications.
+     * @return Configuration block for on demand instances launch specifications.
      * 
-    */
+     */
     public List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? List.of() : this.onDemandSpecifications;
     }
     /**
-     * Configuration block for spot instances launch specifications.
+     * @return Configuration block for spot instances launch specifications.
      * 
-    */
+     */
     public List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications() {
         return this.spotSpecifications == null ? List.of() : this.spotSpecifications;
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig {
-    /**
-     * Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
-     * 
-     */
+        /**
+         * @return Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+         * 
+         */
     private final String cookieBehavior;
-    /**
-     * Object that contains a list of cookie names. See Items for more information.
-     * 
-     */
+        /**
+         * @return Object that contains a list of cookie names. See Items for more information.
+         * 
+         */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     }
 
     /**
-     * Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
+     * @return Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
      * 
-    */
+     */
     public String cookieBehavior() {
         return this.cookieBehavior;
     }
     /**
-     * Object that contains a list of cookie names. See Items for more information.
+     * @return Object that contains a list of cookie names. See Items for more information.
      * 
-    */
+     */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies() {
         return this.cookies;
     }

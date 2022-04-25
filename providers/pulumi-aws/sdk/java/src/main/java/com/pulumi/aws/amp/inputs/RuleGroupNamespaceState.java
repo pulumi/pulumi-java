@@ -22,6 +22,10 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
     @Import(name="data")
     private @Nullable Output<String> data;
 
+    /**
+     * @return the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
+     * 
+     */
     public Optional<Output<String>> data() {
         return Optional.ofNullable(this.data);
     }
@@ -33,6 +37,10 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the rule group namespace
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +52,10 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
     @Import(name="workspaceId")
     private @Nullable Output<String> workspaceId;
 
+    /**
+     * @return The id of the prometheus workspace the rule group namespace should be linked to
+     * 
+     */
     public Optional<Output<String>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -74,29 +86,65 @@ public final class RuleGroupNamespaceState extends com.pulumi.resources.Resource
             $ = new RuleGroupNamespaceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param data the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(@Nullable Output<String> data) {
             $.data = data;
             return this;
         }
 
+        /**
+         * @param data the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder data(String data) {
             return data(Output.of(data));
         }
 
+        /**
+         * @param name The name of the rule group namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the rule group namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param workspaceId The id of the prometheus workspace the rule group namespace should be linked to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The id of the prometheus workspace the rule group namespace should be linked to
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

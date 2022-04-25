@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOrderableDbInstanceResult {
-    /**
-     * Availability zones where the instance is available.
-     * 
-     */
+        /**
+         * @return Availability zones where the instance is available.
+         * 
+         */
     private final List<String> availabilityZones;
     private final @Nullable String engine;
     private final String engineVersion;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instanceClass;
     private final @Nullable String licenseModel;
@@ -51,9 +51,9 @@ public final class GetOrderableDbInstanceResult {
     }
 
     /**
-     * Availability zones where the instance is available.
+     * @return Availability zones where the instance is available.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
@@ -64,9 +64,9 @@ public final class GetOrderableDbInstanceResult {
         return this.engineVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

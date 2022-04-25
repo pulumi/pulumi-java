@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataSourceParametersAthena {
-    /**
-     * The work-group to which to connect.
-     * 
-     */
+        /**
+         * @return The work-group to which to connect.
+         * 
+         */
     private final @Nullable String workGroup;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DataSourceParametersAthena {
     }
 
     /**
-     * The work-group to which to connect.
+     * @return The work-group to which to connect.
      * 
-    */
+     */
     public Optional<String> workGroup() {
         return Optional.ofNullable(this.workGroup);
     }

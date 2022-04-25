@@ -11,22 +11,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProjectSourceAuth {
-    /**
-     * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
-     * 
-     * @deprecated
-     * Use the aws_codebuild_source_credential resource instead
-     * 
-     */
+        /**
+         * @return Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable String resource;
-    /**
-     * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
-     * 
-     * @deprecated
-     * Use the aws_codebuild_source_credential resource instead
-     * 
-     */
+        /**
+         * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+         * 
+         * @deprecated
+         * Use the aws_codebuild_source_credential resource instead
+         * 
+         */
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final String type;
 
@@ -39,23 +39,23 @@ public final class ProjectSourceAuth {
     }
 
     /**
-     * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
+     * @return Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
      * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
     /**
-     * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
+     * @return Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      * @deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public String type() {
         return this.type;

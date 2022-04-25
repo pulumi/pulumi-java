@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class InsightFiltersProductField {
-    /**
-     * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
-     * 
-     */
+        /**
+         * @return The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+         * 
+         */
     private final String comparison;
-    /**
-     * The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
-     * 
-     */
+        /**
+         * @return The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
+         * 
+         */
     private final String key;
-    /**
-     * A date range value for the date filter, provided as an Integer.
-     * 
-     */
+        /**
+         * @return A date range value for the date filter, provided as an Integer.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class InsightFiltersProductField {
     }
 
     /**
-     * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+     * @return The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
      * 
-    */
+     */
     public String comparison() {
         return this.comparison;
     }
     /**
-     * The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
+     * @return The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A date range value for the date filter, provided as an Integer.
+     * @return A date range value for the date filter, provided as an Integer.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleGroupRuleGroup {
-    /**
-     * A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
-     * 
-     */
+        /**
+         * @return A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
+         * 
+         */
     private final @Nullable RuleGroupRuleGroupRuleVariables ruleVariables;
-    /**
-     * A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
-     * 
-     */
+        /**
+         * @return A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
+         * 
+         */
     private final RuleGroupRuleGroupRulesSource rulesSource;
-    /**
-     * A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
-     * 
-     */
+        /**
+         * @return A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
+         * 
+         */
     private final @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class RuleGroupRuleGroup {
     }
 
     /**
-     * A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
+     * @return A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
      * 
-    */
+     */
     public Optional<RuleGroupRuleGroupRuleVariables> ruleVariables() {
         return Optional.ofNullable(this.ruleVariables);
     }
     /**
-     * A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
+     * @return A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
      * 
-    */
+     */
     public RuleGroupRuleGroupRulesSource rulesSource() {
         return this.rulesSource;
     }
     /**
-     * A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
+     * @return A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
      * 
-    */
+     */
     public Optional<RuleGroupRuleGroupStatefulRuleOptions> statefulRuleOptions() {
         return Optional.ofNullable(this.statefulRuleOptions);
     }

@@ -33,6 +33,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the crawler
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -51,6 +55,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="classifiers")
     private @Nullable Output<List<String>> classifiers;
 
+    /**
+     * @return List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
+     * 
+     */
     public Optional<Output<List<String>>> classifiers() {
         return Optional.ofNullable(this.classifiers);
     }
@@ -62,6 +70,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<String> configuration;
 
+    /**
+     * @return JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
+     * 
+     */
     public Optional<Output<String>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -73,6 +85,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the Glue database to be synchronized.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -91,6 +107,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the crawler.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -102,6 +122,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamodbTargets")
     private @Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
 
+    /**
+     * @return List of nested DynamoDB target arguments. See Dynamodb Target below.
+     * 
+     */
     public Optional<Output<List<CrawlerDynamodbTargetGetArgs>>> dynamodbTargets() {
         return Optional.ofNullable(this.dynamodbTargets);
     }
@@ -113,6 +137,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jdbcTargets")
     private @Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
 
+    /**
+     * @return List of nested JBDC target arguments. See JDBC Target below.
+     * 
+     */
     public Optional<Output<List<CrawlerJdbcTargetGetArgs>>> jdbcTargets() {
         return Optional.ofNullable(this.jdbcTargets);
     }
@@ -124,6 +152,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lineageConfiguration")
     private @Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
 
+    /**
+     * @return Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
+     * 
+     */
     public Optional<Output<CrawlerLineageConfigurationGetArgs>> lineageConfiguration() {
         return Optional.ofNullable(this.lineageConfiguration);
     }
@@ -135,6 +167,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mongodbTargets")
     private @Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
 
+    /**
+     * @return List nested MongoDB target arguments. See MongoDB Target below.
+     * 
+     */
     public Optional<Output<List<CrawlerMongodbTargetGetArgs>>> mongodbTargets() {
         return Optional.ofNullable(this.mongodbTargets);
     }
@@ -146,6 +182,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the crawler.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -157,6 +197,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="recrawlPolicy")
     private @Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
 
+    /**
+     * @return A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
+     * 
+     */
     public Optional<Output<CrawlerRecrawlPolicyGetArgs>> recrawlPolicy() {
         return Optional.ofNullable(this.recrawlPolicy);
     }
@@ -168,6 +212,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -179,6 +227,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Targets")
     private @Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets;
 
+    /**
+     * @return List nested Amazon S3 target arguments. See S3 Target below.
+     * 
+     */
     public Optional<Output<List<CrawlerS3TargetGetArgs>>> s3Targets() {
         return Optional.ofNullable(this.s3Targets);
     }
@@ -190,6 +242,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
+    /**
+     * @return A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
+     * 
+     */
     public Optional<Output<String>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -201,6 +257,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaChangePolicy")
     private @Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
 
+    /**
+     * @return Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
+     * 
+     */
     public Optional<Output<CrawlerSchemaChangePolicyGetArgs>> schemaChangePolicy() {
         return Optional.ofNullable(this.schemaChangePolicy);
     }
@@ -212,6 +272,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityConfiguration")
     private @Nullable Output<String> securityConfiguration;
 
+    /**
+     * @return The name of Security Configuration to be used by the crawler
+     * 
+     */
     public Optional<Output<String>> securityConfiguration() {
         return Optional.ofNullable(this.securityConfiguration);
     }
@@ -223,6 +287,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tablePrefix")
     private @Nullable Output<String> tablePrefix;
 
+    /**
+     * @return The table prefix used for catalog tables that are created.
+     * 
+     */
     public Optional<Output<String>> tablePrefix() {
         return Optional.ofNullable(this.tablePrefix);
     }
@@ -234,6 +302,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -245,6 +317,10 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -293,11 +369,23 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
             $ = new CrawlerState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the crawler
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the crawler
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
@@ -315,33 +403,75 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
             return catalogTargets(List.of(catalogTargets));
         }
 
+        /**
+         * @param classifiers List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classifiers(@Nullable Output<List<String>> classifiers) {
             $.classifiers = classifiers;
             return this;
         }
 
+        /**
+         * @param classifiers List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classifiers(List<String> classifiers) {
             return classifiers(Output.of(classifiers));
         }
 
+        /**
+         * @param classifiers List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder classifiers(String... classifiers) {
             return classifiers(List.of(classifiers));
         }
 
+        /**
+         * @param configuration JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<String> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(String configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param databaseName The name of the Glue database to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the Glue database to be synchronized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
@@ -359,153 +489,357 @@ public final class CrawlerState extends com.pulumi.resources.ResourceArgs {
             return deltaTargets(List.of(deltaTargets));
         }
 
+        /**
+         * @param description Description of the crawler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the crawler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param dynamodbTargets List of nested DynamoDB target arguments. See Dynamodb Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets) {
             $.dynamodbTargets = dynamodbTargets;
             return this;
         }
 
+        /**
+         * @param dynamodbTargets List of nested DynamoDB target arguments. See Dynamodb Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamodbTargets(List<CrawlerDynamodbTargetGetArgs> dynamodbTargets) {
             return dynamodbTargets(Output.of(dynamodbTargets));
         }
 
+        /**
+         * @param dynamodbTargets List of nested DynamoDB target arguments. See Dynamodb Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamodbTargets(CrawlerDynamodbTargetGetArgs... dynamodbTargets) {
             return dynamodbTargets(List.of(dynamodbTargets));
         }
 
+        /**
+         * @param jdbcTargets List of nested JBDC target arguments. See JDBC Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jdbcTargets(@Nullable Output<List<CrawlerJdbcTargetGetArgs>> jdbcTargets) {
             $.jdbcTargets = jdbcTargets;
             return this;
         }
 
+        /**
+         * @param jdbcTargets List of nested JBDC target arguments. See JDBC Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jdbcTargets(List<CrawlerJdbcTargetGetArgs> jdbcTargets) {
             return jdbcTargets(Output.of(jdbcTargets));
         }
 
+        /**
+         * @param jdbcTargets List of nested JBDC target arguments. See JDBC Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jdbcTargets(CrawlerJdbcTargetGetArgs... jdbcTargets) {
             return jdbcTargets(List.of(jdbcTargets));
         }
 
+        /**
+         * @param lineageConfiguration Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineageConfiguration(@Nullable Output<CrawlerLineageConfigurationGetArgs> lineageConfiguration) {
             $.lineageConfiguration = lineageConfiguration;
             return this;
         }
 
+        /**
+         * @param lineageConfiguration Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineageConfiguration(CrawlerLineageConfigurationGetArgs lineageConfiguration) {
             return lineageConfiguration(Output.of(lineageConfiguration));
         }
 
+        /**
+         * @param mongodbTargets List nested MongoDB target arguments. See MongoDB Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetGetArgs>> mongodbTargets) {
             $.mongodbTargets = mongodbTargets;
             return this;
         }
 
+        /**
+         * @param mongodbTargets List nested MongoDB target arguments. See MongoDB Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongodbTargets(List<CrawlerMongodbTargetGetArgs> mongodbTargets) {
             return mongodbTargets(Output.of(mongodbTargets));
         }
 
+        /**
+         * @param mongodbTargets List nested MongoDB target arguments. See MongoDB Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongodbTargets(CrawlerMongodbTargetGetArgs... mongodbTargets) {
             return mongodbTargets(List.of(mongodbTargets));
         }
 
+        /**
+         * @param name Name of the crawler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the crawler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recrawlPolicy A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyGetArgs> recrawlPolicy) {
             $.recrawlPolicy = recrawlPolicy;
             return this;
         }
 
+        /**
+         * @param recrawlPolicy A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recrawlPolicy(CrawlerRecrawlPolicyGetArgs recrawlPolicy) {
             return recrawlPolicy(Output.of(recrawlPolicy));
         }
 
+        /**
+         * @param role The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param s3Targets List nested Amazon S3 target arguments. See S3 Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Targets(@Nullable Output<List<CrawlerS3TargetGetArgs>> s3Targets) {
             $.s3Targets = s3Targets;
             return this;
         }
 
+        /**
+         * @param s3Targets List nested Amazon S3 target arguments. See S3 Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Targets(List<CrawlerS3TargetGetArgs> s3Targets) {
             return s3Targets(Output.of(s3Targets));
         }
 
+        /**
+         * @param s3Targets List nested Amazon S3 target arguments. See S3 Target below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Targets(CrawlerS3TargetGetArgs... s3Targets) {
             return s3Targets(List.of(s3Targets));
         }
 
+        /**
+         * @param schedule A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param schemaChangePolicy Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy) {
             $.schemaChangePolicy = schemaChangePolicy;
             return this;
         }
 
+        /**
+         * @param schemaChangePolicy Policy for the crawler&#39;s update and deletion behavior. See Schema Change Policy below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaChangePolicy(CrawlerSchemaChangePolicyGetArgs schemaChangePolicy) {
             return schemaChangePolicy(Output.of(schemaChangePolicy));
         }
 
+        /**
+         * @param securityConfiguration The name of Security Configuration to be used by the crawler
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
             $.securityConfiguration = securityConfiguration;
             return this;
         }
 
+        /**
+         * @param securityConfiguration The name of Security Configuration to be used by the crawler
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfiguration(String securityConfiguration) {
             return securityConfiguration(Output.of(securityConfiguration));
         }
 
+        /**
+         * @param tablePrefix The table prefix used for catalog tables that are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
             $.tablePrefix = tablePrefix;
             return this;
         }
 
+        /**
+         * @param tablePrefix The table prefix used for catalog tables that are created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tablePrefix(String tablePrefix) {
             return tablePrefix(Output.of(tablePrefix));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader {
-    /**
-     * The CSV content type headers to capture.
-     * 
-     */
+        /**
+         * @return The CSV content type headers to capture.
+         * 
+         */
     private final @Nullable List<String> csvContentTypes;
-    /**
-     * The JSON content type headers to capture.
-     * 
-     */
+        /**
+         * @return The JSON content type headers to capture.
+         * 
+         */
     private final @Nullable List<String> jsonContentTypes;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
     }
 
     /**
-     * The CSV content type headers to capture.
+     * @return The CSV content type headers to capture.
      * 
-    */
+     */
     public List<String> csvContentTypes() {
         return this.csvContentTypes == null ? List.of() : this.csvContentTypes;
     }
     /**
-     * The JSON content type headers to capture.
+     * @return The JSON content type headers to capture.
      * 
-    */
+     */
     public List<String> jsonContentTypes() {
         return this.jsonContentTypes == null ? List.of() : this.jsonContentTypes;
     }

@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSecretVersionResult {
-    /**
-     * The ARN of the secret.
-     * 
-     */
+        /**
+         * @return The ARN of the secret.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
-     * 
-     */
+        /**
+         * @return The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
+         * 
+         */
     private final String secretBinary;
     private final String secretId;
-    /**
-     * The decrypted part of the protected secret information that was originally provided as a string.
-     * 
-     */
+        /**
+         * @return The decrypted part of the protected secret information that was originally provided as a string.
+         * 
+         */
     private final String secretString;
-    /**
-     * The unique identifier of this version of the secret.
-     * 
-     */
+        /**
+         * @return The unique identifier of this version of the secret.
+         * 
+         */
     private final String versionId;
     private final @Nullable String versionStage;
     private final List<String> versionStages;
@@ -62,23 +62,23 @@ public final class GetSecretVersionResult {
     }
 
     /**
-     * The ARN of the secret.
+     * @return The ARN of the secret.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
+     * @return The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
      * 
-    */
+     */
     public String secretBinary() {
         return this.secretBinary;
     }
@@ -86,16 +86,16 @@ public final class GetSecretVersionResult {
         return this.secretId;
     }
     /**
-     * The decrypted part of the protected secret information that was originally provided as a string.
+     * @return The decrypted part of the protected secret information that was originally provided as a string.
      * 
-    */
+     */
     public String secretString() {
         return this.secretString;
     }
     /**
-     * The unique identifier of this version of the secret.
+     * @return The unique identifier of this version of the secret.
      * 
-    */
+     */
     public String versionId() {
         return this.versionId;
     }

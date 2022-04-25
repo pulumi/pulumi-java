@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainClusterConfigZoneAwarenessConfig {
-    /**
-     * Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
-     * 
-     */
+        /**
+         * @return Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
+         * 
+         */
     private final @Nullable Integer availabilityZoneCount;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DomainClusterConfigZoneAwarenessConfig {
     }
 
     /**
-     * Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
+     * @return Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
      * 
-    */
+     */
     public Optional<Integer> availabilityZoneCount() {
         return Optional.ofNullable(this.availabilityZoneCount);
     }

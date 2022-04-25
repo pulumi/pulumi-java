@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageRecipeBlockDeviceMapping {
-    /**
-     * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
-     * 
-     */
+        /**
+         * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+         * 
+         */
     private final @Nullable String deviceName;
-    /**
-     * Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
+         * 
+         */
     private final @Nullable ImageRecipeBlockDeviceMappingEbs ebs;
-    /**
-     * Set to `true` to remove a mapping from the parent image.
-     * 
-     */
+        /**
+         * @return Set to `true` to remove a mapping from the parent image.
+         * 
+         */
     private final @Nullable Boolean noDevice;
-    /**
-     * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
-     * 
-     */
+        /**
+         * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+         * 
+         */
     private final @Nullable String virtualName;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ImageRecipeBlockDeviceMapping {
     }
 
     /**
-     * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
+     * @return Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
      * 
-    */
+     */
     public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
-     * Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
+     * @return Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
      * 
-    */
+     */
     public Optional<ImageRecipeBlockDeviceMappingEbs> ebs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
-     * Set to `true` to remove a mapping from the parent image.
+     * @return Set to `true` to remove a mapping from the parent image.
      * 
-    */
+     */
     public Optional<Boolean> noDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
-     * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
+     * @return Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
      * 
-    */
+     */
     public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }

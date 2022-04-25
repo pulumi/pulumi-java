@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MLTransformSchema {
-    /**
-     * The type of data in the column.
-     * 
-     */
+        /**
+         * @return The type of data in the column.
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * The name you assign to this ML Transform. It must be unique in your account.
-     * 
-     */
+        /**
+         * @return The name you assign to this ML Transform. It must be unique in your account.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MLTransformSchema {
     }
 
     /**
-     * The type of data in the column.
+     * @return The type of data in the column.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * The name you assign to this ML Transform. It must be unique in your account.
+     * @return The name you assign to this ML Transform. It must be unique in your account.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

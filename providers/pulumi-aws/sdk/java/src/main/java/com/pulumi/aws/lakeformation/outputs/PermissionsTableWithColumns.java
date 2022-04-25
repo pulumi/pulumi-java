@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PermissionsTableWithColumns {
-    /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
-     * 
-     */
+        /**
+         * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         */
     private final @Nullable String catalogId;
-    /**
-     * Set of column names for the table.
-     * 
-     */
+        /**
+         * @return Set of column names for the table.
+         * 
+         */
     private final @Nullable List<String> columnNames;
-    /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
-     * 
-     */
+        /**
+         * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
+         * 
+         */
     private final String databaseName;
     private final @Nullable List<String> excludedColumnNames;
-    /**
-     * Name of the table resource.
-     * 
-     */
+        /**
+         * @return Name of the table resource.
+         * 
+         */
     private final String name;
     private final @Nullable Boolean wildcard;
 
@@ -53,23 +53,23 @@ public final class PermissionsTableWithColumns {
     }
 
     /**
-     * Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-    */
+     */
     public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
-     * Set of column names for the table.
+     * @return Set of column names for the table.
      * 
-    */
+     */
     public List<String> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
-     * Name of the database for the table with columns resource. Unique to the Data Catalog.
+     * @return Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -77,9 +77,9 @@ public final class PermissionsTableWithColumns {
         return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
     }
     /**
-     * Name of the table resource.
+     * @return Name of the table resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

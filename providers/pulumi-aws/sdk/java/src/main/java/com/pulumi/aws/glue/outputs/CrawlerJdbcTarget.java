@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CrawlerJdbcTarget {
-    /**
-     * The name of the connection to use to connect to the Delta table target.
-     * 
-     */
+        /**
+         * @return The name of the connection to use to connect to the Delta table target.
+         * 
+         */
     private final String connectionName;
-    /**
-     * A list of glob patterns used to exclude from the crawl.
-     * 
-     */
+        /**
+         * @return A list of glob patterns used to exclude from the crawl.
+         * 
+         */
     private final @Nullable List<String> exclusions;
-    /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
-     * 
-     */
+        /**
+         * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CrawlerJdbcTarget {
     }
 
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
-    */
+     */
     public String connectionName() {
         return this.connectionName;
     }
     /**
-     * A list of glob patterns used to exclude from the crawl.
+     * @return A list of glob patterns used to exclude from the crawl.
      * 
-    */
+     */
     public List<String> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -23,6 +23,11 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="mostRecent")
     private @Nullable Boolean mostRecent;
 
+    /**
+     * @return If more than one result is returned, use the most
+     * recent solution stack.
+     * 
+     */
     public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
@@ -36,6 +41,12 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="nameRegex", required=true)
     private String nameRegex;
 
+    /**
+     * @return A regex string to apply to the solution stack list returned
+     * by AWS. See [Elastic Beanstalk Supported Platforms][beanstalk-platforms] from
+     * AWS documentation for reference solution stack names.
+     * 
+     */
     public String nameRegex() {
         return this.nameRegex;
     }
@@ -65,11 +76,26 @@ public final class GetSolutionStackArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetSolutionStackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mostRecent If more than one result is returned, use the most
+         * recent solution stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mostRecent(@Nullable Boolean mostRecent) {
             $.mostRecent = mostRecent;
             return this;
         }
 
+        /**
+         * @param nameRegex A regex string to apply to the solution stack list returned
+         * by AWS. See [Elastic Beanstalk Supported Platforms][beanstalk-platforms] from
+         * AWS documentation for reference solution stack names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nameRegex(String nameRegex) {
             $.nameRegex = nameRegex;
             return this;

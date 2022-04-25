@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchTemplateCreditSpecification {
-    /**
-     * The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
-     * 
-     */
+        /**
+         * @return The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+         * 
+         */
     private final @Nullable String cpuCredits;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LaunchTemplateCreditSpecification {
     }
 
     /**
-     * The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+     * @return The credit option for CPU usage. Can be `&#34;standard&#34;` or `&#34;unlimited&#34;`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
      * 
-    */
+     */
     public Optional<String> cpuCredits() {
         return Optional.ofNullable(this.cpuCredits);
     }

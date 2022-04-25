@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataSourceElasticsearchConfig {
-    /**
-     * HTTP URL.
-     * 
-     */
+        /**
+         * @return HTTP URL.
+         * 
+         */
     private final String endpoint;
-    /**
-     * AWS Region for RDS HTTP endpoint. Defaults to current region.
-     * 
-     */
+        /**
+         * @return AWS Region for RDS HTTP endpoint. Defaults to current region.
+         * 
+         */
     private final @Nullable String region;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DataSourceElasticsearchConfig {
     }
 
     /**
-     * HTTP URL.
+     * @return HTTP URL.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * AWS Region for RDS HTTP endpoint. Defaults to current region.
+     * @return AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IpSetIpSetDescriptor {
-    /**
-     * The string like IPV4 or IPV6.
-     * 
-     */
+        /**
+         * @return The string like IPV4 or IPV6.
+         * 
+         */
     private final String type;
-    /**
-     * The CIDR notation.
-     * 
-     */
+        /**
+         * @return The CIDR notation.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class IpSetIpSetDescriptor {
     }
 
     /**
-     * The string like IPV4 or IPV6.
+     * @return The string like IPV4 or IPV6.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The CIDR notation.
+     * @return The CIDR notation.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

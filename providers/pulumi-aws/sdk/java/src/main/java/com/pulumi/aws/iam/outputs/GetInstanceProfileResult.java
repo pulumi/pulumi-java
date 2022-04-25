@@ -9,42 +9,42 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceProfileResult {
-    /**
-     * The Amazon Resource Name (ARN) specifying the instance profile.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) specifying the instance profile.
+         * 
+         */
     private final String arn;
-    /**
-     * The string representation of the date the instance profile
-     * was created.
-     * 
-     */
+        /**
+         * @return The string representation of the date the instance profile
+         * was created.
+         * 
+         */
     private final String createDate;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String name;
-    /**
-     * The path to the instance profile.
-     * 
-     */
+        /**
+         * @return The path to the instance profile.
+         * 
+         */
     private final String path;
-    /**
-     * The role arn associated with this instance profile.
-     * 
-     */
+        /**
+         * @return The role arn associated with this instance profile.
+         * 
+         */
     private final String roleArn;
-    /**
-     * The role id associated with this instance profile.
-     * 
-     */
+        /**
+         * @return The role id associated with this instance profile.
+         * 
+         */
     private final String roleId;
-    /**
-     * The role name associated with this instance profile.
-     * 
-     */
+        /**
+         * @return The role name associated with this instance profile.
+         * 
+         */
     private final String roleName;
 
     @CustomType.Constructor
@@ -68,24 +68,24 @@ public final class GetInstanceProfileResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) specifying the instance profile.
+     * @return The Amazon Resource Name (ARN) specifying the instance profile.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The string representation of the date the instance profile
+     * @return The string representation of the date the instance profile
      * was created.
      * 
-    */
+     */
     public String createDate() {
         return this.createDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -93,30 +93,30 @@ public final class GetInstanceProfileResult {
         return this.name;
     }
     /**
-     * The path to the instance profile.
+     * @return The path to the instance profile.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The role arn associated with this instance profile.
+     * @return The role arn associated with this instance profile.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The role id associated with this instance profile.
+     * @return The role id associated with this instance profile.
      * 
-    */
+     */
     public String roleId() {
         return this.roleId;
     }
     /**
-     * The role name associated with this instance profile.
+     * @return The role name associated with this instance profile.
      * 
-    */
+     */
     public String roleName() {
         return this.roleName;
     }

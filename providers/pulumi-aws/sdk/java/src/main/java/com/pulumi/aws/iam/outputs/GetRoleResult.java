@@ -11,56 +11,56 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRoleResult {
-    /**
-     * The Amazon Resource Name (ARN) specifying the role.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) specifying the role.
+         * 
+         */
     private final String arn;
-    /**
-     * The policy document associated with the role.
-     * 
-     */
+        /**
+         * @return The policy document associated with the role.
+         * 
+         */
     private final String assumeRolePolicy;
-    /**
-     * Creation date of the role in RFC 3339 format.
-     * 
-     */
+        /**
+         * @return Creation date of the role in RFC 3339 format.
+         * 
+         */
     private final String createDate;
-    /**
-     * Description for the role.
-     * 
-     */
+        /**
+         * @return Description for the role.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Maximum session duration.
-     * 
-     */
+        /**
+         * @return Maximum session duration.
+         * 
+         */
     private final Integer maxSessionDuration;
     private final String name;
-    /**
-     * The path to the role.
-     * 
-     */
+        /**
+         * @return The path to the role.
+         * 
+         */
     private final String path;
-    /**
-     * The ARN of the policy that is used to set the permissions boundary for the role.
-     * 
-     */
+        /**
+         * @return The ARN of the policy that is used to set the permissions boundary for the role.
+         * 
+         */
     private final String permissionsBoundary;
-    /**
-     * The tags attached to the role.
-     * 
-     */
+        /**
+         * @return The tags attached to the role.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The stable and unique string identifying the role.
-     * 
-     */
+        /**
+         * @return The stable and unique string identifying the role.
+         * 
+         */
     private final String uniqueId;
 
     @CustomType.Constructor
@@ -90,44 +90,44 @@ public final class GetRoleResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) specifying the role.
+     * @return The Amazon Resource Name (ARN) specifying the role.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The policy document associated with the role.
+     * @return The policy document associated with the role.
      * 
-    */
+     */
     public String assumeRolePolicy() {
         return this.assumeRolePolicy;
     }
     /**
-     * Creation date of the role in RFC 3339 format.
+     * @return Creation date of the role in RFC 3339 format.
      * 
-    */
+     */
     public String createDate() {
         return this.createDate;
     }
     /**
-     * Description for the role.
+     * @return Description for the role.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Maximum session duration.
+     * @return Maximum session duration.
      * 
-    */
+     */
     public Integer maxSessionDuration() {
         return this.maxSessionDuration;
     }
@@ -135,30 +135,30 @@ public final class GetRoleResult {
         return this.name;
     }
     /**
-     * The path to the role.
+     * @return The path to the role.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The ARN of the policy that is used to set the permissions boundary for the role.
+     * @return The ARN of the policy that is used to set the permissions boundary for the role.
      * 
-    */
+     */
     public String permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
-     * The tags attached to the role.
+     * @return The tags attached to the role.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The stable and unique string identifying the role.
+     * @return The stable and unique string identifying the role.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }

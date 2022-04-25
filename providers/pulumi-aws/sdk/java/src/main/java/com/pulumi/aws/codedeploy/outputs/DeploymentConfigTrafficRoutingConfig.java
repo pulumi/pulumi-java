@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentConfigTrafficRoutingConfig {
-    /**
-     * The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
-     * 
-     */
+        /**
+         * @return The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+         * 
+         */
     private final @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanary timeBasedCanary;
-    /**
-     * The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
-     * 
-     */
+        /**
+         * @return The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+         * 
+         */
     private final @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear;
-    /**
-     * Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
-     * 
-     */
+        /**
+         * @return Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class DeploymentConfigTrafficRoutingConfig {
     }
 
     /**
-     * The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+     * @return The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
      * 
-    */
+     */
     public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedCanary> timeBasedCanary() {
         return Optional.ofNullable(this.timeBasedCanary);
     }
     /**
-     * The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+     * @return The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
      * 
-    */
+     */
     public Optional<DeploymentConfigTrafficRoutingConfigTimeBasedLinear> timeBasedLinear() {
         return Optional.ofNullable(this.timeBasedLinear);
     }
     /**
-     * Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+     * @return Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

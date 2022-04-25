@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension {
-    /**
-     * The string value to use in the custom metric dimension.
-     * 
-     */
+        /**
+         * @return The string value to use in the custom metric dimension.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     }
 
     /**
-     * The string value to use in the custom metric dimension.
+     * @return The string value to use in the custom metric dimension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

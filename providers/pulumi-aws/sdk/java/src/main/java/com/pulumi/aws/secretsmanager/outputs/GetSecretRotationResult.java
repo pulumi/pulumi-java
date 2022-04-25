@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSecretRotationResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The ARN of the secret.
-     * 
-     */
+        /**
+         * @return The ARN of the secret.
+         * 
+         */
     private final Boolean rotationEnabled;
-    /**
-     * The decrypted part of the protected secret information that was originally provided as a string.
-     * 
-     */
+        /**
+         * @return The decrypted part of the protected secret information that was originally provided as a string.
+         * 
+         */
     private final String rotationLambdaArn;
-    /**
-     * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
-     * 
-     */
+        /**
+         * @return The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
+         * 
+         */
     private final List<GetSecretRotationRotationRule> rotationRules;
     private final String secretId;
 
@@ -49,30 +49,30 @@ public final class GetSecretRotationResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARN of the secret.
+     * @return The ARN of the secret.
      * 
-    */
+     */
     public Boolean rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
-     * The decrypted part of the protected secret information that was originally provided as a string.
+     * @return The decrypted part of the protected secret information that was originally provided as a string.
      * 
-    */
+     */
     public String rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
-     * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
+     * @return The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
      * 
-    */
+     */
     public List<GetSecretRotationRotationRule> rotationRules() {
         return this.rotationRules;
     }

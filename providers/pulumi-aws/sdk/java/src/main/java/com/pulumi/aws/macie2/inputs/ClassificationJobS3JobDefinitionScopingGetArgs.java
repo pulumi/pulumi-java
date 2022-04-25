@@ -23,6 +23,10 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends com.pu
     @Import(name="excludes")
     private @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> excludes;
 
+    /**
+     * @return The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
+     * 
+     */
     public Optional<Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
@@ -34,6 +38,10 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends com.pu
     @Import(name="includes")
     private @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes;
 
+    /**
+     * @return The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
+     * 
+     */
     public Optional<Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs>> includes() {
         return Optional.ofNullable(this.includes);
     }
@@ -63,20 +71,44 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends com.pu
             $ = new ClassificationJobS3JobDefinitionScopingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludes The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(@Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(ClassificationJobS3JobDefinitionScopingExcludesGetArgs excludes) {
             return excludes(Output.of(excludes));
         }
 
+        /**
+         * @param includes The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder includes(@Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes) {
             $.includes = includes;
             return this;
         }
 
+        /**
+         * @param includes The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
+         * 
+         * @return builder
+         * 
+         */
         public Builder includes(ClassificationJobS3JobDefinitionScopingIncludesGetArgs includes) {
             return includes(Output.of(includes));
         }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InsightFiltersAwsAccountId {
-    /**
-     * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
-     * 
-     */
+        /**
+         * @return The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+         * 
+         */
     private final String comparison;
-    /**
-     * A date range value for the date filter, provided as an Integer.
-     * 
-     */
+        /**
+         * @return A date range value for the date filter, provided as an Integer.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class InsightFiltersAwsAccountId {
     }
 
     /**
-     * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
+     * @return The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
      * 
-    */
+     */
     public String comparison() {
         return this.comparison;
     }
     /**
-     * A date range value for the date filter, provided as an Integer.
+     * @return A date range value for the date filter, provided as an Integer.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

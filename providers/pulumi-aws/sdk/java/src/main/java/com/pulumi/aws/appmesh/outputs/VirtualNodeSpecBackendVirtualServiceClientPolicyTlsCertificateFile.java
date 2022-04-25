@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile {
-    /**
-     * The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String certificateChain;
-    /**
-     * The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String privateKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
     }
 
     /**
-     * The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
+     * @return The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String certificateChain() {
         return this.certificateChain;
     }
     /**
-     * The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
+     * @return The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String privateKey() {
         return this.privateKey;
     }

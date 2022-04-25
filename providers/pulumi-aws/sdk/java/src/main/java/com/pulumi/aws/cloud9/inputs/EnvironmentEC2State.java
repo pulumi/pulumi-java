@@ -24,6 +24,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the environment.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="automaticStopTimeMinutes")
     private @Nullable Output<Integer> automaticStopTimeMinutes;
 
+    /**
+     * @return The number of minutes until the running instance is shut down after the environment has last been used.
+     * 
+     */
     public Optional<Output<Integer>> automaticStopTimeMinutes() {
         return Optional.ofNullable(this.automaticStopTimeMinutes);
     }
@@ -46,6 +54,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the environment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -57,6 +69,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The type of instance to connect to the environment, e.g., `t2.micro`.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -68,6 +84,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the environment.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -79,6 +99,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="ownerArn")
     private @Nullable Output<String> ownerArn;
 
+    /**
+     * @return The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
+     * 
+     */
     public Optional<Output<String>> ownerArn() {
         return Optional.ofNullable(this.ownerArn);
     }
@@ -90,6 +114,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -101,6 +129,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,6 +144,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -123,6 +159,10 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the environment (e.g., `ssh` or `ec2`)
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -160,92 +200,212 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
             $ = new EnvironmentEC2State(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param automaticStopTimeMinutes The number of minutes until the running instance is shut down after the environment has last been used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticStopTimeMinutes(@Nullable Output<Integer> automaticStopTimeMinutes) {
             $.automaticStopTimeMinutes = automaticStopTimeMinutes;
             return this;
         }
 
+        /**
+         * @param automaticStopTimeMinutes The number of minutes until the running instance is shut down after the environment has last been used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticStopTimeMinutes(Integer automaticStopTimeMinutes) {
             return automaticStopTimeMinutes(Output.of(automaticStopTimeMinutes));
         }
 
+        /**
+         * @param description The description of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceType The type of instance to connect to the environment, e.g., `t2.micro`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The type of instance to connect to the environment, e.g., `t2.micro`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param name The name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param ownerArn The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerArn(@Nullable Output<String> ownerArn) {
             $.ownerArn = ownerArn;
             return this;
         }
 
+        /**
+         * @param ownerArn The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment&#39;s creator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerArn(String ownerArn) {
             return ownerArn(Output.of(ownerArn));
         }
 
+        /**
+         * @param subnetId The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }
 
+        /**
+         * @param type The type of the environment (e.g., `ssh` or `ec2`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the environment (e.g., `ssh` or `ec2`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

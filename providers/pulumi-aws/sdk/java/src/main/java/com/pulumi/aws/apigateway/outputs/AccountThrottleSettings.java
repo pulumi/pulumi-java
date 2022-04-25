@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccountThrottleSettings {
-    /**
-     * The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
-     * 
-     */
+        /**
+         * @return The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+         * 
+         */
     private final @Nullable Integer burstLimit;
-    /**
-     * The number of times API Gateway allows the API to be called per second on average (RPS).
-     * 
-     */
+        /**
+         * @return The number of times API Gateway allows the API to be called per second on average (RPS).
+         * 
+         */
     private final @Nullable Double rateLimit;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AccountThrottleSettings {
     }
 
     /**
-     * The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+     * @return The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
      * 
-    */
+     */
     public Optional<Integer> burstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
     /**
-     * The number of times API Gateway allows the API to be called per second on average (RPS).
+     * @return The number of times API Gateway allows the API to be called per second on average (RPS).
      * 
-    */
+     */
     public Optional<Double> rateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }

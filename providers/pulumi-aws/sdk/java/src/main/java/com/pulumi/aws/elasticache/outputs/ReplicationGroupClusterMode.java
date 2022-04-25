@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReplicationGroupClusterMode {
-    /**
-     * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
-     * 
-     */
+        /**
+         * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+         * 
+         */
     private final @Nullable Integer numNodeGroups;
-    /**
-     * Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
-     * 
-     */
+        /**
+         * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+         * 
+         */
     private final Integer replicasPerNodeGroup;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ReplicationGroupClusterMode {
     }
 
     /**
-     * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+     * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
-    */
+     */
     public Optional<Integer> numNodeGroups() {
         return Optional.ofNullable(this.numNodeGroups);
     }
     /**
-     * Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+     * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
-    */
+     */
     public Integer replicasPerNodeGroup() {
         return this.replicasPerNodeGroup;
     }

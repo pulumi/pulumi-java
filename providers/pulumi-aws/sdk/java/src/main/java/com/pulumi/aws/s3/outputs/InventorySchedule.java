@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class InventorySchedule {
-    /**
-     * Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
-     * 
-     */
+        /**
+         * @return Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
+         * 
+         */
     private final String frequency;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class InventorySchedule {
     }
 
     /**
-     * Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
+     * @return Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
      * 
-    */
+     */
     public String frequency() {
         return this.frequency;
     }

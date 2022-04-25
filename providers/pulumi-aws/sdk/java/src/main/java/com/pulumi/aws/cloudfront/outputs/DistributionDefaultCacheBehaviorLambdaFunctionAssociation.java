@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
-    /**
-     * The specific event to trigger this function.
-     * Valid values: `viewer-request` or `viewer-response`
-     * 
-     */
+        /**
+         * @return The specific event to trigger this function.
+         * Valid values: `viewer-request` or `viewer-response`
+         * 
+         */
     private final String eventType;
-    /**
-     * When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-     * 
-     */
+        /**
+         * @return When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
+         * 
+         */
     private final @Nullable Boolean includeBody;
-    /**
-     * ARN of the Lambda function.
-     * 
-     */
+        /**
+         * @return ARN of the Lambda function.
+         * 
+         */
     private final String lambdaArn;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
     }
 
     /**
-     * The specific event to trigger this function.
+     * @return The specific event to trigger this function.
      * Valid values: `viewer-request` or `viewer-response`
      * 
-    */
+     */
     public String eventType() {
         return this.eventType;
     }
     /**
-     * When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
+     * @return When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
      * 
-    */
+     */
     public Optional<Boolean> includeBody() {
         return Optional.ofNullable(this.includeBody);
     }
     /**
-     * ARN of the Lambda function.
+     * @return ARN of the Lambda function.
      * 
-    */
+     */
     public String lambdaArn() {
         return this.lambdaArn;
     }

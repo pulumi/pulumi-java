@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
-    /**
-     * Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
-     * 
-     */
+        /**
+         * @return Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
+         * 
+         */
     private final String ruleOrder;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
     }
 
     /**
-     * Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
+     * @return Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
      * 
-    */
+     */
     public String ruleOrder() {
         return this.ruleOrder;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CanaryVpcConfig {
-    /**
-     * IDs of the security groups for this canary.
-     * 
-     */
+        /**
+         * @return IDs of the security groups for this canary.
+         * 
+         */
     private final @Nullable List<String> securityGroupIds;
-    /**
-     * IDs of the subnets where this canary is to run.
-     * 
-     */
+        /**
+         * @return IDs of the subnets where this canary is to run.
+         * 
+         */
     private final @Nullable List<String> subnetIds;
-    /**
-     * ID of the VPC where this canary is to run.
-     * 
-     */
+        /**
+         * @return ID of the VPC where this canary is to run.
+         * 
+         */
     private final @Nullable String vpcId;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class CanaryVpcConfig {
     }
 
     /**
-     * IDs of the security groups for this canary.
+     * @return IDs of the security groups for this canary.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * IDs of the subnets where this canary is to run.
+     * @return IDs of the subnets where this canary is to run.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
     /**
-     * ID of the VPC where this canary is to run.
+     * @return ID of the VPC where this canary is to run.
      * 
-    */
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }

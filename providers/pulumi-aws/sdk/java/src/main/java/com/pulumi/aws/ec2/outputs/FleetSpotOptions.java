@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FleetSpotOptions {
-    /**
-     * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
-     * 
-     */
+        /**
+         * @return How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+         * 
+         */
     private final @Nullable String allocationStrategy;
-    /**
-     * Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
-     * 
-     */
+        /**
+         * @return Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
+         * 
+         */
     private final @Nullable String instanceInterruptionBehavior;
-    /**
-     * Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
-     * 
-     */
+        /**
+         * @return Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
+         * 
+         */
     private final @Nullable Integer instancePoolsToUseCount;
-    /**
-     * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-     * 
-     */
+        /**
+         * @return Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+         * 
+         */
     private final @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class FleetSpotOptions {
     }
 
     /**
-     * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
+     * @return How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
      * 
-    */
+     */
     public Optional<String> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
     /**
-     * Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
+     * @return Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
      * 
-    */
+     */
     public Optional<String> instanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
     /**
-     * Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
+     * @return Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
      * 
-    */
+     */
     public Optional<Integer> instancePoolsToUseCount() {
         return Optional.ofNullable(this.instancePoolsToUseCount);
     }
     /**
-     * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+     * @return Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
-    */
+     */
     public Optional<FleetSpotOptionsMaintenanceStrategies> maintenanceStrategies() {
         return Optional.ofNullable(this.maintenanceStrategies);
     }

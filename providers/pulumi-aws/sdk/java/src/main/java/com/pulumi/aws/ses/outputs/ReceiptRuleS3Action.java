@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReceiptRuleS3Action {
-    /**
-     * The name of the S3 bucket
-     * 
-     */
+        /**
+         * @return The name of the S3 bucket
+         * 
+         */
     private final String bucketName;
-    /**
-     * The ARN of the KMS key
-     * 
-     */
+        /**
+         * @return The ARN of the KMS key
+         * 
+         */
     private final @Nullable String kmsKeyArn;
-    /**
-     * The key prefix of the S3 bucket
-     * 
-     */
+        /**
+         * @return The key prefix of the S3 bucket
+         * 
+         */
     private final @Nullable String objectKeyPrefix;
-    /**
-     * The position of the action in the receipt rule
-     * 
-     */
+        /**
+         * @return The position of the action in the receipt rule
+         * 
+         */
     private final Integer position;
-    /**
-     * The ARN of an SNS topic to notify
-     * 
-     */
+        /**
+         * @return The ARN of an SNS topic to notify
+         * 
+         */
     private final @Nullable String topicArn;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ReceiptRuleS3Action {
     }
 
     /**
-     * The name of the S3 bucket
+     * @return The name of the S3 bucket
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * The ARN of the KMS key
+     * @return The ARN of the KMS key
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * The key prefix of the S3 bucket
+     * @return The key prefix of the S3 bucket
      * 
-    */
+     */
     public Optional<String> objectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
     /**
-     * The position of the action in the receipt rule
+     * @return The position of the action in the receipt rule
      * 
-    */
+     */
     public Integer position() {
         return this.position;
     }
     /**
-     * The ARN of an SNS topic to notify
+     * @return The ARN of an SNS topic to notify
      * 
-    */
+     */
     public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }

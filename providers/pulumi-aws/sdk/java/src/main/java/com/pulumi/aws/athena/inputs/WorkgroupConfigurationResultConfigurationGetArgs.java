@@ -23,6 +23,10 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends com.
     @Import(name="encryptionConfiguration")
     private @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
+    /**
+     * @return Configuration block with encryption settings. Documented below.
+     * 
+     */
     public Optional<Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -34,6 +38,10 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends com.
     @Import(name="outputLocation")
     private @Nullable Output<String> outputLocation;
 
+    /**
+     * @return The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
+     * 
+     */
     public Optional<Output<String>> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
@@ -63,20 +71,44 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends com.
             $ = new WorkgroupConfigurationResultConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionConfiguration Configuration block with encryption settings. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param encryptionConfiguration Configuration block with encryption settings. Documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
 
+        /**
+         * @param outputLocation The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
             $.outputLocation = outputLocation;
             return this;
         }
 
+        /**
+         * @param outputLocation The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputLocation(String outputLocation) {
             return outputLocation(Output.of(outputLocation));
         }

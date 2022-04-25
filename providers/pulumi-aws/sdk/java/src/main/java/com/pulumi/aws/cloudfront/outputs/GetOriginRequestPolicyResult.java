@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOriginRequestPolicyResult {
-    /**
-     * Comment to describe the origin request policy.
-     * 
-     */
+        /**
+         * @return Comment to describe the origin request policy.
+         * 
+         */
     private final String comment;
-    /**
-     * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-     * 
-     */
+        /**
+         * @return Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
+         * 
+         */
     private final List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs;
-    /**
-     * The current version of the origin request policy.
-     * 
-     */
+        /**
+         * @return The current version of the origin request policy.
+         * 
+         */
     private final String etag;
-    /**
-     * Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-     * 
-     */
+        /**
+         * @return Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
+         * 
+         */
     private final List<GetOriginRequestPolicyHeadersConfig> headersConfigs;
     private final @Nullable String id;
     private final @Nullable String name;
-    /**
-     * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
-     * 
-     */
+        /**
+         * @return Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
+         * 
+         */
     private final List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs;
 
     @CustomType.Constructor
@@ -62,30 +62,30 @@ public final class GetOriginRequestPolicyResult {
     }
 
     /**
-     * Comment to describe the origin request policy.
+     * @return Comment to describe the origin request policy.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
+     * @return Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
-    */
+     */
     public List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs() {
         return this.cookiesConfigs;
     }
     /**
-     * The current version of the origin request policy.
+     * @return The current version of the origin request policy.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
+     * @return Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
-    */
+     */
     public List<GetOriginRequestPolicyHeadersConfig> headersConfigs() {
         return this.headersConfigs;
     }
@@ -96,9 +96,9 @@ public final class GetOriginRequestPolicyResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
+     * @return Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
-    */
+     */
     public List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs() {
         return this.queryStringsConfigs;
     }

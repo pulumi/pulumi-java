@@ -25,6 +25,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="callingRegions")
     private @Nullable Output<List<String>> callingRegions;
 
+    /**
+     * @return The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
+     * 
+     */
     public Optional<Output<List<String>>> callingRegions() {
         return Optional.ofNullable(this.callingRegions);
     }
@@ -36,6 +40,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="cidrAllowLists")
     private @Nullable Output<List<String>> cidrAllowLists;
 
+    /**
+     * @return The IP addresses allowed to make calls, in CIDR format.
+     * 
+     */
     public Optional<Output<List<String>>> cidrAllowLists() {
         return Optional.ofNullable(this.cidrAllowLists);
     }
@@ -47,6 +55,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="cpsLimit")
     private @Nullable Output<Integer> cpsLimit;
 
+    /**
+     * @return The limit on calls per second. Max value based on account service quota. Default value of `1`.
+     * 
+     */
     public Optional<Output<Integer>> cpsLimit() {
         return Optional.ofNullable(this.cpsLimit);
     }
@@ -58,6 +70,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="defaultPhoneNumber")
     private @Nullable Output<String> defaultPhoneNumber;
 
+    /**
+     * @return The default caller ID phone number.
+     * 
+     */
     public Optional<Output<String>> defaultPhoneNumber() {
         return Optional.ofNullable(this.defaultPhoneNumber);
     }
@@ -69,6 +85,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
+    /**
+     * @return When termination settings are disabled, outbound calls can not be made.
+     * 
+     */
     public Optional<Output<Boolean>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
@@ -80,6 +100,10 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
     @Import(name="voiceConnectorId")
     private @Nullable Output<String> voiceConnectorId;
 
+    /**
+     * @return The Amazon Chime Voice Connector ID.
+     * 
+     */
     public Optional<Output<String>> voiceConnectorId() {
         return Optional.ofNullable(this.voiceConnectorId);
     }
@@ -113,64 +137,148 @@ public final class VoiceConnectorTerminationState extends com.pulumi.resources.R
             $ = new VoiceConnectorTerminationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callingRegions The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callingRegions(@Nullable Output<List<String>> callingRegions) {
             $.callingRegions = callingRegions;
             return this;
         }
 
+        /**
+         * @param callingRegions The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callingRegions(List<String> callingRegions) {
             return callingRegions(Output.of(callingRegions));
         }
 
+        /**
+         * @param callingRegions The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callingRegions(String... callingRegions) {
             return callingRegions(List.of(callingRegions));
         }
 
+        /**
+         * @param cidrAllowLists The IP addresses allowed to make calls, in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowLists(@Nullable Output<List<String>> cidrAllowLists) {
             $.cidrAllowLists = cidrAllowLists;
             return this;
         }
 
+        /**
+         * @param cidrAllowLists The IP addresses allowed to make calls, in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowLists(List<String> cidrAllowLists) {
             return cidrAllowLists(Output.of(cidrAllowLists));
         }
 
+        /**
+         * @param cidrAllowLists The IP addresses allowed to make calls, in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrAllowLists(String... cidrAllowLists) {
             return cidrAllowLists(List.of(cidrAllowLists));
         }
 
+        /**
+         * @param cpsLimit The limit on calls per second. Max value based on account service quota. Default value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpsLimit(@Nullable Output<Integer> cpsLimit) {
             $.cpsLimit = cpsLimit;
             return this;
         }
 
+        /**
+         * @param cpsLimit The limit on calls per second. Max value based on account service quota. Default value of `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpsLimit(Integer cpsLimit) {
             return cpsLimit(Output.of(cpsLimit));
         }
 
+        /**
+         * @param defaultPhoneNumber The default caller ID phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPhoneNumber(@Nullable Output<String> defaultPhoneNumber) {
             $.defaultPhoneNumber = defaultPhoneNumber;
             return this;
         }
 
+        /**
+         * @param defaultPhoneNumber The default caller ID phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPhoneNumber(String defaultPhoneNumber) {
             return defaultPhoneNumber(Output.of(defaultPhoneNumber));
         }
 
+        /**
+         * @param disabled When termination settings are disabled, outbound calls can not be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(@Nullable Output<Boolean> disabled) {
             $.disabled = disabled;
             return this;
         }
 
+        /**
+         * @param disabled When termination settings are disabled, outbound calls can not be made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabled(Boolean disabled) {
             return disabled(Output.of(disabled));
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
             $.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
+        /**
+         * @param voiceConnectorId The Amazon Chime Voice Connector ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder voiceConnectorId(String voiceConnectorId) {
             return voiceConnectorId(Output.of(voiceConnectorId));
         }

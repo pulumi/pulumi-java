@@ -23,6 +23,10 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends com.pulumi.resou
     @Import(name="enableOnlineStore")
     private @Nullable Output<Boolean> enableOnlineStore;
 
+    /**
+     * @return Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
+     * 
+     */
     public Optional<Output<Boolean>> enableOnlineStore() {
         return Optional.ofNullable(this.enableOnlineStore);
     }
@@ -34,6 +38,10 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends com.pulumi.resou
     @Import(name="securityConfig")
     private @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
 
+    /**
+     * @return Security config for at-rest encryption of your OnlineStore. See Security Config Below.
+     * 
+     */
     public Optional<Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs>> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
@@ -63,20 +71,44 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends com.pulumi.resou
             $ = new FeatureGroupOnlineStoreConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableOnlineStore Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableOnlineStore(@Nullable Output<Boolean> enableOnlineStore) {
             $.enableOnlineStore = enableOnlineStore;
             return this;
         }
 
+        /**
+         * @param enableOnlineStore Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableOnlineStore(Boolean enableOnlineStore) {
             return enableOnlineStore(Output.of(enableOnlineStore));
         }
 
+        /**
+         * @param securityConfig Security config for at-rest encryption of your OnlineStore. See Security Config Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig) {
             $.securityConfig = securityConfig;
             return this;
         }
 
+        /**
+         * @param securityConfig Security config for at-rest encryption of your OnlineStore. See Security Config Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityConfig(FeatureGroupOnlineStoreConfigSecurityConfigGetArgs securityConfig) {
             return securityConfig(Output.of(securityConfig));
         }

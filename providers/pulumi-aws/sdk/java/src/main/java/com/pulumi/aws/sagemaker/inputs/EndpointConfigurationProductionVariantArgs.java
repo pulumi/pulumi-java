@@ -24,6 +24,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="acceleratorType")
     private @Nullable Output<String> acceleratorType;
 
+    /**
+     * @return The size of the Elastic Inference (EI) instance to use for the production variant.
+     * 
+     */
     public Optional<Output<String>> acceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
@@ -35,6 +39,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="initialInstanceCount", required=true)
     private Output<Integer> initialInstanceCount;
 
+    /**
+     * @return Initial number of instances used for auto-scaling.
+     * 
+     */
     public Output<Integer> initialInstanceCount() {
         return this.initialInstanceCount;
     }
@@ -46,6 +54,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="initialVariantWeight")
     private @Nullable Output<Double> initialVariantWeight;
 
+    /**
+     * @return Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
+     * 
+     */
     public Optional<Output<Double>> initialVariantWeight() {
         return Optional.ofNullable(this.initialVariantWeight);
     }
@@ -57,6 +69,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="instanceType", required=true)
     private Output<String> instanceType;
 
+    /**
+     * @return The type of instance to start.
+     * 
+     */
     public Output<String> instanceType() {
         return this.instanceType;
     }
@@ -68,6 +84,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="modelName", required=true)
     private Output<String> modelName;
 
+    /**
+     * @return The name of the model to use.
+     * 
+     */
     public Output<String> modelName() {
         return this.modelName;
     }
@@ -79,6 +99,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
     @Import(name="variantName")
     private @Nullable Output<String> variantName;
 
+    /**
+     * @return The name of the variant. If omitted, this provider will assign a random, unique name.
+     * 
+     */
     public Optional<Output<String>> variantName() {
         return Optional.ofNullable(this.variantName);
     }
@@ -112,56 +136,128 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
             $ = new EndpointConfigurationProductionVariantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceleratorType The size of the Elastic Inference (EI) instance to use for the production variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
 
+        /**
+         * @param acceleratorType The size of the Elastic Inference (EI) instance to use for the production variant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceleratorType(String acceleratorType) {
             return acceleratorType(Output.of(acceleratorType));
         }
 
+        /**
+         * @param initialInstanceCount Initial number of instances used for auto-scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialInstanceCount(Output<Integer> initialInstanceCount) {
             $.initialInstanceCount = initialInstanceCount;
             return this;
         }
 
+        /**
+         * @param initialInstanceCount Initial number of instances used for auto-scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialInstanceCount(Integer initialInstanceCount) {
             return initialInstanceCount(Output.of(initialInstanceCount));
         }
 
+        /**
+         * @param initialVariantWeight Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialVariantWeight(@Nullable Output<Double> initialVariantWeight) {
             $.initialVariantWeight = initialVariantWeight;
             return this;
         }
 
+        /**
+         * @param initialVariantWeight Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialVariantWeight(Double initialVariantWeight) {
             return initialVariantWeight(Output.of(initialVariantWeight));
         }
 
+        /**
+         * @param instanceType The type of instance to start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The type of instance to start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param modelName The name of the model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelName(Output<String> modelName) {
             $.modelName = modelName;
             return this;
         }
 
+        /**
+         * @param modelName The name of the model to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelName(String modelName) {
             return modelName(Output.of(modelName));
         }
 
+        /**
+         * @param variantName The name of the variant. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variantName(@Nullable Output<String> variantName) {
             $.variantName = variantName;
             return this;
         }
 
+        /**
+         * @param variantName The name of the variant. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variantName(String variantName) {
             return variantName(Output.of(variantName));
         }

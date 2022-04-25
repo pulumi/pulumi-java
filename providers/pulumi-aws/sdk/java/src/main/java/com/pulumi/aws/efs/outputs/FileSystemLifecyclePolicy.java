@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FileSystemLifecyclePolicy {
-    /**
-     * Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
-     * 
-     */
+        /**
+         * @return Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
+         * 
+         */
     private final @Nullable String transitionToIa;
-    /**
-     * Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
-     * 
-     */
+        /**
+         * @return Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
+         * 
+         */
     private final @Nullable String transitionToPrimaryStorageClass;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class FileSystemLifecyclePolicy {
     }
 
     /**
-     * Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
+     * @return Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
      * 
-    */
+     */
     public Optional<String> transitionToIa() {
         return Optional.ofNullable(this.transitionToIa);
     }
     /**
-     * Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
+     * @return Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
      * 
-    */
+     */
     public Optional<String> transitionToPrimaryStorageClass() {
         return Optional.ofNullable(this.transitionToPrimaryStorageClass);
     }

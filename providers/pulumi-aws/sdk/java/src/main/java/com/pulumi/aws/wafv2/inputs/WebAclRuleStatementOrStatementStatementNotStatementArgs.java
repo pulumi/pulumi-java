@@ -21,6 +21,10 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementArgs exten
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementArgs>> statements;
 
+    /**
+     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * 
+     */
     public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementArgs>> statements() {
         return this.statements;
     }
@@ -49,15 +53,33 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementArgs exten
             $ = new WebAclRuleStatementOrStatementStatementNotStatementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementArgs>> statements) {
             $.statements = statements;
             return this;
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(List<WebAclRuleStatementOrStatementStatementNotStatementStatementArgs> statements) {
             return statements(Output.of(statements));
         }
 
+        /**
+         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statements(WebAclRuleStatementOrStatementStatementNotStatementStatementArgs... statements) {
             return statements(List.of(statements));
         }

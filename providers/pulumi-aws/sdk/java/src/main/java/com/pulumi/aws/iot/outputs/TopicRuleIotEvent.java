@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopicRuleIotEvent {
-    /**
-     * The name of the AWS IoT Events input.
-     * 
-     */
+        /**
+         * @return The name of the AWS IoT Events input.
+         * 
+         */
     private final String inputName;
-    /**
-     * Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
-     * 
-     */
+        /**
+         * @return Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+         * 
+         */
     private final @Nullable String messageId;
-    /**
-     * The ARN of the IAM role that grants access.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role that grants access.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TopicRuleIotEvent {
     }
 
     /**
-     * The name of the AWS IoT Events input.
+     * @return The name of the AWS IoT Events input.
      * 
-    */
+     */
     public String inputName() {
         return this.inputName;
     }
     /**
-     * Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
+     * @return Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * The ARN of the IAM role that grants access.
+     * @return The ARN of the IAM role that grants access.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

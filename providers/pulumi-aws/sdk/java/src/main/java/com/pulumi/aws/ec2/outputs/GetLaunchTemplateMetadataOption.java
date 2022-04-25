@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLaunchTemplateMetadataOption {
-    /**
-     * The state of the metadata service: `enabled`, `disabled`.
-     * 
-     */
+        /**
+         * @return The state of the metadata service: `enabled`, `disabled`.
+         * 
+         */
     private final String httpEndpoint;
-    /**
-     * The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
-     * 
-     */
+        /**
+         * @return The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
+         * 
+         */
     private final String httpProtocolIpv6;
-    /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
-     * 
-     */
+        /**
+         * @return The desired HTTP PUT response hop limit for instance metadata requests.
+         * 
+         */
     private final Integer httpPutResponseHopLimit;
-    /**
-     * If session tokens are required: `optional`, `required`.
-     * 
-     */
+        /**
+         * @return If session tokens are required: `optional`, `required`.
+         * 
+         */
     private final String httpTokens;
-    /**
-     * If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
-     * 
-     */
+        /**
+         * @return If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+         * 
+         */
     private final String instanceMetadataTags;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetLaunchTemplateMetadataOption {
     }
 
     /**
-     * The state of the metadata service: `enabled`, `disabled`.
+     * @return The state of the metadata service: `enabled`, `disabled`.
      * 
-    */
+     */
     public String httpEndpoint() {
         return this.httpEndpoint;
     }
     /**
-     * The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
+     * @return The state of IPv6 endpoint for the instance metadata service: `enabled`, `disabled`.
      * 
-    */
+     */
     public String httpProtocolIpv6() {
         return this.httpProtocolIpv6;
     }
     /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
+     * @return The desired HTTP PUT response hop limit for instance metadata requests.
      * 
-    */
+     */
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
     /**
-     * If session tokens are required: `optional`, `required`.
+     * @return If session tokens are required: `optional`, `required`.
      * 
-    */
+     */
     public String httpTokens() {
         return this.httpTokens;
     }
     /**
-     * If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+     * @return If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
      * 
-    */
+     */
     public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }

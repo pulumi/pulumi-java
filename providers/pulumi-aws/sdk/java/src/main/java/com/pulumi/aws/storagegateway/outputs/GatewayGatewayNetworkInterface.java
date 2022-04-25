@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GatewayGatewayNetworkInterface {
-    /**
-     * The Internet Protocol version 4 (IPv4) address of the interface.
-     * 
-     */
+        /**
+         * @return The Internet Protocol version 4 (IPv4) address of the interface.
+         * 
+         */
     private final @Nullable String ipv4Address;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GatewayGatewayNetworkInterface {
     }
 
     /**
-     * The Internet Protocol version 4 (IPv4) address of the interface.
+     * @return The Internet Protocol version 4 (IPv4) address of the interface.
      * 
-    */
+     */
     public Optional<String> ipv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }

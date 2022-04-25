@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainEncryptionAtRest {
-    /**
-     * Whether node to node encryption is enabled.
-     * 
-     */
+        /**
+         * @return Whether node to node encryption is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * The KMS key id used to encrypt data at rest.
-     * 
-     */
+        /**
+         * @return The KMS key id used to encrypt data at rest.
+         * 
+         */
     private final String kmsKeyId;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetDomainEncryptionAtRest {
     }
 
     /**
-     * Whether node to node encryption is enabled.
+     * @return Whether node to node encryption is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The KMS key id used to encrypt data at rest.
+     * @return The KMS key id used to encrypt data at rest.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }

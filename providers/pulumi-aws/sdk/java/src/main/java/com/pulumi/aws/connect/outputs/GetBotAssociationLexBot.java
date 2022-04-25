@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBotAssociationLexBot {
-    /**
-     * The Region that the Amazon Lex (V1) bot was created in.
-     * 
-     */
+        /**
+         * @return The Region that the Amazon Lex (V1) bot was created in.
+         * 
+         */
     private final String lexRegion;
-    /**
-     * The name of the Amazon Lex (V1) bot.
-     * 
-     */
+        /**
+         * @return The name of the Amazon Lex (V1) bot.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetBotAssociationLexBot {
     }
 
     /**
-     * The Region that the Amazon Lex (V1) bot was created in.
+     * @return The Region that the Amazon Lex (V1) bot was created in.
      * 
-    */
+     */
     public String lexRegion() {
         return this.lexRegion;
     }
     /**
-     * The name of the Amazon Lex (V1) bot.
+     * @return The name of the Amazon Lex (V1) bot.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

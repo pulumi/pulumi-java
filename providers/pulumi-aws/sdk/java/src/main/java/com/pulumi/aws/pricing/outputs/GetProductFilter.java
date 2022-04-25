@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetProductFilter {
-    /**
-     * The product attribute name that you want to filter on.
-     * 
-     */
+        /**
+         * @return The product attribute name that you want to filter on.
+         * 
+         */
     private final String field;
-    /**
-     * The product attribute value that you want to filter on.
-     * 
-     */
+        /**
+         * @return The product attribute value that you want to filter on.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetProductFilter {
     }
 
     /**
-     * The product attribute name that you want to filter on.
+     * @return The product attribute name that you want to filter on.
      * 
-    */
+     */
     public String field() {
         return this.field;
     }
     /**
-     * The product attribute value that you want to filter on.
+     * @return The product attribute value that you want to filter on.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 @CustomType
 public final class GetResourceResult {
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
-     * 
-     */
+        /**
+         * @return The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         */
     private final String lastModified;
-    /**
-     * Role that the resource was registered with.
-     * 
-     */
+        /**
+         * @return Role that the resource was registered with.
+         * 
+         */
     private final String roleArn;
 
     @CustomType.Constructor
@@ -42,23 +42,23 @@ public final class GetResourceResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * @return The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * Role that the resource was registered with.
+     * @return Role that the resource was registered with.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUserPoolSigningCertificateResult {
-    /**
-     * The certificate string
-     * 
-     */
+        /**
+         * @return The certificate string
+         * 
+         */
     private final String certificate;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String userPoolId;
 
@@ -32,16 +32,16 @@ public final class GetUserPoolSigningCertificateResult {
     }
 
     /**
-     * The certificate string
+     * @return The certificate string
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

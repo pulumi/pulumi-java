@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssociationOutputLocation {
-    /**
-     * The S3 bucket name.
-     * 
-     */
+        /**
+         * @return The S3 bucket name.
+         * 
+         */
     private final String s3BucketName;
-    /**
-     * The S3 bucket prefix. Results stored in the root if not configured.
-     * 
-     */
+        /**
+         * @return The S3 bucket prefix. Results stored in the root if not configured.
+         * 
+         */
     private final @Nullable String s3KeyPrefix;
-    /**
-     * The S3 bucket region.
-     * 
-     */
+        /**
+         * @return The S3 bucket region.
+         * 
+         */
     private final @Nullable String s3Region;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AssociationOutputLocation {
     }
 
     /**
-     * The S3 bucket name.
+     * @return The S3 bucket name.
      * 
-    */
+     */
     public String s3BucketName() {
         return this.s3BucketName;
     }
     /**
-     * The S3 bucket prefix. Results stored in the root if not configured.
+     * @return The S3 bucket prefix. Results stored in the root if not configured.
      * 
-    */
+     */
     public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
     /**
-     * The S3 bucket region.
+     * @return The S3 bucket region.
      * 
-    */
+     */
     public Optional<String> s3Region() {
         return Optional.ofNullable(this.s3Region);
     }

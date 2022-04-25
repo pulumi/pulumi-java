@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExportResult {
     private final String apiId;
-    /**
-     * The id of the API.
-     * 
-     */
+        /**
+         * @return The id of the API.
+         * 
+         */
     private final String body;
     private final @Nullable String exportVersion;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Boolean includeExtensions;
     private final String outputType;
@@ -53,9 +53,9 @@ public final class GetExportResult {
         return this.apiId;
     }
     /**
-     * The id of the API.
+     * @return The id of the API.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
@@ -63,9 +63,9 @@ public final class GetExportResult {
         return Optional.ofNullable(this.exportVersion);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

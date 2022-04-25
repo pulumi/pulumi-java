@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterCoreInstanceFleet {
-    /**
-     * ID of the cluster.
-     * 
-     */
+        /**
+         * @return ID of the cluster.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Configuration block for instance fleet.
-     * 
-     */
+        /**
+         * @return Configuration block for instance fleet.
+         * 
+         */
     private final @Nullable List<ClusterCoreInstanceFleetInstanceTypeConfig> instanceTypeConfigs;
-    /**
-     * Configuration block for launch specification.
-     * 
-     */
+        /**
+         * @return Configuration block for launch specification.
+         * 
+         */
     private final @Nullable ClusterCoreInstanceFleetLaunchSpecifications launchSpecifications;
-    /**
-     * Name of the step.
-     * 
-     */
+        /**
+         * @return Name of the step.
+         * 
+         */
     private final @Nullable String name;
     private final @Nullable Integer provisionedOnDemandCapacity;
     private final @Nullable Integer provisionedSpotCapacity;
-    /**
-     * Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
-     * 
-     */
+        /**
+         * @return Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+         * 
+         */
     private final @Nullable Integer targetOnDemandCapacity;
-    /**
-     * Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
-     * 
-     */
+        /**
+         * @return Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+         * 
+         */
     private final @Nullable Integer targetSpotCapacity;
 
     @CustomType.Constructor
@@ -69,30 +69,30 @@ public final class ClusterCoreInstanceFleet {
     }
 
     /**
-     * ID of the cluster.
+     * @return ID of the cluster.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Configuration block for instance fleet.
+     * @return Configuration block for instance fleet.
      * 
-    */
+     */
     public List<ClusterCoreInstanceFleetInstanceTypeConfig> instanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? List.of() : this.instanceTypeConfigs;
     }
     /**
-     * Configuration block for launch specification.
+     * @return Configuration block for launch specification.
      * 
-    */
+     */
     public Optional<ClusterCoreInstanceFleetLaunchSpecifications> launchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
     /**
-     * Name of the step.
+     * @return Name of the step.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,16 +103,16 @@ public final class ClusterCoreInstanceFleet {
         return Optional.ofNullable(this.provisionedSpotCapacity);
     }
     /**
-     * Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
+     * @return Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
-    */
+     */
     public Optional<Integer> targetOnDemandCapacity() {
         return Optional.ofNullable(this.targetOnDemandCapacity);
     }
     /**
-     * Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
+     * @return Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
-    */
+     */
     public Optional<Integer> targetSpotCapacity() {
         return Optional.ofNullable(this.targetSpotCapacity);
     }

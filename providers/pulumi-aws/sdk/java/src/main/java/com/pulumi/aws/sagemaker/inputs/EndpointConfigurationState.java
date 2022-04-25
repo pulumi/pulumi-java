@@ -27,6 +27,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="asyncInferenceConfig")
     private @Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
 
+    /**
+     * @return Specifies configuration for how an endpoint performs asynchronous inference.
+     * 
+     */
     public Optional<Output<EndpointConfigurationAsyncInferenceConfigGetArgs>> asyncInferenceConfig() {
         return Optional.ofNullable(this.asyncInferenceConfig);
     }
@@ -49,6 +57,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="dataCaptureConfig")
     private @Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
 
+    /**
+     * @return Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+     * 
+     */
     public Optional<Output<EndpointConfigurationDataCaptureConfigGetArgs>> dataCaptureConfig() {
         return Optional.ofNullable(this.dataCaptureConfig);
     }
@@ -60,6 +72,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -71,6 +87,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -82,6 +102,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="productionVariants")
     private @Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
 
+    /**
+     * @return Fields are documented below.
+     * 
+     */
     public Optional<Output<List<EndpointConfigurationProductionVariantGetArgs>>> productionVariants() {
         return Optional.ofNullable(this.productionVariants);
     }
@@ -93,6 +117,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A mapping of tags to assign to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -104,6 +132,10 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -139,78 +171,180 @@ public final class EndpointConfigurationState extends com.pulumi.resources.Resou
             $ = new EndpointConfigurationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param asyncInferenceConfig Specifies configuration for how an endpoint performs asynchronous inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncInferenceConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig) {
             $.asyncInferenceConfig = asyncInferenceConfig;
             return this;
         }
 
+        /**
+         * @param asyncInferenceConfig Specifies configuration for how an endpoint performs asynchronous inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncInferenceConfig(EndpointConfigurationAsyncInferenceConfigGetArgs asyncInferenceConfig) {
             return asyncInferenceConfig(Output.of(asyncInferenceConfig));
         }
 
+        /**
+         * @param dataCaptureConfig Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCaptureConfig(@Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig) {
             $.dataCaptureConfig = dataCaptureConfig;
             return this;
         }
 
+        /**
+         * @param dataCaptureConfig Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCaptureConfig(EndpointConfigurationDataCaptureConfigGetArgs dataCaptureConfig) {
             return dataCaptureConfig(Output.of(dataCaptureConfig));
         }
 
+        /**
+         * @param kmsKeyArn Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param name The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param productionVariants Fields are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productionVariants(@Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants) {
             $.productionVariants = productionVariants;
             return this;
         }
 
+        /**
+         * @param productionVariants Fields are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productionVariants(List<EndpointConfigurationProductionVariantGetArgs> productionVariants) {
             return productionVariants(Output.of(productionVariants));
         }
 
+        /**
+         * @param productionVariants Fields are documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productionVariants(EndpointConfigurationProductionVariantGetArgs... productionVariants) {
             return productionVariants(List.of(productionVariants));
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A mapping of tags to assign to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

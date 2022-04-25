@@ -13,70 +13,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserPoolLambdaConfig {
-    /**
-     * ARN of the lambda creating an authentication challenge.
-     * 
-     */
+        /**
+         * @return ARN of the lambda creating an authentication challenge.
+         * 
+         */
     private final @Nullable String createAuthChallenge;
-    /**
-     * A custom email sender AWS Lambda trigger. See custom_email_sender Below.
-     * 
-     */
+        /**
+         * @return A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+         * 
+         */
     private final @Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender;
-    /**
-     * Custom Message AWS Lambda trigger.
-     * 
-     */
+        /**
+         * @return Custom Message AWS Lambda trigger.
+         * 
+         */
     private final @Nullable String customMessage;
-    /**
-     * A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
-     * 
-     */
+        /**
+         * @return A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+         * 
+         */
     private final @Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender;
-    /**
-     * Defines the authentication challenge.
-     * 
-     */
+        /**
+         * @return Defines the authentication challenge.
+         * 
+         */
     private final @Nullable String defineAuthChallenge;
-    /**
-     * The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
+         * 
+         */
     private final @Nullable String kmsKeyId;
-    /**
-     * Post-authentication AWS Lambda trigger.
-     * 
-     */
+        /**
+         * @return Post-authentication AWS Lambda trigger.
+         * 
+         */
     private final @Nullable String postAuthentication;
-    /**
-     * Post-confirmation AWS Lambda trigger.
-     * 
-     */
+        /**
+         * @return Post-confirmation AWS Lambda trigger.
+         * 
+         */
     private final @Nullable String postConfirmation;
-    /**
-     * Pre-authentication AWS Lambda trigger.
-     * 
-     */
+        /**
+         * @return Pre-authentication AWS Lambda trigger.
+         * 
+         */
     private final @Nullable String preAuthentication;
-    /**
-     * Pre-registration AWS Lambda trigger.
-     * 
-     */
+        /**
+         * @return Pre-registration AWS Lambda trigger.
+         * 
+         */
     private final @Nullable String preSignUp;
-    /**
-     * Allow to customize identity token claims before token generation.
-     * 
-     */
+        /**
+         * @return Allow to customize identity token claims before token generation.
+         * 
+         */
     private final @Nullable String preTokenGeneration;
-    /**
-     * User migration Lambda config type.
-     * 
-     */
+        /**
+         * @return User migration Lambda config type.
+         * 
+         */
     private final @Nullable String userMigration;
-    /**
-     * Verifies the authentication challenge response.
-     * 
-     */
+        /**
+         * @return Verifies the authentication challenge response.
+         * 
+         */
     private final @Nullable String verifyAuthChallengeResponse;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class UserPoolLambdaConfig {
     }
 
     /**
-     * ARN of the lambda creating an authentication challenge.
+     * @return ARN of the lambda creating an authentication challenge.
      * 
-    */
+     */
     public Optional<String> createAuthChallenge() {
         return Optional.ofNullable(this.createAuthChallenge);
     }
     /**
-     * A custom email sender AWS Lambda trigger. See custom_email_sender Below.
+     * @return A custom email sender AWS Lambda trigger. See custom_email_sender Below.
      * 
-    */
+     */
     public Optional<UserPoolLambdaConfigCustomEmailSender> customEmailSender() {
         return Optional.ofNullable(this.customEmailSender);
     }
     /**
-     * Custom Message AWS Lambda trigger.
+     * @return Custom Message AWS Lambda trigger.
      * 
-    */
+     */
     public Optional<String> customMessage() {
         return Optional.ofNullable(this.customMessage);
     }
     /**
-     * A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
+     * @return A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
      * 
-    */
+     */
     public Optional<UserPoolLambdaConfigCustomSmsSender> customSmsSender() {
         return Optional.ofNullable(this.customSmsSender);
     }
     /**
-     * Defines the authentication challenge.
+     * @return Defines the authentication challenge.
      * 
-    */
+     */
     public Optional<String> defineAuthChallenge() {
         return Optional.ofNullable(this.defineAuthChallenge);
     }
     /**
-     * The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
+     * @return The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * Post-authentication AWS Lambda trigger.
+     * @return Post-authentication AWS Lambda trigger.
      * 
-    */
+     */
     public Optional<String> postAuthentication() {
         return Optional.ofNullable(this.postAuthentication);
     }
     /**
-     * Post-confirmation AWS Lambda trigger.
+     * @return Post-confirmation AWS Lambda trigger.
      * 
-    */
+     */
     public Optional<String> postConfirmation() {
         return Optional.ofNullable(this.postConfirmation);
     }
     /**
-     * Pre-authentication AWS Lambda trigger.
+     * @return Pre-authentication AWS Lambda trigger.
      * 
-    */
+     */
     public Optional<String> preAuthentication() {
         return Optional.ofNullable(this.preAuthentication);
     }
     /**
-     * Pre-registration AWS Lambda trigger.
+     * @return Pre-registration AWS Lambda trigger.
      * 
-    */
+     */
     public Optional<String> preSignUp() {
         return Optional.ofNullable(this.preSignUp);
     }
     /**
-     * Allow to customize identity token claims before token generation.
+     * @return Allow to customize identity token claims before token generation.
      * 
-    */
+     */
     public Optional<String> preTokenGeneration() {
         return Optional.ofNullable(this.preTokenGeneration);
     }
     /**
-     * User migration Lambda config type.
+     * @return User migration Lambda config type.
      * 
-    */
+     */
     public Optional<String> userMigration() {
         return Optional.ofNullable(this.userMigration);
     }
     /**
-     * Verifies the authentication challenge response.
+     * @return Verifies the authentication challenge response.
      * 
-    */
+     */
     public Optional<String> verifyAuthChallengeResponse() {
         return Optional.ofNullable(this.verifyAuthChallengeResponse);
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateOptions {
-    /**
-     * Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
-     * 
-     */
+        /**
+         * @return Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+         * 
+         */
     private final @Nullable String certificateTransparencyLoggingPreference;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CertificateOptions {
     }
 
     /**
-     * Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
+     * @return Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
      * 
-    */
+     */
     public Optional<String> certificateTransparencyLoggingPreference() {
         return Optional.ofNullable(this.certificateTransparencyLoggingPreference);
     }

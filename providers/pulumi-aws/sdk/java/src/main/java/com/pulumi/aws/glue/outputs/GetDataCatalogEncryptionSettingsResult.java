@@ -12,15 +12,15 @@ import java.util.Objects;
 @CustomType
 public final class GetDataCatalogEncryptionSettingsResult {
     private final String catalogId;
-    /**
-     * The security configuration to set. see Data Catalog Encryption Settings.
-     * 
-     */
+        /**
+         * @return The security configuration to set. see Data Catalog Encryption Settings.
+         * 
+         */
     private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -37,16 +37,16 @@ public final class GetDataCatalogEncryptionSettingsResult {
         return this.catalogId;
     }
     /**
-     * The security configuration to set. see Data Catalog Encryption Settings.
+     * @return The security configuration to set. see Data Catalog Encryption Settings.
      * 
-    */
+     */
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

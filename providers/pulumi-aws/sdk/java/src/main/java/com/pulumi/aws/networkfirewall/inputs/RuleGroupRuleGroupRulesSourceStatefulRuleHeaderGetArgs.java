@@ -20,6 +20,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="destination", required=true)
     private Output<String> destination;
 
+    /**
+     * @return The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+     * 
+     */
     public Output<String> destination() {
         return this.destination;
     }
@@ -31,6 +35,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="destinationPort", required=true)
     private Output<String> destinationPort;
 
+    /**
+     * @return The destination port to inspect for. To match with any address, specify `ANY`.
+     * 
+     */
     public Output<String> destinationPort() {
         return this.destinationPort;
     }
@@ -42,6 +50,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="direction", required=true)
     private Output<String> direction;
 
+    /**
+     * @return The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
+     * 
+     */
     public Output<String> direction() {
         return this.direction;
     }
@@ -53,6 +65,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -64,6 +80,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="source", required=true)
     private Output<String> source;
 
+    /**
+     * @return The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
+     * 
+     */
     public Output<String> source() {
         return this.source;
     }
@@ -75,6 +95,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     @Import(name="sourcePort", required=true)
     private Output<String> sourcePort;
 
+    /**
+     * @return The source port to inspect for. To match with any address, specify `ANY`.
+     * 
+     */
     public Output<String> sourcePort() {
         return this.sourcePort;
     }
@@ -108,56 +132,128 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
             $ = new RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param destinationPort The destination port to inspect for. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Output<String> destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param destinationPort The destination port to inspect for. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(String destinationPort) {
             return destinationPort(Output.of(destinationPort));
         }
 
+        /**
+         * @param direction The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param protocol The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param source The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param sourcePort The source port to inspect for. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePort(Output<String> sourcePort) {
             $.sourcePort = sourcePort;
             return this;
         }
 
+        /**
+         * @param sourcePort The source port to inspect for. To match with any address, specify `ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePort(String sourcePort) {
             return sourcePort(Output.of(sourcePort));
         }

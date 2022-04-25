@@ -19,47 +19,47 @@ import javax.annotation.Nullable;
 public final class SpotFleetRequestLaunchSpecification {
     private final String ami;
     private final @Nullable Boolean associatePublicIpAddress;
-    /**
-     * The availability zone in which to place the request.
-     * 
-     */
+        /**
+         * @return The availability zone in which to place the request.
+         * 
+         */
     private final @Nullable String availabilityZone;
     private final @Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices;
     private final @Nullable Boolean ebsOptimized;
     private final @Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices;
     private final @Nullable String iamInstanceProfile;
     private final @Nullable String iamInstanceProfileArn;
-    /**
-     * The type of instance to request.
-     * 
-     */
+        /**
+         * @return The type of instance to request.
+         * 
+         */
     private final String instanceType;
     private final @Nullable String keyName;
     private final @Nullable Boolean monitoring;
     private final @Nullable String placementGroup;
     private final @Nullable String placementTenancy;
     private final @Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices;
-    /**
-     * The maximum spot bid for this override request.
-     * 
-     */
+        /**
+         * @return The maximum spot bid for this override request.
+         * 
+         */
     private final @Nullable String spotPrice;
-    /**
-     * The subnet in which to launch the requested instance.
-     * 
-     */
+        /**
+         * @return The subnet in which to launch the requested instance.
+         * 
+         */
     private final @Nullable String subnetId;
-    /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-     * 
-     */
+        /**
+         * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
     private final @Nullable String userData;
     private final @Nullable List<String> vpcSecurityGroupIds;
-    /**
-     * The capacity added to the fleet by a fulfilled request.
-     * 
-     */
+        /**
+         * @return The capacity added to the fleet by a fulfilled request.
+         * 
+         */
     private final @Nullable String weightedCapacity;
 
     @CustomType.Constructor
@@ -113,9 +113,9 @@ public final class SpotFleetRequestLaunchSpecification {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
     /**
-     * The availability zone in which to place the request.
+     * @return The availability zone in which to place the request.
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -135,9 +135,9 @@ public final class SpotFleetRequestLaunchSpecification {
         return Optional.ofNullable(this.iamInstanceProfileArn);
     }
     /**
-     * The type of instance to request.
+     * @return The type of instance to request.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -157,23 +157,23 @@ public final class SpotFleetRequestLaunchSpecification {
         return this.rootBlockDevices == null ? List.of() : this.rootBlockDevices;
     }
     /**
-     * The maximum spot bid for this override request.
+     * @return The maximum spot bid for this override request.
      * 
-    */
+     */
     public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
-     * The subnet in which to launch the requested instance.
+     * @return The subnet in which to launch the requested instance.
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -184,9 +184,9 @@ public final class SpotFleetRequestLaunchSpecification {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
     /**
-     * The capacity added to the fleet by a fulfilled request.
+     * @return The capacity added to the fleet by a fulfilled request.
      * 
-    */
+     */
     public Optional<String> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecListenerTimeoutHttpPerRequest {
-    /**
-     * The unit of time. Valid values: `ms`, `s`.
-     * 
-     */
+        /**
+         * @return The unit of time. Valid values: `ms`, `s`.
+         * 
+         */
     private final String unit;
-    /**
-     * The number of time units. Minimum value of `0`.
-     * 
-     */
+        /**
+         * @return The number of time units. Minimum value of `0`.
+         * 
+         */
     private final Integer value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class VirtualNodeSpecListenerTimeoutHttpPerRequest {
     }
 
     /**
-     * The unit of time. Valid values: `ms`, `s`.
+     * @return The unit of time. Valid values: `ms`, `s`.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }
     /**
-     * The number of time units. Minimum value of `0`.
+     * @return The number of time units. Minimum value of `0`.
      * 
-    */
+     */
     public Integer value() {
         return this.value;
     }

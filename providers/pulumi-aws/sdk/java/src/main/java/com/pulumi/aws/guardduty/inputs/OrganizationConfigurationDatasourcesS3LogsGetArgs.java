@@ -20,6 +20,10 @@ public final class OrganizationConfigurationDatasourcesS3LogsGetArgs extends com
     @Import(name="autoEnable", required=true)
     private Output<Boolean> autoEnable;
 
+    /**
+     * @return When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+     * 
+     */
     public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
@@ -48,11 +52,23 @@ public final class OrganizationConfigurationDatasourcesS3LogsGetArgs extends com
             $ = new OrganizationConfigurationDatasourcesS3LogsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoEnable When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoEnable(Output<Boolean> autoEnable) {
             $.autoEnable = autoEnable;
             return this;
         }
 
+        /**
+         * @param autoEnable When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoEnable(Boolean autoEnable) {
             return autoEnable(Output.of(autoEnable));
         }

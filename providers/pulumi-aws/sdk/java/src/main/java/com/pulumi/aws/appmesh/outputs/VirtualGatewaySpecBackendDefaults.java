@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualGatewaySpecBackendDefaults {
-    /**
-     * The default client policy for virtual gateway backends.
-     * 
-     */
+        /**
+         * @return The default client policy for virtual gateway backends.
+         * 
+         */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VirtualGatewaySpecBackendDefaults {
     }
 
     /**
-     * The default client policy for virtual gateway backends.
+     * @return The default client policy for virtual gateway backends.
      * 
-    */
+     */
     public Optional<VirtualGatewaySpecBackendDefaultsClientPolicy> clientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }

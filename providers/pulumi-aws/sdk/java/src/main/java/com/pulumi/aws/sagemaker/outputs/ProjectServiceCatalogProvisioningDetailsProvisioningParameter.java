@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProjectServiceCatalogProvisioningDetailsProvisioningParameter {
-    /**
-     * The key that identifies a provisioning parameter.
-     * 
-     */
+        /**
+         * @return The key that identifies a provisioning parameter.
+         * 
+         */
     private final String key;
-    /**
-     * The value of the provisioning parameter.
-     * 
-     */
+        /**
+         * @return The value of the provisioning parameter.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ProjectServiceCatalogProvisioningDetailsProvisioningParameter
     }
 
     /**
-     * The key that identifies a provisioning parameter.
+     * @return The key that identifies a provisioning parameter.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of the provisioning parameter.
+     * @return The value of the provisioning parameter.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

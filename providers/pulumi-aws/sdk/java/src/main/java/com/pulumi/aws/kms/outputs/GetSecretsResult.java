@@ -12,15 +12,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSecretsResult {
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Map containing each `secret` `name` as the key with its decrypted plaintext value
-     * 
-     */
+        /**
+         * @return Map containing each `secret` `name` as the key with its decrypted plaintext value
+         * 
+         */
     private final Map<String,String> plaintext;
     private final List<GetSecretsSecret> secrets;
 
@@ -35,16 +35,16 @@ public final class GetSecretsResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Map containing each `secret` `name` as the key with its decrypted plaintext value
+     * @return Map containing each `secret` `name` as the key with its decrypted plaintext value
      * 
-    */
+     */
     public Map<String,String> plaintext() {
         return this.plaintext;
     }

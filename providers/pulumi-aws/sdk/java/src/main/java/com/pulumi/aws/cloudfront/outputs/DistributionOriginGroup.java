@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionOriginGroup {
-    /**
-     * The failover criteria for when to failover to the secondary origin
-     * 
-     */
+        /**
+         * @return The failover criteria for when to failover to the secondary origin
+         * 
+         */
     private final DistributionOriginGroupFailoverCriteria failoverCriteria;
-    /**
-     * Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
-     * 
-     */
+        /**
+         * @return Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
+         * 
+         */
     private final List<DistributionOriginGroupMember> members;
-    /**
-     * The unique identifier of the member origin
-     * 
-     */
+        /**
+         * @return The unique identifier of the member origin
+         * 
+         */
     private final String originId;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DistributionOriginGroup {
     }
 
     /**
-     * The failover criteria for when to failover to the secondary origin
+     * @return The failover criteria for when to failover to the secondary origin
      * 
-    */
+     */
     public DistributionOriginGroupFailoverCriteria failoverCriteria() {
         return this.failoverCriteria;
     }
     /**
-     * Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
+     * @return Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
      * 
-    */
+     */
     public List<DistributionOriginGroupMember> members() {
         return this.members;
     }
     /**
-     * The unique identifier of the member origin
+     * @return The unique identifier of the member origin
      * 
-    */
+     */
     public String originId() {
         return this.originId;
     }

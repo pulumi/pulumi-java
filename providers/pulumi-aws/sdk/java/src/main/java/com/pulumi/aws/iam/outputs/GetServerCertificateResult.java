@@ -16,10 +16,10 @@ public final class GetServerCertificateResult {
     private final String certificateBody;
     private final String certificateChain;
     private final String expirationDate;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Boolean latest;
     private final String name;
@@ -67,9 +67,9 @@ public final class GetServerCertificateResult {
         return this.expirationDate;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

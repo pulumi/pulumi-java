@@ -20,6 +20,10 @@ public final class QueryLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn", required=true)
     private Output<String> cloudwatchLogGroupArn;
 
+    /**
+     * @return CloudWatch log group ARN to send query logs.
+     * 
+     */
     public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
@@ -31,6 +35,10 @@ public final class QueryLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
     private Output<String> zoneId;
 
+    /**
+     * @return Route53 hosted zone ID to enable query logs.
+     * 
+     */
     public Output<String> zoneId() {
         return this.zoneId;
     }
@@ -60,20 +68,44 @@ public final class QueryLogArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QueryLogArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudwatchLogGroupArn CloudWatch log group ARN to send query logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(Output<String> cloudwatchLogGroupArn) {
             $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
+        /**
+         * @param cloudwatchLogGroupArn CloudWatch log group ARN to send query logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
 
+        /**
+         * @param zoneId Route53 hosted zone ID to enable query logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneId(Output<String> zoneId) {
             $.zoneId = zoneId;
             return this;
         }
 
+        /**
+         * @param zoneId Route53 hosted zone ID to enable query logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneId(String zoneId) {
             return zoneId(Output.of(zoneId));
         }

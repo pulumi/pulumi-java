@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPipelineDefinitionPipelineObjectField {
-    /**
-     * Field identifier.
-     * 
-     */
+        /**
+         * @return Field identifier.
+         * 
+         */
     private final String key;
-    /**
-     * Field value, expressed as the identifier of another object
-     * 
-     */
+        /**
+         * @return Field value, expressed as the identifier of another object
+         * 
+         */
     private final String refValue;
-    /**
-     * Field value, expressed as a String.
-     * 
-     */
+        /**
+         * @return Field value, expressed as a String.
+         * 
+         */
     private final String stringValue;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetPipelineDefinitionPipelineObjectField {
     }
 
     /**
-     * Field identifier.
+     * @return Field identifier.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Field value, expressed as the identifier of another object
+     * @return Field value, expressed as the identifier of another object
      * 
-    */
+     */
     public String refValue() {
         return this.refValue;
     }
     /**
-     * Field value, expressed as a String.
+     * @return Field value, expressed as a String.
      * 
-    */
+     */
     public String stringValue() {
         return this.stringValue;
     }

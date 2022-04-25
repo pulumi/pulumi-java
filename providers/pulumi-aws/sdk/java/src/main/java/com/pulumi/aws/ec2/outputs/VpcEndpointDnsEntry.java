@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpcEndpointDnsEntry {
-    /**
-     * The DNS name.
-     * 
-     */
+        /**
+         * @return The DNS name.
+         * 
+         */
     private final @Nullable String dnsName;
-    /**
-     * The ID of the private hosted zone.
-     * 
-     */
+        /**
+         * @return The ID of the private hosted zone.
+         * 
+         */
     private final @Nullable String hostedZoneId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VpcEndpointDnsEntry {
     }
 
     /**
-     * The DNS name.
+     * @return The DNS name.
      * 
-    */
+     */
     public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
-     * The ID of the private hosted zone.
+     * @return The ID of the private hosted zone.
      * 
-    */
+     */
     public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }

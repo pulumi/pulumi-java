@@ -15,10 +15,10 @@ public final class GetRouteResult {
     private final String destinationPrefixListId;
     private final String egressOnlyGatewayId;
     private final String gatewayId;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instanceId;
     private final String localGatewayId;
@@ -79,9 +79,9 @@ public final class GetRouteResult {
         return this.gatewayId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

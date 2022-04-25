@@ -12,35 +12,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetApiCorsConfiguration {
-    /**
-     * Whether credentials are included in the CORS request.
-     * 
-     */
+        /**
+         * @return Whether credentials are included in the CORS request.
+         * 
+         */
     private final Boolean allowCredentials;
-    /**
-     * The set of allowed HTTP headers.
-     * 
-     */
+        /**
+         * @return The set of allowed HTTP headers.
+         * 
+         */
     private final List<String> allowHeaders;
-    /**
-     * The set of allowed HTTP methods.
-     * 
-     */
+        /**
+         * @return The set of allowed HTTP methods.
+         * 
+         */
     private final List<String> allowMethods;
-    /**
-     * The set of allowed origins.
-     * 
-     */
+        /**
+         * @return The set of allowed origins.
+         * 
+         */
     private final List<String> allowOrigins;
-    /**
-     * The set of exposed HTTP headers.
-     * 
-     */
+        /**
+         * @return The set of exposed HTTP headers.
+         * 
+         */
     private final List<String> exposeHeaders;
-    /**
-     * The number of seconds that the browser should cache preflight request results.
-     * 
-     */
+        /**
+         * @return The number of seconds that the browser should cache preflight request results.
+         * 
+         */
     private final Integer maxAge;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetApiCorsConfiguration {
     }
 
     /**
-     * Whether credentials are included in the CORS request.
+     * @return Whether credentials are included in the CORS request.
      * 
-    */
+     */
     public Boolean allowCredentials() {
         return this.allowCredentials;
     }
     /**
-     * The set of allowed HTTP headers.
+     * @return The set of allowed HTTP headers.
      * 
-    */
+     */
     public List<String> allowHeaders() {
         return this.allowHeaders;
     }
     /**
-     * The set of allowed HTTP methods.
+     * @return The set of allowed HTTP methods.
      * 
-    */
+     */
     public List<String> allowMethods() {
         return this.allowMethods;
     }
     /**
-     * The set of allowed origins.
+     * @return The set of allowed origins.
      * 
-    */
+     */
     public List<String> allowOrigins() {
         return this.allowOrigins;
     }
     /**
-     * The set of exposed HTTP headers.
+     * @return The set of exposed HTTP headers.
      * 
-    */
+     */
     public List<String> exposeHeaders() {
         return this.exposeHeaders;
     }
     /**
-     * The number of seconds that the browser should cache preflight request results.
+     * @return The number of seconds that the browser should cache preflight request results.
      * 
-    */
+     */
     public Integer maxAge() {
         return this.maxAge;
     }

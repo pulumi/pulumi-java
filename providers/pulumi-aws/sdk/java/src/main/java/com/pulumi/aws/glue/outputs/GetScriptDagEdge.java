@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScriptDagEdge {
-    /**
-     * The ID of the node at which the edge starts.
-     * 
-     */
+        /**
+         * @return The ID of the node at which the edge starts.
+         * 
+         */
     private final String source;
-    /**
-     * The ID of the node at which the edge ends.
-     * 
-     */
+        /**
+         * @return The ID of the node at which the edge ends.
+         * 
+         */
     private final String target;
-    /**
-     * The target of the edge.
-     * 
-     */
+        /**
+         * @return The target of the edge.
+         * 
+         */
     private final @Nullable String targetParameter;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetScriptDagEdge {
     }
 
     /**
-     * The ID of the node at which the edge starts.
+     * @return The ID of the node at which the edge starts.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The ID of the node at which the edge ends.
+     * @return The ID of the node at which the edge ends.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * The target of the edge.
+     * @return The target of the edge.
      * 
-    */
+     */
     public Optional<String> targetParameter() {
         return Optional.ofNullable(this.targetParameter);
     }

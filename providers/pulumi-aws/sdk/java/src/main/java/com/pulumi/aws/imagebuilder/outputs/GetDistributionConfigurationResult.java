@@ -13,40 +13,40 @@ import java.util.Objects;
 @CustomType
 public final class GetDistributionConfigurationResult {
     private final String arn;
-    /**
-     * Date the distribution configuration was created.
-     * 
-     */
+        /**
+         * @return Date the distribution configuration was created.
+         * 
+         */
     private final String dateCreated;
-    /**
-     * Date the distribution configuration was updated.
-     * 
-     */
+        /**
+         * @return Date the distribution configuration was updated.
+         * 
+         */
     private final String dateUpdated;
-    /**
-     * Description to apply to distributed AMI.
-     * 
-     */
+        /**
+         * @return Description to apply to distributed AMI.
+         * 
+         */
     private final String description;
-    /**
-     * Set of distributions.
-     * 
-     */
+        /**
+         * @return Set of distributions.
+         * 
+         */
     private final List<GetDistributionConfigurationDistribution> distributions;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Name of the distribution configuration.
-     * 
-     */
+        /**
+         * @return Name of the distribution configuration.
+         * 
+         */
     private final String name;
-    /**
-     * Key-value map of resource tags for the distribution configuration.
-     * 
-     */
+        /**
+         * @return Key-value map of resource tags for the distribution configuration.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -73,51 +73,51 @@ public final class GetDistributionConfigurationResult {
         return this.arn;
     }
     /**
-     * Date the distribution configuration was created.
+     * @return Date the distribution configuration was created.
      * 
-    */
+     */
     public String dateCreated() {
         return this.dateCreated;
     }
     /**
-     * Date the distribution configuration was updated.
+     * @return Date the distribution configuration was updated.
      * 
-    */
+     */
     public String dateUpdated() {
         return this.dateUpdated;
     }
     /**
-     * Description to apply to distributed AMI.
+     * @return Description to apply to distributed AMI.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Set of distributions.
+     * @return Set of distributions.
      * 
-    */
+     */
     public List<GetDistributionConfigurationDistribution> distributions() {
         return this.distributions;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the distribution configuration.
+     * @return Name of the distribution configuration.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Key-value map of resource tags for the distribution configuration.
+     * @return Key-value map of resource tags for the distribution configuration.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

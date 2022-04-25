@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class OrganizationConfigurationDatasourcesS3Logs {
-    /**
-     * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
-     * 
-     */
+        /**
+         * @return When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+         * 
+         */
     private final Boolean autoEnable;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class OrganizationConfigurationDatasourcesS3Logs {
     }
 
     /**
-     * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+     * @return When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
      * 
-    */
+     */
     public Boolean autoEnable() {
         return this.autoEnable;
     }

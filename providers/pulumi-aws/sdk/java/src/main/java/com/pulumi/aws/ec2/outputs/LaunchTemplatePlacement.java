@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchTemplatePlacement {
-    /**
-     * The affinity setting for an instance on a Dedicated Host.
-     * 
-     */
+        /**
+         * @return The affinity setting for an instance on a Dedicated Host.
+         * 
+         */
     private final @Nullable String affinity;
-    /**
-     * The Availability Zone for the instance.
-     * 
-     */
+        /**
+         * @return The Availability Zone for the instance.
+         * 
+         */
     private final @Nullable String availabilityZone;
-    /**
-     * The name of the placement group for the instance.
-     * 
-     */
+        /**
+         * @return The name of the placement group for the instance.
+         * 
+         */
     private final @Nullable String groupName;
-    /**
-     * The ID of the Dedicated Host for the instance.
-     * 
-     */
+        /**
+         * @return The ID of the Dedicated Host for the instance.
+         * 
+         */
     private final @Nullable String hostId;
-    /**
-     * The ARN of the Host Resource Group in which to launch instances.
-     * 
-     */
+        /**
+         * @return The ARN of the Host Resource Group in which to launch instances.
+         * 
+         */
     private final @Nullable String hostResourceGroupArn;
-    /**
-     * The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
-     * 
-     */
+        /**
+         * @return The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+         * 
+         */
     private final @Nullable Integer partitionNumber;
-    /**
-     * Reserved for future use.
-     * 
-     */
+        /**
+         * @return Reserved for future use.
+         * 
+         */
     private final @Nullable String spreadDomain;
-    /**
-     * The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
-     * 
-     */
+        /**
+         * @return The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
+         * 
+         */
     private final @Nullable String tenancy;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class LaunchTemplatePlacement {
     }
 
     /**
-     * The affinity setting for an instance on a Dedicated Host.
+     * @return The affinity setting for an instance on a Dedicated Host.
      * 
-    */
+     */
     public Optional<String> affinity() {
         return Optional.ofNullable(this.affinity);
     }
     /**
-     * The Availability Zone for the instance.
+     * @return The Availability Zone for the instance.
      * 
-    */
+     */
     public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
-     * The name of the placement group for the instance.
+     * @return The name of the placement group for the instance.
      * 
-    */
+     */
     public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
-     * The ID of the Dedicated Host for the instance.
+     * @return The ID of the Dedicated Host for the instance.
      * 
-    */
+     */
     public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
-     * The ARN of the Host Resource Group in which to launch instances.
+     * @return The ARN of the Host Resource Group in which to launch instances.
      * 
-    */
+     */
     public Optional<String> hostResourceGroupArn() {
         return Optional.ofNullable(this.hostResourceGroupArn);
     }
     /**
-     * The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
+     * @return The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
      * 
-    */
+     */
     public Optional<Integer> partitionNumber() {
         return Optional.ofNullable(this.partitionNumber);
     }
     /**
-     * Reserved for future use.
+     * @return Reserved for future use.
      * 
-    */
+     */
     public Optional<String> spreadDomain() {
         return Optional.ofNullable(this.spreadDomain);
     }
     /**
-     * The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
+     * @return The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
      * 
-    */
+     */
     public Optional<String> tenancy() {
         return Optional.ofNullable(this.tenancy);
     }

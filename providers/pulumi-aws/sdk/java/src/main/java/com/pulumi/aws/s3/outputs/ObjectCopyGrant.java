@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectCopyGrant {
-    /**
-     * Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
-     * 
-     */
+        /**
+         * @return Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
-     * 
-     */
+        /**
+         * @return The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
-     * 
-     */
+        /**
+         * @return List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
+         * 
+         */
     private final List<String> permissions;
-    /**
-     * - Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
-     * 
-     */
+        /**
+         * @return - Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
+         * 
+         */
     private final String type;
-    /**
-     * URI of the grantee group. Used only when `type` is `Group`.
-     * 
-     */
+        /**
+         * @return URI of the grantee group. Used only when `type` is `Group`.
+         * 
+         */
     private final @Nullable String uri;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ObjectCopyGrant {
     }
 
     /**
-     * Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
+     * @return Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
+     * @return The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
+     * @return List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
-    */
+     */
     public List<String> permissions() {
         return this.permissions;
     }
     /**
-     * - Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
+     * @return - Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * URI of the grantee group. Used only when `type` is `Group`.
+     * @return URI of the grantee group. Used only when `type` is `Group`.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PresetAudio {
-    /**
-     * The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
-     * 
-     */
+        /**
+         * @return The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
+         * 
+         */
     private final @Nullable String audioPackingMode;
-    /**
-     * The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
-     * 
-     */
+        /**
+         * @return The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
+         * 
+         */
     private final @Nullable String bitRate;
-    /**
-     * The number of audio channels in the output file
-     * 
-     */
+        /**
+         * @return The number of audio channels in the output file
+         * 
+         */
     private final @Nullable String channels;
-    /**
-     * The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
-     * 
-     */
+        /**
+         * @return The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
+         * 
+         */
     private final @Nullable String codec;
-    /**
-     * The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
-     * 
-     */
+        /**
+         * @return The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
+         * 
+         */
     private final @Nullable String sampleRate;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class PresetAudio {
     }
 
     /**
-     * The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
+     * @return The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
      * 
-    */
+     */
     public Optional<String> audioPackingMode() {
         return Optional.ofNullable(this.audioPackingMode);
     }
     /**
-     * The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
+     * @return The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
      * 
-    */
+     */
     public Optional<String> bitRate() {
         return Optional.ofNullable(this.bitRate);
     }
     /**
-     * The number of audio channels in the output file
+     * @return The number of audio channels in the output file
      * 
-    */
+     */
     public Optional<String> channels() {
         return Optional.ofNullable(this.channels);
     }
     /**
-     * The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
+     * @return The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
      * 
-    */
+     */
     public Optional<String> codec() {
         return Optional.ofNullable(this.codec);
     }
     /**
-     * The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
+     * @return The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
      * 
-    */
+     */
     public Optional<String> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }

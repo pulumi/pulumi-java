@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkgroupConfiguration {
-    /**
-     * Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
-     * 
-     */
+        /**
+         * @return Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
+         * 
+         */
     private final @Nullable Integer bytesScannedCutoffPerQuery;
-    /**
-     * Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
-     * 
-     */
+        /**
+         * @return Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
+         * 
+         */
     private final @Nullable Boolean enforceWorkgroupConfiguration;
-    /**
-     * Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
-     * 
-     */
+        /**
+         * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+         * 
+         */
     private final @Nullable WorkgroupConfigurationEngineVersion engineVersion;
-    /**
-     * Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
-     * 
-     */
+        /**
+         * @return Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+         * 
+         */
     private final @Nullable Boolean publishCloudwatchMetricsEnabled;
-    /**
-     * If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
-     * 
-     */
+        /**
+         * @return If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+         * 
+         */
     private final @Nullable Boolean requesterPaysEnabled;
-    /**
-     * Configuration block with result settings. Documented below.
-     * 
-     */
+        /**
+         * @return Configuration block with result settings. Documented below.
+         * 
+         */
     private final @Nullable WorkgroupConfigurationResultConfiguration resultConfiguration;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class WorkgroupConfiguration {
     }
 
     /**
-     * Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
+     * @return Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
      * 
-    */
+     */
     public Optional<Integer> bytesScannedCutoffPerQuery() {
         return Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
     /**
-     * Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
+     * @return Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> enforceWorkgroupConfiguration() {
         return Optional.ofNullable(this.enforceWorkgroupConfiguration);
     }
     /**
-     * Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
      * 
-    */
+     */
     public Optional<WorkgroupConfigurationEngineVersion> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
     /**
-     * Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+     * @return Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> publishCloudwatchMetricsEnabled() {
         return Optional.ofNullable(this.publishCloudwatchMetricsEnabled);
     }
     /**
-     * If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+     * @return If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
      * 
-    */
+     */
     public Optional<Boolean> requesterPaysEnabled() {
         return Optional.ofNullable(this.requesterPaysEnabled);
     }
     /**
-     * Configuration block with result settings. Documented below.
+     * @return Configuration block with result settings. Documented below.
      * 
-    */
+     */
     public Optional<WorkgroupConfigurationResultConfiguration> resultConfiguration() {
         return Optional.ofNullable(this.resultConfiguration);
     }

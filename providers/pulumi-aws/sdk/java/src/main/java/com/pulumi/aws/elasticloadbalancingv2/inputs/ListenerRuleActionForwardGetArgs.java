@@ -24,6 +24,10 @@ public final class ListenerRuleActionForwardGetArgs extends com.pulumi.resources
     @Import(name="stickiness")
     private @Nullable Output<ListenerRuleActionForwardStickinessGetArgs> stickiness;
 
+    /**
+     * @return The target group stickiness for the rule.
+     * 
+     */
     public Optional<Output<ListenerRuleActionForwardStickinessGetArgs>> stickiness() {
         return Optional.ofNullable(this.stickiness);
     }
@@ -35,6 +39,10 @@ public final class ListenerRuleActionForwardGetArgs extends com.pulumi.resources
     @Import(name="targetGroups", required=true)
     private Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> targetGroups;
 
+    /**
+     * @return One or more target groups block.
+     * 
+     */
     public Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> targetGroups() {
         return this.targetGroups;
     }
@@ -64,24 +72,54 @@ public final class ListenerRuleActionForwardGetArgs extends com.pulumi.resources
             $ = new ListenerRuleActionForwardGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param stickiness The target group stickiness for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stickiness(@Nullable Output<ListenerRuleActionForwardStickinessGetArgs> stickiness) {
             $.stickiness = stickiness;
             return this;
         }
 
+        /**
+         * @param stickiness The target group stickiness for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stickiness(ListenerRuleActionForwardStickinessGetArgs stickiness) {
             return stickiness(Output.of(stickiness));
         }
 
+        /**
+         * @param targetGroups One or more target groups block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> targetGroups) {
             $.targetGroups = targetGroups;
             return this;
         }
 
+        /**
+         * @param targetGroups One or more target groups block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(List<ListenerRuleActionForwardTargetGroupGetArgs> targetGroups) {
             return targetGroups(Output.of(targetGroups));
         }
 
+        /**
+         * @param targetGroups One or more target groups block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGroups(ListenerRuleActionForwardTargetGroupGetArgs... targetGroups) {
             return targetGroups(List.of(targetGroups));
         }

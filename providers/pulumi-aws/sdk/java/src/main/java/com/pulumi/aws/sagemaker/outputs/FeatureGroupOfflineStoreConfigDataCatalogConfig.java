@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
-    /**
-     * The name of the Glue table catalog.
-     * 
-     */
+        /**
+         * @return The name of the Glue table catalog.
+         * 
+         */
     private final @Nullable String catalog;
-    /**
-     * The name of the Glue table database.
-     * 
-     */
+        /**
+         * @return The name of the Glue table database.
+         * 
+         */
     private final @Nullable String database;
-    /**
-     * The name of the Glue table.
-     * 
-     */
+        /**
+         * @return The name of the Glue table.
+         * 
+         */
     private final @Nullable String tableName;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
     }
 
     /**
-     * The name of the Glue table catalog.
+     * @return The name of the Glue table catalog.
      * 
-    */
+     */
     public Optional<String> catalog() {
         return Optional.ofNullable(this.catalog);
     }
     /**
-     * The name of the Glue table database.
+     * @return The name of the Glue table database.
      * 
-    */
+     */
     public Optional<String> database() {
         return Optional.ofNullable(this.database);
     }
     /**
-     * The name of the Glue table.
+     * @return The name of the Glue table.
      * 
-    */
+     */
     public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }

@@ -13,21 +13,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrefixListResult {
-    /**
-     * The list of CIDR blocks for the AWS service associated with the prefix list.
-     * 
-     */
+        /**
+         * @return The list of CIDR blocks for the AWS service associated with the prefix list.
+         * 
+         */
     private final List<String> cidrBlocks;
     private final @Nullable List<GetPrefixListFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the selected prefix list.
-     * 
-     */
+        /**
+         * @return The name of the selected prefix list.
+         * 
+         */
     private final String name;
     private final @Nullable String prefixListId;
 
@@ -46,9 +46,9 @@ public final class GetPrefixListResult {
     }
 
     /**
-     * The list of CIDR blocks for the AWS service associated with the prefix list.
+     * @return The list of CIDR blocks for the AWS service associated with the prefix list.
      * 
-    */
+     */
     public List<String> cidrBlocks() {
         return this.cidrBlocks;
     }
@@ -56,16 +56,16 @@ public final class GetPrefixListResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the selected prefix list.
+     * @return The name of the selected prefix list.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

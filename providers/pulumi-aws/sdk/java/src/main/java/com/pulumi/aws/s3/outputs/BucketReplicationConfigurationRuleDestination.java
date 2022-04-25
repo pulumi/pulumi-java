@@ -14,41 +14,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketReplicationConfigurationRuleDestination {
-    /**
-     * Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
-     * 
-     */
+        /**
+         * @return Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
+         * 
+         */
     private final @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation;
-    /**
-     * The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
-     * 
-     */
+        /**
+         * @return The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
+         * 
+         */
     private final @Nullable String accountId;
-    /**
-     * The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
-     * 
-     */
+        /**
+         * @return The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
+         * 
+         */
     private final String bucket;
-    /**
-     * Enables replication metrics (required for S3 RTC) (documented below).
-     * 
-     */
+        /**
+         * @return Enables replication metrics (required for S3 RTC) (documented below).
+         * 
+         */
     private final @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics;
-    /**
-     * Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
-     * `sse_kms_encrypted_objects` source selection criteria.
-     * 
-     */
+        /**
+         * @return Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
+         * `sse_kms_encrypted_objects` source selection criteria.
+         * 
+         */
     private final @Nullable String replicaKmsKeyId;
-    /**
-     * Enables S3 Replication Time Control (S3 RTC) (documented below).
-     * 
-     */
+        /**
+         * @return Enables S3 Replication Time Control (S3 RTC) (documented below).
+         * 
+         */
     private final @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime;
-    /**
-     * The [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Destination.html#AmazonS3-Type-Destination-StorageClass) used to store the object. By default, Amazon S3 uses the storage class of the source object to create the object replica.
-     * 
-     */
+        /**
+         * @return The [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Destination.html#AmazonS3-Type-Destination-StorageClass) used to store the object. By default, Amazon S3 uses the storage class of the source object to create the object replica.
+         * 
+         */
     private final @Nullable String storageClass;
 
     @CustomType.Constructor
@@ -70,52 +70,52 @@ public final class BucketReplicationConfigurationRuleDestination {
     }
 
     /**
-     * Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
+     * @return Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
      * 
-    */
+     */
     public Optional<BucketReplicationConfigurationRuleDestinationAccessControlTranslation> accessControlTranslation() {
         return Optional.ofNullable(this.accessControlTranslation);
     }
     /**
-     * The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
+     * @return The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
      * 
-    */
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
-     * The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
+     * @return The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
      * 
-    */
+     */
     public String bucket() {
         return this.bucket;
     }
     /**
-     * Enables replication metrics (required for S3 RTC) (documented below).
+     * @return Enables replication metrics (required for S3 RTC) (documented below).
      * 
-    */
+     */
     public Optional<BucketReplicationConfigurationRuleDestinationMetrics> metrics() {
         return Optional.ofNullable(this.metrics);
     }
     /**
-     * Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
+     * @return Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
      * `sse_kms_encrypted_objects` source selection criteria.
      * 
-    */
+     */
     public Optional<String> replicaKmsKeyId() {
         return Optional.ofNullable(this.replicaKmsKeyId);
     }
     /**
-     * Enables S3 Replication Time Control (S3 RTC) (documented below).
+     * @return Enables S3 Replication Time Control (S3 RTC) (documented below).
      * 
-    */
+     */
     public Optional<BucketReplicationConfigurationRuleDestinationReplicationTime> replicationTime() {
         return Optional.ofNullable(this.replicationTime);
     }
     /**
-     * The [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Destination.html#AmazonS3-Type-Destination-StorageClass) used to store the object. By default, Amazon S3 uses the storage class of the source object to create the object replica.
+     * @return The [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Destination.html#AmazonS3-Type-Destination-StorageClass) used to store the object. By default, Amazon S3 uses the storage class of the source object to create the object replica.
      * 
-    */
+     */
     public Optional<String> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }

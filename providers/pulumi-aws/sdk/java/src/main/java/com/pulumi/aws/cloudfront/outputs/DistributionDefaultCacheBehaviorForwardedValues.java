@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionDefaultCacheBehaviorForwardedValues {
-    /**
-     * The forwarded values cookies
-     * that specifies how CloudFront handles cookies (maximum one).
-     * 
-     */
+        /**
+         * @return The forwarded values cookies
+         * that specifies how CloudFront handles cookies (maximum one).
+         * 
+         */
     private final DistributionDefaultCacheBehaviorForwardedValuesCookies cookies;
-    /**
-     * Specifies the Headers, if any, that you want
-     * CloudFront to vary upon for this cache behavior. Specify `*` to include all
-     * headers.
-     * 
-     */
+        /**
+         * @return Specifies the Headers, if any, that you want
+         * CloudFront to vary upon for this cache behavior. Specify `*` to include all
+         * headers.
+         * 
+         */
     private final @Nullable List<String> headers;
-    /**
-     * Indicates whether you want CloudFront to forward
-     * query strings to the origin that is associated with this cache behavior.
-     * 
-     */
+        /**
+         * @return Indicates whether you want CloudFront to forward
+         * query strings to the origin that is associated with this cache behavior.
+         * 
+         */
     private final Boolean queryString;
-    /**
-     * When specified, along with a value of
-     * `true` for `query_string`, all query strings are forwarded, however only the
-     * query string keys listed in this argument are cached. When omitted with a
-     * value of `true` for `query_string`, all query string keys are cached.
-     * 
-     */
+        /**
+         * @return When specified, along with a value of
+         * `true` for `query_string`, all query strings are forwarded, however only the
+         * query string keys listed in this argument are cached. When omitted with a
+         * value of `true` for `query_string`, all query string keys are cached.
+         * 
+         */
     private final @Nullable List<String> queryStringCacheKeys;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
     }
 
     /**
-     * The forwarded values cookies
+     * @return The forwarded values cookies
      * that specifies how CloudFront handles cookies (maximum one).
      * 
-    */
+     */
     public DistributionDefaultCacheBehaviorForwardedValuesCookies cookies() {
         return this.cookies;
     }
     /**
-     * Specifies the Headers, if any, that you want
+     * @return Specifies the Headers, if any, that you want
      * CloudFront to vary upon for this cache behavior. Specify `*` to include all
      * headers.
      * 
-    */
+     */
     public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * Indicates whether you want CloudFront to forward
+     * @return Indicates whether you want CloudFront to forward
      * query strings to the origin that is associated with this cache behavior.
      * 
-    */
+     */
     public Boolean queryString() {
         return this.queryString;
     }
     /**
-     * When specified, along with a value of
+     * @return When specified, along with a value of
      * `true` for `query_string`, all query strings are forwarded, however only the
      * query string keys listed in this argument are cached. When omitted with a
      * value of `true` for `query_string`, all query string keys are cached.
      * 
-    */
+     */
     public List<String> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
     }

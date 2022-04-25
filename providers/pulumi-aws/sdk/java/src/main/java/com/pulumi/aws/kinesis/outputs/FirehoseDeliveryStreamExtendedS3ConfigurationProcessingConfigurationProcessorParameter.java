@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter {
-    /**
-     * Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
-     * 
-     */
+        /**
+         * @return Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+         * 
+         */
     private final String parameterName;
-    /**
-     * Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
-     * 
-     */
+        /**
+         * @return Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+         * 
+         */
     private final String parameterValue;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     }
 
     /**
-     * Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
+     * @return Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
      * 
-    */
+     */
     public String parameterName() {
         return this.parameterName;
     }
     /**
-     * Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
+     * @return Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
      * 
-    */
+     */
     public String parameterValue() {
         return this.parameterValue;
     }

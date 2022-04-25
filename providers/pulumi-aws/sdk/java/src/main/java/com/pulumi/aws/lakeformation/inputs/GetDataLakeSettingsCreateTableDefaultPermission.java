@@ -20,6 +20,10 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission extends com.p
     @Import(name="permissions", required=true)
     private List<String> permissions;
 
+    /**
+     * @return List of permissions granted to the principal.
+     * 
+     */
     public List<String> permissions() {
         return this.permissions;
     }
@@ -31,6 +35,10 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission extends com.p
     @Import(name="principal", required=true)
     private String principal;
 
+    /**
+     * @return Principal who is granted permissions.
+     * 
+     */
     public String principal() {
         return this.principal;
     }
@@ -60,15 +68,33 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission extends com.p
             $ = new GetDataLakeSettingsCreateTableDefaultPermission(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions List of permissions granted to the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions List of permissions granted to the principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param principal Principal who is granted permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             $.principal = principal;
             return this;

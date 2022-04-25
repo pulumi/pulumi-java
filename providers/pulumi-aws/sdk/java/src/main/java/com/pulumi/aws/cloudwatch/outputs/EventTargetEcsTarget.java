@@ -17,60 +17,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventTargetEcsTarget {
-    /**
-     * Specifies whether to enable Amazon ECS managed tags for the task.
-     * 
-     */
+        /**
+         * @return Specifies whether to enable Amazon ECS managed tags for the task.
+         * 
+         */
     private final @Nullable Boolean enableEcsManagedTags;
-    /**
-     * Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
-     * 
-     */
+        /**
+         * @return Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
+         * 
+         */
     private final @Nullable Boolean enableExecuteCommand;
-    /**
-     * Specifies an ECS task group for the task. The maximum length is 255 characters.
-     * 
-     */
+        /**
+         * @return Specifies an ECS task group for the task. The maximum length is 255 characters.
+         * 
+         */
     private final @Nullable String group;
-    /**
-     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
-     * 
-     */
+        /**
+         * @return Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
+         * 
+         */
     private final @Nullable String launchType;
-    /**
-     * Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
-     * 
-     */
+        /**
+         * @return Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
+         * 
+         */
     private final @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration;
-    /**
-     * An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
-     * 
-     */
+        /**
+         * @return An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+         * 
+         */
     private final @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints;
-    /**
-     * Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
-     * 
-     */
+        /**
+         * @return Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+         * 
+         */
     private final @Nullable String platformVersion;
-    /**
-     * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
-     * 
-     */
+        /**
+         * @return Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+         * 
+         */
     private final @Nullable String propagateTags;
-    /**
-     * A map of tags to assign to ecs resources.
-     * 
-     */
+        /**
+         * @return A map of tags to assign to ecs resources.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The number of tasks to create based on the TaskDefinition. The default is 1.
-     * 
-     */
+        /**
+         * @return The number of tasks to create based on the TaskDefinition. The default is 1.
+         * 
+         */
     private final @Nullable Integer taskCount;
-    /**
-     * The ARN of the task definition to use if the event target is an Amazon ECS cluster.
-     * 
-     */
+        /**
+         * @return The ARN of the task definition to use if the event target is an Amazon ECS cluster.
+         * 
+         */
     private final String taskDefinitionArn;
 
     @CustomType.Constructor
@@ -100,79 +100,79 @@ public final class EventTargetEcsTarget {
     }
 
     /**
-     * Specifies whether to enable Amazon ECS managed tags for the task.
+     * @return Specifies whether to enable Amazon ECS managed tags for the task.
      * 
-    */
+     */
     public Optional<Boolean> enableEcsManagedTags() {
         return Optional.ofNullable(this.enableEcsManagedTags);
     }
     /**
-     * Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
+     * @return Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
      * 
-    */
+     */
     public Optional<Boolean> enableExecuteCommand() {
         return Optional.ofNullable(this.enableExecuteCommand);
     }
     /**
-     * Specifies an ECS task group for the task. The maximum length is 255 characters.
+     * @return Specifies an ECS task group for the task. The maximum length is 255 characters.
      * 
-    */
+     */
     public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
-     * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
+     * @return Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `&#34;&#34;` (to specify no launch type), `EC2`, or `FARGATE`.
      * 
-    */
+     */
     public Optional<String> launchType() {
         return Optional.ofNullable(this.launchType);
     }
     /**
-     * Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
+     * @return Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
      * 
-    */
+     */
     public Optional<EventTargetEcsTargetNetworkConfiguration> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
     /**
-     * An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+     * @return An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
      * 
-    */
+     */
     public List<EventTargetEcsTargetPlacementConstraint> placementConstraints() {
         return this.placementConstraints == null ? List.of() : this.placementConstraints;
     }
     /**
-     * Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+     * @return Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
      * 
-    */
+     */
     public Optional<String> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
     /**
-     * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+     * @return Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
      * 
-    */
+     */
     public Optional<String> propagateTags() {
         return Optional.ofNullable(this.propagateTags);
     }
     /**
-     * A map of tags to assign to ecs resources.
+     * @return A map of tags to assign to ecs resources.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The number of tasks to create based on the TaskDefinition. The default is 1.
+     * @return The number of tasks to create based on the TaskDefinition. The default is 1.
      * 
-    */
+     */
     public Optional<Integer> taskCount() {
         return Optional.ofNullable(this.taskCount);
     }
     /**
-     * The ARN of the task definition to use if the event target is an Amazon ECS cluster.
+     * @return The ARN of the task definition to use if the event target is an Amazon ECS cluster.
      * 
-    */
+     */
     public String taskDefinitionArn() {
         return this.taskDefinitionArn;
     }

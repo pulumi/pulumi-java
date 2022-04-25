@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StackStorageConnector {
-    /**
-     * Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
-     * 
-     */
+        /**
+         * @return Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
+         * 
+         */
     private final String connectorType;
-    /**
-     * Names of the domains for the account.
-     * 
-     */
+        /**
+         * @return Names of the domains for the account.
+         * 
+         */
     private final @Nullable List<String> domains;
-    /**
-     * ARN of the storage connector.
-     * 
-     */
+        /**
+         * @return ARN of the storage connector.
+         * 
+         */
     private final @Nullable String resourceIdentifier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class StackStorageConnector {
     }
 
     /**
-     * Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
+     * @return Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
      * 
-    */
+     */
     public String connectorType() {
         return this.connectorType;
     }
     /**
-     * Names of the domains for the account.
+     * @return Names of the domains for the account.
      * 
-    */
+     */
     public List<String> domains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
-     * ARN of the storage connector.
+     * @return ARN of the storage connector.
      * 
-    */
+     */
     public Optional<String> resourceIdentifier() {
         return Optional.ofNullable(this.resourceIdentifier);
     }

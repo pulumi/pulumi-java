@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy {
-    /**
-     * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
-     * 
-     */
+        /**
+         * @return The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
+         * 
+         */
     private final String contentSecurityPolicy;
-    /**
-     * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
-     * 
-     */
+        /**
+         * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+         * 
+         */
     private final Boolean override;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentSecurityP
     }
 
     /**
-     * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
+     * @return The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
      * 
-    */
+     */
     public String contentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
     /**
-     * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
+     * @return A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
-    */
+     */
     public Boolean override() {
         return this.override;
     }

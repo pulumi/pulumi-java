@@ -29,6 +29,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
     private @Nullable Output<String> roleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+     * 
+     */
     public Optional<Output<String>> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
@@ -40,6 +44,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
     private @Nullable Output<String> schema;
 
+    /**
+     * @return JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
+     * 
+     */
     public Optional<Output<String>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -51,6 +59,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeName", required=true)
     private Output<String> typeName;
 
+    /**
+     * @return CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+     * 
+     */
     public Output<String> typeName() {
         return this.typeName;
     }
@@ -62,6 +74,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeVersionId")
     private @Nullable Output<String> typeVersionId;
 
+    /**
+     * @return Identifier of the CloudFormation resource type version.
+     * 
+     */
     public Optional<Output<String>> typeVersionId() {
         return Optional.ofNullable(this.typeVersionId);
     }
@@ -103,38 +119,86 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             return desiredState(Output.of(desiredState));
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(@Nullable Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Amazon Resource Name (ARN) of the IAM Role to assume for operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param schema JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<String> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(String schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param typeName CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName CloudFormation resource type name. For example, `AWS::EC2::VPC`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }
 
+        /**
+         * @param typeVersionId Identifier of the CloudFormation resource type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
             $.typeVersionId = typeVersionId;
             return this;
         }
 
+        /**
+         * @param typeVersionId Identifier of the CloudFormation resource type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeVersionId(String typeVersionId) {
             return typeVersionId(Output.of(typeVersionId));
         }

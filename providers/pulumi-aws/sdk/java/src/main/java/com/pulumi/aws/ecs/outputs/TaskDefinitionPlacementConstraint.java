@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskDefinitionPlacementConstraint {
-    /**
-     * Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
-     * 
-     */
+        /**
+         * @return Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+         * 
+         */
     private final @Nullable String expression;
-    /**
-     * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
-     * 
-     */
+        /**
+         * @return Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TaskDefinitionPlacementConstraint {
     }
 
     /**
-     * Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+     * @return Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
      * 
-    */
+     */
     public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
     /**
-     * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
+     * @return Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

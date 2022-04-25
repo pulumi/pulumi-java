@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSnapshotIdsResult {
     private final @Nullable List<GetSnapshotIdsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of EBS snapshot IDs, sorted by creation time in descending order.
-     * 
-     */
+        /**
+         * @return Set of EBS snapshot IDs, sorted by creation time in descending order.
+         * 
+         */
     private final List<String> ids;
     private final @Nullable List<String> owners;
     private final @Nullable List<String> restorableByUserIds;
@@ -44,16 +44,16 @@ public final class GetSnapshotIdsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of EBS snapshot IDs, sorted by creation time in descending order.
+     * @return Set of EBS snapshot IDs, sorted by creation time in descending order.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

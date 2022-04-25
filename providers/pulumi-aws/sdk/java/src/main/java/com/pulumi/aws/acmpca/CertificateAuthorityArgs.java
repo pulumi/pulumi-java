@@ -27,6 +27,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="certificateAuthorityConfiguration", required=true)
     private Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
+    /**
+     * @return Nested argument containing algorithms and certificate subject information. Defined below.
+     * 
+     */
     public Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration;
     }
@@ -38,6 +42,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -49,6 +57,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="permanentDeletionTimeInDays")
     private @Nullable Output<Integer> permanentDeletionTimeInDays;
 
+    /**
+     * @return The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+     * 
+     */
     public Optional<Output<Integer>> permanentDeletionTimeInDays() {
         return Optional.ofNullable(this.permanentDeletionTimeInDays);
     }
@@ -60,6 +72,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="revocationConfiguration")
     private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
+    /**
+     * @return Nested argument containing revocation configuration. Defined below.
+     * 
+     */
     public Optional<Output<CertificateAuthorityRevocationConfigurationArgs>> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
@@ -71,6 +87,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -82,6 +102,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -115,56 +139,128 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
             $ = new CertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityConfiguration Nested argument containing algorithms and certificate subject information. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityConfiguration(Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration) {
             $.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
 
+        /**
+         * @param certificateAuthorityConfiguration Nested argument containing algorithms and certificate subject information. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationArgs certificateAuthorityConfiguration) {
             return certificateAuthorityConfiguration(Output.of(certificateAuthorityConfiguration));
         }
 
+        /**
+         * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param permanentDeletionTimeInDays The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
             $.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
 
+        /**
+         * @param permanentDeletionTimeInDays The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permanentDeletionTimeInDays(Integer permanentDeletionTimeInDays) {
             return permanentDeletionTimeInDays(Output.of(permanentDeletionTimeInDays));
         }
 
+        /**
+         * @param revocationConfiguration Nested argument containing revocation configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             $.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
+        /**
+         * @param revocationConfiguration Nested argument containing revocation configuration. Defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             return revocationConfiguration(Output.of(revocationConfiguration));
         }
 
+        /**
+         * @param tags Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param type The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -24,6 +24,10 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="filters")
     private @Nullable List<GetInternetGatewayFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetInternetGatewayFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -35,6 +39,10 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="internetGatewayId")
     private @Nullable String internetGatewayId;
 
+    /**
+     * @return The id of the specific Internet Gateway to retrieve.
+     * 
+     */
     public Optional<String> internetGatewayId() {
         return Optional.ofNullable(this.internetGatewayId);
     }
@@ -47,6 +55,11 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired Internet Gateway.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -77,20 +90,45 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
             $ = new GetInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetInternetGatewayFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param internetGatewayId The id of the specific Internet Gateway to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internetGatewayId(@Nullable String internetGatewayId) {
             $.internetGatewayId = internetGatewayId;
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired Internet Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

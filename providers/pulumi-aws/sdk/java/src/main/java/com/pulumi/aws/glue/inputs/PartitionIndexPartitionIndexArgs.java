@@ -23,6 +23,10 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
     @Import(name="indexName")
     private @Nullable Output<String> indexName;
 
+    /**
+     * @return Name of the partition index.
+     * 
+     */
     public Optional<Output<String>> indexName() {
         return Optional.ofNullable(this.indexName);
     }
@@ -41,6 +45,10 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
     @Import(name="keys")
     private @Nullable Output<List<String>> keys;
 
+    /**
+     * @return Keys for the partition index.
+     * 
+     */
     public Optional<Output<List<String>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -71,11 +79,23 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
             $ = new PartitionIndexPartitionIndexArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param indexName Name of the partition index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexName(@Nullable Output<String> indexName) {
             $.indexName = indexName;
             return this;
         }
 
+        /**
+         * @param indexName Name of the partition index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexName(String indexName) {
             return indexName(Output.of(indexName));
         }
@@ -89,15 +109,33 @@ public final class PartitionIndexPartitionIndexArgs extends com.pulumi.resources
             return indexStatus(Output.of(indexStatus));
         }
 
+        /**
+         * @param keys Keys for the partition index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<String>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys Keys for the partition index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<String> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys Keys for the partition index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(String... keys) {
             return keys(List.of(keys));
         }

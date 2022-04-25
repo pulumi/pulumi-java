@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ImageRecipeComponent {
-    /**
-     * Amazon Resource Name (ARN) of the Image Builder Component to associate.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the Image Builder Component to associate.
+         * 
+         */
     private final String componentArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ImageRecipeComponent {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the Image Builder Component to associate.
+     * @return Amazon Resource Name (ARN) of the Image Builder Component to associate.
      * 
-    */
+     */
     public String componentArn() {
         return this.componentArn;
     }

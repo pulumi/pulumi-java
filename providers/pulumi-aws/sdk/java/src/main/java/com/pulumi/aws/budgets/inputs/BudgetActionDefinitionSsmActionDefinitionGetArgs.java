@@ -21,6 +21,10 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends com.
     @Import(name="actionSubType", required=true)
     private Output<String> actionSubType;
 
+    /**
+     * @return The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
+     * 
+     */
     public Output<String> actionSubType() {
         return this.actionSubType;
     }
@@ -32,6 +36,10 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends com.
     @Import(name="instanceIds", required=true)
     private Output<List<String>> instanceIds;
 
+    /**
+     * @return The EC2 and RDS instance IDs.
+     * 
+     */
     public Output<List<String>> instanceIds() {
         return this.instanceIds;
     }
@@ -43,6 +51,10 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends com.
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return The Region to run the SSM document.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -73,33 +85,75 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends com.
             $ = new BudgetActionDefinitionSsmActionDefinitionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionSubType The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionSubType(Output<String> actionSubType) {
             $.actionSubType = actionSubType;
             return this;
         }
 
+        /**
+         * @param actionSubType The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionSubType(String actionSubType) {
             return actionSubType(Output.of(actionSubType));
         }
 
+        /**
+         * @param instanceIds The EC2 and RDS instance IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceIds(Output<List<String>> instanceIds) {
             $.instanceIds = instanceIds;
             return this;
         }
 
+        /**
+         * @param instanceIds The EC2 and RDS instance IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceIds(List<String> instanceIds) {
             return instanceIds(Output.of(instanceIds));
         }
 
+        /**
+         * @param instanceIds The EC2 and RDS instance IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceIds(String... instanceIds) {
             return instanceIds(List.of(instanceIds));
         }
 
+        /**
+         * @param region The Region to run the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The Region to run the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

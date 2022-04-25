@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters {
-    /**
-     * Provides additional mapping information when the record format uses delimiters (for example, CSV).
-     * 
-     */
+        /**
+         * @return Provides additional mapping information when the record format uses delimiters (for example, CSV).
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters csvMappingParameters;
-    /**
-     * Provides additional mapping information when JSON is the record format on the streaming source.
-     * 
-     */
+        /**
+         * @return Provides additional mapping information when JSON is the record format on the streaming source.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters jsonMappingParameters;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * Provides additional mapping information when the record format uses delimiters (for example, CSV).
+     * @return Provides additional mapping information when the record format uses delimiters (for example, CSV).
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters> csvMappingParameters() {
         return Optional.ofNullable(this.csvMappingParameters);
     }
     /**
-     * Provides additional mapping information when JSON is the record format on the streaming source.
+     * @return Provides additional mapping information when JSON is the record format on the streaming source.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters> jsonMappingParameters() {
         return Optional.ofNullable(this.jsonMappingParameters);
     }

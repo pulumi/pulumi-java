@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CanaryTimeline {
-    /**
-     * Date and time the canary was created.
-     * 
-     */
+        /**
+         * @return Date and time the canary was created.
+         * 
+         */
     private final @Nullable String created;
-    /**
-     * Date and time the canary was most recently modified.
-     * 
-     */
+        /**
+         * @return Date and time the canary was most recently modified.
+         * 
+         */
     private final @Nullable String lastModified;
-    /**
-     * Date and time that the canary&#39;s most recent run started.
-     * 
-     */
+        /**
+         * @return Date and time that the canary&#39;s most recent run started.
+         * 
+         */
     private final @Nullable String lastStarted;
-    /**
-     * Date and time that the canary&#39;s most recent run ended.
-     * 
-     */
+        /**
+         * @return Date and time that the canary&#39;s most recent run ended.
+         * 
+         */
     private final @Nullable String lastStopped;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class CanaryTimeline {
     }
 
     /**
-     * Date and time the canary was created.
+     * @return Date and time the canary was created.
      * 
-    */
+     */
     public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
-     * Date and time the canary was most recently modified.
+     * @return Date and time the canary was most recently modified.
      * 
-    */
+     */
     public Optional<String> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
     /**
-     * Date and time that the canary&#39;s most recent run started.
+     * @return Date and time that the canary&#39;s most recent run started.
      * 
-    */
+     */
     public Optional<String> lastStarted() {
         return Optional.ofNullable(this.lastStarted);
     }
     /**
-     * Date and time that the canary&#39;s most recent run ended.
+     * @return Date and time that the canary&#39;s most recent run ended.
      * 
-    */
+     */
     public Optional<String> lastStopped() {
         return Optional.ofNullable(this.lastStopped);
     }

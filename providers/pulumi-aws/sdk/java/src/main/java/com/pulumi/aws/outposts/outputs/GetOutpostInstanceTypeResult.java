@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOutpostInstanceTypeResult {
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instanceType;
     private final @Nullable List<String> preferredInstanceTypes;
@@ -36,9 +36,9 @@ public final class GetOutpostInstanceTypeResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

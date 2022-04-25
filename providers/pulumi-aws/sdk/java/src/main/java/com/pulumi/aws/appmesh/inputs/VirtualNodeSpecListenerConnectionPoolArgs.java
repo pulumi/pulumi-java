@@ -25,6 +25,10 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends com.pulumi.
     @Import(name="grpc")
     private @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc;
 
+    /**
+     * @return Connection pool information for gRPC listeners.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs>> grpc() {
         return Optional.ofNullable(this.grpc);
     }
@@ -36,6 +40,10 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends com.pulumi.
     @Import(name="http")
     private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> http;
 
+    /**
+     * @return Connection pool information for HTTP listeners.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerConnectionPoolHttpArgs>> http() {
         return Optional.ofNullable(this.http);
     }
@@ -47,6 +55,10 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends com.pulumi.
     @Import(name="http2")
     private @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2;
 
+    /**
+     * @return Connection pool information for HTTP2 listeners.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerConnectionPoolHttp2Args>> http2() {
         return Optional.ofNullable(this.http2);
     }
@@ -58,6 +70,10 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends com.pulumi.
     @Import(name="tcp")
     private @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp;
 
+    /**
+     * @return Connection pool information for TCP listeners.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerConnectionPoolTcpArgs>> tcp() {
         return Optional.ofNullable(this.tcp);
     }
@@ -89,38 +105,86 @@ public final class VirtualNodeSpecListenerConnectionPoolArgs extends com.pulumi.
             $ = new VirtualNodeSpecListenerConnectionPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param grpc Connection pool information for gRPC listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpc(@Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcArgs> grpc) {
             $.grpc = grpc;
             return this;
         }
 
+        /**
+         * @param grpc Connection pool information for gRPC listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grpc(VirtualNodeSpecListenerConnectionPoolGrpcArgs grpc) {
             return grpc(Output.of(grpc));
         }
 
+        /**
+         * @param http Connection pool information for HTTP listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpArgs> http) {
             $.http = http;
             return this;
         }
 
+        /**
+         * @param http Connection pool information for HTTP listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http(VirtualNodeSpecListenerConnectionPoolHttpArgs http) {
             return http(Output.of(http));
         }
 
+        /**
+         * @param http2 Connection pool information for HTTP2 listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2(@Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2Args> http2) {
             $.http2 = http2;
             return this;
         }
 
+        /**
+         * @param http2 Connection pool information for HTTP2 listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder http2(VirtualNodeSpecListenerConnectionPoolHttp2Args http2) {
             return http2(Output.of(http2));
         }
 
+        /**
+         * @param tcp Connection pool information for TCP listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcp(@Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpArgs> tcp) {
             $.tcp = tcp;
             return this;
         }
 
+        /**
+         * @param tcp Connection pool information for TCP listeners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcp(VirtualNodeSpecListenerConnectionPoolTcpArgs tcp) {
             return tcp(Output.of(tcp));
         }

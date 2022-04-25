@@ -21,6 +21,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="attachedEniId", required=true)
     private String attachedEniId;
 
+    /**
+     * @return The attached elastic network interface of the broker
+     * 
+     */
     public String attachedEniId() {
         return this.attachedEniId;
     }
@@ -32,6 +36,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="brokerId", required=true)
     private Double brokerId;
 
+    /**
+     * @return The ID of the broker
+     * 
+     */
     public Double brokerId() {
         return this.brokerId;
     }
@@ -43,6 +51,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="clientSubnet", required=true)
     private String clientSubnet;
 
+    /**
+     * @return The client subnet to which this broker node belongs
+     * 
+     */
     public String clientSubnet() {
         return this.clientSubnet;
     }
@@ -54,6 +66,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="clientVpcIpAddress", required=true)
     private String clientVpcIpAddress;
 
+    /**
+     * @return The client virtual private cloud (VPC) IP address
+     * 
+     */
     public String clientVpcIpAddress() {
         return this.clientVpcIpAddress;
     }
@@ -65,6 +81,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="endpoints", required=true)
     private List<String> endpoints;
 
+    /**
+     * @return Set of endpoints for accessing the broker. This does not include ports
+     * 
+     */
     public List<String> endpoints() {
         return this.endpoints;
     }
@@ -76,6 +96,10 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
     @Import(name="nodeArn", required=true)
     private String nodeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the node
+     * 
+     */
     public String nodeArn() {
         return this.nodeArn;
     }
@@ -109,35 +133,77 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
             $ = new GetBrokerNodesNodeInfoList(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedEniId The attached elastic network interface of the broker
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedEniId(String attachedEniId) {
             $.attachedEniId = attachedEniId;
             return this;
         }
 
+        /**
+         * @param brokerId The ID of the broker
+         * 
+         * @return builder
+         * 
+         */
         public Builder brokerId(Double brokerId) {
             $.brokerId = brokerId;
             return this;
         }
 
+        /**
+         * @param clientSubnet The client subnet to which this broker node belongs
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSubnet(String clientSubnet) {
             $.clientSubnet = clientSubnet;
             return this;
         }
 
+        /**
+         * @param clientVpcIpAddress The client virtual private cloud (VPC) IP address
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientVpcIpAddress(String clientVpcIpAddress) {
             $.clientVpcIpAddress = clientVpcIpAddress;
             return this;
         }
 
+        /**
+         * @param endpoints Set of endpoints for accessing the broker. This does not include ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<String> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints Set of endpoints for accessing the broker. This does not include ports
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param nodeArn The Amazon Resource Name (ARN) of the node
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeArn(String nodeArn) {
             $.nodeArn = nodeArn;
             return this;

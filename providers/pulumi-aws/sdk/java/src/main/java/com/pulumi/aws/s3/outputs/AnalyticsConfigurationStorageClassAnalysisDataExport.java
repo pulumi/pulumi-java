@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
-    /**
-     * Specifies the destination for the exported analytics data (documented below).
-     * 
-     */
+        /**
+         * @return Specifies the destination for the exported analytics data (documented below).
+         * 
+         */
     private final AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination;
-    /**
-     * The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
-     * 
-     */
+        /**
+         * @return The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
+         * 
+         */
     private final @Nullable String outputSchemaVersion;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
     }
 
     /**
-     * Specifies the destination for the exported analytics data (documented below).
+     * @return Specifies the destination for the exported analytics data (documented below).
      * 
-    */
+     */
     public AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination() {
         return this.destination;
     }
     /**
-     * The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
+     * @return The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
      * 
-    */
+     */
     public Optional<String> outputSchemaVersion() {
         return Optional.ofNullable(this.outputSchemaVersion);
     }

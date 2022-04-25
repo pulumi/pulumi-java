@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EventSourceMappingSelfManagedEventSource {
-    /**
-     * A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
-     * 
-     */
+        /**
+         * @return A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+         * 
+         */
     private final Map<String,String> endpoints;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class EventSourceMappingSelfManagedEventSource {
     }
 
     /**
-     * A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
+     * @return A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
      * 
-    */
+     */
     public Map<String,String> endpoints() {
         return this.endpoints;
     }

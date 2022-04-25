@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
-    /**
-     * Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
-     * See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
-     * 
-     */
+        /**
+         * @return Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
+         * See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
+         * 
+         */
     private final String keyword;
-    /**
-     * Set of strings for additional settings to use in stateful rule inspection.
-     * 
-     */
+        /**
+         * @return Set of strings for additional settings to use in stateful rule inspection.
+         * 
+         */
     private final @Nullable List<String> settings;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
     }
 
     /**
-     * Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
+     * @return Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
      * See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
      * 
-    */
+     */
     public String keyword() {
         return this.keyword;
     }
     /**
-     * Set of strings for additional settings to use in stateful rule inspection.
+     * @return Set of strings for additional settings to use in stateful rule inspection.
      * 
-    */
+     */
     public List<String> settings() {
         return this.settings == null ? List.of() : this.settings;
     }

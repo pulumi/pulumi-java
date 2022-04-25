@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDistributionConfigurationsResult {
-    /**
-     * Set of ARNs of the matched Image Builder Distribution Configurations.
-     * 
-     */
+        /**
+         * @return Set of ARNs of the matched Image Builder Distribution Configurations.
+         * 
+         */
     private final List<String> arns;
     private final @Nullable List<GetDistributionConfigurationsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of names of the matched Image Builder Distribution Configurations.
-     * 
-     */
+        /**
+         * @return Set of names of the matched Image Builder Distribution Configurations.
+         * 
+         */
     private final List<String> names;
 
     @CustomType.Constructor
@@ -42,9 +42,9 @@ public final class GetDistributionConfigurationsResult {
     }
 
     /**
-     * Set of ARNs of the matched Image Builder Distribution Configurations.
+     * @return Set of ARNs of the matched Image Builder Distribution Configurations.
      * 
-    */
+     */
     public List<String> arns() {
         return this.arns;
     }
@@ -52,16 +52,16 @@ public final class GetDistributionConfigurationsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of names of the matched Image Builder Distribution Configurations.
+     * @return Set of names of the matched Image Builder Distribution Configurations.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterAutoTerminationPolicy {
-    /**
-     * Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
-     * 
-     */
+        /**
+         * @return Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
+         * 
+         */
     private final @Nullable Integer idleTimeout;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ClusterAutoTerminationPolicy {
     }
 
     /**
-     * Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
+     * @return Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
      * 
-    */
+     */
     public Optional<Integer> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
-    /**
-     * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
-     * 
-     */
+        /**
+         * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+         * 
+         */
     private final Integer interval;
-    /**
-     * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
-     * 
-     */
+        /**
+         * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+         * 
+         */
     private final @Nullable String intervalUnit;
-    /**
-     * A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
-     * 
-     */
+        /**
+         * @return A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
+         * 
+         */
     private final @Nullable String times;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     }
 
     /**
-     * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+     * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
-    */
+     */
     public Integer interval() {
         return this.interval;
     }
     /**
-     * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+     * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
      * 
-    */
+     */
     public Optional<String> intervalUnit() {
         return Optional.ofNullable(this.intervalUnit);
     }
     /**
-     * A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
+     * @return A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
      * 
-    */
+     */
     public Optional<String> times() {
         return Optional.ofNullable(this.times);
     }

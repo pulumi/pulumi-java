@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerSubnetMapping {
-    /**
-     * The allocation ID of the Elastic IP address.
-     * 
-     */
+        /**
+         * @return The allocation ID of the Elastic IP address.
+         * 
+         */
     private final @Nullable String allocationId;
-    /**
-     * An ipv6 address within the subnet to assign to the internet-facing load balancer.
-     * 
-     */
+        /**
+         * @return An ipv6 address within the subnet to assign to the internet-facing load balancer.
+         * 
+         */
     private final @Nullable String ipv6Address;
     private final @Nullable String outpostId;
-    /**
-     * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
-     * 
-     */
+        /**
+         * @return A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+         * 
+         */
     private final @Nullable String privateIpv4Address;
-    /**
-     * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
-     * 
-     */
+        /**
+         * @return The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
+         * 
+         */
     private final String subnetId;
 
     @CustomType.Constructor
@@ -48,16 +48,16 @@ public final class LoadBalancerSubnetMapping {
     }
 
     /**
-     * The allocation ID of the Elastic IP address.
+     * @return The allocation ID of the Elastic IP address.
      * 
-    */
+     */
     public Optional<String> allocationId() {
         return Optional.ofNullable(this.allocationId);
     }
     /**
-     * An ipv6 address within the subnet to assign to the internet-facing load balancer.
+     * @return An ipv6 address within the subnet to assign to the internet-facing load balancer.
      * 
-    */
+     */
     public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
@@ -65,16 +65,16 @@ public final class LoadBalancerSubnetMapping {
         return Optional.ofNullable(this.outpostId);
     }
     /**
-     * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+     * @return A private ipv4 address within the subnet to assign to the internal-facing load balancer.
      * 
-    */
+     */
     public Optional<String> privateIpv4Address() {
         return Optional.ofNullable(this.privateIpv4Address);
     }
     /**
-     * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
+     * @return The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RecordAlias {
-    /**
-     * Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
-     * 
-     */
+        /**
+         * @return Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
+         * 
+         */
     private final Boolean evaluateTargetHealth;
-    /**
-     * DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-     * 
-     */
+        /**
+         * @return DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
+         * 
+         */
     private final String name;
-    /**
-     * Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-     * 
-     */
+        /**
+         * @return Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
+         * 
+         */
     private final String zoneId;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class RecordAlias {
     }
 
     /**
-     * Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
+     * @return Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
      * 
-    */
+     */
     public Boolean evaluateTargetHealth() {
         return this.evaluateTargetHealth;
     }
     /**
-     * DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
+     * @return DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
+     * @return Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
      * 
-    */
+     */
     public String zoneId() {
         return this.zoneId;
     }

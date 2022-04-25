@@ -16,10 +16,10 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
     private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters;
     private final String id;
     private final String localGatewayId;
-    /**
-     * Set of EC2 Local Gateway Virtual Interface identifiers.
-     * 
-     */
+        /**
+         * @return Set of EC2 Local Gateway Virtual Interface identifiers.
+         * 
+         */
     private final List<String> localGatewayVirtualInterfaceIds;
     private final Map<String,String> tags;
 
@@ -47,9 +47,9 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
         return this.localGatewayId;
     }
     /**
-     * Set of EC2 Local Gateway Virtual Interface identifiers.
+     * @return Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
-    */
+     */
     public List<String> localGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }

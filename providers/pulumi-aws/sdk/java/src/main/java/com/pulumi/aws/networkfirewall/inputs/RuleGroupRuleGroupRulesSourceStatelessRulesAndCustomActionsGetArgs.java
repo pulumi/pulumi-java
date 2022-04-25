@@ -24,6 +24,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
     @Import(name="customActions")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
 
+    /**
+     * @return Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>>> customActions() {
         return Optional.ofNullable(this.customActions);
     }
@@ -35,6 +39,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
     @Import(name="statelessRules", required=true)
     private Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules;
 
+    /**
+     * @return Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
+     * 
+     */
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules() {
         return this.statelessRules;
     }
@@ -64,28 +72,64 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
             $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customActions Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customActions(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions) {
             $.customActions = customActions;
             return this;
         }
 
+        /**
+         * @param customActions Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customActions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
             return customActions(Output.of(customActions));
         }
 
+        /**
+         * @param customActions Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs... customActions) {
             return customActions(List.of(customActions));
         }
 
+        /**
+         * @param statelessRules Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statelessRules(Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules) {
             $.statelessRules = statelessRules;
             return this;
         }
 
+        /**
+         * @param statelessRules Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs> statelessRules) {
             return statelessRules(Output.of(statelessRules));
         }
 
+        /**
+         * @param statelessRules Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statelessRules(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs... statelessRules) {
             return statelessRules(List.of(statelessRules));
         }

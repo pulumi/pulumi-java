@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RouteSpecGrpcRouteActionWeightedTarget {
-    /**
-     * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String virtualNode;
-    /**
-     * The relative weight of the weighted target. An integer between 0 and 100.
-     * 
-     */
+        /**
+         * @return The relative weight of the weighted target. An integer between 0 and 100.
+         * 
+         */
     private final Integer weight;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class RouteSpecGrpcRouteActionWeightedTarget {
     }
 
     /**
-     * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+     * @return The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String virtualNode() {
         return this.virtualNode;
     }
     /**
-     * The relative weight of the weighted target. An integer between 0 and 100.
+     * @return The relative weight of the weighted target. An integer between 0 and 100.
      * 
-    */
+     */
     public Integer weight() {
         return this.weight;
     }

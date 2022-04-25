@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserPoolEmailConfiguration {
-    /**
-     * Email configuration set name from SES.
-     * 
-     */
+        /**
+         * @return Email configuration set name from SES.
+         * 
+         */
     private final @Nullable String configurationSet;
-    /**
-     * Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
-     * 
-     */
+        /**
+         * @return Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
+         * 
+         */
     private final @Nullable String emailSendingAccount;
-    /**
-     * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith &lt;john@example.com&gt;` or `\&#34;John Smith Ph.D.\&#34; &lt;john@example.com&gt;`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
-     * 
-     */
+        /**
+         * @return Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith &lt;john@example.com&gt;` or `\&#34;John Smith Ph.D.\&#34; &lt;john@example.com&gt;`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
+         * 
+         */
     private final @Nullable String fromEmailAddress;
-    /**
-     * REPLY-TO email address.
-     * 
-     */
+        /**
+         * @return REPLY-TO email address.
+         * 
+         */
     private final @Nullable String replyToEmailAddress;
-    /**
-     * ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
-     * 
-     */
+        /**
+         * @return ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
+         * 
+         */
     private final @Nullable String sourceArn;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class UserPoolEmailConfiguration {
     }
 
     /**
-     * Email configuration set name from SES.
+     * @return Email configuration set name from SES.
      * 
-    */
+     */
     public Optional<String> configurationSet() {
         return Optional.ofNullable(this.configurationSet);
     }
     /**
-     * Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
+     * @return Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
      * 
-    */
+     */
     public Optional<String> emailSendingAccount() {
         return Optional.ofNullable(this.emailSendingAccount);
     }
     /**
-     * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith &lt;john@example.com&gt;` or `\&#34;John Smith Ph.D.\&#34; &lt;john@example.com&gt;`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
+     * @return Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith &lt;john@example.com&gt;` or `\&#34;John Smith Ph.D.\&#34; &lt;john@example.com&gt;`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
      * 
-    */
+     */
     public Optional<String> fromEmailAddress() {
         return Optional.ofNullable(this.fromEmailAddress);
     }
     /**
-     * REPLY-TO email address.
+     * @return REPLY-TO email address.
      * 
-    */
+     */
     public Optional<String> replyToEmailAddress() {
         return Optional.ofNullable(this.replyToEmailAddress);
     }
     /**
-     * ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
+     * @return ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
      * 
-    */
+     */
     public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }

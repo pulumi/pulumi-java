@@ -10,30 +10,30 @@ import java.util.Objects;
 @CustomType
 public final class GetSessionContextResult {
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * IAM source role ARN if `arn` corresponds to an STS assumed role. Otherwise, `issuer_arn` is equal to `arn`.
-     * 
-     */
+        /**
+         * @return IAM source role ARN if `arn` corresponds to an STS assumed role. Otherwise, `issuer_arn` is equal to `arn`.
+         * 
+         */
     private final String issuerArn;
-    /**
-     * Unique identifier of the IAM role that issues the STS assumed role.
-     * 
-     */
+        /**
+         * @return Unique identifier of the IAM role that issues the STS assumed role.
+         * 
+         */
     private final String issuerId;
-    /**
-     * Name of the source role. Only available if `arn` corresponds to an STS assumed role.
-     * 
-     */
+        /**
+         * @return Name of the source role. Only available if `arn` corresponds to an STS assumed role.
+         * 
+         */
     private final String issuerName;
-    /**
-     * Name of the STS session. Only available if `arn` corresponds to an STS assumed role.
-     * 
-     */
+        /**
+         * @return Name of the STS session. Only available if `arn` corresponds to an STS assumed role.
+         * 
+         */
     private final String sessionName;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class GetSessionContextResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IAM source role ARN if `arn` corresponds to an STS assumed role. Otherwise, `issuer_arn` is equal to `arn`.
+     * @return IAM source role ARN if `arn` corresponds to an STS assumed role. Otherwise, `issuer_arn` is equal to `arn`.
      * 
-    */
+     */
     public String issuerArn() {
         return this.issuerArn;
     }
     /**
-     * Unique identifier of the IAM role that issues the STS assumed role.
+     * @return Unique identifier of the IAM role that issues the STS assumed role.
      * 
-    */
+     */
     public String issuerId() {
         return this.issuerId;
     }
     /**
-     * Name of the source role. Only available if `arn` corresponds to an STS assumed role.
+     * @return Name of the source role. Only available if `arn` corresponds to an STS assumed role.
      * 
-    */
+     */
     public String issuerName() {
         return this.issuerName;
     }
     /**
-     * Name of the STS session. Only available if `arn` corresponds to an STS assumed role.
+     * @return Name of the STS session. Only available if `arn` corresponds to an STS assumed role.
      * 
-    */
+     */
     public String sessionName() {
         return this.sessionName;
     }

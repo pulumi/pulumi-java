@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterShard {
-    /**
-     * Name of this node.
-     * * `endpoint`
-     * 
-     */
+        /**
+         * @return Name of this node.
+         * * `endpoint`
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Set of nodes in this shard.
-     * 
-     */
+        /**
+         * @return Set of nodes in this shard.
+         * 
+         */
     private final @Nullable List<ClusterShardNode> nodes;
-    /**
-     * Number of individual nodes in this shard.
-     * 
-     */
+        /**
+         * @return Number of individual nodes in this shard.
+         * 
+         */
     private final @Nullable Integer numNodes;
-    /**
-     * Keyspace for this shard. Example: `0-16383`.
-     * 
-     */
+        /**
+         * @return Keyspace for this shard. Example: `0-16383`.
+         * 
+         */
     private final @Nullable String slots;
 
     @CustomType.Constructor
@@ -49,31 +49,31 @@ public final class ClusterShard {
     }
 
     /**
-     * Name of this node.
+     * @return Name of this node.
      * * `endpoint`
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Set of nodes in this shard.
+     * @return Set of nodes in this shard.
      * 
-    */
+     */
     public List<ClusterShardNode> nodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
     /**
-     * Number of individual nodes in this shard.
+     * @return Number of individual nodes in this shard.
      * 
-    */
+     */
     public Optional<Integer> numNodes() {
         return Optional.ofNullable(this.numNodes);
     }
     /**
-     * Keyspace for this shard. Example: `0-16383`.
+     * @return Keyspace for this shard. Example: `0-16383`.
      * 
-    */
+     */
     public Optional<String> slots() {
         return Optional.ofNullable(this.slots);
     }

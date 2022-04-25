@@ -25,6 +25,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
     @Import(name="amiDistributionConfiguration")
     private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
 
+    /**
+     * @return Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
+     * 
+     */
     public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs>> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
@@ -36,6 +40,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
     @Import(name="containerDistributionConfiguration")
     private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
 
+    /**
+     * @return Configuration block with container distribution settings. Detailed below.
+     * 
+     */
     public Optional<Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs>> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
@@ -47,6 +55,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
     @Import(name="licenseConfigurationArns")
     private @Nullable Output<List<String>> licenseConfigurationArns;
 
+    /**
+     * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+     * 
+     */
     public Optional<Output<List<String>>> licenseConfigurationArns() {
         return Optional.ofNullable(this.licenseConfigurationArns);
     }
@@ -58,6 +70,10 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return AWS Region for the distribution.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -89,42 +105,96 @@ public final class DistributionConfigurationDistributionGetArgs extends com.pulu
             $ = new DistributionConfigurationDistributionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiDistributionConfiguration Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration) {
             $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param amiDistributionConfiguration Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfiguration(DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs amiDistributionConfiguration) {
             return amiDistributionConfiguration(Output.of(amiDistributionConfiguration));
         }
 
+        /**
+         * @param containerDistributionConfiguration Configuration block with container distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration) {
             $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
+        /**
+         * @param containerDistributionConfiguration Configuration block with container distribution settings. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDistributionConfiguration(DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs containerDistributionConfiguration) {
             return containerDistributionConfiguration(Output.of(containerDistributionConfiguration));
         }
 
+        /**
+         * @param licenseConfigurationArns Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
             $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArns Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             return licenseConfigurationArns(Output.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param licenseConfigurationArns Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param region AWS Region for the distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region AWS Region for the distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

@@ -9,31 +9,31 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPortfolioConstraintsDetail {
-    /**
-     * Identifier of the constraint.
-     * 
-     */
+        /**
+         * @return Identifier of the constraint.
+         * 
+         */
     private final String constraintId;
-    /**
-     * Description of the constraint.
-     * 
-     */
+        /**
+         * @return Description of the constraint.
+         * 
+         */
     private final String description;
     private final String owner;
-    /**
-     * Portfolio identifier.
-     * 
-     */
+        /**
+         * @return Portfolio identifier.
+         * 
+         */
     private final String portfolioId;
-    /**
-     * Product identifier.
-     * 
-     */
+        /**
+         * @return Product identifier.
+         * 
+         */
     private final String productId;
-    /**
-     * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
-     * 
-     */
+        /**
+         * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,16 +53,16 @@ public final class GetPortfolioConstraintsDetail {
     }
 
     /**
-     * Identifier of the constraint.
+     * @return Identifier of the constraint.
      * 
-    */
+     */
     public String constraintId() {
         return this.constraintId;
     }
     /**
-     * Description of the constraint.
+     * @return Description of the constraint.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
@@ -70,23 +70,23 @@ public final class GetPortfolioConstraintsDetail {
         return this.owner;
     }
     /**
-     * Portfolio identifier.
+     * @return Portfolio identifier.
      * 
-    */
+     */
     public String portfolioId() {
         return this.portfolioId;
     }
     /**
-     * Product identifier.
+     * @return Product identifier.
      * 
-    */
+     */
     public String productId() {
         return this.productId;
     }
     /**
-     * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
+     * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

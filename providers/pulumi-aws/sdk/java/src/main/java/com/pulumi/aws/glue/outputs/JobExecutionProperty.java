@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobExecutionProperty {
-    /**
-     * The maximum number of concurrent runs allowed for a job. The default is 1.
-     * 
-     */
+        /**
+         * @return The maximum number of concurrent runs allowed for a job. The default is 1.
+         * 
+         */
     private final @Nullable Integer maxConcurrentRuns;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class JobExecutionProperty {
     }
 
     /**
-     * The maximum number of concurrent runs allowed for a job. The default is 1.
+     * @return The maximum number of concurrent runs allowed for a job. The default is 1.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentRuns() {
         return Optional.ofNullable(this.maxConcurrentRuns);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetImagePipelineSchedule {
-    /**
-     * Condition when the pipeline should trigger a new image build.
-     * 
-     */
+        /**
+         * @return Condition when the pipeline should trigger a new image build.
+         * 
+         */
     private final String pipelineExecutionStartCondition;
-    /**
-     * Cron expression of how often the pipeline start condition is evaluated.
-     * 
-     */
+        /**
+         * @return Cron expression of how often the pipeline start condition is evaluated.
+         * 
+         */
     private final String scheduleExpression;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetImagePipelineSchedule {
     }
 
     /**
-     * Condition when the pipeline should trigger a new image build.
+     * @return Condition when the pipeline should trigger a new image build.
      * 
-    */
+     */
     public String pipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
     }
     /**
-     * Cron expression of how often the pipeline start condition is evaluated.
+     * @return Cron expression of how often the pipeline start condition is evaluated.
      * 
-    */
+     */
     public String scheduleExpression() {
         return this.scheduleExpression;
     }

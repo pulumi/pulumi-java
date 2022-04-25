@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterEncryptionConfig {
-    /**
-     * Configuration block with provider for encryption. Detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block with provider for encryption. Detailed below.
+         * 
+         */
     private final ClusterEncryptionConfigProvider provider;
-    /**
-     * List of strings with resources to be encrypted. Valid values: `secrets`.
-     * 
-     */
+        /**
+         * @return List of strings with resources to be encrypted. Valid values: `secrets`.
+         * 
+         */
     private final List<String> resources;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ClusterEncryptionConfig {
     }
 
     /**
-     * Configuration block with provider for encryption. Detailed below.
+     * @return Configuration block with provider for encryption. Detailed below.
      * 
-    */
+     */
     public ClusterEncryptionConfigProvider provider() {
         return this.provider;
     }
     /**
-     * List of strings with resources to be encrypted. Valid values: `secrets`.
+     * @return List of strings with resources to be encrypted. Valid values: `secrets`.
      * 
-    */
+     */
     public List<String> resources() {
         return this.resources;
     }

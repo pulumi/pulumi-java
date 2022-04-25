@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatement {
-    /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
-     * 
-     */
+        /**
+         * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch fieldToMatch;
-    /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
-     * 
-     */
+        /**
+         * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         */
     private final List<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementS
     }
 
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }

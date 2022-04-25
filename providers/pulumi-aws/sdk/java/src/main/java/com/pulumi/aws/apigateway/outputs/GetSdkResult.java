@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSdkResult {
-    /**
-     * The SDK as a string.
-     * 
-     */
+        /**
+         * @return The SDK as a string.
+         * 
+         */
     private final String body;
-    /**
-     * The content-disposition header value in the HTTP response.
-     * 
-     */
+        /**
+         * @return The content-disposition header value in the HTTP response.
+         * 
+         */
     private final String contentDisposition;
-    /**
-     * The content-type header value in the HTTP response.
-     * 
-     */
+        /**
+         * @return The content-type header value in the HTTP response.
+         * 
+         */
     private final String contentType;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable Map<String,String> parameters;
     private final String restApiId;
@@ -57,30 +57,30 @@ public final class GetSdkResult {
     }
 
     /**
-     * The SDK as a string.
+     * @return The SDK as a string.
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * The content-disposition header value in the HTTP response.
+     * @return The content-disposition header value in the HTTP response.
      * 
-    */
+     */
     public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
-     * The content-type header value in the HTTP response.
+     * @return The content-type header value in the HTTP response.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

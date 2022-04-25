@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReceiptRuleBounceAction {
-    /**
-     * The message to send
-     * 
-     */
+        /**
+         * @return The message to send
+         * 
+         */
     private final String message;
-    /**
-     * The position of the action in the receipt rule
-     * 
-     */
+        /**
+         * @return The position of the action in the receipt rule
+         * 
+         */
     private final Integer position;
-    /**
-     * The email address of the sender
-     * 
-     */
+        /**
+         * @return The email address of the sender
+         * 
+         */
     private final String sender;
-    /**
-     * The RFC 5321 SMTP reply code
-     * 
-     */
+        /**
+         * @return The RFC 5321 SMTP reply code
+         * 
+         */
     private final String smtpReplyCode;
-    /**
-     * The RFC 3463 SMTP enhanced status code
-     * 
-     */
+        /**
+         * @return The RFC 3463 SMTP enhanced status code
+         * 
+         */
     private final @Nullable String statusCode;
-    /**
-     * The ARN of an SNS topic to notify
-     * 
-     */
+        /**
+         * @return The ARN of an SNS topic to notify
+         * 
+         */
     private final @Nullable String topicArn;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ReceiptRuleBounceAction {
     }
 
     /**
-     * The message to send
+     * @return The message to send
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The position of the action in the receipt rule
+     * @return The position of the action in the receipt rule
      * 
-    */
+     */
     public Integer position() {
         return this.position;
     }
     /**
-     * The email address of the sender
+     * @return The email address of the sender
      * 
-    */
+     */
     public String sender() {
         return this.sender;
     }
     /**
-     * The RFC 5321 SMTP reply code
+     * @return The RFC 5321 SMTP reply code
      * 
-    */
+     */
     public String smtpReplyCode() {
         return this.smtpReplyCode;
     }
     /**
-     * The RFC 3463 SMTP enhanced status code
+     * @return The RFC 3463 SMTP enhanced status code
      * 
-    */
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
     /**
-     * The ARN of an SNS topic to notify
+     * @return The ARN of an SNS topic to notify
      * 
-    */
+     */
     public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }

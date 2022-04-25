@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OntapStorageVirtualMachineEndpoint {
-    /**
-     * An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
-     * 
-     */
+        /**
+         * @return An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
+         * 
+         */
     private final @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses;
-    /**
-     * An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
-     * 
-     */
+        /**
+         * @return An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
+         * 
+         */
     private final @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements;
-    /**
-     * An endpoint for accessing data on your storage virtual machine via NFS protocol. See Endpoint.
-     * 
-     */
+        /**
+         * @return An endpoint for accessing data on your storage virtual machine via NFS protocol. See Endpoint.
+         * 
+         */
     private final @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs;
-    /**
-     * An endpoint for accessing data on your storage virtual machine via SMB protocol. This is only set if an active_directory_configuration has been set. See Endpoint.
-     * 
-     */
+        /**
+         * @return An endpoint for accessing data on your storage virtual machine via SMB protocol. This is only set if an active_directory_configuration has been set. See Endpoint.
+         * 
+         */
     private final @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class OntapStorageVirtualMachineEndpoint {
     }
 
     /**
-     * An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
+     * @return An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
      * 
-    */
+     */
     public List<OntapStorageVirtualMachineEndpointIscse> iscses() {
         return this.iscses == null ? List.of() : this.iscses;
     }
     /**
-     * An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
+     * @return An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
      * 
-    */
+     */
     public List<OntapStorageVirtualMachineEndpointManagement> managements() {
         return this.managements == null ? List.of() : this.managements;
     }
     /**
-     * An endpoint for accessing data on your storage virtual machine via NFS protocol. See Endpoint.
+     * @return An endpoint for accessing data on your storage virtual machine via NFS protocol. See Endpoint.
      * 
-    */
+     */
     public List<OntapStorageVirtualMachineEndpointNf> nfs() {
         return this.nfs == null ? List.of() : this.nfs;
     }
     /**
-     * An endpoint for accessing data on your storage virtual machine via SMB protocol. This is only set if an active_directory_configuration has been set. See Endpoint.
+     * @return An endpoint for accessing data on your storage virtual machine via SMB protocol. This is only set if an active_directory_configuration has been set. See Endpoint.
      * 
-    */
+     */
     public List<OntapStorageVirtualMachineEndpointSmb> smbs() {
         return this.smbs == null ? List.of() : this.smbs;
     }

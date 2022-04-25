@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatement {
-    /**
-     * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
-     * 
-     */
+        /**
+         * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+         * 
+         */
     private final @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules;
-    /**
-     * The name of the managed rule group.
-     * 
-     */
+        /**
+         * @return The name of the managed rule group.
+         * 
+         */
     private final String name;
-    /**
-     * Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
-     * 
-     */
+        /**
+         * @return Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement;
-    /**
-     * The name of the managed rule group vendor.
-     * 
-     */
+        /**
+         * @return The name of the managed rule group vendor.
+         * 
+         */
     private final String vendorName;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
     }
 
     /**
-     * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
+     * @return The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
     /**
-     * The name of the managed rule group.
+     * @return The name of the managed rule group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+     * @return Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement> scopeDownStatement() {
         return Optional.ofNullable(this.scopeDownStatement);
     }
     /**
-     * The name of the managed rule group vendor.
+     * @return The name of the managed rule group vendor.
      * 
-    */
+     */
     public String vendorName() {
         return this.vendorName;
     }

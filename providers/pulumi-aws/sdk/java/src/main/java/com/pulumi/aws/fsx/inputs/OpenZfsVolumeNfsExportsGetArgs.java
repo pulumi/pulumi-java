@@ -21,6 +21,10 @@ public final class OpenZfsVolumeNfsExportsGetArgs extends com.pulumi.resources.R
     @Import(name="clientConfigurations", required=true)
     private Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations;
 
+    /**
+     * @return - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
+     * 
+     */
     public Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
@@ -49,15 +53,33 @@ public final class OpenZfsVolumeNfsExportsGetArgs extends com.pulumi.resources.R
             $ = new OpenZfsVolumeNfsExportsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientConfigurations - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfigurations(Output<List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs>> clientConfigurations) {
             $.clientConfigurations = clientConfigurations;
             return this;
         }
 
+        /**
+         * @param clientConfigurations - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfigurationGetArgs> clientConfigurations) {
             return clientConfigurations(Output.of(clientConfigurations));
         }
 
+        /**
+         * @param clientConfigurations - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientConfigurations(OpenZfsVolumeNfsExportsClientConfigurationGetArgs... clientConfigurations) {
             return clientConfigurations(List.of(clientConfigurations));
         }

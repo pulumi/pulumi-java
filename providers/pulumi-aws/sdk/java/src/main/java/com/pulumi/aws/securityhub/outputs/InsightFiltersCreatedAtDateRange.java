@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class InsightFiltersCreatedAtDateRange {
-    /**
-     * A date range unit for the date filter. Valid values: `DAYS`.
-     * 
-     */
+        /**
+         * @return A date range unit for the date filter. Valid values: `DAYS`.
+         * 
+         */
     private final String unit;
-    /**
-     * A date range value for the date filter, provided as an Integer.
-     * 
-     */
+        /**
+         * @return A date range value for the date filter, provided as an Integer.
+         * 
+         */
     private final Integer value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class InsightFiltersCreatedAtDateRange {
     }
 
     /**
-     * A date range unit for the date filter. Valid values: `DAYS`.
+     * @return A date range unit for the date filter. Valid values: `DAYS`.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }
     /**
-     * A date range value for the date filter, provided as an Integer.
+     * @return A date range value for the date filter, provided as an Integer.
      * 
-    */
+     */
     public Integer value() {
         return this.value;
     }

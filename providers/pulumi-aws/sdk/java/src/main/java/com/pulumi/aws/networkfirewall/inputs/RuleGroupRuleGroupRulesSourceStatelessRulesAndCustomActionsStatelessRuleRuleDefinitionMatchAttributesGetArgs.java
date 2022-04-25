@@ -28,6 +28,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="destinationPorts")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
 
+    /**
+     * @return Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>>> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
@@ -39,6 +43,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="destinations")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
 
+    /**
+     * @return Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>>> destinations() {
         return Optional.ofNullable(this.destinations);
     }
@@ -50,6 +58,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="protocols")
     private @Nullable Output<List<Integer>> protocols;
 
+    /**
+     * @return Set of protocols to inspect for, specified using the protocol&#39;s assigned internet protocol number (IANA). If not specified, this matches with any protocol.
+     * 
+     */
     public Optional<Output<List<Integer>>> protocols() {
         return Optional.ofNullable(this.protocols);
     }
@@ -61,6 +73,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="sourcePorts")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
 
+    /**
+     * @return Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>>> sourcePorts() {
         return Optional.ofNullable(this.sourcePorts);
     }
@@ -72,6 +88,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="sources")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
 
+    /**
+     * @return Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>>> sources() {
         return Optional.ofNullable(this.sources);
     }
@@ -83,6 +103,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="tcpFlags")
     private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
 
+    /**
+     * @return Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
+     * 
+     */
     public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>>> tcpFlags() {
         return Optional.ofNullable(this.tcpFlags);
     }
@@ -116,80 +140,188 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationPorts Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts) {
             $.destinationPorts = destinationPorts;
             return this;
         }
 
+        /**
+         * @param destinationPorts Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs> destinationPorts) {
             return destinationPorts(Output.of(destinationPorts));
         }
 
+        /**
+         * @param destinationPorts Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPorts(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
 
+        /**
+         * @param destinations Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param protocols Set of protocols to inspect for, specified using the protocol&#39;s assigned internet protocol number (IANA). If not specified, this matches with any protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(@Nullable Output<List<Integer>> protocols) {
             $.protocols = protocols;
             return this;
         }
 
+        /**
+         * @param protocols Set of protocols to inspect for, specified using the protocol&#39;s assigned internet protocol number (IANA). If not specified, this matches with any protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(List<Integer> protocols) {
             return protocols(Output.of(protocols));
         }
 
+        /**
+         * @param protocols Set of protocols to inspect for, specified using the protocol&#39;s assigned internet protocol number (IANA). If not specified, this matches with any protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocols(Integer... protocols) {
             return protocols(List.of(protocols));
         }
 
+        /**
+         * @param sourcePorts Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePorts(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts) {
             $.sourcePorts = sourcePorts;
             return this;
         }
 
+        /**
+         * @param sourcePorts Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePorts(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs> sourcePorts) {
             return sourcePorts(Output.of(sourcePorts));
         }
 
+        /**
+         * @param sourcePorts Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePorts(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs... sourcePorts) {
             return sourcePorts(List.of(sourcePorts));
         }
 
+        /**
+         * @param sources Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs... sources) {
             return sources(List.of(sources));
         }
 
+        /**
+         * @param tcpFlags Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpFlags(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags) {
             $.tcpFlags = tcpFlags;
             return this;
         }
 
+        /**
+         * @param tcpFlags Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpFlags(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs> tcpFlags) {
             return tcpFlags(Output.of(tcpFlags));
         }
 
+        /**
+         * @param tcpFlags Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpFlags(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs... tcpFlags) {
             return tcpFlags(List.of(tcpFlags));
         }

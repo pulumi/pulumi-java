@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutput {
-    /**
-     * Describes the data format when records are written to the destination.
-     * 
-     */
+        /**
+         * @return Describes the data format when records are written to the destination.
+         * 
+         */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema;
-    /**
-     * Identifies a Kinesis Data Firehose delivery stream as the destination.
-     * 
-     */
+        /**
+         * @return Identifies a Kinesis Data Firehose delivery stream as the destination.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput;
-    /**
-     * Identifies a Kinesis data stream as the destination.
-     * 
-     */
+        /**
+         * @return Identifies a Kinesis data stream as the destination.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput;
-    /**
-     * Identifies a Lambda function as the destination.
-     * 
-     */
+        /**
+         * @return Identifies a Lambda function as the destination.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput;
-    /**
-     * The name of the in-application stream.
-     * 
-     */
+        /**
+         * @return The name of the in-application stream.
+         * 
+         */
     private final String name;
     private final @Nullable String outputId;
 
@@ -59,37 +59,37 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * Describes the data format when records are written to the destination.
+     * @return Describes the data format when records are written to the destination.
      * 
-    */
+     */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema() {
         return this.destinationSchema;
     }
     /**
-     * Identifies a Kinesis Data Firehose delivery stream as the destination.
+     * @return Identifies a Kinesis Data Firehose delivery stream as the destination.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput> kinesisFirehoseOutput() {
         return Optional.ofNullable(this.kinesisFirehoseOutput);
     }
     /**
-     * Identifies a Kinesis data stream as the destination.
+     * @return Identifies a Kinesis data stream as the destination.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput> kinesisStreamsOutput() {
         return Optional.ofNullable(this.kinesisStreamsOutput);
     }
     /**
-     * Identifies a Lambda function as the destination.
+     * @return Identifies a Lambda function as the destination.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput> lambdaOutput() {
         return Optional.ofNullable(this.lambdaOutput);
     }
     /**
-     * The name of the in-application stream.
+     * @return The name of the in-application stream.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

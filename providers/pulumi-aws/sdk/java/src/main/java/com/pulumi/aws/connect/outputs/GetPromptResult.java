@@ -9,22 +9,22 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPromptResult {
-    /**
-     * The Amazon Resource Name (ARN) of the Prompt.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Prompt.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String instanceId;
     private final String name;
-    /**
-     * The identifier for the prompt.
-     * 
-     */
+        /**
+         * @return The identifier for the prompt.
+         * 
+         */
     private final String promptId;
 
     @CustomType.Constructor
@@ -42,16 +42,16 @@ public final class GetPromptResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Prompt.
+     * @return The Amazon Resource Name (ARN) of the Prompt.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -62,9 +62,9 @@ public final class GetPromptResult {
         return this.name;
     }
     /**
-     * The identifier for the prompt.
+     * @return The identifier for the prompt.
      * 
-    */
+     */
     public String promptId() {
         return this.promptId;
     }

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAccessPointRootDirectory {
-    /**
-     * Single element list containing information on the creation permissions of the directory
-     * 
-     */
+        /**
+         * @return Single element list containing information on the creation permissions of the directory
+         * 
+         */
     private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
-    /**
-     * Path exposed as the root directory
-     * 
-     */
+        /**
+         * @return Path exposed as the root directory
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetAccessPointRootDirectory {
     }
 
     /**
-     * Single element list containing information on the creation permissions of the directory
+     * @return Single element list containing information on the creation permissions of the directory
      * 
-    */
+     */
     public List<GetAccessPointRootDirectoryCreationInfo> creationInfos() {
         return this.creationInfos;
     }
     /**
-     * Path exposed as the root directory
+     * @return Path exposed as the root directory
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

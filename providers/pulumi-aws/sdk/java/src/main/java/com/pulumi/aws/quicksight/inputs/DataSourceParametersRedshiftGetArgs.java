@@ -23,6 +23,10 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="clusterId")
     private @Nullable Output<String> clusterId;
 
+    /**
+     * @return The ID of the cluster to which to connect.
+     * 
+     */
     public Optional<Output<String>> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
@@ -34,6 +38,10 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="database", required=true)
     private Output<String> database;
 
+    /**
+     * @return The database to which to connect.
+     * 
+     */
     public Output<String> database() {
         return this.database;
     }
@@ -45,6 +53,10 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return The host to which to connect.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -56,6 +68,10 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The port to which to connect.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -87,38 +103,86 @@ public final class DataSourceParametersRedshiftGetArgs extends com.pulumi.resour
             $ = new DataSourceParametersRedshiftGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId The ID of the cluster to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(@Nullable Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId The ID of the cluster to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(Output<String> database) {
             $.database = database;
             return this;
         }
 
+        /**
+         * @param database The database to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder database(String database) {
             return database(Output.of(database));
         }
 
+        /**
+         * @param host The host to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host The host to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param port The port to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port to which to connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

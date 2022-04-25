@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLaunchPathsSummary {
-    /**
-     * Block for constraints on the portfolio-product relationship. See details below.
-     * 
-     */
+        /**
+         * @return Block for constraints on the portfolio-product relationship. See details below.
+         * 
+         */
     private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
-    /**
-     * Name of the portfolio to which the path was assigned.
-     * 
-     */
+        /**
+         * @return Name of the portfolio to which the path was assigned.
+         * 
+         */
     private final String name;
-    /**
-     * Identifier of the product path.
-     * 
-     */
+        /**
+         * @return Identifier of the product path.
+         * 
+         */
     private final String pathId;
-    /**
-     * Tags associated with this product path.
-     * 
-     */
+        /**
+         * @return Tags associated with this product path.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetLaunchPathsSummary {
     }
 
     /**
-     * Block for constraints on the portfolio-product relationship. See details below.
+     * @return Block for constraints on the portfolio-product relationship. See details below.
      * 
-    */
+     */
     public List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries() {
         return this.constraintSummaries;
     }
     /**
-     * Name of the portfolio to which the path was assigned.
+     * @return Name of the portfolio to which the path was assigned.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Identifier of the product path.
+     * @return Identifier of the product path.
      * 
-    */
+     */
     public String pathId() {
         return this.pathId;
     }
     /**
-     * Tags associated with this product path.
+     * @return Tags associated with this product path.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

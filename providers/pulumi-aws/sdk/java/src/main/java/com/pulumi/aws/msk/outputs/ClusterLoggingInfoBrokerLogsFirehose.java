@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterLoggingInfoBrokerLogsFirehose {
-    /**
-     * Name of the Kinesis Data Firehose delivery stream to deliver logs to.
-     * 
-     */
+        /**
+         * @return Name of the Kinesis Data Firehose delivery stream to deliver logs to.
+         * 
+         */
     private final @Nullable String deliveryStream;
-    /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
-     * 
-     */
+        /**
+         * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
     }
 
     /**
-     * Name of the Kinesis Data Firehose delivery stream to deliver logs to.
+     * @return Name of the Kinesis Data Firehose delivery stream to deliver logs to.
      * 
-    */
+     */
     public Optional<String> deliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
     /**
-     * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
+     * @return Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TargetGroupHealthCheck {
-    /**
-     * Boolean to enable / disable `stickiness`. Default is `true`.
-     * 
-     */
+        /**
+         * @return Boolean to enable / disable `stickiness`. Default is `true`.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
-     * 
-     */
+        /**
+         * @return Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+         * 
+         */
     private final @Nullable Integer healthyThreshold;
-    /**
-     * Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
-     * 
-     */
+        /**
+         * @return Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+         * 
+         */
     private final @Nullable Integer interval;
-    /**
-     * Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, &#34;200,202&#34; for HTTP(s) or &#34;0,12&#34; for GRPC) or a range of values (for example, &#34;200-299&#34; or &#34;0-99&#34;). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
-     * 
-     */
+        /**
+         * @return Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, &#34;200,202&#34; for HTTP(s) or &#34;0,12&#34; for GRPC) or a range of values (for example, &#34;200-299&#34; or &#34;0-99&#34;). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
+         * 
+         */
     private final @Nullable String matcher;
-    /**
-     * Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
-     * 
-     */
+        /**
+         * @return Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
-     * 
-     */
+        /**
+         * @return Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+         * 
+         */
     private final @Nullable String port;
-    /**
-     * Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
-     * 
-     */
+        /**
+         * @return Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
+         * 
+         */
     private final @Nullable String protocol;
-    /**
-     * Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
-     * 
-     */
+        /**
+         * @return Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+         * 
+         */
     private final @Nullable Integer timeout;
-    /**
-     * Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
-     * 
-     */
+        /**
+         * @return Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+         * 
+         */
     private final @Nullable Integer unhealthyThreshold;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class TargetGroupHealthCheck {
     }
 
     /**
-     * Boolean to enable / disable `stickiness`. Default is `true`.
+     * @return Boolean to enable / disable `stickiness`. Default is `true`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
+     * @return Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
      * 
-    */
+     */
     public Optional<Integer> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
     /**
-     * Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
+     * @return Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, &#34;200,202&#34; for HTTP(s) or &#34;0,12&#34; for GRPC) or a range of values (for example, &#34;200-299&#34; or &#34;0-99&#34;). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
+     * @return Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, &#34;200,202&#34; for HTTP(s) or &#34;0,12&#34; for GRPC) or a range of values (for example, &#34;200-299&#34; or &#34;0-99&#34;). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
      * 
-    */
+     */
     public Optional<String> matcher() {
         return Optional.ofNullable(this.matcher);
     }
     /**
-     * Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
+     * @return Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
+     * @return Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
+     * @return Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
+     * @return Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
+     * @return Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
      * 
-    */
+     */
     public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EventDestinationKinesisDestination {
-    /**
-     * The ARN of the role that has permissions to access the Kinesis Stream
-     * 
-     */
+        /**
+         * @return The ARN of the role that has permissions to access the Kinesis Stream
+         * 
+         */
     private final String roleArn;
-    /**
-     * The ARN of the Kinesis Stream
-     * 
-     */
+        /**
+         * @return The ARN of the Kinesis Stream
+         * 
+         */
     private final String streamArn;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class EventDestinationKinesisDestination {
     }
 
     /**
-     * The ARN of the role that has permissions to access the Kinesis Stream
+     * @return The ARN of the role that has permissions to access the Kinesis Stream
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The ARN of the Kinesis Stream
+     * @return The ARN of the Kinesis Stream
      * 
-    */
+     */
     public String streamArn() {
         return this.streamArn;
     }

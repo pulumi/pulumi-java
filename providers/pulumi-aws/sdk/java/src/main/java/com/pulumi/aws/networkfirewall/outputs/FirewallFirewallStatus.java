@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallFirewallStatus {
-    /**
-     * Set of subnets configured for use by the firewall.
-     * 
-     */
+        /**
+         * @return Set of subnets configured for use by the firewall.
+         * 
+         */
     private final @Nullable List<FirewallFirewallStatusSyncState> syncStates;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FirewallFirewallStatus {
     }
 
     /**
-     * Set of subnets configured for use by the firewall.
+     * @return Set of subnets configured for use by the firewall.
      * 
-    */
+     */
     public List<FirewallFirewallStatusSyncState> syncStates() {
         return this.syncStates == null ? List.of() : this.syncStates;
     }

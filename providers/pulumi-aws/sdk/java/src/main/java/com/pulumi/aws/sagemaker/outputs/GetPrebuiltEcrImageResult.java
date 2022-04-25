@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrebuiltEcrImageResult {
     private final @Nullable String dnsSuffix;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final @Nullable String imageTag;
     private final @Nullable String region;
-    /**
-     * The account ID containing the image. For example, `469771592824`.
-     * 
-     */
+        /**
+         * @return The account ID containing the image. For example, `469771592824`.
+         * 
+         */
     private final String registryId;
-    /**
-     * The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
-     * 
-     */
+        /**
+         * @return The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
+         * 
+         */
     private final String registryPath;
     private final String repositoryName;
 
@@ -53,9 +53,9 @@ public final class GetPrebuiltEcrImageResult {
         return Optional.ofNullable(this.dnsSuffix);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -66,16 +66,16 @@ public final class GetPrebuiltEcrImageResult {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The account ID containing the image. For example, `469771592824`.
+     * @return The account ID containing the image. For example, `469771592824`.
      * 
-    */
+     */
     public String registryId() {
         return this.registryId;
     }
     /**
-     * The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
+     * @return The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
      * 
-    */
+     */
     public String registryPath() {
         return this.registryPath;
     }

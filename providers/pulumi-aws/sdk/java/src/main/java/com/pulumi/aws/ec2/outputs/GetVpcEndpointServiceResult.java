@@ -15,64 +15,64 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVpcEndpointServiceResult {
-    /**
-     * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-     * 
-     */
+        /**
+         * @return Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+         * 
+         */
     private final Boolean acceptanceRequired;
-    /**
-     * The Amazon Resource Name (ARN) of the VPC endpoint service.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the VPC endpoint service.
+         * 
+         */
     private final String arn;
-    /**
-     * The Availability Zones in which the service is available.
-     * 
-     */
+        /**
+         * @return The Availability Zones in which the service is available.
+         * 
+         */
     private final List<String> availabilityZones;
-    /**
-     * The DNS names for the service.
-     * 
-     */
+        /**
+         * @return The DNS names for the service.
+         * 
+         */
     private final List<String> baseEndpointDnsNames;
     private final @Nullable List<GetVpcEndpointServiceFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Whether or not the service manages its VPC endpoints - `true` or `false`.
-     * 
-     */
+        /**
+         * @return Whether or not the service manages its VPC endpoints - `true` or `false`.
+         * 
+         */
     private final Boolean managesVpcEndpoints;
-    /**
-     * The AWS account ID of the service owner or `amazon`.
-     * 
-     */
+        /**
+         * @return The AWS account ID of the service owner or `amazon`.
+         * 
+         */
     private final String owner;
-    /**
-     * The private DNS name for the service.
-     * 
-     */
+        /**
+         * @return The private DNS name for the service.
+         * 
+         */
     private final String privateDnsName;
     private final @Nullable String service;
-    /**
-     * The ID of the endpoint service.
-     * 
-     */
+        /**
+         * @return The ID of the endpoint service.
+         * 
+         */
     private final String serviceId;
     private final String serviceName;
     private final String serviceType;
-    /**
-     * A map of tags assigned to the resource.
-     * 
-     */
+        /**
+         * @return A map of tags assigned to the resource.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Whether or not the service supports endpoint policies - `true` or `false`.
-     * 
-     */
+        /**
+         * @return Whether or not the service supports endpoint policies - `true` or `false`.
+         * 
+         */
     private final Boolean vpcEndpointPolicySupported;
 
     @CustomType.Constructor
@@ -110,30 +110,30 @@ public final class GetVpcEndpointServiceResult {
     }
 
     /**
-     * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
+     * @return Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
-    */
+     */
     public Boolean acceptanceRequired() {
         return this.acceptanceRequired;
     }
     /**
-     * The Amazon Resource Name (ARN) of the VPC endpoint service.
+     * @return The Amazon Resource Name (ARN) of the VPC endpoint service.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The Availability Zones in which the service is available.
+     * @return The Availability Zones in which the service is available.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
     /**
-     * The DNS names for the service.
+     * @return The DNS names for the service.
      * 
-    */
+     */
     public List<String> baseEndpointDnsNames() {
         return this.baseEndpointDnsNames;
     }
@@ -141,30 +141,30 @@ public final class GetVpcEndpointServiceResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether or not the service manages its VPC endpoints - `true` or `false`.
+     * @return Whether or not the service manages its VPC endpoints - `true` or `false`.
      * 
-    */
+     */
     public Boolean managesVpcEndpoints() {
         return this.managesVpcEndpoints;
     }
     /**
-     * The AWS account ID of the service owner or `amazon`.
+     * @return The AWS account ID of the service owner or `amazon`.
      * 
-    */
+     */
     public String owner() {
         return this.owner;
     }
     /**
-     * The private DNS name for the service.
+     * @return The private DNS name for the service.
      * 
-    */
+     */
     public String privateDnsName() {
         return this.privateDnsName;
     }
@@ -172,9 +172,9 @@ public final class GetVpcEndpointServiceResult {
         return Optional.ofNullable(this.service);
     }
     /**
-     * The ID of the endpoint service.
+     * @return The ID of the endpoint service.
      * 
-    */
+     */
     public String serviceId() {
         return this.serviceId;
     }
@@ -185,16 +185,16 @@ public final class GetVpcEndpointServiceResult {
         return this.serviceType;
     }
     /**
-     * A map of tags assigned to the resource.
+     * @return A map of tags assigned to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Whether or not the service supports endpoint policies - `true` or `false`.
+     * @return Whether or not the service supports endpoint policies - `true` or `false`.
      * 
-    */
+     */
     public Boolean vpcEndpointPolicySupported() {
         return this.vpcEndpointPolicySupported;
     }

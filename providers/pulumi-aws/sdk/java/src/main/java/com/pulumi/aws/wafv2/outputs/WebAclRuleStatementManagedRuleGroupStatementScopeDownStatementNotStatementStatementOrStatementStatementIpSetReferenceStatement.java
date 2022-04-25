@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement {
-    /**
-     * The Amazon Resource Name (ARN) of the IP Set that this statement references.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the IP Set that this statement references.
+         * 
+         */
     private final String arn;
-    /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See IPSet Forwarded IP Config below for more details.
-     * 
-     */
+        /**
+         * @return The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the IP Set that this statement references.
+     * @return The Amazon Resource Name (ARN) of the IP Set that this statement references.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See IPSet Forwarded IP Config below for more details.
+     * @return The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See IPSet Forwarded IP Config below for more details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig> ipSetForwardedIpConfig() {
         return Optional.ofNullable(this.ipSetForwardedIpConfig);
     }

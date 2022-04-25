@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceCredentialsCredentialPair {
-    /**
-     * Password, maximum length of 1024 characters.
-     * 
-     */
+        /**
+         * @return Password, maximum length of 1024 characters.
+         * 
+         */
     private final String password;
-    /**
-     * User name, maximum length of 64 characters.
-     * 
-     */
+        /**
+         * @return User name, maximum length of 64 characters.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class DataSourceCredentialsCredentialPair {
     }
 
     /**
-     * Password, maximum length of 1024 characters.
+     * @return Password, maximum length of 1024 characters.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * User name, maximum length of 64 characters.
+     * @return User name, maximum length of 64 characters.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

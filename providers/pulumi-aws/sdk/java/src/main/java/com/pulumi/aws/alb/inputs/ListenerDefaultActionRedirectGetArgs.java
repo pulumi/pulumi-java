@@ -22,6 +22,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -33,6 +37,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -44,6 +52,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="port")
     private @Nullable Output<String> port;
 
+    /**
+     * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+     * 
+     */
     public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -55,6 +67,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -66,6 +82,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -77,6 +97,10 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
     @Import(name="statusCode", required=true)
     private Output<String> statusCode;
 
+    /**
+     * @return HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+     * 
+     */
     public Output<String> statusCode() {
         return this.statusCode;
     }
@@ -110,56 +134,128 @@ public final class ListenerDefaultActionRedirectGetArgs extends com.pulumi.resou
             $ = new ListenerDefaultActionRedirectGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param path Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param query Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param statusCode HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(Output<String> statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusCode HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             return statusCode(Output.of(statusCode));
         }

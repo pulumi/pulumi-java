@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ChannelHlsIngest {
-    /**
-     * A list of the ingest endpoints
-     * 
-     */
+        /**
+         * @return A list of the ingest endpoints
+         * 
+         */
     private final @Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ChannelHlsIngest {
     }
 
     /**
-     * A list of the ingest endpoints
+     * @return A list of the ingest endpoints
      * 
-    */
+     */
     public List<ChannelHlsIngestIngestEndpoint> ingestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
     }

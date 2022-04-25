@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerPredicate {
-    /**
-     * A list of the conditions that determine when the trigger will fire. See Conditions.
-     * 
-     */
+        /**
+         * @return A list of the conditions that determine when the trigger will fire. See Conditions.
+         * 
+         */
     private final List<TriggerPredicateCondition> conditions;
-    /**
-     * How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
-     * 
-     */
+        /**
+         * @return How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
+         * 
+         */
     private final @Nullable String logical;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class TriggerPredicate {
     }
 
     /**
-     * A list of the conditions that determine when the trigger will fire. See Conditions.
+     * @return A list of the conditions that determine when the trigger will fire. See Conditions.
      * 
-    */
+     */
     public List<TriggerPredicateCondition> conditions() {
         return this.conditions;
     }
     /**
-     * How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
+     * @return How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
      * 
-    */
+     */
     public Optional<String> logical() {
         return Optional.ofNullable(this.logical);
     }

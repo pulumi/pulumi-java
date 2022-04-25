@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UsagePlanApiStage {
-    /**
-     * API Id of the associated API stage in a usage plan.
-     * 
-     */
+        /**
+         * @return API Id of the associated API stage in a usage plan.
+         * 
+         */
     private final String apiId;
-    /**
-     * API stage name of the associated API stage in a usage plan.
-     * 
-     */
+        /**
+         * @return API stage name of the associated API stage in a usage plan.
+         * 
+         */
     private final String stage;
-    /**
-     * The throttling limits of the usage plan.
-     * 
-     */
+        /**
+         * @return The throttling limits of the usage plan.
+         * 
+         */
     private final @Nullable List<UsagePlanApiStageThrottle> throttles;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class UsagePlanApiStage {
     }
 
     /**
-     * API Id of the associated API stage in a usage plan.
+     * @return API Id of the associated API stage in a usage plan.
      * 
-    */
+     */
     public String apiId() {
         return this.apiId;
     }
     /**
-     * API stage name of the associated API stage in a usage plan.
+     * @return API stage name of the associated API stage in a usage plan.
      * 
-    */
+     */
     public String stage() {
         return this.stage;
     }
     /**
-     * The throttling limits of the usage plan.
+     * @return The throttling limits of the usage plan.
      * 
-    */
+     */
     public List<UsagePlanApiStageThrottle> throttles() {
         return this.throttles == null ? List.of() : this.throttles;
     }

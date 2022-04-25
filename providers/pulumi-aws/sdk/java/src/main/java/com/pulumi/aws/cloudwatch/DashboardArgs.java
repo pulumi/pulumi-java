@@ -20,6 +20,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardBody", required=true)
     private Output<String> dashboardBody;
 
+    /**
+     * @return The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
+     * 
+     */
     public Output<String> dashboardBody() {
         return this.dashboardBody;
     }
@@ -31,6 +35,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName", required=true)
     private Output<String> dashboardName;
 
+    /**
+     * @return The name of the dashboard.
+     * 
+     */
     public Output<String> dashboardName() {
         return this.dashboardName;
     }
@@ -60,20 +68,44 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dashboardBody The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardBody(Output<String> dashboardBody) {
             $.dashboardBody = dashboardBody;
             return this;
         }
 
+        /**
+         * @param dashboardBody The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardBody(String dashboardBody) {
             return dashboardBody(Output.of(dashboardBody));
         }
 
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(Output<String> dashboardName) {
             $.dashboardName = dashboardName;
             return this;
         }
 
+        /**
+         * @param dashboardName The name of the dashboard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dashboardName(String dashboardName) {
             return dashboardName(Output.of(dashboardName));
         }

@@ -23,6 +23,10 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="logGroupName", required=true)
     private Output<String> logGroupName;
 
+    /**
+     * @return The name of the log group to associate the metric filter with.
+     * 
+     */
     public Output<String> logGroupName() {
         return this.logGroupName;
     }
@@ -34,6 +38,10 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metricTransformation", required=true)
     private Output<LogMetricFilterMetricTransformationArgs> metricTransformation;
 
+    /**
+     * @return A block defining collection of information needed to define how metric data gets emitted. See below.
+     * 
+     */
     public Output<LogMetricFilterMetricTransformationArgs> metricTransformation() {
         return this.metricTransformation;
     }
@@ -45,6 +53,10 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A name for the metric filter.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,11 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="pattern", required=true)
     private Output<String> pattern;
 
+    /**
+     * @return A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html)
+     * for extracting metric data out of ingested log events.
+     * 
+     */
     public Output<String> pattern() {
         return this.pattern;
     }
@@ -88,38 +105,88 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
             $ = new LogMetricFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName The name of the log group to associate the metric filter with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName The name of the log group to associate the metric filter with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }
 
+        /**
+         * @param metricTransformation A block defining collection of information needed to define how metric data gets emitted. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTransformation(Output<LogMetricFilterMetricTransformationArgs> metricTransformation) {
             $.metricTransformation = metricTransformation;
             return this;
         }
 
+        /**
+         * @param metricTransformation A block defining collection of information needed to define how metric data gets emitted. See below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
             return metricTransformation(Output.of(metricTransformation));
         }
 
+        /**
+         * @param name A name for the metric filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A name for the metric filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param pattern A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html)
+         * for extracting metric data out of ingested log events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(Output<String> pattern) {
             $.pattern = pattern;
             return this;
         }
 
+        /**
+         * @param pattern A valid [CloudWatch Logs filter pattern](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html)
+         * for extracting metric data out of ingested log events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pattern(String pattern) {
             return pattern(Output.of(pattern));
         }

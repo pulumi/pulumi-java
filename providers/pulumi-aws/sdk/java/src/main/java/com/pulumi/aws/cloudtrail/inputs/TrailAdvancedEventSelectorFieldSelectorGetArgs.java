@@ -23,6 +23,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="endsWiths")
     private @Nullable Output<List<String>> endsWiths;
 
+    /**
+     * @return A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+     * 
+     */
     public Optional<Output<List<String>>> endsWiths() {
         return Optional.ofNullable(this.endsWiths);
     }
@@ -34,6 +38,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="equals")
     private @Nullable Output<List<String>> equals;
 
+    /**
+     * @return A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+     * 
+     */
     public Optional<Output<List<String>>> equals_() {
         return Optional.ofNullable(this.equals);
     }
@@ -45,6 +53,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="field", required=true)
     private Output<String> field;
 
+    /**
+     * @return Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+     * 
+     */
     public Output<String> field() {
         return this.field;
     }
@@ -56,6 +68,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="notEndsWiths")
     private @Nullable Output<List<String>> notEndsWiths;
 
+    /**
+     * @return A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+     * 
+     */
     public Optional<Output<List<String>>> notEndsWiths() {
         return Optional.ofNullable(this.notEndsWiths);
     }
@@ -67,6 +83,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="notEquals")
     private @Nullable Output<List<String>> notEquals;
 
+    /**
+     * @return A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+     * 
+     */
     public Optional<Output<List<String>>> notEquals() {
         return Optional.ofNullable(this.notEquals);
     }
@@ -78,6 +98,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="notStartsWiths")
     private @Nullable Output<List<String>> notStartsWiths;
 
+    /**
+     * @return A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+     * 
+     */
     public Optional<Output<List<String>>> notStartsWiths() {
         return Optional.ofNullable(this.notStartsWiths);
     }
@@ -89,6 +113,10 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
     @Import(name="startsWiths")
     private @Nullable Output<List<String>> startsWiths;
 
+    /**
+     * @return A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+     * 
+     */
     public Optional<Output<List<String>>> startsWiths() {
         return Optional.ofNullable(this.startsWiths);
     }
@@ -123,89 +151,209 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends com.pu
             $ = new TrailAdvancedEventSelectorFieldSelectorGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endsWiths A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endsWiths(@Nullable Output<List<String>> endsWiths) {
             $.endsWiths = endsWiths;
             return this;
         }
 
+        /**
+         * @param endsWiths A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endsWiths(List<String> endsWiths) {
             return endsWiths(Output.of(endsWiths));
         }
 
+        /**
+         * @param endsWiths A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endsWiths(String... endsWiths) {
             return endsWiths(List.of(endsWiths));
         }
 
+        /**
+         * @param equals A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equals_(@Nullable Output<List<String>> equals) {
             $.equals = equals;
             return this;
         }
 
+        /**
+         * @param equals A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equals_(List<String> equals) {
             return equals_(Output.of(equals));
         }
 
+        /**
+         * @param equals A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder equals_(String... equals) {
             return equals_(List.of(equals));
         }
 
+        /**
+         * @param field Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(Output<String> field) {
             $.field = field;
             return this;
         }
 
+        /**
+         * @param field Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder field(String field) {
             return field(Output.of(field));
         }
 
+        /**
+         * @param notEndsWiths A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEndsWiths(@Nullable Output<List<String>> notEndsWiths) {
             $.notEndsWiths = notEndsWiths;
             return this;
         }
 
+        /**
+         * @param notEndsWiths A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEndsWiths(List<String> notEndsWiths) {
             return notEndsWiths(Output.of(notEndsWiths));
         }
 
+        /**
+         * @param notEndsWiths A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEndsWiths(String... notEndsWiths) {
             return notEndsWiths(List.of(notEndsWiths));
         }
 
+        /**
+         * @param notEquals A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEquals(@Nullable Output<List<String>> notEquals) {
             $.notEquals = notEquals;
             return this;
         }
 
+        /**
+         * @param notEquals A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEquals(List<String> notEquals) {
             return notEquals(Output.of(notEquals));
         }
 
+        /**
+         * @param notEquals A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notEquals(String... notEquals) {
             return notEquals(List.of(notEquals));
         }
 
+        /**
+         * @param notStartsWiths A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notStartsWiths(@Nullable Output<List<String>> notStartsWiths) {
             $.notStartsWiths = notStartsWiths;
             return this;
         }
 
+        /**
+         * @param notStartsWiths A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notStartsWiths(List<String> notStartsWiths) {
             return notStartsWiths(Output.of(notStartsWiths));
         }
 
+        /**
+         * @param notStartsWiths A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notStartsWiths(String... notStartsWiths) {
             return notStartsWiths(List.of(notStartsWiths));
         }
 
+        /**
+         * @param startsWiths A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startsWiths(@Nullable Output<List<String>> startsWiths) {
             $.startsWiths = startsWiths;
             return this;
         }
 
+        /**
+         * @param startsWiths A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startsWiths(List<String> startsWiths) {
             return startsWiths(Output.of(startsWiths));
         }
 
+        /**
+         * @param startsWiths A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startsWiths(String... startsWiths) {
             return startsWiths(List.of(startsWiths));
         }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecorderRecordingGroup {
-    /**
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
-     * 
-     */
+        /**
+         * @return Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
+         * 
+         */
     private final @Nullable Boolean allSupported;
-    /**
-     * Specifies whether AWS Config includes all supported types of *global resources* with the resources that it records. Requires `all_supported = true`. Conflicts with `resource_types`.
-     * 
-     */
+        /**
+         * @return Specifies whether AWS Config includes all supported types of *global resources* with the resources that it records. Requires `all_supported = true`. Conflicts with `resource_types`.
+         * 
+         */
     private final @Nullable Boolean includeGlobalResourceTypes;
-    /**
-     * A list that specifies the types of AWS resources for which AWS Config records configuration changes (for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`). See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types. In order to use this attribute, `all_supported` must be set to false.
-     * 
-     */
+        /**
+         * @return A list that specifies the types of AWS resources for which AWS Config records configuration changes (for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`). See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types. In order to use this attribute, `all_supported` must be set to false.
+         * 
+         */
     private final @Nullable List<String> resourceTypes;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class RecorderRecordingGroup {
     }
 
     /**
-     * Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
+     * @return Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> allSupported() {
         return Optional.ofNullable(this.allSupported);
     }
     /**
-     * Specifies whether AWS Config includes all supported types of *global resources* with the resources that it records. Requires `all_supported = true`. Conflicts with `resource_types`.
+     * @return Specifies whether AWS Config includes all supported types of *global resources* with the resources that it records. Requires `all_supported = true`. Conflicts with `resource_types`.
      * 
-    */
+     */
     public Optional<Boolean> includeGlobalResourceTypes() {
         return Optional.ofNullable(this.includeGlobalResourceTypes);
     }
     /**
-     * A list that specifies the types of AWS resources for which AWS Config records configuration changes (for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`). See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types. In order to use this attribute, `all_supported` must be set to false.
+     * @return A list that specifies the types of AWS resources for which AWS Config records configuration changes (for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`). See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types. In order to use this attribute, `all_supported` must be set to false.
      * 
-    */
+     */
     public List<String> resourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }

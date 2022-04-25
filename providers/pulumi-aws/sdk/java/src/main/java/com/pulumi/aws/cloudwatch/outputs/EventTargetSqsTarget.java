@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventTargetSqsTarget {
-    /**
-     * The FIFO message group ID to use as the target.
-     * 
-     */
+        /**
+         * @return The FIFO message group ID to use as the target.
+         * 
+         */
     private final @Nullable String messageGroupId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EventTargetSqsTarget {
     }
 
     /**
-     * The FIFO message group ID to use as the target.
+     * @return The FIFO message group ID to use as the target.
      * 
-    */
+     */
     public Optional<String> messageGroupId() {
         return Optional.ofNullable(this.messageGroupId);
     }

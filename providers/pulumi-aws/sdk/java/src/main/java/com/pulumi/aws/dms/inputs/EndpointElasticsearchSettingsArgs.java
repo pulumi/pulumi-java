@@ -23,6 +23,10 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     @Import(name="endpointUri", required=true)
     private Output<String> endpointUri;
 
+    /**
+     * @return Endpoint for the Elasticsearch cluster.
+     * 
+     */
     public Output<String> endpointUri() {
         return this.endpointUri;
     }
@@ -34,6 +38,10 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     @Import(name="errorRetryDuration")
     private @Nullable Output<Integer> errorRetryDuration;
 
+    /**
+     * @return Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+     * 
+     */
     public Optional<Output<Integer>> errorRetryDuration() {
         return Optional.ofNullable(this.errorRetryDuration);
     }
@@ -45,6 +53,10 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     @Import(name="fullLoadErrorPercentage")
     private @Nullable Output<Integer> fullLoadErrorPercentage;
 
+    /**
+     * @return Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+     * 
+     */
     public Optional<Output<Integer>> fullLoadErrorPercentage() {
         return Optional.ofNullable(this.fullLoadErrorPercentage);
     }
@@ -56,6 +68,10 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     @Import(name="serviceAccessRoleArn", required=true)
     private Output<String> serviceAccessRoleArn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+     * 
+     */
     public Output<String> serviceAccessRoleArn() {
         return this.serviceAccessRoleArn;
     }
@@ -87,38 +103,86 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
             $ = new EndpointElasticsearchSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointUri Endpoint for the Elasticsearch cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(Output<String> endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param endpointUri Endpoint for the Elasticsearch cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(String endpointUri) {
             return endpointUri(Output.of(endpointUri));
         }
 
+        /**
+         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorRetryDuration(@Nullable Output<Integer> errorRetryDuration) {
             $.errorRetryDuration = errorRetryDuration;
             return this;
         }
 
+        /**
+         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorRetryDuration(Integer errorRetryDuration) {
             return errorRetryDuration(Output.of(errorRetryDuration));
         }
 
+        /**
+         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadErrorPercentage(@Nullable Output<Integer> fullLoadErrorPercentage) {
             $.fullLoadErrorPercentage = fullLoadErrorPercentage;
             return this;
         }
 
+        /**
+         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadErrorPercentage(Integer fullLoadErrorPercentage) {
             return fullLoadErrorPercentage(Output.of(fullLoadErrorPercentage));
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(Output<String> serviceAccessRoleArn) {
             $.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
+        /**
+         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             return serviceAccessRoleArn(Output.of(serviceAccessRoleArn));
         }

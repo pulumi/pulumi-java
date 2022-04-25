@@ -27,6 +27,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cidrBlocks")
     private @Nullable Output<List<String>> cidrBlocks;
 
+    /**
+     * @return List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+     * 
+     */
     public Optional<Output<List<String>>> cidrBlocks() {
         return Optional.ofNullable(this.cidrBlocks);
     }
@@ -38,6 +42,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the rule.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fromPort", required=true)
     private Output<Integer> fromPort;
 
+    /**
+     * @return Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
+     * 
+     */
     public Output<Integer> fromPort() {
         return this.fromPort;
     }
@@ -60,6 +72,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6CidrBlocks")
     private @Nullable Output<List<String>> ipv6CidrBlocks;
 
+    /**
+     * @return List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+     * 
+     */
     public Optional<Output<List<String>>> ipv6CidrBlocks() {
         return Optional.ofNullable(this.ipv6CidrBlocks);
     }
@@ -71,6 +87,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="prefixListIds")
     private @Nullable Output<List<String>> prefixListIds;
 
+    /**
+     * @return List of Prefix List IDs.
+     * 
+     */
     public Optional<Output<List<String>>> prefixListIds() {
         return Optional.ofNullable(this.prefixListIds);
     }
@@ -82,6 +102,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="protocol", required=true)
     private Output<Either<String,ProtocolType>> protocol;
 
+    /**
+     * @return Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+     * 
+     */
     public Output<Either<String,ProtocolType>> protocol() {
         return this.protocol;
     }
@@ -93,6 +117,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupId", required=true)
     private Output<String> securityGroupId;
 
+    /**
+     * @return Security group to apply this rule to.
+     * 
+     */
     public Output<String> securityGroupId() {
         return this.securityGroupId;
     }
@@ -104,6 +132,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="self")
     private @Nullable Output<Boolean> self;
 
+    /**
+     * @return Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
+     * 
+     */
     public Optional<Output<Boolean>> self() {
         return Optional.ofNullable(this.self);
     }
@@ -115,6 +147,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceSecurityGroupId")
     private @Nullable Output<String> sourceSecurityGroupId;
 
+    /**
+     * @return Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
+     * 
+     */
     public Optional<Output<String>> sourceSecurityGroupId() {
         return Optional.ofNullable(this.sourceSecurityGroupId);
     }
@@ -126,6 +162,10 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="toPort", required=true)
     private Output<Integer> toPort;
 
+    /**
+     * @return End port (or ICMP code if protocol is &#34;icmp&#34;).
+     * 
+     */
     public Output<Integer> toPort() {
         return this.toPort;
     }
@@ -138,6 +178,11 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of rule being created. Valid options are `ingress` (inbound)
+     * or `egress` (outbound).
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -176,121 +221,285 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
             $ = new SecurityGroupRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlocks List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(@Nullable Output<List<String>> cidrBlocks) {
             $.cidrBlocks = cidrBlocks;
             return this;
         }
 
+        /**
+         * @param cidrBlocks List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(List<String> cidrBlocks) {
             return cidrBlocks(Output.of(cidrBlocks));
         }
 
+        /**
+         * @param cidrBlocks List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlocks(String... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
 
+        /**
+         * @param description Description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fromPort Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Output<Integer> fromPort) {
             $.fromPort = fromPort;
             return this;
         }
 
+        /**
+         * @param fromPort Start port (or ICMP type number if protocol is &#34;icmp&#34; or &#34;icmpv6&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fromPort(Integer fromPort) {
             return fromPort(Output.of(fromPort));
         }
 
+        /**
+         * @param ipv6CidrBlocks List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlocks(@Nullable Output<List<String>> ipv6CidrBlocks) {
             $.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
+        /**
+         * @param ipv6CidrBlocks List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlocks(List<String> ipv6CidrBlocks) {
             return ipv6CidrBlocks(Output.of(ipv6CidrBlocks));
         }
 
+        /**
+         * @param ipv6CidrBlocks List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CidrBlocks(String... ipv6CidrBlocks) {
             return ipv6CidrBlocks(List.of(ipv6CidrBlocks));
         }
 
+        /**
+         * @param prefixListIds List of Prefix List IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListIds(@Nullable Output<List<String>> prefixListIds) {
             $.prefixListIds = prefixListIds;
             return this;
         }
 
+        /**
+         * @param prefixListIds List of Prefix List IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListIds(List<String> prefixListIds) {
             return prefixListIds(Output.of(prefixListIds));
         }
 
+        /**
+         * @param prefixListIds List of Prefix List IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixListIds(String... prefixListIds) {
             return prefixListIds(List.of(prefixListIds));
         }
 
+        /**
+         * @param protocol Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<Either<String,ProtocolType>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,ProtocolType> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(ProtocolType protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param securityGroupId Security group to apply this rule to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
         }
 
+        /**
+         * @param securityGroupId Security group to apply this rule to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupId(String securityGroupId) {
             return securityGroupId(Output.of(securityGroupId));
         }
 
+        /**
+         * @param self Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder self(@Nullable Output<Boolean> self) {
             $.self = self;
             return this;
         }
 
+        /**
+         * @param self Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder self(Boolean self) {
             return self(Output.of(self));
         }
 
+        /**
+         * @param sourceSecurityGroupId Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupId(@Nullable Output<String> sourceSecurityGroupId) {
             $.sourceSecurityGroupId = sourceSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param sourceSecurityGroupId Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSecurityGroupId(String sourceSecurityGroupId) {
             return sourceSecurityGroupId(Output.of(sourceSecurityGroupId));
         }
 
+        /**
+         * @param toPort End port (or ICMP code if protocol is &#34;icmp&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Output<Integer> toPort) {
             $.toPort = toPort;
             return this;
         }
 
+        /**
+         * @param toPort End port (or ICMP code if protocol is &#34;icmp&#34;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder toPort(Integer toPort) {
             return toPort(Output.of(toPort));
         }
 
+        /**
+         * @param type Type of rule being created. Valid options are `ingress` (inbound)
+         * or `egress` (outbound).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of rule being created. Valid options are `ingress` (inbound)
+         * or `egress` (outbound).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfiguration {
-    /**
-     * Describes an application&#39;s checkpointing configuration.
-     * 
-     */
+        /**
+         * @return Describes an application&#39;s checkpointing configuration.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration;
-    /**
-     * Describes configuration parameters for CloudWatch logging for an application.
-     * 
-     */
+        /**
+         * @return Describes configuration parameters for CloudWatch logging for an application.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration;
-    /**
-     * Describes parameters for how an application executes multiple tasks simultaneously.
-     * 
-     */
+        /**
+         * @return Describes parameters for how an application executes multiple tasks simultaneously.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     /**
-     * Describes an application&#39;s checkpointing configuration.
+     * @return Describes an application&#39;s checkpointing configuration.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration> checkpointConfiguration() {
         return Optional.ofNullable(this.checkpointConfiguration);
     }
     /**
-     * Describes configuration parameters for CloudWatch logging for an application.
+     * @return Describes configuration parameters for CloudWatch logging for an application.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration> monitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
     /**
-     * Describes parameters for how an application executes multiple tasks simultaneously.
+     * @return Describes parameters for how an application executes multiple tasks simultaneously.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration> parallelismConfiguration() {
         return Optional.ofNullable(this.parallelismConfiguration);
     }

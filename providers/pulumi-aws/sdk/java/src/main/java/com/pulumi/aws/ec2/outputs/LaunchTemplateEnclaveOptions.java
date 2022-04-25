@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchTemplateEnclaveOptions {
-    /**
-     * If set to `true`, Nitro Enclaves will be enabled on the instance.
-     * 
-     */
+        /**
+         * @return If set to `true`, Nitro Enclaves will be enabled on the instance.
+         * 
+         */
     private final @Nullable Boolean enabled;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LaunchTemplateEnclaveOptions {
     }
 
     /**
-     * If set to `true`, Nitro Enclaves will be enabled on the instance.
+     * @return If set to `true`, Nitro Enclaves will be enabled on the instance.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

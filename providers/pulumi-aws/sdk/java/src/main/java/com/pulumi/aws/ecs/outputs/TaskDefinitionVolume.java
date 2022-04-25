@@ -14,31 +14,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskDefinitionVolume {
-    /**
-     * Configuration block to configure a docker volume. Detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block to configure a docker volume. Detailed below.
+         * 
+         */
     private final @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration;
-    /**
-     * Configuration block for an EFS volume. Detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block for an EFS volume. Detailed below.
+         * 
+         */
     private final @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration;
-    /**
-     * Configuration block for an FSX Windows File Server volume. Detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block for an FSX Windows File Server volume. Detailed below.
+         * 
+         */
     private final @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration;
-    /**
-     * Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
-     * 
-     */
+        /**
+         * @return Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
+         * 
+         */
     private final @Nullable String hostPath;
-    /**
-     * Name of the volume. This name is referenced in the `sourceVolume`
-     * parameter of container definition in the `mountPoints` section.
-     * 
-     */
+        /**
+         * @return Name of the volume. This name is referenced in the `sourceVolume`
+         * parameter of container definition in the `mountPoints` section.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -56,38 +56,38 @@ public final class TaskDefinitionVolume {
     }
 
     /**
-     * Configuration block to configure a docker volume. Detailed below.
+     * @return Configuration block to configure a docker volume. Detailed below.
      * 
-    */
+     */
     public Optional<TaskDefinitionVolumeDockerVolumeConfiguration> dockerVolumeConfiguration() {
         return Optional.ofNullable(this.dockerVolumeConfiguration);
     }
     /**
-     * Configuration block for an EFS volume. Detailed below.
+     * @return Configuration block for an EFS volume. Detailed below.
      * 
-    */
+     */
     public Optional<TaskDefinitionVolumeEfsVolumeConfiguration> efsVolumeConfiguration() {
         return Optional.ofNullable(this.efsVolumeConfiguration);
     }
     /**
-     * Configuration block for an FSX Windows File Server volume. Detailed below.
+     * @return Configuration block for an FSX Windows File Server volume. Detailed below.
      * 
-    */
+     */
     public Optional<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration> fsxWindowsFileServerVolumeConfiguration() {
         return Optional.ofNullable(this.fsxWindowsFileServerVolumeConfiguration);
     }
     /**
-     * Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
+     * @return Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
      * 
-    */
+     */
     public Optional<String> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
     /**
-     * Name of the volume. This name is referenced in the `sourceVolume`
+     * @return Name of the volume. This name is referenced in the `sourceVolume`
      * parameter of container definition in the `mountPoints` section.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

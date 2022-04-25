@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest {
-    /**
-     * The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
-     * 
-     */
+        /**
+         * @return The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
+         * 
+         */
     private final String catalogEncryptionMode;
-    /**
-     * The ARN of the AWS KMS key to use for encryption at rest.
-     * 
-     */
+        /**
+         * @return The ARN of the AWS KMS key to use for encryption at rest.
+         * 
+         */
     private final @Nullable String sseAwsKmsKeyId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     }
 
     /**
-     * The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
+     * @return The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
      * 
-    */
+     */
     public String catalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
     /**
-     * The ARN of the AWS KMS key to use for encryption at rest.
+     * @return The ARN of the AWS KMS key to use for encryption at rest.
      * 
-    */
+     */
     public Optional<String> sseAwsKmsKeyId() {
         return Optional.ofNullable(this.sseAwsKmsKeyId);
     }

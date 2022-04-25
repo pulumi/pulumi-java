@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationEnvironment {
-    /**
-     * Variable name.
-     * 
-     */
+        /**
+         * @return Variable name.
+         * 
+         */
     private final String key;
-    /**
-     * Set visibility of the variable value to `true` or `false`.
-     * 
-     */
+        /**
+         * @return Set visibility of the variable value to `true` or `false`.
+         * 
+         */
     private final @Nullable Boolean secure;
-    /**
-     * Variable value.
-     * 
-     */
+        /**
+         * @return Variable value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ApplicationEnvironment {
     }
 
     /**
-     * Variable name.
+     * @return Variable name.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Set visibility of the variable value to `true` or `false`.
+     * @return Set visibility of the variable value to `true` or `false`.
      * 
-    */
+     */
     public Optional<Boolean> secure() {
         return Optional.ofNullable(this.secure);
     }
     /**
-     * Variable value.
+     * @return Variable value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

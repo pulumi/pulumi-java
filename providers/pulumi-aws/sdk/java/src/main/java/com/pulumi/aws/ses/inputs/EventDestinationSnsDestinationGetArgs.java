@@ -20,6 +20,10 @@ public final class EventDestinationSnsDestinationGetArgs extends com.pulumi.reso
     @Import(name="topicArn", required=true)
     private Output<String> topicArn;
 
+    /**
+     * @return The ARN of the SNS topic
+     * 
+     */
     public Output<String> topicArn() {
         return this.topicArn;
     }
@@ -48,11 +52,23 @@ public final class EventDestinationSnsDestinationGetArgs extends com.pulumi.reso
             $ = new EventDestinationSnsDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param topicArn The ARN of the SNS topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(Output<String> topicArn) {
             $.topicArn = topicArn;
             return this;
         }
 
+        /**
+         * @param topicArn The ARN of the SNS topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicArn(String topicArn) {
             return topicArn(Output.of(topicArn));
         }

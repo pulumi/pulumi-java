@@ -25,6 +25,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock")
     private @Nullable String cidrBlock;
 
+    /**
+     * @return The cidr block of the desired VPC.
+     * 
+     */
     public Optional<String> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
@@ -37,6 +41,11 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="default")
     private @Nullable Boolean default_;
 
+    /**
+     * @return Boolean constraint on whether the desired VPC is
+     * the default VPC for the region.
+     * 
+     */
     public Optional<Boolean> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -48,6 +57,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dhcpOptionsId")
     private @Nullable String dhcpOptionsId;
 
+    /**
+     * @return The DHCP options id of the desired VPC.
+     * 
+     */
     public Optional<String> dhcpOptionsId() {
         return Optional.ofNullable(this.dhcpOptionsId);
     }
@@ -59,6 +72,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetVpcFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetVpcFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -70,6 +87,10 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The id of the specific VPC to retrieve.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -82,6 +103,11 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The current state of the desired VPC.
+     * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -94,6 +120,11 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags, each pair of which must exactly match
+     * a pair on the desired VPC.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -128,40 +159,91 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVpcArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrBlock The cidr block of the desired VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrBlock(@Nullable String cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
+        /**
+         * @param default_ Boolean constraint on whether the desired VPC is
+         * the default VPC for the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Boolean default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param dhcpOptionsId The DHCP options id of the desired VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetVpcFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetVpcFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param id The id of the specific VPC to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param state The current state of the desired VPC.
+         * Can be either `&#34;pending&#34;` or `&#34;available&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param tags A map of tags, each pair of which must exactly match
+         * a pair on the desired VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

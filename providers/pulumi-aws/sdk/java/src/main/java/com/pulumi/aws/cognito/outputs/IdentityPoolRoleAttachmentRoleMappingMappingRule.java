@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
-    /**
-     * The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
-     * 
-     */
+        /**
+         * @return The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
+         * 
+         */
     private final String claim;
-    /**
-     * The match condition that specifies how closely the claim value in the IdP token must match Value.
-     * 
-     */
+        /**
+         * @return The match condition that specifies how closely the claim value in the IdP token must match Value.
+         * 
+         */
     private final String matchType;
-    /**
-     * The role ARN.
-     * 
-     */
+        /**
+         * @return The role ARN.
+         * 
+         */
     private final String roleArn;
-    /**
-     * A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
-     * 
-     */
+        /**
+         * @return A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
     }
 
     /**
-     * The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
+     * @return The claim name that must be present in the token, for example, &#34;isAdmin&#34; or &#34;paid&#34;.
      * 
-    */
+     */
     public String claim() {
         return this.claim;
     }
     /**
-     * The match condition that specifies how closely the claim value in the IdP token must match Value.
+     * @return The match condition that specifies how closely the claim value in the IdP token must match Value.
      * 
-    */
+     */
     public String matchType() {
         return this.matchType;
     }
     /**
-     * The role ARN.
+     * @return The role ARN.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
+     * @return A brief string that the claim must match, for example, &#34;paid&#34; or &#34;yes&#34;.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

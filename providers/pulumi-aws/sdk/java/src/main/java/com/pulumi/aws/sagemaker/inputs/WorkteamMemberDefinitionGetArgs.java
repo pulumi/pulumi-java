@@ -23,6 +23,10 @@ public final class WorkteamMemberDefinitionGetArgs extends com.pulumi.resources.
     @Import(name="cognitoMemberDefinition")
     private @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs> cognitoMemberDefinition;
 
+    /**
+     * @return The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
+     * 
+     */
     public Optional<Output<WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs>> cognitoMemberDefinition() {
         return Optional.ofNullable(this.cognitoMemberDefinition);
     }
@@ -34,6 +38,10 @@ public final class WorkteamMemberDefinitionGetArgs extends com.pulumi.resources.
     @Import(name="oidcMemberDefinition")
     private @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionGetArgs> oidcMemberDefinition;
 
+    /**
+     * @return A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
+     * 
+     */
     public Optional<Output<WorkteamMemberDefinitionOidcMemberDefinitionGetArgs>> oidcMemberDefinition() {
         return Optional.ofNullable(this.oidcMemberDefinition);
     }
@@ -63,20 +71,44 @@ public final class WorkteamMemberDefinitionGetArgs extends com.pulumi.resources.
             $ = new WorkteamMemberDefinitionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cognitoMemberDefinition The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoMemberDefinition(@Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs> cognitoMemberDefinition) {
             $.cognitoMemberDefinition = cognitoMemberDefinition;
             return this;
         }
 
+        /**
+         * @param cognitoMemberDefinition The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cognitoMemberDefinition(WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs cognitoMemberDefinition) {
             return cognitoMemberDefinition(Output.of(cognitoMemberDefinition));
         }
 
+        /**
+         * @param oidcMemberDefinition A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcMemberDefinition(@Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionGetArgs> oidcMemberDefinition) {
             $.oidcMemberDefinition = oidcMemberDefinition;
             return this;
         }
 
+        /**
+         * @param oidcMemberDefinition A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oidcMemberDefinition(WorkteamMemberDefinitionOidcMemberDefinitionGetArgs oidcMemberDefinition) {
             return oidcMemberDefinition(Output.of(oidcMemberDefinition));
         }

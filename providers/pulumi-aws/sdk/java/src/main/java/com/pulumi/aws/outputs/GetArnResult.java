@@ -9,38 +9,38 @@ import java.util.Objects;
 
 @CustomType
 public final class GetArnResult {
-    /**
-     * The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
-     * 
-     */
+        /**
+         * @return The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
+         * 
+         */
     private final String account;
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The partition that the resource is in.
-     * 
-     */
+        /**
+         * @return The partition that the resource is in.
+         * 
+         */
     private final String partition;
-    /**
-     * The region the resource resides in.
-     * Note that the ARNs for some resources do not require a region, so this component might be omitted.
-     * 
-     */
+        /**
+         * @return The region the resource resides in.
+         * Note that the ARNs for some resources do not require a region, so this component might be omitted.
+         * 
+         */
     private final String region;
-    /**
-     * The content of this part of the ARN varies by service.
-     * It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
-     * 
-     */
+        /**
+         * @return The content of this part of the ARN varies by service.
+         * It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
+         * 
+         */
     private final String resource;
-    /**
-     * The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
-     * 
-     */
+        /**
+         * @return The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
+         * 
+         */
     private final String service;
 
     @CustomType.Constructor
@@ -62,9 +62,9 @@ public final class GetArnResult {
     }
 
     /**
-     * The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
+     * @return The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
      * 
-    */
+     */
     public String account() {
         return this.account;
     }
@@ -72,39 +72,39 @@ public final class GetArnResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The partition that the resource is in.
+     * @return The partition that the resource is in.
      * 
-    */
+     */
     public String partition() {
         return this.partition;
     }
     /**
-     * The region the resource resides in.
+     * @return The region the resource resides in.
      * Note that the ARNs for some resources do not require a region, so this component might be omitted.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * The content of this part of the ARN varies by service.
+     * @return The content of this part of the ARN varies by service.
      * It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
      * 
-    */
+     */
     public String resource() {
         return this.resource;
     }
     /**
-     * The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
+     * @return The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

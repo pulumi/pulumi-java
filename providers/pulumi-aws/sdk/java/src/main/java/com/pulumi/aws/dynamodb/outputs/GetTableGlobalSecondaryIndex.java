@@ -12,10 +12,10 @@ import java.util.Objects;
 @CustomType
 public final class GetTableGlobalSecondaryIndex {
     private final String hashKey;
-    /**
-     * The name of the DynamoDB table.
-     * 
-     */
+        /**
+         * @return The name of the DynamoDB table.
+         * 
+         */
     private final String name;
     private final List<String> nonKeyAttributes;
     private final String projectionType;
@@ -45,9 +45,9 @@ public final class GetTableGlobalSecondaryIndex {
         return this.hashKey;
     }
     /**
-     * The name of the DynamoDB table.
+     * @return The name of the DynamoDB table.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

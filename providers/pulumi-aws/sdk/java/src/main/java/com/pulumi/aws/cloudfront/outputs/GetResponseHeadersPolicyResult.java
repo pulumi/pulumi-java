@@ -13,32 +13,32 @@ import java.util.Objects;
 
 @CustomType
 public final class GetResponseHeadersPolicyResult {
-    /**
-     * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
-     * 
-     */
+        /**
+         * @return A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
+         * 
+         */
     private final String comment;
-    /**
-     * A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
-     * 
-     */
+        /**
+         * @return A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicyCorsConfig> corsConfigs;
-    /**
-     * Object that contains an attribute `items` that contains a list of Custom Headers See Custom Header for more information.
-     * 
-     */
+        /**
+         * @return Object that contains an attribute `items` that contains a list of Custom Headers See Custom Header for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs;
-    /**
-     * The current version of the response headers policy.
-     * 
-     */
+        /**
+         * @return The current version of the response headers policy.
+         * 
+         */
     private final String etag;
     private final String id;
     private final String name;
-    /**
-     * A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
-     * 
-     */
+        /**
+         * @return A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
+         * 
+         */
     private final List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs;
 
     @CustomType.Constructor
@@ -60,30 +60,30 @@ public final class GetResponseHeadersPolicyResult {
     }
 
     /**
-     * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
+     * @return A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
      * 
-    */
+     */
     public String comment() {
         return this.comment;
     }
     /**
-     * A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
+     * @return A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicyCorsConfig> corsConfigs() {
         return this.corsConfigs;
     }
     /**
-     * Object that contains an attribute `items` that contains a list of Custom Headers See Custom Header for more information.
+     * @return Object that contains an attribute `items` that contains a list of Custom Headers See Custom Header for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs() {
         return this.customHeadersConfigs;
     }
     /**
-     * The current version of the response headers policy.
+     * @return The current version of the response headers policy.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
@@ -94,9 +94,9 @@ public final class GetResponseHeadersPolicyResult {
         return this.name;
     }
     /**
-     * A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
+     * @return A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
-    */
+     */
     public List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs() {
         return this.securityHeadersConfigs;
     }

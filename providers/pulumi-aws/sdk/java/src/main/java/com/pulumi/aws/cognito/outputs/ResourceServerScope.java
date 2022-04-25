@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceServerScope {
-    /**
-     * The scope description.
-     * 
-     */
+        /**
+         * @return The scope description.
+         * 
+         */
     private final String scopeDescription;
-    /**
-     * The scope name.
-     * 
-     */
+        /**
+         * @return The scope name.
+         * 
+         */
     private final String scopeName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ResourceServerScope {
     }
 
     /**
-     * The scope description.
+     * @return The scope description.
      * 
-    */
+     */
     public String scopeDescription() {
         return this.scopeDescription;
     }
     /**
-     * The scope name.
+     * @return The scope name.
      * 
-    */
+     */
     public String scopeName() {
         return this.scopeName;
     }

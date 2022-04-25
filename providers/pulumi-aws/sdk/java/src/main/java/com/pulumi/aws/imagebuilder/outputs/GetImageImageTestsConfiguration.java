@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetImageImageTestsConfiguration {
-    /**
-     * Whether image tests are enabled.
-     * 
-     */
+        /**
+         * @return Whether image tests are enabled.
+         * 
+         */
     private final Boolean imageTestsEnabled;
-    /**
-     * Number of minutes before image tests time out.
-     * 
-     */
+        /**
+         * @return Number of minutes before image tests time out.
+         * 
+         */
     private final Integer timeoutMinutes;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GetImageImageTestsConfiguration {
     }
 
     /**
-     * Whether image tests are enabled.
+     * @return Whether image tests are enabled.
      * 
-    */
+     */
     public Boolean imageTestsEnabled() {
         return this.imageTestsEnabled;
     }
     /**
-     * Number of minutes before image tests time out.
+     * @return Number of minutes before image tests time out.
      * 
-    */
+     */
     public Integer timeoutMinutes() {
         return this.timeoutMinutes;
     }

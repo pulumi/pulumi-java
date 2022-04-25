@@ -21,6 +21,10 @@ public final class GetAccessPointRootDirectory extends com.pulumi.resources.Invo
     @Import(name="creationInfos", required=true)
     private List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
 
+    /**
+     * @return Single element list containing information on the creation permissions of the directory
+     * 
+     */
     public List<GetAccessPointRootDirectoryCreationInfo> creationInfos() {
         return this.creationInfos;
     }
@@ -32,6 +36,10 @@ public final class GetAccessPointRootDirectory extends com.pulumi.resources.Invo
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return Path exposed as the root directory
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -61,15 +69,33 @@ public final class GetAccessPointRootDirectory extends com.pulumi.resources.Invo
             $ = new GetAccessPointRootDirectory(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationInfos Single element list containing information on the creation permissions of the directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationInfos(List<GetAccessPointRootDirectoryCreationInfo> creationInfos) {
             $.creationInfos = creationInfos;
             return this;
         }
 
+        /**
+         * @param creationInfos Single element list containing information on the creation permissions of the directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationInfos(GetAccessPointRootDirectoryCreationInfo... creationInfos) {
             return creationInfos(List.of(creationInfos));
         }
 
+        /**
+         * @param path Path exposed as the root directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterServerSideEncryption {
-    /**
-     * Whether to enable encryption at rest. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether to enable encryption at rest. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean enabled;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ClusterServerSideEncryption {
     }
 
     /**
-     * Whether to enable encryption at rest. Defaults to `false`.
+     * @return Whether to enable encryption at rest. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourcePermission {
-    /**
-     * Set of IAM actions to grant or revoke permissions on. Max of 16 items.
-     * 
-     */
+        /**
+         * @return Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+         * 
+         */
     private final List<String> actions;
-    /**
-     * The Amazon Resource Name (ARN) of the principal.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the principal.
+         * 
+         */
     private final String principal;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DataSourcePermission {
     }
 
     /**
-     * Set of IAM actions to grant or revoke permissions on. Max of 16 items.
+     * @return Set of IAM actions to grant or revoke permissions on. Max of 16 items.
      * 
-    */
+     */
     public List<String> actions() {
         return this.actions;
     }
     /**
-     * The Amazon Resource Name (ARN) of the principal.
+     * @return The Amazon Resource Name (ARN) of the principal.
      * 
-    */
+     */
     public String principal() {
         return this.principal;
     }

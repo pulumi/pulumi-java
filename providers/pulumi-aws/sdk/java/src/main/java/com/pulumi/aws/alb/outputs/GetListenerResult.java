@@ -17,10 +17,10 @@ public final class GetListenerResult {
     private final String arn;
     private final String certificateArn;
     private final List<GetListenerDefaultAction> defaultActions;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String loadBalancerArn;
     private final Integer port;
@@ -65,9 +65,9 @@ public final class GetListenerResult {
         return this.defaultActions;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

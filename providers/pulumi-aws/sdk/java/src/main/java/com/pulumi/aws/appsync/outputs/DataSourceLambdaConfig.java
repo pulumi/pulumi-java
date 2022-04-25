@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceLambdaConfig {
-    /**
-     * The ARN for the Lambda function.
-     * 
-     */
+        /**
+         * @return The ARN for the Lambda function.
+         * 
+         */
     private final String functionArn;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataSourceLambdaConfig {
     }
 
     /**
-     * The ARN for the Lambda function.
+     * @return The ARN for the Lambda function.
      * 
-    */
+     */
     public String functionArn() {
         return this.functionArn;
     }

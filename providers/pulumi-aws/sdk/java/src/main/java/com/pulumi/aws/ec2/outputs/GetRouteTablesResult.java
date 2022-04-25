@@ -15,15 +15,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRouteTablesResult {
     private final @Nullable List<GetRouteTablesFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A set of all the route table ids found. This data source will fail if none are found.
-     * 
-     */
+        /**
+         * @return A set of all the route table ids found. This data source will fail if none are found.
+         * 
+         */
     private final List<String> ids;
     private final Map<String,String> tags;
     private final @Nullable String vpcId;
@@ -46,16 +46,16 @@ public final class GetRouteTablesResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A set of all the route table ids found. This data source will fail if none are found.
+     * @return A set of all the route table ids found. This data source will fail if none are found.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

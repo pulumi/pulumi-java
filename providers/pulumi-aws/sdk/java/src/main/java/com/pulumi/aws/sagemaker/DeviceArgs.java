@@ -21,6 +21,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="device", required=true)
     private Output<DeviceDeviceArgs> device;
 
+    /**
+     * @return The device to register with SageMaker Edge Manager. See Device details below.
+     * 
+     */
     public Output<DeviceDeviceArgs> device() {
         return this.device;
     }
@@ -32,6 +36,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName", required=true)
     private Output<String> deviceFleetName;
 
+    /**
+     * @return The name of the Device Fleet.
+     * 
+     */
     public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
@@ -61,20 +69,44 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param device The device to register with SageMaker Edge Manager. See Device details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(Output<DeviceDeviceArgs> device) {
             $.device = device;
             return this;
         }
 
+        /**
+         * @param device The device to register with SageMaker Edge Manager. See Device details below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder device(DeviceDeviceArgs device) {
             return device(Output.of(device));
         }
 
+        /**
+         * @param deviceFleetName The name of the Device Fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(Output<String> deviceFleetName) {
             $.deviceFleetName = deviceFleetName;
             return this;
         }
 
+        /**
+         * @param deviceFleetName The name of the Device Fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceFleetName(String deviceFleetName) {
             return deviceFleetName(Output.of(deviceFleetName));
         }

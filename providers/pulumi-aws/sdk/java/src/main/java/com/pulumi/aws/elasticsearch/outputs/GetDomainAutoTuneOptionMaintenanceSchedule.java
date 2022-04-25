@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainAutoTuneOptionMaintenanceSchedule {
-    /**
-     * A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
-     * 
-     */
+        /**
+         * @return A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+         * 
+         */
     private final String cronExpressionForRecurrence;
-    /**
-     * Configuration block for the duration of the Auto-Tune maintenance window.
-     * 
-     */
+        /**
+         * @return Configuration block for the duration of the Auto-Tune maintenance window.
+         * 
+         */
     private final List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
-    /**
-     * Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
-     * 
-     */
+        /**
+         * @return Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+         * 
+         */
     private final String startAt;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule {
     }
 
     /**
-     * A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
+     * @return A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
      * 
-    */
+     */
     public String cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
     /**
-     * Configuration block for the duration of the Auto-Tune maintenance window.
+     * @return Configuration block for the duration of the Auto-Tune maintenance window.
      * 
-    */
+     */
     public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations() {
         return this.durations;
     }
     /**
-     * Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
+     * @return Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-    */
+     */
     public String startAt() {
         return this.startAt;
     }

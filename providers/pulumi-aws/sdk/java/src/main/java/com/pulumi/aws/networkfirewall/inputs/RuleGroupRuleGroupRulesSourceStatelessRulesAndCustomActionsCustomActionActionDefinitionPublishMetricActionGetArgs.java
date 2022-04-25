@@ -21,6 +21,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     @Import(name="dimensions", required=true)
     private Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions;
 
+    /**
+     * @return Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
+     * 
+     */
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions() {
         return this.dimensions;
     }
@@ -49,15 +53,33 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
             $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dimensions Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs>> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs> dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param dimensions Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionGetArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }

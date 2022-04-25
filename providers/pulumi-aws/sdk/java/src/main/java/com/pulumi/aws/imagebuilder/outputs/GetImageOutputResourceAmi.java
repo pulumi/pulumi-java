@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetImageOutputResourceAmi {
-    /**
-     * Account identifier of the AMI.
-     * 
-     */
+        /**
+         * @return Account identifier of the AMI.
+         * 
+         */
     private final String accountId;
-    /**
-     * Description of the AMI.
-     * 
-     */
+        /**
+         * @return Description of the AMI.
+         * 
+         */
     private final String description;
-    /**
-     * Identifier of the AMI.
-     * 
-     */
+        /**
+         * @return Identifier of the AMI.
+         * 
+         */
     private final String image;
-    /**
-     * Name of the AMI.
-     * 
-     */
+        /**
+         * @return Name of the AMI.
+         * 
+         */
     private final String name;
-    /**
-     * Region of the AMI.
-     * 
-     */
+        /**
+         * @return Region of the AMI.
+         * 
+         */
     private final String region;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetImageOutputResourceAmi {
     }
 
     /**
-     * Account identifier of the AMI.
+     * @return Account identifier of the AMI.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * Description of the AMI.
+     * @return Description of the AMI.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Identifier of the AMI.
+     * @return Identifier of the AMI.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * Name of the AMI.
+     * @return Name of the AMI.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Region of the AMI.
+     * @return Region of the AMI.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }

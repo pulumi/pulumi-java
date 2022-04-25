@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCoipPoolsResult {
     private final @Nullable List<GetCoipPoolsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of COIP Pool Identifiers
-     * 
-     */
+        /**
+         * @return Set of COIP Pool Identifiers
+         * 
+         */
     private final List<String> poolIds;
     private final Map<String,String> tags;
 
@@ -42,16 +42,16 @@ public final class GetCoipPoolsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of COIP Pool Identifiers
+     * @return Set of COIP Pool Identifiers
      * 
-    */
+     */
     public List<String> poolIds() {
         return this.poolIds;
     }

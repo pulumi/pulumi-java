@@ -16,77 +16,77 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVolumeResult {
-    /**
-     * The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
-     * 
-     */
+        /**
+         * @return The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+         * 
+         */
     private final String arn;
-    /**
-     * The AZ where the EBS volume exists.
-     * 
-     */
+        /**
+         * @return The AZ where the EBS volume exists.
+         * 
+         */
     private final String availabilityZone;
-    /**
-     * Whether the disk is encrypted.
-     * 
-     */
+        /**
+         * @return Whether the disk is encrypted.
+         * 
+         */
     private final Boolean encrypted;
     private final @Nullable List<GetVolumeFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The amount of IOPS for the disk.
-     * 
-     */
+        /**
+         * @return The amount of IOPS for the disk.
+         * 
+         */
     private final Integer iops;
-    /**
-     * The ARN for the KMS encryption key.
-     * 
-     */
+        /**
+         * @return The ARN for the KMS encryption key.
+         * 
+         */
     private final String kmsKeyId;
     private final @Nullable Boolean mostRecent;
-    /**
-     * (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
-     * 
-     */
+        /**
+         * @return (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
+         * 
+         */
     private final Boolean multiAttachEnabled;
-    /**
-     * The Amazon Resource Name (ARN) of the Outpost.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Outpost.
+         * 
+         */
     private final String outpostArn;
-    /**
-     * The size of the drive in GiBs.
-     * 
-     */
+        /**
+         * @return The size of the drive in GiBs.
+         * 
+         */
     private final Integer size;
-    /**
-     * The snapshot_id the EBS volume is based off.
-     * 
-     */
+        /**
+         * @return The snapshot_id the EBS volume is based off.
+         * 
+         */
     private final String snapshotId;
-    /**
-     * A map of tags for the resource.
-     * 
-     */
+        /**
+         * @return A map of tags for the resource.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The throughput that the volume supports, in MiB/s.
-     * 
-     */
+        /**
+         * @return The throughput that the volume supports, in MiB/s.
+         * 
+         */
     private final Integer throughput;
-    /**
-     * The volume ID (e.g., vol-59fcb34e).
-     * 
-     */
+        /**
+         * @return The volume ID (e.g., vol-59fcb34e).
+         * 
+         */
     private final String volumeId;
-    /**
-     * The type of EBS volume.
-     * 
-     */
+        /**
+         * @return The type of EBS volume.
+         * 
+         */
     private final String volumeType;
 
     @CustomType.Constructor
@@ -126,23 +126,23 @@ public final class GetVolumeResult {
     }
 
     /**
-     * The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
+     * @return The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The AZ where the EBS volume exists.
+     * @return The AZ where the EBS volume exists.
      * 
-    */
+     */
     public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
-     * Whether the disk is encrypted.
+     * @return Whether the disk is encrypted.
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
@@ -150,23 +150,23 @@ public final class GetVolumeResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The amount of IOPS for the disk.
+     * @return The amount of IOPS for the disk.
      * 
-    */
+     */
     public Integer iops() {
         return this.iops;
     }
     /**
-     * The ARN for the KMS encryption key.
+     * @return The ARN for the KMS encryption key.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -174,58 +174,58 @@ public final class GetVolumeResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
+     * @return (Optional) Specifies whether Amazon EBS Multi-Attach is enabled.
      * 
-    */
+     */
     public Boolean multiAttachEnabled() {
         return this.multiAttachEnabled;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Outpost.
+     * @return The Amazon Resource Name (ARN) of the Outpost.
      * 
-    */
+     */
     public String outpostArn() {
         return this.outpostArn;
     }
     /**
-     * The size of the drive in GiBs.
+     * @return The size of the drive in GiBs.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * The snapshot_id the EBS volume is based off.
+     * @return The snapshot_id the EBS volume is based off.
      * 
-    */
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The throughput that the volume supports, in MiB/s.
+     * @return The throughput that the volume supports, in MiB/s.
      * 
-    */
+     */
     public Integer throughput() {
         return this.throughput;
     }
     /**
-     * The volume ID (e.g., vol-59fcb34e).
+     * @return The volume ID (e.g., vol-59fcb34e).
      * 
-    */
+     */
     public String volumeId() {
         return this.volumeId;
     }
     /**
-     * The type of EBS volume.
+     * @return The type of EBS volume.
      * 
-    */
+     */
     public String volumeType() {
         return this.volumeType;
     }

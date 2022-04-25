@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeploymentGroupLoadBalancerInfoTargetGroupInfo {
-    /**
-     * The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
-     * 
-     */
+        /**
+         * @return The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupInfo {
     }
 
     /**
-     * The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
+     * @return The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

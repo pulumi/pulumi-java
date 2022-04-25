@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CrawlerMongodbTarget {
-    /**
-     * The name of the connection to use to connect to the Delta table target.
-     * 
-     */
+        /**
+         * @return The name of the connection to use to connect to the Delta table target.
+         * 
+         */
     private final String connectionName;
-    /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
-     * 
-     */
+        /**
+         * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
+         * 
+         */
     private final String path;
-    /**
-     * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
-     * 
-     */
+        /**
+         * @return Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
+         * 
+         */
     private final @Nullable Boolean scanAll;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class CrawlerMongodbTarget {
     }
 
     /**
-     * The name of the connection to use to connect to the Delta table target.
+     * @return The name of the connection to use to connect to the Delta table target.
      * 
-    */
+     */
     public String connectionName() {
         return this.connectionName;
     }
     /**
-     * The path of the Amazon DocumentDB or MongoDB target (database/collection).
+     * @return The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
+     * @return Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
      * 
-    */
+     */
     public Optional<Boolean> scanAll() {
         return Optional.ofNullable(this.scanAll);
     }

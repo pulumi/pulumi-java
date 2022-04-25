@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IpGroupRule {
-    /**
-     * The description.
-     * 
-     */
+        /**
+         * @return The description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
-     * 
-     */
+        /**
+         * @return The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
+         * 
+         */
     private final String source;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class IpGroupRule {
     }
 
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
+     * @return The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
      * 
-    */
+     */
     public String source() {
         return this.source;
     }

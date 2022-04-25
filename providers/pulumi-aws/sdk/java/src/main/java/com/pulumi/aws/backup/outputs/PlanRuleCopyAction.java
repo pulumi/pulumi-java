@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PlanRuleCopyAction {
-    /**
-     * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
-     * 
-     */
+        /**
+         * @return An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
+         * 
+         */
     private final String destinationVaultArn;
-    /**
-     * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-     * 
-     */
+        /**
+         * @return The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
+         * 
+         */
     private final @Nullable PlanRuleCopyActionLifecycle lifecycle;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class PlanRuleCopyAction {
     }
 
     /**
-     * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
+     * @return An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
      * 
-    */
+     */
     public String destinationVaultArn() {
         return this.destinationVaultArn;
     }
     /**
-     * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
+     * @return The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
-    */
+     */
     public Optional<PlanRuleCopyActionLifecycle> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }

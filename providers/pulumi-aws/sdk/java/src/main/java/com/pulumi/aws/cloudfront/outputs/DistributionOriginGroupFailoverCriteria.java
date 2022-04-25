@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionOriginGroupFailoverCriteria {
-    /**
-     * A list of HTTP status codes for the origin group
-     * 
-     */
+        /**
+         * @return A list of HTTP status codes for the origin group
+         * 
+         */
     private final List<Integer> statusCodes;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class DistributionOriginGroupFailoverCriteria {
     }
 
     /**
-     * A list of HTTP status codes for the origin group
+     * @return A list of HTTP status codes for the origin group
      * 
-    */
+     */
     public List<Integer> statusCodes() {
         return this.statusCodes;
     }

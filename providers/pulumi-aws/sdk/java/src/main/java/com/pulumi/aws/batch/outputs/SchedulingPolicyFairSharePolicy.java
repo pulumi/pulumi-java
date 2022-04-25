@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SchedulingPolicyFairSharePolicy {
-    /**
-     * A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
-     * 
-     */
+        /**
+         * @return A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+         * 
+         */
     private final @Nullable Integer computeReservation;
     private final @Nullable Integer shareDecaySeconds;
-    /**
-     * One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
-     * 
-     */
+        /**
+         * @return One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+         * 
+         */
     private final @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
     @CustomType.Constructor
@@ -36,9 +36,9 @@ public final class SchedulingPolicyFairSharePolicy {
     }
 
     /**
-     * A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
+     * @return A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
      * 
-    */
+     */
     public Optional<Integer> computeReservation() {
         return Optional.ofNullable(this.computeReservation);
     }
@@ -46,9 +46,9 @@ public final class SchedulingPolicyFairSharePolicy {
         return Optional.ofNullable(this.shareDecaySeconds);
     }
     /**
-     * One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
+     * @return One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
      * 
-    */
+     */
     public List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions() {
         return this.shareDistributions == null ? List.of() : this.shareDistributions;
     }

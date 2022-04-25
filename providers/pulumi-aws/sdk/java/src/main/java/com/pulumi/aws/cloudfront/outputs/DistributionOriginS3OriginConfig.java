@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class DistributionOriginS3OriginConfig {
-    /**
-     * The [CloudFront origin access
-     * identity][5] to associate with the origin.
-     * 
-     */
+        /**
+         * @return The [CloudFront origin access
+         * identity][5] to associate with the origin.
+         * 
+         */
     private final String originAccessIdentity;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class DistributionOriginS3OriginConfig {
     }
 
     /**
-     * The [CloudFront origin access
+     * @return The [CloudFront origin access
      * identity][5] to associate with the origin.
      * 
-    */
+     */
     public String originAccessIdentity() {
         return this.originAccessIdentity;
     }

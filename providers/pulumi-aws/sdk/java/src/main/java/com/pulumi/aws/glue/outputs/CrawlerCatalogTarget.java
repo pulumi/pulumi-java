@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CrawlerCatalogTarget {
-    /**
-     * The name of the Glue database to be synchronized.
-     * 
-     */
+        /**
+         * @return The name of the Glue database to be synchronized.
+         * 
+         */
     private final String databaseName;
-    /**
-     * A list of catalog tables to be synchronized.
-     * 
-     */
+        /**
+         * @return A list of catalog tables to be synchronized.
+         * 
+         */
     private final List<String> tables;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class CrawlerCatalogTarget {
     }
 
     /**
-     * The name of the Glue database to be synchronized.
+     * @return The name of the Glue database to be synchronized.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * A list of catalog tables to be synchronized.
+     * @return A list of catalog tables to be synchronized.
      * 
-    */
+     */
     public List<String> tables() {
         return this.tables;
     }

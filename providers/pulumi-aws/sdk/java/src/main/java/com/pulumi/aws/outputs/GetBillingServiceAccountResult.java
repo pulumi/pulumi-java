@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBillingServiceAccountResult {
-    /**
-     * The ARN of the AWS billing service account.
-     * 
-     */
+        /**
+         * @return The ARN of the AWS billing service account.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetBillingServiceAccountResult {
     }
 
     /**
-     * The ARN of the AWS billing service account.
+     * @return The ARN of the AWS billing service account.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

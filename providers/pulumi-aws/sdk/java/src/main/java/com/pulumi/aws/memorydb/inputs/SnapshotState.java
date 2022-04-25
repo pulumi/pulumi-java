@@ -25,6 +25,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return The ARN of the snapshot.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -36,6 +40,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfigurations")
     private @Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations;
 
+    /**
+     * @return The configuration of the cluster from which the snapshot was taken.
+     * 
+     */
     public Optional<Output<List<SnapshotClusterConfigurationGetArgs>>> clusterConfigurations() {
         return Optional.ofNullable(this.clusterConfigurations);
     }
@@ -47,6 +55,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return Name of the MemoryDB cluster to take a snapshot of.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -58,6 +70,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return ARN of the KMS key used to encrypt the snapshot at rest.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -69,6 +85,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the cluster.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -91,6 +115,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -102,6 +130,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,6 +145,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tagsAll() {
         return Optional.ofNullable(this.tagsAll);
     }
@@ -149,87 +185,201 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param clusterConfigurations The configuration of the cluster from which the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfigurations(@Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations) {
             $.clusterConfigurations = clusterConfigurations;
             return this;
         }
 
+        /**
+         * @param clusterConfigurations The configuration of the cluster from which the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfigurations(List<SnapshotClusterConfigurationGetArgs> clusterConfigurations) {
             return clusterConfigurations(Output.of(clusterConfigurations));
         }
 
+        /**
+         * @param clusterConfigurations The configuration of the cluster from which the snapshot was taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfigurations(SnapshotClusterConfigurationGetArgs... clusterConfigurations) {
             return clusterConfigurations(List.of(clusterConfigurations));
         }
 
+        /**
+         * @param clusterName Name of the MemoryDB cluster to take a snapshot of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of the MemoryDB cluster to take a snapshot of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param kmsKeyArn ARN of the KMS key used to encrypt the snapshot at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn ARN of the KMS key used to encrypt the snapshot at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param name Name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param source Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
             $.tagsAll = tagsAll;
             return this;
         }
 
+        /**
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
         }

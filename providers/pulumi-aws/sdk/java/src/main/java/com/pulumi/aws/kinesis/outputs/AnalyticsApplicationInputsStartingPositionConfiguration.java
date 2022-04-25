@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalyticsApplicationInputsStartingPositionConfiguration {
-    /**
-     * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
-     * 
-     */
+        /**
+         * @return The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+         * 
+         */
     private final @Nullable String startingPosition;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AnalyticsApplicationInputsStartingPositionConfiguration {
     }
 
     /**
-     * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
+     * @return The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
-    */
+     */
     public Optional<String> startingPosition() {
         return Optional.ofNullable(this.startingPosition);
     }

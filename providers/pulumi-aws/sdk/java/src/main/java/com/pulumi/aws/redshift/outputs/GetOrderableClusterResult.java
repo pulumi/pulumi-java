@@ -11,17 +11,17 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOrderableClusterResult {
-    /**
-     * List of Availability Zone names where the Redshit Cluster is available.
-     * 
-     */
+        /**
+         * @return List of Availability Zone names where the Redshit Cluster is available.
+         * 
+         */
     private final List<String> availabilityZones;
     private final String clusterType;
     private final String clusterVersion;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String nodeType;
     private final @Nullable List<String> preferredNodeTypes;
@@ -43,9 +43,9 @@ public final class GetOrderableClusterResult {
     }
 
     /**
-     * List of Availability Zone names where the Redshit Cluster is available.
+     * @return List of Availability Zone names where the Redshit Cluster is available.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
@@ -56,9 +56,9 @@ public final class GetOrderableClusterResult {
         return this.clusterVersion;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

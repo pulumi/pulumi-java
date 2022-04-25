@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUserResult {
-    /**
-     * The Amazon Resource Name (ARN) assigned by AWS for this user.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) assigned by AWS for this user.
+         * 
+         */
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Path in which this user was created.
-     * 
-     */
+        /**
+         * @return Path in which this user was created.
+         * 
+         */
     private final String path;
-    /**
-     * The ARN of the policy that is used to set the permissions boundary for the user.
-     * 
-     */
+        /**
+         * @return The ARN of the policy that is used to set the permissions boundary for the user.
+         * 
+         */
     private final String permissionsBoundary;
-    /**
-     * Map of key-value pairs associated with the user.
-     * 
-     */
+        /**
+         * @return Map of key-value pairs associated with the user.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The unique ID assigned by AWS for this user.
-     * 
-     */
+        /**
+         * @return The unique ID assigned by AWS for this user.
+         * 
+         */
     private final String userId;
-    /**
-     * The name associated to this User
-     * 
-     */
+        /**
+         * @return The name associated to this User
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class GetUserResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) assigned by AWS for this user.
+     * @return The Amazon Resource Name (ARN) assigned by AWS for this user.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Path in which this user was created.
+     * @return Path in which this user was created.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The ARN of the policy that is used to set the permissions boundary for the user.
+     * @return The ARN of the policy that is used to set the permissions boundary for the user.
      * 
-    */
+     */
     public String permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
-     * Map of key-value pairs associated with the user.
+     * @return Map of key-value pairs associated with the user.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The unique ID assigned by AWS for this user.
+     * @return The unique ID assigned by AWS for this user.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }
     /**
-     * The name associated to this User
+     * @return The name associated to this User
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

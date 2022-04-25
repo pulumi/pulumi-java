@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserPoolClientTokenValidityUnits {
-    /**
-     * Time unit in for the value in `access_token_validity`, defaults to `hours`.
-     * 
-     */
+        /**
+         * @return Time unit in for the value in `access_token_validity`, defaults to `hours`.
+         * 
+         */
     private final @Nullable String accessToken;
-    /**
-     * Time unit in for the value in `id_token_validity`, defaults to `hours`.
-     * 
-     */
+        /**
+         * @return Time unit in for the value in `id_token_validity`, defaults to `hours`.
+         * 
+         */
     private final @Nullable String idToken;
-    /**
-     * Time unit in for the value in `refresh_token_validity`, defaults to `days`.
-     * 
-     */
+        /**
+         * @return Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+         * 
+         */
     private final @Nullable String refreshToken;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class UserPoolClientTokenValidityUnits {
     }
 
     /**
-     * Time unit in for the value in `access_token_validity`, defaults to `hours`.
+     * @return Time unit in for the value in `access_token_validity`, defaults to `hours`.
      * 
-    */
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
-     * Time unit in for the value in `id_token_validity`, defaults to `hours`.
+     * @return Time unit in for the value in `id_token_validity`, defaults to `hours`.
      * 
-    */
+     */
     public Optional<String> idToken() {
         return Optional.ofNullable(this.idToken);
     }
     /**
-     * Time unit in for the value in `refresh_token_validity`, defaults to `days`.
+     * @return Time unit in for the value in `refresh_token_validity`, defaults to `days`.
      * 
-    */
+     */
     public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BudgetActionSubscriber {
-    /**
-     * The address that AWS sends budget notifications to, either an SNS topic or an email.
-     * 
-     */
+        /**
+         * @return The address that AWS sends budget notifications to, either an SNS topic or an email.
+         * 
+         */
     private final String address;
-    /**
-     * The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
-     * 
-     */
+        /**
+         * @return The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
+         * 
+         */
     private final String subscriptionType;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BudgetActionSubscriber {
     }
 
     /**
-     * The address that AWS sends budget notifications to, either an SNS topic or an email.
+     * @return The address that AWS sends budget notifications to, either an SNS topic or an email.
      * 
-    */
+     */
     public String address() {
         return this.address;
     }
     /**
-     * The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
+     * @return The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
      * 
-    */
+     */
     public String subscriptionType() {
         return this.subscriptionType;
     }

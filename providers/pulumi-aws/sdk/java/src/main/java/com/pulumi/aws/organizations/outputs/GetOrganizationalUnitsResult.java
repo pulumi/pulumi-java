@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetOrganizationalUnitsResult {
-    /**
-     * List of child organizational units, which have the following attributes:
-     * 
-     */
+        /**
+         * @return List of child organizational units, which have the following attributes:
+         * 
+         */
     private final List<GetOrganizationalUnitsChildren> childrens;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String parentId;
 
@@ -34,16 +34,16 @@ public final class GetOrganizationalUnitsResult {
     }
 
     /**
-     * List of child organizational units, which have the following attributes:
+     * @return List of child organizational units, which have the following attributes:
      * 
-    */
+     */
     public List<GetOrganizationalUnitsChildren> childrens() {
         return this.childrens;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

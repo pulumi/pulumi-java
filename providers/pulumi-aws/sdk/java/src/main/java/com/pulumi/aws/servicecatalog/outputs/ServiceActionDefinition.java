@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceActionDefinition {
-    /**
-     * ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
-     * 
-     */
+        /**
+         * @return ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
+         * 
+         */
     private final @Nullable String assumeRole;
-    /**
-     * Name of the SSM document. For example, `AWS-RestartEC2Instance`. If you are using a shared SSM document, you must provide the ARN instead of the name.
-     * 
-     */
+        /**
+         * @return Name of the SSM document. For example, `AWS-RestartEC2Instance`. If you are using a shared SSM document, you must provide the ARN instead of the name.
+         * 
+         */
     private final String name;
-    /**
-     * List of parameters in JSON format. For example: `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TARGET\&#34;}]` or `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TEXT_VALUE\&#34;}]`.
-     * 
-     */
+        /**
+         * @return List of parameters in JSON format. For example: `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TARGET\&#34;}]` or `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TEXT_VALUE\&#34;}]`.
+         * 
+         */
     private final @Nullable String parameters;
-    /**
-     * Service action definition type. Valid value is `SSM_AUTOMATION`. Default is `SSM_AUTOMATION`.
-     * 
-     */
+        /**
+         * @return Service action definition type. Valid value is `SSM_AUTOMATION`. Default is `SSM_AUTOMATION`.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * SSM document version. For example, `1`.
-     * 
-     */
+        /**
+         * @return SSM document version. For example, `1`.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ServiceActionDefinition {
     }
 
     /**
-     * ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
+     * @return ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
      * 
-    */
+     */
     public Optional<String> assumeRole() {
         return Optional.ofNullable(this.assumeRole);
     }
     /**
-     * Name of the SSM document. For example, `AWS-RestartEC2Instance`. If you are using a shared SSM document, you must provide the ARN instead of the name.
+     * @return Name of the SSM document. For example, `AWS-RestartEC2Instance`. If you are using a shared SSM document, you must provide the ARN instead of the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of parameters in JSON format. For example: `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TARGET\&#34;}]` or `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TEXT_VALUE\&#34;}]`.
+     * @return List of parameters in JSON format. For example: `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TARGET\&#34;}]` or `[{\&#34;Name\&#34;:\&#34;InstanceId\&#34;,\&#34;Type\&#34;:\&#34;TEXT_VALUE\&#34;}]`.
      * 
-    */
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * Service action definition type. Valid value is `SSM_AUTOMATION`. Default is `SSM_AUTOMATION`.
+     * @return Service action definition type. Valid value is `SSM_AUTOMATION`. Default is `SSM_AUTOMATION`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * SSM document version. For example, `1`.
+     * @return SSM document version. For example, `1`.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -21,6 +21,10 @@ public final class RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs extends com
     @Import(name="unit", required=true)
     private Output<String> unit;
 
+    /**
+     * @return Retry unit. Valid values: `ms`, `s`.
+     * 
+     */
     public Output<String> unit() {
         return this.unit;
     }
@@ -32,6 +36,10 @@ public final class RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs extends com
     @Import(name="value", required=true)
     private Output<Integer> value;
 
+    /**
+     * @return Retry value.
+     * 
+     */
     public Output<Integer> value() {
         return this.value;
     }
@@ -61,20 +69,44 @@ public final class RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs extends com
             $ = new RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param unit Retry unit. Valid values: `ms`, `s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit Retry unit. Valid values: `ms`, `s`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }
 
+        /**
+         * @param value Retry value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Integer> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Retry value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Integer value) {
             return value(Output.of(value));
         }

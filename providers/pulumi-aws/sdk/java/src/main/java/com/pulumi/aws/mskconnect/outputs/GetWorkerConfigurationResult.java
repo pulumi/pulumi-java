@@ -10,31 +10,31 @@ import java.util.Objects;
 
 @CustomType
 public final class GetWorkerConfigurationResult {
-    /**
-     * the Amazon Resource Name (ARN) of the worker configuration.
-     * 
-     */
+        /**
+         * @return the Amazon Resource Name (ARN) of the worker configuration.
+         * 
+         */
     private final String arn;
-    /**
-     * a summary description of the worker configuration.
-     * 
-     */
+        /**
+         * @return a summary description of the worker configuration.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * an ID of the latest successfully created revision of the worker configuration.
-     * 
-     */
+        /**
+         * @return an ID of the latest successfully created revision of the worker configuration.
+         * 
+         */
     private final Integer latestRevision;
     private final String name;
-    /**
-     * contents of connect-distributed.properties file.
-     * 
-     */
+        /**
+         * @return contents of connect-distributed.properties file.
+         * 
+         */
     private final String propertiesFileContent;
 
     @CustomType.Constructor
@@ -54,30 +54,30 @@ public final class GetWorkerConfigurationResult {
     }
 
     /**
-     * the Amazon Resource Name (ARN) of the worker configuration.
+     * @return the Amazon Resource Name (ARN) of the worker configuration.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * a summary description of the worker configuration.
+     * @return a summary description of the worker configuration.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * an ID of the latest successfully created revision of the worker configuration.
+     * @return an ID of the latest successfully created revision of the worker configuration.
      * 
-    */
+     */
     public Integer latestRevision() {
         return this.latestRevision;
     }
@@ -85,9 +85,9 @@ public final class GetWorkerConfigurationResult {
         return this.name;
     }
     /**
-     * contents of connect-distributed.properties file.
+     * @return contents of connect-distributed.properties file.
      * 
-    */
+     */
     public String propertiesFileContent() {
         return this.propertiesFileContent;
     }

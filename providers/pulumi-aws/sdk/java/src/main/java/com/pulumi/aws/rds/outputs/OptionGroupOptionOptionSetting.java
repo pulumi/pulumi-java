@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class OptionGroupOptionOptionSetting {
-    /**
-     * The Name of the setting.
-     * 
-     */
+        /**
+         * @return The Name of the setting.
+         * 
+         */
     private final String name;
-    /**
-     * The Value of the setting.
-     * 
-     */
+        /**
+         * @return The Value of the setting.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class OptionGroupOptionOptionSetting {
     }
 
     /**
-     * The Name of the setting.
+     * @return The Name of the setting.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Value of the setting.
+     * @return The Value of the setting.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

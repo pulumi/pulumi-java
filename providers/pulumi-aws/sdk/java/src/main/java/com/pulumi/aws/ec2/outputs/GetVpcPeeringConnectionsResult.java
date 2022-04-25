@@ -14,15 +14,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVpcPeeringConnectionsResult {
     private final @Nullable List<GetVpcPeeringConnectionsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The IDs of the VPC Peering Connections.
-     * 
-     */
+        /**
+         * @return The IDs of the VPC Peering Connections.
+         * 
+         */
     private final List<String> ids;
     private final Map<String,String> tags;
 
@@ -42,16 +42,16 @@ public final class GetVpcPeeringConnectionsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The IDs of the VPC Peering Connections.
+     * @return The IDs of the VPC Peering Connections.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

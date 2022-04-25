@@ -21,6 +21,10 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskNode")
     private @Nullable String diskNode;
 
+    /**
+     * @return The device node of the local disk to retrieve. For example, `/dev/sdb`.
+     * 
+     */
     public Optional<String> diskNode() {
         return Optional.ofNullable(this.diskNode);
     }
@@ -32,6 +36,10 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskPath")
     private @Nullable String diskPath;
 
+    /**
+     * @return The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
+     * 
+     */
     public Optional<String> diskPath() {
         return Optional.ofNullable(this.diskPath);
     }
@@ -43,6 +51,10 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="gatewayArn", required=true)
     private String gatewayArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the gateway.
+     * 
+     */
     public String gatewayArn() {
         return this.gatewayArn;
     }
@@ -73,16 +85,34 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLocalDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskNode The device node of the local disk to retrieve. For example, `/dev/sdb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskNode(@Nullable String diskNode) {
             $.diskNode = diskNode;
             return this;
         }
 
+        /**
+         * @param diskPath The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskPath(@Nullable String diskPath) {
             $.diskPath = diskPath;
             return this;
         }
 
+        /**
+         * @param gatewayArn The Amazon Resource Name (ARN) of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gatewayArn(String gatewayArn) {
             $.gatewayArn = gatewayArn;
             return this;

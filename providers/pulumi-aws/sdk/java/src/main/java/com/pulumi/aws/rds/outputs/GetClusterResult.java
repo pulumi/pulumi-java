@@ -31,10 +31,10 @@ public final class GetClusterResult {
     private final String hostedZoneId;
     private final Boolean iamDatabaseAuthenticationEnabled;
     private final List<String> iamRoles;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String kmsKeyId;
     private final String masterUsername;
@@ -164,9 +164,9 @@ public final class GetClusterResult {
         return this.iamRoles;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

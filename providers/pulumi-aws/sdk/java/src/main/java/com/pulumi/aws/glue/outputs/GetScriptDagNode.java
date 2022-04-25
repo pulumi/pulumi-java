@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScriptDagNode {
-    /**
-     * Nested configuration an argument or property of a node. Defined below.
-     * 
-     */
+        /**
+         * @return Nested configuration an argument or property of a node. Defined below.
+         * 
+         */
     private final List<GetScriptDagNodeArg> args;
-    /**
-     * A node identifier that is unique within the node&#39;s graph.
-     * 
-     */
+        /**
+         * @return A node identifier that is unique within the node&#39;s graph.
+         * 
+         */
     private final String id;
-    /**
-     * The line number of the node.
-     * 
-     */
+        /**
+         * @return The line number of the node.
+         * 
+         */
     private final @Nullable Integer lineNumber;
-    /**
-     * The type of node this is.
-     * 
-     */
+        /**
+         * @return The type of node this is.
+         * 
+         */
     private final String nodeType;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class GetScriptDagNode {
     }
 
     /**
-     * Nested configuration an argument or property of a node. Defined below.
+     * @return Nested configuration an argument or property of a node. Defined below.
      * 
-    */
+     */
     public List<GetScriptDagNodeArg> args() {
         return this.args;
     }
     /**
-     * A node identifier that is unique within the node&#39;s graph.
+     * @return A node identifier that is unique within the node&#39;s graph.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The line number of the node.
+     * @return The line number of the node.
      * 
-    */
+     */
     public Optional<Integer> lineNumber() {
         return Optional.ofNullable(this.lineNumber);
     }
     /**
-     * The type of node this is.
+     * @return The type of node this is.
      * 
-    */
+     */
     public String nodeType() {
         return this.nodeType;
     }

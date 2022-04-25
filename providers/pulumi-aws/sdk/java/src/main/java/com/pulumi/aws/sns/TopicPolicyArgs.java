@@ -20,6 +20,10 @@ public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return The ARN of the SNS topic
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -31,6 +35,10 @@ public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
     private Output<String> policy;
 
+    /**
+     * @return The fully-formed AWS policy as JSON.
+     * 
+     */
     public Output<String> policy() {
         return this.policy;
     }
@@ -60,20 +68,44 @@ public final class TopicPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TopicPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the SNS topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn The ARN of the SNS topic
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param policy The fully-formed AWS policy as JSON.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy The fully-formed AWS policy as JSON.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }

@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie {
-    /**
-     * A list of item names (`cookies`, `headers`, or `query_strings`).
-     * 
-     */
+        /**
+         * @return A list of item names (`cookies`, `headers`, or `query_strings`).
+         * 
+         */
     private final List<String> items;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     }
 
     /**
-     * A list of item names (`cookies`, `headers`, or `query_strings`).
+     * @return A list of item names (`cookies`, `headers`, or `query_strings`).
      * 
-    */
+     */
     public List<String> items() {
         return this.items;
     }

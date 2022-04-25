@@ -11,36 +11,36 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLogGroupResult {
-    /**
-     * The ARN of the Cloudwatch log group
-     * 
-     */
+        /**
+         * @return The ARN of the Cloudwatch log group
+         * 
+         */
     private final String arn;
-    /**
-     * The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
-     * 
-     */
+        /**
+         * @return The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+         * 
+         */
     private final Integer creationTime;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The ARN of the KMS Key to use when encrypting log data.
-     * 
-     */
+        /**
+         * @return The ARN of the KMS Key to use when encrypting log data.
+         * 
+         */
     private final String kmsKeyId;
     private final String name;
-    /**
-     * The number of days log events retained in the specified log group.
-     * 
-     */
+        /**
+         * @return The number of days log events retained in the specified log group.
+         * 
+         */
     private final Integer retentionInDays;
-    /**
-     * A map of tags to assign to the resource.
-     * 
-     */
+        /**
+         * @return A map of tags to assign to the resource.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -62,30 +62,30 @@ public final class GetLogGroupResult {
     }
 
     /**
-     * The ARN of the Cloudwatch log group
+     * @return The ARN of the Cloudwatch log group
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
+     * @return The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
      * 
-    */
+     */
     public Integer creationTime() {
         return this.creationTime;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARN of the KMS Key to use when encrypting log data.
+     * @return The ARN of the KMS Key to use when encrypting log data.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -93,16 +93,16 @@ public final class GetLogGroupResult {
         return this.name;
     }
     /**
-     * The number of days log events retained in the specified log group.
+     * @return The number of days log events retained in the specified log group.
      * 
-    */
+     */
     public Integer retentionInDays() {
         return this.retentionInDays;
     }
     /**
-     * A map of tags to assign to the resource.
+     * @return A map of tags to assign to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

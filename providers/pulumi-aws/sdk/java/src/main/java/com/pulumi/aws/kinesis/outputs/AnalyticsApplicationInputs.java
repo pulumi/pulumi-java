@@ -18,50 +18,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalyticsApplicationInputs {
-    /**
-     * The ARN of the Kinesis Analytics Application.
-     * 
-     */
+        /**
+         * @return The ARN of the Kinesis Analytics Application.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
-     * See Kinesis Firehose below for more details.
-     * 
-     */
+        /**
+         * @return The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+         * See Kinesis Firehose below for more details.
+         * 
+         */
     private final @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose;
-    /**
-     * The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
-     * See Kinesis Stream below for more details.
-     * 
-     */
+        /**
+         * @return The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+         * See Kinesis Stream below for more details.
+         * 
+         */
     private final @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream;
-    /**
-     * The Name Prefix to use when creating an in-application stream.
-     * 
-     */
+        /**
+         * @return The Name Prefix to use when creating an in-application stream.
+         * 
+         */
     private final String namePrefix;
-    /**
-     * The number of Parallel in-application streams to create.
-     * See Parallelism below for more details.
-     * 
-     */
+        /**
+         * @return The number of Parallel in-application streams to create.
+         * See Parallelism below for more details.
+         * 
+         */
     private final @Nullable AnalyticsApplicationInputsParallelism parallelism;
-    /**
-     * The Processing Configuration to transform records as they are received from the stream.
-     * See Processing Configuration below for more details.
-     * 
-     */
+        /**
+         * @return The Processing Configuration to transform records as they are received from the stream.
+         * See Processing Configuration below for more details.
+         * 
+         */
     private final @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration;
-    /**
-     * The Schema format of the data in the streaming source. See Source Schema below for more details.
-     * 
-     */
+        /**
+         * @return The Schema format of the data in the streaming source. See Source Schema below for more details.
+         * 
+         */
     private final AnalyticsApplicationInputsSchema schema;
-    /**
-     * The point at which the application starts processing records from the streaming source.
-     * See Starting Position Configuration below for more details.
-     * 
-     */
+        /**
+         * @return The point at which the application starts processing records from the streaming source.
+         * See Starting Position Configuration below for more details.
+         * 
+         */
     private final @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations;
     private final @Nullable List<String> streamNames;
 
@@ -88,63 +88,63 @@ public final class AnalyticsApplicationInputs {
     }
 
     /**
-     * The ARN of the Kinesis Analytics Application.
+     * @return The ARN of the Kinesis Analytics Application.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+     * @return The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
      * See Kinesis Firehose below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationInputsKinesisFirehose> kinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
     /**
-     * The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+     * @return The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
      * See Kinesis Stream below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationInputsKinesisStream> kinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
     /**
-     * The Name Prefix to use when creating an in-application stream.
+     * @return The Name Prefix to use when creating an in-application stream.
      * 
-    */
+     */
     public String namePrefix() {
         return this.namePrefix;
     }
     /**
-     * The number of Parallel in-application streams to create.
+     * @return The number of Parallel in-application streams to create.
      * See Parallelism below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationInputsParallelism> parallelism() {
         return Optional.ofNullable(this.parallelism);
     }
     /**
-     * The Processing Configuration to transform records as they are received from the stream.
+     * @return The Processing Configuration to transform records as they are received from the stream.
      * See Processing Configuration below for more details.
      * 
-    */
+     */
     public Optional<AnalyticsApplicationInputsProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
-     * The Schema format of the data in the streaming source. See Source Schema below for more details.
+     * @return The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
-    */
+     */
     public AnalyticsApplicationInputsSchema schema() {
         return this.schema;
     }
     /**
-     * The point at which the application starts processing records from the streaming source.
+     * @return The point at which the application starts processing records from the streaming source.
      * See Starting Position Configuration below for more details.
      * 
-    */
+     */
     public List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? List.of() : this.startingPositionConfigurations;
     }

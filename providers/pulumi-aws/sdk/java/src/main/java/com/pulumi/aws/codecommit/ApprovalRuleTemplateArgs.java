@@ -22,6 +22,10 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return The content of the approval rule template. Maximum of 3000 characters.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -33,6 +37,10 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the approval rule template. Maximum of 1000 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -44,6 +52,10 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for the approval rule template. Maximum of 100 characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,29 +86,65 @@ public final class ApprovalRuleTemplateArgs extends com.pulumi.resources.Resourc
             $ = new ApprovalRuleTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The content of the approval rule template. Maximum of 3000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The content of the approval rule template. Maximum of 3000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param description The description of the approval rule template. Maximum of 1000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the approval rule template. Maximum of 1000 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name for the approval rule template. Maximum of 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for the approval rule template. Maximum of 100 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

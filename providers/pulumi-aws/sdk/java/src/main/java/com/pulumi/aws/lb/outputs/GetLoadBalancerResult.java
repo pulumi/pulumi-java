@@ -25,10 +25,10 @@ public final class GetLoadBalancerResult {
     private final Boolean enableDeletionProtection;
     private final Boolean enableHttp2;
     private final Boolean enableWafFailOpen;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final Integer idleTimeout;
     private final Boolean internal;
@@ -121,9 +121,9 @@ public final class GetLoadBalancerResult {
         return this.enableWafFailOpen;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

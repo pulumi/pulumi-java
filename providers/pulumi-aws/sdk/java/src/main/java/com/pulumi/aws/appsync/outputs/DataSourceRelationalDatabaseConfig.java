@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataSourceRelationalDatabaseConfig {
-    /**
-     * The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
-     * 
-     */
+        /**
+         * @return The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
+         * 
+         */
     private final @Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig;
-    /**
-     * Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
-     * 
-     */
+        /**
+         * @return Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
+         * 
+         */
     private final @Nullable String sourceType;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class DataSourceRelationalDatabaseConfig {
     }
 
     /**
-     * The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
+     * @return The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
      * 
-    */
+     */
     public Optional<DataSourceRelationalDatabaseConfigHttpEndpointConfig> httpEndpointConfig() {
         return Optional.ofNullable(this.httpEndpointConfig);
     }
     /**
-     * Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
+     * @return Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
      * 
-    */
+     */
     public Optional<String> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }

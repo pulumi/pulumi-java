@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludesAnd {
-    /**
-     * A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
-     * 
-     */
+        /**
+         * @return A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
+         * 
+         */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm simpleScopeTerm;
-    /**
-     * A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
-     * 
-     */
+        /**
+         * @return A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
+         * 
+         */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAnd {
     }
 
     /**
-     * A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
+     * @return A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
      * 
-    */
+     */
     public Optional<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm> simpleScopeTerm() {
         return Optional.ofNullable(this.simpleScopeTerm);
     }
     /**
-     * A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
+     * @return A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
      * 
-    */
+     */
     public Optional<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm> tagScopeTerm() {
         return Optional.ofNullable(this.tagScopeTerm);
     }

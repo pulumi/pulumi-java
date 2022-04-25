@@ -19,6 +19,10 @@ public final class GetPromptArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
     private String instanceId;
 
+    /**
+     * @return Reference to the hosting Amazon Connect Instance
+     * 
+     */
     public String instanceId() {
         return this.instanceId;
     }
@@ -30,6 +34,10 @@ public final class GetPromptArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Returns information on a specific Prompt by name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetPromptArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPromptArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceId Reference to the hosting Amazon Connect Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param name Returns information on a specific Prompt by name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

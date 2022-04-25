@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatement {
-    /**
-     * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
-     * 
-     */
+        /**
+         * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+         * 
+         */
     private final List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatement> statements;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     }
 
     /**
-     * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatement> statements() {
         return this.statements;
     }

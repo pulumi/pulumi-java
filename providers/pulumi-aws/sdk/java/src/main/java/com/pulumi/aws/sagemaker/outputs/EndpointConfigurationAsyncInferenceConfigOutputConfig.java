@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
-    /**
-     * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
-     * 
-     */
+        /**
+         * @return The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+         * 
+         */
     private final @Nullable String kmsKeyId;
-    /**
-     * Specifies the configuration for notifications of inference results for asynchronous inference.
-     * 
-     */
+        /**
+         * @return Specifies the configuration for notifications of inference results for asynchronous inference.
+         * 
+         */
     private final @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig;
-    /**
-     * The Amazon S3 location to upload inference responses to.
-     * 
-     */
+        /**
+         * @return The Amazon S3 location to upload inference responses to.
+         * 
+         */
     private final String s3OutputPath;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
     }
 
     /**
-     * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
+     * @return The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * Specifies the configuration for notifications of inference results for asynchronous inference.
+     * @return Specifies the configuration for notifications of inference results for asynchronous inference.
      * 
-    */
+     */
     public Optional<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
     /**
-     * The Amazon S3 location to upload inference responses to.
+     * @return The Amazon S3 location to upload inference responses to.
      * 
-    */
+     */
     public String s3OutputPath() {
         return this.s3OutputPath;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension {
-    /**
-     * The name of the policy. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The name of the policy. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String name;
-    /**
-     * Value of the dimension.
-     * 
-     */
+        /**
+         * @return Value of the dimension.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     }
 
     /**
-     * The name of the policy. Must be between 1 and 255 characters in length.
+     * @return The name of the policy. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value of the dimension.
+     * @return Value of the dimension.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

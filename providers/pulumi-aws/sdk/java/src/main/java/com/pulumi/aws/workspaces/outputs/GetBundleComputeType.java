@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBundleComputeType {
-    /**
-     * The name of the bundle. You cannot combine this parameter with `bundle_id`.
-     * 
-     */
+        /**
+         * @return The name of the bundle. You cannot combine this parameter with `bundle_id`.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetBundleComputeType {
     }
 
     /**
-     * The name of the bundle. You cannot combine this parameter with `bundle_id`.
+     * @return The name of the bundle. You cannot combine this parameter with `bundle_id`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

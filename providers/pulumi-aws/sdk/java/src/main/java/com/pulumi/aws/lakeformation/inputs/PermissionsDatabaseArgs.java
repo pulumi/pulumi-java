@@ -22,6 +22,10 @@ public final class PermissionsDatabaseArgs extends com.pulumi.resources.Resource
     @Import(name="catalogId")
     private @Nullable Output<String> catalogId;
 
+    /**
+     * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
+     * 
+     */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
@@ -33,6 +37,10 @@ public final class PermissionsDatabaseArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the table resource.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -62,20 +70,44 @@ public final class PermissionsDatabaseArgs extends com.pulumi.resources.Resource
             $ = new PermissionsDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(@Nullable Output<String> catalogId) {
             $.catalogId = catalogId;
             return this;
         }
 
+        /**
+         * @param catalogId Identifier for the Data Catalog. By default, it is the account ID of the caller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the table resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

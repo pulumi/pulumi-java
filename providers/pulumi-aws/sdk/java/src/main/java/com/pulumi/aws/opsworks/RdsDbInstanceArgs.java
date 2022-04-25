@@ -20,6 +20,10 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbPassword", required=true)
     private Output<String> dbPassword;
 
+    /**
+     * @return A db password
+     * 
+     */
     public Output<String> dbPassword() {
         return this.dbPassword;
     }
@@ -31,6 +35,10 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbUser", required=true)
     private Output<String> dbUser;
 
+    /**
+     * @return A db username
+     * 
+     */
     public Output<String> dbUser() {
         return this.dbUser;
     }
@@ -42,6 +50,10 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rdsDbInstanceArn", required=true)
     private Output<String> rdsDbInstanceArn;
 
+    /**
+     * @return The db instance to register for this stack. Changing this will force a new resource.
+     * 
+     */
     public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
     }
@@ -53,6 +65,10 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackId", required=true)
     private Output<String> stackId;
 
+    /**
+     * @return The stack to register a db instance for. Changing this will force a new resource.
+     * 
+     */
     public Output<String> stackId() {
         return this.stackId;
     }
@@ -84,38 +100,86 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RdsDbInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dbPassword A db password
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbPassword(Output<String> dbPassword) {
             $.dbPassword = dbPassword;
             return this;
         }
 
+        /**
+         * @param dbPassword A db password
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbPassword(String dbPassword) {
             return dbPassword(Output.of(dbPassword));
         }
 
+        /**
+         * @param dbUser A db username
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbUser(Output<String> dbUser) {
             $.dbUser = dbUser;
             return this;
         }
 
+        /**
+         * @param dbUser A db username
+         * 
+         * @return builder
+         * 
+         */
         public Builder dbUser(String dbUser) {
             return dbUser(Output.of(dbUser));
         }
 
+        /**
+         * @param rdsDbInstanceArn The db instance to register for this stack. Changing this will force a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdsDbInstanceArn(Output<String> rdsDbInstanceArn) {
             $.rdsDbInstanceArn = rdsDbInstanceArn;
             return this;
         }
 
+        /**
+         * @param rdsDbInstanceArn The db instance to register for this stack. Changing this will force a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
             return rdsDbInstanceArn(Output.of(rdsDbInstanceArn));
         }
 
+        /**
+         * @param stackId The stack to register a db instance for. Changing this will force a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(Output<String> stackId) {
             $.stackId = stackId;
             return this;
         }
 
+        /**
+         * @param stackId The stack to register a db instance for. Changing this will force a new resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackId(String stackId) {
             return stackId(Output.of(stackId));
         }

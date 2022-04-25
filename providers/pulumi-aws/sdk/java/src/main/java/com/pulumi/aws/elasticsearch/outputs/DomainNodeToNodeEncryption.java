@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DomainNodeToNodeEncryption {
-    /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
-     * 
-     */
+        /**
+         * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DomainNodeToNodeEncryption {
     }
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

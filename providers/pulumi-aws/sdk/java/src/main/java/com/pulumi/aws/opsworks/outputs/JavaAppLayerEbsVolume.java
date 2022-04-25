@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JavaAppLayerEbsVolume {
     private final @Nullable Boolean encrypted;
-    /**
-     * For PIOPS volumes, the IOPS per disk.
-     * 
-     */
+        /**
+         * @return For PIOPS volumes, the IOPS per disk.
+         * 
+         */
     private final @Nullable Integer iops;
-    /**
-     * The path to mount the EBS volume on the layer&#39;s instances.
-     * 
-     */
+        /**
+         * @return The path to mount the EBS volume on the layer&#39;s instances.
+         * 
+         */
     private final String mountPoint;
-    /**
-     * The number of disks to use for the EBS volume.
-     * 
-     */
+        /**
+         * @return The number of disks to use for the EBS volume.
+         * 
+         */
     private final Integer numberOfDisks;
-    /**
-     * The RAID level to use for the volume.
-     * 
-     */
+        /**
+         * @return The RAID level to use for the volume.
+         * 
+         */
     private final @Nullable String raidLevel;
-    /**
-     * The size of the volume in gigabytes.
-     * 
-     */
+        /**
+         * @return The size of the volume in gigabytes.
+         * 
+         */
     private final Integer size;
-    /**
-     * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
-     * 
-     */
+        /**
+         * @return The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -67,44 +67,44 @@ public final class JavaAppLayerEbsVolume {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * For PIOPS volumes, the IOPS per disk.
+     * @return For PIOPS volumes, the IOPS per disk.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * The path to mount the EBS volume on the layer&#39;s instances.
+     * @return The path to mount the EBS volume on the layer&#39;s instances.
      * 
-    */
+     */
     public String mountPoint() {
         return this.mountPoint;
     }
     /**
-     * The number of disks to use for the EBS volume.
+     * @return The number of disks to use for the EBS volume.
      * 
-    */
+     */
     public Integer numberOfDisks() {
         return this.numberOfDisks;
     }
     /**
-     * The RAID level to use for the volume.
+     * @return The RAID level to use for the volume.
      * 
-    */
+     */
     public Optional<String> raidLevel() {
         return Optional.ofNullable(this.raidLevel);
     }
     /**
-     * The size of the volume in gigabytes.
+     * @return The size of the volume in gigabytes.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
+     * @return The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

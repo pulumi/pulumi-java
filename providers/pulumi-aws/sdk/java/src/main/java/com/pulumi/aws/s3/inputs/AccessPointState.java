@@ -26,6 +26,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the AWS provider.
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -37,6 +41,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The alias of the S3 Access Point.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -48,6 +56,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name (ARN) of the S3 Access Point.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -59,6 +71,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
+    /**
+     * @return Name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
+     * 
+     */
     public Optional<Output<String>> bucket() {
         return Optional.ofNullable(this.bucket);
     }
@@ -71,6 +87,11 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
+     * Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t supported.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -82,6 +103,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoints")
     private @Nullable Output<Map<String,String>> endpoints;
 
+    /**
+     * @return The VPC endpoints for the S3 Access Point.
+     * 
+     */
     public Optional<Output<Map<String,String>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -93,6 +118,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasPublicAccessPolicy")
     private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
+    /**
+     * @return Indicates whether this access point currently has a policy that allows public access.
+     * 
+     */
     public Optional<Output<Boolean>> hasPublicAccessPolicy() {
         return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
@@ -104,6 +133,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name you want to assign to this access point.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +148,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkOrigin")
     private @Nullable Output<String> networkOrigin;
 
+    /**
+     * @return Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn&#39;t allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
+     * 
+     */
     public Optional<Output<String>> networkOrigin() {
         return Optional.ofNullable(this.networkOrigin);
     }
@@ -126,6 +163,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<String> policy;
 
+    /**
+     * @return Valid JSON document that specifies the policy that you want to apply to this access point. Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = &#34;&#34;`) _will not_ delete the policy since it could have been set by `aws.s3control.AccessPointPolicy`. To remove the `policy`, set it to `&#34;{}&#34;` (an empty JSON document).
+     * 
+     */
     public Optional<Output<String>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -137,6 +178,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccessBlockConfiguration")
     private @Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration;
 
+    /**
+     * @return Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
+     * 
+     */
     public Optional<Output<AccessPointPublicAccessBlockConfigurationGetArgs>> publicAccessBlockConfiguration() {
         return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
@@ -148,6 +193,10 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
     private @Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration;
 
+    /**
+     * @return Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
+     * 
+     */
     public Optional<Output<AccessPointVpcConfigurationGetArgs>> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
@@ -187,110 +236,256 @@ public final class AccessPointState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessPointState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the AWS provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param alias The alias of the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The alias of the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN) of the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param bucket Name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(@Nullable Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket Name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param domainName The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
+         * Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
+         * Note: S3 access points only support secure access by HTTPS. HTTP isn&#39;t supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param endpoints The VPC endpoints for the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<Map<String,String>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints The VPC endpoints for the S3 Access Point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(Map<String,String> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
             $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
+        /**
+         * @param hasPublicAccessPolicy Indicates whether this access point currently has a policy that allows public access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
             return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
 
+        /**
+         * @param name Name you want to assign to this access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name you want to assign to this access point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkOrigin Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn&#39;t allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkOrigin(@Nullable Output<String> networkOrigin) {
             $.networkOrigin = networkOrigin;
             return this;
         }
 
+        /**
+         * @param networkOrigin Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn&#39;t allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkOrigin(String networkOrigin) {
             return networkOrigin(Output.of(networkOrigin));
         }
 
+        /**
+         * @param policy Valid JSON document that specifies the policy that you want to apply to this access point. Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = &#34;&#34;`) _will not_ delete the policy since it could have been set by `aws.s3control.AccessPointPolicy`. To remove the `policy`, set it to `&#34;{}&#34;` (an empty JSON document).
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<String> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Valid JSON document that specifies the policy that you want to apply to this access point. Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = &#34;&#34;`) _will not_ delete the policy since it could have been set by `aws.s3control.AccessPointPolicy`. To remove the `policy`, set it to `&#34;{}&#34;` (an empty JSON document).
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(String policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param publicAccessBlockConfiguration Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessBlockConfiguration(@Nullable Output<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration) {
             $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
+        /**
+         * @param publicAccessBlockConfiguration Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccessBlockConfiguration(AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
             return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
 
+        /**
+         * @param vpcConfiguration Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(@Nullable Output<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
             $.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
+        /**
+         * @param vpcConfiguration Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfiguration(AccessPointVpcConfigurationGetArgs vpcConfiguration) {
             return vpcConfiguration(Output.of(vpcConfiguration));
         }

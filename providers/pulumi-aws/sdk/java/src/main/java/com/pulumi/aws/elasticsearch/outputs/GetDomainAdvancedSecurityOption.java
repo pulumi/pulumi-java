@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDomainAdvancedSecurityOption {
-    /**
-     * Whether node to node encryption is enabled.
-     * 
-     */
+        /**
+         * @return Whether node to node encryption is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Whether the internal user database is enabled.
-     * 
-     */
+        /**
+         * @return Whether the internal user database is enabled.
+         * 
+         */
     private final Boolean internalUserDatabaseEnabled;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetDomainAdvancedSecurityOption {
     }
 
     /**
-     * Whether node to node encryption is enabled.
+     * @return Whether node to node encryption is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Whether the internal user database is enabled.
+     * @return Whether the internal user database is enabled.
      * 
-    */
+     */
     public Boolean internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;
     }

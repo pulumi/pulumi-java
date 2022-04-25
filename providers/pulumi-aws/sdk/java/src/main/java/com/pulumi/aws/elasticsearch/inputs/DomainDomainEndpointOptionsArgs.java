@@ -23,6 +23,10 @@ public final class DomainDomainEndpointOptionsArgs extends com.pulumi.resources.
     @Import(name="customEndpoint")
     private @Nullable Output<String> customEndpoint;
 
+    /**
+     * @return Fully qualified domain for your custom endpoint.
+     * 
+     */
     public Optional<Output<String>> customEndpoint() {
         return Optional.ofNullable(this.customEndpoint);
     }
@@ -34,6 +38,10 @@ public final class DomainDomainEndpointOptionsArgs extends com.pulumi.resources.
     @Import(name="customEndpointCertificateArn")
     private @Nullable Output<String> customEndpointCertificateArn;
 
+    /**
+     * @return ACM certificate ARN for your custom endpoint.
+     * 
+     */
     public Optional<Output<String>> customEndpointCertificateArn() {
         return Optional.ofNullable(this.customEndpointCertificateArn);
     }
@@ -45,6 +53,10 @@ public final class DomainDomainEndpointOptionsArgs extends com.pulumi.resources.
     @Import(name="customEndpointEnabled")
     private @Nullable Output<Boolean> customEndpointEnabled;
 
+    /**
+     * @return Whether to enable custom endpoint for the Elasticsearch domain.
+     * 
+     */
     public Optional<Output<Boolean>> customEndpointEnabled() {
         return Optional.ofNullable(this.customEndpointEnabled);
     }
@@ -56,6 +68,10 @@ public final class DomainDomainEndpointOptionsArgs extends com.pulumi.resources.
     @Import(name="enforceHttps")
     private @Nullable Output<Boolean> enforceHttps;
 
+    /**
+     * @return Whether or not to require HTTPS. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enforceHttps() {
         return Optional.ofNullable(this.enforceHttps);
     }
@@ -95,38 +111,86 @@ public final class DomainDomainEndpointOptionsArgs extends com.pulumi.resources.
             $ = new DomainDomainEndpointOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customEndpoint Fully qualified domain for your custom endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpoint(@Nullable Output<String> customEndpoint) {
             $.customEndpoint = customEndpoint;
             return this;
         }
 
+        /**
+         * @param customEndpoint Fully qualified domain for your custom endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpoint(String customEndpoint) {
             return customEndpoint(Output.of(customEndpoint));
         }
 
+        /**
+         * @param customEndpointCertificateArn ACM certificate ARN for your custom endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpointCertificateArn(@Nullable Output<String> customEndpointCertificateArn) {
             $.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
 
+        /**
+         * @param customEndpointCertificateArn ACM certificate ARN for your custom endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpointCertificateArn(String customEndpointCertificateArn) {
             return customEndpointCertificateArn(Output.of(customEndpointCertificateArn));
         }
 
+        /**
+         * @param customEndpointEnabled Whether to enable custom endpoint for the Elasticsearch domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpointEnabled(@Nullable Output<Boolean> customEndpointEnabled) {
             $.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
 
+        /**
+         * @param customEndpointEnabled Whether to enable custom endpoint for the Elasticsearch domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customEndpointEnabled(Boolean customEndpointEnabled) {
             return customEndpointEnabled(Output.of(customEndpointEnabled));
         }
 
+        /**
+         * @param enforceHttps Whether or not to require HTTPS. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceHttps(@Nullable Output<Boolean> enforceHttps) {
             $.enforceHttps = enforceHttps;
             return this;
         }
 
+        /**
+         * @param enforceHttps Whether or not to require HTTPS. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceHttps(Boolean enforceHttps) {
             return enforceHttps(Output.of(enforceHttps));
         }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BrokerConfiguration {
-    /**
-     * The Configuration ID.
-     * 
-     */
+        /**
+         * @return The Configuration ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Revision of the Configuration.
-     * 
-     */
+        /**
+         * @return Revision of the Configuration.
+         * 
+         */
     private final @Nullable Integer revision;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class BrokerConfiguration {
     }
 
     /**
-     * The Configuration ID.
+     * @return The Configuration ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Revision of the Configuration.
+     * @return Revision of the Configuration.
      * 
-    */
+     */
     public Optional<Integer> revision() {
         return Optional.ofNullable(this.revision);
     }

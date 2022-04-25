@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CodeRepositoryGitConfig {
-    /**
-     * The default branch for the Git repository.
-     * 
-     */
+        /**
+         * @return The default branch for the Git repository.
+         * 
+         */
     private final @Nullable String branch;
-    /**
-     * The URL where the Git repository is located.
-     * 
-     */
+        /**
+         * @return The URL where the Git repository is located.
+         * 
+         */
     private final String repositoryUrl;
-    /**
-     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{&#34;username&#34;: UserName, &#34;password&#34;: Password}`
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{&#34;username&#34;: UserName, &#34;password&#34;: Password}`
+         * 
+         */
     private final @Nullable String secretArn;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CodeRepositoryGitConfig {
     }
 
     /**
-     * The default branch for the Git repository.
+     * @return The default branch for the Git repository.
      * 
-    */
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * The URL where the Git repository is located.
+     * @return The URL where the Git repository is located.
      * 
-    */
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
-     * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{&#34;username&#34;: UserName, &#34;password&#34;: Password}`
+     * @return The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{&#34;username&#34;: UserName, &#34;password&#34;: Password}`
      * 
-    */
+     */
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }

@@ -11,55 +11,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopicRuleErrorActionDynamodb {
-    /**
-     * The hash key name.
-     * 
-     */
+        /**
+         * @return The hash key name.
+         * 
+         */
     private final String hashKeyField;
-    /**
-     * The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
-     * 
-     */
+        /**
+         * @return The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
+         * 
+         */
     private final @Nullable String hashKeyType;
-    /**
-     * The hash key value.
-     * 
-     */
+        /**
+         * @return The hash key value.
+         * 
+         */
     private final String hashKeyValue;
-    /**
-     * The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
-     * 
-     */
+        /**
+         * @return The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
+         * 
+         */
     private final @Nullable String operation;
-    /**
-     * The action payload.
-     * 
-     */
+        /**
+         * @return The action payload.
+         * 
+         */
     private final @Nullable String payloadField;
-    /**
-     * The range key name.
-     * 
-     */
+        /**
+         * @return The range key name.
+         * 
+         */
     private final @Nullable String rangeKeyField;
-    /**
-     * The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
-     * 
-     */
+        /**
+         * @return The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
+         * 
+         */
     private final @Nullable String rangeKeyType;
-    /**
-     * The range key value.
-     * 
-     */
+        /**
+         * @return The range key value.
+         * 
+         */
     private final @Nullable String rangeKeyValue;
-    /**
-     * The ARN of the IAM role that grants access to the DynamoDB table.
-     * 
-     */
+        /**
+         * @return The ARN of the IAM role that grants access to the DynamoDB table.
+         * 
+         */
     private final String roleArn;
-    /**
-     * The name of the DynamoDB table.
-     * 
-     */
+        /**
+         * @return The name of the DynamoDB table.
+         * 
+         */
     private final String tableName;
 
     @CustomType.Constructor
@@ -87,72 +87,72 @@ public final class TopicRuleErrorActionDynamodb {
     }
 
     /**
-     * The hash key name.
+     * @return The hash key name.
      * 
-    */
+     */
     public String hashKeyField() {
         return this.hashKeyField;
     }
     /**
-     * The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
+     * @return The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
-    */
+     */
     public Optional<String> hashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
     /**
-     * The hash key value.
+     * @return The hash key value.
      * 
-    */
+     */
     public String hashKeyValue() {
         return this.hashKeyValue;
     }
     /**
-     * The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
+     * @return The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
      * 
-    */
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
     /**
-     * The action payload.
+     * @return The action payload.
      * 
-    */
+     */
     public Optional<String> payloadField() {
         return Optional.ofNullable(this.payloadField);
     }
     /**
-     * The range key name.
+     * @return The range key name.
      * 
-    */
+     */
     public Optional<String> rangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
     /**
-     * The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
+     * @return The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
-    */
+     */
     public Optional<String> rangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
     /**
-     * The range key value.
+     * @return The range key value.
      * 
-    */
+     */
     public Optional<String> rangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
     /**
-     * The ARN of the IAM role that grants access to the DynamoDB table.
+     * @return The ARN of the IAM role that grants access to the DynamoDB table.
      * 
-    */
+     */
     public String roleArn() {
         return this.roleArn;
     }
     /**
-     * The name of the DynamoDB table.
+     * @return The name of the DynamoDB table.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig {
-    /**
-     * The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
-     * 
-     */
+        /**
+         * @return The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+         * 
+         */
     private final String credentialsParameter;
-    /**
-     * A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
-     * 
-     */
+        /**
+         * @return A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+         * 
+         */
     private final String domain;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     }
 
     /**
-     * The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
+     * @return The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
      * 
-    */
+     */
     public String credentialsParameter() {
         return this.credentialsParameter;
     }
     /**
-     * A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+     * @return A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * 
-    */
+     */
     public String domain() {
         return this.domain;
     }

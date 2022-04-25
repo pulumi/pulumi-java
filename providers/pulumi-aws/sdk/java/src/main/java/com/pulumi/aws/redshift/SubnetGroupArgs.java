@@ -25,6 +25,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the Redshift Subnet group. Defaults to &#34;Managed by Pulumi&#34;.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the Redshift Subnet group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return An array of VPC subnet IDs.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -58,6 +70,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the Redshift Subnet group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the Redshift Subnet group. Defaults to &#34;Managed by Pulumi&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the Redshift Subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Redshift Subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnetIds An array of VPC subnet IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds An array of VPC subnet IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds An array of VPC subnet IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

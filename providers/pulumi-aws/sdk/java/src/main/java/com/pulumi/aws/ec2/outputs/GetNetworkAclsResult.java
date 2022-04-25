@@ -15,15 +15,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkAclsResult {
     private final @Nullable List<GetNetworkAclsFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * A list of all the network ACL ids found. This data source will fail if none are found.
-     * 
-     */
+        /**
+         * @return A list of all the network ACL ids found. This data source will fail if none are found.
+         * 
+         */
     private final List<String> ids;
     private final Map<String,String> tags;
     private final @Nullable String vpcId;
@@ -46,16 +46,16 @@ public final class GetNetworkAclsResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of all the network ACL ids found. This data source will fail if none are found.
+     * @return A list of all the network ACL ids found. This data source will fail if none are found.
      * 
-    */
+     */
     public List<String> ids() {
         return this.ids;
     }

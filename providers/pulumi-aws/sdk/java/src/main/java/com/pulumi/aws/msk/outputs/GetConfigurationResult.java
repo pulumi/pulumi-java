@@ -11,36 +11,36 @@ import java.util.Objects;
 
 @CustomType
 public final class GetConfigurationResult {
-    /**
-     * Amazon Resource Name (ARN) of the configuration.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the configuration.
+         * 
+         */
     private final String arn;
-    /**
-     * Description of the configuration.
-     * 
-     */
+        /**
+         * @return Description of the configuration.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * List of Apache Kafka versions which can use this configuration.
-     * 
-     */
+        /**
+         * @return List of Apache Kafka versions which can use this configuration.
+         * 
+         */
     private final List<String> kafkaVersions;
-    /**
-     * Latest revision of the configuration.
-     * 
-     */
+        /**
+         * @return Latest revision of the configuration.
+         * 
+         */
     private final Integer latestRevision;
     private final String name;
-    /**
-     * Contents of the server.properties file.
-     * 
-     */
+        /**
+         * @return Contents of the server.properties file.
+         * 
+         */
     private final String serverProperties;
 
     @CustomType.Constructor
@@ -62,37 +62,37 @@ public final class GetConfigurationResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the configuration.
+     * @return Amazon Resource Name (ARN) of the configuration.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Description of the configuration.
+     * @return Description of the configuration.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of Apache Kafka versions which can use this configuration.
+     * @return List of Apache Kafka versions which can use this configuration.
      * 
-    */
+     */
     public List<String> kafkaVersions() {
         return this.kafkaVersions;
     }
     /**
-     * Latest revision of the configuration.
+     * @return Latest revision of the configuration.
      * 
-    */
+     */
     public Integer latestRevision() {
         return this.latestRevision;
     }
@@ -100,9 +100,9 @@ public final class GetConfigurationResult {
         return this.name;
     }
     /**
-     * Contents of the server.properties file.
+     * @return Contents of the server.properties file.
      * 
-    */
+     */
     public String serverProperties() {
         return this.serverProperties;
     }

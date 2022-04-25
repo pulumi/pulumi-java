@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BucketIntelligentTieringConfigurationFilter {
-    /**
-     * An object key name prefix that identifies the subset of objects to which the configuration applies.
-     * 
-     */
+        /**
+         * @return An object key name prefix that identifies the subset of objects to which the configuration applies.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
-     * 
-     */
+        /**
+         * @return All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class BucketIntelligentTieringConfigurationFilter {
     }
 
     /**
-     * An object key name prefix that identifies the subset of objects to which the configuration applies.
+     * @return An object key name prefix that identifies the subset of objects to which the configuration applies.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
+     * @return All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

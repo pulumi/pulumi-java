@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
-    /**
-     * The Mapping reference to the data element.
-     * 
-     */
+        /**
+         * @return The Mapping reference to the data element.
+         * 
+         */
     private final @Nullable String mapping;
-    /**
-     * Name of the column.
-     * 
-     */
+        /**
+         * @return Name of the column.
+         * 
+         */
     private final String name;
-    /**
-     * The SQL Type of the column.
-     * 
-     */
+        /**
+         * @return The SQL Type of the column.
+         * 
+         */
     private final String sqlType;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
     }
 
     /**
-     * The Mapping reference to the data element.
+     * @return The Mapping reference to the data element.
      * 
-    */
+     */
     public Optional<String> mapping() {
         return Optional.ofNullable(this.mapping);
     }
     /**
-     * Name of the column.
+     * @return Name of the column.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The SQL Type of the column.
+     * @return The SQL Type of the column.
      * 
-    */
+     */
     public String sqlType() {
         return this.sqlType;
     }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProjectLogsConfigCloudwatchLogs {
-    /**
-     * Group name of the logs in CloudWatch Logs.
-     * 
-     */
+        /**
+         * @return Group name of the logs in CloudWatch Logs.
+         * 
+         */
     private final @Nullable String groupName;
-    /**
-     * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
-     * 
-     */
+        /**
+         * @return Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Stream name of the logs in CloudWatch Logs.
-     * 
-     */
+        /**
+         * @return Stream name of the logs in CloudWatch Logs.
+         * 
+         */
     private final @Nullable String streamName;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ProjectLogsConfigCloudwatchLogs {
     }
 
     /**
-     * Group name of the logs in CloudWatch Logs.
+     * @return Group name of the logs in CloudWatch Logs.
      * 
-    */
+     */
     public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
-     * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
+     * @return Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Stream name of the logs in CloudWatch Logs.
+     * @return Stream name of the logs in CloudWatch Logs.
      * 
-    */
+     */
     public Optional<String> streamName() {
         return Optional.ofNullable(this.streamName);
     }

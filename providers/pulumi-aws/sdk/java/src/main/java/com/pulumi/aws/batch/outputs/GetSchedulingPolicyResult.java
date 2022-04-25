@@ -14,20 +14,20 @@ import java.util.Objects;
 public final class GetSchedulingPolicyResult {
     private final String arn;
     private final List<GetSchedulingPolicyFairSharePolicy> fairSharePolicies;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Specifies the name of the scheduling policy.
-     * 
-     */
+        /**
+         * @return Specifies the name of the scheduling policy.
+         * 
+         */
     private final String name;
-    /**
-     * Key-value map of resource tags
-     * 
-     */
+        /**
+         * @return Key-value map of resource tags
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -51,23 +51,23 @@ public final class GetSchedulingPolicyResult {
         return this.fairSharePolicies;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the name of the scheduling policy.
+     * @return Specifies the name of the scheduling policy.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Key-value map of resource tags
+     * @return Key-value map of resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

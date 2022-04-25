@@ -16,85 +16,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSnapshotResult {
-    /**
-     * Amazon Resource Name (ARN) of the EBS Snapshot.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the EBS Snapshot.
+         * 
+         */
     private final String arn;
-    /**
-     * The data encryption key identifier for the snapshot.
-     * 
-     */
+        /**
+         * @return The data encryption key identifier for the snapshot.
+         * 
+         */
     private final String dataEncryptionKeyId;
-    /**
-     * A description for the snapshot
-     * 
-     */
+        /**
+         * @return A description for the snapshot
+         * 
+         */
     private final String description;
-    /**
-     * Whether the snapshot is encrypted.
-     * 
-     */
+        /**
+         * @return Whether the snapshot is encrypted.
+         * 
+         */
     private final Boolean encrypted;
     private final @Nullable List<GetSnapshotFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The ARN for the KMS encryption key.
-     * 
-     */
+        /**
+         * @return The ARN for the KMS encryption key.
+         * 
+         */
     private final String kmsKeyId;
     private final @Nullable Boolean mostRecent;
-    /**
-     * The ARN of the Outpost on which the snapshot is stored.
-     * 
-     */
+        /**
+         * @return The ARN of the Outpost on which the snapshot is stored.
+         * 
+         */
     private final String outpostArn;
-    /**
-     * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
-     * 
-     */
+        /**
+         * @return Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+         * 
+         */
     private final String ownerAlias;
-    /**
-     * The AWS account ID of the EBS snapshot owner.
-     * 
-     */
+        /**
+         * @return The AWS account ID of the EBS snapshot owner.
+         * 
+         */
     private final String ownerId;
     private final @Nullable List<String> owners;
     private final @Nullable List<String> restorableByUserIds;
-    /**
-     * The snapshot ID (e.g., snap-59fcb34e).
-     * 
-     */
+        /**
+         * @return The snapshot ID (e.g., snap-59fcb34e).
+         * 
+         */
     private final String snapshotId;
     private final @Nullable List<String> snapshotIds;
-    /**
-     * The snapshot state.
-     * 
-     */
+        /**
+         * @return The snapshot state.
+         * 
+         */
     private final String state;
-    /**
-     * The storage tier in which the snapshot is stored.
-     * 
-     */
+        /**
+         * @return The storage tier in which the snapshot is stored.
+         * 
+         */
     private final String storageTier;
-    /**
-     * A map of tags for the resource.
-     * 
-     */
+        /**
+         * @return A map of tags for the resource.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The volume ID (e.g., vol-59fcb34e).
-     * 
-     */
+        /**
+         * @return The volume ID (e.g., vol-59fcb34e).
+         * 
+         */
     private final String volumeId;
-    /**
-     * The size of the drive in GiBs.
-     * 
-     */
+        /**
+         * @return The size of the drive in GiBs.
+         * 
+         */
     private final Integer volumeSize;
 
     @CustomType.Constructor
@@ -142,30 +142,30 @@ public final class GetSnapshotResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the EBS Snapshot.
+     * @return Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The data encryption key identifier for the snapshot.
+     * @return The data encryption key identifier for the snapshot.
      * 
-    */
+     */
     public String dataEncryptionKeyId() {
         return this.dataEncryptionKeyId;
     }
     /**
-     * A description for the snapshot
+     * @return A description for the snapshot
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Whether the snapshot is encrypted.
+     * @return Whether the snapshot is encrypted.
      * 
-    */
+     */
     public Boolean encrypted() {
         return this.encrypted;
     }
@@ -173,16 +173,16 @@ public final class GetSnapshotResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ARN for the KMS encryption key.
+     * @return The ARN for the KMS encryption key.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -190,23 +190,23 @@ public final class GetSnapshotResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * The ARN of the Outpost on which the snapshot is stored.
+     * @return The ARN of the Outpost on which the snapshot is stored.
      * 
-    */
+     */
     public String outpostArn() {
         return this.outpostArn;
     }
     /**
-     * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+     * @return Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
-    */
+     */
     public String ownerAlias() {
         return this.ownerAlias;
     }
     /**
-     * The AWS account ID of the EBS snapshot owner.
+     * @return The AWS account ID of the EBS snapshot owner.
      * 
-    */
+     */
     public String ownerId() {
         return this.ownerId;
     }
@@ -217,9 +217,9 @@ public final class GetSnapshotResult {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
     }
     /**
-     * The snapshot ID (e.g., snap-59fcb34e).
+     * @return The snapshot ID (e.g., snap-59fcb34e).
      * 
-    */
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
@@ -227,37 +227,37 @@ public final class GetSnapshotResult {
         return this.snapshotIds == null ? List.of() : this.snapshotIds;
     }
     /**
-     * The snapshot state.
+     * @return The snapshot state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The storage tier in which the snapshot is stored.
+     * @return The storage tier in which the snapshot is stored.
      * 
-    */
+     */
     public String storageTier() {
         return this.storageTier;
     }
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The volume ID (e.g., vol-59fcb34e).
+     * @return The volume ID (e.g., vol-59fcb34e).
      * 
-    */
+     */
     public String volumeId() {
         return this.volumeId;
     }
     /**
-     * The size of the drive in GiBs.
+     * @return The size of the drive in GiBs.
      * 
-    */
+     */
     public Integer volumeSize() {
         return this.volumeSize;
     }

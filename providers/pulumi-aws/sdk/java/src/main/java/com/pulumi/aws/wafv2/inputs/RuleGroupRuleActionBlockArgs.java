@@ -22,6 +22,10 @@ public final class RuleGroupRuleActionBlockArgs extends com.pulumi.resources.Res
     @Import(name="customResponse")
     private @Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
 
+    /**
+     * @return Defines a custom response for the web request. See Custom Response below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleActionBlockCustomResponseArgs>> customResponse() {
         return Optional.ofNullable(this.customResponse);
     }
@@ -50,11 +54,23 @@ public final class RuleGroupRuleActionBlockArgs extends com.pulumi.resources.Res
             $ = new RuleGroupRuleActionBlockArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customResponse Defines a custom response for the web request. See Custom Response below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponse(@Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
             $.customResponse = customResponse;
             return this;
         }
 
+        /**
+         * @param customResponse Defines a custom response for the web request. See Custom Response below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customResponse(RuleGroupRuleActionBlockCustomResponseArgs customResponse) {
             return customResponse(Output.of(customResponse));
         }

@@ -14,36 +14,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRouteTableResult {
-    /**
-     * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
-     * 
-     */
+        /**
+         * @return EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+         * 
+         */
     private final String arn;
-    /**
-     * Boolean whether this is the default association route table for the EC2 Transit Gateway
-     * 
-     */
+        /**
+         * @return Boolean whether this is the default association route table for the EC2 Transit Gateway
+         * 
+         */
     private final Boolean defaultAssociationRouteTable;
-    /**
-     * Boolean whether this is the default propagation route table for the EC2 Transit Gateway
-     * 
-     */
+        /**
+         * @return Boolean whether this is the default propagation route table for the EC2 Transit Gateway
+         * 
+         */
     private final Boolean defaultPropagationRouteTable;
     private final @Nullable List<GetRouteTableFilter> filters;
-    /**
-     * EC2 Transit Gateway Route Table identifier
-     * 
-     */
+        /**
+         * @return EC2 Transit Gateway Route Table identifier
+         * 
+         */
     private final String id;
-    /**
-     * Key-value tags for the EC2 Transit Gateway Route Table
-     * 
-     */
+        /**
+         * @return Key-value tags for the EC2 Transit Gateway Route Table
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * EC2 Transit Gateway identifier
-     * 
-     */
+        /**
+         * @return EC2 Transit Gateway identifier
+         * 
+         */
     private final String transitGatewayId;
 
     @CustomType.Constructor
@@ -65,23 +65,23 @@ public final class GetRouteTableResult {
     }
 
     /**
-     * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+     * @return EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Boolean whether this is the default association route table for the EC2 Transit Gateway
+     * @return Boolean whether this is the default association route table for the EC2 Transit Gateway
      * 
-    */
+     */
     public Boolean defaultAssociationRouteTable() {
         return this.defaultAssociationRouteTable;
     }
     /**
-     * Boolean whether this is the default propagation route table for the EC2 Transit Gateway
+     * @return Boolean whether this is the default propagation route table for the EC2 Transit Gateway
      * 
-    */
+     */
     public Boolean defaultPropagationRouteTable() {
         return this.defaultPropagationRouteTable;
     }
@@ -89,23 +89,23 @@ public final class GetRouteTableResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * EC2 Transit Gateway Route Table identifier
+     * @return EC2 Transit Gateway Route Table identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key-value tags for the EC2 Transit Gateway Route Table
+     * @return Key-value tags for the EC2 Transit Gateway Route Table
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * EC2 Transit Gateway identifier
+     * @return EC2 Transit Gateway identifier
      * 
-    */
+     */
     public String transitGatewayId() {
         return this.transitGatewayId;
     }

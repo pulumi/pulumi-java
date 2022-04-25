@@ -19,6 +19,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return Name of the aliased Lambda function.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -30,6 +34,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Lambda alias.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName Name of the aliased Lambda function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param name Name of the Lambda alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

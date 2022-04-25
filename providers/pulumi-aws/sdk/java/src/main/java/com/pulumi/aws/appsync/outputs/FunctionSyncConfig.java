@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FunctionSyncConfig {
-    /**
-     * The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
-     * 
-     */
+        /**
+         * @return The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
+         * 
+         */
     private final @Nullable String conflictDetection;
-    /**
-     * The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
-     * 
-     */
+        /**
+         * @return The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
+         * 
+         */
     private final @Nullable String conflictHandler;
-    /**
-     * The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
-     * 
-     */
+        /**
+         * @return The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
+         * 
+         */
     private final @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FunctionSyncConfig {
     }
 
     /**
-     * The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
+     * @return The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
      * 
-    */
+     */
     public Optional<String> conflictDetection() {
         return Optional.ofNullable(this.conflictDetection);
     }
     /**
-     * The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
+     * @return The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
      * 
-    */
+     */
     public Optional<String> conflictHandler() {
         return Optional.ofNullable(this.conflictHandler);
     }
     /**
-     * The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
+     * @return The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
      * 
-    */
+     */
     public Optional<FunctionSyncConfigLambdaConflictHandlerConfig> lambdaConflictHandlerConfig() {
         return Optional.ofNullable(this.lambdaConflictHandlerConfig);
     }

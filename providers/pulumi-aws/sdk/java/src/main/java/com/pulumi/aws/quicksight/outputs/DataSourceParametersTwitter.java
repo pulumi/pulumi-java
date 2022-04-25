@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceParametersTwitter {
-    /**
-     * The maximum number of rows to query.
-     * 
-     */
+        /**
+         * @return The maximum number of rows to query.
+         * 
+         */
     private final Integer maxRows;
-    /**
-     * The Twitter query to retrieve the data.
-     * 
-     */
+        /**
+         * @return The Twitter query to retrieve the data.
+         * 
+         */
     private final String query;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DataSourceParametersTwitter {
     }
 
     /**
-     * The maximum number of rows to query.
+     * @return The maximum number of rows to query.
      * 
-    */
+     */
     public Integer maxRows() {
         return this.maxRows;
     }
     /**
-     * The Twitter query to retrieve the data.
+     * @return The Twitter query to retrieve the data.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }

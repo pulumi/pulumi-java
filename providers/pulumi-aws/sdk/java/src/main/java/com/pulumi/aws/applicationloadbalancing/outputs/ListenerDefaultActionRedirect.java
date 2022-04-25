@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListenerDefaultActionRedirect {
-    /**
-     * Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
-     * 
-     */
+        /**
+         * @return Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+         * 
+         */
     private final @Nullable String host;
-    /**
-     * Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
-     * 
-     */
+        /**
+         * @return Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
-     * 
-     */
+        /**
+         * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+         * 
+         */
     private final @Nullable String port;
-    /**
-     * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
-     * 
-     */
+        /**
+         * @return Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+         * 
+         */
     private final @Nullable String protocol;
-    /**
-     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
-     * 
-     */
+        /**
+         * @return Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
+         * 
+         */
     private final @Nullable String query;
-    /**
-     * HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
-     * 
-     */
+        /**
+         * @return HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+         * 
+         */
     private final String statusCode;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ListenerDefaultActionRedirect {
     }
 
     /**
-     * Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
+     * @return Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
      * 
-    */
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
+     * @return Absolute path, starting with the leading &#34;/&#34;. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
+     * @return Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
-    */
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
+     * @return Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
+     * @return Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading &#34;?&#34;. Defaults to `#{query}`.
      * 
-    */
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
+     * @return HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
      * 
-    */
+     */
     public String statusCode() {
         return this.statusCode;
     }

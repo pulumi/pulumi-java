@@ -22,6 +22,10 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
     @Import(name="fleetName")
     private @Nullable Output<String> fleetName;
 
+    /**
+     * @return Name of the fleet.
+     * 
+     */
     public Optional<Output<String>> fleetName() {
         return Optional.ofNullable(this.fleetName);
     }
@@ -33,6 +37,10 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
     @Import(name="stackName")
     private @Nullable Output<String> stackName;
 
+    /**
+     * @return Name of the stack.
+     * 
+     */
     public Optional<Output<String>> stackName() {
         return Optional.ofNullable(this.stackName);
     }
@@ -62,20 +70,44 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
             $ = new FleetStackAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetName Name of the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetName(@Nullable Output<String> fleetName) {
             $.fleetName = fleetName;
             return this;
         }
 
+        /**
+         * @param fleetName Name of the fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetName(String fleetName) {
             return fleetName(Output.of(fleetName));
         }
 
+        /**
+         * @param stackName Name of the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackName(@Nullable Output<String> stackName) {
             $.stackName = stackName;
             return this;
         }
 
+        /**
+         * @param stackName Name of the stack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stackName(String stackName) {
             return stackName(Output.of(stackName));
         }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListenerDefaultActionForwardTargetGroup {
-    /**
-     * ARN of the target group.
-     * 
-     */
+        /**
+         * @return ARN of the target group.
+         * 
+         */
     private final String arn;
-    /**
-     * Weight. The range is 0 to 999.
-     * 
-     */
+        /**
+         * @return Weight. The range is 0 to 999.
+         * 
+         */
     private final @Nullable Integer weight;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ListenerDefaultActionForwardTargetGroup {
     }
 
     /**
-     * ARN of the target group.
+     * @return ARN of the target group.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Weight. The range is 0 to 999.
+     * @return Weight. The range is 0 to 999.
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

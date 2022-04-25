@@ -19,6 +19,10 @@ public final class GetClusterIdentityOidc extends com.pulumi.resources.InvokeArg
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return Issuer URL for the OpenID Connect identity provider.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -47,6 +51,12 @@ public final class GetClusterIdentityOidc extends com.pulumi.resources.InvokeArg
             $ = new GetClusterIdentityOidc(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuer Issuer URL for the OpenID Connect identity provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;

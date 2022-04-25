@@ -22,6 +22,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextArgs extends com.pulum
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return The plain-text authorization message for the prefix and account.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -33,6 +37,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextArgs extends com.pulum
     @Import(name="signature")
     private @Nullable Output<String> signature;
 
+    /**
+     * @return The signed authorization message for the prefix and account.
+     * 
+     */
     public Optional<Output<String>> signature() {
         return Optional.ofNullable(this.signature);
     }
@@ -62,20 +70,44 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextArgs extends com.pulum
             $ = new VpcIpamPoolCidrCidrAuthorizationContextArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message The plain-text authorization message for the prefix and account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message The plain-text authorization message for the prefix and account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param signature The signed authorization message for the prefix and account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(@Nullable Output<String> signature) {
             $.signature = signature;
             return this;
         }
 
+        /**
+         * @param signature The signed authorization message for the prefix and account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signature(String signature) {
             return signature(Output.of(signature));
         }

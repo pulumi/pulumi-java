@@ -17,35 +17,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListenerRuleCondition {
-    /**
-     * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
-     * 
-     */
+        /**
+         * @return Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
+         * 
+         */
     private final @Nullable ListenerRuleConditionHostHeader hostHeader;
-    /**
-     * HTTP headers to match. HTTP Header block fields documented below.
-     * 
-     */
+        /**
+         * @return HTTP headers to match. HTTP Header block fields documented below.
+         * 
+         */
     private final @Nullable ListenerRuleConditionHttpHeader httpHeader;
-    /**
-     * Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
-     * 
-     */
+        /**
+         * @return Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
+         * 
+         */
     private final @Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod;
-    /**
-     * Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
-     * 
-     */
+        /**
+         * @return Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
+         * 
+         */
     private final @Nullable ListenerRuleConditionPathPattern pathPattern;
-    /**
-     * Query strings to match. Query String block fields documented below.
-     * 
-     */
+        /**
+         * @return Query strings to match. Query String block fields documented below.
+         * 
+         */
     private final @Nullable List<ListenerRuleConditionQueryString> queryStrings;
-    /**
-     * Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
-     * 
-     */
+        /**
+         * @return Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
+         * 
+         */
     private final @Nullable ListenerRuleConditionSourceIp sourceIp;
 
     @CustomType.Constructor
@@ -65,44 +65,44 @@ public final class ListenerRuleCondition {
     }
 
     /**
-     * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
+     * @return Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
      * 
-    */
+     */
     public Optional<ListenerRuleConditionHostHeader> hostHeader() {
         return Optional.ofNullable(this.hostHeader);
     }
     /**
-     * HTTP headers to match. HTTP Header block fields documented below.
+     * @return HTTP headers to match. HTTP Header block fields documented below.
      * 
-    */
+     */
     public Optional<ListenerRuleConditionHttpHeader> httpHeader() {
         return Optional.ofNullable(this.httpHeader);
     }
     /**
-     * Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
+     * @return Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
      * 
-    */
+     */
     public Optional<ListenerRuleConditionHttpRequestMethod> httpRequestMethod() {
         return Optional.ofNullable(this.httpRequestMethod);
     }
     /**
-     * Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
+     * @return Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
      * 
-    */
+     */
     public Optional<ListenerRuleConditionPathPattern> pathPattern() {
         return Optional.ofNullable(this.pathPattern);
     }
     /**
-     * Query strings to match. Query String block fields documented below.
+     * @return Query strings to match. Query String block fields documented below.
      * 
-    */
+     */
     public List<ListenerRuleConditionQueryString> queryStrings() {
         return this.queryStrings == null ? List.of() : this.queryStrings;
     }
     /**
-     * Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
+     * @return Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
      * 
-    */
+     */
     public Optional<ListenerRuleConditionSourceIp> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }

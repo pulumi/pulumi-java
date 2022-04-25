@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterVpcConfig {
-    /**
-     * Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
-     * 
-     */
+        /**
+         * @return Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
+         * 
+         */
     private final @Nullable String clusterSecurityGroupId;
-    /**
-     * Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
-     * 
-     */
+        /**
+         * @return Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
+         * 
+         */
     private final @Nullable Boolean endpointPrivateAccess;
-    /**
-     * Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
-     * 
-     */
+        /**
+         * @return Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
+         * 
+         */
     private final @Nullable Boolean endpointPublicAccess;
-    /**
-     * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
-     * 
-     */
+        /**
+         * @return List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
+         * 
+         */
     private final @Nullable List<String> publicAccessCidrs;
-    /**
-     * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
-     * 
-     */
+        /**
+         * @return List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
+         * 
+         */
     private final @Nullable List<String> securityGroupIds;
-    /**
-     * List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
-     * 
-     */
+        /**
+         * @return List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
+         * 
+         */
     private final List<String> subnetIds;
-    /**
-     * ID of the VPC associated with your cluster.
-     * 
-     */
+        /**
+         * @return ID of the VPC associated with your cluster.
+         * 
+         */
     private final @Nullable String vpcId;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class ClusterVpcConfig {
     }
 
     /**
-     * Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
+     * @return Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
      * 
-    */
+     */
     public Optional<String> clusterSecurityGroupId() {
         return Optional.ofNullable(this.clusterSecurityGroupId);
     }
     /**
-     * Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
+     * @return Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
      * 
-    */
+     */
     public Optional<Boolean> endpointPrivateAccess() {
         return Optional.ofNullable(this.endpointPrivateAccess);
     }
     /**
-     * Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
+     * @return Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
      * 
-    */
+     */
     public Optional<Boolean> endpointPublicAccess() {
         return Optional.ofNullable(this.endpointPublicAccess);
     }
     /**
-     * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
+     * @return List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
      * 
-    */
+     */
     public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs == null ? List.of() : this.publicAccessCidrs;
     }
     /**
-     * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
+     * @return List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
      * 
-    */
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
-     * List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
+     * @return List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
      * 
-    */
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
-     * ID of the VPC associated with your cluster.
+     * @return ID of the VPC associated with your cluster.
      * 
-    */
+     */
     public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }

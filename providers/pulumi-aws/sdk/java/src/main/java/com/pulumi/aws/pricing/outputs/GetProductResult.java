@@ -12,15 +12,15 @@ import java.util.Objects;
 @CustomType
 public final class GetProductResult {
     private final List<GetProductFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set to the product returned from the API.
-     * 
-     */
+        /**
+         * @return Set to the product returned from the API.
+         * 
+         */
     private final String result;
     private final String serviceCode;
 
@@ -40,16 +40,16 @@ public final class GetProductResult {
         return this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set to the product returned from the API.
+     * @return Set to the product returned from the API.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }

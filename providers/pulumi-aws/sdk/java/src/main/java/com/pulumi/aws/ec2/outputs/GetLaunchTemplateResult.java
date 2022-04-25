@@ -28,160 +28,160 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLaunchTemplateResult {
-    /**
-     * Amazon Resource Name (ARN) of the launch template.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the launch template.
+         * 
+         */
     private final String arn;
-    /**
-     * Specify volumes to attach to the instance besides the volumes specified by the AMI.
-     * 
-     */
+        /**
+         * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
+         * 
+         */
     private final List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings;
-    /**
-     * Customize the credit specification of the instance. See Credit
-     * Specification below for more details.
-     * 
-     */
+        /**
+         * @return Customize the credit specification of the instance. See Credit
+         * Specification below for more details.
+         * 
+         */
     private final List<GetLaunchTemplateCreditSpecification> creditSpecifications;
-    /**
-     * The default version of the launch template.
-     * 
-     */
+        /**
+         * @return The default version of the launch template.
+         * 
+         */
     private final Integer defaultVersion;
-    /**
-     * Description of the launch template.
-     * 
-     */
+        /**
+         * @return Description of the launch template.
+         * 
+         */
     private final String description;
-    /**
-     * If `true`, enables [EC2 Instance
-     * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-     * 
-     */
+        /**
+         * @return If `true`, enables [EC2 Instance
+         * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+         * 
+         */
     private final Boolean disableApiTermination;
-    /**
-     * If `true`, the launched EC2 instance will be EBS-optimized.
-     * 
-     */
+        /**
+         * @return If `true`, the launched EC2 instance will be EBS-optimized.
+         * 
+         */
     private final String ebsOptimized;
-    /**
-     * The elastic GPU to attach to the instance. See Elastic GPU
-     * below for more details.
-     * 
-     */
+        /**
+         * @return The elastic GPU to attach to the instance. See Elastic GPU
+         * below for more details.
+         * 
+         */
     private final List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications;
-    /**
-     * The enclave options of the Instance.
-     * 
-     */
+        /**
+         * @return The enclave options of the Instance.
+         * 
+         */
     private final List<GetLaunchTemplateEnclaveOption> enclaveOptions;
     private final @Nullable List<GetLaunchTemplateFilter> filters;
-    /**
-     * The hibernation options for the instance.
-     * 
-     */
+        /**
+         * @return The hibernation options for the instance.
+         * 
+         */
     private final List<GetLaunchTemplateHibernationOption> hibernationOptions;
-    /**
-     * The IAM Instance Profile to launch the instance with. See Instance Profile
-     * below for more details.
-     * 
-     */
+        /**
+         * @return The IAM Instance Profile to launch the instance with. See Instance Profile
+         * below for more details.
+         * 
+         */
     private final List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles;
-    /**
-     * The ID of the launch template.
-     * 
-     */
+        /**
+         * @return The ID of the launch template.
+         * 
+         */
     private final String id;
-    /**
-     * The AMI from which to launch the instance.
-     * 
-     */
+        /**
+         * @return The AMI from which to launch the instance.
+         * 
+         */
     private final String imageId;
-    /**
-     * Shutdown behavior for the instance. Can be `stop` or `terminate`.
-     * (Default: `stop`).
-     * 
-     */
+        /**
+         * @return Shutdown behavior for the instance. Can be `stop` or `terminate`.
+         * (Default: `stop`).
+         * 
+         */
     private final String instanceInitiatedShutdownBehavior;
-    /**
-     * The market (purchasing) option for the instance.
-     * below for details.
-     * 
-     */
+        /**
+         * @return The market (purchasing) option for the instance.
+         * below for details.
+         * 
+         */
     private final List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions;
-    /**
-     * The type of the instance.
-     * 
-     */
+        /**
+         * @return The type of the instance.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The kernel ID.
-     * 
-     */
+        /**
+         * @return The kernel ID.
+         * 
+         */
     private final String kernelId;
-    /**
-     * The key name to use for the instance.
-     * 
-     */
+        /**
+         * @return The key name to use for the instance.
+         * 
+         */
     private final String keyName;
-    /**
-     * The latest version of the launch template.
-     * 
-     */
+        /**
+         * @return The latest version of the launch template.
+         * 
+         */
     private final Integer latestVersion;
-    /**
-     * The metadata options for the instance.
-     * 
-     */
+        /**
+         * @return The metadata options for the instance.
+         * 
+         */
     private final List<GetLaunchTemplateMetadataOption> metadataOptions;
-    /**
-     * The monitoring option for the instance.
-     * 
-     */
+        /**
+         * @return The monitoring option for the instance.
+         * 
+         */
     private final List<GetLaunchTemplateMonitoring> monitorings;
     private final @Nullable String name;
-    /**
-     * Customize network interfaces to be attached at instance boot time. See Network
-     * Interfaces below for more details.
-     * 
-     */
+        /**
+         * @return Customize network interfaces to be attached at instance boot time. See Network
+         * Interfaces below for more details.
+         * 
+         */
     private final List<GetLaunchTemplateNetworkInterface> networkInterfaces;
-    /**
-     * The placement of the instance.
-     * 
-     */
+        /**
+         * @return The placement of the instance.
+         * 
+         */
     private final List<GetLaunchTemplatePlacement> placements;
-    /**
-     * The ID of the RAM disk.
-     * 
-     */
+        /**
+         * @return The ID of the RAM disk.
+         * 
+         */
     private final String ramDiskId;
-    /**
-     * A list of security group names to associate with. If you are creating Instances in a VPC, use
-     * `vpc_security_group_ids` instead.
-     * 
-     */
+        /**
+         * @return A list of security group names to associate with. If you are creating Instances in a VPC, use
+         * `vpc_security_group_ids` instead.
+         * 
+         */
     private final List<String> securityGroupNames;
-    /**
-     * The tags to apply to the resources during launch.
-     * 
-     */
+        /**
+         * @return The tags to apply to the resources during launch.
+         * 
+         */
     private final List<GetLaunchTemplateTagSpecification> tagSpecifications;
-    /**
-     * (Optional) A map of tags to assign to the launch template.
-     * 
-     */
+        /**
+         * @return (Optional) A map of tags to assign to the launch template.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The Base64-encoded user data to provide when launching the instance.
-     * 
-     */
+        /**
+         * @return The Base64-encoded user data to provide when launching the instance.
+         * 
+         */
     private final String userData;
-    /**
-     * A list of security group IDs to associate with.
-     * 
-     */
+        /**
+         * @return A list of security group IDs to associate with.
+         * 
+         */
     private final List<String> vpcSecurityGroupIds;
 
     @CustomType.Constructor
@@ -251,68 +251,68 @@ public final class GetLaunchTemplateResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the launch template.
+     * @return Amazon Resource Name (ARN) of the launch template.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Specify volumes to attach to the instance besides the volumes specified by the AMI.
+     * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
      * 
-    */
+     */
     public List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
-     * Customize the credit specification of the instance. See Credit
+     * @return Customize the credit specification of the instance. See Credit
      * Specification below for more details.
      * 
-    */
+     */
     public List<GetLaunchTemplateCreditSpecification> creditSpecifications() {
         return this.creditSpecifications;
     }
     /**
-     * The default version of the launch template.
+     * @return The default version of the launch template.
      * 
-    */
+     */
     public Integer defaultVersion() {
         return this.defaultVersion;
     }
     /**
-     * Description of the launch template.
+     * @return Description of the launch template.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * If `true`, enables [EC2 Instance
+     * @return If `true`, enables [EC2 Instance
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
-    */
+     */
     public Boolean disableApiTermination() {
         return this.disableApiTermination;
     }
     /**
-     * If `true`, the launched EC2 instance will be EBS-optimized.
+     * @return If `true`, the launched EC2 instance will be EBS-optimized.
      * 
-    */
+     */
     public String ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
-     * The elastic GPU to attach to the instance. See Elastic GPU
+     * @return The elastic GPU to attach to the instance. See Elastic GPU
      * below for more details.
      * 
-    */
+     */
     public List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications() {
         return this.elasticGpuSpecifications;
     }
     /**
-     * The enclave options of the Instance.
+     * @return The enclave options of the Instance.
      * 
-    */
+     */
     public List<GetLaunchTemplateEnclaveOption> enclaveOptions() {
         return this.enclaveOptions;
     }
@@ -320,89 +320,89 @@ public final class GetLaunchTemplateResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The hibernation options for the instance.
+     * @return The hibernation options for the instance.
      * 
-    */
+     */
     public List<GetLaunchTemplateHibernationOption> hibernationOptions() {
         return this.hibernationOptions;
     }
     /**
-     * The IAM Instance Profile to launch the instance with. See Instance Profile
+     * @return The IAM Instance Profile to launch the instance with. See Instance Profile
      * below for more details.
      * 
-    */
+     */
     public List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles() {
         return this.iamInstanceProfiles;
     }
     /**
-     * The ID of the launch template.
+     * @return The ID of the launch template.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The AMI from which to launch the instance.
+     * @return The AMI from which to launch the instance.
      * 
-    */
+     */
     public String imageId() {
         return this.imageId;
     }
     /**
-     * Shutdown behavior for the instance. Can be `stop` or `terminate`.
+     * @return Shutdown behavior for the instance. Can be `stop` or `terminate`.
      * (Default: `stop`).
      * 
-    */
+     */
     public String instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior;
     }
     /**
-     * The market (purchasing) option for the instance.
+     * @return The market (purchasing) option for the instance.
      * below for details.
      * 
-    */
+     */
     public List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions() {
         return this.instanceMarketOptions;
     }
     /**
-     * The type of the instance.
+     * @return The type of the instance.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The kernel ID.
+     * @return The kernel ID.
      * 
-    */
+     */
     public String kernelId() {
         return this.kernelId;
     }
     /**
-     * The key name to use for the instance.
+     * @return The key name to use for the instance.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The latest version of the launch template.
+     * @return The latest version of the launch template.
      * 
-    */
+     */
     public Integer latestVersion() {
         return this.latestVersion;
     }
     /**
-     * The metadata options for the instance.
+     * @return The metadata options for the instance.
      * 
-    */
+     */
     public List<GetLaunchTemplateMetadataOption> metadataOptions() {
         return this.metadataOptions;
     }
     /**
-     * The monitoring option for the instance.
+     * @return The monitoring option for the instance.
      * 
-    */
+     */
     public List<GetLaunchTemplateMonitoring> monitorings() {
         return this.monitorings;
     }
@@ -410,60 +410,60 @@ public final class GetLaunchTemplateResult {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Customize network interfaces to be attached at instance boot time. See Network
+     * @return Customize network interfaces to be attached at instance boot time. See Network
      * Interfaces below for more details.
      * 
-    */
+     */
     public List<GetLaunchTemplateNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
-     * The placement of the instance.
+     * @return The placement of the instance.
      * 
-    */
+     */
     public List<GetLaunchTemplatePlacement> placements() {
         return this.placements;
     }
     /**
-     * The ID of the RAM disk.
+     * @return The ID of the RAM disk.
      * 
-    */
+     */
     public String ramDiskId() {
         return this.ramDiskId;
     }
     /**
-     * A list of security group names to associate with. If you are creating Instances in a VPC, use
+     * @return A list of security group names to associate with. If you are creating Instances in a VPC, use
      * `vpc_security_group_ids` instead.
      * 
-    */
+     */
     public List<String> securityGroupNames() {
         return this.securityGroupNames;
     }
     /**
-     * The tags to apply to the resources during launch.
+     * @return The tags to apply to the resources during launch.
      * 
-    */
+     */
     public List<GetLaunchTemplateTagSpecification> tagSpecifications() {
         return this.tagSpecifications;
     }
     /**
-     * (Optional) A map of tags to assign to the launch template.
+     * @return (Optional) A map of tags to assign to the launch template.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The Base64-encoded user data to provide when launching the instance.
+     * @return The Base64-encoded user data to provide when launching the instance.
      * 
-    */
+     */
     public String userData() {
         return this.userData;
     }
     /**
-     * A list of security group IDs to associate with.
+     * @return A list of security group IDs to associate with.
      * 
-    */
+     */
     public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }

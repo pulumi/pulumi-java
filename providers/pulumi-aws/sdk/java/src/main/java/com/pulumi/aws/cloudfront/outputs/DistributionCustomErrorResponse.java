@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionCustomErrorResponse {
-    /**
-     * The minimum amount of time you want
-     * HTTP error codes to stay in CloudFront caches before CloudFront queries your
-     * origin to see whether the object has been updated.
-     * 
-     */
+        /**
+         * @return The minimum amount of time you want
+         * HTTP error codes to stay in CloudFront caches before CloudFront queries your
+         * origin to see whether the object has been updated.
+         * 
+         */
     private final @Nullable Integer errorCachingMinTtl;
-    /**
-     * The 4xx or 5xx HTTP status code that you want to
-     * customize.
-     * 
-     */
+        /**
+         * @return The 4xx or 5xx HTTP status code that you want to
+         * customize.
+         * 
+         */
     private final Integer errorCode;
-    /**
-     * The HTTP status code that you want CloudFront
-     * to return with the custom error page to the viewer.
-     * 
-     */
+        /**
+         * @return The HTTP status code that you want CloudFront
+         * to return with the custom error page to the viewer.
+         * 
+         */
     private final @Nullable Integer responseCode;
-    /**
-     * The path of the custom error page (for
-     * example, `/custom_404.html`).
-     * 
-     */
+        /**
+         * @return The path of the custom error page (for
+         * example, `/custom_404.html`).
+         * 
+         */
     private final @Nullable String responsePagePath;
 
     @CustomType.Constructor
@@ -51,35 +51,35 @@ public final class DistributionCustomErrorResponse {
     }
 
     /**
-     * The minimum amount of time you want
+     * @return The minimum amount of time you want
      * HTTP error codes to stay in CloudFront caches before CloudFront queries your
      * origin to see whether the object has been updated.
      * 
-    */
+     */
     public Optional<Integer> errorCachingMinTtl() {
         return Optional.ofNullable(this.errorCachingMinTtl);
     }
     /**
-     * The 4xx or 5xx HTTP status code that you want to
+     * @return The 4xx or 5xx HTTP status code that you want to
      * customize.
      * 
-    */
+     */
     public Integer errorCode() {
         return this.errorCode;
     }
     /**
-     * The HTTP status code that you want CloudFront
+     * @return The HTTP status code that you want CloudFront
      * to return with the custom error page to the viewer.
      * 
-    */
+     */
     public Optional<Integer> responseCode() {
         return Optional.ofNullable(this.responseCode);
     }
     /**
-     * The path of the custom error page (for
+     * @return The path of the custom error page (for
      * example, `/custom_404.html`).
      * 
-    */
+     */
     public Optional<String> responsePagePath() {
         return Optional.ofNullable(this.responsePagePath);
     }

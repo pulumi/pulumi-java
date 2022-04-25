@@ -25,6 +25,10 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="authenticationConfiguration")
     private @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
+    /**
+     * @return Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
+     * 
+     */
     public Optional<Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs>> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
@@ -36,6 +40,10 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="autoDeploymentsEnabled")
     private @Nullable Output<Boolean> autoDeploymentsEnabled;
 
+    /**
+     * @return Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> autoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
@@ -47,6 +55,10 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="codeRepository")
     private @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
 
+    /**
+     * @return Description of a source code repository. See Code Repository below for more details.
+     * 
+     */
     public Optional<Output<ServiceSourceConfigurationCodeRepositoryGetArgs>> codeRepository() {
         return Optional.ofNullable(this.codeRepository);
     }
@@ -58,6 +70,10 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
     @Import(name="imageRepository")
     private @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
 
+    /**
+     * @return Description of a source image repository. See Image Repository below for more details.
+     * 
+     */
     public Optional<Output<ServiceSourceConfigurationImageRepositoryGetArgs>> imageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
@@ -89,38 +105,86 @@ public final class ServiceSourceConfigurationGetArgs extends com.pulumi.resource
             $ = new ServiceSourceConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationConfiguration Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(@Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
+        /**
+         * @param authenticationConfiguration Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(ServiceSourceConfigurationAuthenticationConfigurationGetArgs authenticationConfiguration) {
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
+        /**
+         * @param autoDeploymentsEnabled Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
             $.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
+        /**
+         * @param autoDeploymentsEnabled Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
             return autoDeploymentsEnabled(Output.of(autoDeploymentsEnabled));
         }
 
+        /**
+         * @param codeRepository Description of a source code repository. See Code Repository below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeRepository(@Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
             $.codeRepository = codeRepository;
             return this;
         }
 
+        /**
+         * @param codeRepository Description of a source code repository. See Code Repository below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeRepository(ServiceSourceConfigurationCodeRepositoryGetArgs codeRepository) {
             return codeRepository(Output.of(codeRepository));
         }
 
+        /**
+         * @param imageRepository Description of a source image repository. See Image Repository below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepository(@Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
             $.imageRepository = imageRepository;
             return this;
         }
 
+        /**
+         * @param imageRepository Description of a source image repository. See Image Repository below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRepository(ServiceSourceConfigurationImageRepositoryGetArgs imageRepository) {
             return imageRepository(Output.of(imageRepository));
         }

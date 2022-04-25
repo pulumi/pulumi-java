@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterRestoreToPointInTime {
-    /**
-     * Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
-     * 
-     */
+        /**
+         * @return Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
+         * 
+         */
     private final @Nullable String restoreToTime;
-    /**
-     * Type of restore to be performed.
-     * Valid options are `full-copy` (default) and `copy-on-write`.
-     * 
-     */
+        /**
+         * @return Type of restore to be performed.
+         * Valid options are `full-copy` (default) and `copy-on-write`.
+         * 
+         */
     private final @Nullable String restoreType;
-    /**
-     * The identifier of the source database cluster from which to restore.
-     * 
-     */
+        /**
+         * @return The identifier of the source database cluster from which to restore.
+         * 
+         */
     private final String sourceClusterIdentifier;
-    /**
-     * Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
-     * 
-     */
+        /**
+         * @return Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
+         * 
+         */
     private final @Nullable Boolean useLatestRestorableTime;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class ClusterRestoreToPointInTime {
     }
 
     /**
-     * Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
+     * @return Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
      * 
-    */
+     */
     public Optional<String> restoreToTime() {
         return Optional.ofNullable(this.restoreToTime);
     }
     /**
-     * Type of restore to be performed.
+     * @return Type of restore to be performed.
      * Valid options are `full-copy` (default) and `copy-on-write`.
      * 
-    */
+     */
     public Optional<String> restoreType() {
         return Optional.ofNullable(this.restoreType);
     }
     /**
-     * The identifier of the source database cluster from which to restore.
+     * @return The identifier of the source database cluster from which to restore.
      * 
-    */
+     */
     public String sourceClusterIdentifier() {
         return this.sourceClusterIdentifier;
     }
     /**
-     * Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
+     * @return Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
      * 
-    */
+     */
     public Optional<Boolean> useLatestRestorableTime() {
         return Optional.ofNullable(this.useLatestRestorableTime);
     }

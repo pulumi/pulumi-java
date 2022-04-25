@@ -15,31 +15,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RouteSpec {
-    /**
-     * The gRPC routing information for the route.
-     * 
-     */
+        /**
+         * @return The gRPC routing information for the route.
+         * 
+         */
     private final @Nullable RouteSpecGrpcRoute grpcRoute;
-    /**
-     * The HTTP/2 routing information for the route.
-     * 
-     */
+        /**
+         * @return The HTTP/2 routing information for the route.
+         * 
+         */
     private final @Nullable RouteSpecHttp2Route http2Route;
-    /**
-     * The HTTP routing information for the route.
-     * 
-     */
+        /**
+         * @return The HTTP routing information for the route.
+         * 
+         */
     private final @Nullable RouteSpecHttpRoute httpRoute;
-    /**
-     * The priority for the route, between `0` and `1000`.
-     * Routes are matched based on the specified value, where `0` is the highest priority.
-     * 
-     */
+        /**
+         * @return The priority for the route, between `0` and `1000`.
+         * Routes are matched based on the specified value, where `0` is the highest priority.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * The TCP routing information for the route.
-     * 
-     */
+        /**
+         * @return The TCP routing information for the route.
+         * 
+         */
     private final @Nullable RouteSpecTcpRoute tcpRoute;
 
     @CustomType.Constructor
@@ -57,38 +57,38 @@ public final class RouteSpec {
     }
 
     /**
-     * The gRPC routing information for the route.
+     * @return The gRPC routing information for the route.
      * 
-    */
+     */
     public Optional<RouteSpecGrpcRoute> grpcRoute() {
         return Optional.ofNullable(this.grpcRoute);
     }
     /**
-     * The HTTP/2 routing information for the route.
+     * @return The HTTP/2 routing information for the route.
      * 
-    */
+     */
     public Optional<RouteSpecHttp2Route> http2Route() {
         return Optional.ofNullable(this.http2Route);
     }
     /**
-     * The HTTP routing information for the route.
+     * @return The HTTP routing information for the route.
      * 
-    */
+     */
     public Optional<RouteSpecHttpRoute> httpRoute() {
         return Optional.ofNullable(this.httpRoute);
     }
     /**
-     * The priority for the route, between `0` and `1000`.
+     * @return The priority for the route, between `0` and `1000`.
      * Routes are matched based on the specified value, where `0` is the highest priority.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The TCP routing information for the route.
+     * @return The TCP routing information for the route.
      * 
-    */
+     */
     public Optional<RouteSpecTcpRoute> tcpRoute() {
         return Optional.ofNullable(this.tcpRoute);
     }

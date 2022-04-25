@@ -17,127 +17,127 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionDefaultCacheBehavior {
-    /**
-     * Controls which HTTP methods CloudFront
-     * processes and forwards to your Amazon S3 bucket or your custom origin.
-     * 
-     */
+        /**
+         * @return Controls which HTTP methods CloudFront
+         * processes and forwards to your Amazon S3 bucket or your custom origin.
+         * 
+         */
     private final List<String> allowedMethods;
-    /**
-     * The unique identifier of the cache policy that
-     * is attached to the cache behavior.
-     * 
-     */
+        /**
+         * @return The unique identifier of the cache policy that
+         * is attached to the cache behavior.
+         * 
+         */
     private final @Nullable String cachePolicyId;
-    /**
-     * Controls whether CloudFront caches the
-     * response to requests using the specified HTTP methods.
-     * 
-     */
+        /**
+         * @return Controls whether CloudFront caches the
+         * response to requests using the specified HTTP methods.
+         * 
+         */
     private final List<String> cachedMethods;
-    /**
-     * Whether you want CloudFront to automatically
-     * compress content for web requests that include `Accept-Encoding: gzip` in
-     * the request header (default: `false`).
-     * 
-     */
+        /**
+         * @return Whether you want CloudFront to automatically
+         * compress content for web requests that include `Accept-Encoding: gzip` in
+         * the request header (default: `false`).
+         * 
+         */
     private final @Nullable Boolean compress;
-    /**
-     * The default amount of time (in seconds) that an
-     * object is in a CloudFront cache before CloudFront forwards another request
-     * in the absence of an `Cache-Control max-age` or `Expires` header.
-     * 
-     */
+        /**
+         * @return The default amount of time (in seconds) that an
+         * object is in a CloudFront cache before CloudFront forwards another request
+         * in the absence of an `Cache-Control max-age` or `Expires` header.
+         * 
+         */
     private final @Nullable Integer defaultTtl;
-    /**
-     * Field level encryption configuration ID
-     * 
-     */
+        /**
+         * @return Field level encryption configuration ID
+         * 
+         */
     private final @Nullable String fieldLevelEncryptionId;
-    /**
-     * The forwarded values configuration that specifies how CloudFront
-     * handles query strings, cookies and headers (maximum one).
-     * 
-     */
+        /**
+         * @return The forwarded values configuration that specifies how CloudFront
+         * handles query strings, cookies and headers (maximum one).
+         * 
+         */
     private final @Nullable DistributionDefaultCacheBehaviorForwardedValues forwardedValues;
-    /**
-     * A config block that triggers a cloudfront
-     * function with specific actions (maximum 2).
-     * 
-     */
+        /**
+         * @return A config block that triggers a cloudfront
+         * function with specific actions (maximum 2).
+         * 
+         */
     private final @Nullable List<DistributionDefaultCacheBehaviorFunctionAssociation> functionAssociations;
-    /**
-     * A config block that triggers a lambda
-     * function with specific actions (maximum 4).
-     * 
-     */
+        /**
+         * @return A config block that triggers a lambda
+         * function with specific actions (maximum 4).
+         * 
+         */
     private final @Nullable List<DistributionDefaultCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations;
-    /**
-     * The maximum amount of time (in seconds) that an
-     * object is in a CloudFront cache before CloudFront forwards another request
-     * to your origin to determine whether the object has been updated. Only
-     * effective in the presence of `Cache-Control max-age`, `Cache-Control
-     * s-maxage`, and `Expires` headers.
-     * 
-     */
+        /**
+         * @return The maximum amount of time (in seconds) that an
+         * object is in a CloudFront cache before CloudFront forwards another request
+         * to your origin to determine whether the object has been updated. Only
+         * effective in the presence of `Cache-Control max-age`, `Cache-Control
+         * s-maxage`, and `Expires` headers.
+         * 
+         */
     private final @Nullable Integer maxTtl;
-    /**
-     * The minimum amount of time that you want objects to
-     * stay in CloudFront caches before CloudFront queries your origin to see
-     * whether the object has been updated. Defaults to 0 seconds.
-     * 
-     */
+        /**
+         * @return The minimum amount of time that you want objects to
+         * stay in CloudFront caches before CloudFront queries your origin to see
+         * whether the object has been updated. Defaults to 0 seconds.
+         * 
+         */
     private final @Nullable Integer minTtl;
-    /**
-     * The unique identifier of the origin request policy
-     * that is attached to the behavior.
-     * 
-     */
+        /**
+         * @return The unique identifier of the origin request policy
+         * that is attached to the behavior.
+         * 
+         */
     private final @Nullable String originRequestPolicyId;
-    /**
-     * The ARN of the real-time log configuration
-     * that is attached to this cache behavior.
-     * 
-     */
+        /**
+         * @return The ARN of the real-time log configuration
+         * that is attached to this cache behavior.
+         * 
+         */
     private final @Nullable String realtimeLogConfigArn;
-    /**
-     * The identifier for a response headers policy.
-     * 
-     */
+        /**
+         * @return The identifier for a response headers policy.
+         * 
+         */
     private final @Nullable String responseHeadersPolicyId;
-    /**
-     * Indicates whether you want to distribute
-     * media files in Microsoft Smooth Streaming format using the origin that is
-     * associated with this cache behavior.
-     * 
-     */
+        /**
+         * @return Indicates whether you want to distribute
+         * media files in Microsoft Smooth Streaming format using the origin that is
+         * associated with this cache behavior.
+         * 
+         */
     private final @Nullable Boolean smoothStreaming;
-    /**
-     * The value of ID for the origin that you want
-     * CloudFront to route requests to when a request matches the path pattern
-     * either for a cache behavior or for the default cache behavior.
-     * 
-     */
+        /**
+         * @return The value of ID for the origin that you want
+         * CloudFront to route requests to when a request matches the path pattern
+         * either for a cache behavior or for the default cache behavior.
+         * 
+         */
     private final String targetOriginId;
-    /**
-     * A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-     * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-     * 
-     */
+        /**
+         * @return A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+         * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+         * 
+         */
     private final @Nullable List<String> trustedKeyGroups;
-    /**
-     * List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
-     * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-     * 
-     */
+        /**
+         * @return List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+         * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+         * 
+         */
     private final @Nullable List<String> trustedSigners;
-    /**
-     * Use this element to specify the
-     * protocol that users can use to access the files in the origin specified by
-     * TargetOriginId when a request matches the path pattern in PathPattern. One
-     * of `allow-all`, `https-only`, or `redirect-to-https`.
-     * 
-     */
+        /**
+         * @return Use this element to specify the
+         * protocol that users can use to access the files in the origin specified by
+         * TargetOriginId when a request matches the path pattern in PathPattern. One
+         * of `allow-all`, `https-only`, or `redirect-to-https`.
+         * 
+         */
     private final String viewerProtocolPolicy;
 
     @CustomType.Constructor
@@ -183,162 +183,162 @@ public final class DistributionDefaultCacheBehavior {
     }
 
     /**
-     * Controls which HTTP methods CloudFront
+     * @return Controls which HTTP methods CloudFront
      * processes and forwards to your Amazon S3 bucket or your custom origin.
      * 
-    */
+     */
     public List<String> allowedMethods() {
         return this.allowedMethods;
     }
     /**
-     * The unique identifier of the cache policy that
+     * @return The unique identifier of the cache policy that
      * is attached to the cache behavior.
      * 
-    */
+     */
     public Optional<String> cachePolicyId() {
         return Optional.ofNullable(this.cachePolicyId);
     }
     /**
-     * Controls whether CloudFront caches the
+     * @return Controls whether CloudFront caches the
      * response to requests using the specified HTTP methods.
      * 
-    */
+     */
     public List<String> cachedMethods() {
         return this.cachedMethods;
     }
     /**
-     * Whether you want CloudFront to automatically
+     * @return Whether you want CloudFront to automatically
      * compress content for web requests that include `Accept-Encoding: gzip` in
      * the request header (default: `false`).
      * 
-    */
+     */
     public Optional<Boolean> compress() {
         return Optional.ofNullable(this.compress);
     }
     /**
-     * The default amount of time (in seconds) that an
+     * @return The default amount of time (in seconds) that an
      * object is in a CloudFront cache before CloudFront forwards another request
      * in the absence of an `Cache-Control max-age` or `Expires` header.
      * 
-    */
+     */
     public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
-     * Field level encryption configuration ID
+     * @return Field level encryption configuration ID
      * 
-    */
+     */
     public Optional<String> fieldLevelEncryptionId() {
         return Optional.ofNullable(this.fieldLevelEncryptionId);
     }
     /**
-     * The forwarded values configuration that specifies how CloudFront
+     * @return The forwarded values configuration that specifies how CloudFront
      * handles query strings, cookies and headers (maximum one).
      * 
-    */
+     */
     public Optional<DistributionDefaultCacheBehaviorForwardedValues> forwardedValues() {
         return Optional.ofNullable(this.forwardedValues);
     }
     /**
-     * A config block that triggers a cloudfront
+     * @return A config block that triggers a cloudfront
      * function with specific actions (maximum 2).
      * 
-    */
+     */
     public List<DistributionDefaultCacheBehaviorFunctionAssociation> functionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
     /**
-     * A config block that triggers a lambda
+     * @return A config block that triggers a lambda
      * function with specific actions (maximum 4).
      * 
-    */
+     */
     public List<DistributionDefaultCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
     /**
-     * The maximum amount of time (in seconds) that an
+     * @return The maximum amount of time (in seconds) that an
      * object is in a CloudFront cache before CloudFront forwards another request
      * to your origin to determine whether the object has been updated. Only
      * effective in the presence of `Cache-Control max-age`, `Cache-Control
      * s-maxage`, and `Expires` headers.
      * 
-    */
+     */
     public Optional<Integer> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
-     * The minimum amount of time that you want objects to
+     * @return The minimum amount of time that you want objects to
      * stay in CloudFront caches before CloudFront queries your origin to see
      * whether the object has been updated. Defaults to 0 seconds.
      * 
-    */
+     */
     public Optional<Integer> minTtl() {
         return Optional.ofNullable(this.minTtl);
     }
     /**
-     * The unique identifier of the origin request policy
+     * @return The unique identifier of the origin request policy
      * that is attached to the behavior.
      * 
-    */
+     */
     public Optional<String> originRequestPolicyId() {
         return Optional.ofNullable(this.originRequestPolicyId);
     }
     /**
-     * The ARN of the real-time log configuration
+     * @return The ARN of the real-time log configuration
      * that is attached to this cache behavior.
      * 
-    */
+     */
     public Optional<String> realtimeLogConfigArn() {
         return Optional.ofNullable(this.realtimeLogConfigArn);
     }
     /**
-     * The identifier for a response headers policy.
+     * @return The identifier for a response headers policy.
      * 
-    */
+     */
     public Optional<String> responseHeadersPolicyId() {
         return Optional.ofNullable(this.responseHeadersPolicyId);
     }
     /**
-     * Indicates whether you want to distribute
+     * @return Indicates whether you want to distribute
      * media files in Microsoft Smooth Streaming format using the origin that is
      * associated with this cache behavior.
      * 
-    */
+     */
     public Optional<Boolean> smoothStreaming() {
         return Optional.ofNullable(this.smoothStreaming);
     }
     /**
-     * The value of ID for the origin that you want
+     * @return The value of ID for the origin that you want
      * CloudFront to route requests to when a request matches the path pattern
      * either for a cache behavior or for the default cache behavior.
      * 
-    */
+     */
     public String targetOriginId() {
         return this.targetOriginId;
     }
     /**
-     * A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
+     * @return A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
-    */
+     */
     public List<String> trustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
     /**
-     * List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+     * @return List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
-    */
+     */
     public List<String> trustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
     /**
-     * Use this element to specify the
+     * @return Use this element to specify the
      * protocol that users can use to access the files in the origin specified by
      * TargetOriginId when a request matches the path pattern in PathPattern. One
      * of `allow-all`, `https-only`, or `redirect-to-https`.
      * 
-    */
+     */
     public String viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }

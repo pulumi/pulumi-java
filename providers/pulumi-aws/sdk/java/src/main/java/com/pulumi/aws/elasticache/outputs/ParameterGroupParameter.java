@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ParameterGroupParameter {
-    /**
-     * The name of the ElastiCache parameter.
-     * 
-     */
+        /**
+         * @return The name of the ElastiCache parameter.
+         * 
+         */
     private final String name;
-    /**
-     * The value of the ElastiCache parameter.
-     * 
-     */
+        /**
+         * @return The value of the ElastiCache parameter.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ParameterGroupParameter {
     }
 
     /**
-     * The name of the ElastiCache parameter.
+     * @return The name of the ElastiCache parameter.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the ElastiCache parameter.
+     * @return The value of the ElastiCache parameter.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAuthorizationTokenResult {
-    /**
-     * Temporary authorization token.
-     * 
-     */
+        /**
+         * @return Temporary authorization token.
+         * 
+         */
     private final String authorizationToken;
     private final String domain;
     private final String domainOwner;
     private final @Nullable Integer durationSeconds;
-    /**
-     * The time in UTC RFC3339 format when the authorization token expires.
-     * 
-     */
+        /**
+         * @return The time in UTC RFC3339 format when the authorization token expires.
+         * 
+         */
     private final String expiration;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -48,9 +48,9 @@ public final class GetAuthorizationTokenResult {
     }
 
     /**
-     * Temporary authorization token.
+     * @return Temporary authorization token.
      * 
-    */
+     */
     public String authorizationToken() {
         return this.authorizationToken;
     }
@@ -64,16 +64,16 @@ public final class GetAuthorizationTokenResult {
         return Optional.ofNullable(this.durationSeconds);
     }
     /**
-     * The time in UTC RFC3339 format when the authorization token expires.
+     * @return The time in UTC RFC3339 format when the authorization token expires.
      * 
-    */
+     */
     public String expiration() {
         return this.expiration;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

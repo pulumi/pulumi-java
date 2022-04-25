@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DistributionConfigurationDistributionContainerDistributionConfiguration {
-    /**
-     * Set of tags that are attached to the container distribution configuration.
-     * 
-     */
+        /**
+         * @return Set of tags that are attached to the container distribution configuration.
+         * 
+         */
     private final @Nullable List<String> containerTags;
-    /**
-     * Description of the container distribution configuration.
-     * 
-     */
+        /**
+         * @return Description of the container distribution configuration.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Configuration block with the destination repository for the container distribution configuration.
-     * 
-     */
+        /**
+         * @return Configuration block with the destination repository for the container distribution configuration.
+         * 
+         */
     private final DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     /**
-     * Set of tags that are attached to the container distribution configuration.
+     * @return Set of tags that are attached to the container distribution configuration.
      * 
-    */
+     */
     public List<String> containerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
     /**
-     * Description of the container distribution configuration.
+     * @return Description of the container distribution configuration.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Configuration block with the destination repository for the container distribution configuration.
+     * @return Configuration block with the destination repository for the container distribution configuration.
      * 
-    */
+     */
     public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository() {
         return this.targetRepository;
     }

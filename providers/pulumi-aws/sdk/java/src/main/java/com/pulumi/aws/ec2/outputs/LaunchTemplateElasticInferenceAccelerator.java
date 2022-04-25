@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LaunchTemplateElasticInferenceAccelerator {
-    /**
-     * Accelerator type.
-     * 
-     */
+        /**
+         * @return Accelerator type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class LaunchTemplateElasticInferenceAccelerator {
     }
 
     /**
-     * Accelerator type.
+     * @return Accelerator type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

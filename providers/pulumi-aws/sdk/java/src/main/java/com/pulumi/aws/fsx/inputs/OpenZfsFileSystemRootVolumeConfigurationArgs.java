@@ -26,6 +26,10 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
     @Import(name="copyTagsToSnapshots")
     private @Nullable Output<Boolean> copyTagsToSnapshots;
 
+    /**
+     * @return - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> copyTagsToSnapshots() {
         return Optional.ofNullable(this.copyTagsToSnapshots);
     }
@@ -37,6 +41,10 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
     @Import(name="dataCompressionType")
     private @Nullable Output<String> dataCompressionType;
 
+    /**
+     * @return - Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don&#39;t specify compression option will inherit from parent volume. This option on file system applies to the root volume.
+     * 
+     */
     public Optional<Output<String>> dataCompressionType() {
         return Optional.ofNullable(this.dataCompressionType);
     }
@@ -48,6 +56,10 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
     @Import(name="nfsExports")
     private @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports;
 
+    /**
+     * @return - NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
+     * 
+     */
     public Optional<Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs>> nfsExports() {
         return Optional.ofNullable(this.nfsExports);
     }
@@ -59,6 +71,10 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return - specifies whether the volume is read-only. Default is false.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -70,6 +86,10 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
     @Import(name="userAndGroupQuotas")
     private @Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
+    /**
+     * @return - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
+     * 
+     */
     public Optional<Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>>> userAndGroupQuotas() {
         return Optional.ofNullable(this.userAndGroupQuotas);
     }
@@ -102,51 +122,117 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends com.pulu
             $ = new OpenZfsFileSystemRootVolumeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyTagsToSnapshots - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToSnapshots(@Nullable Output<Boolean> copyTagsToSnapshots) {
             $.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
+        /**
+         * @param copyTagsToSnapshots - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyTagsToSnapshots(Boolean copyTagsToSnapshots) {
             return copyTagsToSnapshots(Output.of(copyTagsToSnapshots));
         }
 
+        /**
+         * @param dataCompressionType - Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don&#39;t specify compression option will inherit from parent volume. This option on file system applies to the root volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
             $.dataCompressionType = dataCompressionType;
             return this;
         }
 
+        /**
+         * @param dataCompressionType - Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don&#39;t specify compression option will inherit from parent volume. This option on file system applies to the root volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCompressionType(String dataCompressionType) {
             return dataCompressionType(Output.of(dataCompressionType));
         }
 
+        /**
+         * @param nfsExports - NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExports(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports) {
             $.nfsExports = nfsExports;
             return this;
         }
 
+        /**
+         * @param nfsExports - NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExports(OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs nfsExports) {
             return nfsExports(Output.of(nfsExports));
         }
 
+        /**
+         * @param readOnly - specifies whether the volume is read-only. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly - specifies whether the volume is read-only. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param userAndGroupQuotas - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas) {
             $.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
 
+        /**
+         * @param userAndGroupQuotas - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAndGroupQuotas(List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs> userAndGroupQuotas) {
             return userAndGroupQuotas(Output.of(userAndGroupQuotas));
         }
 
+        /**
+         * @param userAndGroupQuotas - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAndGroupQuotas(OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs... userAndGroupQuotas) {
             return userAndGroupQuotas(List.of(userAndGroupQuotas));
         }

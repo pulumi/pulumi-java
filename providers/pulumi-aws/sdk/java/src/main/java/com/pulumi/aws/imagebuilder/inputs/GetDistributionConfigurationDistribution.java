@@ -21,6 +21,10 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="amiDistributionConfigurations", required=true)
     private List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
 
+    /**
+     * @return Nested list of AMI distribution configuration.
+     * 
+     */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
     }
@@ -32,6 +36,10 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="licenseConfigurationArns", required=true)
     private List<String> licenseConfigurationArns;
 
+    /**
+     * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+     * 
+     */
     public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns;
     }
@@ -43,6 +51,10 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return AWS Region of distribution.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -73,24 +85,54 @@ public final class GetDistributionConfigurationDistribution extends com.pulumi.r
             $ = new GetDistributionConfigurationDistribution(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiDistributionConfigurations Nested list of AMI distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
             $.amiDistributionConfigurations = amiDistributionConfigurations;
             return this;
         }
 
+        /**
+         * @param amiDistributionConfigurations Nested list of AMI distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiDistributionConfigurations(GetDistributionConfigurationDistributionAmiDistributionConfiguration... amiDistributionConfigurations) {
             return amiDistributionConfigurations(List.of(amiDistributionConfigurations));
         }
 
+        /**
+         * @param licenseConfigurationArns Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             $.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
+        /**
+         * @param licenseConfigurationArns Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {
             return licenseConfigurationArns(List.of(licenseConfigurationArns));
         }
 
+        /**
+         * @param region AWS Region of distribution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;

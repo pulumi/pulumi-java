@@ -28,6 +28,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogs")
     private @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
+    /**
+     * @return An Access Logs block. Access Logs documented below.
+     * 
+     */
     public Optional<Output<LoadBalancerAccessLogsArgs>> accessLogs() {
         return Optional.ofNullable(this.accessLogs);
     }
@@ -39,6 +43,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIpv4Pool")
     private @Nullable Output<String> customerOwnedIpv4Pool;
 
+    /**
+     * @return The ID of the customer owned ipv4 pool to use for this load balancer.
+     * 
+     */
     public Optional<Output<String>> customerOwnedIpv4Pool() {
         return Optional.ofNullable(this.customerOwnedIpv4Pool);
     }
@@ -50,6 +58,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desyncMitigationMode")
     private @Nullable Output<String> desyncMitigationMode;
 
+    /**
+     * @return Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
+     * 
+     */
     public Optional<Output<String>> desyncMitigationMode() {
         return Optional.ofNullable(this.desyncMitigationMode);
     }
@@ -61,6 +73,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dropInvalidHeaderFields")
     private @Nullable Output<Boolean> dropInvalidHeaderFields;
 
+    /**
+     * @return Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
+     * 
+     */
     public Optional<Output<Boolean>> dropInvalidHeaderFields() {
         return Optional.ofNullable(this.dropInvalidHeaderFields);
     }
@@ -73,6 +89,11 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCrossZoneLoadBalancing")
     private @Nullable Output<Boolean> enableCrossZoneLoadBalancing;
 
+    /**
+     * @return If true, cross-zone load balancing of the load balancer will be enabled.
+     * This is a `network` load balancer feature. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enableCrossZoneLoadBalancing() {
         return Optional.ofNullable(this.enableCrossZoneLoadBalancing);
     }
@@ -85,6 +106,11 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDeletionProtection")
     private @Nullable Output<Boolean> enableDeletionProtection;
 
+    /**
+     * @return If true, deletion of the load balancer will be disabled via
+     * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enableDeletionProtection() {
         return Optional.ofNullable(this.enableDeletionProtection);
     }
@@ -96,6 +122,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableHttp2")
     private @Nullable Output<Boolean> enableHttp2;
 
+    /**
+     * @return Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enableHttp2() {
         return Optional.ofNullable(this.enableHttp2);
     }
@@ -107,6 +137,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableWafFailOpen")
     private @Nullable Output<Boolean> enableWafFailOpen;
 
+    /**
+     * @return Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
+     * 
+     */
     public Optional<Output<Boolean>> enableWafFailOpen() {
         return Optional.ofNullable(this.enableWafFailOpen);
     }
@@ -118,6 +152,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
     private @Nullable Output<Integer> idleTimeout;
 
+    /**
+     * @return The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
+     * 
+     */
     public Optional<Output<Integer>> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
@@ -129,6 +167,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="internal")
     private @Nullable Output<Boolean> internal;
 
+    /**
+     * @return If true, the LB will be internal.
+     * 
+     */
     public Optional<Output<Boolean>> internal() {
         return Optional.ofNullable(this.internal);
     }
@@ -140,6 +182,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
     private @Nullable Output<String> ipAddressType;
 
+    /**
+     * @return The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
+     * 
+     */
     public Optional<Output<String>> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -151,6 +197,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType")
     private @Nullable Output<String> loadBalancerType;
 
+    /**
+     * @return The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
+     * 
+     */
     public Optional<Output<String>> loadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }
@@ -164,6 +214,12 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
+     * must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
+     * this provider will autogenerate a name beginning with `tf-lb`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -175,6 +231,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
     private @Nullable Output<String> namePrefix;
 
+    /**
+     * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+     * 
+     */
     public Optional<Output<String>> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
@@ -186,6 +246,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
     private @Nullable Output<List<String>> securityGroups;
 
+    /**
+     * @return A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroups() {
         return Optional.ofNullable(this.securityGroups);
     }
@@ -197,6 +261,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetMappings")
     private @Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings;
 
+    /**
+     * @return A subnet mapping block as documented below.
+     * 
+     */
     public Optional<Output<List<LoadBalancerSubnetMappingArgs>>> subnetMappings() {
         return Optional.ofNullable(this.subnetMappings);
     }
@@ -210,6 +278,12 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets")
     private @Nullable Output<List<String>> subnets;
 
+    /**
+     * @return A list of subnet IDs to attach to the LB. Subnets
+     * cannot be updated for Load Balancers of type `network`. Changing this value
+     * for load balancers of type `network` will force a recreation of the resource.
+     * 
+     */
     public Optional<Output<List<String>>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -221,6 +295,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -266,176 +344,424 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessLogs An Access Logs block. Access Logs documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsArgs> accessLogs) {
             $.accessLogs = accessLogs;
             return this;
         }
 
+        /**
+         * @param accessLogs An Access Logs block. Access Logs documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessLogs(LoadBalancerAccessLogsArgs accessLogs) {
             return accessLogs(Output.of(accessLogs));
         }
 
+        /**
+         * @param customerOwnedIpv4Pool The ID of the customer owned ipv4 pool to use for this load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerOwnedIpv4Pool(@Nullable Output<String> customerOwnedIpv4Pool) {
             $.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
+        /**
+         * @param customerOwnedIpv4Pool The ID of the customer owned ipv4 pool to use for this load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             return customerOwnedIpv4Pool(Output.of(customerOwnedIpv4Pool));
         }
 
+        /**
+         * @param desyncMitigationMode Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
             $.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
 
+        /**
+         * @param desyncMitigationMode Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desyncMitigationMode(String desyncMitigationMode) {
             return desyncMitigationMode(Output.of(desyncMitigationMode));
         }
 
+        /**
+         * @param dropInvalidHeaderFields Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropInvalidHeaderFields(@Nullable Output<Boolean> dropInvalidHeaderFields) {
             $.dropInvalidHeaderFields = dropInvalidHeaderFields;
             return this;
         }
 
+        /**
+         * @param dropInvalidHeaderFields Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dropInvalidHeaderFields(Boolean dropInvalidHeaderFields) {
             return dropInvalidHeaderFields(Output.of(dropInvalidHeaderFields));
         }
 
+        /**
+         * @param enableCrossZoneLoadBalancing If true, cross-zone load balancing of the load balancer will be enabled.
+         * This is a `network` load balancer feature. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCrossZoneLoadBalancing(@Nullable Output<Boolean> enableCrossZoneLoadBalancing) {
             $.enableCrossZoneLoadBalancing = enableCrossZoneLoadBalancing;
             return this;
         }
 
+        /**
+         * @param enableCrossZoneLoadBalancing If true, cross-zone load balancing of the load balancer will be enabled.
+         * This is a `network` load balancer feature. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCrossZoneLoadBalancing(Boolean enableCrossZoneLoadBalancing) {
             return enableCrossZoneLoadBalancing(Output.of(enableCrossZoneLoadBalancing));
         }
 
+        /**
+         * @param enableDeletionProtection If true, deletion of the load balancer will be disabled via
+         * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDeletionProtection(@Nullable Output<Boolean> enableDeletionProtection) {
             $.enableDeletionProtection = enableDeletionProtection;
             return this;
         }
 
+        /**
+         * @param enableDeletionProtection If true, deletion of the load balancer will be disabled via
+         * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDeletionProtection(Boolean enableDeletionProtection) {
             return enableDeletionProtection(Output.of(enableDeletionProtection));
         }
 
+        /**
+         * @param enableHttp2 Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttp2(@Nullable Output<Boolean> enableHttp2) {
             $.enableHttp2 = enableHttp2;
             return this;
         }
 
+        /**
+         * @param enableHttp2 Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHttp2(Boolean enableHttp2) {
             return enableHttp2(Output.of(enableHttp2));
         }
 
+        /**
+         * @param enableWafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWafFailOpen(@Nullable Output<Boolean> enableWafFailOpen) {
             $.enableWafFailOpen = enableWafFailOpen;
             return this;
         }
 
+        /**
+         * @param enableWafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableWafFailOpen(Boolean enableWafFailOpen) {
             return enableWafFailOpen(Output.of(enableWafFailOpen));
         }
 
+        /**
+         * @param idleTimeout The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
             $.idleTimeout = idleTimeout;
             return this;
         }
 
+        /**
+         * @param idleTimeout The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeout(Integer idleTimeout) {
             return idleTimeout(Output.of(idleTimeout));
         }
 
+        /**
+         * @param internal If true, the LB will be internal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internal(@Nullable Output<Boolean> internal) {
             $.internal = internal;
             return this;
         }
 
+        /**
+         * @param internal If true, the LB will be internal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internal(Boolean internal) {
             return internal(Output.of(internal));
         }
 
+        /**
+         * @param ipAddressType The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable Output<String> ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param ipAddressType The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(String ipAddressType) {
             return ipAddressType(Output.of(ipAddressType));
         }
 
+        /**
+         * @param loadBalancerType The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(@Nullable Output<String> loadBalancerType) {
             $.loadBalancerType = loadBalancerType;
             return this;
         }
 
+        /**
+         * @param loadBalancerType The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerType(String loadBalancerType) {
             return loadBalancerType(Output.of(loadBalancerType));
         }
 
+        /**
+         * @param name The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
+         * must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
+         * this provider will autogenerate a name beginning with `tf-lb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
+         * must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
+         * this provider will autogenerate a name beginning with `tf-lb`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
             $.namePrefix = namePrefix;
             return this;
         }
 
+        /**
+         * @param namePrefix Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namePrefix(String namePrefix) {
             return namePrefix(Output.of(namePrefix));
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnetMappings A subnet mapping block as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMappings(@Nullable Output<List<LoadBalancerSubnetMappingArgs>> subnetMappings) {
             $.subnetMappings = subnetMappings;
             return this;
         }
 
+        /**
+         * @param subnetMappings A subnet mapping block as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMappings(List<LoadBalancerSubnetMappingArgs> subnetMappings) {
             return subnetMappings(Output.of(subnetMappings));
         }
 
+        /**
+         * @param subnetMappings A subnet mapping block as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMappings(LoadBalancerSubnetMappingArgs... subnetMappings) {
             return subnetMappings(List.of(subnetMappings));
         }
 
+        /**
+         * @param subnets A list of subnet IDs to attach to the LB. Subnets
+         * cannot be updated for Load Balancers of type `network`. Changing this value
+         * for load balancers of type `network` will force a recreation of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable Output<List<String>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets A list of subnet IDs to attach to the LB. Subnets
+         * cannot be updated for Load Balancers of type `network`. Changing this value
+         * for load balancers of type `network` will force a recreation of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<String> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets A list of subnet IDs to attach to the LB. Subnets
+         * cannot be updated for Load Balancers of type `network`. Changing this value
+         * for load balancers of type `network` will force a recreation of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PresetThumbnails {
-    /**
-     * The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
-     * 
-     */
+        /**
+         * @return The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
+         * 
+         */
     private final @Nullable String aspectRatio;
-    /**
-     * The format of thumbnails, if any. Valid formats are jpg and png.
-     * 
-     */
+        /**
+         * @return The format of thumbnails, if any. Valid formats are jpg and png.
+         * 
+         */
     private final @Nullable String format;
-    /**
-     * The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
-     * 
-     */
+        /**
+         * @return The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
+         * 
+         */
     private final @Nullable String interval;
-    /**
-     * The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
-     * 
-     */
+        /**
+         * @return The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
+         * 
+         */
     private final @Nullable String maxHeight;
-    /**
-     * The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
-     * 
-     */
+        /**
+         * @return The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
+         * 
+         */
     private final @Nullable String maxWidth;
-    /**
-     * When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
-     * 
-     */
+        /**
+         * @return When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
+         * 
+         */
     private final @Nullable String paddingPolicy;
-    /**
-     * The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
-     * 
-     */
+        /**
+         * @return The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
+         * 
+         */
     private final @Nullable String resolution;
-    /**
-     * A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
-     * 
-     */
+        /**
+         * @return A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
+         * 
+         */
     private final @Nullable String sizingPolicy;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class PresetThumbnails {
     }
 
     /**
-     * The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
+     * @return The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
      * 
-    */
+     */
     public Optional<String> aspectRatio() {
         return Optional.ofNullable(this.aspectRatio);
     }
     /**
-     * The format of thumbnails, if any. Valid formats are jpg and png.
+     * @return The format of thumbnails, if any. Valid formats are jpg and png.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
+     * @return The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
      * 
-    */
+     */
     public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
+     * @return The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
      * 
-    */
+     */
     public Optional<String> maxHeight() {
         return Optional.ofNullable(this.maxHeight);
     }
     /**
-     * The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
+     * @return The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
      * 
-    */
+     */
     public Optional<String> maxWidth() {
         return Optional.ofNullable(this.maxWidth);
     }
     /**
-     * When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
+     * @return When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
      * 
-    */
+     */
     public Optional<String> paddingPolicy() {
         return Optional.ofNullable(this.paddingPolicy);
     }
     /**
-     * The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
+     * @return The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
      * 
-    */
+     */
     public Optional<String> resolution() {
         return Optional.ofNullable(this.resolution);
     }
     /**
-     * A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
+     * @return A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
      * 
-    */
+     */
     public Optional<String> sizingPolicy() {
         return Optional.ofNullable(this.sizingPolicy);
     }

@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskDefinitionVolumeEfsVolumeConfiguration {
-    /**
-     * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
-     * 
-     */
+        /**
+         * @return Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+         * 
+         */
     private final @Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig;
-    /**
-     * The Amazon FSx for Windows File Server file system ID to use.
-     * 
-     */
+        /**
+         * @return The Amazon FSx for Windows File Server file system ID to use.
+         * 
+         */
     private final String fileSystemId;
-    /**
-     * The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
-     * 
-     */
+        /**
+         * @return The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+         * 
+         */
     private final @Nullable String rootDirectory;
-    /**
-     * Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
-     * 
-     */
+        /**
+         * @return Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+         * 
+         */
     private final @Nullable String transitEncryption;
-    /**
-     * Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
-     * 
-     */
+        /**
+         * @return Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
+         * 
+         */
     private final @Nullable Integer transitEncryptionPort;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class TaskDefinitionVolumeEfsVolumeConfiguration {
     }
 
     /**
-     * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
+     * @return Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
      * 
-    */
+     */
     public Optional<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig> authorizationConfig() {
         return Optional.ofNullable(this.authorizationConfig);
     }
     /**
-     * The Amazon FSx for Windows File Server file system ID to use.
+     * @return The Amazon FSx for Windows File Server file system ID to use.
      * 
-    */
+     */
     public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
-     * The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
+     * @return The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
      * 
-    */
+     */
     public Optional<String> rootDirectory() {
         return Optional.ofNullable(this.rootDirectory);
     }
     /**
-     * Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
+     * @return Whether or not to enable encryption for Amazon EFS data in transit between the Amazon ECS host and the Amazon EFS server. Transit encryption must be enabled if Amazon EFS IAM authorization is used. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
      * 
-    */
+     */
     public Optional<String> transitEncryption() {
         return Optional.ofNullable(this.transitEncryption);
     }
     /**
-     * Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
+     * @return Port to use for transit encryption. If you do not specify a transit encryption port, it will use the port selection strategy that the Amazon EFS mount helper uses.
      * 
-    */
+     */
     public Optional<Integer> transitEncryptionPort() {
         return Optional.ofNullable(this.transitEncryptionPort);
     }

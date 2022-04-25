@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfiguration {
-    /**
-     * The input stream used by the application.
-     * 
-     */
+        /**
+         * @return The input stream used by the application.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input;
-    /**
-     * The destination streams used by the application.
-     * 
-     */
+        /**
+         * @return The destination streams used by the application.
+         * 
+         */
     private final @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs;
-    /**
-     * The reference data source used by the application.
-     * 
-     */
+        /**
+         * @return The reference data source used by the application.
+         * 
+         */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     /**
-     * The input stream used by the application.
+     * @return The input stream used by the application.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInput> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * The destination streams used by the application.
+     * @return The destination streams used by the application.
      * 
-    */
+     */
     public List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
-     * The reference data source used by the application.
+     * @return The reference data source used by the application.
      * 
-    */
+     */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource> referenceDataSource() {
         return Optional.ofNullable(this.referenceDataSource);
     }

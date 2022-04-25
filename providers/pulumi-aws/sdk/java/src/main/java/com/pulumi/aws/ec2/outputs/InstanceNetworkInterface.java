@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceNetworkInterface {
-    /**
-     * Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
-     * 
-     */
+        /**
+         * @return Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+         * 
+         */
     private final @Nullable Boolean deleteOnTermination;
-    /**
-     * Integer index of the network interface attachment. Limited by instance type.
-     * 
-     */
+        /**
+         * @return Integer index of the network interface attachment. Limited by instance type.
+         * 
+         */
     private final Integer deviceIndex;
-    /**
-     * ID of the network interface to attach.
-     * 
-     */
+        /**
+         * @return ID of the network interface to attach.
+         * 
+         */
     private final String networkInterfaceId;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class InstanceNetworkInterface {
     }
 
     /**
-     * Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+     * @return Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
      * 
-    */
+     */
     public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * Integer index of the network interface attachment. Limited by instance type.
+     * @return Integer index of the network interface attachment. Limited by instance type.
      * 
-    */
+     */
     public Integer deviceIndex() {
         return this.deviceIndex;
     }
     /**
-     * ID of the network interface to attach.
+     * @return ID of the network interface to attach.
      * 
-    */
+     */
     public String networkInterfaceId() {
         return this.networkInterfaceId;
     }

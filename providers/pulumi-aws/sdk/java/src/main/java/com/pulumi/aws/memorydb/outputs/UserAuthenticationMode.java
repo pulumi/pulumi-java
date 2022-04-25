@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserAuthenticationMode {
-    /**
-     * The number of passwords belonging to the user.
-     * 
-     */
+        /**
+         * @return The number of passwords belonging to the user.
+         * 
+         */
     private final @Nullable Integer passwordCount;
-    /**
-     * The set of passwords used for authentication. You can create up to two passwords for each user.
-     * 
-     */
+        /**
+         * @return The set of passwords used for authentication. You can create up to two passwords for each user.
+         * 
+         */
     private final List<String> passwords;
-    /**
-     * Indicates whether the user requires a password to authenticate. Must be set to `password`.
-     * 
-     */
+        /**
+         * @return Indicates whether the user requires a password to authenticate. Must be set to `password`.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class UserAuthenticationMode {
     }
 
     /**
-     * The number of passwords belonging to the user.
+     * @return The number of passwords belonging to the user.
      * 
-    */
+     */
     public Optional<Integer> passwordCount() {
         return Optional.ofNullable(this.passwordCount);
     }
     /**
-     * The set of passwords used for authentication. You can create up to two passwords for each user.
+     * @return The set of passwords used for authentication. You can create up to two passwords for each user.
      * 
-    */
+     */
     public List<String> passwords() {
         return this.passwords;
     }
     /**
-     * Indicates whether the user requires a password to authenticate. Must be set to `password`.
+     * @return Indicates whether the user requires a password to authenticate. Must be set to `password`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ClusterSetting {
-    /**
-     * Name of the setting to manage. Valid values: `containerInsights`.
-     * 
-     */
+        /**
+         * @return Name of the setting to manage. Valid values: `containerInsights`.
+         * 
+         */
     private final String name;
-    /**
-     * The value to assign to the setting. Value values are `enabled` and `disabled`.
-     * 
-     */
+        /**
+         * @return The value to assign to the setting. Value values are `enabled` and `disabled`.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ClusterSetting {
     }
 
     /**
-     * Name of the setting to manage. Valid values: `containerInsights`.
+     * @return Name of the setting to manage. Valid values: `containerInsights`.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value to assign to the setting. Value values are `enabled` and `disabled`.
+     * @return The value to assign to the setting. Value values are `enabled` and `disabled`.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

@@ -19,65 +19,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PartitionStorageDescriptor {
-    /**
-     * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
-     * 
-     */
+        /**
+         * @return A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
+         * 
+         */
     private final @Nullable List<String> bucketColumns;
-    /**
-     * A list of the Columns in the table.
-     * 
-     */
+        /**
+         * @return A list of the Columns in the table.
+         * 
+         */
     private final @Nullable List<PartitionStorageDescriptorColumn> columns;
-    /**
-     * True if the data in the table is compressed, or False if not.
-     * 
-     */
+        /**
+         * @return True if the data in the table is compressed, or False if not.
+         * 
+         */
     private final @Nullable Boolean compressed;
-    /**
-     * The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
-     * 
-     */
+        /**
+         * @return The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+         * 
+         */
     private final @Nullable String inputFormat;
-    /**
-     * The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
-     * 
-     */
+        /**
+         * @return The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Must be specified if the table contains any dimension columns.
-     * 
-     */
+        /**
+         * @return Must be specified if the table contains any dimension columns.
+         * 
+         */
     private final @Nullable Integer numberOfBuckets;
-    /**
-     * The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
-     * 
-     */
+        /**
+         * @return The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+         * 
+         */
     private final @Nullable String outputFormat;
-    /**
-     * A map of initialization parameters for the SerDe, in key-value form.
-     * 
-     */
+        /**
+         * @return A map of initialization parameters for the SerDe, in key-value form.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
-    /**
-     * Serialization/deserialization (SerDe) information.
-     * 
-     */
+        /**
+         * @return Serialization/deserialization (SerDe) information.
+         * 
+         */
     private final @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo;
-    /**
-     * Information about values that appear very frequently in a column (skewed values).
-     * 
-     */
+        /**
+         * @return Information about values that appear very frequently in a column (skewed values).
+         * 
+         */
     private final @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo;
-    /**
-     * A list of Order objects specifying the sort order of each bucket in the table.
-     * 
-     */
+        /**
+         * @return A list of Order objects specifying the sort order of each bucket in the table.
+         * 
+         */
     private final @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns;
-    /**
-     * True if the table data is stored in subdirectories, or False if not.
-     * 
-     */
+        /**
+         * @return True if the table data is stored in subdirectories, or False if not.
+         * 
+         */
     private final @Nullable Boolean storedAsSubDirectories;
 
     @CustomType.Constructor
@@ -109,86 +109,86 @@ public final class PartitionStorageDescriptor {
     }
 
     /**
-     * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
+     * @return A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
-    */
+     */
     public List<String> bucketColumns() {
         return this.bucketColumns == null ? List.of() : this.bucketColumns;
     }
     /**
-     * A list of the Columns in the table.
+     * @return A list of the Columns in the table.
      * 
-    */
+     */
     public List<PartitionStorageDescriptorColumn> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
-     * True if the data in the table is compressed, or False if not.
+     * @return True if the data in the table is compressed, or False if not.
      * 
-    */
+     */
     public Optional<Boolean> compressed() {
         return Optional.ofNullable(this.compressed);
     }
     /**
-     * The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
+     * @return The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
-    */
+     */
     public Optional<String> inputFormat() {
         return Optional.ofNullable(this.inputFormat);
     }
     /**
-     * The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
+     * @return The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Must be specified if the table contains any dimension columns.
+     * @return Must be specified if the table contains any dimension columns.
      * 
-    */
+     */
     public Optional<Integer> numberOfBuckets() {
         return Optional.ofNullable(this.numberOfBuckets);
     }
     /**
-     * The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
+     * @return The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
-    */
+     */
     public Optional<String> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
-     * A map of initialization parameters for the SerDe, in key-value form.
+     * @return A map of initialization parameters for the SerDe, in key-value form.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Serialization/deserialization (SerDe) information.
+     * @return Serialization/deserialization (SerDe) information.
      * 
-    */
+     */
     public Optional<PartitionStorageDescriptorSerDeInfo> serDeInfo() {
         return Optional.ofNullable(this.serDeInfo);
     }
     /**
-     * Information about values that appear very frequently in a column (skewed values).
+     * @return Information about values that appear very frequently in a column (skewed values).
      * 
-    */
+     */
     public Optional<PartitionStorageDescriptorSkewedInfo> skewedInfo() {
         return Optional.ofNullable(this.skewedInfo);
     }
     /**
-     * A list of Order objects specifying the sort order of each bucket in the table.
+     * @return A list of Order objects specifying the sort order of each bucket in the table.
      * 
-    */
+     */
     public List<PartitionStorageDescriptorSortColumn> sortColumns() {
         return this.sortColumns == null ? List.of() : this.sortColumns;
     }
     /**
-     * True if the table data is stored in subdirectories, or False if not.
+     * @return True if the table data is stored in subdirectories, or False if not.
      * 
-    */
+     */
     public Optional<Boolean> storedAsSubDirectories() {
         return Optional.ofNullable(this.storedAsSubDirectories);
     }

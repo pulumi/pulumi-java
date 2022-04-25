@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCertificateResult {
-    /**
-     * Amazon Resource Name (ARN) of the certificate.
-     * 
-     */
+        /**
+         * @return Amazon Resource Name (ARN) of the certificate.
+         * 
+         */
     private final String arn;
-    /**
-     * Type of certificate. For example, `CA`.
-     * 
-     */
+        /**
+         * @return Type of certificate. For example, `CA`.
+         * 
+         */
     private final String certificateType;
-    /**
-     * Boolean whether there is an override for the default certificate identifier.
-     * 
-     */
+        /**
+         * @return Boolean whether there is an override for the default certificate identifier.
+         * 
+         */
     private final Boolean customerOverride;
-    /**
-     * If there is an override for the default certificate identifier, when the override expires.
-     * 
-     */
+        /**
+         * @return If there is an override for the default certificate identifier, when the override expires.
+         * 
+         */
     private final String customerOverrideValidTill;
     private final String id;
     private final @Nullable Boolean latestValidTill;
-    /**
-     * Thumbprint of the certificate.
-     * 
-     */
+        /**
+         * @return Thumbprint of the certificate.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
-     * 
-     */
+        /**
+         * @return [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
+         * 
+         */
     private final String validFrom;
-    /**
-     * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
-     * 
-     */
+        /**
+         * @return [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
+         * 
+         */
     private final String validTill;
 
     @CustomType.Constructor
@@ -73,30 +73,30 @@ public final class GetCertificateResult {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the certificate.
+     * @return Amazon Resource Name (ARN) of the certificate.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * Type of certificate. For example, `CA`.
+     * @return Type of certificate. For example, `CA`.
      * 
-    */
+     */
     public String certificateType() {
         return this.certificateType;
     }
     /**
-     * Boolean whether there is an override for the default certificate identifier.
+     * @return Boolean whether there is an override for the default certificate identifier.
      * 
-    */
+     */
     public Boolean customerOverride() {
         return this.customerOverride;
     }
     /**
-     * If there is an override for the default certificate identifier, when the override expires.
+     * @return If there is an override for the default certificate identifier, when the override expires.
      * 
-    */
+     */
     public String customerOverrideValidTill() {
         return this.customerOverrideValidTill;
     }
@@ -107,23 +107,23 @@ public final class GetCertificateResult {
         return Optional.ofNullable(this.latestValidTill);
     }
     /**
-     * Thumbprint of the certificate.
+     * @return Thumbprint of the certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
+     * @return [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate starting validity date.
      * 
-    */
+     */
     public String validFrom() {
         return this.validFrom;
     }
     /**
-     * [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
+     * @return [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of certificate ending validity date.
      * 
-    */
+     */
     public String validTill() {
         return this.validTill;
     }

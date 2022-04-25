@@ -21,60 +21,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementAndStatementStatement {
-    /**
-     * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
-     * 
-     */
+        /**
+         * @return A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementAndStatement andStatement;
-    /**
-     * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementByteMatchStatement byteMatchStatement;
-    /**
-     * A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatement geoMatchStatement;
-    /**
-     * A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementIpSetReferenceStatement ipSetReferenceStatement;
-    /**
-     * A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementLabelMatchStatement labelMatchStatement;
-    /**
-     * A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
-     * 
-     */
+        /**
+         * @return A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementNotStatement notStatement;
-    /**
-     * A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
-     * 
-     */
+        /**
+         * @return A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementOrStatement orStatement;
-    /**
-     * A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement;
-    /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
-     * 
-     */
+        /**
+         * @return A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatement sizeConstraintStatement;
-    /**
-     * An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
-     * 
-     */
+        /**
+         * @return An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatement sqliMatchStatement;
-    /**
-     * A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
-     * 
-     */
+        /**
+         * @return A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementXssMatchStatement xssMatchStatement;
 
     @CustomType.Constructor
@@ -104,79 +104,79 @@ public final class WebAclRuleStatementAndStatementStatement {
     }
 
     /**
-     * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+     * @return A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementAndStatement> andStatement() {
         return Optional.ofNullable(this.andStatement);
     }
     /**
-     * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+     * @return A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementByteMatchStatement> byteMatchStatement() {
         return Optional.ofNullable(this.byteMatchStatement);
     }
     /**
-     * A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+     * @return A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementGeoMatchStatement> geoMatchStatement() {
         return Optional.ofNullable(this.geoMatchStatement);
     }
     /**
-     * A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+     * @return A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementIpSetReferenceStatement> ipSetReferenceStatement() {
         return Optional.ofNullable(this.ipSetReferenceStatement);
     }
     /**
-     * A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+     * @return A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementLabelMatchStatement> labelMatchStatement() {
         return Optional.ofNullable(this.labelMatchStatement);
     }
     /**
-     * A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+     * @return A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementNotStatement> notStatement() {
         return Optional.ofNullable(this.notStatement);
     }
     /**
-     * A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+     * @return A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementOrStatement> orStatement() {
         return Optional.ofNullable(this.orStatement);
     }
     /**
-     * A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+     * @return A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatement> regexPatternSetReferenceStatement() {
         return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+     * @return A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementSizeConstraintStatement> sizeConstraintStatement() {
         return Optional.ofNullable(this.sizeConstraintStatement);
     }
     /**
-     * An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
+     * @return An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementSqliMatchStatement> sqliMatchStatement() {
         return Optional.ofNullable(this.sqliMatchStatement);
     }
     /**
-     * A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+     * @return A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementXssMatchStatement> xssMatchStatement() {
         return Optional.ofNullable(this.xssMatchStatement);
     }

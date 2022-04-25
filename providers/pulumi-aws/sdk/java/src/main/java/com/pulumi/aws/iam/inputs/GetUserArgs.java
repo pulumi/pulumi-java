@@ -22,6 +22,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Map of key-value pairs associated with the user.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -33,6 +37,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The friendly IAM user name to match.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -62,11 +70,23 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tags Map of key-value pairs associated with the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param userName The friendly IAM user name to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

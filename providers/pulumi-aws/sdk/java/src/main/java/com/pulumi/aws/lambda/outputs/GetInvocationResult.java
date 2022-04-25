@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetInvocationResult {
     private final String functionName;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String input;
     private final @Nullable String qualifier;
-    /**
-     * String result of the lambda function invocation.
-     * 
-     */
+        /**
+         * @return String result of the lambda function invocation.
+         * 
+         */
     private final String result;
 
     @CustomType.Constructor
@@ -43,9 +43,9 @@ public final class GetInvocationResult {
         return this.functionName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -56,9 +56,9 @@ public final class GetInvocationResult {
         return Optional.ofNullable(this.qualifier);
     }
     /**
-     * String result of the lambda function invocation.
+     * @return String result of the lambda function invocation.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }

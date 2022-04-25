@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BucketReplicationConfigRuleFilterTag {
-    /**
-     * Name of the object key.
-     * 
-     */
+        /**
+         * @return Name of the object key.
+         * 
+         */
     private final String key;
-    /**
-     * Value of the tag.
-     * 
-     */
+        /**
+         * @return Value of the tag.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BucketReplicationConfigRuleFilterTag {
     }
 
     /**
-     * Name of the object key.
+     * @return Name of the object key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Value of the tag.
+     * @return Value of the tag.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

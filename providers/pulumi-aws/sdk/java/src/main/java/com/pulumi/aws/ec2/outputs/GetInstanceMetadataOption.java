@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInstanceMetadataOption {
-    /**
-     * The state of the metadata service: `enabled`, `disabled`.
-     * 
-     */
+        /**
+         * @return The state of the metadata service: `enabled`, `disabled`.
+         * 
+         */
     private final String httpEndpoint;
-    /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
-     * 
-     */
+        /**
+         * @return The desired HTTP PUT response hop limit for instance metadata requests.
+         * 
+         */
     private final Integer httpPutResponseHopLimit;
-    /**
-     * If session tokens are required: `optional`, `required`.
-     * 
-     */
+        /**
+         * @return If session tokens are required: `optional`, `required`.
+         * 
+         */
     private final String httpTokens;
-    /**
-     * If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
-     * 
-     */
+        /**
+         * @return If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+         * 
+         */
     private final String instanceMetadataTags;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetInstanceMetadataOption {
     }
 
     /**
-     * The state of the metadata service: `enabled`, `disabled`.
+     * @return The state of the metadata service: `enabled`, `disabled`.
      * 
-    */
+     */
     public String httpEndpoint() {
         return this.httpEndpoint;
     }
     /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
+     * @return The desired HTTP PUT response hop limit for instance metadata requests.
      * 
-    */
+     */
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
     /**
-     * If session tokens are required: `optional`, `required`.
+     * @return If session tokens are required: `optional`, `required`.
      * 
-    */
+     */
     public String httpTokens() {
         return this.httpTokens;
     }
     /**
-     * If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
+     * @return If access to instance tags is allowed from the metadata service: `enabled`, `disabled`.
      * 
-    */
+     */
     public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }

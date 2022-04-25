@@ -20,6 +20,10 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZones", required=true)
     private List<String> availabilityZones;
 
+    /**
+     * @return The availability zones used by the domain.
+     * 
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones;
     }
@@ -31,6 +35,10 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds", required=true)
     private List<String> securityGroupIds;
 
+    /**
+     * @return The security groups used by the domain.
+     * 
+     */
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -42,6 +50,10 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetIds", required=true)
     private List<String> subnetIds;
 
+    /**
+     * @return The subnets used by the domain.
+     * 
+     */
     public List<String> subnetIds() {
         return this.subnetIds;
     }
@@ -53,6 +65,10 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The VPC used by the domain.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -84,33 +100,75 @@ public final class GetDomainVpcOption extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainVpcOption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZones The availability zones used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(List<String> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones The availability zones used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param securityGroupIds The security groups used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds The security groups used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds The subnets used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds The subnets used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param vpcId The VPC used by the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecListenerConnectionPool {
-    /**
-     * Connection pool information for gRPC listeners.
-     * 
-     */
+        /**
+         * @return Connection pool information for gRPC listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc;
-    /**
-     * Connection pool information for HTTP listeners.
-     * 
-     */
+        /**
+         * @return Connection pool information for HTTP listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolHttp http;
-    /**
-     * Connection pool information for HTTP2 listeners.
-     * 
-     */
+        /**
+         * @return Connection pool information for HTTP2 listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2;
-    /**
-     * Connection pool information for TCP listeners.
-     * 
-     */
+        /**
+         * @return Connection pool information for TCP listeners.
+         * 
+         */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class VirtualNodeSpecListenerConnectionPool {
     }
 
     /**
-     * Connection pool information for gRPC listeners.
+     * @return Connection pool information for gRPC listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerConnectionPoolGrpc> grpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
-     * Connection pool information for HTTP listeners.
+     * @return Connection pool information for HTTP listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerConnectionPoolHttp> http() {
         return Optional.ofNullable(this.http);
     }
     /**
-     * Connection pool information for HTTP2 listeners.
+     * @return Connection pool information for HTTP2 listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerConnectionPoolHttp2> http2() {
         return Optional.ofNullable(this.http2);
     }
     /**
-     * Connection pool information for TCP listeners.
+     * @return Connection pool information for TCP listeners.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecListenerConnectionPoolTcp> tcp() {
         return Optional.ofNullable(this.tcp);
     }

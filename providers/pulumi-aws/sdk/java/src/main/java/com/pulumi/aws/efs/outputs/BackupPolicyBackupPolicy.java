@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BackupPolicyBackupPolicy {
-    /**
-     * A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
-     * 
-     */
+        /**
+         * @return A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BackupPolicyBackupPolicy {
     }
 
     /**
-     * A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
+     * @return A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

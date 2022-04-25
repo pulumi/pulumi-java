@@ -23,6 +23,10 @@ public final class FirewallFirewallStatusGetArgs extends com.pulumi.resources.Re
     @Import(name="syncStates")
     private @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
 
+    /**
+     * @return Set of subnets configured for use by the firewall.
+     * 
+     */
     public Optional<Output<List<FirewallFirewallStatusSyncStateGetArgs>>> syncStates() {
         return Optional.ofNullable(this.syncStates);
     }
@@ -51,15 +55,33 @@ public final class FirewallFirewallStatusGetArgs extends com.pulumi.resources.Re
             $ = new FirewallFirewallStatusGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param syncStates Set of subnets configured for use by the firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncStates(@Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
             $.syncStates = syncStates;
             return this;
         }
 
+        /**
+         * @param syncStates Set of subnets configured for use by the firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncStates(List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
             return syncStates(Output.of(syncStates));
         }
 
+        /**
+         * @param syncStates Set of subnets configured for use by the firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncStates(FirewallFirewallStatusSyncStateGetArgs... syncStates) {
             return syncStates(List.of(syncStates));
         }

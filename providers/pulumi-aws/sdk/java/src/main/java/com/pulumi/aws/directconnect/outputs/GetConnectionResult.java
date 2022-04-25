@@ -10,46 +10,46 @@ import java.util.Objects;
 
 @CustomType
 public final class GetConnectionResult {
-    /**
-     * The ARN of the connection.
-     * 
-     */
+        /**
+         * @return The ARN of the connection.
+         * 
+         */
     private final String arn;
-    /**
-     * The Direct Connect endpoint on which the physical connection terminates.
-     * 
-     */
+        /**
+         * @return The Direct Connect endpoint on which the physical connection terminates.
+         * 
+         */
     private final String awsDevice;
-    /**
-     * The bandwidth of the connection.
-     * 
-     */
+        /**
+         * @return The bandwidth of the connection.
+         * 
+         */
     private final String bandwidth;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The AWS Direct Connect location where the connection is located.
-     * 
-     */
+        /**
+         * @return The AWS Direct Connect location where the connection is located.
+         * 
+         */
     private final String location;
     private final String name;
-    /**
-     * The ID of the AWS account that owns the connection.
-     * 
-     */
+        /**
+         * @return The ID of the AWS account that owns the connection.
+         * 
+         */
     private final String ownerAccountId;
-    /**
-     * The name of the service provider associated with the connection.
-     * 
-     */
+        /**
+         * @return The name of the service provider associated with the connection.
+         * 
+         */
     private final String providerName;
-    /**
-     * A map of tags for the resource.
-     * 
-     */
+        /**
+         * @return A map of tags for the resource.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -75,37 +75,37 @@ public final class GetConnectionResult {
     }
 
     /**
-     * The ARN of the connection.
+     * @return The ARN of the connection.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The Direct Connect endpoint on which the physical connection terminates.
+     * @return The Direct Connect endpoint on which the physical connection terminates.
      * 
-    */
+     */
     public String awsDevice() {
         return this.awsDevice;
     }
     /**
-     * The bandwidth of the connection.
+     * @return The bandwidth of the connection.
      * 
-    */
+     */
     public String bandwidth() {
         return this.bandwidth;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The AWS Direct Connect location where the connection is located.
+     * @return The AWS Direct Connect location where the connection is located.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
@@ -113,23 +113,23 @@ public final class GetConnectionResult {
         return this.name;
     }
     /**
-     * The ID of the AWS account that owns the connection.
+     * @return The ID of the AWS account that owns the connection.
      * 
-    */
+     */
     public String ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
-     * The name of the service provider associated with the connection.
+     * @return The name of the service provider associated with the connection.
      * 
-    */
+     */
     public String providerName() {
         return this.providerName;
     }
     /**
-     * A map of tags for the resource.
+     * @return A map of tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

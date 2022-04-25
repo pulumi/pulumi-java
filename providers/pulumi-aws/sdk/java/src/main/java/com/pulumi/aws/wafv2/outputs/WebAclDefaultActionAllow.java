@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclDefaultActionAllow {
-    /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
-     * 
-     */
+        /**
+         * @return Defines custom handling for the web request. See Custom Request Handling below for details.
+         * 
+         */
     private final @Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class WebAclDefaultActionAllow {
     }
 
     /**
-     * Defines custom handling for the web request. See Custom Request Handling below for details.
+     * @return Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-    */
+     */
     public Optional<WebAclDefaultActionAllowCustomRequestHandling> customRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventTargetEcsTargetNetworkConfiguration {
-    /**
-     * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
-     * 
-     */
+        /**
+         * @return Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+         * 
+         */
     private final @Nullable Boolean assignPublicIp;
-    /**
-     * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
-     * 
-     */
+        /**
+         * @return The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+         * 
+         */
     private final @Nullable List<String> securityGroups;
-    /**
-     * The subnets associated with the task or service.
-     * 
-     */
+        /**
+         * @return The subnets associated with the task or service.
+         * 
+         */
     private final List<String> subnets;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class EventTargetEcsTargetNetworkConfiguration {
     }
 
     /**
-     * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
+     * @return Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
      * 
-    */
+     */
     public Optional<Boolean> assignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
     /**
-     * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+     * @return The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
      * 
-    */
+     */
     public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
-     * The subnets associated with the task or service.
+     * @return The subnets associated with the task or service.
      * 
-    */
+     */
     public List<String> subnets() {
         return this.subnets;
     }

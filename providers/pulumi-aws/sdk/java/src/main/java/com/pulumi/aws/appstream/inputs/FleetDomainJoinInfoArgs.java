@@ -22,6 +22,10 @@ public final class FleetDomainJoinInfoArgs extends com.pulumi.resources.Resource
     @Import(name="directoryName")
     private @Nullable Output<String> directoryName;
 
+    /**
+     * @return Fully qualified name of the directory (for example, corp.example.com).
+     * 
+     */
     public Optional<Output<String>> directoryName() {
         return Optional.ofNullable(this.directoryName);
     }
@@ -33,6 +37,10 @@ public final class FleetDomainJoinInfoArgs extends com.pulumi.resources.Resource
     @Import(name="organizationalUnitDistinguishedName")
     private @Nullable Output<String> organizationalUnitDistinguishedName;
 
+    /**
+     * @return Distinguished name of the organizational unit for computer accounts.
+     * 
+     */
     public Optional<Output<String>> organizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
@@ -62,20 +70,44 @@ public final class FleetDomainJoinInfoArgs extends com.pulumi.resources.Resource
             $ = new FleetDomainJoinInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directoryName Fully qualified name of the directory (for example, corp.example.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryName(@Nullable Output<String> directoryName) {
             $.directoryName = directoryName;
             return this;
         }
 
+        /**
+         * @param directoryName Fully qualified name of the directory (for example, corp.example.com).
+         * 
+         * @return builder
+         * 
+         */
         public Builder directoryName(String directoryName) {
             return directoryName(Output.of(directoryName));
         }
 
+        /**
+         * @param organizationalUnitDistinguishedName Distinguished name of the organizational unit for computer accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
             $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
+        /**
+         * @param organizationalUnitDistinguishedName Distinguished name of the organizational unit for computer accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
             return organizationalUnitDistinguishedName(Output.of(organizationalUnitDistinguishedName));
         }

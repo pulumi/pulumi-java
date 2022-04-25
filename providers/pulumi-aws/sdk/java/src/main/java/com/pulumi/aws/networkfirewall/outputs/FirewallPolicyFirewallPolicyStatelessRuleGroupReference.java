@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReference {
-    /**
-     * An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
-     * 
-     */
+        /**
+         * @return An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
+         * 
+         */
     private final Integer priority;
-    /**
-     * The Amazon Resource Name (ARN) of the stateless rule group.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the stateless rule group.
+         * 
+         */
     private final String resourceArn;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReference {
     }
 
     /**
-     * An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
+     * @return An integer setting that indicates the order in which to run the stateless rule groups in a single policy. AWS Network Firewall applies each stateless rule group to a packet starting with the group that has the lowest priority setting.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }
     /**
-     * The Amazon Resource Name (ARN) of the stateless rule group.
+     * @return The Amazon Resource Name (ARN) of the stateless rule group.
      * 
-    */
+     */
     public String resourceArn() {
         return this.resourceArn;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm {
-    /**
-     * The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
-     * 
-     */
+        /**
+         * @return The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
+         * 
+         */
     private final @Nullable String comparator;
-    /**
-     * The object property to use in the condition.
-     * 
-     */
+        /**
+         * @return The object property to use in the condition.
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * An array that lists the values to use in the condition.
-     * 
-     */
+        /**
+         * @return An array that lists the values to use in the condition.
+         * 
+         */
     private final @Nullable List<String> values;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
     }
 
     /**
-     * The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
+     * @return The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
      * 
-    */
+     */
     public Optional<String> comparator() {
         return Optional.ofNullable(this.comparator);
     }
     /**
-     * The object property to use in the condition.
+     * @return The object property to use in the condition.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * An array that lists the values to use in the condition.
+     * @return An array that lists the values to use in the condition.
      * 
-    */
+     */
     public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }

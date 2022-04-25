@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocalGatewayRouteTableResult {
     private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String localGatewayId;
     private final String localGatewayRouteTableId;
@@ -47,9 +47,9 @@ public final class GetLocalGatewayRouteTableResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

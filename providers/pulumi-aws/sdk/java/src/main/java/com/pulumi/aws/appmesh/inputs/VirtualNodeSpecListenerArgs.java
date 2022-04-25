@@ -27,6 +27,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="connectionPool")
     private @Nullable Output<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool;
 
+    /**
+     * @return The connection pool information for the listener.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerConnectionPoolArgs>> connectionPool() {
         return Optional.ofNullable(this.connectionPool);
     }
@@ -38,6 +42,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="healthCheck")
     private @Nullable Output<VirtualNodeSpecListenerHealthCheckArgs> healthCheck;
 
+    /**
+     * @return The health check information for the listener.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerHealthCheckArgs>> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
@@ -49,6 +57,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="outlierDetection")
     private @Nullable Output<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection;
 
+    /**
+     * @return The outlier detection information for the listener.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerOutlierDetectionArgs>> outlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
@@ -60,6 +72,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="portMapping", required=true)
     private Output<VirtualNodeSpecListenerPortMappingArgs> portMapping;
 
+    /**
+     * @return The port mapping information for the listener.
+     * 
+     */
     public Output<VirtualNodeSpecListenerPortMappingArgs> portMapping() {
         return this.portMapping;
     }
@@ -71,6 +87,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="timeout")
     private @Nullable Output<VirtualNodeSpecListenerTimeoutArgs> timeout;
 
+    /**
+     * @return Timeouts for different protocols.
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTimeoutArgs>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -82,6 +102,10 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
     @Import(name="tls")
     private @Nullable Output<VirtualNodeSpecListenerTlsArgs> tls;
 
+    /**
+     * @return The Transport Layer Security (TLS) properties for the listener
+     * 
+     */
     public Optional<Output<VirtualNodeSpecListenerTlsArgs>> tls() {
         return Optional.ofNullable(this.tls);
     }
@@ -115,56 +139,128 @@ public final class VirtualNodeSpecListenerArgs extends com.pulumi.resources.Reso
             $ = new VirtualNodeSpecListenerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionPool The connection pool information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPool(@Nullable Output<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool) {
             $.connectionPool = connectionPool;
             return this;
         }
 
+        /**
+         * @param connectionPool The connection pool information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionPool(VirtualNodeSpecListenerConnectionPoolArgs connectionPool) {
             return connectionPool(Output.of(connectionPool));
         }
 
+        /**
+         * @param healthCheck The health check information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(@Nullable Output<VirtualNodeSpecListenerHealthCheckArgs> healthCheck) {
             $.healthCheck = healthCheck;
             return this;
         }
 
+        /**
+         * @param healthCheck The health check information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheck(VirtualNodeSpecListenerHealthCheckArgs healthCheck) {
             return healthCheck(Output.of(healthCheck));
         }
 
+        /**
+         * @param outlierDetection The outlier detection information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(@Nullable Output<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection) {
             $.outlierDetection = outlierDetection;
             return this;
         }
 
+        /**
+         * @param outlierDetection The outlier detection information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outlierDetection(VirtualNodeSpecListenerOutlierDetectionArgs outlierDetection) {
             return outlierDetection(Output.of(outlierDetection));
         }
 
+        /**
+         * @param portMapping The port mapping information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMapping(Output<VirtualNodeSpecListenerPortMappingArgs> portMapping) {
             $.portMapping = portMapping;
             return this;
         }
 
+        /**
+         * @param portMapping The port mapping information for the listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMapping(VirtualNodeSpecListenerPortMappingArgs portMapping) {
             return portMapping(Output.of(portMapping));
         }
 
+        /**
+         * @param timeout Timeouts for different protocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<VirtualNodeSpecListenerTimeoutArgs> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Timeouts for different protocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(VirtualNodeSpecListenerTimeoutArgs timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) properties for the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(@Nullable Output<VirtualNodeSpecListenerTlsArgs> tls) {
             $.tls = tls;
             return this;
         }
 
+        /**
+         * @param tls The Transport Layer Security (TLS) properties for the listener
+         * 
+         * @return builder
+         * 
+         */
         public Builder tls(VirtualNodeSpecListenerTlsArgs tls) {
             return tls(Output.of(tls));
         }

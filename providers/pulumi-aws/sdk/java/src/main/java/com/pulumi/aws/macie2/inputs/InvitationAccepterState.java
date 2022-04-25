@@ -22,6 +22,10 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
     @Import(name="administratorAccountId")
     private @Nullable Output<String> administratorAccountId;
 
+    /**
+     * @return The AWS account ID for the account that sent the invitation.
+     * 
+     */
     public Optional<Output<String>> administratorAccountId() {
         return Optional.ofNullable(this.administratorAccountId);
     }
@@ -33,6 +37,10 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
     @Import(name="invitationId")
     private @Nullable Output<String> invitationId;
 
+    /**
+     * @return The unique identifier for the invitation.
+     * 
+     */
     public Optional<Output<String>> invitationId() {
         return Optional.ofNullable(this.invitationId);
     }
@@ -62,20 +70,44 @@ public final class InvitationAccepterState extends com.pulumi.resources.Resource
             $ = new InvitationAccepterState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorAccountId The AWS account ID for the account that sent the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
             $.administratorAccountId = administratorAccountId;
             return this;
         }
 
+        /**
+         * @param administratorAccountId The AWS account ID for the account that sent the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccountId(String administratorAccountId) {
             return administratorAccountId(Output.of(administratorAccountId));
         }
 
+        /**
+         * @param invitationId The unique identifier for the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationId(@Nullable Output<String> invitationId) {
             $.invitationId = invitationId;
             return this;
         }
 
+        /**
+         * @param invitationId The unique identifier for the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationId(String invitationId) {
             return invitationId(Output.of(invitationId));
         }

@@ -21,6 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends com.pulum
     @Import(name="ipSet", required=true)
     private Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
 
+    /**
+     * @return A configuration block that defines a set of IP addresses. See IP Set below for details.
+     * 
+     */
     public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet() {
         return this.ipSet;
     }
@@ -32,6 +36,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends com.pulum
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A unique alphanumeric string to identify the `ip_set`.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -61,20 +69,44 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends com.pulum
             $ = new RuleGroupRuleGroupRuleVariablesIpSetGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipSet A configuration block that defines a set of IP addresses. See IP Set below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSet(Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet) {
             $.ipSet = ipSet;
             return this;
         }
 
+        /**
+         * @param ipSet A configuration block that defines a set of IP addresses. See IP Set below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs ipSet) {
             return ipSet(Output.of(ipSet));
         }
 
+        /**
+         * @param key A unique alphanumeric string to identify the `ip_set`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A unique alphanumeric string to identify the `ip_set`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

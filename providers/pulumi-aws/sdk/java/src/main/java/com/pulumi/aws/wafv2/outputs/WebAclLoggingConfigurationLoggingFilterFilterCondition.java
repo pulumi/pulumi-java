@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
-    /**
-     * A single action condition. See Action Condition below for more details.
-     * 
-     */
+        /**
+         * @return A single action condition. See Action Condition below for more details.
+         * 
+         */
     private final @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition;
-    /**
-     * A single label name condition. See Label Name Condition below for more details.
-     * 
-     */
+        /**
+         * @return A single label name condition. See Label Name Condition below for more details.
+         * 
+         */
     private final @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
     }
 
     /**
-     * A single action condition. See Action Condition below for more details.
+     * @return A single action condition. See Action Condition below for more details.
      * 
-    */
+     */
     public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
     /**
-     * A single label name condition. See Label Name Condition below for more details.
+     * @return A single label name condition. See Label Name Condition below for more details.
      * 
-    */
+     */
     public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }

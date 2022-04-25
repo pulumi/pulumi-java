@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetParametersByPathResult {
     private final List<String> arns;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final List<String> names;
     private final String path;
@@ -50,9 +50,9 @@ public final class GetParametersByPathResult {
         return this.arns;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

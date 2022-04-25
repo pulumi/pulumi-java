@@ -21,6 +21,10 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The ID of the node at which the edge starts.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -32,6 +36,10 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
     private String target;
 
+    /**
+     * @return The ID of the node at which the edge ends.
+     * 
+     */
     public String target() {
         return this.target;
     }
@@ -43,6 +51,10 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetParameter")
     private @Nullable String targetParameter;
 
+    /**
+     * @return The target of the edge.
+     * 
+     */
     public Optional<String> targetParameter() {
         return Optional.ofNullable(this.targetParameter);
     }
@@ -73,16 +85,34 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
             $ = new GetScriptDagEdge(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param source The ID of the node at which the edge starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param target The ID of the node at which the edge ends.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param targetParameter The target of the edge.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetParameter(@Nullable String targetParameter) {
             $.targetParameter = targetParameter;
             return this;

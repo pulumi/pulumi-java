@@ -19,6 +19,10 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="desiredSize", required=true)
     private Integer desiredSize;
 
+    /**
+     * @return Desired number of worker nodes.
+     * 
+     */
     public Integer desiredSize() {
         return this.desiredSize;
     }
@@ -30,6 +34,10 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="maxSize", required=true)
     private Integer maxSize;
 
+    /**
+     * @return Maximum number of worker nodes.
+     * 
+     */
     public Integer maxSize() {
         return this.maxSize;
     }
@@ -41,6 +49,10 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="minSize", required=true)
     private Integer minSize;
 
+    /**
+     * @return Minimum number of worker nodes.
+     * 
+     */
     public Integer minSize() {
         return this.minSize;
     }
@@ -71,16 +83,34 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
             $ = new GetNodeGroupScalingConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param desiredSize Desired number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder desiredSize(Integer desiredSize) {
             $.desiredSize = desiredSize;
             return this;
         }
 
+        /**
+         * @param maxSize Maximum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSize(Integer maxSize) {
             $.maxSize = maxSize;
             return this;
         }
 
+        /**
+         * @param minSize Minimum number of worker nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSize(Integer minSize) {
             $.minSize = minSize;
             return this;

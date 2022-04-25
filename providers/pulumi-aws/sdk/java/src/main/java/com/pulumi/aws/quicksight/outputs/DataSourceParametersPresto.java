@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceParametersPresto {
-    /**
-     * The catalog to which to connect.
-     * 
-     */
+        /**
+         * @return The catalog to which to connect.
+         * 
+         */
     private final String catalog;
-    /**
-     * The host to which to connect.
-     * 
-     */
+        /**
+         * @return The host to which to connect.
+         * 
+         */
     private final String host;
-    /**
-     * The port to which to connect.
-     * 
-     */
+        /**
+         * @return The port to which to connect.
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class DataSourceParametersPresto {
     }
 
     /**
-     * The catalog to which to connect.
+     * @return The catalog to which to connect.
      * 
-    */
+     */
     public String catalog() {
         return this.catalog;
     }
     /**
-     * The host to which to connect.
+     * @return The host to which to connect.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * The port to which to connect.
+     * @return The port to which to connect.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

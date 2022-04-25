@@ -22,6 +22,10 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
     @Import(name="replacementStrategy")
     private @Nullable Output<String> replacementStrategy;
 
+    /**
+     * @return The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+     * 
+     */
     public Optional<Output<String>> replacementStrategy() {
         return Optional.ofNullable(this.replacementStrategy);
     }
@@ -50,11 +54,23 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
             $ = new SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param replacementStrategy The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementStrategy(@Nullable Output<String> replacementStrategy) {
             $.replacementStrategy = replacementStrategy;
             return this;
         }
 
+        /**
+         * @param replacementStrategy The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replacementStrategy(String replacementStrategy) {
             return replacementStrategy(Output.of(replacementStrategy));
         }

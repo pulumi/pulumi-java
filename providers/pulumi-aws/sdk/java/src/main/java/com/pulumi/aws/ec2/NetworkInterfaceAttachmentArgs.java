@@ -21,6 +21,10 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="deviceIndex", required=true)
     private Output<Integer> deviceIndex;
 
+    /**
+     * @return Network interface index (int).
+     * 
+     */
     public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
@@ -32,6 +36,10 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Instance ID to attach.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -43,6 +51,10 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="networkInterfaceId", required=true)
     private Output<String> networkInterfaceId;
 
+    /**
+     * @return ENI ID to attach.
+     * 
+     */
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
@@ -73,29 +85,65 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
             $ = new NetworkInterfaceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceIndex Network interface index (int).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Output<Integer> deviceIndex) {
             $.deviceIndex = deviceIndex;
             return this;
         }
 
+        /**
+         * @param deviceIndex Network interface index (int).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceIndex(Integer deviceIndex) {
             return deviceIndex(Output.of(deviceIndex));
         }
 
+        /**
+         * @param instanceId Instance ID to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Instance ID to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param networkInterfaceId ENI ID to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
             $.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
+        /**
+         * @param networkInterfaceId ENI ID to attach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceId(String networkInterfaceId) {
             return networkInterfaceId(Output.of(networkInterfaceId));
         }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
-    /**
-     * Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
-     * 
-     */
+        /**
+         * @return Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
+         * 
+         */
     private final FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles;
-    /**
-     * specifies what to do when an unknown content type is provided for the profile. If true, content is forwarded without being encrypted when the content type is unknown. If false (the default), an error is returned when the content type is unknown.
-     * 
-     */
+        /**
+         * @return specifies what to do when an unknown content type is provided for the profile. If true, content is forwarded without being encrypted when the content type is unknown. If false (the default), an error is returned when the content type is unknown.
+         * 
+         */
     private final Boolean forwardWhenContentTypeIsUnknown;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
     }
 
     /**
-     * Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
+     * @return Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
      * 
-    */
+     */
     public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles() {
         return this.contentTypeProfiles;
     }
     /**
-     * specifies what to do when an unknown content type is provided for the profile. If true, content is forwarded without being encrypted when the content type is unknown. If false (the default), an error is returned when the content type is unknown.
+     * @return specifies what to do when an unknown content type is provided for the profile. If true, content is forwarded without being encrypted when the content type is unknown. If false (the default), an error is returned when the content type is unknown.
      * 
-    */
+     */
     public Boolean forwardWhenContentTypeIsUnknown() {
         return this.forwardWhenContentTypeIsUnknown;
     }

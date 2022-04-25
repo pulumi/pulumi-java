@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataSourceSslProperties {
-    /**
-     * A Boolean option to control whether SSL should be disabled.
-     * 
-     */
+        /**
+         * @return A Boolean option to control whether SSL should be disabled.
+         * 
+         */
     private final Boolean disableSsl;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataSourceSslProperties {
     }
 
     /**
-     * A Boolean option to control whether SSL should be disabled.
+     * @return A Boolean option to control whether SSL should be disabled.
      * 
-    */
+     */
     public Boolean disableSsl() {
         return this.disableSsl;
     }

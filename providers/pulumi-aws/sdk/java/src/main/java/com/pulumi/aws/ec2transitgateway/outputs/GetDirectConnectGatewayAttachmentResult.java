@@ -16,15 +16,15 @@ import javax.annotation.Nullable;
 public final class GetDirectConnectGatewayAttachmentResult {
     private final @Nullable String dxGatewayId;
     private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Key-value tags for the EC2 Transit Gateway Attachment
-     * 
-     */
+        /**
+         * @return Key-value tags for the EC2 Transit Gateway Attachment
+         * 
+         */
     private final Map<String,String> tags;
     private final @Nullable String transitGatewayId;
 
@@ -49,16 +49,16 @@ public final class GetDirectConnectGatewayAttachmentResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key-value tags for the EC2 Transit Gateway Attachment
+     * @return Key-value tags for the EC2 Transit Gateway Attachment
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

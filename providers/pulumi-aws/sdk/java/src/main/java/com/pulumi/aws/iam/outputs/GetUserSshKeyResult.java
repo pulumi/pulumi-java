@@ -10,26 +10,26 @@ import java.util.Objects;
 @CustomType
 public final class GetUserSshKeyResult {
     private final String encoding;
-    /**
-     * The MD5 message digest of the SSH public key.
-     * 
-     */
+        /**
+         * @return The MD5 message digest of the SSH public key.
+         * 
+         */
     private final String fingerprint;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The SSH public key.
-     * 
-     */
+        /**
+         * @return The SSH public key.
+         * 
+         */
     private final String publicKey;
     private final String sshPublicKeyId;
-    /**
-     * The status of the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used.
-     * 
-     */
+        /**
+         * @return The status of the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used.
+         * 
+         */
     private final String status;
     private final String username;
 
@@ -55,23 +55,23 @@ public final class GetUserSshKeyResult {
         return this.encoding;
     }
     /**
-     * The MD5 message digest of the SSH public key.
+     * @return The MD5 message digest of the SSH public key.
      * 
-    */
+     */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The SSH public key.
+     * @return The SSH public key.
      * 
-    */
+     */
     public String publicKey() {
         return this.publicKey;
     }
@@ -79,9 +79,9 @@ public final class GetUserSshKeyResult {
         return this.sshPublicKeyId;
     }
     /**
-     * The status of the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used.
+     * @return The status of the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

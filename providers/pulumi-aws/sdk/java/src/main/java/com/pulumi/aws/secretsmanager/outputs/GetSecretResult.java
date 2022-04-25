@@ -13,63 +13,63 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSecretResult {
-    /**
-     * The Amazon Resource Name (ARN) of the secret.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the secret.
+         * 
+         */
     private final String arn;
-    /**
-     * A description of the secret.
-     * 
-     */
+        /**
+         * @return A description of the secret.
+         * 
+         */
     private final String description;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
-     * 
-     */
+        /**
+         * @return The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
+         * 
+         */
     private final String kmsKeyId;
     private final String name;
-    /**
-     * The resource-based policy document that&#39;s attached to the secret.
-     * 
-     */
+        /**
+         * @return The resource-based policy document that&#39;s attached to the secret.
+         * 
+         */
     private final String policy;
-    /**
-     * Whether rotation is enabled or not.
-     * 
-     * @deprecated
-     * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
-     */
+        /**
+         * @return Whether rotation is enabled or not.
+         * 
+         * @deprecated
+         * Use the aws_secretsmanager_secret_rotation data source instead
+         * 
+         */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final Boolean rotationEnabled;
-    /**
-     * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-     * 
-     * @deprecated
-     * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
-     */
+        /**
+         * @return Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
+         * 
+         * @deprecated
+         * Use the aws_secretsmanager_secret_rotation data source instead
+         * 
+         */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final String rotationLambdaArn;
-    /**
-     * Rotation rules if rotation is enabled.
-     * 
-     * @deprecated
-     * Use the aws_secretsmanager_secret_rotation data source instead
-     * 
-     */
+        /**
+         * @return Rotation rules if rotation is enabled.
+         * 
+         * @deprecated
+         * Use the aws_secretsmanager_secret_rotation data source instead
+         * 
+         */
         @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final List<GetSecretRotationRule> rotationRules;
-    /**
-     * Tags of the secret.
-     * 
-     */
+        /**
+         * @return Tags of the secret.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -97,30 +97,30 @@ public final class GetSecretResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the secret.
+     * @return The Amazon Resource Name (ARN) of the secret.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * A description of the secret.
+     * @return A description of the secret.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
+     * @return The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
      * 
-    */
+     */
     public String kmsKeyId() {
         return this.kmsKeyId;
     }
@@ -128,49 +128,49 @@ public final class GetSecretResult {
         return this.name;
     }
     /**
-     * The resource-based policy document that&#39;s attached to the secret.
+     * @return The resource-based policy document that&#39;s attached to the secret.
      * 
-    */
+     */
     public String policy() {
         return this.policy;
     }
     /**
-     * Whether rotation is enabled or not.
+     * @return Whether rotation is enabled or not.
      * 
      * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public Boolean rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
-     * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
+     * @return Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
      * 
      * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public String rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
-     * Rotation rules if rotation is enabled.
+     * @return Rotation rules if rotation is enabled.
      * 
      * @deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-    */
+     */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public List<GetSecretRotationRule> rotationRules() {
         return this.rotationRules;
     }
     /**
-     * Tags of the secret.
+     * @return Tags of the secret.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

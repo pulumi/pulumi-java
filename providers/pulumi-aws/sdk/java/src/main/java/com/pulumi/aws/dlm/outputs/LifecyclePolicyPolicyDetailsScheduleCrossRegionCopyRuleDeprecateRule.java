@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule {
-    /**
-     * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
-     * 
-     */
+        /**
+         * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+         * 
+         */
     private final Integer interval;
-    /**
-     * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
-     * 
-     */
+        /**
+         * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+         * 
+         */
     private final String intervalUnit;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     }
 
     /**
-     * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
+     * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
-    */
+     */
     public Integer interval() {
         return this.interval;
     }
     /**
-     * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
+     * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
      * 
-    */
+     */
     public String intervalUnit() {
         return this.intervalUnit;
     }

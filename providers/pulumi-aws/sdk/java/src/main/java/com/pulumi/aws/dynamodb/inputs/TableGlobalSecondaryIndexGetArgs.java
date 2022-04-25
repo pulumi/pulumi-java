@@ -25,6 +25,11 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="hashKey", required=true)
     private Output<String> hashKey;
 
+    /**
+     * @return The name of the hash key in the index; must be
+     * defined as an attribute in the resource.
+     * 
+     */
     public Output<String> hashKey() {
         return this.hashKey;
     }
@@ -36,6 +41,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the index
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +58,12 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="nonKeyAttributes")
     private @Nullable Output<List<String>> nonKeyAttributes;
 
+    /**
+     * @return Only required with `INCLUDE` as a
+     * projection type; a list of attributes to project into the index. These
+     * do not need to be defined as attributes on the table.
+     * 
+     */
     public Optional<Output<List<String>>> nonKeyAttributes() {
         return Optional.ofNullable(this.nonKeyAttributes);
     }
@@ -64,6 +79,14 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="projectionType", required=true)
     private Output<String> projectionType;
 
+    /**
+     * @return One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+     * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+     * projects just the hash and range key into the index, and `INCLUDE`
+     * projects only the keys specified in the _non_key_attributes_
+     * parameter.
+     * 
+     */
     public Output<String> projectionType() {
         return this.projectionType;
     }
@@ -75,6 +98,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="rangeKey")
     private @Nullable Output<String> rangeKey;
 
+    /**
+     * @return The name of the range key; must be defined
+     * 
+     */
     public Optional<Output<String>> rangeKey() {
         return Optional.ofNullable(this.rangeKey);
     }
@@ -86,6 +113,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="readCapacity")
     private @Nullable Output<Integer> readCapacity;
 
+    /**
+     * @return The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * 
+     */
     public Optional<Output<Integer>> readCapacity() {
         return Optional.ofNullable(this.readCapacity);
     }
@@ -97,6 +128,10 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
     @Import(name="writeCapacity")
     private @Nullable Output<Integer> writeCapacity;
 
+    /**
+     * @return The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+     * 
+     */
     public Optional<Output<Integer>> writeCapacity() {
         return Optional.ofNullable(this.writeCapacity);
     }
@@ -131,69 +166,175 @@ public final class TableGlobalSecondaryIndexGetArgs extends com.pulumi.resources
             $ = new TableGlobalSecondaryIndexGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hashKey The name of the hash key in the index; must be
+         * defined as an attribute in the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKey(Output<String> hashKey) {
             $.hashKey = hashKey;
             return this;
         }
 
+        /**
+         * @param hashKey The name of the hash key in the index; must be
+         * defined as an attribute in the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKey(String hashKey) {
             return hashKey(Output.of(hashKey));
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the index
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
             $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
             return nonKeyAttributes(Output.of(nonKeyAttributes));
         }
 
+        /**
+         * @param nonKeyAttributes Only required with `INCLUDE` as a
+         * projection type; a list of attributes to project into the index. These
+         * do not need to be defined as attributes on the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
 
+        /**
+         * @param projectionType One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+         * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+         * projects just the hash and range key into the index, and `INCLUDE`
+         * projects only the keys specified in the _non_key_attributes_
+         * parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionType(Output<String> projectionType) {
             $.projectionType = projectionType;
             return this;
         }
 
+        /**
+         * @param projectionType One of `ALL`, `INCLUDE` or `KEYS_ONLY`
+         * where `ALL` projects every attribute into the index, `KEYS_ONLY`
+         * projects just the hash and range key into the index, and `INCLUDE`
+         * projects only the keys specified in the _non_key_attributes_
+         * parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectionType(String projectionType) {
             return projectionType(Output.of(projectionType));
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
             $.rangeKey = rangeKey;
             return this;
         }
 
+        /**
+         * @param rangeKey The name of the range key; must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKey(String rangeKey) {
             return rangeKey(Output.of(rangeKey));
         }
 
+        /**
+         * @param readCapacity The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
             $.readCapacity = readCapacity;
             return this;
         }
 
+        /**
+         * @param readCapacity The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readCapacity(Integer readCapacity) {
             return readCapacity(Output.of(readCapacity));
         }
 
+        /**
+         * @param writeCapacity The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
             $.writeCapacity = writeCapacity;
             return this;
         }
 
+        /**
+         * @param writeCapacity The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeCapacity(Integer writeCapacity) {
             return writeCapacity(Output.of(writeCapacity));
         }

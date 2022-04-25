@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCodeSigningConfigPolicy {
-    /**
-     * Code signing configuration policy for deployment validation failure.
-     * 
-     */
+        /**
+         * @return Code signing configuration policy for deployment validation failure.
+         * 
+         */
     private final String untrustedArtifactOnDeployment;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetCodeSigningConfigPolicy {
     }
 
     /**
-     * Code signing configuration policy for deployment validation failure.
+     * @return Code signing configuration policy for deployment validation failure.
      * 
-    */
+     */
     public String untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }

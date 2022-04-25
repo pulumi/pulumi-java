@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNodeSpecLoggingAccessLogFile {
-    /**
-     * The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
-     * 
-     */
+        /**
+         * @return The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualNodeSpecLoggingAccessLogFile {
     }
 
     /**
-     * The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
+     * @return The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

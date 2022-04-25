@@ -22,6 +22,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createDate")
     private @Nullable Output<String> createDate;
 
+    /**
+     * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+     * 
+     */
     public Optional<Output<String>> createDate() {
         return Optional.ofNullable(this.createDate);
     }
@@ -47,6 +51,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyFingerprint")
     private @Nullable Output<String> keyFingerprint;
 
+    /**
+     * @return Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+     * 
+     */
     public Optional<Output<String>> keyFingerprint() {
         return Optional.ofNullable(this.keyFingerprint);
     }
@@ -58,6 +66,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
     private @Nullable Output<String> pgpKey;
 
+    /**
+     * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+     * 
+     */
     public Optional<Output<String>> pgpKey() {
         return Optional.ofNullable(this.pgpKey);
     }
@@ -69,6 +81,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -80,6 +96,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sesSmtpPasswordV4")
     private @Nullable Output<String> sesSmtpPasswordV4;
 
+    /**
+     * @return Secret access key converted into an SES SMTP password by applying [AWS&#39;s documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+     * 
+     */
     public Optional<Output<String>> sesSmtpPasswordV4() {
         return Optional.ofNullable(this.sesSmtpPasswordV4);
     }
@@ -91,6 +111,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -102,6 +126,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return IAM user to associate with this access key.
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -138,11 +166,23 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createDate Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDate(@Nullable Output<String> createDate) {
             $.createDate = createDate;
             return this;
         }
 
+        /**
+         * @param createDate Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDate(String createDate) {
             return createDate(Output.of(createDate));
         }
@@ -165,56 +205,128 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
             return encryptedSesSmtpPasswordV4(Output.of(encryptedSesSmtpPasswordV4));
         }
 
+        /**
+         * @param keyFingerprint Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
             $.keyFingerprint = keyFingerprint;
             return this;
         }
 
+        /**
+         * @param keyFingerprint Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFingerprint(String keyFingerprint) {
             return keyFingerprint(Output.of(keyFingerprint));
         }
 
+        /**
+         * @param pgpKey Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
             $.pgpKey = pgpKey;
             return this;
         }
 
+        /**
+         * @param pgpKey Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pgpKey(String pgpKey) {
             return pgpKey(Output.of(pgpKey));
         }
 
+        /**
+         * @param secret Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }
 
+        /**
+         * @param sesSmtpPasswordV4 Secret access key converted into an SES SMTP password by applying [AWS&#39;s documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sesSmtpPasswordV4(@Nullable Output<String> sesSmtpPasswordV4) {
             $.sesSmtpPasswordV4 = sesSmtpPasswordV4;
             return this;
         }
 
+        /**
+         * @param sesSmtpPasswordV4 Secret access key converted into an SES SMTP password by applying [AWS&#39;s documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sesSmtpPasswordV4(String sesSmtpPasswordV4) {
             return sesSmtpPasswordV4(Output.of(sesSmtpPasswordV4));
         }
 
+        /**
+         * @param status Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param user IAM user to associate with this access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user IAM user to associate with this access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

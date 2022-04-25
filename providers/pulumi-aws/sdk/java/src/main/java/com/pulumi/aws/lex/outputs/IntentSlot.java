@@ -14,59 +14,59 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntentSlot {
-    /**
-     * A description of the bot. Must be less than or equal to 200 characters in length.
-     * 
-     */
+        /**
+         * @return A description of the bot. Must be less than or equal to 200 characters in length.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
-     * 
-     */
+        /**
+         * @return The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
+         * 
+         */
     private final String name;
-    /**
-     * Directs Lex the order in which to elicit this slot value from the user.
-     * For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-     * the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-     * values is arbitrary. Must be between 1 and 100.
-     * 
-     */
+        /**
+         * @return Directs Lex the order in which to elicit this slot value from the user.
+         * For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
+         * the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
+         * values is arbitrary. Must be between 1 and 100.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * The response card. Amazon Lex will substitute session attributes and
-     * slot values into the response card. For more information, see
-     * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
-     * 
-     */
+        /**
+         * @return The response card. Amazon Lex will substitute session attributes and
+         * slot values into the response card. For more information, see
+         * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
+         * 
+         */
     private final @Nullable String responseCard;
-    /**
-     * If you know a specific pattern with which users might respond to
-     * an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-     * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
-     * 
-     */
+        /**
+         * @return If you know a specific pattern with which users might respond to
+         * an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
+         * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
+         * 
+         */
     private final @Nullable List<String> sampleUtterances;
-    /**
-     * Specifies whether the slot is required or optional.
-     * 
-     */
+        /**
+         * @return Specifies whether the slot is required or optional.
+         * 
+         */
     private final String slotConstraint;
-    /**
-     * The type of the slot, either a custom slot type that you defined or one of
-     * the built-in slot types. Must be less than or equal to 100 characters in length.
-     * 
-     */
+        /**
+         * @return The type of the slot, either a custom slot type that you defined or one of
+         * the built-in slot types. Must be less than or equal to 100 characters in length.
+         * 
+         */
     private final String slotType;
-    /**
-     * The version of the slot type. Must be less than or equal to 64 characters in length.
-     * 
-     */
+        /**
+         * @return The version of the slot type. Must be less than or equal to 64 characters in length.
+         * 
+         */
     private final @Nullable String slotTypeVersion;
-    /**
-     * The prompt that Amazon Lex uses to elicit the slot value
-     * from the user. Attributes are documented under prompt.
-     * 
-     */
+        /**
+         * @return The prompt that Amazon Lex uses to elicit the slot value
+         * from the user. Attributes are documented under prompt.
+         * 
+         */
     private final @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt;
 
     @CustomType.Constructor
@@ -92,74 +92,74 @@ public final class IntentSlot {
     }
 
     /**
-     * A description of the bot. Must be less than or equal to 200 characters in length.
+     * @return A description of the bot. Must be less than or equal to 200 characters in length.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
+     * @return The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Directs Lex the order in which to elicit this slot value from the user.
+     * @return Directs Lex the order in which to elicit this slot value from the user.
      * For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
      * the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
      * values is arbitrary. Must be between 1 and 100.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The response card. Amazon Lex will substitute session attributes and
+     * @return The response card. Amazon Lex will substitute session attributes and
      * slot values into the response card. For more information, see
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
-    */
+     */
     public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
     /**
-     * If you know a specific pattern with which users might respond to
+     * @return If you know a specific pattern with which users might respond to
      * an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
-    */
+     */
     public List<String> sampleUtterances() {
         return this.sampleUtterances == null ? List.of() : this.sampleUtterances;
     }
     /**
-     * Specifies whether the slot is required or optional.
+     * @return Specifies whether the slot is required or optional.
      * 
-    */
+     */
     public String slotConstraint() {
         return this.slotConstraint;
     }
     /**
-     * The type of the slot, either a custom slot type that you defined or one of
+     * @return The type of the slot, either a custom slot type that you defined or one of
      * the built-in slot types. Must be less than or equal to 100 characters in length.
      * 
-    */
+     */
     public String slotType() {
         return this.slotType;
     }
     /**
-     * The version of the slot type. Must be less than or equal to 64 characters in length.
+     * @return The version of the slot type. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public Optional<String> slotTypeVersion() {
         return Optional.ofNullable(this.slotTypeVersion);
     }
     /**
-     * The prompt that Amazon Lex uses to elicit the slot value
+     * @return The prompt that Amazon Lex uses to elicit the slot value
      * from the user. Attributes are documented under prompt.
      * 
-    */
+     */
     public Optional<IntentSlotValueElicitationPrompt> valueElicitationPrompt() {
         return Optional.ofNullable(this.valueElicitationPrompt);
     }

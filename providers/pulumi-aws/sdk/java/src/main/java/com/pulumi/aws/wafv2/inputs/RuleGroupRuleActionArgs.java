@@ -24,6 +24,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
     @Import(name="allow")
     private @Nullable Output<RuleGroupRuleActionAllowArgs> allow;
 
+    /**
+     * @return Instructs AWS WAF to allow the web request. See Allow below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleActionAllowArgs>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -35,6 +39,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
     @Import(name="block")
     private @Nullable Output<RuleGroupRuleActionBlockArgs> block;
 
+    /**
+     * @return Instructs AWS WAF to block the web request. See Block below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleActionBlockArgs>> block() {
         return Optional.ofNullable(this.block);
     }
@@ -46,6 +54,10 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
     @Import(name="count")
     private @Nullable Output<RuleGroupRuleActionCountArgs> count;
 
+    /**
+     * @return Instructs AWS WAF to count the web request and allow it. See Count below for details.
+     * 
+     */
     public Optional<Output<RuleGroupRuleActionCountArgs>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -76,29 +88,65 @@ public final class RuleGroupRuleActionArgs extends com.pulumi.resources.Resource
             $ = new RuleGroupRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Instructs AWS WAF to allow the web request. See Allow below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<RuleGroupRuleActionAllowArgs> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow Instructs AWS WAF to allow the web request. See Allow below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(RuleGroupRuleActionAllowArgs allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param block Instructs AWS WAF to block the web request. See Block below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockArgs> block) {
             $.block = block;
             return this;
         }
 
+        /**
+         * @param block Instructs AWS WAF to block the web request. See Block below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder block(RuleGroupRuleActionBlockArgs block) {
             return block(Output.of(block));
         }
 
+        /**
+         * @param count Instructs AWS WAF to count the web request and allow it. See Count below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<RuleGroupRuleActionCountArgs> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Instructs AWS WAF to count the web request and allow it. See Count below for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(RuleGroupRuleActionCountArgs count) {
             return count(Output.of(count));
         }

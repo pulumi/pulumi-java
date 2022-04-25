@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetInfrastructureConfigurationLoggingS3Log {
-    /**
-     * Name of the S3 Bucket for logging.
-     * 
-     */
+        /**
+         * @return Name of the S3 Bucket for logging.
+         * 
+         */
     private final String s3BucketName;
-    /**
-     * Key prefix for S3 Bucket logging.
-     * 
-     */
+        /**
+         * @return Key prefix for S3 Bucket logging.
+         * 
+         */
     private final String s3KeyPrefix;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
     }
 
     /**
-     * Name of the S3 Bucket for logging.
+     * @return Name of the S3 Bucket for logging.
      * 
-    */
+     */
     public String s3BucketName() {
         return this.s3BucketName;
     }
     /**
-     * Key prefix for S3 Bucket logging.
+     * @return Key prefix for S3 Bucket logging.
      * 
-    */
+     */
     public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }

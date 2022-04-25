@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SmbFileShareCacheAttributes {
-    /**
-     * Refreshes a file share&#39;s cache by using Time To Live (TTL).
-     * TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
-     * to first refresh that directory&#39;s contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
-     * 
-     */
+        /**
+         * @return Refreshes a file share&#39;s cache by using Time To Live (TTL).
+         * TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
+         * to first refresh that directory&#39;s contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
+         * 
+         */
     private final @Nullable Integer cacheStaleTimeoutInSeconds;
 
     @CustomType.Constructor
@@ -25,11 +25,11 @@ public final class SmbFileShareCacheAttributes {
     }
 
     /**
-     * Refreshes a file share&#39;s cache by using Time To Live (TTL).
+     * @return Refreshes a file share&#39;s cache by using Time To Live (TTL).
      * TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
      * to first refresh that directory&#39;s contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
      * 
-    */
+     */
     public Optional<Integer> cacheStaleTimeoutInSeconds() {
         return Optional.ofNullable(this.cacheStaleTimeoutInSeconds);
     }

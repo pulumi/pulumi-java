@@ -19,6 +19,10 @@ public final class GetInternetGatewayAttachment extends com.pulumi.resources.Inv
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The current state of the attachment between the gateway and the VPC. Present only if a VPC is attached
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -30,6 +34,10 @@ public final class GetInternetGatewayAttachment extends com.pulumi.resources.Inv
     @Import(name="vpcId", required=true)
     private String vpcId;
 
+    /**
+     * @return The ID of an attached VPC.
+     * 
+     */
     public String vpcId() {
         return this.vpcId;
     }
@@ -59,11 +67,23 @@ public final class GetInternetGatewayAttachment extends com.pulumi.resources.Inv
             $ = new GetInternetGatewayAttachment(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state The current state of the attachment between the gateway and the VPC. Present only if a VPC is attached
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param vpcId The ID of an attached VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             $.vpcId = vpcId;
             return this;

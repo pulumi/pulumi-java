@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BotAssociationLexBot {
-    /**
-     * The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
-     * 
-     */
+        /**
+         * @return The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
+         * 
+         */
     private final @Nullable String lexRegion;
-    /**
-     * The name of the Amazon Lex (V1) bot.
-     * 
-     */
+        /**
+         * @return The name of the Amazon Lex (V1) bot.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class BotAssociationLexBot {
     }
 
     /**
-     * The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
+     * @return The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
      * 
-    */
+     */
     public Optional<String> lexRegion() {
         return Optional.ofNullable(this.lexRegion);
     }
     /**
-     * The name of the Amazon Lex (V1) bot.
+     * @return The name of the Amazon Lex (V1) bot.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

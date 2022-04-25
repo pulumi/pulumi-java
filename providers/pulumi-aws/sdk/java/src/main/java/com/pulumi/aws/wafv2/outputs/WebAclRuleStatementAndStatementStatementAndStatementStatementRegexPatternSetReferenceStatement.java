@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebAclRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement {
-    /**
-     * The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
-     * 
-     */
+        /**
+         * @return The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+         * 
+         */
     private final String arn;
-    /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
-     * 
-     */
+        /**
+         * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * 
+         */
     private final @Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch;
-    /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
-     * 
-     */
+        /**
+         * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+         * 
+         */
     private final List<WebAclRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
+     * @return The Amazon Resource Name (ARN) of the Regex Pattern Set that this statement references.
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
-    */
+     */
     public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch> fieldToMatch() {
         return Optional.ofNullable(this.fieldToMatch);
     }
     /**
-     * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
+     * @return Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. See Text Transformation below for details.
      * 
-    */
+     */
     public List<WebAclRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations() {
         return this.textTransformations;
     }

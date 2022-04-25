@@ -23,6 +23,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="readinessCheckName", required=true)
     private Output<String> readinessCheckName;
 
+    /**
+     * @return Unique name describing the readiness check.
+     * 
+     */
     public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
@@ -34,6 +38,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceSetName", required=true)
     private Output<String> resourceSetName;
 
+    /**
+     * @return Name describing the resource set that will be monitored for readiness.
+     * 
+     */
     public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
@@ -45,6 +53,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -75,29 +87,65 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param readinessCheckName Unique name describing the readiness check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheckName(Output<String> readinessCheckName) {
             $.readinessCheckName = readinessCheckName;
             return this;
         }
 
+        /**
+         * @param readinessCheckName Unique name describing the readiness check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheckName(String readinessCheckName) {
             return readinessCheckName(Output.of(readinessCheckName));
         }
 
+        /**
+         * @param resourceSetName Name describing the resource set that will be monitored for readiness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(Output<String> resourceSetName) {
             $.resourceSetName = resourceSetName;
             return this;
         }
 
+        /**
+         * @param resourceSetName Name describing the resource set that will be monitored for readiness.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(String resourceSetName) {
             return resourceSetName(Output.of(resourceSetName));
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

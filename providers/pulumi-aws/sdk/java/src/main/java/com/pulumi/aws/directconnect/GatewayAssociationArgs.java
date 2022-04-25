@@ -23,6 +23,10 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowedPrefixes")
     private @Nullable Output<List<String>> allowedPrefixes;
 
+    /**
+     * @return VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+     * 
+     */
     public Optional<Output<List<String>>> allowedPrefixes() {
         return Optional.ofNullable(this.allowedPrefixes);
     }
@@ -35,6 +39,11 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="associatedGatewayId")
     private @Nullable Output<String> associatedGatewayId;
 
+    /**
+     * @return The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+     * Used for single account Direct Connect gateway associations.
+     * 
+     */
     public Optional<Output<String>> associatedGatewayId() {
         return Optional.ofNullable(this.associatedGatewayId);
     }
@@ -47,6 +56,11 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="associatedGatewayOwnerAccountId")
     private @Nullable Output<String> associatedGatewayOwnerAccountId;
 
+    /**
+     * @return The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+     * Used for cross-account Direct Connect gateway associations.
+     * 
+     */
     public Optional<Output<String>> associatedGatewayOwnerAccountId() {
         return Optional.ofNullable(this.associatedGatewayOwnerAccountId);
     }
@@ -58,6 +72,10 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="dxGatewayId", required=true)
     private Output<String> dxGatewayId;
 
+    /**
+     * @return The ID of the Direct Connect gateway.
+     * 
+     */
     public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
@@ -70,6 +88,11 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="proposalId")
     private @Nullable Output<String> proposalId;
 
+    /**
+     * @return The ID of the Direct Connect gateway association proposal.
+     * Used for cross-account Direct Connect gateway associations.
+     * 
+     */
     public Optional<Output<String>> proposalId() {
         return Optional.ofNullable(this.proposalId);
     }
@@ -83,6 +106,11 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
     @Import(name="vpnGatewayId")
     private @Nullable Output<String> vpnGatewayId;
 
+    /**
+     * @deprecated
+     * use &#39;associated_gateway_id&#39; argument instead
+     * 
+     */
     @Deprecated /* use 'associated_gateway_id' argument instead */
     public Optional<Output<String>> vpnGatewayId() {
         return Optional.ofNullable(this.vpnGatewayId);
@@ -117,60 +145,148 @@ public final class GatewayAssociationArgs extends com.pulumi.resources.ResourceA
             $ = new GatewayAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(@Nullable Output<List<String>> allowedPrefixes) {
             $.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(List<String> allowedPrefixes) {
             return allowedPrefixes(Output.of(allowedPrefixes));
         }
 
+        /**
+         * @param allowedPrefixes VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedPrefixes(String... allowedPrefixes) {
             return allowedPrefixes(List.of(allowedPrefixes));
         }
 
+        /**
+         * @param associatedGatewayId The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * Used for single account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayId(@Nullable Output<String> associatedGatewayId) {
             $.associatedGatewayId = associatedGatewayId;
             return this;
         }
 
+        /**
+         * @param associatedGatewayId The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * Used for single account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayId(String associatedGatewayId) {
             return associatedGatewayId(Output.of(associatedGatewayId));
         }
 
+        /**
+         * @param associatedGatewayOwnerAccountId The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * Used for cross-account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayOwnerAccountId(@Nullable Output<String> associatedGatewayOwnerAccountId) {
             $.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
 
+        /**
+         * @param associatedGatewayOwnerAccountId The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+         * Used for cross-account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associatedGatewayOwnerAccountId(String associatedGatewayOwnerAccountId) {
             return associatedGatewayOwnerAccountId(Output.of(associatedGatewayOwnerAccountId));
         }
 
+        /**
+         * @param dxGatewayId The ID of the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayId(Output<String> dxGatewayId) {
             $.dxGatewayId = dxGatewayId;
             return this;
         }
 
+        /**
+         * @param dxGatewayId The ID of the Direct Connect gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dxGatewayId(String dxGatewayId) {
             return dxGatewayId(Output.of(dxGatewayId));
         }
 
+        /**
+         * @param proposalId The ID of the Direct Connect gateway association proposal.
+         * Used for cross-account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposalId(@Nullable Output<String> proposalId) {
             $.proposalId = proposalId;
             return this;
         }
 
+        /**
+         * @param proposalId The ID of the Direct Connect gateway association proposal.
+         * Used for cross-account Direct Connect gateway associations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proposalId(String proposalId) {
             return proposalId(Output.of(proposalId));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * use &#39;associated_gateway_id&#39; argument instead
+         * 
+         */
+        @Deprecated /* use 'associated_gateway_id' argument instead */
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
             $.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * use &#39;associated_gateway_id&#39; argument instead
+         * 
+         */
+        @Deprecated /* use 'associated_gateway_id' argument instead */
         public Builder vpnGatewayId(String vpnGatewayId) {
             return vpnGatewayId(Output.of(vpnGatewayId));
         }

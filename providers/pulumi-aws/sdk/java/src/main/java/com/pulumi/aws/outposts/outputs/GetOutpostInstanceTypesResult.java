@@ -11,15 +11,15 @@ import java.util.Objects;
 @CustomType
 public final class GetOutpostInstanceTypesResult {
     private final String arn;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
-    /**
-     * Set of instance types.
-     * 
-     */
+        /**
+         * @return Set of instance types.
+         * 
+         */
     private final List<String> instanceTypes;
 
     @CustomType.Constructor
@@ -36,16 +36,16 @@ public final class GetOutpostInstanceTypesResult {
         return this.arn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of instance types.
+     * @return Set of instance types.
      * 
-    */
+     */
     public List<String> instanceTypes() {
         return this.instanceTypes;
     }

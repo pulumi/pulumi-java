@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkteamMemberDefinition {
-    /**
-     * The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
-     * 
-     */
+        /**
+         * @return The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
+         * 
+         */
     private final @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition;
-    /**
-     * A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
-     * 
-     */
+        /**
+         * @return A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
+         * 
+         */
     private final @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WorkteamMemberDefinition {
     }
 
     /**
-     * The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
+     * @return The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
      * 
-    */
+     */
     public Optional<WorkteamMemberDefinitionCognitoMemberDefinition> cognitoMemberDefinition() {
         return Optional.ofNullable(this.cognitoMemberDefinition);
     }
     /**
-     * A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
+     * @return A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
      * 
-    */
+     */
     public Optional<WorkteamMemberDefinitionOidcMemberDefinition> oidcMemberDefinition() {
         return Optional.ofNullable(this.oidcMemberDefinition);
     }

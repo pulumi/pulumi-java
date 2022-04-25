@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions {
-    /**
-     * Enables or disables the logging. Defaults to `false`.
-     * 
-     */
+        /**
+         * @return Enables or disables the logging. Defaults to `false`.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The CloudWatch group name for logging. This value is required if `enabled` is true.
-     * 
-     */
+        /**
+         * @return The CloudWatch group name for logging. This value is required if `enabled` is true.
+         * 
+         */
     private final @Nullable String logGroupName;
-    /**
-     * The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-     * 
-     */
+        /**
+         * @return The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+         * 
+         */
     private final @Nullable String logStreamName;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLogg
     }
 
     /**
-     * Enables or disables the logging. Defaults to `false`.
+     * @return Enables or disables the logging. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The CloudWatch group name for logging. This value is required if `enabled` is true.
+     * @return The CloudWatch group name for logging. This value is required if `enabled` is true.
      * 
-    */
+     */
     public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
-     * The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+     * @return The CloudWatch log stream name for logging. This value is required if `enabled` is true.
      * 
-    */
+     */
     public Optional<String> logStreamName() {
         return Optional.ofNullable(this.logStreamName);
     }

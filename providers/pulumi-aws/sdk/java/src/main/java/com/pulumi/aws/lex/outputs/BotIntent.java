@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BotIntent {
-    /**
-     * The name of the intent. Must be less than or equal to 100 characters in length.
-     * 
-     */
+        /**
+         * @return The name of the intent. Must be less than or equal to 100 characters in length.
+         * 
+         */
     private final String intentName;
-    /**
-     * The version of the intent. Must be less than or equal to 64 characters in length.
-     * 
-     */
+        /**
+         * @return The version of the intent. Must be less than or equal to 64 characters in length.
+         * 
+         */
     private final String intentVersion;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BotIntent {
     }
 
     /**
-     * The name of the intent. Must be less than or equal to 100 characters in length.
+     * @return The name of the intent. Must be less than or equal to 100 characters in length.
      * 
-    */
+     */
     public String intentName() {
         return this.intentName;
     }
     /**
-     * The version of the intent. Must be less than or equal to 64 characters in length.
+     * @return The version of the intent. Must be less than or equal to 64 characters in length.
      * 
-    */
+     */
     public String intentVersion() {
         return this.intentVersion;
     }

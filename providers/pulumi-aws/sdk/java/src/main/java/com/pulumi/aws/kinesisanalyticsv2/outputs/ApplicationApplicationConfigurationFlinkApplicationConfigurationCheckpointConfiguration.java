@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration {
-    /**
-     * Describes the interval in milliseconds between checkpoint operations.
-     * 
-     */
+        /**
+         * @return Describes the interval in milliseconds between checkpoint operations.
+         * 
+         */
     private final @Nullable Integer checkpointInterval;
-    /**
-     * Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
-     * 
-     */
+        /**
+         * @return Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
+         * 
+         */
     private final @Nullable Boolean checkpointingEnabled;
-    /**
-     * Describes whether the application uses Kinesis Data Analytics&#39; default checkpointing behavior. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `checkpointing_enabled`, `checkpoint_interval`, or `min_pause_between_checkpoints` attribute values to be effective. If this attribute is set to `DEFAULT`, the application will always use the following values:
-     * * `checkpointing_enabled = true`
-     * * `checkpoint_interval = 60000`
-     * * `min_pause_between_checkpoints = 5000`
-     * 
-     */
+        /**
+         * @return Describes whether the application uses Kinesis Data Analytics&#39; default checkpointing behavior. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `checkpointing_enabled`, `checkpoint_interval`, or `min_pause_between_checkpoints` attribute values to be effective. If this attribute is set to `DEFAULT`, the application will always use the following values:
+         * * `checkpointing_enabled = true`
+         * * `checkpoint_interval = 60000`
+         * * `min_pause_between_checkpoints = 5000`
+         * 
+         */
     private final String configurationType;
-    /**
-     * Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
-     * 
-     */
+        /**
+         * @return Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
+         * 
+         */
     private final @Nullable Integer minPauseBetweenCheckpoints;
 
     @CustomType.Constructor
@@ -50,33 +50,33 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     /**
-     * Describes the interval in milliseconds between checkpoint operations.
+     * @return Describes the interval in milliseconds between checkpoint operations.
      * 
-    */
+     */
     public Optional<Integer> checkpointInterval() {
         return Optional.ofNullable(this.checkpointInterval);
     }
     /**
-     * Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
+     * @return Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
      * 
-    */
+     */
     public Optional<Boolean> checkpointingEnabled() {
         return Optional.ofNullable(this.checkpointingEnabled);
     }
     /**
-     * Describes whether the application uses Kinesis Data Analytics&#39; default checkpointing behavior. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `checkpointing_enabled`, `checkpoint_interval`, or `min_pause_between_checkpoints` attribute values to be effective. If this attribute is set to `DEFAULT`, the application will always use the following values:
+     * @return Describes whether the application uses Kinesis Data Analytics&#39; default checkpointing behavior. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `checkpointing_enabled`, `checkpoint_interval`, or `min_pause_between_checkpoints` attribute values to be effective. If this attribute is set to `DEFAULT`, the application will always use the following values:
      * * `checkpointing_enabled = true`
      * * `checkpoint_interval = 60000`
      * * `min_pause_between_checkpoints = 5000`
      * 
-    */
+     */
     public String configurationType() {
         return this.configurationType;
     }
     /**
-     * Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
+     * @return Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
      * 
-    */
+     */
     public Optional<Integer> minPauseBetweenCheckpoints() {
         return Optional.ofNullable(this.minPauseBetweenCheckpoints);
     }

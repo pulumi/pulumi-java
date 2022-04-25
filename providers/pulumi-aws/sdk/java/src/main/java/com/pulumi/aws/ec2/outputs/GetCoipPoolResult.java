@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCoipPoolResult {
-    /**
-     * ARN of the COIP pool
-     * 
-     */
+        /**
+         * @return ARN of the COIP pool
+         * 
+         */
     private final String arn;
     private final @Nullable List<GetCoipPoolFilter> filters;
-    /**
-     * The provider-assigned unique ID for this managed resource.
-     * 
-     */
+        /**
+         * @return The provider-assigned unique ID for this managed resource.
+         * 
+         */
     private final String id;
     private final String localGatewayRouteTableId;
-    /**
-     * Set of CIDR blocks in pool
-     * 
-     */
+        /**
+         * @return Set of CIDR blocks in pool
+         * 
+         */
     private final List<String> poolCidrs;
     private final String poolId;
     private final Map<String,String> tags;
@@ -52,9 +52,9 @@ public final class GetCoipPoolResult {
     }
 
     /**
-     * ARN of the COIP pool
+     * @return ARN of the COIP pool
      * 
-    */
+     */
     public String arn() {
         return this.arn;
     }
@@ -62,9 +62,9 @@ public final class GetCoipPoolResult {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -72,9 +72,9 @@ public final class GetCoipPoolResult {
         return this.localGatewayRouteTableId;
     }
     /**
-     * Set of CIDR blocks in pool
+     * @return Set of CIDR blocks in pool
      * 
-    */
+     */
     public List<String> poolCidrs() {
         return this.poolCidrs;
     }

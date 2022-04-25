@@ -24,6 +24,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return ARN of the control panel.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -35,6 +39,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn")
     private @Nullable Output<String> clusterArn;
 
+    /**
+     * @return ARN of the cluster in which this control panel will reside.
+     * 
+     */
     public Optional<Output<String>> clusterArn() {
         return Optional.ofNullable(this.clusterArn);
     }
@@ -46,6 +54,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultControlPanel")
     private @Nullable Output<Boolean> defaultControlPanel;
 
+    /**
+     * @return Whether a control panel is default.
+     * 
+     */
     public Optional<Output<Boolean>> defaultControlPanel() {
         return Optional.ofNullable(this.defaultControlPanel);
     }
@@ -57,6 +69,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name describing the control panel.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingControlCount")
     private @Nullable Output<Integer> routingControlCount;
 
+    /**
+     * @return Number routing controls in a control panel.
+     * 
+     */
     public Optional<Output<Integer>> routingControlCount() {
         return Optional.ofNullable(this.routingControlCount);
     }
@@ -79,6 +99,10 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -112,56 +136,128 @@ public final class ControlPanelState extends com.pulumi.resources.ResourceArgs {
             $ = new ControlPanelState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn ARN of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn ARN of the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param clusterArn ARN of the cluster in which this control panel will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
             $.clusterArn = clusterArn;
             return this;
         }
 
+        /**
+         * @param clusterArn ARN of the cluster in which this control panel will reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterArn(String clusterArn) {
             return clusterArn(Output.of(clusterArn));
         }
 
+        /**
+         * @param defaultControlPanel Whether a control panel is default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultControlPanel(@Nullable Output<Boolean> defaultControlPanel) {
             $.defaultControlPanel = defaultControlPanel;
             return this;
         }
 
+        /**
+         * @param defaultControlPanel Whether a control panel is default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultControlPanel(Boolean defaultControlPanel) {
             return defaultControlPanel(Output.of(defaultControlPanel));
         }
 
+        /**
+         * @param name Name describing the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name describing the control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routingControlCount Number routing controls in a control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingControlCount(@Nullable Output<Integer> routingControlCount) {
             $.routingControlCount = routingControlCount;
             return this;
         }
 
+        /**
+         * @param routingControlCount Number routing controls in a control panel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingControlCount(Integer routingControlCount) {
             return routingControlCount(Output.of(routingControlCount));
         }
 
+        /**
+         * @param status Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }

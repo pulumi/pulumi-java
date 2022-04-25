@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTls {
-    /**
-     * The listener&#39;s TLS certificate.
-     * 
-     */
+        /**
+         * @return The listener&#39;s TLS certificate.
+         * 
+         */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate certificate;
-    /**
-     * Whether the policy is enforced. Default is `true`.
-     * 
-     */
+        /**
+         * @return Whether the policy is enforced. Default is `true`.
+         * 
+         */
     private final @Nullable Boolean enforce;
-    /**
-     * One or more ports that the policy is enforced for.
-     * 
-     */
+        /**
+         * @return One or more ports that the policy is enforced for.
+         * 
+         */
     private final @Nullable List<Integer> ports;
-    /**
-     * The listener&#39;s Transport Layer Security (TLS) validation context.
-     * 
-     */
+        /**
+         * @return The listener&#39;s Transport Layer Security (TLS) validation context.
+         * 
+         */
     private final VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation validation;
 
     @CustomType.Constructor
@@ -49,30 +49,30 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTls {
     }
 
     /**
-     * The listener&#39;s TLS certificate.
+     * @return The listener&#39;s TLS certificate.
      * 
-    */
+     */
     public Optional<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * Whether the policy is enforced. Default is `true`.
+     * @return Whether the policy is enforced. Default is `true`.
      * 
-    */
+     */
     public Optional<Boolean> enforce() {
         return Optional.ofNullable(this.enforce);
     }
     /**
-     * One or more ports that the policy is enforced for.
+     * @return One or more ports that the policy is enforced for.
      * 
-    */
+     */
     public List<Integer> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
-     * The listener&#39;s Transport Layer Security (TLS) validation context.
+     * @return The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
-    */
+     */
     public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation validation() {
         return this.validation;
     }

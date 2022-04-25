@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScheduledActionTargetActionResizeCluster {
-    /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
-     * 
-     */
+        /**
+         * @return A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
+         * 
+         */
     private final @Nullable Boolean classic;
-    /**
-     * The identifier of the cluster to be resumed.
-     * 
-     */
+        /**
+         * @return The identifier of the cluster to be resumed.
+         * 
+         */
     private final String clusterIdentifier;
-    /**
-     * The new cluster type for the specified cluster.
-     * 
-     */
+        /**
+         * @return The new cluster type for the specified cluster.
+         * 
+         */
     private final @Nullable String clusterType;
-    /**
-     * The new node type for the nodes you are adding.
-     * 
-     */
+        /**
+         * @return The new node type for the nodes you are adding.
+         * 
+         */
     private final @Nullable String nodeType;
-    /**
-     * The new number of nodes for the cluster.
-     * 
-     */
+        /**
+         * @return The new number of nodes for the cluster.
+         * 
+         */
     private final @Nullable Integer numberOfNodes;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class ScheduledActionTargetActionResizeCluster {
     }
 
     /**
-     * A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
+     * @return A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
      * 
-    */
+     */
     public Optional<Boolean> classic() {
         return Optional.ofNullable(this.classic);
     }
     /**
-     * The identifier of the cluster to be resumed.
+     * @return The identifier of the cluster to be resumed.
      * 
-    */
+     */
     public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
-     * The new cluster type for the specified cluster.
+     * @return The new cluster type for the specified cluster.
      * 
-    */
+     */
     public Optional<String> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
     /**
-     * The new node type for the nodes you are adding.
+     * @return The new node type for the nodes you are adding.
      * 
-    */
+     */
     public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
-     * The new number of nodes for the cluster.
+     * @return The new number of nodes for the cluster.
      * 
-    */
+     */
     public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }

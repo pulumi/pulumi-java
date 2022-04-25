@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLaunchTemplateEnclaveOption {
-    /**
-     * Whether Nitro Enclaves are enabled.
-     * 
-     */
+        /**
+         * @return Whether Nitro Enclaves are enabled.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetLaunchTemplateEnclaveOption {
     }
 
     /**
-     * Whether Nitro Enclaves are enabled.
+     * @return Whether Nitro Enclaves are enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

@@ -24,6 +24,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="allocationResourceTags")
     private @Nullable Map<String,String> allocationResourceTags;
 
+    /**
+     * @return Tags that are required to create resources in using this pool.
+     * 
+     */
     public Optional<Map<String,String>> allocationResourceTags() {
         return Optional.ofNullable(this.allocationResourceTags);
     }
@@ -35,6 +39,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
     private @Nullable List<GetVpcIamPoolFilter> filters;
 
+    /**
+     * @return Custom filter block as described below.
+     * 
+     */
     public Optional<List<GetVpcIamPoolFilter>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -46,6 +54,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return -
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -64,6 +76,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return A map of tags to assigned to the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,20 +112,44 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVpcIamPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationResourceTags Tags that are required to create resources in using this pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationResourceTags(@Nullable Map<String,String> allocationResourceTags) {
             $.allocationResourceTags = allocationResourceTags;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable List<GetVpcIamPoolFilter> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters Custom filter block as described below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(GetVpcIamPoolFilter... filters) {
             return filters(List.of(filters));
         }
 
+        /**
+         * @param id -
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
@@ -120,6 +160,12 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param tags A map of tags to assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

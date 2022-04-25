@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceDataSyncS3Destination {
-    /**
-     * Name of S3 bucket where the aggregated data is stored.
-     * 
-     */
+        /**
+         * @return Name of S3 bucket where the aggregated data is stored.
+         * 
+         */
     private final String bucketName;
-    /**
-     * ARN of an encryption key for a destination in Amazon S3.
-     * 
-     */
+        /**
+         * @return ARN of an encryption key for a destination in Amazon S3.
+         * 
+         */
     private final @Nullable String kmsKeyArn;
-    /**
-     * Prefix for the bucket.
-     * 
-     */
+        /**
+         * @return Prefix for the bucket.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * Region with the bucket targeted by the Resource Data Sync.
-     * 
-     */
+        /**
+         * @return Region with the bucket targeted by the Resource Data Sync.
+         * 
+         */
     private final String region;
-    /**
-     * A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
-     * 
-     */
+        /**
+         * @return A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+         * 
+         */
     private final @Nullable String syncFormat;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ResourceDataSyncS3Destination {
     }
 
     /**
-     * Name of S3 bucket where the aggregated data is stored.
+     * @return Name of S3 bucket where the aggregated data is stored.
      * 
-    */
+     */
     public String bucketName() {
         return this.bucketName;
     }
     /**
-     * ARN of an encryption key for a destination in Amazon S3.
+     * @return ARN of an encryption key for a destination in Amazon S3.
      * 
-    */
+     */
     public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
-     * Prefix for the bucket.
+     * @return Prefix for the bucket.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * Region with the bucket targeted by the Resource Data Sync.
+     * @return Region with the bucket targeted by the Resource Data Sync.
      * 
-    */
+     */
     public String region() {
         return this.region;
     }
     /**
-     * A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
+     * @return A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
      * 
-    */
+     */
     public Optional<String> syncFormat() {
         return Optional.ofNullable(this.syncFormat);
     }

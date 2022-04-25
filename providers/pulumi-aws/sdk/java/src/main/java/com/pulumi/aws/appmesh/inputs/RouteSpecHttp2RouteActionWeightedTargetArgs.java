@@ -21,6 +21,10 @@ public final class RouteSpecHttp2RouteActionWeightedTargetArgs extends com.pulum
     @Import(name="virtualNode", required=true)
     private Output<String> virtualNode;
 
+    /**
+     * @return The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+     * 
+     */
     public Output<String> virtualNode() {
         return this.virtualNode;
     }
@@ -32,6 +36,10 @@ public final class RouteSpecHttp2RouteActionWeightedTargetArgs extends com.pulum
     @Import(name="weight", required=true)
     private Output<Integer> weight;
 
+    /**
+     * @return The relative weight of the weighted target. An integer between 0 and 100.
+     * 
+     */
     public Output<Integer> weight() {
         return this.weight;
     }
@@ -61,20 +69,44 @@ public final class RouteSpecHttp2RouteActionWeightedTargetArgs extends com.pulum
             $ = new RouteSpecHttp2RouteActionWeightedTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param virtualNode The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNode(Output<String> virtualNode) {
             $.virtualNode = virtualNode;
             return this;
         }
 
+        /**
+         * @param virtualNode The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNode(String virtualNode) {
             return virtualNode(Output.of(virtualNode));
         }
 
+        /**
+         * @param weight The relative weight of the weighted target. An integer between 0 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
 
+        /**
+         * @param weight The relative weight of the weighted target. An integer between 0 and 100.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }
